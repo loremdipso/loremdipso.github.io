@@ -47,8 +47,9 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 }
 
 // build to docs instead of public
-const path = require("path")
-const fs = require("fs")
+const path = require("path");
+const fs = require("fs");
+var ncp = require('ncp').ncp;
 
 exports.onPostBuild = () => {
 	const public_dir = path.join(__dirname, "public");
@@ -60,5 +61,7 @@ exports.onPostBuild = () => {
 		console.log("docs didn't exist, so can't delete it");
 	}
 
-	fs.renameSync(public_dir, docs_dir);
+	ncp(public_dir, docs_dir);
+	// fs.renameSync(public_dir, docs_dir);
+	// (public_dir, docs_dir);
 }
