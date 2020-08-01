@@ -11,6 +11,10 @@ module.exports = {
 
 	plugins: [
 		`gatsby-plugin-sass`,
+		// 'gatsby-plugin-catch-links',
+		'gatsby-plugin-react-helmet',
+		`gatsby-remark-prismjs`,  // syntax highlighting
+
 		{
 			resolve: `gatsby-source-filesystem`,
 			options: {
@@ -18,7 +22,12 @@ module.exports = {
 				path: `${__dirname}/src/markdown-pages`,
 			},
 		},
+		{
+			resolve: 'gatsby-transformer-remark',
+			options: {
+				plugins: [] // just in case those previously mentioned remark plugins sound cool :)
+			}
+		},
 
-		`gatsby-transformer-remark`,
 	],
 }

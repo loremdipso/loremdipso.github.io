@@ -1,3 +1,7 @@
+const path = require("path");
+const fs = require("fs");
+var ncp = require('ncp').ncp;
+
 // Implement the Gatsby API “onCreatePage”. This is
 // called after every page is created.
 exports.onCreatePage = ({ page, actions }) => {
@@ -10,46 +14,86 @@ exports.onCreatePage = ({ page, actions }) => {
 	}
 }
 
-exports.createPages = async ({ actions, graphql, reporter }) => {
-	const { createPage } = actions
-	const blogPostTemplate = require.resolve(`./src/templates/blog-template.js`)
-	const result = await graphql(`
-	  {
-		allMarkdownRemark(
-		  sort: { order: DESC, fields: [frontmatter___date] }
-		  limit: 1000
-		) {
-		  edges {
-			node {
-			  frontmatter {
-				slug
-			  }
+
+exports.createPages = ({ boundActionCreators, graphql }) => {
+	const { createPage } = boundActionCreators;
+
+	const blogPostTemplate = path.resolve(`src/templates/blog-post.js`);
+
+	return graphql(`{
+    allMarkdownRemark(
+      sort: { order: DESC, fields: [frontmatter___date] }
+      limit: 1000
+    ) {
+      edges {
+        node {
+          excerpt(pruneLength: 250)
+          html
+          id
+          frontmatter {
+            date
+            slug
+            title
+          }
+        }
+      }
+    }
+  }`
+	)
+		.then(result => {
+			if (result.errors) {
+				return Promise.reject(result.errors);
 			}
-		  }
-		}
-	  }
-	`)
-	// Handle errors
-	if (result.errors) {
-		reporter.panicOnBuild(`Error while running GraphQL query.`)
-		return
-	}
-	result.data.allMarkdownRemark.edges.forEach(({ node }) => {
-		createPage({
-			path: node.frontmatter.slug,
-			component: blogPostTemplate,
-			context: {
-				// additional data can be passed via context
-				slug: node.frontmatter.slug,
-			},
-		})
-	})
+
+			result.data.allMarkdownRemark.edges
+				.forEach(({ node }) => {
+					createPage({
+						path: node.frontmatter.slug,
+						component: blogPostTemplate,
+						context: {} // additional data can be passed via context
+					});
+				});
+		});
 }
 
+
+// exports.createPages = async ({ actions, graphql, reporter }) => {
+// 	const { createPage } = actions
+// 	const blogPostTemplate = require.resolve(`./src/templates/blog-template.js`)
+// 	const result = await graphql(`
+// 	  {
+// 		allMarkdownRemark(
+// 		  sort: { order: DESC, fields: [frontmatter___date] }
+// 		  limit: 1000
+// 		) {
+// 		  edges {
+// 			node {
+// 			  frontmatter {
+// 				slug
+// 			  }
+// 			}
+// 		  }
+// 		}
+// 	  }
+// 	`)
+// 	// Handle errors
+// 	if (result.errors) {
+// 		reporter.panicOnBuild(`Error while running GraphQL query.`)
+// 		return
+// 	}
+// 	result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+// 		createPage({
+// 			path: node.frontmatter.slug,
+// 			component: blogPostTemplate,
+// 			context: {
+// 				// additional data can be passed via context
+// 				slug: node.frontmatter.slug,
+// 			},
+// 		})
+// 	})
+// }
+
 // build to docs instead of public
-const path = require("path");
-const fs = require("fs");
-var ncp = require('ncp').ncp;
 
 exports.onPostBuild = () => {
 	const public_dir = path.join(__dirname, "public");
@@ -62,6 +106,4 @@ exports.onPostBuild = () => {
 	}
 
 	ncp(public_dir, docs_dir);
-	// fs.renameSync(public_dir, docs_dir);
-	// (public_dir, docs_dir);
 }

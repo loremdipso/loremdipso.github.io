@@ -1,10 +1,8 @@
 import React from "react";
-import "../styles/styles.scss";
-import "../../node_modules/bootstrap/dist/css/bootstrap.css";
 import PostLink from "./post-link";
-import { StaticQuery, graphql } from "gatsby";
+import { StaticQuery, graphql, Link } from "gatsby";
 
-const Blog = ({ path }: { path: string }) => {
+export default function Listing() {
 	return (
 		<StaticQuery
 			query={graphql`
@@ -35,6 +33,4 @@ const Blog = ({ path }: { path: string }) => {
 			}}
 		/>
 	);
-};
-
-export default Blog;
+}

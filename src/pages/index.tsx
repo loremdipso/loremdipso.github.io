@@ -4,7 +4,7 @@ import { Navbar, Nav, Container } from "react-bootstrap";
 import "../../node_modules/bootstrap/dist/css/bootstrap.css";
 import { APP_ROUTES } from "../config/routes";
 import Profile from "../components/profile/profile";
-import Blog from "../components/blog";
+import { Blog } from "../components/blog/blog";
 import Resume from "../components/resume";
 import { Router, Link, Location } from "@reach/router";
 import { TransitionGroup, CSSTransition } from "react-transition-group";
