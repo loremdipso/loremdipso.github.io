@@ -23,6 +23,7 @@ export default function Home() {
 			<FancyRouter>
 				<Profile path={APP_ROUTES.home} />
 				<Blog path={APP_ROUTES.blog} />
+				<Blog path={APP_ROUTES.blog_slug} />
 				<Resume path={APP_ROUTES.resume} />
 			</FancyRouter>
 		</div>
