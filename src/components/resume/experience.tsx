@@ -3,31 +3,35 @@ import { IExperience, IPosition, ITeam } from "./interfaces";
 
 export default function Experiences({ data }: { data: IExperience[] }) {
 	return (
-		<>
-			{data.map((ex, i) => (
+		<div>
+			{data.map((company, i) => (
 				<React.Fragment key={i}>
-					{ex.positions.map((position, j) => (
+					{company.positions.map((position, j) => (
 						<React.Fragment key={j}>
-							<h3>
-								{ex.company} - {position.name}
-							</h3>
+							<div className="teamheader">
+								<div className="name">
+									<div>
+										{company.company.name} - {company.company.description}
+									</div>
+								</div>
+								<div className="period">{position.period}</div>
+							</div>
 							<Position position={position} />
 						</React.Fragment>
 					))}
 				</React.Fragment>
 			))}
-		</>
+		</div>
 	);
 }
 
 function Position({ position }: { position: IPosition }) {
 	return (
 		<>
-			<h6>{position.period}</h6>
 			{position.teams.map((team, i) => (
-				<React.Fragment key={i}>
+				<div key={i} className="teams">
 					<Team team={team} />
-				</React.Fragment>
+				</div>
 			))}
 		</>
 	);
@@ -36,11 +40,20 @@ function Position({ position }: { position: IPosition }) {
 function Team({ team }: { team: ITeam }) {
 	return (
 		<>
-			{team.name && <p>{team.name}</p>}
-			{team.description && <p>{team.description}</p>}
-			{team.period && <p>{team.period}</p>}
+			<div className="teamheader">
+				<div className="name">
+					<div>
+						{team.role} - {team.name}
+					</div>
+					<div className="description">{team.description}</div>
+				</div>
+				<div className="period">{team.period}</div>
+			</div>
+
 			{team.projects.map((project, i) => (
-				<div key={i}>{project}</div>
+				<div key={i} className="project">
+					{project}
+				</div>
 			))}
 		</>
 	);

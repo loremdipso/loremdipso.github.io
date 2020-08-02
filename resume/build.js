@@ -64,7 +64,9 @@ function convertToMarkdown(data) {
 	function getExperience(data) {
 		const result = [];
 		data.experiences.forEach(experience => {
-			result.push({ h3: experience.company });
+			result.push({ h3: experience.company.name });
+			result.push(experience.company.description);
+			result.push(experience.company.website);
 
 			experience.positions.forEach(position => {
 				result.push(position.name);

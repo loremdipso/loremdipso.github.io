@@ -3,16 +3,14 @@ import { ISkill } from "./interfaces";
 
 export default function Skills({ data }: { data: ISkill[] }) {
 	return (
-		<>
-			{data.map((skill, i) => (
-				<React.Fragment key={i}>
-					<Skill skill={skill} />
-				</React.Fragment>
-			))}
-		</>
-	);
-}
+		<div>
+			<span>Skills:</span>
 
-function Skill({ skill }: { skill: ISkill }) {
-	return <div>{skill.name}</div>;
+			<div className="skills">
+				{data.map((skill, i) => (
+					<span key={i}>{skill.name}</span>
+				))}
+			</div>
+		</div>
+	);
 }

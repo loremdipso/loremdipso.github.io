@@ -5,6 +5,7 @@ import Experiences from "./experience";
 import Skills from "./skills";
 import Contact from "./contact";
 import Name from "./name";
+import "./resume.scss";
 
 export default function Resume(props: { path?: string }) {
 	const [data, setData] = useState(null as IData);
@@ -22,20 +23,31 @@ export default function Resume(props: { path?: string }) {
 	}
 
 	return (
-		<div>
-			<Name data={data} />
+		<div className="resume">
+			<div className="content">
+				<div>
+					<div className="grid">
+						<div>
+							<Name data={data} />
+							{/* <Skills data={data.skills} /> */}
+						</div>
 
-			<h1>Contact</h1>
-			<Contact data={data.contact} />
+						<div>
+							<Contact data={data.contact} />
+						</div>
+					</div>
+				</div>
 
-			<h1>Skills</h1>
-			<Skills data={data.skills} />
+				<div className="section">
+					<h3>Experience</h3>
+					<Experiences data={data.experiences} />
+				</div>
 
-			<h1>Experience</h1>
-			<Experiences data={data.experiences} />
-
-			<h1>Education</h1>
-			<Education data={data.educations} />
+				<div className="section">
+					<h3>Education</h3>
+					<Education data={data.educations} />
+				</div>
+			</div>
 		</div>
 	);
 }

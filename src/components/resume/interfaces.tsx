@@ -47,6 +47,7 @@ export interface ISkill {
 
 export interface ITeam {
 	name: string;
+	role: string;
 	description: string;
 	period: any;
 	projects: string[];
@@ -59,7 +60,14 @@ export interface IPosition {
 }
 
 export interface IExperience {
-	company: string;
+	company: ICompany;
 	website: string;
+	description: string;
 	positions: IPosition[];
+}
+
+export interface ICompany {
+	name: string;
+	description: string;
+	website: string;
 }
