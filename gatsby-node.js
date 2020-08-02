@@ -55,19 +55,3 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
 				});
 		});
 }
-
-
-// build to docs instead of public
-
-exports.onPostBuild = () => {
-	const public_dir = path.join(__dirname, "public");
-	const docs_dir = path.join(__dirname, "docs");
-
-	try {
-		fs.rmdirSync(docs_dir);
-	} catch (e) {
-		console.log("docs didn't exist, so can't delete it");
-	}
-
-	ncp(public_dir, docs_dir);
-}

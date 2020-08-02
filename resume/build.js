@@ -104,45 +104,6 @@ function nn(thing) {
 }
 
 async function writePDF(data) {
-	// const {
-	// 	interval
-	// } = require('rxjs');
-	// const {
-	// 	filter,
-	// 	first,
-	// 	mergeMap
-	// } = require('rxjs/operators');
-
-
-	const waitForServerReachable = () => {
-		return interval(1000).pipe(
-			mergeMap(async () => {
-				try {
-					const statusCode = await fetchResponse();
-					if (statusCode === 200) return true;
-				} catch (err) { }
-				return false;
-			}),
-			filter(ok => !!ok)
-		);
-	};
-
-	const fetchResponse = () => {
-		return new Promise((res, rej) => {
-			try {
-				const req = http.request(`http://localhost:${config.dev.port}/#/`, response => res(response.statusCode));
-				req.on('error', (err) => rej(err));
-				req.end();
-			} catch (err) {
-				rej(err);
-			}
-		});
-	};
-
-	// await waitForServerReachable().pipe(
-	// 	first()
-	// ).toPromise();
-
 	console.log('Connected to server ...');
 	console.log('Exporting ...');
 	const config = {
@@ -159,9 +120,10 @@ async function writePDF(data) {
 		});
 
 		await page.pdf({
-			path: `output.pdf`,
+			path: `resume.pdf`,
 			format: 'A4'
 		});
+		fs.copyFileSync("resume.pdf", "../../static/resume.pdf");
 		await browser.close();
 	} catch (err) {
 		throw new Error(err);
