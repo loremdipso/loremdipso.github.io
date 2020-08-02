@@ -1,5 +1,7 @@
 vendor/
 public/
+resume/output/
+resume/output/*
 
 # Logs
 logs
