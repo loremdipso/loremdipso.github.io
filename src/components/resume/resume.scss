@@ -1,3 +1,7 @@
+html {
+	-webkit-print-color-adjust: exact;
+}
+
 .resume {
 	padding: 1em;
 	line-height: 1.5;
@@ -105,26 +109,25 @@
 
 		.teamheader {
 			display: grid;
-			// grid-template-columns: 10em auto auto;
 			grid-template-columns: auto auto;
 
 			.name {
 				text-align: left;
 				max-width: 55em;
 
-				.description {
+				.subtitle {
 					margin-left: 1em;
 					font-style: italic;
 				}
 			}
+		}
 
-			.period {
-				text-align: right;
-				font-family: sans-serif;
-				font-size: 0.8em;
-				line-height: 2;
-				color: #888;
-			}
+		.period {
+			text-align: right;
+			font-family: sans-serif;
+			font-size: 0.8em;
+			line-height: 2;
+			color: #888;
 		}
 	}
 }

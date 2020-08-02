@@ -105,11 +105,11 @@ experiences:
             description:
             period: 2015-2016
             projects:
-              - Maintained workflows around and integration with DMS vendors.
+              #- Maintained workflows around and integration with DMS vendors.
 
           - name: Trending Tools
             role: SD
             description:
             period: 2014-2015
             projects:
-              - Maintained Epic's tools used for displaying patient data graphically and in table form.
+              #- Maintained Epic's tools used for displaying patient data graphically and in table form.

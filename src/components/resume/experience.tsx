@@ -45,16 +45,17 @@ function Team({ team }: { team: ITeam }) {
 					<div>
 						{team.role} - {team.name}
 					</div>
-					<div className="description">{team.description}</div>
+					<div className="subtitle">{team.description}</div>
 				</div>
 				<div className="period">{team.period}</div>
 			</div>
 
-			{team.projects.map((project, i) => (
-				<div key={i} className="project">
-					{project}
-				</div>
-			))}
+			{team.projects &&
+				team.projects.map((project, i) => (
+					<div key={i} className="project">
+						{project}
+					</div>
+				))}
 		</>
 	);
 }

@@ -76,9 +76,11 @@ function convertToMarkdown(data) {
 					if (nn(team.description)) { result.push(team.description); }
 					if (nn(team.period)) { result.push(team.period); }
 
-					team.projects.forEach(project => {
-						result.push({ blockquote: project });
-					});
+					if (team.projects) {
+						team.projects.forEach(project => {
+							result.push({ blockquote: project });
+						});
+					}
 				});
 			});
 		});

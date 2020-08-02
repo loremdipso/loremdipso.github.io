@@ -5,8 +5,13 @@ export default function Education({ data }: { data: IEducation[] }) {
 	return (
 		<>
 			{data.map((ed, i) => (
-				<div key={i}>
-					{ed.description} - {ed.period}
+				<div className="teamheader" key={i}>
+					<div className="name">
+						<div>{ed.description}</div>
+						{ed.degree && <div className="subtitle">{ed.degree}</div>}
+					</div>
+
+					<div className="period">{ed.period}</div>
 				</div>
 			))}
 		</>
