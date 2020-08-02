@@ -5,7 +5,8 @@ import "../../node_modules/bootstrap/dist/css/bootstrap.css";
 import { APP_ROUTES } from "../config/routes";
 import Profile from "../components/profile/profile";
 import { Blog } from "../components/blog/blog";
-import Resume from "../components/resume";
+import Resume from "../components/resume/resume";
+import ContactIcons from "../components/profile/contact-icons";
 import { Router, Link, Location } from "@reach/router";
 import { TransitionGroup, CSSTransition } from "react-transition-group";
 
@@ -26,6 +27,12 @@ export default function Home() {
 				<Blog path={APP_ROUTES.blog_slug} />
 				<Resume path={APP_ROUTES.resume} />
 			</FancyRouter>
+
+			<Navbar fixed="bottom" bg="light">
+				<Nav className="ml-auto mr-auto">
+					<ContactIcons />
+				</Nav>
+			</Navbar>
 		</div>
 	);
 }
@@ -36,7 +43,7 @@ function FancyNavLink(props: { to: string; children: any }) {
 			to={props.to}
 			className="nav-link"
 			getProps={({ isCurrent }) => {
-				return { className: isCurrent ? "nav-link active" : "nav-link" };
+				return { className: isCurrent ? "nav-link selected" : "nav-link" };
 			}}
 		>
 			{props.children}
