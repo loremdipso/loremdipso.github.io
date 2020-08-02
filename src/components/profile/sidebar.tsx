@@ -11,7 +11,7 @@ export default function Sidebar() {
 				<Menu menu={menu} />
 				<Contacts contacts={author.contacts} />
 				<Copyright copyright={copyright} /> */}
-				yo
+				Some content
 			</div>
 		</div>
 	);

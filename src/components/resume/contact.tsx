@@ -10,10 +10,10 @@ export default function Contact({ data }: { data: IContact }) {
 					{data.city}, {data.state} {data.zip}
 				</div>
 			</Line>
+			<Line name="Email">{data.email && <div>{data.email}</div>}</Line>
 			<Line name="Mobile">
 				<div>{data.phone}</div>
 			</Line>
-			<Line name="Email">{data.email && <div>{data.email}</div>}</Line>
 		</div>
 	);
 }
