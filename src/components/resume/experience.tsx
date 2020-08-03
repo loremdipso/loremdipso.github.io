@@ -11,7 +11,9 @@ export default function Experiences({ data }: { data: IExperience[] }) {
 							<div className="teamheader">
 								<div className="name">
 									<div className="label">company</div>
-									<div className="companyname">{company.company.name}</div>
+									<a href={company.company.website} className="companyname">
+										{company.company.name}
+									</a>
 									<div className="subtitle">{company.company.description}</div>
 								</div>
 								<div className="period">{position.period}</div>

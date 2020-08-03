@@ -7,7 +7,7 @@ export default function Education({ data }: { data: IEducation[] }) {
 			{data.map((ed, i) => (
 				<div className="teamheader" key={i}>
 					<div className="name">
-						<div>{ed.description}</div>
+						<a href={ed.website}>{ed.description}</a>
 						{ed.degree && <div className="subtitle degree">{ed.degree}</div>}
 					</div>
 

@@ -137,6 +137,10 @@ html {
 			}
 
 			.name {
+				a {
+					text-decoration: none;
+					color: initial;
+				}
 				text-align: left;
 				> :first-child {
 					// width: 7em;

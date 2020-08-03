@@ -21,16 +21,16 @@ lang: en
 
 educations:
   - degree: B.S. in Computer Science (cont'd)
-    period: Aug 2011 - May 2014
+    period: 2011 - 2014
     description: University of Tennessee, Knoxville
     website: https://www.utk.edu/
     clubs:
       - Programming Team
-        - Captain, Aug 2013 - May 2014
-        - Member, Aug 2011 - May 2013
+        - Captain, 2013 - 2014
+        - Member, 2011 - 2013
 
   - degree: B.S. in Computer Science
-    period: Aug 2010 - May 2011
+    period: 2010 - 2011
     description: Tennessee Tech, Cookeville
     website: https://www.tntech.edu/
 
