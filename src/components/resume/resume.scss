@@ -12,24 +12,21 @@ html {
 		margin: 0 auto;
 		position: relative;
 		font-family: Georgia, sans-serif;
-		// line-height: 1.5em;
 
 		.section {
-			> h1,
-			h2,
-			h3,
-			h4,
-			h5,
-			h6 {
-				font-weight: normal;
-				font-family: Bitter, Georgia, serif;
+			> .header {
+				font-size: 0.9em;
+				text-transform: uppercase;
+				font-weight: bold;
+				font-family: Bitter, Georgia, sans-serif;
 				color: #0c6fa9;
+				margin-top: 1.6em;
 			}
 		}
 
 		.namesection {
 			font-size: 3.2rem;
-			font-family: Bitter, Georgia, serif;
+			font-family: Bitter, Georgia, sans-serif;
 
 			.name {
 				margin-top: 0;
@@ -42,6 +39,11 @@ html {
 				color: #444;
 				font-weight: normal;
 			}
+		}
+
+		.label {
+			color: #bbb;
+			display: inline-block;
 		}
 
 		.contacts {
@@ -57,10 +59,6 @@ html {
 
 			font-size: 0.9em;
 			font-family: sans-serif;
-
-			.label {
-				color: #bbb;
-			}
 
 			/* first column */
 			> :nth-child(2n-1) {
@@ -79,6 +77,10 @@ html {
 
 			> :first-child {
 				width: auto;
+				flex-grow: 2;
+			}
+
+			> :last-child {
 				flex-grow: 1;
 			}
 		}
@@ -98,28 +100,61 @@ html {
 			// max-width: 30em;
 			color: #444;
 			padding: 0.5em 1em;
+			// margin-bottom: 1em;
+			// margin-right: 0.5em;
+			// margin-left: 0.5em;
 			margin-bottom: 1em;
-			margin-right: 0.5em;
-			margin-left: 0.5em;
+			&:last-child {
+				margin-bottom: 0em;
+			}
 		}
 
 		.teams {
 			margin-left: 1em;
+
+			> * {
+				margin-bottom: 1em;
+			}
 		}
 
 		.teamheader {
 			display: grid;
 			grid-template-columns: auto auto;
 
+			.label {
+				margin-right: 0.5em;
+			}
+
+			.companyname {
+				font-weight: bold;
+				// width: 10em;
+			}
+
+			.companyname,
+			.role,
+			.teamname {
+				display: inline-block;
+			}
+
 			.name {
 				text-align: left;
-				max-width: 55em;
+				> :first-child {
+					// width: 7em;
+				}
+				// max-width: 55em;
 
 				.subtitle {
-					margin-left: 1em;
-					font-style: italic;
+					// margin-left: 1em;
+					// font-style: italic;
 				}
 			}
+		}
+
+		.degree {
+			color: #666;
+			font-family: Bitter, Georgia, serif;
+			font-size: 0.9em;
+			margin-bottom: 1em;
 		}
 
 		.period {

@@ -20,16 +20,17 @@ contact:
 lang: en
 
 educations:
-  - degree: B.S. in Computer Science
-    period: 2011-2014
+  - degree: B.S. in Computer Science (cont'd)
+    period: Aug 2011 - May 2014
     description: University of Tennessee, Knoxville
     website: https://www.utk.edu/
     clubs:
       - Programming Team
-        - Captain, 2013-2014
-        - Member, 2011-2013
+        - Captain, Aug 2013 - May 2014
+        - Member, Aug 2011 - May 2013
 
-  - period: 2010-2011
+  - degree: B.S. in Computer Science
+    period: Aug 2010 - May 2011
     description: Tennessee Tech, Cookeville
     website: https://www.tntech.edu/
 
@@ -48,7 +49,7 @@ skills:
 experiences:
   - company:
       name: Epic
-      description: Healthcare IT software company
+      description: Electronic Health Record system with over 190 million patients worldwide
       website: https://epic.com
     positions:
       - name: Software Developer
@@ -57,59 +58,59 @@ experiences:
           - name: ICU
             role: SD
             description:
-            period: 2020-present
+            period: Jan 2020 - present
             projects:
               - Architected and implemented the infrastructure that allows generically integrating any video vendor's solution into Epic's remote monitoring application. Previously these integrations had to be done one-by-one and were extremely cost prohibitive.
 
           - name: Skunkworks
             role: SD
             description: Task force that meant to advance framework and improve developer retention
-            period: 2019-2020
+            period: Jan 2019 - Dec 2019
             projects:
               - Updated Epic's web framework to support "hot reloading", whereby developers would be able to see their UI changes in near realtime. Previously they'd need to log out and back in to clear the browser's cache.
               - Improved Epic's internal version controls tools to largely eliminate the need for manually selecting the correct files for a commit, work that every developer did multiple times a day everyday.
               - Obviated the need for two ASP.NET-specific files for all new projects, making development simpler and easier to port to other platforms.
               - Dramatically improved web server cache performance in a few key areas by making those objects being cached immutable.
-              - Helped introduce React Functional Components to Epic's existing architecture, while keeping backwards compatible with what we had before.
+              - Helped introduce React Functional Components to Epic's existing architecture, while keeping backwards compatible with what was there before.
 
           - name: Social Care
             role: SD
             description:
-            period: 2019
+            period: Jan 2018 - April 2018
             projects:
               - Implemented and iterated on functionality that graphically indicates a patient and their relationships. Besides being functionally quite useful it also beautified an otherwise mundane screen.
 
           - name: Telehealth
             role: SD
             description:
-            period: 2018-2019
+            period: May 2017 - Dec 2018
             projects:
               - Lead architect and developer on flagship product that allows patients to schedule video visits with their organization's partners. This both reduced patient wait times and reduced unnecessary usage of in-person facilities.
 
           - name: Endocrinology
             role: SD
             description:
-            period: 2017
+            period: Nov 2016 - April 2017
             projects:
               - "Part of small team that pioneered Epic's first Endocrinology module: a tool that standardized recording and displaying insulin instructions."
 
           - name: MyChart
             role: SD
             description: Team that builds the website patients use to connect to their healthcare organization
-            period: 2016
+            period: Jan 2016 - Aug 2016
             projects:
               - Improved performance of graphing infrastructure. Prototyped an even bigger improvement that was later implemented.
 
           - name: Scanning
             role: SD
             description:
-            period: 2015-2016
+            period: May 2015 - Dec 2015
             projects:
               #- Maintained workflows around and integration with DMS vendors.
 
           - name: Trending Tools
             role: SD
             description:
-            period: 2014-2015
+            period: Jun 2014 - April 2015
             projects:
               #- Maintained Epic's tools used for displaying patient data graphically and in table form.

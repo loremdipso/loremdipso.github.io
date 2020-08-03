@@ -10,9 +10,9 @@ export default function Experiences({ data }: { data: IExperience[] }) {
 						<React.Fragment key={j}>
 							<div className="teamheader">
 								<div className="name">
-									<div>
-										{company.company.name} - {company.company.description}
-									</div>
+									<div className="label">company</div>
+									<div className="companyname">{company.company.name}</div>
+									<div className="subtitle">{company.company.description}</div>
 								</div>
 								<div className="period">{position.period}</div>
 							</div>
@@ -27,13 +27,13 @@ export default function Experiences({ data }: { data: IExperience[] }) {
 
 function Position({ position }: { position: IPosition }) {
 	return (
-		<>
+		<div className="teams">
 			{position.teams.map((team, i) => (
-				<div key={i} className="teams">
+				<div key={i}>
 					<Team team={team} />
 				</div>
 			))}
-		</>
+		</div>
 	);
 }
 
@@ -43,7 +43,8 @@ function Team({ team }: { team: ITeam }) {
 			<div className="teamheader">
 				<div className="name">
 					<div>
-						{team.role} - {team.name}
+						<div className="label">team</div>
+						<div className="teamname">{team.name}</div>
 					</div>
 					<div className="subtitle">{team.description}</div>
 				</div>

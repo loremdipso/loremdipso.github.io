@@ -8,7 +8,7 @@ export default function Education({ data }: { data: IEducation[] }) {
 				<div className="teamheader" key={i}>
 					<div className="name">
 						<div>{ed.description}</div>
-						{ed.degree && <div className="subtitle">{ed.degree}</div>}
+						{ed.degree && <div className="subtitle degree">{ed.degree}</div>}
 					</div>
 
 					<div className="period">{ed.period}</div>

@@ -10,7 +10,7 @@ function main() {
 
 	try {
 		const data = yaml.safeLoad(fs.readFileSync('./config.yml', 'utf8'));
-		console.log(data);
+		// console.log(data);
 
 		const output_dir = "./output";
 		if (!fs.existsSync(output_dir)) {

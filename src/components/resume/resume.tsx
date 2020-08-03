@@ -39,12 +39,12 @@ export default function Resume(props: { path?: string }) {
 				</div>
 
 				<div className="section">
-					<h3>Experience</h3>
+					<div className="header">Experience</div>
 					<Experiences data={data.experiences} />
 				</div>
 
 				<div className="section">
-					<h3>Education</h3>
+					<div className="header">Education</div>
 					<Education data={data.educations} />
 				</div>
 			</div>
