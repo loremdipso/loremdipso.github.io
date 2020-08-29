@@ -9,6 +9,7 @@ export default function Education({ data }: { data: IEducation[] }) {
 					<div className="name">
 						<a href={ed.website}>{ed.description}</a>
 						{ed.degree && <div className="subtitle degree">{ed.degree}</div>}
+						{ed.extra && <div className="subtitle extra">{ed.extra}</div>}
 					</div>
 
 					<div className="period">{ed.period}</div>

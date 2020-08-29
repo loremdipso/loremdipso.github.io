@@ -33,11 +33,11 @@ export interface IContact {
 }
 
 export interface IEducation {
-	degree: string;
+	degree?: string;
 	period: string;
 	description: string;
+	extra?: string;
 	website: string;
-	clubs: string[];
 }
 
 export interface ISkill {

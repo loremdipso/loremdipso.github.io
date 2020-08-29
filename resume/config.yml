@@ -23,11 +23,8 @@ educations:
   - degree: B.S. in Computer Science (cont'd)
     period: 2011 - 2014
     description: University of Tennessee, Knoxville
+    extra: Member of the programming team for two years and captain for one
     website: https://www.utk.edu/
-    clubs:
-      - Programming Team
-        - Captain, 2013 - 2014
-        - Member, 2011 - 2013
 
   - degree: B.S. in Computer Science
     period: 2010 - 2011
@@ -60,43 +57,45 @@ experiences:
             description:
             period: Jan 2020 - Aug 2020
             projects:
-              - Architected and implemented the infrastructure that allows generically integrating any video vendor's solution with Epic's remote monitoring application. Previously these integrations had to be done one by one and were extremely cost prohibitive.
+              - Created the infrastructure that allows generically integrating any video vendor's product with Epic's remote monitoring application. Previously these integrations had to be done manually and were thus extremely cost prohibitive.
 
-          - name: Skunkworks
+          - name: Special Projects (aka Skunkworks)
             role: SD
             description: Task force that meant to advance framework and improve developer retention
             period: Jan 2019 - Dec 2019
             projects:
-              - Updated Epic's web framework to support "hot reloading," whereby developers would be able to see their UI changes in near realtime. Previously they'd need to log out and back in to clear the browser's cache.
-              - Improved Epic's internal version controls tools to largely eliminate the need for manually selecting the correct files for a commit, work that every developer did multiple times a day everyday.
-              - Obviated the need for two ASP.NET-specific files for all new projects, making development simpler and easier to port to other platforms.
-              - Dramatically improved web server cache performance in a few key areas by making those objects being cached immutable.
-              - Helped introduce React Functional Components to Epic's existing architecture, while keeping backwards compatible with what was there before.
+              - Updated the web framework to support something akin to "hot reloading," whereby developers would be able to see their UI changes in near realtime.
+              # - Updated Epic's web framework to support "hot reloading," whereby developers would be able to see their UI changes in near realtime. Previously they'd need to log out and back in to clear the browser's cache.
+              - Improved Epic's integration with version control tools, saving time and reducing user error.
+              # - Obviated the need for two ASP.NET-specific files for all new projects, making development simpler and easier to port to other platforms.
+              - Rewrote key parts of the core web framework to be immutable, dramatically improving performance.
+              - Helped introduce React Functional Components to the existing architecture, which has helped foster increased reusability of components and, anecdotally, developer satisfaction.
 
           - name: Social Care
             role: SD
             description:
             period: Jan 2018 - April 2018
             projects:
-              - Implemented and iterated on functionality that graphically indicates a patient and their relationships. Besides being functionally quite useful it also beautified an otherwise mundane screen.
+              - Created an interactive graphic of a patient's support network. It's being used today to ensure patients are properly cared for ouside of the medical setting.
 
           - name: Telehealth
             role: SD
             description:
             period: May 2017 - Dec 2018
             projects:
-              - Lead architect and developer on flagship product that allows patients to schedule video visits with their organization's partners. This both reduced patient wait times and reduced unnecessary usage of in-person facilities.
+              - Lead architect on flagship product that allows for organizations to pool resources for virtual care. This improved availability of these services, reduced patient wait times, and reduced unnecessary usage of in-person facilities.
 
           - name: Endocrinology
             role: SD
             description:
             period: Nov 2016 - April 2017
             projects:
-              - "Part of small team that pioneered Epic's first Endocrinology module: a tool that standardized recording and displaying insulin instructions."
+              - "Part of small team that pioneered Epic's first Endocrinology module."
+              # - "Part of small team that pioneered Epic's first Endocrinology module: a tool that standardized recording and displaying insulin instructions."
 
-          - name: MyChart
-            role: SD
-            description: Team that builds the website patients use to connect to their healthcare organization
-            period: Jan 2016 - Aug 2016
-            projects:
-              - Improved performance of graphing infrastructure by ~25%.
+          # - name: MyChart
+          #   role: SD
+          #   description: Team that builds the website patients use to connect to their healthcare organization
+          #   period: Jan 2016 - Aug 2016
+          #   projects:
+          #     - Improved performance of graphing infrastructure by ~25%.

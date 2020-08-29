@@ -142,23 +142,21 @@ html {
 					color: initial;
 				}
 				text-align: left;
-				> :first-child {
-					// width: 7em;
-				}
-				// max-width: 55em;
 
 				.subtitle {
-					// margin-left: 1em;
-					// font-style: italic;
+					color: #666;
+					font-family: Bitter, Georgia, serif;
+					font-size: 0.9em;
+
+					&.extra {
+						margin-left: 2em;
+					}
+
+					&:last-child {
+						margin-bottom: 1em;
+					}
 				}
 			}
-		}
-
-		.degree {
-			color: #666;
-			font-family: Bitter, Georgia, serif;
-			font-size: 0.9em;
-			margin-bottom: 1em;
 		}
 
 		.period {

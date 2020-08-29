@@ -6,7 +6,7 @@
   "license": "0BSD",
   "scripts": {
     "resume": "node ./resume/build.js",
-    "build": "gatsby build && rm -rf ./docs; cp -r ./public ./docs",
+    "build": "gatsby build && node ./resume/build.js && rm -rf ./docs; cp -r ./public ./docs",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
     "start": "npm run develop",
