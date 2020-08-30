@@ -23,7 +23,7 @@ educations:
   - degree: B.S. in Computer Science (cont'd)
     period: 2011 - 2014
     description: University of Tennessee, Knoxville
-    extra: Member of the programming team for two years and captain for one
+    extra: Member of the programming team for two years and then captain for one
     website: https://www.utk.edu/
 
   - degree: B.S. in Computer Science
@@ -32,8 +32,14 @@ educations:
     website: https://www.tntech.edu/
 
 skills:
+  - name: Agile
+    level: 99
+  - name: UX
+    level: 99
   - name: C#
     level: 99
+  - name: Java
+    level: 70
   - name: HTML5
     level: 99
   - name: CSS 3
@@ -61,7 +67,7 @@ experiences:
 
           - name: Special Projects (aka Skunkworks)
             role: SD
-            description: Task force that meant to advance framework and improve developer retention
+            # description: Task force that meant to advance framework and improve developer retention
             period: Jan 2019 - Dec 2019
             projects:
               - Updated the web framework to support something akin to "hot reloading," whereby developers would be able to see their UI changes in near realtime.
@@ -74,7 +80,7 @@ experiences:
           - name: Social Care
             role: SD
             description:
-            period: Jan 2018 - April 2018
+            period: Jan 2018 - Apr 2018
             projects:
               - Created an interactive graphic of a patient's support network. It's being used today to ensure patients are properly cared for ouside of the medical setting.
 
@@ -88,7 +94,7 @@ experiences:
           - name: Endocrinology
             role: SD
             description:
-            period: Nov 2016 - April 2017
+            period: Nov 2016 - Apr 2017
             projects:
               - "Part of small team that pioneered Epic's first Endocrinology module."
               # - "Part of small team that pioneered Epic's first Endocrinology module: a tool that standardized recording and displaying insulin instructions."

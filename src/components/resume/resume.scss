@@ -3,12 +3,79 @@ html {
 }
 
 .resume {
-	padding: 1em;
 	line-height: 1.5;
 	font-size: 1em;
 
+	&.take1 {
+		padding: 1em;
+
+		.content {
+			max-width: 50em;
+
+			.contacts {
+				display: grid;
+				grid-template-columns: auto auto;
+				grid-gap: 0px 10px;
+				align-items: right left;
+				font-family: Georgia, sans-serif;
+
+				margin-top: 20px;
+				margin-left: 20px;
+				margin-right: 20px;
+
+				font-size: 0.9em;
+				font-family: sans-serif;
+
+				/* first column */
+				> :nth-child(2n-1) {
+					text-align: right;
+				}
+
+				/* second column */
+				> :nth-child(2n) {
+					text-align: left;
+				}
+			}
+		}
+	}
+
+
+	&.take2 {
+		.content {
+			> .header {
+				background-color: #363d47;
+				padding: 1em;
+				* {
+					color: white !important;
+				}
+			}
+
+			.contacts {
+				.header {
+					font-weight: bold;
+					border-bottom: 1px solid black;
+				}
+			}
+		}
+
+		.body {
+			display: grid;
+			grid-template-columns: 70% 30%;
+			> * {
+				padding: 1em;
+			}
+		}
+
+		.sidebar {
+			background-color: #e9e9e9;
+			.label {
+				color: black;
+				font-weight: bold;
+			}
+		}
+	}
+
 	.content {
-		max-width: 50em;
 		margin: 0 auto;
 		position: relative;
 		font-family: Georgia, sans-serif;
@@ -45,32 +112,6 @@ html {
 			color: #bbb;
 			display: inline-block;
 		}
-
-		.contacts {
-			display: grid;
-			grid-template-columns: auto auto;
-			grid-gap: 0px 10px;
-			align-items: right left;
-			font-family: Georgia, sans-serif;
-
-			margin-top: 20px;
-			margin-left: 20px;
-			margin-right: 20px;
-
-			font-size: 0.9em;
-			font-family: sans-serif;
-
-			/* first column */
-			> :nth-child(2n-1) {
-				text-align: right;
-			}
-
-			/* second column */
-			> :nth-child(2n) {
-				text-align: left;
-			}
-		}
-
 		.grid {
 			display: flex;
 			flex-wrap: wrap;
