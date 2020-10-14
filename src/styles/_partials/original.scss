@@ -1,4 +1,8 @@
-.contact {
+.centered-content {
+	text-align: center;
+}
+
+.contact-links {
 	white-space: nowrap;
 	word-spacing: normal;
 	letter-spacing: normal;
@@ -27,15 +31,10 @@
 		height: 24px;
 		vertical-align: middle;
 	}
-
-	// img {
-	// 	display: inline;
-	// 	height: 100%;
-	// }
 }
 
 #avatar {
-	position: absolute;
+	// position: absolute;
 	// right: -16em;
 	// top: -5em;
 	margin: 0;
@@ -58,7 +57,7 @@
 	// nav {
 	// 	margin-bottom: 2em;
 	// }
-	.contact {
+	.contact-links {
 		// position: absolute;
 		line-height: 3.3rem;
 		background: none;
@@ -83,7 +82,7 @@
 			margin: 0 0 0.5em 2em;
 		}
 	}
-	.contact {
+	.contact-links {
 		padding: 1em;
 		.icon {
 			width: 32px;

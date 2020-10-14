@@ -11,10 +11,6 @@ birth:
 contact:
   email: mtadams42@gmail.com
   phone: (615) 962-2329
-  street: 18 North Paterson, unit 612
-  city: Madison
-  state: WI
-  zip: 53703
   website: https://loremdipso.com/
   github: loremdipso
 lang: en
@@ -98,7 +94,6 @@ experiences:
             projects:
               - "Part of small team that pioneered Epic's first Endocrinology module."
               # - "Part of small team that pioneered Epic's first Endocrinology module: a tool that standardized recording and displaying insulin instructions."
-
           # - name: MyChart
           #   role: SD
           #   description: Team that builds the website patients use to connect to their healthcare organization

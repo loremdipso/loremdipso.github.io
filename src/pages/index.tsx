@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "../styles/styles.scss";
 import { Navbar, Nav, Container } from "react-bootstrap";
 import "../../node_modules/bootstrap/dist/css/bootstrap.css";
@@ -8,16 +8,19 @@ import { Blog } from "../components/blog/blog";
 import Resume from "../components/resume/resume";
 import ContactIcons from "../components/profile/contact-icons";
 import { Router, Link, Location } from "@reach/router";
-import { TransitionGroup, CSSTransition } from "react-transition-group";
 
 export default function Home() {
 	return (
-		<div>
-			<Navbar sticky="top" bg="light" collapseOnSelect>
+		<>
+			<Navbar bg="dark" variant="dark" sticky="top">
 				<Nav>
 					<FancyNavLink to={APP_ROUTES.home}>About</FancyNavLink>
 					<FancyNavLink to={APP_ROUTES.blog}>Blog</FancyNavLink>
 					<FancyNavLink to={APP_ROUTES.resume}>Resumé</FancyNavLink>
+				</Nav>
+
+				<Nav className="ml-auto">
+					<ContactIcons />
 				</Nav>
 			</Navbar>
 
@@ -27,19 +30,14 @@ export default function Home() {
 				<Blog path={APP_ROUTES.blog_slug} />
 				<Resume path={APP_ROUTES.resume} />
 			</FancyRouter>
-
-			<Navbar fixed="bottom" bg="light">
-				<Nav className="ml-auto mr-auto">
-					<ContactIcons />
-				</Nav>
-			</Navbar>
-		</div>
+		</>
 	);
 }
 
 function FancyNavLink(props: { to: string; children: any }) {
 	return (
-		<Link
+		<Nav.Link
+			as={Link}
 			to={props.to}
 			className="nav-link"
 			getProps={({ isCurrent }) => {
@@ -47,7 +45,7 @@ function FancyNavLink(props: { to: string; children: any }) {
 			}}
 		>
 			{props.children}
-		</Link>
+		</Nav.Link>
 	);
 }
 
@@ -57,17 +55,9 @@ function FancyRouter({ children }: { children: any }) {
 			<Location>
 				{({ location }) => (
 					<Container>
-						<TransitionGroup>
-							<CSSTransition
-								key={location.key}
-								timeout={{ enter: 300, exit: 300 }}
-								classNames={"fade"}
-							>
-								<section className="route-section">
-									<Router location={location}>{children}</Router>
-								</section>
-							</CSSTransition>
-						</TransitionGroup>
+						<section className="route-section">
+							<Router location={location}>{children}</Router>
+						</section>
 					</Container>
 				)}
 			</Location>

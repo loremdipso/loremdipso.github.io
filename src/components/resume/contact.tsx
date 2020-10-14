@@ -7,13 +7,11 @@ export function Contact({ data }: { data: IContact }) {
 	return (
 		<div className="contacts">
 			{version === 2 && <div className="header">Personal Info</div>}
-			{/* <Line name="Address">
-				{data.street && <div>{data.street}</div>}
-				<div>
-					{data.city}, {data.state} {data.zip}
-				</div>
-			</Line> */}
-			{data.email && <Line name="Email"><div>{data.email}</div></Line>}
+			{data.email && (
+				<Line name="Email">
+					<div>{data.email}</div>
+				</Line>
+			)}
 			<Line name="Mobile">
 				<div>{data.phone}</div>
 			</Line>

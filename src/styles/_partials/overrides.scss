@@ -2,13 +2,10 @@
 	padding: 0 !important;
 }
 
-$bottom_margin: 2px;
 .nav-link {
 	padding: 1rem !important;
-	border-bottom: $bottom_margin;
 }
 
 .nav-link.selected {
-	background-color: #f0f0f0;
-	border-bottom: $bottom_margin solid black;
+	color: white !important;
 }
