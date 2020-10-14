@@ -51,14 +51,32 @@ function FancyNavLink(props: { to: string; children: any }) {
 
 function FancyRouter({ children }: { children: any }) {
 	return (
-		<Location>
-			{({ location }) => (
-				<Router location={location}>{children}</Router>
-				// <section>
-				// </section>
-				// <Container>
-				// </Container>
-			)}
-		</Location>
+		<CoolBackground>
+			<Location>
+				{({ location }) => (
+					<Router location={location}>{children}</Router>
+					// <section>
+					// </section>
+					// <Container>
+					// </Container>
+				)}
+			</Location>
+		</CoolBackground>
+	);
+}
+
+function CoolBackground({ children }: { children: any }) {
+	const shapes = Array.from({ length: 80 });
+	return (
+		<div className="fun-background">
+			<div className="shape-container">
+				{shapes.map((el, i) => (
+					<div className={`shape-container--${i} shape-animation`} key={i}>
+						<div className="random-shape"></div>
+					</div>
+				))}
+			</div>
+			{children}
+		</div>
 	);
 }

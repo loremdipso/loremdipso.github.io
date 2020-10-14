@@ -5,6 +5,7 @@ html {
 .resume {
 	line-height: 1.5;
 	font-size: 1em;
+	background-color: white;
 
 	&.take1 {
 		padding: 1em;
@@ -38,7 +39,6 @@ html {
 			}
 		}
 	}
-
 
 	&.take2 {
 		.content {
