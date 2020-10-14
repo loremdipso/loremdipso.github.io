@@ -51,16 +51,14 @@ function FancyNavLink(props: { to: string; children: any }) {
 
 function FancyRouter({ children }: { children: any }) {
 	return (
-		<div>
-			<Location>
-				{({ location }) => (
-					<Container>
-						<section className="route-section">
-							<Router location={location}>{children}</Router>
-						</section>
-					</Container>
-				)}
-			</Location>
-		</div>
+		<Location>
+			{({ location }) => (
+				<Router location={location}>{children}</Router>
+				// <section>
+				// </section>
+				// <Container>
+				// </Container>
+			)}
+		</Location>
 	);
 }

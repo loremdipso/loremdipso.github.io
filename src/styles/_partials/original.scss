@@ -1,12 +1,7 @@
-.centered-content {
-	text-align: center;
-}
-
 .contact-links {
 	white-space: nowrap;
 	word-spacing: normal;
 	letter-spacing: normal;
-	// background: #f0f0f0;
 	text-align: center;
 	padding: 0.5em;
 	vertical-align: middle;
@@ -33,61 +28,8 @@
 	}
 }
 
-#avatar {
-	// position: absolute;
-	// right: -16em;
-	// top: -5em;
+.avatar {
 	margin: 0;
 	width: 13em;
-	// height: 13em;
 	border-radius: 6.5em;
 }
-
-/*
-@media screen and (min-width: 60em) {
-	#avatar {
-		position: absolute;
-		// right: -16em;
-		// top: -5em;
-		margin: 0;
-		width: 13em;
-		// height: 13em;
-		border-radius: 6.5em;
-	}
-	// nav {
-	// 	margin-bottom: 2em;
-	// }
-	.contact-links {
-		// position: absolute;
-		line-height: 3.3rem;
-		background: none;
-		padding: 0;
-		// right: 1em;
-		// top: 1px;
-		* {
-			opacity: 0.7;
-		}
-	}
-}
-
-@media screen and (min-width: 40em) {
-	.site {
-		.thumb {
-			display: block;
-			float: right;
-			width: 40%;
-			height: auto;
-			border: 3px solid #888;
-			border-radius: 5px;
-			margin: 0 0 0.5em 2em;
-		}
-	}
-	.contact-links {
-		padding: 1em;
-		.icon {
-			width: 32px;
-			height: 32px;
-		}
-	}
-}
-*/
