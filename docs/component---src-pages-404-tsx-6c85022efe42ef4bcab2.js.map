@@ -1,1 +1,0 @@
-{"version":3,"sources":["webpack:///./src/pages/404.tsx"],"names":["Unknown"],"mappings":"6FAAA,oFAGe,SAASA,IACvB,OAAO,kBAAC,UAAD","file":"component---src-pages-404-tsx-6c85022efe42ef4bcab2.js","sourcesContent":["import React, { useState } from \"react\";\nimport Home from \".\";\n\nexport default function Unknown() {\n\treturn <Home />;\n}\n"],"sourceRoot":""}
