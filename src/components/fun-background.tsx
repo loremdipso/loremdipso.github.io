@@ -11,8 +11,15 @@ const COLORS = [
 	"#FF5722",
 	"#3F51B5",
 ];
-const VEL = 0.2;
-const ACC = 0.1;
+
+const VEL_MIN = 10;
+const VEL_MAX = 20;
+const ROTATION_VEL = 10;
+
+const RADIUS_MIN = 25;
+const RADIUS_MAX = 50;
+const RADIUS_VEL_MIN = 1;
+const RADIUS_VEL_MAX = 5;
 
 const FancyCanvas = styled.canvas`
 	position: absolute;
@@ -37,8 +44,6 @@ export default function CoolBackground({ children }: { children: any }) {
 				let canvas = canvasRef.current as HTMLElement;
 				canvas.setAttribute("width", `${window.innerWidth}px`);
 				canvas.setAttribute("height", `${window.innerHeight}px`);
-				// canvas.width =
-				// 	canvas.height * (canvas.clientWidth / canvas.clientHeight);
 			};
 			doResize();
 
@@ -63,14 +68,14 @@ function manipulateCanvas(canvas: HTMLCanvasElement) {
 	let shouldExit = false;
 	const context = canvas.getContext("2d");
 
-	const FRAMES_PER_SECOND = 10;
+	const FRAMES_PER_SECOND = 30;
 	const FRAME_MIN_TIME =
 		(1000 / 60) * (60 / FRAMES_PER_SECOND) - (1000 / 60) * 0.5;
 
 	let state: IState = {
 		shapes: [],
 		rotation: 0,
-		rotationVelocity: 0.1,
+		rotationVelocity: ROTATION_VEL,
 	};
 
 	let lastFrameTime = 0;
@@ -79,16 +84,20 @@ function manipulateCanvas(canvas: HTMLCanvasElement) {
 			return;
 		}
 
-		updateObjects(state.shapes, canvas);
-		renderObjects(state, canvas, context);
+		let delta = time - lastFrameTime;
 
-		if (time - lastFrameTime < FRAME_MIN_TIME) {
+		if (lastFrameTime > 0) {
+			updateObjects(state.shapes, canvas, delta / 1000);
+			renderObjects(state, canvas, context, delta / 1000);
+		}
+
+		if (delta < FRAME_MIN_TIME) {
 			//skip the frame if the call is too early
 			requestAnimationFrame(update);
-			return; // return as there is nothing to do
+		} else {
+			lastFrameTime = time; // remember the time of the rendered frame
+			requestAnimationFrame(update); // get next farme
 		}
-		lastFrameTime = time; // remember the time of the rendered frame
-		requestAnimationFrame(update); // get next farme
 	};
 	requestAnimationFrame(update); // start animation
 
@@ -101,7 +110,7 @@ interface IShape {
 	draw: (context: CanvasRenderingContext2D) => void;
 
 	// returns true if this shape is still valid, false if it should be removed
-	updateAndKeep: () => boolean;
+	updateAndKeep: (delta: number) => boolean;
 }
 
 interface IState {
@@ -128,6 +137,8 @@ class Circle implements IShape {
 	private color: string;
 
 	constructor(private canvas: HTMLCanvasElement) {
+		this.radius = 0;
+
 		this.pos = {
 			x: getRandomInt(20, canvas.width),
 			y: getRandomInt(20, canvas.height),
@@ -136,10 +147,11 @@ class Circle implements IShape {
 			x: getRandomInt(20, canvas.width),
 			y: getRandomInt(20, canvas.height),
 		};
-		this.radius = 0;
-		this.velocityMagnitude = getRandomNumb(0, VEL);
-		this.targetRadius = getRandomInt(25, 50);
-		this.radiusVelocity = 1.0 / getRandomInt(7, 10);
+
+		this.velocityMagnitude = getRandomNumb(VEL_MIN, VEL_MAX);
+		this.targetRadius = getRandomInt(RADIUS_MIN, RADIUS_MAX);
+		this.radiusVelocity = getRandomNumb(RADIUS_VEL_MIN, RADIUS_VEL_MAX);
+		this.radiusVelocity = getRandomNumb(RADIUS_VEL_MIN, RADIUS_VEL_MAX);
 		this.color = getRandomElement(COLORS);
 
 		this.calculateVelocity();
@@ -162,16 +174,15 @@ class Circle implements IShape {
 		};
 	}
 
-	public updateAndKeep(): boolean {
-		this.pos.x += this.velocity.x;
-		this.pos.y += this.velocity.y;
+	public updateAndKeep(delta: number): boolean {
+		this.pos.x += this.velocity.x * delta;
+		this.pos.y += this.velocity.y * delta;
 
-		if (Math.abs(this.radius - this.targetRadius) < DELTA) {
-			this.targetRadius = -1;
-		} else if (this.radius < this.targetRadius) {
-			this.radius += this.radiusVelocity;
+		if (this.radius < this.targetRadius) {
+			this.radius += this.radiusVelocity * delta;
 		} else if (this.radius > this.targetRadius) {
-			this.radius -= this.radiusVelocity;
+			this.radius -= this.radiusVelocity * delta;
+			this.targetRadius = -1;
 		}
 
 		if (this.radius < 0) {
@@ -182,14 +193,18 @@ class Circle implements IShape {
 	}
 }
 
-function updateObjects(shapes: IShape[], canvas: HTMLCanvasElement) {
+function updateObjects(
+	shapes: IShape[],
+	canvas: HTMLCanvasElement,
+	delta: number
+) {
 	for (let i = shapes.length; i < MAX_OBJECTS; i++) {
 		shapes.push(new Circle(canvas));
 	}
 
 	for (let i = shapes.length - 1; i >= 0; i--) {
 		let shape = shapes[i];
-		if (!shape.updateAndKeep()) {
+		if (!shape.updateAndKeep(delta)) {
 			shapes.splice(i, 1);
 		}
 	}
@@ -198,7 +213,8 @@ function updateObjects(shapes: IShape[], canvas: HTMLCanvasElement) {
 function renderObjects(
 	state: IState,
 	canvas: HTMLCanvasElement,
-	context: CanvasRenderingContext2D
+	context: CanvasRenderingContext2D,
+	delta: number
 ) {
 	context.clearRect(0, 0, canvas.width, canvas.height);
 	context.save();
@@ -209,24 +225,23 @@ function renderObjects(
 	context.rotate((state.rotation * Math.PI) / 180);
 	context.translate(-cx, -cy);
 
-	state.rotation += state.rotationVelocity;
+	state.rotation += state.rotationVelocity * delta;
 	for (let shape of state.shapes) {
 		shape.draw(context);
 	}
+
 	context.restore();
 }
 
 function getRandomNumb(min: number, max: number): number {
-	return (
-		min + Math.floor(Math.random() * Math.floor((max - min + 1) * 100)) / 100
-	);
+	return min + Math.floor(Math.random() * (max - min) * 10000) / 10000;
 }
 
 function getRandomInt(min: number, max: number): number {
-	return min + Math.floor(Math.random() * Math.floor(max - min + 1));
+	return min + Math.floor(Math.random() * (max - min));
 }
 
 function getRandomElement<T>(arr: T[]): T {
-	let randomIndex = getRandomInt(0, arr.length - 1);
+	let randomIndex = getRandomInt(0, arr.length);
 	return arr[randomIndex];
 }
