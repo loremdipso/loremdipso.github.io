@@ -1,10 +1,12 @@
 import React from "react";
-import { Container } from "react-bootstrap";
+import { Button, Card, Container } from "react-bootstrap";
 import styled from "styled-components";
 import ContainerWithSidebar from "../sidebar/container-with-sidebar";
 
 const Header = styled.div`
 	display: flex;
+	padding-left: 1rem;
+	padding-top: 1rem;
 `;
 const SubHeader = styled.h2`
 	font-size: 2rem;
@@ -12,8 +14,6 @@ const SubHeader = styled.h2`
 const HeaderLeft = styled.div`
 	margin-top: auto;
 	margin-bottom: auto;
-	// background-color: rgba(0, 0, 0, 0.1);
-	// padding: 1rem;
 `;
 const Name = styled.div`
 	max-width: 3rem;
@@ -21,14 +21,11 @@ const Name = styled.div`
 	font-weight: bold;
 	text-align: left;
 `;
-const Body = styled.div`
-	margin-left: auto;
-`;
 
 export default function Profile({ path }: { path: string }) {
 	return (
 		<ContainerWithSidebar>
-			<ContainerWithSidebar.Section title="Header">
+			<ContainerWithSidebar.Section title="Overview" excludePadding>
 				<Header>
 					<HeaderLeft>
 						<Name>Michael Adams</Name>
@@ -39,103 +36,24 @@ export default function Profile({ path }: { path: string }) {
 						<img src="profile_pic.jpg" className="avatar" />
 					</div>
 				</Header>
+
+				<div className="easy-flex">
+					<Button variant="secondary">Download Résumé</Button>
+					<Button variant="success">See cool stuff</Button>
+				</div>
 			</ContainerWithSidebar.Section>
 
-			<ContainerWithSidebar.Section title="Content1">
-				<Content />
-			</ContainerWithSidebar.Section>
-			<ContainerWithSidebar.Section title="Content2">
-				<Content />
-			</ContainerWithSidebar.Section>
-			<ContainerWithSidebar.Section title="Content3">
-				<Content />
-			</ContainerWithSidebar.Section>
-			<ContainerWithSidebar.Section title="Content4">
-				<Content />
-			</ContainerWithSidebar.Section>
-			<ContainerWithSidebar.Section title="Content5">
-				<Content />
+			<ContainerWithSidebar.Section title="About" showTitle>
+				<AboutMe />
 			</ContainerWithSidebar.Section>
 		</ContainerWithSidebar>
 	);
 }
 
-function Content() {
+function AboutMe() {
 	return (
-		<article>
-			<h3>About</h3>
-			<p>
-				Lorem dipso is theklj slfkj sdf htlkwehtlwk hlskdjfs
-				ldkjtlkhtlkethlskthjsltkjljgsgjslkg jlkg jsklgj lsjgj.
-			</p>
-			<p>
-				Lorem dipso is theklj slfkj sdf htlkwehtlwk hlskdjfs
-				ldkjtlkhtlkethlskthjsltkjljgsgjslkg jlkg jsklgj lsjgj.
-			</p>
-			<p>
-				Lorem dipso is theklj slfkj sdf htlkwehtlwk hlskdjfs
-				ldkjtlkhtlkethlskthjsltkjljgsgjslkg jlkg jsklgj lsjgj.
-			</p>
-			<p>
-				Lorem dipso is theklj slfkj sdf htlkwehtlwk hlskdjfs
-				ldkjtlkhtlkethlskthjsltkjljgsgjslkg jlkg jsklgj lsjgj.
-			</p>
-			<p>
-				Lorem dipso is theklj slfkj sdf htlkwehtlwk hlskdjfs
-				ldkjtlkhtlkethlskthjsltkjljgsgjslkg jlkg jsklgj lsjgj.
-			</p>
-			<p>
-				Lorem dipso is theklj slfkj sdf htlkwehtlwk hlskdjfs
-				ldkjtlkhtlkethlskthjsltkjljgsgjslkg jlkg jsklgj lsjgj.
-			</p>
-			<p>
-				Lorem dipso is theklj slfkj sdf htlkwehtlwk hlskdjfs
-				ldkjtlkhtlkethlskthjsltkjljgsgjslkg jlkg jsklgj lsjgj.
-			</p>
-			<p>
-				Lorem dipso is theklj slfkj sdf htlkwehtlwk hlskdjfs
-				ldkjtlkhtlkethlskthjsltkjljgsgjslkg jlkg jsklgj lsjgj.
-			</p>
-			<p>
-				Lorem dipso is theklj slfkj sdf htlkwehtlwk hlskdjfs
-				ldkjtlkhtlkethlskthjsltkjljgsgjslkg jlkg jsklgj lsjgj.
-			</p>
-			<p>
-				Lorem dipso is theklj slfkj sdf htlkwehtlwk hlskdjfs
-				ldkjtlkhtlkethlskthjsltkjljgsgjslkg jlkg jsklgj lsjgj.
-			</p>
-			<p>
-				Lorem dipso is theklj slfkj sdf htlkwehtlwk hlskdjfs
-				ldkjtlkhtlkethlskthjsltkjljgsgjslkg jlkg jsklgj lsjgj.
-			</p>
-			<p>
-				Lorem dipso is theklj slfkj sdf htlkwehtlwk hlskdjfs
-				ldkjtlkhtlkethlskthjsltkjljgsgjslkg jlkg jsklgj lsjgj.
-			</p>
-			<p>
-				Lorem dipso is theklj slfkj sdf htlkwehtlwk hlskdjfs
-				ldkjtlkhtlkethlskthjsltkjljgsgjslkg jlkg jsklgj lsjgj.
-			</p>
-			<p>
-				Lorem dipso is theklj slfkj sdf htlkwehtlwk hlskdjfs
-				ldkjtlkhtlkethlskthjsltkjljgsgjslkg jlkg jsklgj lsjgj.
-			</p>
-			<p>
-				Lorem dipso is theklj slfkj sdf htlkwehtlwk hlskdjfs
-				ldkjtlkhtlkethlskthjsltkjljgsgjslkg jlkg jsklgj lsjgj.
-			</p>
-			<p>
-				Lorem dipso is theklj slfkj sdf htlkwehtlwk hlskdjfs
-				ldkjtlkhtlkethlskthjsltkjljgsgjslkg jlkg jsklgj lsjgj.
-			</p>
-			<p>
-				Lorem dipso is theklj slfkj sdf htlkwehtlwk hlskdjfs
-				ldkjtlkhtlkethlskthjsltkjljgsgjslkg jlkg jsklgj lsjgj.
-			</p>
-			<p>
-				Lorem dipso is theklj slfkj sdf htlkwehtlwk hlskdjfs
-				ldkjtlkhtlkethlskthjsltkjljgsgjslkg jlkg jsklgj lsjgj.
-			</p>
-		</article>
+		<>
+			<p>Hi! Welcome to me site</p>
+		</>
 	);
 }

@@ -4,7 +4,17 @@ import { ISectionProps, Section } from "./section";
 import { IActiveLabels, Sidebar } from "./sidebar";
 
 export interface IContainerProps {
-	children: JSX.Element[];
+	children: JSX.Element | JSX.Element[];
+}
+
+function getChildrenArray(
+	children: JSX.Element | JSX.Element[]
+): JSX.Element[] {
+	if (!Array.isArray(children)) {
+		return [children];
+	} else {
+		return children;
+	}
 }
 
 const ContainerWithSidebar = ({ children }: IContainerProps) => {
@@ -13,17 +23,15 @@ const ContainerWithSidebar = ({ children }: IContainerProps) => {
 	const [labelToScrollTo, setLabelToScrollTo] = useState({});
 
 	useEffect(() => {
-		if (!Array.isArray(children)) {
-			children = [children];
-		}
-
-		setLabels(children.map((el) => (el.props as ISectionProps).title));
+		setLabels(
+			getChildrenArray(children).map((el) => (el.props as ISectionProps).title)
+		);
 	}, [children]);
 
 	return (
 		<div className="container-with-sidebar">
 			<div className="actual-container">
-				{children.map((child, i) => (
+				{getChildrenArray(children).map((child, i) => (
 					<TrackVisibility
 						onVisible={(label: string, height: number, percentage: number) => {
 							let obj = activeLabels[label];
@@ -115,7 +123,16 @@ function TrackVisibility({
 		}
 	}, [currentRef, doScroll]);
 
-	return <div ref={ref}>{child}</div>;
+	return (
+		<div
+			ref={ref}
+			className={
+				(child.props as ISectionProps).excludePadding ? "exclude-padding" : null
+			}
+		>
+			{child}
+		</div>
+	);
 }
 
 ContainerWithSidebar.Section = Section;

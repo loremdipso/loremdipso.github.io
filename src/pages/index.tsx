@@ -17,7 +17,7 @@ export default function Home() {
 				<Nav>
 					<FancyNavLink to={APP_ROUTES.home}>About</FancyNavLink>
 					<FancyNavLink to={APP_ROUTES.blog}>Blog</FancyNavLink>
-					<FancyNavLink to={APP_ROUTES.resume}>Resumé</FancyNavLink>
+					<FancyNavLink to={APP_ROUTES.resume}>Résumé</FancyNavLink>
 				</Nav>
 
 				<Nav className="ml-auto">

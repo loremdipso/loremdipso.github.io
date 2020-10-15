@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react";
+import context from "react-bootstrap/esm/AccordionContext";
+import ContainerWithSidebar from "../sidebar/container-with-sidebar";
 import { linkToBlogContent } from "./blog";
 
 export default function SinglePost() {
@@ -25,5 +27,16 @@ export default function SinglePost() {
 		});
 	}, [location.href]);
 
-	return <>{content}</>;
+	if (!content) {
+		return null;
+	}
+	console.log(content);
+
+	return (
+		<ContainerWithSidebar>
+			<ContainerWithSidebar.Section title="Blog Posts" showTitle>
+				{content}
+			</ContainerWithSidebar.Section>
+		</ContainerWithSidebar>
+	);
 }

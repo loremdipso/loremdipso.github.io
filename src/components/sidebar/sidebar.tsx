@@ -35,18 +35,34 @@ export function Sidebar({
 }
 
 function isSelected(activeLabels: IActiveLabels, label: string): boolean {
-	let obj = activeLabels[label];
-	if (!obj) {
-		return false;
+	let firstLabelFullyOnScreen = getFirstLabelFullyOnScreen(activeLabels);
+	if (firstLabelFullyOnScreen) {
+		if (firstLabelFullyOnScreen === label) {
+			return true;
+		} else {
+			return false;
+		}
 	}
 
-	if (obj.percentage >= 1.0) {
-		return true;
-	}
+	let maxLabel = getMaxLabel(activeLabels);
+	return maxLabel === label;
+}
 
-	let max = 0.0;
-	let maxLabel = null;
-	let somethingIsFullyOnScreen = false;
+function getFirstLabelFullyOnScreen(activeLabels: IActiveLabels): string {
+	for (let tempLabel in activeLabels) {
+		let value = activeLabels[tempLabel];
+		if (value) {
+			if (value.percentage >= 1.0) {
+				return tempLabel;
+			}
+		}
+	}
+	return null;
+}
+
+function getMaxLabel(activeLabels: IActiveLabels): string {
+	let max = 0.0,
+		maxLabel = null;
 	for (let tempLabel in activeLabels) {
 		let value = activeLabels[tempLabel];
 		if (value) {
@@ -54,12 +70,8 @@ function isSelected(activeLabels: IActiveLabels, label: string): boolean {
 				max = value.height;
 				maxLabel = tempLabel;
 			}
-
-			if (value.percentage >= 1.0) {
-				somethingIsFullyOnScreen = true;
-			}
 		}
 	}
 
-	return !somethingIsFullyOnScreen && maxLabel === label;
+	return maxLabel;
 }

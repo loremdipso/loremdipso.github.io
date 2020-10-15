@@ -63,19 +63,17 @@ function manipulateCanvas(canvas: HTMLCanvasElement) {
 	let shouldExit = false;
 	const context = canvas.getContext("2d");
 
-	// const FRAMES_PER_SECOND = 30; // Valid values are 60,30,20,15,10...
-	const FRAMES_PER_SECOND = 10; // Valid values are 60,30,20,15,10...
-	// set the mim time to render the next frame
+	const FRAMES_PER_SECOND = 10;
 	const FRAME_MIN_TIME =
 		(1000 / 60) * (60 / FRAMES_PER_SECOND) - (1000 / 60) * 0.5;
 
-	let lastFrameTime = 0; // the last frame time
 	let state: IState = {
 		shapes: [],
 		rotation: 0,
 		rotationVelocity: 0.1,
 	};
 
+	let lastFrameTime = 0;
 	const update = (time) => {
 		if (shouldExit) {
 			return;
@@ -90,7 +88,6 @@ function manipulateCanvas(canvas: HTMLCanvasElement) {
 			return; // return as there is nothing to do
 		}
 		lastFrameTime = time; // remember the time of the rendered frame
-		// render the frame
 		requestAnimationFrame(update); // get next farme
 	};
 	requestAnimationFrame(update); // start animation

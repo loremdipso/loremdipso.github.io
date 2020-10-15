@@ -28,8 +28,39 @@
 	}
 }
 
+$avatar-height: 15rem;
 .avatar {
 	margin: 0;
-	width: 13em;
-	border-radius: 6.5em;
+	width: $avatar-height;
+	border-radius: $avatar-height;
+}
+
+.easy-flex {
+	width: 100%;
+	display: flex;
+	> * {
+		flex-grow: 1;
+	}
+
+	button {
+		border-radius: 0px;
+		text-transform: uppercase;
+	}
+}
+
+.date-title {
+	width: 100%;
+	display: flex;
+	> :last-child {
+		margin-left: auto;
+	}
+
+	button {
+		border-radius: 0px;
+		text-transform: uppercase;
+	}
+}
+
+.post {
+	cursor: pointer;
 }
