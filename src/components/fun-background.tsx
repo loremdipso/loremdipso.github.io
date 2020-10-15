@@ -21,8 +21,6 @@ const RADIUS_MAX = 50;
 const RADIUS_VEL_MIN = 1;
 const RADIUS_VEL_MAX = 5;
 
-const OVERSCROLL_BUFFER = 150;
-
 const FancyCanvas = styled.canvas`
 	position: absolute;
 	width: 100%;
@@ -44,14 +42,8 @@ export default function CoolBackground({ children }: { children: any }) {
 		if (canvasRef) {
 			let doResize = () => {
 				let canvas = canvasRef.current as HTMLElement;
-				canvas.setAttribute(
-					"width",
-					`${window.innerWidth + OVERSCROLL_BUFFER}px`
-				);
-				canvas.setAttribute(
-					"height",
-					`${window.innerHeight + OVERSCROLL_BUFFER}px`
-				);
+				canvas.setAttribute("width", `${window.innerWidth}px`);
+				canvas.setAttribute("height", `${window.innerHeight}px`);
 			};
 			doResize();
 
