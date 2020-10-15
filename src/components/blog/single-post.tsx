@@ -32,7 +32,7 @@ export default function SinglePost() {
 	console.log(content);
 
 	return (
-		<ContainerWithSidebar>
+		<ContainerWithSidebar hideSidebar>
 			<ContainerWithSidebar.Section title={title}>
 				<h2 className="centered">{title}</h2>
 			</ContainerWithSidebar.Section>

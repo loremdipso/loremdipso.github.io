@@ -6,7 +6,7 @@ import ContainerWithSidebar from "../sidebar/container-with-sidebar";
 
 export default function Profile({ path }: { path: string }) {
 	return (
-		<ContainerWithSidebar>
+		<ContainerWithSidebar hideSidebar>
 			<ContainerWithSidebar.Section title="Overview" excludePadding>
 				<div className="avatar-header-container">
 					<div>

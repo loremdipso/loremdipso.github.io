@@ -40,7 +40,7 @@ export default function Listing() {
 
 				let title = "Blog Posts";
 				return (
-					<ContainerWithSidebar>
+					<ContainerWithSidebar hideSidebar>
 						<ContainerWithSidebar.Section title={title}>
 							<h2 className="centered">{title}</h2>
 						</ContainerWithSidebar.Section>

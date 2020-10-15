@@ -1,10 +1,10 @@
 import React, { useEffect, useRef, useState } from "react";
-import styled from "styled-components";
 import { ISectionProps, Section } from "./section";
 import { IActiveLabels, Sidebar } from "./sidebar";
 
 export interface IContainerProps {
 	children: JSX.Element | JSX.Element[];
+	hideSidebar?: boolean;
 }
 
 function getChildrenArray(
@@ -18,7 +18,7 @@ function getChildrenArray(
 	}
 }
 
-const ContainerWithSidebar = ({ children }: IContainerProps) => {
+const ContainerWithSidebar = ({ children, hideSidebar }: IContainerProps) => {
 	const [labels, setLabels] = useState([]);
 	const [activeLabels, setActiveLabels] = useState({} as IActiveLabels);
 	const [labelToScrollTo, setLabelToScrollTo] = useState({});
@@ -29,7 +29,7 @@ const ContainerWithSidebar = ({ children }: IContainerProps) => {
 		);
 	}, [children]);
 
-	let hasSidebar = labels.length > 1;
+	let hasSidebar = !hideSidebar && labels.length > 1;
 
 	return (
 		<div className="container-with-sidebar">
