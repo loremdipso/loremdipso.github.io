@@ -37,10 +37,15 @@ export default function Listing() {
 							<PostLink key={edge.node.id} post={edge.node} />
 						</ContainerWithSidebar.Section>
 					));
+
+				let title = "Blog Posts";
 				return (
 					<ContainerWithSidebar>
-						<ContainerWithSidebar.Section title="Blog Posts" showTitle />
-						<>{Posts}</>
+						<ContainerWithSidebar.Section title={title}>
+							<h2 className="centered">{title}</h2>
+						</ContainerWithSidebar.Section>
+
+						{Posts}
 					</ContainerWithSidebar>
 				);
 			}}

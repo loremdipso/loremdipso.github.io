@@ -67,9 +67,11 @@ experiences:
             period: Jan 2019 - Dec 2019
             projects:
               - Updated the web framework to support something akin to "hot reloading," whereby developers would be able to see their UI changes in near realtime.
-              # - Updated Epic's web framework to support "hot reloading," whereby developers would be able to see their UI changes in near realtime. Previously they'd need to log out and back in to clear the browser's cache.
+              # could take out
+              - Updated Epic's web framework to support "hot reloading," whereby developers would be able to see their UI changes in near realtime. Previously they'd need to log out and back in to clear the browser's cache.
               - Improved Epic's integration with version control tools, saving time and reducing user error.
-              # - Obviated the need for two ASP.NET-specific files for all new projects, making development simpler and easier to port to other platforms.
+              # could take out
+              - Obviated the need for two ASP.NET-specific files for all new projects, making development simpler and easier to port to other platforms.
               - Rewrote key parts of the core web framework to be immutable, dramatically improving performance.
               - Helped introduce React Functional Components to the existing architecture, which has helped foster increased reusability of components and, anecdotally, developer satisfaction.
 
@@ -94,9 +96,9 @@ experiences:
             projects:
               - "Part of small team that pioneered Epic's first Endocrinology module."
               # - "Part of small team that pioneered Epic's first Endocrinology module: a tool that standardized recording and displaying insulin instructions."
-          # - name: MyChart
-          #   role: SD
-          #   description: Team that builds the website patients use to connect to their healthcare organization
-          #   period: Jan 2016 - Aug 2016
-          #   projects:
-          #     - Improved performance of graphing infrastructure by ~25%.
+          - name: MyChart
+            role: SD
+            description: Team that builds the website patients use to connect to their healthcare organization
+            period: Jan 2016 - Aug 2016
+            projects:
+              - Improved performance of graphing infrastructure by ~25%.

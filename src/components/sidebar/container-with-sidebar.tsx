@@ -13,7 +13,8 @@ function getChildrenArray(
 	if (!Array.isArray(children)) {
 		return [children];
 	} else {
-		return children;
+		// flatten array
+		return children.reduce((acc, val) => acc.concat(val), []);
 	}
 }
 
@@ -28,9 +29,11 @@ const ContainerWithSidebar = ({ children }: IContainerProps) => {
 		);
 	}, [children]);
 
+	let hasSidebar = labels.length > 1;
+
 	return (
 		<div className="container-with-sidebar">
-			<div className="actual-container">
+			<div className={`${hasSidebar ? "has-sidebar" : ""} actual-container`}>
 				{getChildrenArray(children).map((child, i) => (
 					<TrackVisibility
 						onVisible={(label: string, height: number, percentage: number) => {
@@ -60,11 +63,13 @@ const ContainerWithSidebar = ({ children }: IContainerProps) => {
 				))}
 			</div>
 
-			<Sidebar
-				labels={labels}
-				activeLabels={activeLabels}
-				scrollToLabel={setLabelToScrollTo}
-			/>
+			{hasSidebar ? (
+				<Sidebar
+					labels={labels}
+					activeLabels={activeLabels}
+					scrollToLabel={setLabelToScrollTo}
+				/>
+			) : null}
 		</div>
 	);
 };

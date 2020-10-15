@@ -42,7 +42,8 @@ $avatar-height: 15rem;
 		flex-grow: 1;
 	}
 
-	button {
+	button,
+	.btn {
 		border-radius: 0px;
 		text-transform: uppercase;
 	}
@@ -63,4 +64,10 @@ $avatar-height: 15rem;
 
 .post {
 	cursor: pointer;
+}
+
+.centered {
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
 }
