@@ -4,39 +4,21 @@ import { Button, Card, Container } from "react-bootstrap";
 import styled from "styled-components";
 import ContainerWithSidebar from "../sidebar/container-with-sidebar";
 
-const Header = styled.div`
-	display: flex;
-	padding-left: 1rem;
-	padding-top: 1rem;
-`;
-const SubHeader = styled.h2`
-	font-size: 2rem;
-`;
-const HeaderLeft = styled.div`
-	margin-top: auto;
-	margin-bottom: auto;
-`;
-const Name = styled.div`
-	max-width: 3rem;
-	font-size: 5rem;
-	font-weight: bold;
-	text-align: left;
-`;
-
 export default function Profile({ path }: { path: string }) {
 	return (
 		<ContainerWithSidebar>
 			<ContainerWithSidebar.Section title="Overview" excludePadding>
-				<Header>
-					<HeaderLeft>
-						<Name>Michael Adams</Name>
-						<SubHeader>Software Engineer</SubHeader>
-					</HeaderLeft>
+				<div className="avatar-header-container">
+					<div>
+						<div className="name">Michael</div>
+						<div className="name">Adams</div>
+						<div className="subheader">Software Engineer</div>
+					</div>
 
 					<div className="ml-auto mr-auto">
 						<img src="profile_pic.jpg" className="avatar" />
 					</div>
-				</Header>
+				</div>
 
 				<div className="easy-flex">
 					<Button variant="secondary" href="/resume.pdf">
@@ -67,7 +49,7 @@ function AboutMe() {
 	);
 }
 
-function handler<T>(callback: () => T): (event: Event) => T {
+function handler<T>(callback: () => T): (event: any) => T {
 	return (event: Event) => {
 		event.preventDefault();
 		return callback();

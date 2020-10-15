@@ -13,16 +13,26 @@ import CoolBackground from "../components/fun-background";
 export default function Home() {
 	return (
 		<>
-			<Navbar bg="dark" variant="dark" sticky="top">
-				<Nav>
-					<FancyNavLink to={APP_ROUTES.home}>About</FancyNavLink>
-					<FancyNavLink to={APP_ROUTES.blog}>Blog</FancyNavLink>
-					<FancyNavLink to={APP_ROUTES.resume}>Résumé</FancyNavLink>
-				</Nav>
+			<Navbar
+				bg="dark"
+				variant="dark"
+				sticky="top"
+				expand="sm"
+				collapseOnSelect
+				className="fancy-header"
+			>
+				<Navbar.Toggle aria-controls="basic-navbar-nav" />
+				<Navbar.Collapse>
+					<Nav>
+						<FancyNavLink to={APP_ROUTES.home}>About</FancyNavLink>
+						<FancyNavLink to={APP_ROUTES.blog}>Blog</FancyNavLink>
+						<FancyNavLink to={APP_ROUTES.resume}>Résumé</FancyNavLink>
+					</Nav>
 
-				<Nav className="ml-auto">
-					<ContactIcons />
-				</Nav>
+					<Nav className="ml-auto">
+						<ContactIcons />
+					</Nav>
+				</Navbar.Collapse>
 			</Navbar>
 
 			<FancyRouter>
@@ -41,6 +51,7 @@ function FancyNavLink(props: { to: string; children: any }) {
 			as={Link}
 			to={props.to}
 			className="nav-link"
+			eventKey="1"
 			getProps={({ isCurrent }) => {
 				return { className: isCurrent ? "nav-link selected" : "nav-link" };
 			}}
