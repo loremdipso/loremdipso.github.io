@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import "../styles/styles.scss";
 import { Navbar, Nav, Container } from "react-bootstrap";
 import "../../node_modules/bootstrap/dist/css/bootstrap.css";
@@ -8,6 +8,7 @@ import { Blog } from "../components/blog/blog";
 import Resume from "../components/resume/resume";
 import ContactIcons from "../components/profile/contact-icons";
 import { Router, Link, Location } from "@reach/router";
+import CoolBackground from "../components/fun-background";
 
 export default function Home() {
 	return (
@@ -62,21 +63,5 @@ function FancyRouter({ children }: { children: any }) {
 				)}
 			</Location>
 		</CoolBackground>
-	);
-}
-
-function CoolBackground({ children }: { children: any }) {
-	const shapes = Array.from({ length: 80 });
-	return (
-		<div className="fun-background">
-			<div className="shape-container">
-				{shapes.map((el, i) => (
-					<div className={`shape-container--${i} shape-animation`} key={i}>
-						<div className="random-shape"></div>
-					</div>
-				))}
-			</div>
-			{children}
-		</div>
 	);
 }

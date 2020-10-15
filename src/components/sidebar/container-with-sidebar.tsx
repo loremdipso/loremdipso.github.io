@@ -107,7 +107,6 @@ function TrackVisibility({
 
 	useEffect(() => {
 		if (doScroll && currentRef) {
-			console.log("oop");
 			window.scrollTo({
 				behavior: "smooth",
 				left: 0,

@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import styled from "styled-components";
 
 export interface IActiveLabels {
 	[key: string]: { height: number; percentage: number };
