@@ -7,6 +7,9 @@ $container-padding: 1rem;
 .container-with-sidebar {
 	display: flex;
 
+	// only support
+	min-width: 20rem;
+
 	.actual-container {
 		background-color: rgba(255, 255, 255, 0.1);
 
