@@ -18,7 +18,7 @@ Fast means different things to different people. I knew this site was going to b
 
 But we're greenfielding it, so SPA it is! And I chose gatsby to help out with navigation and also generating the blog content. For the résumé I have kind of an exaggerated pipeline, where I fill out a yml which I convert to json and feed into a page on this site. To get a `pdf` I wrote a script that effectively hosts the page in a headless browser and prints the result to a file. To get a `.docx` I... would have to write it by hand. But luckily `.docx` is far less common.
 
-The skeleton of the site is loaded regardless of which page you go to. Heavier projects will be [split out and lazy loaded](https://reactjs.org/docs/code-splitting.html), so the site is about as fast as it can reasonably be and shouldn't get slower even as I add content.
+The skeleton of the site is loaded regardless of which page you go to. Heavier projects will be [split out and lazy loaded](https://reactjs.org/docs/code-splitting.html), or else hosted separately, so the site is about as fast as it can reasonably be and shouldn't get slower even as I add content.
 
 ## Fun
 

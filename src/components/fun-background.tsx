@@ -21,19 +21,6 @@ const RADIUS_MAX = 50;
 const RADIUS_VEL_MIN = 1;
 const RADIUS_VEL_MAX = 5;
 
-const FancyCanvas = styled.canvas`
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	background-color: #364451;
-	position: fixed;
-	width: 100%;
-	height: 100%;
-	top: 0px;
-	left: 0px;
-	z-index: -1;
-`;
-
 export default function CoolBackground({ children }: { children: any }) {
 	const shapes = Array.from({ length: 80 });
 	const canvasRef = useRef(null);
@@ -58,7 +45,7 @@ export default function CoolBackground({ children }: { children: any }) {
 
 	return (
 		<>
-			<FancyCanvas className="shape-container" ref={canvasRef} />
+			<canvas className="fancy-canvas" ref={canvasRef} />
 			{children}
 		</>
 	);

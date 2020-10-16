@@ -4,7 +4,7 @@ import styled from "styled-components";
 
 export default function Projects() {
 	return (
-		<ContainerWithSidebar>
+		<ContainerWithSidebar hideSidebar>
 			<ContainerWithSidebar.Section
 				title="Rust WASM - Snake Game"
 				showTitle
