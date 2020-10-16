@@ -1,8 +1,6 @@
 import React, { useEffect, useRef } from "react";
-import styled from "styled-components";
 
 const MAX_OBJECTS = 120;
-const DELTA = 0.2;
 const COLORS = [
 	"#B2EBF2",
 	"#BDBDBD",
@@ -22,11 +20,10 @@ const RADIUS_VEL_MIN = 1;
 const RADIUS_VEL_MAX = 5;
 
 export default function CoolBackground({ children }: { children: any }) {
-	const shapes = Array.from({ length: 80 });
 	const canvasRef = useRef(null);
 
 	useEffect(() => {
-		if (canvasRef) {
+		if (canvasRef && canvasRef.current) {
 			let doResize = () => {
 				let canvas = canvasRef.current as HTMLElement;
 				canvas.setAttribute("width", `${window.innerWidth}px`);
@@ -45,8 +42,8 @@ export default function CoolBackground({ children }: { children: any }) {
 
 	return (
 		<>
-			<canvas className="fancy-canvas" ref={canvasRef} />
 			{children}
+			<canvas className="fancy-canvas" ref={canvasRef} />
 		</>
 	);
 }
