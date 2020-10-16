@@ -1,3 +1,4 @@
+import { navigate } from "gatsby";
 import React, { useState, useEffect } from "react";
 import context from "react-bootstrap/esm/AccordionContext";
 import ContainerWithSidebar from "../sidebar/container-with-sidebar";
@@ -10,7 +11,6 @@ export default function SinglePost() {
 	const [date, setDate] = useState(null);
 
 	useEffect(() => {
-		console.log(linkToBlogContent(location.href));
 		fetch(linkToBlogContent(location.href)).then((response) => {
 			if (response.ok) {
 				response.json().then((obj) => {
@@ -29,11 +29,22 @@ export default function SinglePost() {
 	if (!content) {
 		return null;
 	}
-	console.log(content);
 
+	let linkTo = "/blog";
 	return (
 		<ContainerWithSidebar hideSidebar>
-			<ContainerWithSidebar.Section title={title}>
+			<ContainerWithSidebar.Section title={title} alignTitle="center">
+				<a
+					className="section-link icon-left"
+					href={linkTo}
+					onClick={(event) => {
+						event.preventDefault();
+						navigate(linkTo);
+					}}
+					style={{
+						position: "absolute",
+					}}
+				/>
 				<h2 className="centered">{title}</h2>
 			</ContainerWithSidebar.Section>
 

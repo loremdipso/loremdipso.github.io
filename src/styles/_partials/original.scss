@@ -54,10 +54,6 @@
 	}
 }
 
-.post {
-	cursor: pointer;
-}
-
 .centered {
 	margin-left: auto;
 	margin-right: auto;
@@ -113,8 +109,47 @@
 
 .fancy-header {
 	text-align: center;
+}
 
-	// .navbar-toggler {
-	// 	margin-bottom: -3rem;
-	// }
+.section-link {
+	cursor: pointer;
+	color: inherit;
+	&:hover {
+		text-decoration: none;
+	}
+}
+
+.image-container {
+	display: flex;
+	> :first-child {
+		padding-right: 1rem;
+	}
+}
+
+.simple-image {
+	object-fit: contain;
+	width: 100%;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+
+	&.small {
+		max-width: 20rem;
+	}
+}
+
+.background-with-transparent-border {
+	background-image: linear-gradient(
+		to right,
+		rgba(255, 0, 0, 0),
+		yellow,
+		yellow,
+		yellow,
+		yellow,
+		yellow,
+		yellow,
+		yellow,
+		yellow,
+		rgba(255, 0, 0, 0)
+	);
 }

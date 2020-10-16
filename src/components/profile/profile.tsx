@@ -3,6 +3,7 @@ import { navigate } from "gatsby";
 import { Button, Card, Container } from "react-bootstrap";
 import styled from "styled-components";
 import ContainerWithSidebar from "../sidebar/container-with-sidebar";
+import { handler } from "../../helpers/link";
 
 export default function Profile({ path }: { path: string }) {
 	return (
@@ -26,7 +27,7 @@ export default function Profile({ path }: { path: string }) {
 					</Button>
 					<Button
 						variant="success"
-						href="/blog"
+						href="/projects"
 						onClick={handler(() => navigate("/blog"))}
 					>
 						See cool stuff
@@ -47,11 +48,4 @@ function AboutMe() {
 			<p>Hi! Welcome to me site</p>
 		</>
 	);
-}
-
-function handler<T>(callback: () => T): (event: any) => T {
-	return (event: Event) => {
-		event.preventDefault();
-		return callback();
-	};
 }

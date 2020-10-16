@@ -9,6 +9,7 @@ import Resume from "../components/resume/resume";
 import ContactIcons from "../components/profile/contact-icons";
 import { Router, Link, Location } from "@reach/router";
 import CoolBackground from "../components/fun-background";
+import Projects from "../components/projects/projects";
 
 export default function Home() {
 	return (
@@ -25,6 +26,7 @@ export default function Home() {
 				<Navbar.Collapse>
 					<Nav>
 						<FancyNavLink to={APP_ROUTES.home}>About</FancyNavLink>
+						<FancyNavLink to={APP_ROUTES.projects}>Projects</FancyNavLink>
 						<FancyNavLink to={APP_ROUTES.blog}>Blog</FancyNavLink>
 						<FancyNavLink to={APP_ROUTES.resume}>Résumé</FancyNavLink>
 					</Nav>
@@ -37,6 +39,7 @@ export default function Home() {
 
 			<FancyRouter>
 				<Profile path={APP_ROUTES.home} />
+				<Projects path={APP_ROUTES.projects} />
 				<Blog path={APP_ROUTES.blog} />
 				<Blog path={APP_ROUTES.blog_slug} />
 				<Resume path={APP_ROUTES.resume} />

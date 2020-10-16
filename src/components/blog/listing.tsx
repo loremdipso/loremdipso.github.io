@@ -1,7 +1,8 @@
 import React from "react";
-import PostLink from "./post-link";
 import { StaticQuery, graphql, Link } from "gatsby";
 import ContainerWithSidebar from "../sidebar/container-with-sidebar";
+import { blogContentToLink } from "./blog";
+import PostPreview from "./post-preview";
 
 export default function Listing() {
 	return (
@@ -33,17 +34,20 @@ export default function Listing() {
 						<ContainerWithSidebar.Section
 							key={i}
 							title={edge.node.frontmatter.title}
+							linkTo={blogContentToLink(edge.node.frontmatter.slug)}
+							useRouter
 						>
-							<PostLink key={edge.node.id} post={edge.node} />
+							<PostPreview key={edge.node.id} post={edge.node} />
 						</ContainerWithSidebar.Section>
 					));
 
-				let title = "Blog Posts";
 				return (
 					<ContainerWithSidebar hideSidebar>
-						<ContainerWithSidebar.Section title={title}>
-							<h2 className="centered">{title}</h2>
-						</ContainerWithSidebar.Section>
+						<ContainerWithSidebar.Section
+							title="Blog Posts"
+							showTitle
+							alignTitle="center"
+						/>
 
 						{Posts}
 					</ContainerWithSidebar>
