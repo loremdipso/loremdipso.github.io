@@ -24,6 +24,37 @@ export default function Projects() {
 					</div>
 				</div>
 			</ContainerWithSidebar.Section>
+
+			<ContainerWithSidebar.Section
+				title="taggenator"
+				showTitle
+				alignTitle="center"
+				linkTo={"https://github.com/loremdipso/taggenator"}
+			>
+				<div>
+					I've long wondered if we could improve on the traditional hierarchical
+					file system. <code>taggenator</code> is a CLI written in{" "}
+					<code>go</code> and optimized for speed that tries to do just that.
+				</div>
+			</ContainerWithSidebar.Section>
+
+			<ContainerWithSidebar.Section
+				title="Michael's Resume Website"
+				showTitle
+				alignTitle="center"
+				linkTo={"https://github.com/loremdipso/loremdipso.github.io"}
+			>
+				<>
+					Have you ever looked at a site and wondered how it was made? Look no
+					further! Here's this site's full source code, including:
+					<ul>
+						<li>Resume builder</li>
+						<li>Playful background</li>
+						<li>React components</li>
+					</ul>
+					Take a look, let me know what you think.
+				</>
+			</ContainerWithSidebar.Section>
 		</ContainerWithSidebar>
 	);
 }
