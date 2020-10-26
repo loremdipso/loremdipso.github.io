@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import "../styles/styles.scss";
 import { Navbar, Nav, Container } from "react-bootstrap";
 import "../../node_modules/bootstrap/dist/css/bootstrap.css";
@@ -10,8 +10,18 @@ import ContactIcons from "../components/profile/contact-icons";
 import { Router, Link, Location } from "@reach/router";
 import CoolBackground from "../components/fun-background";
 import Projects from "../components/projects/projects";
+import { navigate } from "gatsby";
 
 export default function Home() {
+	// normalize our url so it never ends in a slash (sorry gatsby)
+	useEffect(() => {
+		let location = window.location.href || "";
+		if (location && location.length && location[location.length - 1] == "/") {
+			location = location.slice(0, location.length - 1);
+			navigate(location);
+		}
+	}, []);
+
 	return (
 		<>
 			<Navbar
@@ -55,9 +65,9 @@ function FancyNavLink(props: { to: string; children: any }) {
 			to={props.to}
 			className="nav-link"
 			eventKey="1"
-			getProps={({ isCurrent }) => {
-				return { className: isCurrent ? "nav-link selected" : "nav-link" };
-			}}
+			getProps={({ isCurrent }) => ({
+				className: isCurrent ? "nav-link selected" : "nav-link",
+			})}
 		>
 			{props.children}
 		</Nav.Link>

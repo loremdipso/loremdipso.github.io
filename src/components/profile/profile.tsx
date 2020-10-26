@@ -28,7 +28,7 @@ export default function Profile({}: { path: string }) {
 					<Button
 						variant="success"
 						href="/projects"
-						onClick={handler(() => navigate("/blog"))}
+						onClick={handler(() => navigate("/projects"))}
 					>
 						See cool stuff
 					</Button>
