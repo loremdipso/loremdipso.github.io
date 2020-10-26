@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from "react";
 import ContainerWithSidebar from "../sidebar/container-with-sidebar";
 import styled from "styled-components";
 
-export default function Projects() {
+export default function Projects({}: { path: string }) {
 	return (
 		<ContainerWithSidebar hideSidebar>
 			<ContainerWithSidebar.Section

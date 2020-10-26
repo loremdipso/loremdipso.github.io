@@ -5,7 +5,7 @@ import styled from "styled-components";
 import ContainerWithSidebar from "../sidebar/container-with-sidebar";
 import { handler } from "../../helpers/link";
 
-export default function Profile({ path }: { path: string }) {
+export default function Profile({}: { path: string }) {
 	return (
 		<ContainerWithSidebar hideSidebar>
 			<ContainerWithSidebar.Section title="Overview" excludePadding>
