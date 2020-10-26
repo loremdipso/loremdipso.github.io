@@ -23,7 +23,7 @@ export default function Profile({ path }: { path: string }) {
 
 				<div className="easy-flex">
 					<Button variant="secondary" href="/resume.pdf">
-						Download Résumé
+						Download Resume
 					</Button>
 					<Button
 						variant="success"

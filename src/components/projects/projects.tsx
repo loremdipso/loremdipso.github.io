@@ -6,6 +6,24 @@ export default function Projects() {
 	return (
 		<ContainerWithSidebar hideSidebar>
 			<ContainerWithSidebar.Section
+				title="Rust WASM - Tetris Clone"
+				showTitle
+				alignTitle="center"
+				linkTo={"https://loremdipso.github.io/rusty_tetris"}
+			>
+				<div className="image-container">
+					<img src="/images/tetris.png" className="simple-image small" />
+
+					<div>
+						Bare-bones tetris clone built using the snake game as a template. It
+						was very fast to make, in part because so much of the boilerplate
+						was done, but also because Rust's advanced type system makes
+						refactoring a breeze.
+					</div>
+				</div>
+			</ContainerWithSidebar.Section>
+
+			<ContainerWithSidebar.Section
 				title="Rust WASM - Snake Game"
 				showTitle
 				alignTitle="center"
@@ -34,25 +52,19 @@ export default function Projects() {
 				<div>
 					I've long wondered if we could improve on the traditional hierarchical
 					file system. <code>taggenator</code> is a CLI written in{" "}
-					<code>go</code> and optimized for speed that tries to do just that.
+					<code>go</code> that tries to do just that.
 				</div>
 			</ContainerWithSidebar.Section>
 
 			<ContainerWithSidebar.Section
-				title="Michael's Resume Website"
+				title="Resume Website and Resume Generator"
 				showTitle
 				alignTitle="center"
 				linkTo={"https://github.com/loremdipso/loremdipso.github.io"}
 			>
 				<>
-					Have you ever looked at a site and wondered how it was made? Look no
-					further! Here's this site's full source code, including:
-					<ul>
-						<li>Resume builder</li>
-						<li>Playful background</li>
-						<li>React components</li>
-					</ul>
-					Take a look, let me know what you think.
+					Both this site itself and the code that generates my resume from a
+					simple <code>.yaml</code> file.
 				</>
 			</ContainerWithSidebar.Section>
 		</ContainerWithSidebar>

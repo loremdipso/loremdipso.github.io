@@ -121,19 +121,23 @@
 
 .image-container {
 	display: flex;
+	margin-top: auto;
+	margin-bottom: auto;
+
 	> :first-child {
 		padding-right: 1rem;
 	}
 
 	.simple-image {
 		object-fit: contain;
-		width: 100%;
 		display: block;
 		margin-left: auto;
 		margin-right: auto;
 
 		&.small {
-			max-width: 20rem;
+			$small-width: 10rem;
+			min-width: $small-width;
+			max-width: $small-width;
 		}
 	}
 
@@ -142,6 +146,12 @@
 		> :first-child {
 			padding-right: 0;
 			padding-top: 1rem;
+		}
+
+		.simple-image.small {
+			$medium-width: 20rem;
+			min-width: $medium-width;
+			max-width: $medium-width;
 		}
 	}
 }
