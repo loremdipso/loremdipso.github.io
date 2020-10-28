@@ -8,6 +8,7 @@
     "resume": "node ./resume/build.js",
     "build": "gatsby build && node ./resume/build.js && rm -rf ./docs; cp -r ./public ./docs",
     "debug": "gatsby develop",
+    "develop": "gatsby develop",
     "dev": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
     "start": "npm run develop",
