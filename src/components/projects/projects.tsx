@@ -6,6 +6,28 @@ export default function Projects({}: { path: string }) {
 	return (
 		<ContainerWithSidebar hideSidebar>
 			<ContainerWithSidebar.Section
+				title="Face API - Expression Game"
+				showTitle
+				alignTitle="center"
+				linkTo={"https://loremdipso.github.io/face_game"}
+			>
+				<div className="image-container">
+					<img src="/images/face_game.png" className="simple-image small" />
+
+					<div>
+						I wanted to play around with modern JavaScript facial recognition,
+						which seems to be{" "}
+						<a href="https://justadudewhohacks.github.io/face-api.js/docs/index.html">
+							face-api.js
+						</a>
+						. It was striking to me just how easy it was to get going. From
+						requesting a camera feed to asking the library for the user's most
+						likely expression, the whole project was very smooth.
+					</div>
+				</div>
+			</ContainerWithSidebar.Section>
+
+			<ContainerWithSidebar.Section
 				title="Rust WASM - Tetris Clone"
 				showTitle
 				alignTitle="center"
@@ -63,8 +85,8 @@ export default function Projects({}: { path: string }) {
 				linkTo={"https://github.com/loremdipso/loremdipso.github.io"}
 			>
 				<>
-					Both this site itself and the code that generates my resume from a
-					simple <code>.yaml</code> file.
+					Take a gander at the source behind this very site and the program that
+					generates my resume from a simple <code>.yaml</code> file.
 				</>
 			</ContainerWithSidebar.Section>
 		</ContainerWithSidebar>
