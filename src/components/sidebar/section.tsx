@@ -27,12 +27,7 @@ export function Section({
 	let content = showTitle ? (
 		<>
 			<h2 style={{ textAlign: alignTitle || "left" }}>{title}</h2>
-			{children ? (
-				<>
-					<br />
-					{children}
-				</>
-			) : null}
+			{children ? <>{children}</> : null}
 		</>
 	) : (
 		<>{children}</>

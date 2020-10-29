@@ -6,6 +6,25 @@ export default function Projects({}: { path: string }) {
 	return (
 		<ContainerWithSidebar hideSidebar>
 			<ContainerWithSidebar.Section
+				title="Face API - Spooooooky"
+				showTitle
+				alignTitle="center"
+				linkTo={"https://loremdipso.github.io/spooky_face"}
+			>
+				<div className="image-container">
+					<img src="/images/spooky.png" className="simple-image small" />
+
+					<div>
+						Another foray into facial recognition with{" "}
+						<a href="https://justadudewhohacks.github.io/face-api.js/docs/index.html">
+							face-api.js
+						</a>
+						, this time with a halloween twist.
+					</div>
+				</div>
+			</ContainerWithSidebar.Section>
+
+			<ContainerWithSidebar.Section
 				title="Face API - Expression Game"
 				showTitle
 				alignTitle="center"
