@@ -11,6 +11,7 @@ import { Router, Link, Location } from "@reach/router";
 import CoolBackground from "../components/fun-background";
 import Projects from "../components/projects/projects";
 import { navigate } from "gatsby";
+import ReactGA from "react-ga";
 
 export default function Home() {
 	// normalize our url so it never ends in a slash (sorry gatsby)
@@ -20,6 +21,12 @@ export default function Home() {
 			location = location.slice(0, location.length - 1);
 			navigate(location);
 		}
+	}, []);
+
+	// add tracking
+	useEffect(() => {
+		ReactGA.initialize("G-JTPKPX2Z42");
+		ReactGA.pageview(window.location.pathname + window.location.search);
 	}, []);
 
 	return (
