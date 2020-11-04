@@ -25,7 +25,7 @@ export default function Home() {
 
 	// add tracking
 	useEffect(() => {
-		ReactGA.initialize("G-JTPKPX2Z42");
+		ReactGA.initialize("UA-182108157-1");
 		ReactGA.pageview(window.location.pathname + window.location.search);
 	}, []);
 
