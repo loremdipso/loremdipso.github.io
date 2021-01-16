@@ -10,14 +10,14 @@ const COLORS = [
 	"#3F51B5",
 ];
 
-const VEL_MIN = 10;
-const VEL_MAX = 20;
-const ROTATION_VEL = 10;
+const VEL_MIN = 2;
+const VEL_MAX = 5;
+const ROTATION_VEL = 0;
 
-const RADIUS_MIN = 25;
-const RADIUS_MAX = 50;
+const RADIUS_MIN = 5;
+const RADIUS_MAX = 10;
 const RADIUS_VEL_MIN = 1;
-const RADIUS_VEL_MAX = 5;
+const RADIUS_VEL_MAX = 2;
 
 export default function CoolBackground({ children }: { children: any }) {
 	const canvasRef = useRef(null);
@@ -32,7 +32,9 @@ export default function CoolBackground({ children }: { children: any }) {
 			doResize();
 
 			window.addEventListener("resize", doResize);
-			let canvasCB = manipulateCanvas(canvasRef.current as HTMLCanvasElement);
+			let canvasCB = manipulateCanvas(
+				canvasRef.current as HTMLCanvasElement
+			);
 			return () => {
 				window.removeEventListener("resize", doResize);
 				canvasCB();

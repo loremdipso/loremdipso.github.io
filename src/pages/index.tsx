@@ -17,7 +17,11 @@ export default function Home() {
 	// normalize our url so it never ends in a slash (sorry gatsby)
 	useEffect(() => {
 		let location = window.location.href || "";
-		if (location && location.length && location[location.length - 1] == "/") {
+		if (
+			location &&
+			location.length &&
+			location[location.length - 1] == "/"
+		) {
 			location = location.slice(0, location.length - 1);
 			navigate(location);
 		}
@@ -43,9 +47,13 @@ export default function Home() {
 				<Navbar.Collapse>
 					<Nav>
 						<FancyNavLink to={APP_ROUTES.home}>About</FancyNavLink>
-						<FancyNavLink to={APP_ROUTES.projects}>Projects</FancyNavLink>
+						<FancyNavLink to={APP_ROUTES.projects}>
+							Projects
+						</FancyNavLink>
 						<FancyNavLink to={APP_ROUTES.blog}>Blog</FancyNavLink>
-						<FancyNavLink to={APP_ROUTES.resume}>Resume</FancyNavLink>
+						<FancyNavLink to={APP_ROUTES.resume}>
+							Resume
+						</FancyNavLink>
 					</Nav>
 
 					<Nav className="ml-auto">
