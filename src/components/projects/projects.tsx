@@ -6,13 +6,41 @@ export default function Projects({}: { path: string }) {
 	return (
 		<ContainerWithSidebar hideSidebar>
 			<ContainerWithSidebar.Section
+				title="Secret Santa"
+				showTitle
+				alignTitle="center"
+				linkTo={"https://loremdipso.github.io/secret_santa"}
+			>
+				<div className="image-container">
+					<img
+						src="/images/secret_santa.png"
+						className="simple-image small"
+					/>
+
+					<div>
+						Simple client project to help me manage my yearly remote
+						secret santas. Very similar in concept to{" "}
+						<a href="https://arcanis.github.io/secretsanta/">
+							this project
+						</a>
+						, but with some extra features. Includes import/export
+						functionality for if you play with the same group
+						multiple years and don't want duplicate pairings.
+					</div>
+				</div>
+			</ContainerWithSidebar.Section>
+
+			<ContainerWithSidebar.Section
 				title="Face API - Spooooooky"
 				showTitle
 				alignTitle="center"
 				linkTo={"https://loremdipso.github.io/spooky_face"}
 			>
 				<div className="image-container">
-					<img src="/images/spooky.png" className="simple-image small" />
+					<img
+						src="/images/spooky.png"
+						className="simple-image small"
+					/>
 
 					<div>
 						Another foray into facial recognition with{" "}
@@ -31,17 +59,21 @@ export default function Projects({}: { path: string }) {
 				linkTo={"https://loremdipso.github.io/face_game"}
 			>
 				<div className="image-container">
-					<img src="/images/face_game.png" className="simple-image small" />
+					<img
+						src="/images/face_game.png"
+						className="simple-image small"
+					/>
 
 					<div>
-						I wanted to play around with modern JavaScript facial recognition,
-						which seems to be{" "}
+						I wanted to play around with modern JavaScript facial
+						recognition, which seems to be{" "}
 						<a href="https://justadudewhohacks.github.io/face-api.js/docs/index.html">
 							face-api.js
 						</a>
-						. It was striking to me just how easy it was to get going. From
-						requesting a camera feed to asking the library for the user's most
-						likely expression, the whole project was very smooth.
+						. It was striking to me just how easy it was to get
+						going. From requesting a camera feed to asking the
+						library for the user's most likely expression, the whole
+						project was very smooth.
 					</div>
 				</div>
 			</ContainerWithSidebar.Section>
@@ -53,13 +85,16 @@ export default function Projects({}: { path: string }) {
 				linkTo={"https://loremdipso.github.io/rusty_tetris"}
 			>
 				<div className="image-container">
-					<img src="/images/tetris.png" className="simple-image small" />
+					<img
+						src="/images/tetris.png"
+						className="simple-image small"
+					/>
 
 					<div>
-						Bare-bones tetris clone built using the snake game as a template. It
-						was very fast to make, in part because so much of the boilerplate
-						was done, but also because Rust's advanced type system makes
-						refactoring a breeze.
+						Bare-bones tetris clone built using the snake game as a
+						template. It was very fast to make, in part because so
+						much of the boilerplate was done, but also because
+						Rust's advanced type system makes refactoring a breeze.
 					</div>
 				</div>
 			</ContainerWithSidebar.Section>
@@ -71,15 +106,20 @@ export default function Projects({}: { path: string }) {
 				linkTo={"https://loremdipso.github.io/rusty_snake"}
 			>
 				<div className="image-container">
-					<img src="/images/snake.png" className="simple-image small" />
+					<img
+						src="/images/snake.png"
+						className="simple-image small"
+					/>
 
 					<div>
-						Simple snake game built using HTML5 canvas and Rust's web assembly
-						support. It was definitely more work than just writing JS by hand,
-						and I doubt it's any faster. That said, it was a very fun project,
-						and I wouldn't mind similar work in future. I can see Rust WASM
-						being useful in another project when you care about correctness, or
-						some large project where you care about maintenance costs.
+						Simple snake game built using HTML5 canvas and Rust's
+						web assembly support. It was definitely more work than
+						just writing JS by hand, and I doubt it's any faster.
+						That said, it was a very fun project, and I wouldn't
+						mind similar work in future. I can see Rust WASM being
+						useful in another project when you care about
+						correctness, or some large project where you care about
+						maintenance costs.
 					</div>
 				</div>
 			</ContainerWithSidebar.Section>
@@ -91,9 +131,9 @@ export default function Projects({}: { path: string }) {
 				linkTo={"https://github.com/loremdipso/taggenator"}
 			>
 				<div>
-					I've long wondered if we could improve on the traditional hierarchical
-					file system. <code>taggenator</code> is a CLI written in{" "}
-					<code>go</code> that tries to do just that.
+					I've long wondered if we could improve on the traditional
+					hierarchical file system. <code>taggenator</code> is a CLI
+					written in <code>go</code> that tries to do just that.
 				</div>
 			</ContainerWithSidebar.Section>
 
@@ -104,8 +144,9 @@ export default function Projects({}: { path: string }) {
 				linkTo={"https://github.com/loremdipso/loremdipso.github.io"}
 			>
 				<>
-					Take a gander at the source behind this very site and the program that
-					generates my resume from a simple <code>.yaml</code> file.
+					Take a gander at the source behind this very site and the
+					program that generates my resume from a simple{" "}
+					<code>.yaml</code> file.
 				</>
 			</ContainerWithSidebar.Section>
 		</ContainerWithSidebar>
