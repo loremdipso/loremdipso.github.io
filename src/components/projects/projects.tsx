@@ -132,8 +132,13 @@ export default function Projects({}: { path: string }) {
 			>
 				<div>
 					I've long wondered if we could improve on the traditional
-					hierarchical file system. <code>taggenator</code> is a CLI
-					written in <code>go</code> that tries to do just that.
+					hierarchical file system. It's definitely been attempted
+					before, many times (see
+					<a href="https://en.wikipedia.org/wiki/Semantic_file_system">
+						this wiki page
+					</a>
+					). <code>taggenator</code>, a CLI written in <code>go</code>
+					, is my take on it.
 				</div>
 			</ContainerWithSidebar.Section>
 
