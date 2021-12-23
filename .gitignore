@@ -2,5 +2,4 @@
 .hugo-lock
 .hugo_build.lock
 public/
-docs/
 resources/_gen
