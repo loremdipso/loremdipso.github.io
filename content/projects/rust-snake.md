@@ -1,7 +1,6 @@
 ---
 title: "Snake"
 date: 2020-12-22T10:36:36-07:00
-draft: true
 link: https://loremdipso.com/rusty_snake/
 ---
 

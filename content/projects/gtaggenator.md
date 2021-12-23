@@ -1,7 +1,6 @@
 ---
 title: gtaggenator
 date: 2020-12-10T13:08:19-07:00
-draft: true
 link: https://github.com/loremdipso/gtaggenator/
 ---
 

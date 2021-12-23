@@ -1,7 +1,6 @@
 ---
 title: "Tetris"
 date: 2020-10-15T13:08:19-07:00
-draft: true
 link: https://loremdipso.com/rusty_tetris/
 ---
 

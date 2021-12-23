@@ -1,7 +1,6 @@
 ---
 title: "Resume Website"
 date: 2021-12-22T10:36:17-07:00
-draft: true
 link: https://github.com/loremdipso/loremdipso.github.io/
 ---
 

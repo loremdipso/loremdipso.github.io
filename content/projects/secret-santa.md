@@ -1,7 +1,6 @@
 ---
 title: Secret Santa
 date: 2020-10-22T13:08:19-07:00
-draft: true
 link: https://loremdipso.com/secret_santa/
 ---
 

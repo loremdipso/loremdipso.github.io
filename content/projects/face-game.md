@@ -1,7 +1,6 @@
 ---
 title: "Face Game"
 date: 2020-11-01T13:08:19-07:00
-draft: true
 link: https://loremdipso.com/face_game/
 ---
 
