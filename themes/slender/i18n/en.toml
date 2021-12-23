@@ -1,0 +1,30 @@
+[notFound]
+other = "Sorry, I couldn't find that page :/"
+
+[wordCount]
+other = "{{ .WordCount }} Words"
+
+[tableOfContents]
+other = "Table of Contents"
+
+[next]
+other = "Next"
+
+[previous]
+other = "Previous"
+
+# resume strings
+[resume]
+other = "Resume"
+[email]
+other = "Email"
+[mobile]
+other = "Mobile"
+[experience]
+other = "Experience"
+[education]
+other = "Education"
+[company]
+other = "Company"
+[team]
+other = "Team"

@@ -1,0 +1,36 @@
+{{ define "header" }}
+	{{ partialCached "header.html" . }}
+{{ end }}
+
+{{ define "main" }}
+	<main class="fade-in">
+		<h1>{{ .Title }}</h1>
+		{{- if .Content }}
+			<div class="content">
+				{{ .Content }}
+			</div>
+		{{- end }}
+
+		{{ $activePage := . }}
+		{{- range .Data.Pages.GroupByDate "2006" }}
+			<div class="posts-group">
+				{{ $id := .Key }}
+				<a href="{{ $activePage.RelPermalink }}#{{ $id }}" class="posts-year" id="{{ $id }}">{{ .Key }}</a>
+				<ul class="posts-list">
+					{{- range .Pages }}
+					<li class="post-item">
+						<a href="{{.RelPermalink}}" class="wrappable-container">
+							<span class="post-title">{{.Title}}</span>
+							<span class="post-day">{{ .Date.Format .Site.Params.dateformShort }}</span>
+						</a>
+					</li>
+					{{- end }}
+				</ul>
+			</div>
+		{{- end }}
+	</main>
+{{ end }}
+
+{{ define "footer" }}
+	{{ partialCached "footer.html" . }}
+{{ end }}

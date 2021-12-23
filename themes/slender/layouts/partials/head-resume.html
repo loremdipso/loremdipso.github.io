@@ -1,0 +1,11 @@
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	{{- $title := print .Site.Title " | " ( i18n "resume" ) -}}
+	<title>{{- $title -}}</title>
+
+	{{- $style := resources.Get "scss/resume.scss" | resources.ExecuteAsTemplate "css/style.css" . | toCSS | minify | fingerprint -}}
+		<style>{{ $style.Content | safeCSS }}</style>
+	{{- block "head" . -}}{{- end -}}
+</head>

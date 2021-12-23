@@ -1,0 +1,4 @@
++++
+type = "resume"
+layout = "resume"
++++

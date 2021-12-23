@@ -1,0 +1,104 @@
+[contact]
+	email = "mtadams42@gmail.com"
+
+[[educations]]
+	degree = "B.S. in Computer Science (cont'd)"
+	period = "2011 - 2014"
+	description = "University of Tennessee, Knoxville"
+	extra = "Member of the programming team for two years and then captain for one"
+	website = "https://www.utk.edu/"
+
+[[educations]]
+	degree = "B.S. in Computer Science"
+    period = "2010 - 2011"
+    description = "Tennessee Tech, Cookeville"
+    website = "https://www.tntech.edu/"
+
+[[skills]]
+	name = "Agile"
+	level = 99
+[[skills]]
+	name = "UX"
+	level = 99
+[[skills]]
+	name = "C#"
+	level = 99
+[[skills]]
+	name = "Java"
+	level = 70
+[[skills]]
+	name = "HTML5"
+	level = 99
+[[skills]]
+	name = "CSS 3"
+	level = 95
+[[skills]]
+	name = "JavaScript"
+	level = 95
+[[skills]]
+	name = "TypeScript"
+	level = 95
+
+[[experiences]]
+	[experiences.company]
+		name = "Epic"
+		description = "Electronic Health Record system with over 190 million patients worldwide"
+		website = "https://epic.com"
+		job_title = "Software Developer"
+        period = "June 2014 - Aug 2020"
+
+        [[experiences.company.teams]]
+			name = "ICU"
+            role = "SD"
+            period = "Jan 2020 - Aug 2020"
+            projects = [
+              "Created the infrastructure that allows generically integrating any video vendor's product with Epic's remote monitoring application. Previously these integrations had to be done manually and were thus extremely cost prohibitive."
+			]
+
+        [[experiences.company.teams]]
+			name = "Special Projects (aka Skunkworks)"
+            role = "SD"
+            # description: Task force that meant to advance framework and improve developer retention
+            period = "Jan 2019 - Dec 2019"
+            projects = [
+              "Updated the web framework to support something akin to \"hot reloading,\" whereby developers would be able to see their UI changes in near realtime.",
+              "Improved Epic's integration with version control tools, saving time and reducing user error.",
+              # could take out
+              "Obviated the need for two ASP.NET-specific files for all new projects, making development simpler and easier to port to other platforms.",
+              "Rewrote key parts of the core web framework to be immutable, dramatically improving performance.",
+              "Helped introduce React Functional Components to the existing architecture, which has helped foster increased reusability of components and, anecdotally, developer satisfaction.",
+			]
+
+        [[experiences.company.teams]]
+			name = "Social Care"
+            role = "SD"
+            period = "Jan 2018 - Apr 2018"
+            projects = [
+              "Created an interactive graphic of a patient's support network. It's being used today to ensure patients are properly cared for ouside of the medical setting."
+			]
+
+        [[experiences.positions.teams]]
+			name = "Telehealth"
+            role = "SD"
+            period = "May 2017 - Dec 2018"
+            projects = [
+              "Lead architect on flagship product that allows for organizations to pool resources for virtual care. This improved availability of these services, reduced patient wait times, and reduced unnecessary usage of in-person facilities."
+			]
+
+        [[experiences.company.teams]]
+			name = "Endocrinology"
+            role = "SD"
+            period = "Nov 2016 - Apr 2017"
+            projects = [
+              "Part of small team that pioneered Epic's first Endocrinology module."
+              # - "Part of small team that pioneered Epic's first Endocrinology module: a tool that standardized recording and displaying insulin instructions."
+			]
+
+        [[experiences.company.teams]]
+			name = "MyChart"
+            role = "SD"
+            description = "Team that builds the website patients use to connect to their healthcare organization"
+            period = "Jan 2016 - Aug 2016"
+            projects = [
+              "Improved performance of graphing infrastructure by ~25%."
+			]

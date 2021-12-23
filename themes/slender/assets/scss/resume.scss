@@ -1,0 +1,121 @@
+@import "_normalize.scss";
+@import "_mixins.scss";
+
+.resume {
+	font-family: Georgia,sans-serif;
+	padding: 1rem;
+	max-width: 50em;
+	line-height: 1.5;
+    font-size: 1em;
+	margin: 0 auto;
+
+	a {
+		text-decoration: none;
+		color: initial;
+	}
+
+	h3 {
+		text-transform: uppercase;
+	}
+
+	.company-name {
+		font-weight: bold;
+	}
+
+	.subtitle {
+		color: #666;
+		font-family: Bitter,Georgia,serif;
+		font-size: .9em;
+	}
+
+	.extra {
+		margin-left: 2rem;
+	}
+
+	.period {
+		text-align: right;
+		font-family: sans-serif;
+		font-size: .8em;
+		line-height: 2;
+		color: #888;
+	}
+
+	.contacts {
+		margin-top: 20px;
+		margin-right: 20px;
+		margin-left: 20px;
+		font-size: .9em;
+		font-family: sans-serif;
+	}
+
+	.header {
+		@include isMobile() {
+			display: flex;
+			flex-direction: column;
+			text-align: center;
+		}
+	}
+
+	.header, .team-header {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.name-section {
+		font-family: Bitter, Georgia, sans-serif;
+		h1 {
+			font-size: 3.2rem;
+			color: #0c6fa9;
+		}
+		h2 {
+			font-size: 1.6rem;
+			color: #444;
+			font-weight: 400;
+		}
+	}
+
+	.teams {
+		margin-left: 1rem;
+	}
+
+	h1, h2, h3 {
+		font-weight: normal;
+		margin: 0;
+	}
+
+	h3 {
+		font-size: .9em;
+		text-transform: uppercase;
+		font-weight: 700;
+		font-family: Bitter,Georgia,sans-serif;
+		color: #0c6fa9;
+		margin-top: 1.6em;
+	}
+
+	.team-header {
+		margin-bottom: 1rem;
+	}
+
+	$label-margin: 5px;
+	.right-label {
+		text-align: left;
+		margin-left: $label-margin;
+	}
+
+	.left-label {
+		text-align: left;
+		margin-right: $label-margin;
+	}
+
+	.right-label, .left-label {
+		color: #bbb;
+		text-transform: lowercase;
+	}
+
+	.blurb {
+		padding: .5em 1em;
+		margin-bottom: 1rem;
+		background: #f7f7f7;
+		color: #444;
+	}
+}

@@ -1,0 +1,44 @@
+baseURL = 'https://loremdipso.com/'
+languageCode = 'en-us'
+defaultContentLanguage = "en"
+title = 'Welcome weary traveler'
+theme = 'slender'
+numFeed = 10 # number of items in feed
+publishDir = './docs'
+
+[author]
+	name = "Michael Adams"
+	job_title = "Software Engineer"
+	profile_pic_url = "images/profile_pic.jpg"
+
+[params]
+	dateform        = "Jan 1, 2006"
+	dateformShort   = "Jan 1"
+	dateformNum     = "2006-01-01"
+	dateformNumTime = "2006-01-01 12:04 -0700"
+
+[[params.social]]
+	name = "linkedin"
+	url = "https://www.linkedin.com/in/loremdipso/"
+
+[[params.social]]
+	name = "github"
+	url = "https://github.com/loremdipso"
+
+[menu]
+	[[menu.main]]
+		name = "About"
+		type = "self.html"
+		url = "/"
+
+	[[menu.main]]
+		name = "Projects"
+		url = "/projects/"
+
+	[[menu.main]]
+		name = "Blog"
+		url = "/blog/"
+
+	[[menu.main]]
+		name = "Resume"
+		url = "/resume/"

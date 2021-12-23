@@ -1,0 +1,27 @@
+<header class="app-header slide-in-from-top">
+	<nav>
+		{{- $currentPage := . -}}
+		{{- $section := .Site.GetPage $currentPage.Section -}}
+		{{- range .Site.Menus.main -}}
+		{{- if .HasChildren -}}
+			TODO: support nested menu
+		{{- else -}}
+			{{- $isActive := or (eq $currentPage.RelPermalink .URL) ($currentPage.IsMenuCurrent "main" .) ($currentPage.IsMenuCurrent "main" .) -}}
+			{{- $isActive := or ($isActive) (and (ne $section.RelPermalink "/") (eq $section.RelPermalink .URL)) -}}
+			<a href="{{ .URL | relLangURL }}" {{if $isActive}}class="active"{{end}}>{{ .Name }}</a>
+		{{- end -}}
+		{{- end -}}
+	</nav>
+
+	<div class="socials">
+		{{- with .Site.Params.social -}}
+			<div>
+				{{- range . -}}
+					<a href="{{ .url | safeURL }}" target="_blank" rel="noopener me" title="{{ .name | humanize }}">
+						{{ partial "icon.html" .name }} 
+					</a>
+				{{- end -}}
+			</div>
+		{{- end -}}
+	</div>
+</header>
