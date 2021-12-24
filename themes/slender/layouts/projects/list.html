@@ -28,6 +28,19 @@
 						{{ else }}
 							{{ errorf "ERROR: fill in the link for %s, please" .Path}}
 						{{ end }}
+
+						<!-- {{- if .Params.Thumbnail -}}
+							{{- if not .Params.Alt -}}
+								{{ errorf "ERROR: fill in the Alt for %s, please" .Path}}
+							{{- end -}}
+
+							{{ partial "responsive-image.html" ( dict
+								"Destination" .Params.Thumbnail
+								"Text" .Params.Alt
+								"Class" "thumbnail"
+								"Preemptive" true
+							) }}
+						{{- end -}} -->
 					</li>
 					{{- end }}
 				</ul>

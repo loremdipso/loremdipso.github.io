@@ -226,13 +226,15 @@ hr {
 		}
 	}
 
-	.avatar {
-		img {
-			width: 15rem;
-			height: 15rem;
-			border-radius: 15rem;
-		}
+	img.avatar {
+		width: 15rem;
+		height: 15rem;
+		border-radius: 15rem;
 	}
+}
+
+img.thumbnail {
+	// TODO
 }
 
 .wrappable-container {

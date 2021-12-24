@@ -39,10 +39,16 @@
 	<img
 	  src="{{ .Destination | safeURL }}"
 	  alt="{{ .Text }}"
-	  {{- if not (isset . "Preemptive") -}}
-	  loading="lazy"
-	  decoding="async"
+
+	  {{- if (isset . "Class") -}}
+	  	class="{{ .Class }}"
 	  {{- end -}}
+
+	  {{- if not (isset . "Preemptive") -}}
+		loading="lazy"
+		decoding="async"
+	  {{- end -}}
+
 	  width="{{ $img.Width }}"
 	  height="{{ $img.Height }}"
 	/>

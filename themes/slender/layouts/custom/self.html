@@ -18,13 +18,12 @@
 			</div>
 
 			{{- if $.Site.Author.profile_pic_url -}}
-				<div class="avatar">
-					{{ partial "responsive-image.html" ( dict
-						"Destination" $.Site.Author.profile_pic_url
-						"Text" "A slightly outdated photo of me"
-						"Preemptive" true
-					) }}
-				</div>
+				{{ partial "responsive-image.html" ( dict
+					"Destination" $.Site.Author.profile_pic_url
+					"Text" "A slightly outdated photo of me"
+					"Class" "avatar"
+					"Preemptive" true
+				) }}
 			{{- end -}}
 		</div>
 
