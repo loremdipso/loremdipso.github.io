@@ -18,7 +18,12 @@
 			</div>
 
 			{{- if $.Site.Author.profile_pic_url -}}
-				<img class="avatar" src="{{ $.Site.Author.profile_pic_url }}" />
+				<div class="avatar">
+					{{ partial "responsive-image.html" ( dict
+						"Destination" $.Site.Author.profile_pic_url
+						"Text" "me :)"
+					) }}
+				</div>
 			{{- end -}}
 		</div>
 

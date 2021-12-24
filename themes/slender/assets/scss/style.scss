@@ -7,10 +7,9 @@
 .app-header {
 	background-color: $color-header-background;
 	display: flex;
-	height: 55px;
 	justify-content: space-between;
 	align-items: center;
-	box-shadow: -1px 2px 3px rgba(0,0,0,.45);
+	box-shadow: -1px 2px 3px rgba(0, 0, 0, 0.45);
 
 	@include isMobile() {
 		flex-direction: column;
@@ -29,15 +28,19 @@
 		height: 24px;
 	}
 
-	nav a, .socials a {
-		padding: 8px;
+	nav,
+	.socials {
+		display: flex;
+		a {
+			padding: 16px;
+		}
 	}
 }
 
 html {
 	color: $color-text;
 	background-color: $color-background;
-	letter-spacing: .06em;
+	letter-spacing: 0.06em;
 	font-family: trebuchet ms, Verdana, verdana ref, segoe ui, Candara,
 		lucida grande, lucida sans unicode, lucida sans, Tahoma, sans-serif;
 }
@@ -110,15 +113,15 @@ a {
 }
 
 .post-info {
-	font-size: .8rem;
+	font-size: 0.8rem;
 	line-height: normal;
-	opacity: .6;
+	opacity: 0.6;
 
 	p {
-		margin: .8em 0;
+		margin: 0.8em 0;
 
 		svg {
-			margin-right: .8em;
+			margin-right: 0.8em;
 		}
 	}
 }
@@ -127,9 +130,9 @@ hr {
 	box-sizing: content-box;
 	height: 0;
 	overflow: visible;
-	opacity: .2;
+	opacity: 0.2;
 	border-width: 0 0 5px;
-    border-bottom-width: 5px;
+	border-bottom-width: 5px;
 	border-style: dashed;
 	background: 0 0;
 	width: 50%;
@@ -138,7 +141,7 @@ hr {
 	&.post-end {
 		width: 40%;
 		margin-top: 1.6em;
-		margin-bottom: .8em;
+		margin-bottom: 0.8em;
 		margin-left: 0;
 		border-style: solid;
 		border-bottom-width: 4px;
@@ -147,7 +150,7 @@ hr {
 
 .feather {
 	display: inline-block;
-	vertical-align: -.125em;
+	vertical-align: -0.125em;
 	width: 1em;
 	height: 1em;
 }
@@ -167,15 +170,15 @@ hr {
 	}
 
 	.label {
-		font-size: .8em;
-		opacity: .8;
+		font-size: 0.8em;
+		opacity: 0.8;
 		text-transform: uppercase;
 	}
 }
 
 .app-footer {
 	text-align: center;
-    font-size: .9em;
+	font-size: 0.9em;
 }
 
 .spotlight {
@@ -185,7 +188,7 @@ hr {
 		position: absolute;
 		top: 0;
 		left: 50%;
-		transform: translateX(-50%); 
+		transform: translateX(-50%);
 		z-index: -1;
 	}
 
@@ -193,7 +196,7 @@ hr {
 		position: absolute;
 		bottom: 0;
 		left: 50%;
-		transform: translateX(-50%); 
+		transform: translateX(-50%);
 	}
 }
 
@@ -224,8 +227,11 @@ hr {
 	}
 
 	.avatar {
-		width: 15rem;
-		border-radius: 15rem;
+		img {
+			width: 15rem;
+			height: 15rem;
+			border-radius: 15rem;
+		}
 	}
 }
 

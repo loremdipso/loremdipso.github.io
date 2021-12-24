@@ -10,8 +10,12 @@ To publish to `docs/`:
 hugo -D
 ```
 
-To publish and generate extranetous files (resume.pdf, for ex.):
-- NOTE: requires wkhtmltopdf
+Or to do it clean (while maintaining CNAME):
 ```
-./export.sh
+./scripts/export.sh
+```
+
+To re-generate resume.pdf (NOTE: requires wkhtmltopdf):
+```
+./scripts/generate_resume.sh
 ```
