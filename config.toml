@@ -1,5 +1,5 @@
 baseURL = 'https://loremdipso.com/'
-languageCode = 'en-us'
+languageCode = 'en'
 defaultContentLanguage = "en"
 title = 'Welcome weary traveler'
 theme = 'slender'
