@@ -4,6 +4,9 @@ other = "Sorry, I couldn't find that page :/"
 [wordCount]
 other = "{{ .WordCount }} Words"
 
+[readingTime]
+other = "{{ .Minutes }} minute read"
+
 [tableOfContents]
 other = "Table of Contents"
 

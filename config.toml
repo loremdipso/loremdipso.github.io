@@ -31,9 +31,9 @@ publishDir = './docs'
 		type = "self.html"
 		url = "/"
 
-	[[menu.main]]
-		name = "Projects"
-		url = "/projects/"
+	# [[menu.main]]
+	# 	name = "Projects"
+	# 	url = "/projects/"
 
 	[[menu.main]]
 		name = "Blog"
