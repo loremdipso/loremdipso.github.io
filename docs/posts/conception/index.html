@@ -1,8 +1,8 @@
 <!doctype html><html lang=en><head>
 <meta charset=utf-8>
-<meta name=viewport content="width=device-width,initial-scale=1"><title>Welcome weary traveler | Conception</title><link rel=stylesheet href=/css/style.min.3eba89bcb12e2403080215d4e222d0fbfae1b390e15525c321d03b0e4dc0637e.css integrity="sha256-PrqJvLEuJAMIAhXU4iLQ+/rhs5DhVSXDIdA7Dk3AY34=" crossorigin=anonymous></head>
+<meta name=viewport content="width=device-width,initial-scale=1"><title>Welcome weary traveler | Conception</title><link rel=stylesheet href=/css/style.min.b6adebfe653a13a3ff96fcb6458728112c9cbde2a9b179ed8c0fe4f238cfb093.css integrity="sha256-tq3r/mU6E6P/lvy2RYcoESycveKpsXntjA/k8jjPsJM=" crossorigin=anonymous></head>
 <body><header class="app-header slide-in-from-top">
-<nav><a href=/>About</a><a href=/blog/ class=active>Blog</a><a href=/projects/>Projects</a><a href=/resume/>Resume</a></nav>
+<nav><a href=/>About</a><a href=/posts/ class=active>Posts</a><a href=/resume/>Resume</a></nav>
 <div class=socials><a href=https://www.linkedin.com/in/loremdipso/ target=_blank rel="noopener me" title=Linkedin>
 <span class=inline-svg><svg stroke="currentcolor" fill="#44bddc" stroke-width="0" viewBox="0 0 448 512" class="icon" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path fill="currentcolor" d="M416 32H31.9C14.3 32 0 46.5.0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6.0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3.0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2.0 38.5 17.3 38.5 38.5.0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6.0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2.0 79.7 44.3 79.7 101.9V416z"/></svg>
 </span>
@@ -15,41 +15,43 @@
 <main>
 <article>
 <header class=post-header>
+<div class=post-metadata>
+<span>Aug 8, 2020</span>
+&#183;
+<span>2 minute read</span>
+</div>
 <h1>Conception</h1>
-<p>2 minute read</p>
 </header>
 <div>
 <p>This site was made, primarily, as a vehicle for my résumé. It could have been a one-day thing. Just find a pretty wordpress template, customize it a bit, and voilà! But where&rsquo;s the fun in that? I mean, what self-respecting dev doesn&rsquo;t love a good <a href=https://en.wikipedia.org/wiki/Greenfield_project>greenfield project</a>.</p>
 <p>So, to justify this waste of time, I came up with some requirements:</p>
-<h2 id=free>Free<a href=#free class=anchor aria-hidden=true></a></h2>
+<h2 id=free><a href=#free class=anchor>Free</a></h2>
 <p>This was by far the easiest task since github will host a page for your user. This only works for static sites (no SSR), but that&rsquo;s my preference anyhow. I did still have to pay for the domain name, though.</p>
-<h2 id=fast>Fast<a href=#fast class=anchor aria-hidden=true></a></h2>
+<h2 id=fast><a href=#fast class=anchor>Fast</a></h2>
 <p>Fast means different things to different people. I knew this site was going to be mostly static content, and my hoster already had CDNs. The question was: do I bother making a <a href=https://en.wikipedia.org/wiki/Single-page_application>SPA</a>? On the one hand, I think you can do some pretty cool things with a SPA. On the other, it&rsquo;s definitely more work. Could I really justify the time in this already overly-onerous task?</p>
 <p>But we&rsquo;re greenfielding it, so SPA it is! And I chose gatsby to help out with navigation and also generating the blog content. For the résumé I have kind of an exaggerated pipeline, where I fill out a yml which I convert to json and feed into a page on this site. To get a <code>pdf</code> I wrote a script that effectively hosts the page in a headless browser and prints the result to a file. To get a <code>.docx</code> I&mldr; would have to write it by hand. But luckily <code>.docx</code> is far less common.</p>
 <p>The skeleton of the site is loaded regardless of which page you go to. Heavier projects will be <a href=https://reactjs.org/docs/code-splitting.html>split out and lazy loaded</a>, or else hosted separately, so the site is about as fast as it can reasonably be and shouldn&rsquo;t get slower even as I add content.</p>
-<h2 id=fun>Fun<a href=#fun class=anchor aria-hidden=true></a></h2>
+<h2 id=fun><a href=#fun class=anchor>Fun</a></h2>
 <p>I chose React as the framework, since I know it and really enjoy using it. It was pretty overkill for this project since not a lot of this site it reactive, but, like Shane Patton is credited as saying: anything worth doing is worth overdoing.</p>
-<h2 id=fanciful>Fanciful<a href=#fanciful class=anchor aria-hidden=true></a></h2>
+<h2 id=fanciful><a href=#fanciful class=anchor>Fanciful</a></h2>
 <p>I love moving backgrounds. I flip-flopped on how best to accomplish this, CSS or canvas. CSS, especially CSS3, has gotten so good and feature rich that people have done all sorts of amazing things. All sorts of problems, like jitter and framerate, would go away. But while it would be easier to get something up and running, just CSS is more limiting than the canvas approach, so that&rsquo;s what I went with.</p>
 <p>The first iteration is a simple collage of circles that lazily drift around, growing and shrinking at random. It&rsquo;s not perfect, but pretty enough for a first go.</p>
-<h1 id=conclusion>Conclusion<a href=#conclusion class=anchor aria-hidden=true></a></h1>
+<h1 id=conclusion><a href=#conclusion class=anchor>Conclusion</a></h1>
 <p>And that&rsquo;s it. I hope you enjoy this site as much as I&rsquo;ve enjoyed making it. Ciao!</p>
 </div>
 <hr class=post-end>
 <footer class=post-info>
-<p><span class=inline-svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-</span>2020-08-08</p>
 </footer>
 </article>
 <div class=sibling-post-links>
-<a href=/blog/whats-with-the-name/ class=previous-post>
+<a href=/posts/whats-with-the-name/ class=previous-post>
 <span class=label>
 <span class=inline-svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-left"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
 </span>
 &nbsp;Previous
 </span><br><span>What's with the name?</span>
 </a>
-<a href=/blog/finding-my-voice/ class=next-post>
+<a href=/posts/finding-my-voice/ class=next-post>
 <span class=label>
 Next&nbsp;
 <span class=inline-svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
