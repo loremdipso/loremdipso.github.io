@@ -62,22 +62,37 @@ a {
 	}
 
 	&.anchor {
-		float: left;
-		margin-left: -20px;
-		padding-right: 6px;
-		opacity: 1;
+		position: relative;
 
-		svg {
-			display: inline-block;
-			width: 14px;
-			height: 14px;
-			vertical-align: baseline;
+		@include isNotMobile() {
+			&::before {
+				content: "🔗";
+				left: -30px;
+				top: 5px;
+				position: absolute;
+				opacity: 0.1;
+			}
 		}
 
-		&:hover {
-			background: 0 0;
+		@include isMobile() {
+			&::after {
+				content: "🔗";
+				margin-left: 10px;
+				opacity: 0.5;
+			}
+		}
+
+		&::after,
+		&::before {
+			font-size: 1.2rem;
+		}
+		&:hover::after {
 			opacity: 1;
 		}
+		// }
+		// 	background: 0 0;
+		// 	opacity: 1;
+		// }
 	}
 }
 
@@ -264,4 +279,10 @@ hr {
 
 img.thumbnail {
 	// TODO
+}
+
+article {
+	p a {
+		text-decoration: underline;
+	}
 }

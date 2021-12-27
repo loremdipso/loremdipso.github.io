@@ -11,8 +11,10 @@
 			</header>
 
 			<div>
-				{{/* TODO: add anchors back */}}
-				{{ .Content | replaceRE "(<h[1-6] id=\"([^\"]+)\".+)(</h[1-6]+>)" `${1}<a href="#${2}" class="anchor" aria-hidden="true"></a>${3}` | safeHTML }}
+				{{ .Content | replaceRE "(<h[1-6] id=\"([^\"]+)\">)([^>]+)(</h[1-6]+>)" 
+				`${1}<a href="#${2}" class="anchor">${3}</a>${4}`
+				| safeHTML }}
+				<!-- {{/*`${1}<a href="#${2}" class="anchor" aria-hidden="true">🔗</a>${3}` | */}}-->
 			</div>
 
 			{{- if .Site.Params.relatedPosts }}
