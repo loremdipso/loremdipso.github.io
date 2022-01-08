@@ -15,6 +15,10 @@
 						{{- $.Site.Author.job_title -}}
 					</h2>
 				{{- end -}}
+
+				<div class="visible-on-mobile">
+					{{- partial "socials.html" . -}}
+				</div>
 			</div>
 
 			{{- if $.Site.Author.profile_pic_url -}}

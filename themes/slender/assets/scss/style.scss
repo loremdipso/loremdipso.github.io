@@ -4,6 +4,14 @@
 @import "_theme.scss";
 @import "_mixins.scss";
 
+html {
+	color: $color-text;
+	background-color: $color-background;
+	letter-spacing: 0.06em;
+	font-family: trebuchet ms, Verdana, verdana ref, segoe ui, Candara,
+		lucida grande, lucida sans unicode, lucida sans, Tahoma, sans-serif;
+}
+
 .app-header {
 	background-color: $color-header-background;
 	display: flex;
@@ -35,14 +43,35 @@
 			padding: 16px;
 		}
 	}
+
+	.socials {
+		@include isMobile() {
+			display: none;
+		}
+	}
 }
 
-html {
-	color: $color-text;
-	background-color: $color-background;
-	letter-spacing: 0.06em;
-	font-family: trebuchet ms, Verdana, verdana ref, segoe ui, Candara,
-		lucida grande, lucida sans unicode, lucida sans, Tahoma, sans-serif;
+@include isNotMobile() {
+	.visible-on-mobile {
+		display: none;
+	}
+}
+@include isMobile() {
+	.visible-on-mobile {
+		display: initial;
+	}
+}
+
+.info .socials {
+	display: flex;
+	justify-content: space-around;
+	a {
+		padding: 16px;
+	}
+	svg {
+		width: 24px;
+		height: 24px;
+	}
 }
 
 .content {
@@ -63,6 +92,9 @@ a {
 
 	&.anchor {
 		position: relative;
+		&:hover {
+			text-shadow: unset;
+		}
 
 		@include isNotMobile() {
 			&::before {
@@ -85,14 +117,12 @@ a {
 		&::after,
 		&::before {
 			font-size: 1.2rem;
+			color: white;
 		}
-		&:hover::after {
+
+		&:hover::before {
 			opacity: 1;
 		}
-		// }
-		// 	background: 0 0;
-		// 	opacity: 1;
-		// }
 	}
 }
 
@@ -170,27 +200,6 @@ hr {
 	height: 1em;
 }
 
-.sibling-post-links {
-	display: flex;
-	justify-content: space-between;
-
-	> * {
-		display: flex;
-		flex-direction: column;
-	}
-
-	.next-post {
-		text-align: right;
-		flex-grow: 1;
-	}
-
-	.label {
-		font-size: 0.8em;
-		opacity: 0.8;
-		text-transform: uppercase;
-	}
-}
-
 .app-footer {
 	text-align: center;
 	font-size: 0.9em;
@@ -263,26 +272,5 @@ hr {
 		overflow: hidden;
 		text-overflow: ellipsis;
 		min-width: 0;
-	}
-
-	// > :last-child {
-	// 	flex-grow: 1;
-	// 	text-align: right;
-	// }
-}
-
-.tags {
-	.tag:not(:last-child) {
-		padding-right: 5px;
-	}
-}
-
-img.thumbnail {
-	// TODO
-}
-
-article {
-	p a {
-		text-decoration: underline;
 	}
 }

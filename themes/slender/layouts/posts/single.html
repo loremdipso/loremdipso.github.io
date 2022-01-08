@@ -1,3 +1,12 @@
+{{ define "includes" }}
+	{{- $style := resources.Get "scss/post.scss" | resources.ExecuteAsTemplate "css/syntax.css" . | toCSS | minify | fingerprint -}}
+	<link rel="stylesheet" href="{{- $style.RelPermalink -}}" {{- printf "integrity=%q" $style.Data.Integrity | safeHTMLAttr -}} crossorigin="anonymous">
+
+	{{ $codeCopy := resources.Get "js/copy.js" | resources.ExecuteAsTemplate  (printf "%s/js/copy.js" $.Site.LanguageCode ) . | resources.Minify | fingerprint }}
+	{{ $script := slice $codeCopy | resources.Concat "js/bundle.js" | minify | fingerprint -}}
+	<script src="{{ $script.Permalink }}" {{ printf "integrity=%q" $script.Data.Integrity | safeHTMLAttr }} crossorigin="anonymous"></script>
+{{ end }}
+
 {{ define "main" }}
 	<main>
 		<article>
@@ -14,7 +23,6 @@
 				{{ .Content | replaceRE "(<h[1-6] id=\"([^\"]+)\">)([^>]+)(</h[1-6]+>)" 
 				`${1}<a href="#${2}" class="anchor">${3}</a>${4}`
 				| safeHTML }}
-				<!-- {{/*`${1}<a href="#${2}" class="anchor" aria-hidden="true">🔗</a>${3}` | */}}-->
 			</div>
 
 			{{- if .Site.Params.relatedPosts }}

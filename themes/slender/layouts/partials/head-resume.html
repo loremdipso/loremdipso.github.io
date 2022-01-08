@@ -6,6 +6,5 @@
 	<title>{{- $title -}}</title>
 
 	{{- $style := resources.Get "scss/resume.scss" | resources.ExecuteAsTemplate "css/style.css" . | toCSS | minify | fingerprint -}}
-		<style>{{ $style.Content | safeCSS }}</style>
-	{{- block "head" . -}}{{- end -}}
+	<style>{{ $style.Content | safeCSS }}</style>
 </head>

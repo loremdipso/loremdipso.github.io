@@ -1,6 +1,6 @@
 ---
 title: "AOC Optimizations Part .1 - Inputs"
-slug: "aoc-01"
+slug: "aoc-1"
 date: 2021-12-24T17:55:37-07:00
 draft: true
 ---

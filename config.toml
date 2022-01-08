@@ -6,6 +6,21 @@ theme = 'slender'
 numFeed = 10 # number of items in feed
 publishDir = './docs'
 
+[markup.goldmark.renderer]
+	unsafe = true
+
+
+[markup.highlight]
+	# The below is pygmentsOptions
+	codeFences = true
+	guessSyntax = true
+	hl_Lines = ""
+	tabWidth = 2
+	noClasses = false
+	#lineNoStart = 1
+	#lineNos = true
+	#lineNumbersInTable = true
+
 [author]
 	name = "Michael Adams"
 	job_title = "Software Engineer"

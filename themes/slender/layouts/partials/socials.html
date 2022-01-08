@@ -1,0 +1,9 @@
+<div class="socials">
+	{{- with .Site.Params.social -}}
+		{{- range . -}}
+			<a href="{{ .url | safeURL }}" target="_blank" rel="noopener me" title="{{ .name | humanize }}">
+				{{ partial "icon.html" .name }} 
+			</a>
+		{{- end -}}
+	{{- end -}}
+</div>
