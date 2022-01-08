@@ -3,12 +3,12 @@ title: "Lithe 2: From Scratch"
 slug: "lithe-2"
 date: 2022-01-03T12:46:55-07:00
 draft: false
-tags: ["lithe"]
+tags: ["lithe", "devlog"]
 ---
 
-I've written a little Rust, but never professionally, so I'm sure what I write is pretty ugly to those in the know. But it compiles, which is half the battle.
+I've written a little Rust, but never professionally, so I'm sure what I write is going to be ugly to those in the know. But it compiles, which is half the battle.
 
-Before starting this, I took a quick peek at the Svelte repo, and the compiler is relatively small, weighing in at only ~800KB (if you include the runtime), but 800KB of code to rewrite is still fairly massive for a weekend warrior like myself. So, for my initial attempt I crafted the world's smallest svelte app:
+Before starting this project let's take a quick peek at the Svelte repo. Oh, huh, looks like the compiler smaller than I would have thought, weighing in at only ~800KB (if you include the runtime), but 800KB of code to rewrite is still fairly massive for a weekend warrior like myself. So, for my initial attempt I crafted the world's smallest svelte app:
 
 ```
 <span>Hello world!</span>
@@ -67,6 +67,4 @@ class Component extends SvelteComponent {
 }
 ```
 
-Alright, seems easy enough. What if I just write a very very very basic compiler, that parses the DOM tree, looking for Elements, and spits out the resultant JavaScript as it chugs along? That'd be really really fast. Well, turns out it's not quite so simple. You need at least a couple of passes, once to get the list of variables (span0, t1, span1, etc). It also needs to be recursive, and top-level text elements need their own special wrappers.
-
-But I gave it a shot anyway, and got something the produced exactly the same output, but only for the simplest cases. It looked to be quite a lot of work, though, so I thought I'd shelve that attempt for now and try something else.
+Alright, seems simple enough. What if I just write a very very very basic compiler that parses the DOM tree looking for Elements and then spits out the resultant JavaScript as it chugs along? If we merge all the compilation steps we avoid running through the file multiple times, a plus for performance. So I gave it a shot, and got something that produced exactly the same output, but only for the simplest cases. After, I realized that, while this approach would yield something very very fast, doing everything in one step made the program fairly difficult to change. I think I'd be better off sacrificing just a little performance in exchange for modularity. Let's shelve this attempt for now and try something more traditional.
