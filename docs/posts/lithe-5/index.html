@@ -1,0 +1,129 @@
+<!doctype html><html lang=en>
+<head><meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1"><title>Welcome weary traveler | Lithe 5: Optimize for the minifier</title><link rel=stylesheet href=/css/style.min.c5921195b88c3ed93785e906ef4e94085c1bc9de079a9bd4ebe5a9cbf5f4d206.css integrity="sha256-xZIRlbiMPtk3hekG706UCFwbyd4HmpvU6+Wpy/X00gY=" crossorigin=anonymous><link rel=stylesheet href=/css/syntax.min.1631a17c41b5bb5249f99c1daff809f2e7d4984bea8d6de9aab7f3357ac9bedf.css integrity="sha256-FjGhfEG1u1JJ+Zwdr/gJ8ufUmEvqjW3pqrfzNXrJvt8=" crossorigin=anonymous>
+<script src=https://loremdipso.com/js/bundle.min.35376692a61c772df5270e7c5928c685741fc1c3bc67f29fbbb258caec214ec2.js integrity="sha256-NTdmkqYcdy31Jw58WSjGhXQfwcO8Z/Kfu7JYyuwhTsI=" crossorigin=anonymous></script>
+</head>
+<body><header class="app-header slide-in-from-top">
+<nav><a href=/>About</a><a href=/posts/ class=active>Posts</a><a href=/resume/>Resume</a></nav><div class=socials><a href=https://www.linkedin.com/in/loremdipso/ target=_blank rel="noopener me" title=Linkedin>
+<span class=inline-svg><svg stroke="currentcolor" fill="#44bddc" stroke-width="0" viewBox="0 0 448 512" class="icon" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path fill="currentcolor" d="M416 32H31.9C14.3 32 0 46.5.0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6.0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3.0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2.0 38.5 17.3 38.5 38.5.0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6.0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2.0 79.7 44.3 79.7 101.9V416z"/></svg>
+</span>
+</a><a href=https://github.com/loremdipso target=_blank rel="noopener me" title=Github>
+<span class=inline-svg><svg stroke="currentcolor" fill="#44bddc" stroke-width="0" viewBox="0 0 496 512" class="icon" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path fill="currentcolor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6.0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6.0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3.0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1.0-6.2-.3-40.4-.3-61.4.0.0-70 15-84.7-29.8.0.0-11.4-29.1-27.8-36.6.0.0-22.9-15.7 1.6-15.4.0.0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5.0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9.0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4.0 33.7-.3 75.4-.3 83.6.0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6.0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9.0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+</span>
+</a></div></header>
+<div class=content>
+<main>
+<article>
+<header class=post-header>
+<div class=post-metadata>
+<span>Jan 1, 2022</span>
+&#183;
+<span>3 minute read</span>
+</div>
+<h1>Lithe 5: Optimize for the minifier</h1>
+</header>
+<div>
+<p><a href=https://github.com/halfnelson>halfnelson</a> did a lovely <a href=https://github.com/halfnelson/svelte-it-will-scale/blob/master/README.md>investigation of how large Svelte projects scale</a>. I&rsquo;m not looking to rehash that per se, but I am interested in how well the current Svelte compiler&rsquo;s output gets minified.</p>
+<p>For this investigation I&rsquo;ll be pulling as many <code>.svelte</code> files as I can. Let&rsquo;s use the <a href=https://copilot.github.com/>Autopilot</a> strategy and pull from GitHub repos with permissive enough licenses.</p>
+<p>Even doing this was a bit of a project. I figured this might come up again, so I made the code clean enough that I wasn&rsquo;t embarrassed to release it. You can see what I came up with at the <a href=https://github.com/loremdipso/github_batch_download>github repo</a>. I used Rust with the lovely <a href=https://docs.rs/octocrab/latest/octocrab/>octocrab</a> crate to handle the Github API, <a href=https://docs.rs/git2/latest/git2/>git2</a> to handle downloading the repositories, and a little bit of <a href=https://github.com/tokio-rs/tokio>tokio</a> for async and multi-threading. I&rsquo;m very happy with the result, though I did run into rate-limiting for the GitHub API fairly quickly even with a <a href=https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token>personal access token</a>.</p>
+<p>Even so, I was able to come out of that with 220 repos without much trouble, from which I extracted 20MB of raw <code>.svelte</code> files. Once I removed the empties and the duplicates I was left with a respectable <code>18MB</code> worth of files. I ran those files through the svelte compiler, skipping any that wouldn&rsquo;t compile. I didn&rsquo;t expect to run this too often, so I ended up using ruby to call a shell script that told node to compile a particular file with some options, which I ran over every file twice: once with minification and once without. While I ended up with a workflow that took several minutes to run it was the fastest for me to write.</p>
+<p>After a cuppa I had this:</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Total size (KB)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Raw <code>.svelte</code> files</td>
+<td>18420</td>
+</tr>
+<tr>
+<td>Compiled</td>
+<td>23188</td>
+</tr>
+<tr>
+<td>Minified</td>
+<td>15764</td>
+</tr>
+</tbody>
+</table>
+<p>Very interestingly there were two files whose minified size was actually slightly larger than the original. This makes me think I could find a better minifier than <a href=https://www.npmjs.com/package/minify>minify</a>. Even after playing with the available options, going so far as to enable some unsafe operations, I still couldn&rsquo;t get that number down. I might try another minifier entirely (<a href=https://www.npmjs.com/package/node-minify>node-minify</a> looks cool), but for now I&rsquo;ll keep what I&rsquo;ve got.</p>
+<p>I think that&rsquo;s enough for now. Once I get a compiler going I can use this to measure just how well my output fairs against Svelte&rsquo;s, both raw and after minification. I believe there&rsquo;s some room for improvement if we try and output code that&rsquo;s easy for the minifier to minify. For example, I&rsquo;ve noticed the Svelte compiler outputs something sort of like this for detaching a component (heavily edited for simplicity):</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=kr>import</span> <span class=p>{</span> <span class=nx>detach</span> <span class=p>}</span> <span class=nx>from</span> <span class=s2>&#34;./svelte&#34;</span><span class=p>;</span>
+
+<span class=kd>let</span> <span class=nx>a</span><span class=p>;</span>
+<span class=kd>let</span> <span class=nx>b</span><span class=p>;</span>
+<span class=kd>let</span> <span class=nx>c</span><span class=p>;</span>
+
+<span class=kd>function</span> <span class=nx>fn</span><span class=p>(</span><span class=nx>do_detach</span><span class=p>)</span> <span class=p>{</span>
+	<span class=k>if</span> <span class=p>(</span><span class=nx>do_detach</span><span class=p>)</span> <span class=nx>detach</span><span class=p>(</span><span class=nx>a</span><span class=p>);</span>
+	<span class=k>if</span> <span class=p>(</span><span class=nx>do_detach</span><span class=p>)</span> <span class=nx>detach</span><span class=p>(</span><span class=nx>b</span><span class=p>);</span>
+	<span class=k>if</span> <span class=p>(</span><span class=nx>do_detach</span><span class=p>)</span> <span class=nx>detach</span><span class=p>(</span><span class=nx>c</span><span class=p>);</span>
+<span class=p>}</span>
+</code></pre></div><p>Which get minified to:</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=kr>import</span> <span class=p>{</span> <span class=nx>detach</span> <span class=p>}</span> <span class=nx>from</span> <span class=s2>&#34;./svelte&#34;</span><span class=p>;</span>
+<span class=kd>let</span> <span class=nx>a</span><span class=p>,</span> <span class=nx>b</span><span class=p>,</span> <span class=nx>c</span><span class=p>;</span>
+<span class=kd>function</span> <span class=nx>fn</span><span class=p>(</span><span class=nx>t</span><span class=p>)</span> <span class=p>{</span>
+	<span class=nx>t</span> <span class=o>&amp;&amp;</span> <span class=nx>detach</span><span class=p>(</span><span class=nx>a</span><span class=p>),</span> <span class=nx>t</span> <span class=o>&amp;&amp;</span> <span class=nx>detach</span><span class=p>(</span><span class=nx>b</span><span class=p>),</span> <span class=nx>t</span> <span class=o>&amp;&amp;</span> <span class=nx>detach</span><span class=p>(</span><span class=nx>c</span><span class=p>);</span>
+<span class=p>}</span>
+</code></pre></div><p>If, instead, the source was:</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=kr>import</span> <span class=p>{</span> <span class=nx>detach</span> <span class=p>}</span> <span class=nx>from</span> <span class=s2>&#34;./svelte&#34;</span><span class=p>;</span>
+
+<span class=kd>let</span> <span class=nx>a</span><span class=p>;</span>
+<span class=kd>let</span> <span class=nx>b</span><span class=p>;</span>
+<span class=kd>let</span> <span class=nx>c</span><span class=p>;</span>
+
+<span class=kd>function</span> <span class=nx>fn</span><span class=p>(</span><span class=nx>do_detach</span><span class=p>)</span> <span class=p>{</span>
+	<span class=k>if</span> <span class=p>(</span><span class=nx>do_detach</span><span class=p>)</span> <span class=p>{</span>
+		<span class=nx>detach</span><span class=p>(</span><span class=nx>a</span><span class=p>);</span>
+		<span class=nx>detach</span><span class=p>(</span><span class=nx>b</span><span class=p>);</span>
+		<span class=nx>detach</span><span class=p>(</span><span class=nx>c</span><span class=p>);</span>
+	<span class=p>}</span>
+<span class=p>}</span>
+</code></pre></div><p>Which, in this example at least, is functionally equivalent. I haven&rsquo;t dug into Svelte enough to know if this is always going to be a safe transformation. In any case, this can be minified to:</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=kr>import</span> <span class=p>{</span> <span class=nx>detach</span> <span class=p>}</span> <span class=nx>from</span> <span class=s2>&#34;./svelte&#34;</span><span class=p>;</span>
+<span class=kd>let</span> <span class=nx>a</span><span class=p>,</span> <span class=nx>b</span><span class=p>,</span> <span class=nx>c</span><span class=p>;</span>
+<span class=kd>function</span> <span class=nx>fn</span><span class=p>(</span><span class=nx>t</span><span class=p>)</span> <span class=p>{</span>
+	<span class=nx>t</span> <span class=o>&amp;&amp;</span> <span class=p>(</span><span class=nx>detach</span><span class=p>(</span><span class=nx>a</span><span class=p>),</span> <span class=nx>detach</span><span class=p>(</span><span class=nx>b</span><span class=p>),</span> <span class=nx>detach</span><span class=p>(</span><span class=nx>c</span><span class=p>));</span>
+<span class=p>}</span>
+</code></pre></div><p>A whole 4 characters saved! I know, I know, it doesn&rsquo;t seem like much, but that&rsquo;s basically free and is a function of how many variables your svelte program has. One last consideration is aliasing. We could, for example, imagine a minifier smart enough to output this:</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=kr>import</span> <span class=p>{</span> <span class=nx>detach</span> <span class=nx>as</span> <span class=nx>d</span> <span class=p>}</span> <span class=nx>from</span> <span class=s2>&#34;./svelte&#34;</span><span class=p>;</span>
+<span class=kd>let</span> <span class=nx>a</span><span class=p>,</span> <span class=nx>b</span><span class=p>,</span> <span class=nx>c</span><span class=p>;</span>
+<span class=kd>function</span> <span class=nx>fn</span><span class=p>(</span><span class=nx>t</span><span class=p>)</span> <span class=p>{</span>
+	<span class=nx>t</span> <span class=o>&amp;&amp;</span> <span class=p>(</span><span class=nx>d</span><span class=p>(</span><span class=nx>a</span><span class=p>),</span> <span class=nx>d</span><span class=p>(</span><span class=nx>b</span><span class=p>),</span> <span class=nx>d</span><span class=p>(</span><span class=nx>c</span><span class=p>));</span>
+<span class=p>}</span>
+</code></pre></div><p>We could also eschew aliasing and just have a separate svelte library that only has these minified functions to avoid the &ldquo;as x&rdquo; bit:</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=kr>import</span> <span class=p>{</span> <span class=nx>d</span> <span class=p>}</span> <span class=nx>from</span> <span class=s2>&#34;./svelte-mini&#34;</span><span class=p>;</span>
+<span class=kd>let</span> <span class=nx>a</span><span class=p>,</span> <span class=nx>b</span><span class=p>,</span> <span class=nx>c</span><span class=p>;</span>
+<span class=kd>function</span> <span class=nx>fn</span><span class=p>(</span><span class=nx>t</span><span class=p>)</span> <span class=p>{</span>
+	<span class=nx>t</span> <span class=o>&amp;&amp;</span> <span class=p>(</span><span class=nx>d</span><span class=p>(</span><span class=nx>a</span><span class=p>),</span> <span class=nx>d</span><span class=p>(</span><span class=nx>b</span><span class=p>),</span> <span class=nx>d</span><span class=p>(</span><span class=nx>c</span><span class=p>));</span>
+<span class=p>}</span>
+</code></pre></div><p>The downside of some of these optimizations, of course, is that it becomes harder and harder to debug in production. But if we&rsquo;re already at the point of minifying I say it&rsquo;s <a href=https://en.wikipedia.org/wiki/No_Holds_Barred_(1989_film)>no holds barred</a>.</p>
+</div>
+<hr class=post-end>
+<footer class=post-info>
+<p class=tags><span class=inline-svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon"><path fill="currentcolor" d="M20.59 13.41l-7.17 7.17a2 2 0 01-2.83.0L2 12V2h10l8.59 8.59a2 2 0 010 2.82z"/><line x1="7" y1="7" x2="7" y2="7"/></svg>
+</span><span class=tag><a href=/tags/lithe>lithe</a></span><span class=tag><a href=/tags/devlog>devlog</a></span>
+</p>
+</footer>
+</article>
+<div class=sibling-post-links>
+<a href=/posts/lithe-4/ class=previous-post>
+<span class=label>
+<span class=inline-svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-left"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+</span>
+&nbsp;Previous
+</span><br><span>Lithe 4: On the Shoulders of Giants</span>
+</a>
+</div>
+</main>
+</div><footer class="app-footer fade-in">
+<p>&copy;2022&nbsp;Michael Adams&nbsp;<a href=https://loremdipso.com/posts/index.xml target=_blank title=rss><span class=inline-svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rss"><path fill="currentcolor" d="M4 11a9 9 0 019 9"/><path fill="currentcolor" d="M4 4a16 16 0 0116 16"/><circle cx="5" cy="19" r="1"/></svg>
+</span></a>
+</p>
+</footer>
+</body>
+</html>

@@ -23,30 +23,30 @@
 <h1>Lithe 3: A Rewrite</h1>
 </header>
 <div>
-<p>What if I just copied the Svelte compiler, written in TypeScript, changed all of the file extensions from <code>.ts</code> to <code>.rs</code>, and fix all the bugs? It&rsquo;d be a slog, sure, but at the end of the day I&rsquo;d have a compiler that was very nearly the same, but presumably more performant.</p>
-<p>This attempt I gave a real try, spending maybe three nights just chugging away. What I got was just more and more errors, which was fairly disheartening. I also got realized just how different Rust is, and that a 1-to-1 rewrite would result in something that wasn&rsquo;t ideal. For example, take this very simple TypeScript class:</p>
+<p>What if I just copied the Svelte compiler, written in TypeScript, changed all of the file extensions from <code>.ts</code> to <code>.rs</code>, and fixed all the bugs? It&rsquo;d be a slog, sure, but at the end of the day I&rsquo;d have a compiler that was very nearly the same, but presumably more performant.</p>
+<p>This attempt I gave a real try, spending maybe three nights just chugging away. What I got was just more and more errors, which was fairly disheartening. I also realized just how different Rust is, and that a 1-to-1 rewrite would result in something that wouldn&rsquo;t be as ideal as it could be. For example, take this very simple TypeScript class:</p>
 <div class=highlight><pre tabindex=0 class=chroma><code class=language-ts data-lang=ts><span class=kr>class</span> <span class=nx>Node</span> <span class=kr>extends</span> <span class=nx>BaseNode</span> <span class=p>{</span>
 	<span class=nx>name</span>: <span class=kt>String?</span> <span class=o>=</span> <span class=kc>null</span><span class=p>,</span>
 	<span class=nx>children</span>: <span class=kt>Node</span><span class=p>[]</span> <span class=o>=</span> <span class=p>[],</span>
 <span class=p>}</span>
-</code></pre></div><p>The equivalent TypeScript struct might look like:</p>
+</code></pre></div><p>The equivalent Rust struct might look like:</p>
 <div class=highlight><pre tabindex=0 class=chroma><code class=language-rust data-lang=rust><span class=k>struct</span> <span class=nc>Node</span><span class=w> </span><span class=p>{</span><span class=w>
 </span><span class=w>	</span><span class=n>base</span>: <span class=nc>BaseNode</span><span class=p>,</span><span class=w>
 </span><span class=w>	</span><span class=n>name</span>: <span class=nb>Option</span><span class=o>&lt;</span><span class=nb>String</span><span class=o>&gt;</span><span class=p>,</span><span class=w>
 </span><span class=w>	</span><span class=n>children</span>: <span class=nb>Vec</span><span class=o>&lt;</span><span class=n>Node</span><span class=o>&gt;</span><span class=w>
 </span><span class=w></span><span class=p>}</span><span class=w>
-</span></code></pre></div><p>The base thing isn&rsquo;t great, but also TypeScript&rsquo;s got a garbage collector, so any <code>T</code> should probably be wrapped in an <code>Rc&lt;RefCell&lt;T>></code>:</p>
+</span></code></pre></div><p>I don&rsquo;t think that&rsquo;s great. What fields belong on Node? Which belong on BaseNode? Plus TypeScript&rsquo;s got a garbage collector, so for parity any <code>T</code> should probably be wrapped in an <a href=https://doc.rust-lang.org/std/rc/struct.Rc.html><code>Rc&lt;T></code></a>. Plus everything&rsquo;s mutable, so we&rsquo;d want to wrap that in a <a href=https://doc.rust-lang.org/std/cell/struct.RefCell.html><code>RefCell&lt;T></code></a>.</p>
 <div class=highlight><pre tabindex=0 class=chroma><code class=language-rust data-lang=rust><span class=k>struct</span> <span class=nc>Node</span><span class=w> </span><span class=p>{</span><span class=w>
 </span><span class=w>	</span><span class=n>base</span>: <span class=nc>BaseNode</span><span class=p>,</span><span class=w>
 </span><span class=w>	</span><span class=n>name</span>: <span class=nb>Option</span><span class=o>&lt;</span><span class=nb>String</span><span class=o>&gt;</span><span class=p>,</span><span class=w>
-</span><span class=w>	</span><span class=n>children</span>: <span class=nb>Vec</span><span class=o>&lt;</span><span class=n>Rec</span><span class=o>&lt;</span><span class=n>RefCell</span><span class=o>&lt;</span><span class=n>Node</span><span class=o>&gt;&gt;&gt;</span><span class=w>
+</span><span class=w>	</span><span class=n>children</span>: <span class=nb>Vec</span><span class=o>&lt;</span><span class=n>Rc</span><span class=o>&lt;</span><span class=n>RefCell</span><span class=o>&lt;</span><span class=n>Node</span><span class=o>&gt;&gt;&gt;</span><span class=w>
 </span><span class=w></span><span class=p>}</span><span class=w>
-</span></code></pre></div><p>While probably fine, it looks like a pain to work with, and I think we can do better, since these nodes don&rsquo;t really reference each other. Also I&rsquo;m up to 1337 errors, and I&rsquo;m pretty happy leaving that number alone.</p>
+</span></code></pre></div><p>While probably fine, this just looks it&rsquo;d like a pain to work with. I think we can do better. These nodes don&rsquo;t really reference each other, so we don&rsquo;t actually need an <code>Rc</code>, and without that we wouldn&rsquo;t need a <code>RefCell</code>. Also I&rsquo;m up to <code>1337</code> errors, so I&rsquo;m pretty happy ending this attempt here.</p>
 </div>
 <hr class=post-end>
 <footer class=post-info>
 <p class=tags><span class=inline-svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon"><path fill="currentcolor" d="M20.59 13.41l-7.17 7.17a2 2 0 01-2.83.0L2 12V2h10l8.59 8.59a2 2 0 010 2.82z"/><line x1="7" y1="7" x2="7" y2="7"/></svg>
-</span><span class=tag><a href=/tags/lithe>lithe</a></span>
+</span><span class=tag><a href=/tags/lithe>lithe</a></span><span class=tag><a href=/tags/devlog>devlog</a></span>
 </p>
 </footer>
 </article>

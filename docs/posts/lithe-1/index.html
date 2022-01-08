@@ -23,8 +23,9 @@
 <h1>Lithe 1: The Motivation</h1>
 </header>
 <div>
-<p>Svelte is like Rust for me in that I had heard good things for actual years before I even gave it a try. And Svelte is like Rust for me in that I loved it immediately.</p>
-<p>It&rsquo;s really very simple to write in, the basic idea is engaging, and I want so badly for it to succeed. For context I have professional experience with vanilla JavaScript, React, and Angular. After transitioning a small app from Angular to Svelte, here were my takeaways:</p>
+<p>Svelte is like Rust for me in that I had heard good things for years before I even gave it a try.</p>
+<p>Svelte is like Rust for me in that I loved it immediately.</p>
+<p>It&rsquo;s really very simple to write in, the basic idea is engaging, and after trying it I wanted so badly for it to succeed. For context I have professional experience with vanilla JavaScript, React, and Angular. After transitioning a small app from Angular to Svelte, here were my takeaways:</p>
 <ol>
 <li>It&rsquo;s very much like Vue
 <ul>
@@ -32,24 +33,24 @@
 <li>Framework provides a lot out of the box</li>
 </ul>
 </li>
-<li>It&rsquo;s got a (I think) better pattern for reactive programming than React
+<li>It&rsquo;s got a better pattern for reactive programming than React
 <ul>
 <li>I&rsquo;m guessing Svelte is a large part of the motivation behind React&rsquo;s new <a href="https://www.youtube.com/watch?v=lGEMwh32soc">React without memo</a> project</li>
 </ul>
 </li>
 <li>It&rsquo;s had five years to become popular, and yet it has not.
 <ul>
-<li>I can only guess at this, but I&rsquo;d say it&rsquo;s just late to the game. So much of the web is written using other frameworks, and no one wants to re-write it in Svelte</li>
-<li>Initially Svelte touted itself as providing all the functionality you&rsquo;d expect from a big JS framework with way less code. That&rsquo;s turned out to not be the full story, and an app with lots of components will end up being less LOC if written in, say, React than Svelte</li>
+<li>I can only guess at this, but I&rsquo;d say Svelte was simply late to the game. So much of the web is written using other frameworks, and no one wants to re-write it all</li>
+<li>Initially Svelte touted itself as providing all the functionality you&rsquo;d expect from a big JS framework with way less code. That&rsquo;s turned out to not be the <a href=https://github.com/sveltejs/svelte/issues/2546#issuecomment-678845774>full story</a>, and an app with lots of components will end up being less LOC if written in, say, React than Svelte</li>
 </ul>
 </li>
 </ol>
-<p>In this, my most recent hyperfixation, I was listening to anything with Rich Harris (the creator of Svelte) in it. One such piece of media was <a href=https://changelog.com/jsparty/205>this episode of JS Party</a>. In it Rich had a throwaway line about maybe someday rewriting the compiler in Rust.</p>
-<p>This is one of those &ldquo;it&rsquo;d be nice to have, but it&rsquo;s definitely not a priority&rdquo; projects. Which makes sense. The Svelte compiler is already mostly TypeScript, so it&rsquo;s got both enough types to be safe and is also very easy for new people to contribute to, a must for an open source project. Rich is wise to stick to improving the Developer Experience first before doing a largely unnecessary rewrite.</p>
-<p>But that doesn&rsquo;t the problem from being so tempting to try and solve, and it surely doesn&rsquo;t stop me from trying. So I&rsquo;m going to start a new series in which I chronicle my journey of rewriting a compiler (which I&rsquo;ve never done before) for a language I&rsquo;ve barely used. What I&rsquo;m hoping to get out of it:</p>
+<p>To appease my most recent hyperfixation I was listening to anything with Rich Harris (the creator of Svelte) in it. One such piece of media was <a href=https://changelog.com/jsparty/205>JS Party 205</a>. In it Rich had a throwaway line about maybe someday rewriting the compiler in Rust. It came across as a &ldquo;it&rsquo;d be nice to have, but it&rsquo;s definitely not a priority&rdquo; project. Which makes sense. The Svelte compiler is already mostly TypeScript, so it&rsquo;s got enough static typing to be safe and is also very easy for new people to contribute to, a must for any open source project. Rich is wise to stick to improving the Developer Experience first before doing a largely unnecessary rewrite. React is proof that if your JS framework makes it quick to develop apps people will use it regardless of bundle size.</p>
+<p>But that doesn&rsquo;t stop this project from being very tempting to take on, and it definitely doesn&rsquo;t stop me from trying. So this is going to be the start of a new series in which I chronicle my journey of rewriting a compiler (which I&rsquo;ve never done before) for a project I&rsquo;ve barely used. What I&rsquo;m hoping to get out of it:</p>
 <ol>
 <li>A better understanding of:
 <ul>
+<li>Svelte</li>
 <li>JavaScript</li>
 <li>Compilers</li>
 <li>Rust</li>
@@ -61,11 +62,17 @@
 <li>I don&rsquo;t yet care for Server-Side Rendering, so that should cut the work a bit</li>
 </ul>
 </li>
-<li>A list of changes I&rsquo;d like to make to the Svelte compiler
+<li>Smaller bundle sizes
 <ul>
-<li>Decrease bundle size</li>
-<li>Speed up compilation</li>
-<li>Fix edge-cases</li>
+<li>Code splitting can only do so much</li>
+<li>Not caring about bundle sizes is how we end up with 5MB of JS</li>
+</ul>
+</li>
+<li>A list of changes I&rsquo;d like to make to the Svelte compiler so even if my compiler doesn&rsquo;t get used the community can still benefit
+<ul>
+<li>Can we decrease bundle size?</li>
+<li>Can we speed up compilation?</li>
+<li>Are there any edge-cases not currently handled well?</li>
 </ul>
 </li>
 </ol>
@@ -73,7 +80,7 @@
 <hr class=post-end>
 <footer class=post-info>
 <p class=tags><span class=inline-svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon"><path fill="currentcolor" d="M20.59 13.41l-7.17 7.17a2 2 0 01-2.83.0L2 12V2h10l8.59 8.59a2 2 0 010 2.82z"/><line x1="7" y1="7" x2="7" y2="7"/></svg>
-</span><span class=tag><a href=/tags/lithe>lithe</a></span>
+</span><span class=tag><a href=/tags/lithe>lithe</a></span><span class=tag><a href=/tags/devlog>devlog</a></span>
 </p>
 </footer>
 </article>
