@@ -1,6 +1,6 @@
 <!doctype html><html lang=en>
 <head><meta charset=utf-8>
-<meta name=viewport content="width=device-width,initial-scale=1"><title>Welcome weary traveler | Conception</title><link rel=stylesheet href=/css/style.min.c5921195b88c3ed93785e906ef4e94085c1bc9de079a9bd4ebe5a9cbf5f4d206.css integrity="sha256-xZIRlbiMPtk3hekG706UCFwbyd4HmpvU6+Wpy/X00gY=" crossorigin=anonymous><link rel=stylesheet href=/css/syntax.min.1631a17c41b5bb5249f99c1daff809f2e7d4984bea8d6de9aab7f3357ac9bedf.css integrity="sha256-FjGhfEG1u1JJ+Zwdr/gJ8ufUmEvqjW3pqrfzNXrJvt8=" crossorigin=anonymous>
+<meta name=viewport content="width=device-width,initial-scale=1"><title>Welcome weary traveler | Lithe 1: The Motivation</title><link rel=stylesheet href=/css/style.min.c5921195b88c3ed93785e906ef4e94085c1bc9de079a9bd4ebe5a9cbf5f4d206.css integrity="sha256-xZIRlbiMPtk3hekG706UCFwbyd4HmpvU6+Wpy/X00gY=" crossorigin=anonymous><link rel=stylesheet href=/css/syntax.min.1631a17c41b5bb5249f99c1daff809f2e7d4984bea8d6de9aab7f3357ac9bedf.css integrity="sha256-FjGhfEG1u1JJ+Zwdr/gJ8ufUmEvqjW3pqrfzNXrJvt8=" crossorigin=anonymous>
 <script src=https://loremdipso.com/js/bundle.min.35376692a61c772df5270e7c5928c685741fc1c3bc67f29fbbb258caec214ec2.js integrity="sha256-NTdmkqYcdy31Jw58WSjGhXQfwcO8Z/Kfu7JYyuwhTsI=" crossorigin=anonymous></script>
 </head>
 <body><header class="app-header slide-in-from-top">
@@ -16,49 +16,83 @@
 <article>
 <header class=post-header>
 <div class=post-metadata>
-<span>Aug 8, 2020</span>
+<span>Jan 1, 2022</span>
 &#183;
 <span>2 minute read</span>
 </div>
-<h1>Conception</h1>
+<h1>Lithe 1: The Motivation</h1>
 </header>
 <div>
-<p>This site was made, primarily, as a vehicle for my résumé. It could have been a one-day thing. Just find a pretty wordpress template, customize it a bit, and voilà! But where&rsquo;s the fun in that? I mean, what self-respecting dev doesn&rsquo;t love a good <a href=https://en.wikipedia.org/wiki/Greenfield_project>greenfield project</a>.</p>
-<p>So, to justify this waste of time, I came up with some requirements:</p>
-<h2 id=free><a href=#free class=anchor>Free</a></h2>
-<p>This was by far the easiest task since github will host a page for your user. This only works for static sites (no SSR), but that&rsquo;s my preference anyhow. I did still have to pay for the domain name, though.</p>
-<h2 id=fast><a href=#fast class=anchor>Fast</a></h2>
-<p>Fast means different things to different people. I knew this site was going to be mostly static content, and my hoster already had CDNs. The question was: do I bother making a <a href=https://en.wikipedia.org/wiki/Single-page_application>SPA</a>? On the one hand, I think you can do some pretty cool things with a SPA. On the other, it&rsquo;s definitely more work. Could I really justify the time in this already overly-onerous task?</p>
-<p>But we&rsquo;re greenfielding it, so SPA it is! And I chose gatsby to help out with navigation and also generating the blog content. For the résumé I have kind of an exaggerated pipeline, where I fill out a yml which I convert to json and feed into a page on this site. To get a <code>pdf</code> I wrote a script that effectively hosts the page in a headless browser and prints the result to a file. To get a <code>.docx</code> I&mldr; would have to write it by hand. But luckily <code>.docx</code> is far less common.</p>
-<p>The skeleton of the site is loaded regardless of which page you go to. Heavier projects will be <a href=https://reactjs.org/docs/code-splitting.html>split out and lazy loaded</a>, or else hosted separately, so the site is about as fast as it can reasonably be and shouldn&rsquo;t get slower even as I add content.</p>
-<h2 id=fun><a href=#fun class=anchor>Fun</a></h2>
-<p>I chose React as the framework, since I know it and really enjoy using it. It was pretty overkill for this project since not a lot of this site it reactive, but, like Shane Patton is credited as saying: anything worth doing is worth overdoing.</p>
-<h2 id=fanciful><a href=#fanciful class=anchor>Fanciful</a></h2>
-<p>I love moving backgrounds. I flip-flopped on how best to accomplish this, CSS or canvas. CSS, especially CSS3, has gotten so good and feature rich that people have done all sorts of amazing things. All sorts of problems, like jitter and framerate, would go away. But while it would be easier to get something up and running, just CSS is more limiting than the canvas approach, so that&rsquo;s what I went with.</p>
-<p>The first iteration is a simple collage of circles that lazily drift around, growing and shrinking at random. It&rsquo;s not perfect, but pretty enough for a first go.</p>
-<h1 id=conclusion><a href=#conclusion class=anchor>Conclusion</a></h1>
-<p>And that&rsquo;s it. I hope you enjoy this site as much as I&rsquo;ve enjoyed making it. Ciao!</p>
+<p>Svelte is like Rust for me in that I had heard good things for actual years before I even gave it a try. And Svelte is like Rust for me in that I loved it immediately.</p>
+<p>It&rsquo;s really very simple to write in, the basic idea is engaging, and I want so badly for it to succeed. For context I have professional experience with vanilla JavaScript, React, and Angular. After transitioning a small app from Angular to Svelte, here were my takeaways:</p>
+<ol>
+<li>It&rsquo;s very much like Vue
+<ul>
+<li>Single file structure</li>
+<li>Framework provides a lot out of the box</li>
+</ul>
+</li>
+<li>It&rsquo;s got a (I think) better pattern for reactive programming than React
+<ul>
+<li>I&rsquo;m guessing Svelte is a large part of the motivation behind React&rsquo;s new <a href="https://www.youtube.com/watch?v=lGEMwh32soc">React without memo</a> project</li>
+</ul>
+</li>
+<li>It&rsquo;s had five years to become popular, and yet it has not.
+<ul>
+<li>I can only guess at this, but I&rsquo;d say it&rsquo;s just late to the game. So much of the web is written using other frameworks, and no one wants to re-write it in Svelte</li>
+<li>Initially Svelte touted itself as providing all the functionality you&rsquo;d expect from a big JS framework with way less code. That&rsquo;s turned out to not be the full story, and an app with lots of components will end up being less LOC if written in, say, React than Svelte</li>
+</ul>
+</li>
+</ol>
+<p>In this, my most recent hyperfixation, I was listening to anything with Rich Harris (the creator of Svelte) in it. One such piece of media was <a href=https://changelog.com/jsparty/205>this episode of JS Party</a>. In it Rich had a throwaway line about maybe someday rewriting the compiler in Rust.</p>
+<p>This is one of those &ldquo;it&rsquo;d be nice to have, but it&rsquo;s definitely not a priority&rdquo; projects. Which makes sense. The Svelte compiler is already mostly TypeScript, so it&rsquo;s got both enough types to be safe and is also very easy for new people to contribute to, a must for an open source project. Rich is wise to stick to improving the Developer Experience first before doing a largely unnecessary rewrite.</p>
+<p>But that doesn&rsquo;t the problem from being so tempting to try and solve, and it surely doesn&rsquo;t stop me from trying. So I&rsquo;m going to start a new series in which I chronicle my journey of rewriting a compiler (which I&rsquo;ve never done before) for a language I&rsquo;ve barely used. What I&rsquo;m hoping to get out of it:</p>
+<ol>
+<li>A better understanding of:
+<ul>
+<li>JavaScript</li>
+<li>Compilers</li>
+<li>Rust</li>
+<li>Tackling big projects</li>
+</ul>
+</li>
+<li>A compiler that can do a significant subset of what the Svelte compiler can do, but much much faster
+<ul>
+<li>I don&rsquo;t yet care for Server-Side Rendering, so that should cut the work a bit</li>
+</ul>
+</li>
+<li>A list of changes I&rsquo;d like to make to the Svelte compiler
+<ul>
+<li>Decrease bundle size</li>
+<li>Speed up compilation</li>
+<li>Fix edge-cases</li>
+</ul>
+</li>
+</ol>
 </div>
 <hr class=post-end>
 <footer class=post-info>
+<p class=tags><span class=inline-svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon"><path fill="currentcolor" d="M20.59 13.41l-7.17 7.17a2 2 0 01-2.83.0L2 12V2h10l8.59 8.59a2 2 0 010 2.82z"/><line x1="7" y1="7" x2="7" y2="7"/></svg>
+</span><span class=tag><a href=/tags/lithe>lithe</a></span>
+</p>
 </footer>
 </article>
 <div class=sibling-post-links>
-<a href=/posts/whats-with-the-name/ class=previous-post>
+<a href=/posts/site-v2/ class=previous-post>
 <span class=label>
 <span class=inline-svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-left"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
 </span>
 &nbsp;Previous
-</span><br><span>What's with the name?</span>
+</span><br><span>Site V2</span>
 </a>
-<a href=/posts/finding-my-voice/ class=next-post>
+<a href=/posts/lithe-2/ class=next-post>
 <span class=label>
 Next&nbsp;
 <span class=inline-svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
 </span>
 </span>
 <br>
-<span>Finding My Voice</span>
+<span>Lithe 2: From Scratch</span>
 </a>
 </div>
 </main>

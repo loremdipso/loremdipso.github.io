@@ -1,6 +1,6 @@
 <!doctype html><html lang=en>
 <head><meta charset=utf-8>
-<meta name=viewport content="width=device-width,initial-scale=1"><title>Welcome weary traveler | Site V2</title><link rel=stylesheet href=/css/style.min.c5921195b88c3ed93785e906ef4e94085c1bc9de079a9bd4ebe5a9cbf5f4d206.css integrity="sha256-xZIRlbiMPtk3hekG706UCFwbyd4HmpvU6+Wpy/X00gY=" crossorigin=anonymous><link rel=stylesheet href=/css/syntax.min.1631a17c41b5bb5249f99c1daff809f2e7d4984bea8d6de9aab7f3357ac9bedf.css integrity="sha256-FjGhfEG1u1JJ+Zwdr/gJ8ufUmEvqjW3pqrfzNXrJvt8=" crossorigin=anonymous>
+<meta name=viewport content="width=device-width,initial-scale=1"><title>Welcome weary traveler | Lithe 3: A Rewrite</title><link rel=stylesheet href=/css/style.min.c5921195b88c3ed93785e906ef4e94085c1bc9de079a9bd4ebe5a9cbf5f4d206.css integrity="sha256-xZIRlbiMPtk3hekG706UCFwbyd4HmpvU6+Wpy/X00gY=" crossorigin=anonymous><link rel=stylesheet href=/css/syntax.min.1631a17c41b5bb5249f99c1daff809f2e7d4984bea8d6de9aab7f3357ac9bedf.css integrity="sha256-FjGhfEG1u1JJ+Zwdr/gJ8ufUmEvqjW3pqrfzNXrJvt8=" crossorigin=anonymous>
 <script src=https://loremdipso.com/js/bundle.min.35376692a61c772df5270e7c5928c685741fc1c3bc67f29fbbb258caec214ec2.js integrity="sha256-NTdmkqYcdy31Jw58WSjGhXQfwcO8Z/Kfu7JYyuwhTsI=" crossorigin=anonymous></script>
 </head>
 <body><header class="app-header slide-in-from-top">
@@ -16,48 +16,56 @@
 <article>
 <header class=post-header>
 <div class=post-metadata>
-<span>Dec 12, 2021</span>
+<span>Jan 1, 2022</span>
 &#183;
 <span>1 minute read</span>
 </div>
-<h1>Site V2</h1>
+<h1>Lithe 3: A Rewrite</h1>
 </header>
 <div>
-<p>Channeling my inner dev, I&rsquo;ve gone ahead and completely re-written this site. <a href=https://loremdipso.com/posts/conception/>Original post for comparison</a>.</p>
-<h2 id=why><a href=#why class=anchor>Why?</a></h2>
-<p>The original site was&mldr; poorly written. It used React, which can be fine, but was honestly totally overkill for a site that wasn&rsquo;t complex or really that interactive. And I&rsquo;ve had a change of heart when it comes to SPAs: that they&rsquo;re useful when they&rsquo;re useful, and not when they&rsquo;re not.</p>
-<h2 id=free><a href=#free class=anchor>Free</a></h2>
-<p>Hosting this site is still basically free via Github pages (except for the domain name), and the way hugo generates the CSS bundles is predictable, so even though I&rsquo;m do clean builds when I add content, if it doesn&rsquo;t change the existing CSS then the generated CSS gets the exact same name, which means it can live in peoples caches longer. Neat!</p>
-<h2 id=fast><a href=#fast class=anchor>Fast</a></h2>
-<p>Switched from React and webpack to Hugo, and I couldn&rsquo;t be happier. My build times are basically instant now (yay!), and the site is generally faster in every way. I may revisit turning this generate site into a SPA again, but it&rsquo;d just be a vanity project. Each page&rsquo;s chrome is so simple I wouldn&rsquo;t actually save any real time by keeping it around and just swapping out the content.</p>
-<h2 id=fun><a href=#fun class=anchor>Fun</a></h2>
-<p>Eh, Hugo is great, but it&rsquo;s also opinionated and a little difficult to grok for a while if you haven&rsquo;t worked with it before, and I&rsquo;ve found the online forum moderators to be a little short-tempered. Making the site was fun, but learning how was to was a little big of a slog.</p>
-<h2 id=fanciful><a href=#fanciful class=anchor>Fanciful</a></h2>
-<p>I added nifty slide-in effects for the header/footer to make the site just a little bit more interesting. The moving backgrounds are gone, though, for now (☹️). I may add them back in a bit, maybe as part of a shared library. I&rsquo;m imagining you import some CSS file and it handles the rest, but idk.</p>
+<p>What if I just copied the Svelte compiler, written in TypeScript, changed all of the file extensions from <code>.ts</code> to <code>.rs</code>, and fix all the bugs? It&rsquo;d be a slog, sure, but at the end of the day I&rsquo;d have a compiler that was very nearly the same, but presumably more performant.</p>
+<p>This attempt I gave a real try, spending maybe three nights just chugging away. What I got was just more and more errors, which was fairly disheartening. I also got realized just how different Rust is, and that a 1-to-1 rewrite would result in something that wasn&rsquo;t ideal. For example, take this very simple TypeScript class:</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-ts data-lang=ts><span class=kr>class</span> <span class=nx>Node</span> <span class=kr>extends</span> <span class=nx>BaseNode</span> <span class=p>{</span>
+	<span class=nx>name</span>: <span class=kt>String?</span> <span class=o>=</span> <span class=kc>null</span><span class=p>,</span>
+	<span class=nx>children</span>: <span class=kt>Node</span><span class=p>[]</span> <span class=o>=</span> <span class=p>[],</span>
+<span class=p>}</span>
+</code></pre></div><p>The equivalent TypeScript struct might look like:</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-rust data-lang=rust><span class=k>struct</span> <span class=nc>Node</span><span class=w> </span><span class=p>{</span><span class=w>
+</span><span class=w>	</span><span class=n>base</span>: <span class=nc>BaseNode</span><span class=p>,</span><span class=w>
+</span><span class=w>	</span><span class=n>name</span>: <span class=nb>Option</span><span class=o>&lt;</span><span class=nb>String</span><span class=o>&gt;</span><span class=p>,</span><span class=w>
+</span><span class=w>	</span><span class=n>children</span>: <span class=nb>Vec</span><span class=o>&lt;</span><span class=n>Node</span><span class=o>&gt;</span><span class=w>
+</span><span class=w></span><span class=p>}</span><span class=w>
+</span></code></pre></div><p>The base thing isn&rsquo;t great, but also TypeScript&rsquo;s got a garbage collector, so any <code>T</code> should probably be wrapped in an <code>Rc&lt;RefCell&lt;T>></code>:</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-rust data-lang=rust><span class=k>struct</span> <span class=nc>Node</span><span class=w> </span><span class=p>{</span><span class=w>
+</span><span class=w>	</span><span class=n>base</span>: <span class=nc>BaseNode</span><span class=p>,</span><span class=w>
+</span><span class=w>	</span><span class=n>name</span>: <span class=nb>Option</span><span class=o>&lt;</span><span class=nb>String</span><span class=o>&gt;</span><span class=p>,</span><span class=w>
+</span><span class=w>	</span><span class=n>children</span>: <span class=nb>Vec</span><span class=o>&lt;</span><span class=n>Rec</span><span class=o>&lt;</span><span class=n>RefCell</span><span class=o>&lt;</span><span class=n>Node</span><span class=o>&gt;&gt;&gt;</span><span class=w>
+</span><span class=w></span><span class=p>}</span><span class=w>
+</span></code></pre></div><p>While probably fine, it looks like a pain to work with, and I think we can do better, since these nodes don&rsquo;t really reference each other. Also I&rsquo;m up to 1337 errors, and I&rsquo;m pretty happy leaving that number alone.</p>
 </div>
 <hr class=post-end>
 <footer class=post-info>
 <p class=tags><span class=inline-svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon"><path fill="currentcolor" d="M20.59 13.41l-7.17 7.17a2 2 0 01-2.83.0L2 12V2h10l8.59 8.59a2 2 0 010 2.82z"/><line x1="7" y1="7" x2="7" y2="7"/></svg>
-</span><span class=tag><a href=/tags/meta>meta</a></span><span class=tag><a href=/tags/software>software</a></span>
+</span><span class=tag><a href=/tags/lithe>lithe</a></span>
 </p>
 </footer>
 </article>
 <div class=sibling-post-links>
-<a href=/posts/finding-my-voice/ class=previous-post>
+<a href=/posts/lithe-2/ class=previous-post>
 <span class=label>
 <span class=inline-svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-left"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
 </span>
 &nbsp;Previous
-</span><br><span>Finding My Voice</span>
+</span><br><span>Lithe 2: From Scratch</span>
 </a>
-<a href=/posts/lithe-1/ class=next-post>
+<a href=/posts/lithe-4/ class=next-post>
 <span class=label>
 Next&nbsp;
 <span class=inline-svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
 </span>
 </span>
 <br>
-<span>Lithe 1: The Motivation</span>
+<span>Lithe 4: On the Shoulders of Giants</span>
 </a>
 </div>
 </main>
