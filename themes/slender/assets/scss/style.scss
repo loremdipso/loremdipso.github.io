@@ -39,6 +39,14 @@ html {
 	nav,
 	.socials {
 		display: flex;
+		@include isMobile() {
+			width: 100%;
+			a {
+				flex: 1 1 0px;
+				text-align: center;
+			}
+		}
+
 		a {
 			padding: 16px;
 		}
