@@ -18,9 +18,10 @@ After a cuppa I had this:
 
 | Type                | Total size (KB) |
 | ------------------- | --------------- |
-| Raw `.svelte` files | 18420           |
-| Compiled            | 23188           |
-| Minified            | 15764           |
+| raw `.svelte` files | 18420           |
+| compiled            | 23188           |
+| minified            | 15764           |
+| gzipped             | 10836           |
 
 Very interestingly there were two files whose minified size was actually slightly larger than the original. This makes me think I could find a better minifier than [minify](https://www.npmjs.com/package/minify). Even after playing with the available options, going so far as to enable some unsafe operations, I still couldn't get that number down. I might try another minifier entirely ([node-minify](https://www.npmjs.com/package/node-minify) looks cool), but for now I'll keep what I've got.
 

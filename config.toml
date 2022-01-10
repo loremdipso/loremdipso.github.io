@@ -27,10 +27,11 @@ publishDir = './docs'
 	profile_pic_url = "images/profile_pic.jpg"
 
 [params]
-	dateform        = "Jan 1, 2006"
-	dateformShort   = "Jan 1"
-	dateformNum     = "2006-01-01"
-	dateformNumTime = "2006-01-01 12:04 -0700"
+	dateform        = "Jan 2, 2006"
+	dateformShort   = "Jan 2"
+	dateformNum     = "2006-01-02"
+	dateformNumTime = "2006-01-02 12:04 -0700"
+	# 2022-01-08T10:49:55-07:00
 
 [[params.social]]
 	name = "linkedin"
