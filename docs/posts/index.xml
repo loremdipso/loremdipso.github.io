@@ -14,16 +14,20 @@ Even doing this was a bit of a project. I figured this might come up again, so I
 </thead>
 <tbody>
 <tr>
-<td>Raw <code>.svelte</code> files</td>
+<td>raw <code>.svelte</code> files</td>
 <td>18420</td>
 </tr>
 <tr>
-<td>Compiled</td>
+<td>compiled</td>
 <td>23188</td>
 </tr>
 <tr>
-<td>Minified</td>
+<td>minified</td>
 <td>15764</td>
+</tr>
+<tr>
+<td>gzipped</td>
+<td>10836</td>
 </tr>
 </tbody>
 </table>
