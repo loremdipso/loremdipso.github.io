@@ -15,7 +15,7 @@ But before I write more about the internals of Lithe or implement any new featur
 
 ### An aside
 
-I never knew, but apparently tsc is, itself, written in TypeScript. Which really calls into question this whole endeavor. If something as successful as tsc (which I felt was slow) is written in TypeScript, why can't Svelte? The move to Rust has never been a sure one, and this might just be another reason against. Perhaps the performance limitations I'm trying to solve are more algorithmic than they are technical.
+I never knew, but apparently tsc is, itself, written in TypeScript. Which really calls into question this whole endeavor. If something as successful as tsc (which I never felt was all that slow) is written in TypeScript, why can't Svelte? The move to Rust has never been a sure one, and this might just be another reason against. Perhaps the performance limitations I'm trying to solve are more algorithmic than they are technical.
 
 ### What's WASM again?
 
