@@ -19,7 +19,7 @@ I never knew, but apparently tsc is, itself, written in TypeScript. Which really
 
 ### What's WASM again?
 
-Anywho, assuming Lithe is alive and well and we want to release it to impatient developers, we could maybe release native binaries. This seems (to me, anyway) to be something of a hassle, plus your consumers need to have the utmost trust in you. So what about [WASM](https://webassembly.org/)? It's cross-platform, I assume Node can run it, and I can only imagine that it's cutoff from anything dangerous like network or file IO by default.
+In any case, assuming Lithe is alive and well and we want to release it to impatient developers, we could maybe release native binaries. This seems (to me, anyway) to be something of a hassle, plus your consumers need to have the utmost trust in you. So what about [WASM](https://webassembly.org/)? It's cross-platform, I assume Node can run it, and I can only imagine that it's cutoff from anything dangerous like network or file IO by default.
 
 ### How to
 
