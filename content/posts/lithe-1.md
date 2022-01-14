@@ -1,7 +1,7 @@
 ---
 title: "Lithe 1: The Motivation"
 slug: "lithe-1"
-date: 2022-01-03T12:12:04-07:00
+date: 2022-01-03T16:12:04-07:00
 draft: false
 tags: ["lithe", "devlog"]
 ---

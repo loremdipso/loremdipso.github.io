@@ -1,6 +1,10 @@
 @import "_syntax.scss";
 
 article {
+	p {
+		line-height: 1.5;
+	}
+
 	.highlight {
 		position: relative;
 	}

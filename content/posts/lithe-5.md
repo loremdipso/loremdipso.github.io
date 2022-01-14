@@ -1,7 +1,7 @@
 ---
 title: "Lithe 5: Optimize for the minifier"
 slug: "lithe-5"
-date: 2022-01-08T10:49:55-07:00
+date: 2022-01-08T19:49:55-07:00
 draft: false
 tags: ["lithe", "devlog"]
 ---
@@ -100,3 +100,17 @@ function fn(t) {
 ```
 
 The downside of some of these optimizations, of course, is that it becomes harder and harder to debug in production. But if we're already at the point of minifying I say it's [no holds barred](<https://en.wikipedia.org/wiki/No_Holds_Barred_(1989_film)>).
+
+<details>
+  <summary>
+	Extra considerations
+  </summary>
+  
+  <p>
+	While minimizing the compiled svelte files seems like an obvious win it may not actually amount to much given how good gzip is. We'll need to run out output through gzip to know if we'll actually be sending fewer bytes down the wire.
+  </p>
+
+  <p>
+	The examples above are so small that gzip doesn't actually help. The original version is unchanged at 114 bytes while the hand-optimized one is actually larger after compression, growing from 91 to 113 bytes.
+  </p>
+</details>

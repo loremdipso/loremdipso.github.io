@@ -1,7 +1,7 @@
 ---
 title: "Lithe 2: From Scratch"
 slug: "lithe-2"
-date: 2022-01-03T12:46:55-07:00
+date: 2022-01-03T16:46:55-07:00
 draft: false
 tags: ["lithe", "devlog"]
 ---

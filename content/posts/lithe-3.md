@@ -1,7 +1,7 @@
 ---
 title: "Lithe 3: A Rewrite"
 slug: "lithe-3"
-date: 2022-01-03T13:07:07-07:00
+date: 2022-01-03T17:07:07-07:00
 draft: false
 tags: ["lithe", "devlog"]
 ---
