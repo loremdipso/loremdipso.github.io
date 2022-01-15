@@ -26,11 +26,11 @@ To re-generate resume.pdf (NOTE: requires wkhtmltopdf):
 
 # TODO
 
--   [] Improve color scheme
+-   [ ] Improve color scheme
 
--   [] Better copy button
+-   [ ] Better copy button
 
--   [] Add TOC to blog posts
+-   [ ] Add TOC to blog posts
 
 -   [x] When regenerating, keep old CSS files around for users who have cached HTML
 
