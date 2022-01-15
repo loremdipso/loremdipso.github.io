@@ -18,21 +18,21 @@
 <div class=post-metadata>
 <span>Jan 15, 2022</span>
 &#183;
-<span>2 minute read</span>
+<span>3 minute read</span>
 </div>
 <h1>Lithe 7 - Apples to Apples</h1>
 </header>
 <div>
 <h3 id=confession-time><a href=#confession-time class=anchor>Confession time</a></h3>
-<p>My performance testing methodology so far has been extremely flawed. More of an indicator for how full performance testing might go. Which I think is reasonable, but it doesn&rsquo;t have to be quite so unfair to Svelte. It&rsquo;s doing quite a lot more than Lithe, so it&rsquo;d be good to re-run some earlier tests with the JavaScript equivalent of what Lithe is doing. Which, let&rsquo;s be honest, is just parsing the HTML into an AST. Easy enough.</p>
+<p>My performance testing methodology so far has been extremely flawed. It serves mostly as an indicator for how rigorous performance testing might go when I eventually get around to it. Which I think is reasonable, but it doesn&rsquo;t have to be quite so unfair to Svelte. Svelte is doing quite a lot more than Lithe, so I really shouldn&rsquo;t be comparing them side by side. It&rsquo;d be good to re-run some earlier tests, but with the JavaScript equivalent of what Lithe is doing. Which, let&rsquo;s be honest, is mostly just parsing the HTML into an AST.</p>
 <h3 id=disambiguation><a href=#disambiguation class=anchor>Disambiguation</a></h3>
 <p>It&rsquo;s good to have names for things, so let&rsquo;s call this super-basic JavaScript version <a href=https://en.wikipedia.org/wiki/Tongue-in-cheek>LitheJS</a>.</p>
 <h3 id=the-specifics><a href=#the-specifics class=anchor>The specifics</a></h3>
 <p>Lithe has been using the <a href=https://crates.io/crates/html_parser>html_parser crate</a>. For LitheJS I&rsquo;ll use the very popular <a href=https://www.npmjs.com/package/node-html-parser>Fast HTML Parser</a>. It&rsquo;s got 2.3M downloads a week, and it&rsquo;s even got Fast in the name. If anything&rsquo;s going to give Lithe a run for its money it&rsquo;s going to be that.</p>
 <h3 id=the-methodology><a href=#the-methodology class=anchor>The methodology</a></h3>
-<p>We&rsquo;ll do the same as before: super simple HTML files, just N <code>&lt;div /></code> elements. No nesting, no scripting, and I&rsquo;m not even going to ask LitheJS to produce any output or perform any transformations. I just want to know: how long does it take to parse the HTML into an AST?</p>
-<p>My thought is it Lithe can still beat out LitheJS, even after giving it all these advantages, then we&rsquo;re on the right track.</p>
-<p>Notably, though, I&rsquo;m not going to bother improving any of the rest of the methodology. I&rsquo;m not averaging multiple runs, I&rsquo;m not going to nest HTML elements, I&rsquo;m still measuring times in Node, all results are in ms, etc.</p>
+<p>We&rsquo;ll do the same as before: super simple HTML files, just N <code>&lt;span>Hello world!&lt;/span></code> elements. No nesting, no scripting, and I&rsquo;m not even going to ask LitheJS to produce any output or perform any transformations. I just want to know: how long does it take to parse the HTML into an AST, and how does that compare with Lithe?</p>
+<p>My thought is if Lithe can still beat out LitheJS, even after giving it all these advantages, then we&rsquo;re on the right track.</p>
+<p>Notably, though, I&rsquo;m not going to bother improving any of the rest of my methodology just yet. I&rsquo;m not averaging multiple runs, I&rsquo;m not going to nest HTML elements, I&rsquo;m measuring performance directly in Node, all results are in ms, etc.</p>
 <h3 id=the-results><a href=#the-results class=anchor>The results</a></h3>
 <table>
 <thead>
@@ -111,7 +111,7 @@
 </tr>
 </tbody>
 </table>
-<p>Alright, so it&rsquo;s a little bit slower, but not by that much. Looks like LitheJS is indeed probably as fast or faster than Lithe. For fun I added timing inside the native version of Lithe just around the HTML parsing bit. And if we get rid of the <code>toString()</code> call in our <code>simple_html_parser</code> we can compare just the DOM parsing.</p>
+<p>Alright, so it&rsquo;s a little bit slower, but not by that much. I&rsquo;m guessing there&rsquo;s no lazy evaluation going on here: Fast HTML Parser is just fast. For fun I added timing inside the native version of Lithe just around the HTML parsing bit. And if we get rid of the <code>toString()</code> call in our <code>simple_html_parser</code> we can compare just the DOM parsing.</p>
 <table>
 <thead>
 <tr>
@@ -138,7 +138,7 @@
 </tr>
 </tbody>
 </table>
-<p>I think that makes sense. Without any FFI overhead, modifying the generated AST, or generating the final output string the Rust version is looking to be a bit faster, especially for larger files.</p>
+<p>And with that we&rsquo;re finally comparing like with like. And the results look how I&rsquo;d expect. If we take out the FFI overhead and only parse the HTML then the Rust version is looking to be a bit faster, especially for larger files.</p>
 </div>
 <hr class=post-end>
 <footer class=post-info>
