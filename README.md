@@ -32,6 +32,6 @@ To re-generate resume.pdf (NOTE: requires wkhtmltopdf):
 
 -   [] Add TOC to blog posts
 
--   [] When regenerating, keep old CSS files around for users who have cached HTML
+-   [x] When regenerating, keep old CSS files around for users who have cached HTML
 
     -   Github pages boasts really short file caching. Which is generally good, but can cause issues for CSS files

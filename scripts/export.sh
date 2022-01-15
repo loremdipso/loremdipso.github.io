@@ -10,4 +10,8 @@ hugo --cleanDestinationDir --minify
 
 mv ./CNAME ./docs/CNAME
 mv ./resume.pdf ./docs/resume/resume.pdf
-mv -f ./*css ./docs/css
+
+# We don't want to clobber any updated css with the same name, so let's move
+# any files that don't already exist and then remove whatever's leftover
+mv -n *css ./docs/css
+rm *css
