@@ -7,7 +7,7 @@ tags: ["lithe", "devlog", "performance"]
 
 ### Confession time
 
-My performance testing methodology so far has been extremely flawed. More of an indicator for how full performance testing might go. Which I think is reasonable, but it doesn't have to be quite so unfair to Svelte. It's doing quite a lot more than Lithe, so it'd be good to re-run some earlier tests with the JavaScript equivalent of what Lithe is doing. Which, let's be honest, is just parsing the HTML into an AST. Easy enough.
+My performance testing methodology so far has been extremely flawed. It serves mostly as an indicator for how rigorous performance testing might go when I eventually get around to it. Which I think is reasonable, but it doesn't have to be quite so unfair to Svelte. Svelte is doing quite a lot more than Lithe, so I really shouldn't be comparing them side by side. It'd be good to re-run some earlier tests, but with the JavaScript equivalent of what Lithe is doing. Which, let's be honest, is mostly just parsing the HTML into an AST.
 
 ### Disambiguation
 
@@ -19,11 +19,11 @@ Lithe has been using the [html_parser crate](https://crates.io/crates/html_parse
 
 ### The methodology
 
-We'll do the same as before: super simple HTML files, just N `<div />` elements. No nesting, no scripting, and I'm not even going to ask LitheJS to produce any output or perform any transformations. I just want to know: how long does it take to parse the HTML into an AST?
+We'll do the same as before: super simple HTML files, just N `<span>Hello world!</span>` elements. No nesting, no scripting, and I'm not even going to ask LitheJS to produce any output or perform any transformations. I just want to know: how long does it take to parse the HTML into an AST, and how does that compare with Lithe?
 
-My thought is it Lithe can still beat out LitheJS, even after giving it all these advantages, then we're on the right track.
+My thought is if Lithe can still beat out LitheJS, even after giving it all these advantages, then we're on the right track.
 
-Notably, though, I'm not going to bother improving any of the rest of the methodology. I'm not averaging multiple runs, I'm not going to nest HTML elements, I'm still measuring times in Node, all results are in ms, etc.
+Notably, though, I'm not going to bother improving any of the rest of my methodology just yet. I'm not averaging multiple runs, I'm not going to nest HTML elements, I'm measuring performance directly in Node, all results are in ms, etc.
 
 ### The results
 
@@ -60,7 +60,7 @@ Let's re-run those last couple of tests. I included a range here since the resul
 | 1000              | 8ms-18ms   |
 | 10,000            | 58ms-140ms |
 
-Alright, so it's a little bit slower, but not by that much. Looks like LitheJS is indeed probably as fast or faster than Lithe. For fun I added timing inside the native version of Lithe just around the HTML parsing bit. And if we get rid of the `toString()` call in our `simple_html_parser` we can compare just the DOM parsing.
+Alright, so it's a little bit slower, but not by that much. I'm guessing there's no lazy evaluation going on here: Fast HTML Parser is just fast. For fun I added timing inside the native version of Lithe just around the HTML parsing bit. And if we get rid of the `toString()` call in our `simple_html_parser` we can compare just the DOM parsing.
 
 | Number of `span`s | LitheJS (just HTML parsing) | Lithe - native (just HTML parsing) |
 | ----------------- | --------------------------- | ---------------------------------- |
@@ -68,4 +68,4 @@ Alright, so it's a little bit slower, but not by that much. Looks like LitheJS i
 | 1000              | 4ms-13ms                    | 1ms                                |
 | 10,000            | 41ms-142ms                  | 18ms-27ms                          |
 
-I think that makes sense. Without any FFI overhead, modifying the generated AST, or generating the final output string the Rust version is looking to be a bit faster, especially for larger files.
+And with that we're finally comparing like with like. And the results look how I'd expect. If we take out the FFI overhead and only parse the HTML then the Rust version is looking to be a bit faster, especially for larger files.
