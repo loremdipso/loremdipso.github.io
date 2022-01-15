@@ -25,7 +25,7 @@ My thought is it Lithe can still beat out LitheJS, even after giving it all thes
 
 Notably, though, I'm not going to bother improving any of the rest of the methodology. I'm not averaging multiple runs, I'm not going to nest HTML elements, I'm still measuring times in Node, all results are in ms, etc.
 
-## The results
+### The results
 
 | Number of `span`s | Svelte                                                          | Lithe - native | Lithe - WASM | LitheJS |
 | ----------------- | --------------------------------------------------------------- | -------------- | ------------ | ------- |
