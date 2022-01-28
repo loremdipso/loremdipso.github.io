@@ -3,7 +3,7 @@ title: "Lithe 3: A Rewrite"
 slug: "lithe-3"
 date: 2022-01-03T17:07:07-07:00
 draft: false
-tags: ["lithe", "devlog"]
+tags: ["lithe", "devlog", "mini"]
 ---
 
 What if I just copied the Svelte compiler, written in TypeScript, changed all of the file extensions from `.ts` to `.rs`, and fixed all the bugs? It'd be a slog, sure, but at the end of the day I'd have a compiler that was very nearly the same, but presumably more performant.
