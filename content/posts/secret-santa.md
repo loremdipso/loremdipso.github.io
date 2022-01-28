@@ -1,7 +1,8 @@
 ---
-title: "Secret Santa"
-date: 2021-01-27
-draft: true
+title: "Secret Santa: a Saga"
+date: 2022-01-27
+draft: false
+tags: ["one-shot", "performance", "svelte"]
 ---
 
 ### Backstory
@@ -26,7 +27,7 @@ If I'm being honest with myself I could have pretty easily extended the ruby scr
 
 ### UI
 
-The one thing anyone who uses Svelte seems willing to criticize is the lack of ecosystem. However I was able to find a [Svelte implementation](https://sveltematerialui.com/) of [Material Design](https://material.io/) that seemed reasonable enough.
+The one thing anyone who uses Svelte seems willing to criticize is the lack of ecosystem. However I was able to find a [SMUI](https://sveltematerialui.com/), a Svelte implementation of [Material Design](https://material.io/) that seemed reasonable enough.
 
 ### Dev experience
 
@@ -62,4 +63,14 @@ So **1MB**. Alright, just in case I was doing something silly let's go ahead and
 
 ### Enter Smelte
 
-[Smelte](https://smeltejs.com/). The elevator pitch is basically [Material Design](https://material.io/) + [Tailwind CSS](https://tailwindcss.com/). You can use all of the normal Tailwind styles in your app, plus a tonne of pre-build components. Dev worked great, but the build was a bit broken. After much debugging I found that there's an open issue against smelte right now where it should be passing an allowlist around but instead it's passing a whitelist. Unfortunate, I hope that fix gets merged soon, but until then using a slightly older version of tailwindcss and did the trick. And once I migrated the app to Smelt the final build dropped all the way down to **200KB**!!! Nice.
+[Smelte](https://smeltejs.com/). The elevator pitch is basically [Material Design](https://material.io/) + [Tailwind CSS](https://tailwindcss.com/). You can use all of the normal Tailwind styles in your app plus a tonne of pre-built components. There was one outstanding issue where Smelte doesn't currently list a specific version of purgecss and is slightly incompatible with it. Hopefully that PR gets accepted soon, but until then I had great luck using an older version of [purgecss](https://www.npmjs.com/package/purgecss).
+
+So now that I've got my UI framework swapped out and patched up and worked like a dream, let's see the build size... **200KB**!!! Alright, now that's more like it.
+
+### Caveats and Conclusions
+
+I should clarify that comparing the React+Carbon app against the Svelte+Smelte app isn't entirely fair. For one I just gave up on React+Carbon after a certain point. I'd hope that production apps aren't shipping with a framework that's got a **4MB** "Hello World". Also, Carbon embeds its icons as SVG directly in its final bundle, whereas I reference Google Material Icons font library as an external URL. So to be more fair I should either increase the Svelte app's total size or decrease the React app's total size.
+
+That said, I don't think I can definitively claim something as sweeping as "Svelte > React" or "Smelte > Carbon". What I can say is that testing performance is _hard_. Even after deciding that bundle size was the metric I wanted to improve, actually going about improving it meant a lot of trial and error. I learned a lot, but if this project wasn't for fun I definitely wouldn't have put this much time or effort into it. And in the end I did find a combination of technologies that I'm really happy with that I'd love to try out in future projects, so I'll chalk this one up as smashing success.
+
+Please tease me if I re-write this silly app again.

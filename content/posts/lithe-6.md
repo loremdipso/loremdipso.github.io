@@ -3,7 +3,7 @@ title: "Lithe 6: What about WASM?"
 slug: "lithe-6"
 date: 2022-01-13
 draft: false
-tags: ["lithe", "devlog"]
+tags: ["lithe", "devlog", "svelte"]
 ---
 
 ### Excuses

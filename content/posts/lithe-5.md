@@ -3,7 +3,7 @@ title: "Lithe 5: Optimize for the minifier"
 slug: "lithe-5"
 date: 2022-01-08T19:49:55-07:00
 draft: false
-tags: ["lithe", "devlog", "performance"]
+tags: ["lithe", "devlog", "performance", "svelte"]
 ---
 
 [halfnelson](https://github.com/halfnelson) did a lovely [investigation of how large Svelte projects scale](https://github.com/halfnelson/svelte-it-will-scale/blob/master/README.md). I'm not looking to rehash that per se, but I am interested in how well the current Svelte compiler's output gets minified.

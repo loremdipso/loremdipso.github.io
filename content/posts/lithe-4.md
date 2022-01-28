@@ -3,7 +3,7 @@ title: "Lithe 4: On the Shoulders of Giants"
 slug: "lithe-4"
 date: 2022-01-03T18:39:44-07:00
 draft: false
-tags: ["lithe", "devlog", "performance"]
+tags: ["lithe", "devlog", "performance", "svelte"]
 ---
 
 Starting from characters and parsing that into an AST that could render a Svelte program could definitely open open possibilities for some low-level optimizations, but even just parsing a normal HTML document is not a small project, and Svelte includes JavaScript, TypeScript, Handlebars-esque blocks, CSS, and SCSS, too. Doing all that at once would be the mother of all slogs. But, luckily, I don't have to! There exist many, many pre-build alternatives. The Svelte compiler itself even uses a couple.
