@@ -30,8 +30,16 @@ To re-generate resume.pdf (NOTE: requires wkhtmltopdf):
 
 -   [ ] Better copy button
 
+-   [ ] Add new/better means of contacting me
+
+-   [ ] More photos
+
 -   [ ] Add TOC to blog posts
 
 -   [x] When regenerating, keep old CSS files around for users who have cached HTML
 
     -   Github pages boasts really short file caching. Which is generally good, but can cause issues for CSS files
+
+# Ideas
+
+-   [ ] Resurrect Rust WASM projects. Propose new hosting scheme

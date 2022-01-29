@@ -5,6 +5,12 @@ draft: false
 tags: ["one-shot", "performance", "svelte"]
 ---
 
+![Santa!](https://loremdipso.com/secret_santa/santa.svg "OMG IT'S SANTA")
+
+### The end result
+
+Before you commit to reading this thing, here're the final versions of this app: [Svelte](https://loremdipso.com/secret_santa/), [React](https://loremdipso.com/secret_santa_react/). In future I'll only be updating the Svelte version.
+
 ### Backstory
 
 I have a groups of friends from college that have a [Secret Santa](https://en.wikipedia.org/wiki/Secret_Santa) event every year. Even after we all moved apart we've kept it up, jumping to Zoom to unwrap our gifts and guess who was our gifter. One of my most favorite traditions, a delight tempered only by the daunting task of logistics. You see, there are some constraints:
@@ -51,26 +57,51 @@ Here were some initial thoughts and minor complaints:
 
 ### Bundle size
 
-I was a little disappointed that the Svelte-based Material UI library spit out **500KB** just in styles. I'd love to get rid of most of that, but even so the whole project comes in at under **1MB** total. Okay, but how does it compare to, say, React? Well, luckily I first wrote this app using React and [Antd](https://ant.design/). The implementations aren't exactly the same but they have nearly the same set of features. All told, the build of the React version comes out at around **3.4 megabytes**, which seems awfully high to me, even for React. After some digging it turns out it was due to that version of antd having [some issues](https://stackoverflow.com/questions/48721290/ant-design-huge-imports), so if I just `npm update` and rebuild I get...
+I was a little disappointed that the Svelte-based Material UI library spit out **500 KB** just in styles. I'd love to get rid of most of that, but even so the whole project comes in at under **1 MB** total. Okay, but how does it compare to, say, React? Well, luckily I first wrote this app using React and [Antd](https://ant.design/). The implementations aren't exactly the same but they have nearly the same set of features. All told, the build of the React version comes out at around **3.4 MB**, which seems awfully high to me, even for React. After some digging it turns out it was due to that version of antd having [some issues](https://stackoverflow.com/questions/48721290/ant-design-huge-imports), so if I just `npm update` and rebuild I get...
 
-**11MB** ?!?! Whoa whoa whoa, that can't be right. Alright, what if we use [babel-plugin-import](https://github.com/umijs/babel-plugin-import), so that imports like `import { Button } from 'antd';` automatically turn into something more like `import Button from 'antd/lib/button';`. Apparently that's good for tree shaking. Aaaand... I actually kind of hate babel, so let's try and avoid it by just manually updating these imports. Aaaand...
+**11 MB** ?!?! Whoa whoa whoa, that can't be right. Alright, what if we use [babel-plugin-import](https://github.com/umijs/babel-plugin-import), so that imports like `import { Button } from 'antd';` automatically turn into something more like `import Button from 'antd/lib/button';`. Apparently that's good for tree shaking. Aaaand... I actually kind of hate babel, so let's try and avoid it by just manually updating these imports. Aaaand...
 
-**7.7MB**. Wellllll, that's... better, at least, but something's definitely squiffy. Alright, fine, I'll use babel. Aaaand... no change. Darn. Oh, wait! Looks like the real space-taker are [the icons](https://github.com/ant-design/ant-design/issues/12011#issuecomment-623043192), and we should use babel for that too. And with that I'm down to... **4.8MB**! _sigh_ Alright, at this point I've had a gut full and just want to try something new.
+**7.7 MB**. Wellllll, that's... better, at least, but something's definitely squiffy. Alright, fine, I'll use babel. Aaaand... no change. Darn. Oh, wait! Looks like the real space-taker are [the icons](https://github.com/ant-design/ant-design/issues/12011#issuecomment-623043192), and we should use babel for that too. And with that I'm down to... **4.8MB**! _sigh_ Alright, at this point I've had a gut full and just want to try something new.
 
 ### Meanwhile, in Svelte land...
 
-So **1MB**. Alright, just in case I was doing something silly let's go ahead and just try to use a [similar UI library](https://carbon-components-svelte.onrender.com/) in an app built using [Svelte Kit](https://kit.svelte.dev/)'s starter app template. That should give me the latest and greatest setup. But no, that also ended up costing ~500KB in styles, base, before I even started to pull in components. Why am I paying for junk I'm not even using? Hopefully users of that lib have a way to cut those out, but for the life of me I haven't been able to find it.
+So **1 MB**, huh? Alright, just in case I was doing something silly let's go ahead and just try to use a [similar UI library](https://carbon-components-svelte.onrender.com/) in an app built using [Svelte Kit](https://kit.svelte.dev/)'s starter app template. That should give me the latest and greatest setup. But no, that also ended up costing ~500KB in styles, base, before I even started to pull in components. Why am I paying for junk I'm not even using? Hopefully users of that lib have a way to cut those out, but for the life of me I haven't been able to find it.
 
 ### Enter Smelte
 
 [Smelte](https://smeltejs.com/). The elevator pitch is basically [Material Design](https://material.io/) + [Tailwind CSS](https://tailwindcss.com/). You can use all of the normal Tailwind styles in your app plus a tonne of pre-built components. There was one outstanding issue where Smelte doesn't currently list a specific version of purgecss and is slightly incompatible with it. Hopefully that PR gets accepted soon, but until then I had great luck using an older version of [purgecss](https://www.npmjs.com/package/purgecss).
 
-So now that I've got my UI framework swapped out and patched up and worked like a dream, let's see the build size... **200KB**!!! Alright, now that's more like it.
+So now that I've got my UI framework swapped out and patched up and worked like a dream, let's see the build size... **200 KB**!!! Alright, now that's more like it.
 
 ### Caveats and Conclusions
 
-I should clarify that comparing the React+Carbon app against the Svelte+Smelte app isn't entirely fair. For one I just gave up on React+Carbon after a certain point. I'd hope that production apps aren't shipping with a framework that's got a **4MB** "Hello World". Also, Carbon embeds its icons as SVG directly in its final bundle, whereas I reference Google Material Icons font library as an external URL. So to be more fair I should either increase the Svelte app's total size or decrease the React app's total size.
+I should clarify that comparing the React+Carbon app against the Svelte+Smelte app isn't entirely fair. For one I just gave up on React+Carbon after a certain point. I'd hope that production apps aren't shipping with a framework that's got a **4 MB** "Hello World". Also, Carbon embeds its icons as SVG directly in its final bundle, whereas I reference Google Material Icons font library as an external URL. So to be more fair I should either increase the Svelte app's total size or decrease the React app's total size.
 
-That said, I don't think I can definitively claim something as sweeping as "Svelte > React" or "Smelte > Carbon". What I can say is that testing performance is _hard_. Even after deciding that bundle size was the metric I wanted to improve, actually going about improving it meant a lot of trial and error. I learned a lot, but if this project wasn't for fun I definitely wouldn't have put this much time or effort into it. And in the end I did find a combination of technologies that I'm really happy with that I'd love to try out in future projects, so I'll chalk this one up as smashing success.
+That said, I don't think I can definitively claim something as sweeping as "Svelte > React" or "Smelte > Carbon". What I can say is that testing performance is, as usual, important and _hard_. Even after deciding that bundle size was the metric I wanted to improve, actually going about improving it meant a lot of trial and error. I learned a lot, but if this project wasn't for fun I definitely wouldn't have put this much time or effort into it. And in the end I did find a combination of technologies that I'm really happy with that I'd love to try out in future projects, so I'll chalk this one up as smashing success.
 
-Please tease me if I re-write this silly app again.
+Please tease me if I spend any more time re-writing this silly app again.
+
+<details>
+  <summary>
+	Bonus: 2048
+  </summary>
+  
+  <p>
+	I did this same exercise with another of my old projects: <a target="#" href="https://loremdipso.com/YAN2048">YAN2048</a>. This one was written in Angular and only used its UI framework for the buttons and a game-over dialog. The <a target="#" href="https://loremdipso.com/YAN2048_Svelte">clone</a> does the same, and I copy/pasted very nearly all the same logic and styles, yielding two very similar apps.
+  </p>
+
+  <h4>
+	Results
+  </h4>
+
+  <p>
+	On-disk space, Angular: an even <b>500 KB</b>, Svelte: <b>84 KB</b>.
+  </p>
+
+  <p>
+	Total delivered to browser (according to my network tab), Angular: <b>587 KB</b> inflated (<b>251 KB</b> with gzip), Svelte: <b>224 KB</b> inflated (<b>179 KB</b> with gzip).
+  </p>
+
+  <p>
+	But is this comparison worthwhile? Is what I observed experimentally vaguely in line with what they should be? Well, according to <a href="https://github.com/LayZeeDK/ngx-ivy-minimal-app-with-ngzone">this git repo</a>, a hello world using the <a href="https://docs.angular.lat/guide/ivy">Ivy renderer</a> costs around <b>131 KB</b> uncompressed. So, yeah, I think the results here are reasonable.
+</details>
