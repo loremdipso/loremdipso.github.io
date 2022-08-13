@@ -41,9 +41,33 @@
 
 [[experiences]]
 	[experiences.company]
+		name = "Google"
+		description = "Cloud - Customer Experience"
+		website = "https://www.google.com"
+		job_title = "Software Engineer"
+        period = "Feb 2021 - present"
+
+        [[experiences.company.teams]]
+			name = "Cross Product Portal"
+            role = "SWE"
+            period = "Feb 2021 - Mar 2022"
+            projects = [
+              # "Created the infrastructure that allows generically integrating any video vendor's product with Epic's remote monitoring application. Previously these integrations had to be done manually and were thus extremely cost prohibitive."
+			]
+
+        [[experiences.company.teams]]
+			name = "Chat.Next"
+            role = "SWE"
+            period = "Mar 2022 - present"
+            projects = [
+              # "Created the infrastructure that allows generically integrating any video vendor's product with Epic's remote monitoring application. Previously these integrations had to be done manually and were thus extremely cost prohibitive."
+			]
+
+[[experiences]]
+	[experiences.company]
 		name = "Epic"
 		description = "Electronic Health Record system with over 190 million patients worldwide"
-		website = "https://epic.com"
+		website = "https://www.epic.com"
 		job_title = "Software Developer"
         period = "June 2014 - Aug 2020"
 
