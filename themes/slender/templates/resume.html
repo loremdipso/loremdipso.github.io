@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+
+{% import "macros.html" as macros %}
+
+{% block basic_includes %}
+{{ macros::inline_style(path='resume.css') }}
+{% endblock basic_includes %}
+
+{% block contentwrapper %}
+{% set resume = config.extra.resume %}
+<div class="header">
+    <div class="name-section">
+        <h1>{{- config.extra.author.name -}}</h1>
+        <h2>{{- config.extra.author.job_title -}}</h2>
+    </div>
+    <div class="contacts">
+        {{ resume.contact.email }}
+        <span class="right-label">{{ config.extra.strings.email }}</span>
+    </div>
+</div>
+
+<div class="section">
+    <h3>{{ config.extra.strings.experience }}</h3>
+    {% for experience in resume.experiences %}
+    <div class="team-header">
+        <div class="name">
+            <span class="left-label">{{- config.extra.strings.company -}}</span>
+            <a class="company-name" href="{{- experience.company.website -}}">
+                {{- experience.company.name -}}
+            </a>
+            <div class="subtitle">{{- experience.company.description -}}</div>
+        </div>
+        <div class="period">{{- experience.company.period -}}</div>
+    </div>
+
+    {% for team in experience.company.teams %}
+    <div class="teams">
+        <div class="team-header">
+            <div class="name">
+                <span class="left-label">{{- config.extra.strings.team -}}</span>
+                <span>{{- team.name -}}</span>
+            </div>
+            <div class="period">{{- team.period -}}</div>
+        </div>
+
+        {% for project in team.projects %}
+        <div class="blurb">
+            {{- project -}}
+        </div>
+        {% endfor %}
+    </div>
+    {% endfor %}
+    {% endfor %}
+</div>
+
+<div class="section">
+    <h3>{{- config.extra.strings.education -}}</h3>
+    {% for education in resume.educations %}
+    <div class="team-header">
+        <div class="name">
+            <span>{{- education.description -}}</span>
+            <div class="subtitle">{{- education.degree -}}</div>
+            {% if education.extra %}
+            <div class="subtitle extra">{{- education.extra -}}</div>
+            {% endif %}
+        </div>
+
+        <div class="period">{{- education.period -}}</div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock contentwrapper %}

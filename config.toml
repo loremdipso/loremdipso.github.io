@@ -1,60 +1,322 @@
-baseURL = 'https://loremdipso.com/'
-languageCode = 'en'
-defaultContentLanguage = "en"
+base_url = 'https://loremdipso.com/'
+default_language = "en"
 title = 'Welcome weary traveler'
 theme = 'slender'
-numFeed = 10 # number of items in feed
-publishDir = './docs'
+output_dir = './temp'
 
-[markup.goldmark.renderer]
-	unsafe = true
+# A list of glob patterns specifying asset files to ignore when the content
+# directory is processed. Defaults to none, which means that all asset files are
+# copied over to the `public` directory.
+# Example:
+#     ignored_content = ["*.{graphml,xlsx}", "temp.*", "**/build_folder"]
+ignored_content = []
+
+generate_feed = true
+compile_sass = true
+minify_html = true
+feed_filename = "rss.xml"
+feed_limit = 10
+build_search_index = false # TODO: add this when we have something worth searching
+
+# The taxonomies to be rendered for the site and their configuration of the default languages
+# Example:
+#     taxonomies = [
+#       {name = "tags", feed = true}, # each tag will have its own feed
+#       {name = "tags"}, # you can have taxonomies with the same name in multiple languages
+#       {name = "categories", paginate_by = 5},  # 5 items per page for a term
+#
+taxonomies = [
+    {name = "tags"},
+    {name = "author"},
+]
 
 
-[markup.highlight]
+[markdown]
+highlight_code = true
+
+# A list of directories used to search for additional `.sublime-syntax` and `.tmTheme` files.
+extra_syntaxes_and_themes = []
+
+# The theme to use for code highlighting.
+# See below for list of allowed values.
+highlight_theme = "base16-ocean-dark"
+
+# When set to "true", emoji aliases translated to their corresponding
+# Unicode emoji equivalent in the rendered Markdown files. (e.g.: :smile: => 😄)
+render_emoji = true
+
+# Whether external links are to be opened in a new tab
+# If this is true, a `rel="noopener"` will always automatically be added for security reasons
+external_links_target_blank = true
+
+# Whether to set rel="nofollow" for all external links
+external_links_no_follow = false
+
+# Whether to set rel="noreferrer" for all external links
+external_links_no_referrer = false
+
+# Whether smart punctuation is enabled (changing quotes, dashes, dots in their typographic form)
+# For example, `...` into `…`, `"quote"` into `“curly”` etc
+smart_punctuation = false
+
+# Configuration of the link checker.
+[link_checker]
+# Skip link checking for external URLs that start with these prefixes
+skip_prefixes = [
+    "http://[2001:db8::]/",
+]
+
+# Skip anchor checking for external URLs that start with these prefixes
+skip_anchor_prefixes = [
+    # "https://caniuse.com/",
+]
+
+# Treat internal link problems as either "error" or "warn", default is "error"
+internal_level = "error"
+
+# Treat external link problems as either "error" or "warn", default is "error"
+external_level = "error"
+
+# Various slugification strategies, see below for details
+# Defaults to everything being a slug
+[slugify]
+paths = "on"
+taxonomies = "on"
+anchors = "on"
+
+[search]
+# Whether to include the title of the page/section in the index
+include_title = true
+# Whether to include the description of the page/section in the index
+include_description = false
+# Whether to include the path of the page/section in the index
+include_path = false
+# Whether to include the rendered content of the page/section in the index
+include_content = true
+# At which character to truncate the content to. Useful if you have a lot of pages and the index would
+# become too big to load on the site. Defaults to not being set.
+# truncate_content_length = 100
+
+# Optional translation object for the default language
+# Example:
+#     default_language = "fr"
+#
+#
+# Additional languages definition
+# You can define language specific config values and translations: 
+# title, description, generate_feed, feed_filename, taxonomies, build_search_index
+# as well as its own search configuration and translations (see above for details on those)
+# [languages]
+# For example
+# generate_feed = true
+# taxonomies = [
+#    {name = "auteurs"},
+#    {name = "tags"},
+# ]
+# build_search_index = false
+
+# You can put any kind of data here. The data
+# will be accessible in all templates
+# Example:
+#     [extra]
+#     author = "Famous author"
+#
+# author value will be available using {{ config.extra.author }} in templates
+#
+
+
+# [markup.goldmark.renderer]
+	# unsafe = true
+
+# [markup.highlight]
 	# The below is pygmentsOptions
-	codeFences = true
-	guessSyntax = true
-	hl_Lines = ""
-	tabWidth = 2
-	noClasses = false
-	#lineNoStart = 1
-	#lineNos = true
-	#lineNumbersInTable = true
+	# codeFences = true
+	# guessSyntax = true
+	# hl_Lines = ""
+	# tabWidth = 2
+	# noClasses = false
 
-[author]
-	name = "Michael Adams"
-	job_title = "Software Engineer"
-	profile_pic_url = "images/profile_pic.jpg"
 
-[params]
-	dateform        = "Jan 2, 2006"
-	dateformShort   = "Jan 2"
-	dateformNum     = "2006-01-02"
-	dateformNumTime = "2006-01-02 12:04 -0700"
-	# 2022-01-08T10:49:55-07:00
+[extra.author]
+    name = "Michael Adams"
+    job_title = "Software Engineer"
+    profile_pic_url = "images/profile_pic.jpg"
 
-[[params.social]]
-	name = "linkedin"
-	url = "https://www.linkedin.com/in/loremdipso/"
+[extra.strings]
+    home = "Home"
+    archives = "Posts"
+    not_found = "Sorry, I couldn't find that page :/"
+    copy = "Copy"
+    table_of_contents = "Table of Contents"
+    next = "Next"
+    previous = "Previous"
 
-[[params.social]]
-	name = "github"
-	url = "https://github.com/loremdipso"
+    # Resume strings
+    resume = "Resume"
+    email = "Email"
+    mobile = "Mobile"
+    experience = "Experience"
+    education = "Education"
+    company = "Company"
+    team = "Team"
 
-[menu]
-	[[menu.main]]
-		name = "About"
-		type = "self.html"
-		url = "/"
 
-	# [[menu.main]]
-	# 	name = "Projects"
-	# 	url = "/projects/"
+[extra.params]
+    dateform        = "%b %d, %Y"
+    dateform_short  = "%b %d"
 
-	[[menu.main]]
-		name = "Posts"
-		url = "/posts/"
+[[extra.social]]
+    name = "linkedin"
+    url = "https://www.linkedin.com/in/loremdipso/"
 
-	[[menu.main]]
-		name = "Resume"
-		url = "/resume/"
+[[extra.social]]
+    name = "github"
+    url = "https://github.com/loremdipso"
+
+[[extra.menus]]
+    name = "About"
+    type = "self.html"
+    url = "/"
+
+# [[extra.menus.main]]
+# 	name = "Projects"
+# 	url = "/projects/"
+
+[[extra.menus]]
+    name = "Posts"
+    url = "/posts/"
+
+[[extra.menus]]
+    name = "Resume"
+    url = "/resume/"
+
+# Resume
+[extra.resume.contact]
+    email = "mtadams42@gmail.com"
+
+[[extra.resume.educations]]
+    degree = "B.S. in Computer Science (cont'd)"
+    period = "2011 - 2014"
+    description = "University of Tennessee, Knoxville"
+    extra = "Member of the programming team for two years and then captain for one"
+    website = "https://www.utk.edu/"
+
+[[extra.resume.educations]]
+    degree = "B.S. in Computer Science"
+    period = "2010 - 2011"
+    description = "Tennessee Tech, Cookeville"
+    website = "https://www.tntech.edu/"
+
+[[extra.resume.skills]]
+    name = "Agile"
+    level = 99
+[[extra.resume.skills]]
+    name = "UX"
+    level = 99
+[[extra.resume.skills]]
+    name = "C#"
+    level = 99
+[[extra.resume.skills]]
+    name = "Java"
+    level = 70
+[[extra.resume.skills]]
+    name = "HTML5"
+    level = 99
+[[extra.resume.skills]]
+    name = "CSS 3"
+    level = 95
+[[extra.resume.skills]]
+    name = "JavaScript"
+    level = 95
+[[extra.resume.skills]]
+    name = "TypeScript"
+    level = 95
+
+# [[extra.resume.experiences]]
+    # [extra.resume.experiences.company]
+    #     name = "Google"
+    #     description = "Cloud - Customer Experience"
+    #     website = "https://www.google.com"
+    #     job_title = "Software Engineer"
+    #     period = "Feb 2021 - present"
+
+    #     [[extra.resume.experiences.company.teams]]
+    #         name = "Cross Product Portal"
+    #         role = "SWE"
+    #         period = "Feb 2021 - Mar 2022"
+    #         projects = [
+    #         # "TODO"
+    #         ]
+
+    #     [[extra.resume.experiences.company.teams]]
+    #         name = "Chat.Next"
+    #         role = "SWE"
+    #         period = "Mar 2022 - present"
+    #         projects = [
+    #         # "TODO"
+    #         ]
+
+[[extra.resume.experiences]]
+    [extra.resume.experiences.company]
+        name = "Epic"
+        description = "Electronic Health Record system with over 190 million patients worldwide"
+        website = "https://www.epic.com"
+        job_title = "Software Developer"
+        period = "June 2014 - Aug 2020"
+
+        [[extra.resume.experiences.company.teams]]
+            name = "ICU"
+            role = "SD"
+            period = "Jan 2020 - Aug 2020"
+            projects = [
+            "Created the infrastructure that allows generically integrating any video vendor's product with Epic's remote monitoring application. Previously these integrations had to be done manually and were thus extremely cost prohibitive."
+            ]
+
+        [[extra.resume.experiences.company.teams]]
+            name = "Special Projects (aka Skunkworks)"
+            role = "SD"
+            # description: Task force that meant to advance framework and improve developer retention
+            period = "Jan 2019 - Dec 2019"
+            projects = [
+            "Updated the web framework to support something akin to \"hot reloading,\" whereby developers would be able to see their UI changes in near realtime.",
+            "Improved Epic's integration with version control tools, saving time and reducing user error.",
+            # could take out
+            "Obviated the need for two ASP.NET-specific files for all new projects, making development simpler and easier to port to other platforms.",
+            "Rewrote key parts of the core web framework to be immutable, dramatically improving performance.",
+            "Helped introduce React Functional Components to the existing architecture, which has helped foster increased reusability of components and, anecdotally, developer satisfaction.",
+            ]
+
+        [[extra.resume.experiences.company.teams]]
+            name = "Social Care"
+            role = "SD"
+            period = "Jan 2018 - Apr 2018"
+            projects = [
+            "Created an interactive graphic of a patient's support network. It's being used today to ensure patients are properly cared for ouside of the medical setting."
+            ]
+
+        [[extra.resume.experiences.positions.teams]]
+            name = "Telehealth"
+            role = "SD"
+            period = "May 2017 - Dec 2018"
+            projects = [
+            "Lead architect on flagship product that allows for organizations to pool resources for virtual care. This improved availability of these services, reduced patient wait times, and reduced unnecessary usage of in-person facilities."
+            ]
+
+        [[extra.resume.experiences.company.teams]]
+            name = "Endocrinology"
+            role = "SD"
+            period = "Nov 2016 - Apr 2017"
+            projects = [
+            "Part of small team that pioneered Epic's first Endocrinology module."
+            # - "Part of small team that pioneered Epic's first Endocrinology module: a tool that standardized recording and displaying insulin instructions."
+            ]
+
+        [[extra.resume.experiences.company.teams]]
+            name = "MyChart"
+            role = "SD"
+            description = "Team that builds the website patients use to connect to their healthcare organization"
+            period = "Jan 2016 - Aug 2016"
+            projects = [
+            "Improved performance of graphing infrastructure by ~25%."
+            ]
+

@@ -1,0 +1,121 @@
+{% extends "base.html" %}
+
+{% import "macros.html" as macros %}
+
+{% block extra_includes %}
+    {{ macros::style(path='post.css') }}
+    {{ macros::script(path='js/copy.js') }}
+{% endblock extra_includes %}
+
+{% block header %}
+  {% include "partials/header.html" %}
+{% endblock header %}
+
+{% block content %}
+	<main>
+		<article>
+			<header class="post-header">
+				<div class="post-metadata">
+					<span>{{ page.date | date(format=config.extra.params.dateform) }}</span>
+					&middot;
+					<span>{{ page.word_count / 220.0 | round }} minute read</span>
+				</div>
+				<h1>{{ page.title }}</h1>
+			</header>
+
+			<div>
+                {{ page.content | safe }}
+                {#
+				{{ .Content | replaceRE "(<h[1-6] id=\"([^\"]+)\">)([^>]+)(</h[1-6]+>)" 
+				`${1}<a href="#${2}" class="anchor">${3}</a>${4}`
+				| safeHTML }}
+                #}
+			</div>
+
+            {#
+			{{- if .Site.Params.relatedPosts }}
+			{{- partial "related-posts.html" . -}}
+			{{- end }}
+            #}
+
+			<hr class="post-end">
+
+			<footer class="post-info">
+                {% if page.taxonomies.author %}
+                    <p>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-feather"><path d="M20.24 12.24a6 6 0 0 0-8.49-8.49L5 10.5V19h8.5z"></path><line x1="16" y1="8" x2="2" y2="22"></line><line x1="17.5" y1="15" x2="9" y2="15"></line></svg>
+                        {{ page.taxonomies.author }}
+                    </p>
+                {% endif %}
+
+                {% if page.taxonomies.tags %}
+				<p class="tags">
+                    {% for tag in page.taxonomies.tags %}
+                        {{ macros::icon(name="tags") }}
+                        <span class="tag"><a href="{{get_taxonomy_url(kind='tags', name=tag)}}">{{tag}}</a></span>
+                    {% endfor %}
+				</p>
+                {% endif %}
+
+                {#
+				<!-- <p>{{- partial "icon.html" "word-count" -}}{{ i18n "wordCount" . }}</p> -->
+				<!-- <p>{{- partial "icon.html" "calendar" -}}{{ dateFormat .Site.Params.dateformNum .Date.Local }}</p> -->
+                #}
+			</footer>
+		</article>
+
+        {#
+            TODO: put this back
+		{% if page.toc %}
+		<aside id="toc">
+			<div class="toc-title">{{ config.extra.strings.table_of_contents }}</div>
+            {% for h1 in page.toc %}
+            <li>
+                <a href="{{ macros::rel_url(path=h1.permalink) | safe}}">{{ h1.title }}</a>
+                {% if h1.children %}
+                <ul>
+                    {% for h2 in h1.children %}
+                    <li>
+                        <a href="{{ macros::rel_url(path=h2.permalink) | safe}}">{{ h2.title }}</a>
+                    </li>
+                    {% endfor %}
+                </ul>
+                {% endif %}
+            </li>
+            {% endfor %}
+		</aside>
+		{% endif %}
+        #}
+
+		<div class="sibling-post-links">
+            {#
+            {{ page | json_encode() }}
+            {% if page.higher %}
+            {{ page.higher | json_encode() }}
+            {% endif %}
+            #}
+
+            {% if page.higher %}
+			<a href="{{ macros::rel_url(path=page.higher.permalink) }}" class="previous-post">
+				<span class="label">
+                    {{ macros::icon(name="previous") }}&nbsp;
+					{{ config.extra.strings.previous }}
+				</span>
+                <br>
+                <span>{{ page.higher.title }}</span>
+			</a>
+			{% endif %}
+
+            {% if page.lower %}
+			<a href="{{ macros::rel_url(path=page.lower.permalink) }}" class="next-post">
+				<span class="label">
+					{{ config.extra.strings.next }}&nbsp;
+                    {{ macros::icon(name="next") }}
+				</span>
+				<br>
+                <span>{{ page.lower.title }}</span>
+			</a>
+			{% endif %}
+		</div>
+	</main>
+{% endblock content %}

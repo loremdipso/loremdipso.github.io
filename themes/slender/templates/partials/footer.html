@@ -1,0 +1,11 @@
+{% import "macros.html" as macros %}
+
+<footer class="app-footer fade-in">
+	<p>
+		&copy; {{ now() | date(format="%Y") }}
+		&nbsp;{{ config.extra.author.name }}&nbsp;
+		<a href="{{ macros::rel_url(path=config.feed_filename, trailing_slash=false) }}" target="_blank title=" rss">
+			{{ macros::icon(name="rss") }}
+		</a>
+	</p>
+</footer>

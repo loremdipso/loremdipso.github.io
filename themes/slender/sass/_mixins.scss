@@ -1,0 +1,13 @@
+$layout-breakpoint-small: 600px;
+
+@mixin isMobile {
+	@media (max-width: $layout-breakpoint-small) {
+		@content;
+	}
+}
+
+@mixin isNotMobile {
+	@media (min-width: $layout-breakpoint-small) {
+		@content;
+	}
+}

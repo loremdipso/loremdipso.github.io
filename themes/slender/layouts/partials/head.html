@@ -1,9 +1,0 @@
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-{{- $title := print .Site.Title " | " .Title -}}
-{{- if .IsHome }}{{ $title = .Site.Title -}}{{- end -}}
-
-<title>{{- $title -}}</title>
-
-{{- $style := resources.Get "scss/style.scss" | resources.ExecuteAsTemplate "css/style.css" . | toCSS | minify | fingerprint -}}
-<link rel="stylesheet" href="{{- $style.RelPermalink -}}" {{- printf "integrity=%q" $style.Data.Integrity | safeHTMLAttr -}} crossorigin="anonymous">

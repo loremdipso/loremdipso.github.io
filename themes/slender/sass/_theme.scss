@@ -1,0 +1,9 @@
+@use "sass:map";
+
+$color-text: rgb(232, 238, 242);
+$color-header-background: #222831;
+$color-background: #393E46;
+$color-link: $color-text;
+$color-link-visited: $color-text;
+$color-link-hover: #fff;
+$color-header-active: $color-link-hover;

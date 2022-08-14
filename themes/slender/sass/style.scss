@@ -1,0 +1,316 @@
+@use "sass:map";
+@import "_normalize.scss";
+@import "_animations.scss";
+@import "_theme.scss";
+@import "_mixins.scss";
+
+html {
+	color: $color-text;
+	background-color: $color-background;
+	letter-spacing: 0.06em;
+	font-family: trebuchet ms, Verdana, verdana ref, segoe ui, Candara,
+		lucida grande, lucida sans unicode, lucida sans, Tahoma, sans-serif;
+}
+
+.app-header {
+	background-color: $color-header-background;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	box-shadow: -1px 2px 3px rgba(0, 0, 0, 0.45);
+
+	@include isMobile() {
+		flex-direction: column;
+	}
+
+	a {
+		font-size: 1.1em;
+
+		&.active {
+			color: $color-header-active;
+			text-shadow: 0 0 1px #fff;
+		}
+	}
+
+	svg {
+		width: 24px;
+		height: 24px;
+		fill: rgb(232, 238, 242);
+	}
+
+	nav,
+	.socials {
+		display: flex;
+
+		@include isMobile() {
+			width: 100%;
+
+			a {
+				flex: 1 1 0px;
+				text-align: center;
+			}
+		}
+
+		a {
+			padding: 16px;
+		}
+	}
+
+	.socials {
+		@include isMobile() {
+			display: none;
+		}
+	}
+}
+
+@include isNotMobile() {
+	.visible-on-mobile {
+		display: none;
+	}
+}
+
+@include isMobile() {
+	.visible-on-mobile {
+		display: initial;
+	}
+}
+
+.info .socials {
+	display: flex;
+	justify-content: space-around;
+
+	a {
+		padding: 16px;
+	}
+
+	svg {
+		width: 24px;
+		height: 24px;
+	}
+}
+
+.content-wrapper {
+	display: flex;
+	flex-direction: column;
+	min-height: 100%;
+	flex-grow: 1;
+}
+
+body {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+
+.content {
+	max-width: 720px;
+	width: 93%;
+	margin: 0 auto;
+	margin-top: 1rem;
+	flex-grow: 1;
+	align-self: inherit;
+	display: flex;
+	justify-content: center;
+}
+
+a {
+	color: $color-link;
+	text-decoration: none;
+
+	&:hover {
+		color: $color-link-hover;
+		text-shadow: 0 0 1px #fff;
+	}
+}
+
+.posts-group {
+	display: flex;
+	margin-bottom: 2rem;
+	line-height: normal;
+
+	@include isMobile() {
+		display: block;
+	}
+
+	.posts-year {
+		padding-top: 6px;
+		margin-right: 1.5rem;
+		font-size: 1.6em;
+		opacity: 0.6;
+
+		@include isMobile() {
+			margin-right: 0;
+		}
+	}
+
+	.posts-list {
+		flex-grow: 1;
+		margin: 0;
+		padding: 0;
+		list-style: none;
+
+		.post-item {
+			border-bottom: 1px #7d828a dashed;
+		}
+	}
+}
+
+.post-info {
+	font-size: 0.8rem;
+	line-height: normal;
+	opacity: 0.6;
+
+	p {
+		margin: 0.8em 0;
+
+		svg {
+			margin-right: 0.8em;
+		}
+	}
+}
+
+hr {
+	box-sizing: content-box;
+	height: 0;
+	overflow: visible;
+	opacity: 0.2;
+	border-width: 0 0 5px;
+	border-bottom-width: 5px;
+	border-style: dashed;
+	background: 0 0;
+	width: 50%;
+	margin: 1.8em auto;
+
+	&.post-end {
+		width: 40%;
+		margin-top: 1.6em;
+		margin-bottom: 0.8em;
+		margin-left: 0;
+		border-style: solid;
+		border-bottom-width: 4px;
+	}
+}
+
+.feather {
+	display: inline-block;
+	vertical-align: -0.125em;
+	width: 1em;
+	height: 1em;
+}
+
+.app-footer {
+	text-align: center;
+	font-size: 0.9em;
+}
+
+.hero-card {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	@include isMobile() {
+		flex-direction: column-reverse;
+	}
+
+	>* {
+		padding: 1rem;
+	}
+
+	.info {
+		text-align: center;
+
+		>* {
+			white-space: nowrap;
+		}
+
+		h1 {
+			font-size: 2rem;
+		}
+
+		h2 {
+			font-size: 1.5rem;
+		}
+	}
+
+	img.avatar {
+		width: 15rem;
+		height: 15rem;
+		border-radius: 15rem;
+	}
+}
+
+.wrappable-container {
+	display: flex;
+	justify-content: space-between;
+	align-items: baseline;
+	padding: 12px 0;
+
+	>* {
+		white-space: nowrap;
+	}
+
+	> :first-child {
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		min-width: 0;
+		margin-right: 1rem;
+	}
+}
+
+.error-404 {
+	text-align: center;
+}
+
+.img-404 {
+	svg {
+		height: 10rem;
+	}
+}
+
+main {
+	// padding: 2rem;
+	max-width: 100%;
+
+	/*
+	article {
+		h1,h2,h3,h4 {
+			position: relative;
+		}
+
+		a.zola-anchor {
+			font-size: 1.25rem;
+			position: absolute;
+			left: -2rem;
+			text-decoration: none;
+			cursor: pointer;
+
+			&:hover {
+				text-shadow: unset;
+			}
+
+			@include isNotMobile() {
+				// left: -30px;
+				// top: 5px;
+				// position: absolute;
+				// opacity: 0.1;
+			}
+
+			@include isMobile() {
+				// margin-left: 10px;
+				// opacity: 0.5;
+			}
+
+			// &::after,
+			// &::before {
+			// 	font-size: 1.2rem;
+			// 	color: white;
+			// }
+
+			// &:hover::before {
+			// 	opacity: 1;
+			// }
+		}
+	}
+	*/
+}

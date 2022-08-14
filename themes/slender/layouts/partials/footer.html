@@ -1,9 +1,0 @@
-<footer class="app-footer fade-in">
-	<p>&copy; {{- now.Format "2006" -}}
-		&nbsp;{{- .Site.Author.name -}}&nbsp;
-		{{- .Site.Params.footerCopyright | safeHTML -}}
-		<a href="{{ "posts/index.xml" | absLangURL }}" target="_blank" title="rss">
-			{{- partial "icon.html" "rss" -}}
-		</a>
-	</p>
-</footer>

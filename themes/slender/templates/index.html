@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% import "macros.html" as macros %}
+
+{% block header %}
+  {% include "partials/header.html" %}
+{% endblock header %}
+
+{% block content %}
+		<div class="hero-card fade-in">
+			<div class="info">
+				<h1>
+					{{ config.extra.author.name }}
+				</h1>
+
+        {% if config.extra.author.job_title %}
+					<h2>
+          {{ config.extra.author.job_title }}
+					</h2>
+				{% endif %}
+
+				<div class="visible-on-mobile">
+          {% include "partials/socials.html" %}
+				</div>
+			</div>
+
+      {% if config.extra.author.profile_pic_url %}
+        {{ macros::responsive_image(
+          path=config.extra.author.profile_pic_url,
+          text="A slightly outdated photo of yours truly",
+          class="avatar",
+          is_preemptive=true
+        ) }}
+      {% endif %}
+		</div>
+{% endblock content %}

@@ -1,0 +1,9 @@
+{% import "macros.html" as macros %}
+
+<div class="socials">
+    {% for social in config.extra.social %}
+    <a href="{{ social.url | safe }}" target="_blank" rel="noopener me" title="{{ social.name | capitalize }}">
+        {{ macros::icon(name=social.name) }}
+    </a>
+    {% endfor %}
+</div>

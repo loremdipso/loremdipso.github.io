@@ -1,0 +1,37 @@
+{% import "macros.html" as macros %}
+
+<!DOCTYPE html>
+<html lang="{{ config.default_language }}">
+
+<head>
+	{% block head %}
+	{% include "partials/head.html" %}
+	{% endblock head %}
+
+	{% block basic_includes %}
+	{{ macros::style(path='style.css') }}
+	{% endblock basic_includes %}
+
+	{% block extra_includes %}
+	{% endblock extra_includes %}
+</head>
+
+<body>
+	{% block header %}
+	{% endblock header %}
+
+	{% block contentwrapper %}
+	<div class="content-wrapper">
+		<div class="content">
+			{% block content %}
+			{% endblock content %}
+		</div>
+
+		{% block footer %}
+		{% include "partials/footer.html" %}
+		{% endblock footer %}
+	</div>
+	{% endblock contentwrapper %}
+</body>
+
+</html>

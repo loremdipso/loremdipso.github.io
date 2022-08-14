@@ -1,0 +1,89 @@
+{% macro rel_url(path, trailing_slash=false, cachebust=false) %}
+    {%- set url = get_url(path=path, trailing_slash=trailing_slash, cachebust=cachebust) | replace(from=config.base_url, to="") -%}
+    {%- if url is starting_with("//") -%}
+        /{{- url | trim_start_matches(pat="//") -}}
+    {%- else -%}
+        /{{- url -}}
+    {%- endif -%}
+{% endmacro rel_url %}
+
+{% macro icon(name) %}
+<span class="inline-svg" >
+  {% set fname = "themes/slender/static/icons/" ~ name ~ ".svg" %}
+  {{ load_data(path=fname) | safe }}
+</span>
+{% endmacro icon %}
+
+{% macro style(path) %}
+    <link rel="stylesheet" href="{{ self::rel_url(path=path, cachebust=true) }}"
+      integrity="sha256-{{ get_file_hash(path=path, sha_type=256) | safe }}" crossorigin="anonymous">
+    </link>
+{% endmacro style %}
+
+{% macro inline_style(path) %}
+    <style>
+      {{ load_data(path=path) | safe }}
+    </style>
+{% endmacro style %}
+
+{% macro script(path) %}
+    <script src="{{ self::rel_url(path=path, cachebust=true) }}" crossorigin="anonymous"></script>
+{% endmacro script %}
+
+{% macro read_time(words) %}
+<span class="reading-time" title="Estimated read time">
+  {% if words < 530 %}
+  1 min read
+  {% else %}
+  {{ words / 265 | round }} min read
+  {% endif %}
+</span>
+{% endmacro read_time %}
+
+{% macro responsive_image(path, text, class, is_preemptive) %}
+    <picture>
+      {% set meta = get_image_metadata(path=path) %}
+      <img src="{{ path | safe }}" alt="{{ text }}" {% if class %}class="{{ class }}"{% endif %}
+        {% if not is_preemptive %}loading="lazy" decoding="async"{% endif %}
+        width="{{ meta.width }}" height="{{ meta.height }}" />
+
+      {#
+        TODO
+      {% if ending_with(str=".jpg") %}
+        {% set avi_path = path | replace(from=".jpg", to=".avif") %}
+        {% set avi_path_static = "static/" ~ avi_path %}
+      
+        {% if (fileExists avi_path_static) %}
+          <source srcset="{{ avi_path | safe }}" type="image/avif">
+        {{- end }}
+      
+        {{ set webp_path = replace .path ".jpg" ".webp" }}
+        {{ set webp_path_static = printf "static/%s" webp_path }}
+      
+        {{ if (fileExists webp_path_static) -}}
+          <source srcset="{{ webp_path | safe }}" type="image/webp">
+        {{- end }}
+      {% elif ending_with(str=".png") %}
+        {% set avi_path = path ".png" ".avif" }}
+        {% set avi_path_static = printf "static/%s" avi_path }}
+      
+        {% if (fileExists avi_path_static) -}}
+          <source srcset="{{ avi_path | safe }}" type="image/avif">
+        {{- end }}
+      
+        {% webp_path = replace .path ".png" ".webp" }}
+        {% webp_path_static = printf "static/%s" webp_path }}
+      
+        {{ if (fileExists webp_path_static) -}}
+          <source srcset="{{ webp_path | safe }}" type="image/webp">
+        {{- end }}
+      {{- end }}
+    
+      {% set img = imageConfig (add "/static/" (path | safe)) %}
+    
+      <img src="{{ path | safe }}" alt="{{ .Text }}" {{- if (isset . "Class" ) -}} class="{{ .Class }}" {{- end
+        -}} {% if not is_preemptive %} loading="lazy" decoding="async" {{- end -}} width="{{ img.Width }}"
+        height="{{ img.Height }}" />
+        #}
+    </picture>
+{% endmacro responsive_image %}

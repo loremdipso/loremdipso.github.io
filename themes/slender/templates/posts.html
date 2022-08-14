@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% import "macros.html" as macros %}
+
+{% block header %}
+{% include "partials/header.html" %}
+{% endblock header %}
+
+{% block content %}
+<main class="fade-in">
+    <h1>Posts</h1>
+
+    {% for year, pages in section.pages | group_by(attribute="year") %}
+    <div class="posts-group">
+        <a href="/posts/#{{ year }}" class="posts-year" id="{{ year }}">{{ year }}</a>
+
+        <ul class="posts-list">
+            {% for page in pages %}
+            <li class="post-item">
+                <a href="{{ macros::rel_url(path=page.permalink) | safe }}" class="wrappable-container">
+                    <span class="post-title">{{page.title}}</span>
+                    <span class="post-day">{{ page.date | date(format=config.extra.params.dateform_short) }}</span>
+                </a>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+    {% endfor %}
+</main>
+{% endblock content %}

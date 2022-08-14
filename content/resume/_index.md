@@ -1,4 +1,4 @@
 +++
-type = "resume"
-layout = "resume"
+title = "Resume"
+template = "resume.html"
 +++
