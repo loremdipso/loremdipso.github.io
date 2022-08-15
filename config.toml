@@ -16,7 +16,7 @@ compile_sass = true
 minify_html = true
 feed_filename = "rss.xml"
 feed_limit = 10
-build_search_index = false # TODO: add this when we have something worth searching
+build_search_index = true # TODO: add this when we have something worth searching
 
 # The taxonomies to be rendered for the site and their configuration of the default languages
 # Example:
@@ -148,8 +148,8 @@ include_content = true
     not_found = "Sorry, I couldn't find that page :/"
     copy = "Copy"
     table_of_contents = "Table of Contents"
-    next = "Next"
-    previous = "Previous"
+    next = "Up next"
+    previous = "Previously"
 
     # Resume strings
     resume = "Resume"

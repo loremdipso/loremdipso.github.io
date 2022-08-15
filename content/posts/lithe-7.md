@@ -2,7 +2,9 @@
 title: "Lithe 7 - Apples to Apples"
 date: 2022-01-15T12:46:47-07:00
 draft: false
-tags: ["lithe", "performance", "svelte"]
+taxonomies: {
+	tags: ["lithe", "performance", "svelte"]
+}
 ---
 
 ### Confession time

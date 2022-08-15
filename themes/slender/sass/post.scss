@@ -1,4 +1,5 @@
 @import "_syntax.scss";
+@import "_theme.scss";
 
 article {
 	p {
@@ -44,15 +45,21 @@ article {
 	}
 
 	details {
-		padding: 1rem;
-		background-color: #282a36;
+		$margin: 16px;
+		background-color: $color-details-body;
 
 		summary {
 			cursor: pointer;
+			padding: $margin;
+			background-color: $color-details-header;
+		}
+
+		p {
+			margin: $margin;
 		}
 
 		p:last-child {
-			margin-bottom: 0;
+			padding-bottom: 1rem;
 		}
 	}
 
@@ -115,7 +122,7 @@ article {
 
 	$margin: 6px;
 
-	>* {
+	> * {
 		box-sizing: border-box;
 		width: calc(50% - #{$margin});
 		display: flex;
@@ -127,6 +134,13 @@ article {
 
 	.next-post {
 		text-align: right;
+	}
+
+	.title {
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		max-width: 100%;
+		overflow: hidden;
 	}
 
 	.label {

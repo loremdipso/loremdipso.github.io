@@ -32,12 +32,6 @@
                 #}
 			</div>
 
-            {#
-			{{- if .Site.Params.relatedPosts }}
-			{{- partial "related-posts.html" . -}}
-			{{- end }}
-            #}
-
 			<hr class="post-end">
 
 			<footer class="post-info">
@@ -51,16 +45,14 @@
                 {% if page.taxonomies.tags %}
 				<p class="tags">
                     {% for tag in page.taxonomies.tags %}
-                        {{ macros::icon(name="tags") }}
-                        <span class="tag"><a href="{{get_taxonomy_url(kind='tags', name=tag)}}">{{tag}}</a></span>
+                        <span class="tag">
+							<a href="{{get_taxonomy_url(kind='tags', name=tag)}}">
+								{{ macros::icon(name="tags") }}{{tag}}
+							</a>
+						</span>
                     {% endfor %}
 				</p>
                 {% endif %}
-
-                {#
-				<!-- <p>{{- partial "icon.html" "word-count" -}}{{ i18n "wordCount" . }}</p> -->
-				<!-- <p>{{- partial "icon.html" "calendar" -}}{{ dateFormat .Site.Params.dateformNum .Date.Local }}</p> -->
-                #}
 			</footer>
 		</article>
 
@@ -88,13 +80,6 @@
         #}
 
 		<div class="sibling-post-links">
-            {#
-            {{ page | json_encode() }}
-            {% if page.higher %}
-            {{ page.higher | json_encode() }}
-            {% endif %}
-            #}
-
             {% if page.higher %}
 			<a href="{{ macros::rel_url(path=page.higher.permalink) }}" class="previous-post">
 				<span class="label">
@@ -102,7 +87,7 @@
 					{{ config.extra.strings.previous }}
 				</span>
                 <br>
-                <span>{{ page.higher.title }}</span>
+                <span class="title">{{ page.higher.title }}</span>
 			</a>
 			{% endif %}
 
@@ -113,7 +98,7 @@
                     {{ macros::icon(name="next") }}
 				</span>
 				<br>
-                <span>{{ page.lower.title }}</span>
+                <span class="title">{{ page.lower.title }}</span>
 			</a>
 			{% endif %}
 		</div>

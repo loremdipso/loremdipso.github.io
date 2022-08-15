@@ -1,7 +1,9 @@
 ---
 title: "Site V2"
 date: 2021-12-27T14:15:48-07:00
-tags: ["meta", "software"]
+taxonomies: {
+    tags: ["meta", "software"]
+}
 ---
 
 Channeling my inner dev, I've gone ahead and completely re-written this site. [Original post for comparison]({{< ref "conception.md" >}}).

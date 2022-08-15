@@ -91,12 +91,30 @@
         <loc>https://loremdipso.com/tags/</loc>
     </url>
     <url>
+        <loc>https://loremdipso.com/tags/devlog/</loc>
+    </url>
+    <url>
+        <loc>https://loremdipso.com/tags/lithe/</loc>
+    </url>
+    <url>
+        <loc>https://loremdipso.com/tags/meta/</loc>
+    </url>
+    <url>
+        <loc>https://loremdipso.com/tags/mini/</loc>
+    </url>
+    <url>
         <loc>https://loremdipso.com/tags/one-shot/</loc>
     </url>
     <url>
         <loc>https://loremdipso.com/tags/performance/</loc>
     </url>
     <url>
+        <loc>https://loremdipso.com/tags/software/</loc>
+    </url>
+    <url>
         <loc>https://loremdipso.com/tags/svelte/</loc>
+    </url>
+    <url>
+        <loc>https://loremdipso.com/tags/writing/</loc>
     </url>
 </urlset>

@@ -162,10 +162,6 @@ a {
 
 	p {
 		margin: 0.8em 0;
-
-		svg {
-			margin-right: 0.8em;
-		}
 	}
 }
 
@@ -313,4 +309,10 @@ main {
 		}
 	}
 	*/
+}
+
+.posts-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 }

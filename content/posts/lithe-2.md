@@ -3,7 +3,9 @@ title: "Lithe 2: From Scratch"
 slug: "lithe-2"
 date: 2022-01-03T16:46:55-07:00
 draft: false
-tags: ["lithe", "devlog", "svelte"]
+taxonomies: {
+	tags: ["lithe", "devlog", "svelte"]
+}
 ---
 
 I've written a little Rust, but never professionally, so I'm sure what I write is going to be ugly to those in the know. But it compiles, which is half the battle.

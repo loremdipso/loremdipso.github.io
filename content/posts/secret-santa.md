@@ -1,11 +1,11 @@
-+++
-title="Secret Santa: a Saga"
-date="2022-01-27"
-draft=false
-
-[taxonomies]
-tags=["one-shot", "performance", "svelte"]
-+++
+---
+title: "Secret Santa: a Saga"
+date: 2022-01-27
+draft: false
+taxonomies: {
+  tags: ["one-shot", "performance", "svelte"]
+}
+---
 
 ![Santa!](https://loremdipso.com/secret_santa/santa.svg "OMG IT'S SANTA")
 

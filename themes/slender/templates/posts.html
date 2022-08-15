@@ -3,28 +3,18 @@
 {% import "macros.html" as macros %}
 
 {% block header %}
-{% include "partials/header.html" %}
+    {% include "partials/header.html" %}
 {% endblock header %}
 
 {% block content %}
 <main class="fade-in">
-    <h1>Posts</h1>
+    <div class="posts-header">
+        <h1>Posts</h1>
+        <a href="{{ macros::rel_url(path='/tags') }}">tags</a>
+    </div>
 
     {% for year, pages in section.pages | group_by(attribute="year") %}
-    <div class="posts-group">
-        <a href="/posts/#{{ year }}" class="posts-year" id="{{ year }}">{{ year }}</a>
-
-        <ul class="posts-list">
-            {% for page in pages %}
-            <li class="post-item">
-                <a href="{{ macros::rel_url(path=page.permalink) | safe }}" class="wrappable-container">
-                    <span class="post-title">{{page.title}}</span>
-                    <span class="post-day">{{ page.date | date(format=config.extra.params.dateform_short) }}</span>
-                </a>
-            </li>
-            {% endfor %}
-        </ul>
-    </div>
+        {{ macros::posts_group(year=year, pages=pages) }}
     {% endfor %}
 </main>
 {% endblock content %}

@@ -1,23 +1,17 @@
 {% extends "base.html" %}
+
 {% import "macros.html" as macros %}
 
-{% block main %}
-<main class="site-main section-inner thin animated fadeIn faster">
-  <h1>{{ term.name }}</h1>
+{% block header %}
+    {% include "partials/header.html" %}
+{% endblock header %}
+
+{% block content %}
+<main class="fade-in">
+  <h1>Tag: {{ term.name }}</h1>
+
   {% for year, pages in term.pages | group_by(attribute="year") %}
-  <div class="posts-group">
-    <div class="post-year">{{ year }}</div>
-    <ul class="posts-list">
-      {% for page in pages %}
-      <li class="post-item">
-        <a href="{{ macros::rel_url(path=page.permalink) | safe }}">
-          <span class="post-title">{{ page.title }}</span>
-          <span class="post-day">{{ page.date | date(format="%b %d") }}</span>
-        </a>
-      </li>
-      {% endfor %}
-    </ul>
-  </div>
+      {{ macros::posts_group(year=year, pages=pages) }}
   {% endfor %}
 </main>
-{% endblock main %}
+{% endblock content %}
