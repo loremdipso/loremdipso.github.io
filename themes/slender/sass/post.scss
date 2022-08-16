@@ -64,8 +64,15 @@ article {
 	}
 
 	.tags {
-		.tag:not(:last-child) {
-			padding-right: 5px;
+		font-size: 0.8rem;
+		line-height: normal;
+		opacity: 0.6;
+
+		.tag {
+			white-space: nowrap;
+			&:not(:last-child) {
+				padding-right: 5px;
+			}
 		}
 	}
 
@@ -210,5 +217,32 @@ article {
 				}
 			}
 		}
+	}
+}
+
+.post-header {
+	h1 {
+		margin-bottom: 0;
+	}
+
+	hr {
+		box-sizing: content-box;
+		height: 0;
+		overflow: visible;
+		opacity: 0.2;
+		border-width: 0 0 5px;
+		border-bottom-width: 5px;
+		border-style: dashed;
+		background: 0 0;
+		width: 50%;
+		margin: 1.8em auto;
+
+		width: 40%;
+		margin-top: 0.5rem;
+		// margin-top: 1.6em;
+		margin-bottom: 0.8rem;
+		margin-left: 0;
+		border-style: solid;
+		border-bottom-width: 4px;
 	}
 }

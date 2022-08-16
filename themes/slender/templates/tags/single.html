@@ -8,7 +8,9 @@
 
 {% block content %}
 <main class="fade-in">
-  <h1>Tag: {{ term.name }}</h1>
+  <h1>Posts about {{ term.name }}</h1>
+
+  <a class="subheader" href="{{ macros::rel_url(path='/tags') }}">See all tags</a>
 
   {% for year, pages in term.pages | group_by(attribute="year") %}
       {{ macros::posts_group(year=year, pages=pages) }}

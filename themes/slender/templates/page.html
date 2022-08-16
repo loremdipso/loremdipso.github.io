@@ -16,13 +16,29 @@
 	<main>
 		<article>
 			<header class="post-header">
+				<h1>{{ page.title }}</h1>
+				<hr />
+
 				<div class="post-metadata">
 					<span>{{ page.date | date(format=config.extra.params.dateform) }}</span>
 					&middot;
 					<span>{{ page.word_count / 220.0 | round }} minute read</span>
+
+					{% if page.taxonomies.tags %}
+					&middot;
+					<span class="tags">
+						{% for tag in page.taxonomies.tags %}
+							<span class="tag">
+								<a href="{{get_taxonomy_url(kind='tags', name=tag)}}">
+									{{ macros::icon(name="tags") }}{{tag}}
+								</a>
+							</span>
+						{% endfor %}
+					</span>
+					{% endif %}
 				</div>
-				<h1>{{ page.title }}</h1>
 			</header>
+
 
 			<div class="post-contents">
                 {{ page.content | safe }}
@@ -49,30 +65,6 @@
 				</div>
 				{% endif %}
 			</div>
-
-
-			<hr class="post-end">
-
-			<footer class="post-info">
-                {% if page.taxonomies.author %}
-                    <p>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-feather"><path d="M20.24 12.24a6 6 0 0 0-8.49-8.49L5 10.5V19h8.5z"></path><line x1="16" y1="8" x2="2" y2="22"></line><line x1="17.5" y1="15" x2="9" y2="15"></line></svg>
-                        {{ page.taxonomies.author }}
-                    </p>
-                {% endif %}
-
-                {% if page.taxonomies.tags %}
-				<p class="tags">
-                    {% for tag in page.taxonomies.tags %}
-                        <span class="tag">
-							<a href="{{get_taxonomy_url(kind='tags', name=tag)}}">
-								{{ macros::icon(name="tags") }}{{tag}}
-							</a>
-						</span>
-                    {% endfor %}
-				</p>
-                {% endif %}
-			</footer>
 		</article>
 
 		<div class="sibling-post-links">

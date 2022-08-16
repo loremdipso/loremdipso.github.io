@@ -155,36 +155,9 @@ a {
 	}
 }
 
-.post-info {
-	font-size: 0.8rem;
-	line-height: normal;
-	opacity: 0.6;
-
-	p {
-		margin: 0.8em 0;
-	}
-}
-
-hr {
-	box-sizing: content-box;
-	height: 0;
-	overflow: visible;
-	opacity: 0.2;
-	border-width: 0 0 5px;
-	border-bottom-width: 5px;
-	border-style: dashed;
-	background: 0 0;
-	width: 50%;
-	margin: 1.8em auto;
-
-	&.post-end {
-		width: 40%;
-		margin-top: 1.6em;
-		margin-bottom: 0.8em;
-		margin-left: 0;
-		border-style: solid;
-		border-bottom-width: 4px;
-	}
+.subheader {
+	margin: 1rem 0;
+	display: block;
 }
 
 .feather {
