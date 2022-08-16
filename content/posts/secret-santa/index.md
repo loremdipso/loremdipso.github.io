@@ -7,7 +7,7 @@ taxonomies: {
 }
 ---
 
-![Santa!](https://loremdipso.com/secret_santa/santa.svg "OMG IT'S SANTA")
+{{ image(alt="Santa!", path="content/posts/secret-santa/santa.svg", title="OMG IT'S SANTA!", max_height=300) }}
 
 ### The End Result
 

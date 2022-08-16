@@ -11,6 +11,10 @@
   {{- get_url(path=path, trailing_slash=false) | split(pat='/') | last -}}
 {% endmacro anchor_id %}
 
+{% macro post_image_url(path) %}
+  {% set url = path | replace(from="/content", to="") %}
+  {{- url | safe -}}
+{% endmacro post_image_url %}
 
 {% macro icon(name) %}
   <span class="inline-svg" >

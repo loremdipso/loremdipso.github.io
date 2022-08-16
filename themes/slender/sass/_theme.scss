@@ -1,13 +1,16 @@
 @use "sass:map";
 
-$color-text: rgb(232, 238, 242);
 $color-header-background: #222831;
-$color-background: #393E46;
+$color-background: #1b1b1e;
+$color-text: rgb(232, 238, 242);
 $color-link: $color-text;
 $color-link-visited: $color-text;
 $color-link-hover: #fff;
 $color-header-active: $color-link-hover;
 $color-details-header: #282a36;
+$color-text-shadow: #fff;
+$color-svg-fill: rgb(232, 238, 242);
+$post-item-border-bottom: #7d828a;
 $color-details-body: $color-header-background;
-$tag-border: black;
-$toc-border-color: white;
+$tag-border: #fff;
+$toc-border-color: #fff;

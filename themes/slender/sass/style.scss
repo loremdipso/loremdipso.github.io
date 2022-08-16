@@ -17,7 +17,6 @@ html {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	box-shadow: -1px 2px 3px rgba(0, 0, 0, 0.45);
 	user-select: none;
 
 	@include isMobile() {
@@ -29,14 +28,14 @@ html {
 
 		&.active {
 			color: $color-header-active;
-			text-shadow: 0 0 1px #fff;
+			text-shadow: 0 0 1px $color-text-shadow;
 		}
 	}
 
 	svg {
 		width: 24px;
 		height: 24px;
-		fill: rgb(232, 238, 242);
+		fill: $color-svg-fill;
 	}
 
 	nav,
@@ -120,7 +119,7 @@ a {
 
 	&:hover {
 		color: $color-link-hover;
-		text-shadow: 0 0 1px #fff;
+		text-shadow: 0 0 1px $color-text-shadow;
 	}
 }
 
@@ -151,7 +150,7 @@ a {
 		list-style: none;
 
 		.post-item {
-			border-bottom: 1px #7d828a dashed;
+			border-bottom: 1px $post-item-border-bottom dashed;
 		}
 	}
 }
@@ -267,48 +266,6 @@ hr {
 
 main {
 	max-width: 100%;
-
-	/*
-	article {
-		h1,h2,h3,h4 {
-			position: relative;
-		}
-
-		a.zola-anchor {
-			font-size: 1.25rem;
-			position: absolute;
-			left: -2rem;
-			text-decoration: none;
-			cursor: pointer;
-
-			&:hover {
-				text-shadow: unset;
-			}
-
-			@include isNotMobile() {
-				// left: -30px;
-				// top: 5px;
-				// position: absolute;
-				// opacity: 0.1;
-			}
-
-			@include isMobile() {
-				// margin-left: 10px;
-				// opacity: 0.5;
-			}
-
-			// &::after,
-			// &::before {
-			// 	font-size: 1.2rem;
-			// 	color: white;
-			// }
-
-			// &:hover::before {
-			// 	opacity: 1;
-			// }
-		}
-	}
-	*/
 }
 
 .posts-header {

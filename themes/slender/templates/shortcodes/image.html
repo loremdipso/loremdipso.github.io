@@ -1,0 +1,18 @@
+{% import "macros.html" as macros %}
+
+{# TODO: have this use responsive image, whenever we get that sorted #}
+<p>
+    <picture>
+        {%- set meta = get_image_metadata(path=path) -%}
+        <img
+            title="{{ title }}"
+            loading="lazy"
+            decoding="async"
+            alt="{{ alt }}"
+            src="{{ macros::post_image_url(path=get_url(path=path)) }}"
+            width="{{ meta.width }}"
+            height="{{ meta.height }}"
+            {%if max_height %}style="max-height: {{max_height}}px"{% endif %}
+        >
+    </picture>
+</p>
