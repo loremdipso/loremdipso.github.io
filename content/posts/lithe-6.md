@@ -12,11 +12,11 @@ taxonomies: {
 
 I know I haven't talked much about the state of Lithe except to mention how fast it is while run natively, but that's only because Lithe is still very very bare bones. It parses the contents of svelte files into an HTML AST, which it then transforms into a more Svelte-y AST, which it then runs through to generate the final output. And it only works for the simplest of svelte files.
 
-### Thinking ahead
+### Thinking Ahead
 
 But before I write more about the internals of Lithe or implement any new features, I thought it'd be a fun diversion to think ahead to when this is a smash success and absolutely everyone wants it. How are we going to package and release it? The obvious (and my initial) answer was as a native extension that we talk to via FFI. But how will that be received? JavaScript developers like fast build times, even at the very start. Projects like [Snowpack](https://www.snowpack.dev/) are successful exactly because of that. No frontend engineer wants to wait for the latest compiler to be downloaded and build on their local machine, especially if that requires the Rust toolchain.
 
-### An aside
+### An Aside
 
 I never knew, but apparently tsc is, itself, written in TypeScript. Which really calls into question this whole endeavor. If something as successful as tsc (which I never felt was all that slow) is written in TypeScript, why can't Svelte? The move to Rust has never been a sure one, and this might just be another reason against. Perhaps the performance limitations I'm trying to solve are more algorithmic than they are technical.
 

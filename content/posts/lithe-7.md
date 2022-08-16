@@ -7,7 +7,7 @@ taxonomies: {
 }
 ---
 
-### Confession time
+### Confession Time
 
 My performance testing methodology so far has been extremely flawed. It serves mostly as an indicator for how rigorous performance testing might go when I eventually get around to it. Which I think is reasonable, but it doesn't have to be quite so unfair to Svelte. Svelte is doing quite a lot more than Lithe, so I really shouldn't be comparing them side by side. It'd be good to re-run some earlier tests, but with the JavaScript equivalent of what Lithe is doing. Which, let's be honest, is mostly just parsing the HTML into an AST.
 
@@ -15,11 +15,11 @@ My performance testing methodology so far has been extremely flawed. It serves m
 
 It's good to have names for things, so let's call this super-basic JavaScript version [LitheJS](https://en.wikipedia.org/wiki/Tongue-in-cheek).
 
-### The specifics
+### The Specifics
 
 Lithe has been using the [html_parser crate](https://crates.io/crates/html_parser). For LitheJS I'll use the very popular [Fast HTML Parser](https://www.npmjs.com/package/node-html-parser). It's got 2.3M downloads a week, and it's even got Fast in the name. If anything's going to give Lithe a run for its money it's going to be that.
 
-### The methodology
+### The Methodology
 
 We'll do the same as before: super simple HTML files, just N `<span>Hello world!</span>` elements. No nesting, no scripting, and I'm not even going to ask LitheJS to produce any output or perform any transformations. I just want to know: how long does it take to parse the HTML into an AST, and how does that compare with Lithe?
 
@@ -27,7 +27,7 @@ My thought is if Lithe can still beat out LitheJS, even after giving it all thes
 
 Notably, though, I'm not going to bother improving any of the rest of my methodology just yet. I'm not averaging multiple runs, I'm not going to nest HTML elements, I'm measuring performance directly in Node, all results are in ms, etc.
 
-### The results
+### The Results
 
 | Number of `span`s | Svelte                                                          | Lithe - native | Lithe - WASM | LitheJS |
 | ----------------- | --------------------------------------------------------------- | -------------- | ------------ | ------- |

@@ -147,7 +147,7 @@ include_content = true
     archives = "Posts"
     not_found = "Sorry, I couldn't find that page :/"
     copy = "Copy"
-    table_of_contents = "Table of Contents"
+    table_of_contents = "Contents"
     next = "Up next"
     previous = "Previously"
 

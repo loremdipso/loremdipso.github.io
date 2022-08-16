@@ -7,6 +7,11 @@
   {%- endif -%}
 {% endmacro rel_url %}
 
+{% macro anchor_id(path) %}
+  {{- get_url(path=path, trailing_slash=false) | split(pat='/') | last -}}
+{% endmacro anchor_id %}
+
+
 {% macro icon(name) %}
   <span class="inline-svg" >
     {% set fname = "themes/slender/static/icons/" ~ name ~ ".svg" %}

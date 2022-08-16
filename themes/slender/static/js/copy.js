@@ -41,9 +41,8 @@ function addCopyButton(containerEl) {
 
 // Add copy button to code blocks
 if (navigator.clipboard) {
-	window.addEventListener("load", () => {
+	window.addEventListener("DOMContentLoaded", () => {
 		const highlightBlocks = document.querySelectorAll("pre[data-lang]");
-		console.log(highlightBlocks);
 		for (let block of highlightBlocks) {
 			addCopyButton(block);
 		}
