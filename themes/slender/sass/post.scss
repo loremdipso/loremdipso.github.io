@@ -17,12 +17,43 @@ article {
 	}
 
 	pre {
+		position: relative;
+		border-radius: 4px;
+		display: block;
 		overflow: auto;
 		font-size: 0.9rem;
 		line-height: 1.5;
-		white-space: pre;
-		padding: 0.7em 1.1em;
 		position: relative;
+
+		@mixin before($selector, $content) {
+			&.#{$selector}:before {
+				content: $content;
+				padding: 0.2rem 0.5rem;
+				background: #444d56;
+				border-radius: 0 0 8px 0;
+				font-weight: bold;
+			}
+		}
+
+		@include before("language-js", "JavaScript code");
+		@include before("language-ts", "TypeScript code");
+		@include before("language-rust", "Rust code");
+		@include before("language-html", "HTML");
+
+		:before {
+			padding: 0.2rem 0.5rem;
+			background: #444d56;
+			border-radius: 0 0 8px 0;
+			font-weight: bold;
+		}
+
+		code {
+			display: block;
+			min-width: max-content;
+			overflow: hidden;
+			tab-size: 2;
+			padding: 0.7em 1.1em;
+		}
 	}
 
 	.copy-button {

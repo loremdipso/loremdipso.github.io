@@ -4,7 +4,10 @@
 
 {% block extra_includes %}
     {{ macros::style(path='post.css') }}
-    {{ macros::script(path='js/copy.js') }}
+	{#
+		TODO: put back when we figure out the right scrolling problem
+		{{ macros::script(path='js/copy.js') }}
+	#}
     {{ macros::script(path='js/post-scroll.js') }}
 {% endblock extra_includes %}
 
