@@ -57,9 +57,7 @@ article {
 	}
 
 	.copy-button {
-		position: absolute;
-		bottom: 7px;
-		right: 7px;
+		margin-left: 1rem;
 		border: 0;
 		border-radius: 4px;
 		padding: 1px;
@@ -80,8 +78,19 @@ article {
 	details {
 		$margin: 16px;
 		background-color: $color-details-body;
+		padding: 0.5rem;
+		height: auto;
+		max-height: 1.5rem; /* set to line height */
+		transition: all 0.1s ease;
+
+		&[open] {
+			max-height: 99rem;
+			transition: all 1s ease;
+		}
 
 		summary {
+			margin: -0.5em -0.5em 0;
+			padding: 0.5em;
 			cursor: pointer;
 			padding: $margin;
 			background-color: $color-details-header;
@@ -89,10 +98,7 @@ article {
 
 		p {
 			margin: $margin;
-		}
-
-		p:last-child {
-			padding-bottom: 1rem;
+			padding: 0;
 		}
 	}
 
@@ -272,7 +278,6 @@ article {
 
 		width: 40%;
 		margin-top: 0.5rem;
-		// margin-top: 1.6em;
 		margin-bottom: 0.8rem;
 		margin-left: 0;
 		border-style: solid;

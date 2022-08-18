@@ -36,7 +36,7 @@ function addCopyButton(containerEl) {
 		}
 	});
 
-	containerEl.appendChild(copyBtn);
+	containerEl.insertBefore(copyBtn, codeEl);
 }
 
 // Add copy button to code blocks
