@@ -92,9 +92,9 @@
 &lt;p&gt;
 	I did this same exercise with another of my old projects: &lt;a target=&quot;#&quot; href=&quot;https:&#x2F;&#x2F;loremdipso.com&#x2F;YAN2048&quot;&gt;YAN2048&lt;&#x2F;a&gt;. This one was written in Angular and only used its UI framework for the buttons and a game-over dialog. The &lt;a target=&quot;#&quot; href=&quot;https:&#x2F;&#x2F;loremdipso.com&#x2F;YAN2048_Svelte&quot;&gt;clone&lt;&#x2F;a&gt; does the same, and I copy&#x2F;pasted very nearly all the same logic and styles, yielding two very similar apps.
   &lt;&#x2F;p&gt;
-&lt;h4&gt;
+&lt;h2&gt;
 	Results
-  &lt;&#x2F;h4&gt;
+  &lt;&#x2F;h2&gt;
 &lt;p&gt;
 	On-disk space, Angular: an even &lt;b&gt;500 KB&lt;&#x2F;b&gt;, Svelte: &lt;b&gt;84 KB&lt;&#x2F;b&gt;.
   &lt;&#x2F;p&gt;
@@ -103,6 +103,7 @@
   &lt;&#x2F;p&gt;
 &lt;p&gt;
 	But is this comparison worthwhile? Is what I observed experimentally vaguely in line with what they should be? Well, according to &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;LayZeeDK&#x2F;ngx-ivy-minimal-app-with-ngzone&quot;&gt;this git repo&lt;&#x2F;a&gt;, a hello world using the &lt;a href=&quot;https:&#x2F;&#x2F;docs.angular.lat&#x2F;guide&#x2F;ivy&quot;&gt;Ivy renderer&lt;&#x2F;a&gt; costs around &lt;b&gt;131 KB&lt;&#x2F;b&gt; uncompressed. So, yeah, I think the results here are reasonable.
+  &lt;&#x2F;p&gt;
 &lt;&#x2F;details&gt;
 </description>
         </item>

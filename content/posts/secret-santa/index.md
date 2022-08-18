@@ -93,9 +93,9 @@ Please tease me if I spend any more time re-writing this silly app again.
 	I did this same exercise with another of my old projects: <a target="#" href="https://loremdipso.com/YAN2048">YAN2048</a>. This one was written in Angular and only used its UI framework for the buttons and a game-over dialog. The <a target="#" href="https://loremdipso.com/YAN2048_Svelte">clone</a> does the same, and I copy/pasted very nearly all the same logic and styles, yielding two very similar apps.
   </p>
 
-  <h4>
+  <h2>
 	Results
-  </h4>
+  </h2>
 
   <p>
 	On-disk space, Angular: an even <b>500 KB</b>, Svelte: <b>84 KB</b>.
@@ -107,4 +107,5 @@ Please tease me if I spend any more time re-writing this silly app again.
 
   <p>
 	But is this comparison worthwhile? Is what I observed experimentally vaguely in line with what they should be? Well, according to <a href="https://github.com/LayZeeDK/ngx-ivy-minimal-app-with-ngzone">this git repo</a>, a hello world using the <a href="https://docs.angular.lat/guide/ivy">Ivy renderer</a> costs around <b>131 KB</b> uncompressed. So, yeah, I think the results here are reasonable.
+  </p>
 </details>
