@@ -35,8 +35,8 @@
   </style>
 {% endmacro style %}
 
-{% macro script(path) %}
-    <script src="{{ self::rel_url(path=path, cachebust=true) }}" crossorigin="anonymous"></script>
+{% macro script(path, is_async=true) %}
+    <script src="{{ self::rel_url(path=path, cachebust=true) }}" {% if is_async %}async{% endif %} crossorigin="anonymous"></script>
 {% endmacro script %}
 
 {#
