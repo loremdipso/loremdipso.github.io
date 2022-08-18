@@ -1,5 +1,6 @@
 ---
 title: "Lithe 2: From Scratch"
+description: "Continued exploration of Lithe, an attempt at re-writing the Svelte compiler in Rust"
 slug: "lithe-2"
 date: 2022-01-03T16:46:55-07:00
 draft: false

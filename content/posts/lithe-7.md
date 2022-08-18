@@ -1,5 +1,6 @@
 ---
 title: "Lithe 7 - Apples to Apples"
+description: "Continued exploration of Lithe, an attempt at re-writing the Svelte compiler in Rust"
 date: 2022-01-15T12:46:47-07:00
 draft: false
 taxonomies: {

@@ -2,6 +2,7 @@
 slug: whats-with-the-name
 date: 2020-05-04T13:08:19-07:00
 title: What's with the name?
+description: "Weird name, huh? Does it mean anything? In this post we find out!"
 ---
 
 "loremdipso"? What's that? Did you mean [lorem ipsum](https://loremipsum.io/)? Or, [ipso facto](https://www.merriam-webster.com/dictionary/ipso%20facto) maybe?

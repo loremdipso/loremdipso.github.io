@@ -1,5 +1,6 @@
 ---
 title: "Lithe 6: What about WASM?"
+description: "Continued exploration of Lithe, an attempt at re-writing the Svelte compiler in Rust"
 slug: "lithe-6"
 date: 2022-01-13
 draft: false

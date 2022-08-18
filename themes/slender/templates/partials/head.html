@@ -6,3 +6,9 @@
 {% else %}
 <title>{{config.title}}</title>
 {% endif %}
+
+{% if page.description %}
+    <meta name="description" content="{{- page.description -}}">
+{% else %}
+    <meta name="description" content="Good day to you">
+{% endif %}

@@ -1,5 +1,6 @@
 ---
 title: "Lithe 3: A Rewrite"
+description: "Continued exploration of Lithe, an attempt at re-writing the Svelte compiler in Rust"
 slug: "lithe-3"
 date: 2022-01-03T17:07:07-07:00
 draft: false

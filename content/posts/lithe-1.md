@@ -1,5 +1,6 @@
 ---
 title: "Lithe 1: The Motivation"
+description: "First foray into Lithe, an attempt at re-writing the Svelte compiler in Rust"
 slug: "lithe-1"
 date: 2022-01-03T16:12:04-07:00
 draft: false

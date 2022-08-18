@@ -1,5 +1,6 @@
 ---
 title: "Lithe 4: On the Shoulders of Giants"
+description: "Continued exploration of Lithe, an attempt at re-writing the Svelte compiler in Rust"
 slug: "lithe-4"
 date: 2022-01-03T18:39:44-07:00
 draft: false

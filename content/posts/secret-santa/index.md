@@ -2,6 +2,7 @@
 title: "Secret Santa: a Saga"
 date: 2022-01-27
 draft: false
+description: "Dive deep into my Secret Santa obsession"
 taxonomies: {
   tags: ["one-shot", "performance", "svelte"]
 }

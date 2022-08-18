@@ -1,5 +1,6 @@
 ---
 title: "Lithe 5: Optimize for the minifier"
+description: "Continued exploration of Lithe, an attempt at re-writing the Svelte compiler in Rust"
 slug: "lithe-5"
 date: 2022-01-08T19:49:55-07:00
 draft: false

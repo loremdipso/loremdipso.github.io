@@ -1,5 +1,6 @@
 ---
 title: "Finding My Voice"
+description: "Brief intro to what this site is and is not"
 date: 2021-12-27T13:33:48-07:00
 
 taxonomies: {
