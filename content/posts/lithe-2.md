@@ -13,7 +13,7 @@ I've written a little Rust, but never professionally, so I'm sure what I write i
 
 Before starting this project let's take a quick peek at the Svelte repo. Oh, huh, looks like the compiler smaller than I would have thought, weighing in at only ~800KB (if you include the runtime), but 800KB of code to rewrite is still fairly massive for a weekend warrior like myself. So, for my initial attempt I crafted the world's smallest svelte app:
 
-```
+```html
 <span>Hello world!</span>
 <span>Goodbye!</span>
 ```

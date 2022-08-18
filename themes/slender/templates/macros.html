@@ -69,50 +69,29 @@ TODO: use this
   </div>
 {% endmacro posts_group %}
 
-{% macro responsive_image(path, text, class, is_preemptive) %}
+{% macro responsive_image(path, text, class, is_preemptive, new_width=0) %}
     <picture>
-      {% set meta = get_image_metadata(path=path) %}
+      {% set width = 0 %}
+      {% set height = 0 %}
+
+      {% if new_width > 0 %}
+        {% set new_image = resize_image(path=path, width=new_width, op="fit_width", format="webp") %}
+        {% set width = new_image.width %}
+        {% set height = new_image.width %}
+        <source srcset="{{ self::rel_url(path=new_image.url) | safe }}" type="image/webp">
+
+        {# TODO: add avif when that's available #}
+
+        {% set backup_image = resize_image(path=path, width=new_width, op="fit_width") %}
+        {% set path = self::rel_url(path=backup_image.url) %}
+      {% else %}
+        {% set meta = get_image_metadata(path=path) %}
+        {% set width = meta.width %}
+        {% set height = meta.width %}
+      {% endif %} 
+
       <img src="{{ path | safe }}" alt="{{ text }}" {% if class %}class="{{ class }}"{% endif %}
         {% if not is_preemptive %}loading="lazy" decoding="async"{% endif %}
-        width="{{ meta.width }}" height="{{ meta.height }}" />
-
-      {#
-        TODO
-      {% if ending_with(str=".jpg") %}
-        {% set avi_path = path | replace(from=".jpg", to=".avif") %}
-        {% set avi_path_static = "static/" ~ avi_path %}
-      
-        {% if (fileExists avi_path_static) %}
-          <source srcset="{{ avi_path | safe }}" type="image/avif">
-        {{- end }}
-      
-        {{ set webp_path = replace .path ".jpg" ".webp" }}
-        {{ set webp_path_static = printf "static/%s" webp_path }}
-      
-        {{ if (fileExists webp_path_static) -}}
-          <source srcset="{{ webp_path | safe }}" type="image/webp">
-        {{- end }}
-      {% elif ending_with(str=".png") %}
-        {% set avi_path = path ".png" ".avif" }}
-        {% set avi_path_static = printf "static/%s" avi_path }}
-      
-        {% if (fileExists avi_path_static) -}}
-          <source srcset="{{ avi_path | safe }}" type="image/avif">
-        {{- end }}
-      
-        {% webp_path = replace .path ".png" ".webp" }}
-        {% webp_path_static = printf "static/%s" webp_path }}
-      
-        {{ if (fileExists webp_path_static) -}}
-          <source srcset="{{ webp_path | safe }}" type="image/webp">
-        {{- end }}
-      {{- end }}
-    
-      {% set img = imageConfig (add "/static/" (path | safe)) %}
-    
-      <img src="{{ path | safe }}" alt="{{ .Text }}" {{- if (isset . "Class" ) -}} class="{{ .Class }}" {{- end
-        -}} {% if not is_preemptive %} loading="lazy" decoding="async" {{- end -}} width="{{ img.Width }}"
-        height="{{ img.Height }}" />
-        #}
+        width="{{ width }}" height="{{ height }}" />
     </picture>
 {% endmacro responsive_image %}
