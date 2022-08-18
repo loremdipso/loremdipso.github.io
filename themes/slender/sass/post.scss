@@ -21,6 +21,9 @@ article {
 	}
 
 	pre {
+		// Overrides
+		border: 1px solid #2f363d; // TODO: put this in theme.scss
+
 		position: relative;
 		border-radius: 4px;
 		display: block;
@@ -207,7 +210,7 @@ article {
 		left: 100%;
 		top: 0;
 		height: 100%;
-		width: calc((100vw - 720px) / 2 );
+		width: calc( (100vw - 720px) / 2 - 1rem ); /* TODO: why does chrome need this slop? */
 		font-size: 13px;
 
 		@media (max-width: 1000px) {
@@ -231,6 +234,12 @@ article {
 
 			.toc-title {
 				font-weight: bold;
+			}
+
+			ul {
+				list-style: none;
+				margin: 0;
+				padding: 0;
 			}
 
 			li {

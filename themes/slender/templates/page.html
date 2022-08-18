@@ -50,20 +50,22 @@
 				<div class="sidenav">
 					<aside class="toc-wrapper">
 						<div class="toc-title">{{ config.extra.strings.table_of_contents }}</div>
-						{% for h1 in page.toc %}
-						<li>
-							<a href="{{ macros::anchor_id(path=h1.permalink) | safe }}">{{ h1.title }}</a>
-							{% if h1.children %}
-							<ul>
-								{% for h2 in h1.children %}
-								<li>
-									<a href="{{ macros::anchor_id(path=h2.permalink) | safe }}">{{ h2.title }}</a>
-								</li>
-								{% endfor %}
-							</ul>
-							{% endif %}
-						</li>
-						{% endfor %}
+						<ul>
+							{% for h1 in page.toc %}
+							<li>
+								<a href="{{ macros::anchor_id(path=h1.permalink) | safe }}">{{ h1.title }}</a>
+								{% if h1.children %}
+								<ul>
+									{% for h2 in h1.children %}
+									<li>
+										<a href="{{ macros::anchor_id(path=h2.permalink) | safe }}">{{ h2.title }}</a>
+									</li>
+									{% endfor %}
+								</ul>
+								{% endif %}
+							</li>
+							{% endfor %}
+						</ul>
 					</aside>
 				</div>
 				{% endif %}

@@ -41,7 +41,7 @@ I set to work slightly modifying Lithe to output a WASM module rather than a nat
   ],
   "module": "lithe.js",
   "types": "lithe.d.ts",
-  "sideEffects": false
+  "sideEffects": false,
   "type": "module", // <- new
 }
 ```
