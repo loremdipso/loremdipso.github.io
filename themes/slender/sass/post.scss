@@ -4,6 +4,10 @@
 article {
 	margin-bottom: 3rem;
 
+	h2 {
+		padding-top: 1rem; /* margin collapse will kill me someday */
+	}
+
 	p {
 		line-height: 1.5;
 	}
@@ -90,13 +94,12 @@ article {
 
 		summary {
 			margin: -0.5em -0.5em 0;
-			padding: 0.5em;
-			cursor: pointer;
 			padding: $margin;
+			cursor: pointer;
 			background-color: $color-details-header;
 		}
 
-		p {
+		> * {
 			margin: $margin;
 			padding: 0;
 		}

@@ -10,11 +10,11 @@ taxonomies: {
 
 {{ image(alt="Santa!", path="content/posts/secret-santa/santa.svg", title="OMG IT'S SANTA!", max_height=300) }}
 
-### The End Result
+## The End Result
 
 Before you commit to reading this thing, here're the final versions of this app: [Svelte](https://loremdipso.com/secret_santa/), [React](https://loremdipso.com/secret_santa_react/). In future I'll only be updating the Svelte version.
 
-### Backstory
+## Backstory
 
 I have a groups of friends from college that have a [Secret Santa](https://en.wikipedia.org/wiki/Secret_Santa) event every year. Even after we all moved apart we've kept it up, jumping to Zoom to unwrap our gifts and guess who was our gifter. One of my most favorite traditions, a delight tempered only by the daunting task of logistics. You see, there are some constraints:
 
@@ -22,23 +22,23 @@ I have a groups of friends from college that have a [Secret Santa](https://en.wi
 1. Secret Santa gifter/giftee pairs shouldn't be repeated (if possible). If not possible then we should prefer repeats that are as chronologically separate as possible. That is, a repeat from five years ago is much better than one from last year.
 1. No one should know their Secret Santa, including the person doing the organizing.
 
-### Initial Approach
+## Initial Approach
 
 At first I wrote a simple ruby script that would generate text files whose names were the gifter and whose contents were the giftee. The organizer would then send an email out to everyone, attaching the correct file to each email. This worked, but was relatively inflexible. Plus previous years didn't automatically carry over, so the organizer would have to
 
-### Existing Solutions
+## Existing Solutions
 
 The closest thing I found out in the wild that didn't collect any info or show any ads was https://arcanis.github.io/secretsanta/. It wasn't exactly what I was looking for, plus the exclusions seemed a bit broken, but it had the fantastic idea of encoding the giftee's information in the URL, using AES with a static key as an obfuscator. Neat!
 
-### The Classic Excuse
+## The Classic Excuse
 
 If I'm being honest with myself I could have pretty easily extended the ruby script to do everything a web app could, but I'm always looking for any reason to try out a new technology. This time it was [Svelte](https://svelte.dev/). I'd heard it has Vue-like structure and Syntax, Vanilla JavaScript performance, and I'd already [started writing a compiler for it](https://loremdipso.com/tags/lithe/). So let's give a go, shall we?
 
-### UI
+## UI
 
 The one thing anyone who uses Svelte seems willing to criticize is the lack of ecosystem. However I was able to find a [SMUI](https://sveltematerialui.com/), a Svelte implementation of [Material Design](https://material.io/) that seemed reasonable enough.
 
-### Dev Experience
+## Dev Experience
 
 Here were some initial thoughts and minor complaints:
 
@@ -58,7 +58,7 @@ Here were some initial thoughts and minor complaints:
 
 1. I noticed a couple of minor consistency issues. If I had a bug in a `.ts` file that wasn't used anywhere, and I renamed it so it was a `.txt` just to get rid of the errors, Rollup or Svelte or TSC or whoever should notice did not. I had to restart the dev server for it to see that change.
 
-### Bundle Size
+## Bundle Size
 
 I was a little disappointed that the Svelte-based Material UI library spit out **500 KB** just in styles. I'd love to get rid of most of that, but even so the whole project comes in at under **1 MB** total. Okay, but how does it compare to, say, React? Well, luckily I first wrote this app using React and [Antd](https://ant.design/). The implementations aren't exactly the same but they have nearly the same set of features. All told, the build of the React version comes out at around **3.4 MB**, which seems awfully high to me, even for React. After some digging it turns out it was due to that version of antd having [some issues](https://stackoverflow.com/questions/48721290/ant-design-huge-imports), so if I just `npm update` and rebuild I get...
 
@@ -66,17 +66,17 @@ I was a little disappointed that the Svelte-based Material UI library spit out *
 
 **7.7 MB**. Wellllll, that's... better, at least, but something's definitely squiffy. Alright, fine, I'll use babel. Aaaand... no change. Darn. Oh, wait! Looks like the real space-taker are [the icons](https://github.com/ant-design/ant-design/issues/12011#issuecomment-623043192), and we should use babel for that too. And with that I'm down to... **4.8MB**! _sigh_ Alright, at this point I've had a gut full and just want to try something new.
 
-### Meanwhile, in Svelte land...
+## Meanwhile, in Svelte land...
 
 So **1 MB**, huh? Alright, just in case I was doing something silly let's go ahead and just try to use a [similar UI library](https://carbon-components-svelte.onrender.com/) in an app built using [Svelte Kit](https://kit.svelte.dev/)'s starter app template. That should give me the latest and greatest setup. But no, that also ended up costing ~500KB in styles, base, before I even started to pull in components. Why am I paying for junk I'm not even using? Hopefully users of that lib have a way to cut those out, but for the life of me I haven't been able to find it.
 
-### Enter Smelte
+## Enter Smelte
 
 [Smelte](https://smeltejs.com/). The elevator pitch is basically [Material Design](https://material.io/) + [Tailwind CSS](https://tailwindcss.com/). You can use all of the normal Tailwind styles in your app plus a tonne of pre-built components. There was one outstanding issue where Smelte doesn't currently list a specific version of purgecss and is slightly incompatible with it. Hopefully that PR gets accepted soon, but until then I had great luck using an older version of [purgecss](https://www.npmjs.com/package/purgecss).
 
 So now that I've got my UI framework swapped out and patched up and worked like a dream, let's see the build size... **200 KB**!!! Alright, now that's more like it.
 
-### Caveats and Conclusions
+## Caveats and Conclusions
 
 I should clarify that comparing the React+Carbon app against the Svelte+Smelte app isn't entirely fair. For one I just gave up on React+Carbon after a certain point. I'd hope that production apps aren't shipping with a framework that's got a **4 MB** "Hello World". Also, Carbon embeds its icons as SVG directly in its final bundle, whereas I reference Google Material Icons font library as an external URL. So to be more fair I should either increase the Svelte app's total size or decrease the React app's total size.
 
