@@ -1,9 +1,6 @@
 ---
-title: Projects
-_build:
-    render: true
-cascade:
-    _build:
-        render: false
-        list: true
+title: "Projects"
+sort_by: "date"
+insert_anchor_links: "heading"
+template: "projects/list.html"
 ---

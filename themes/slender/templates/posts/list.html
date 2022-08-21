@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% import "macros.html" as macros %}
+
+{% block header %}
+    {% include "partials/header.html" %}
+{% endblock header %}
+
+{% block content %}
+<main class="fade-in">
+    <div class="section-header">
+        <h1>Posts</h1>
+        <a href="{{ macros::rel_url(path='/tags') }}">tags</a>
+    </div>
+
+    {% for year, pages in section.pages | group_by(attribute="year") %}
+        {{ macros::posts_group(year=year, pages=pages) }}
+    {% endfor %}
+</main>
+{% endblock content %}

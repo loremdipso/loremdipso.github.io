@@ -69,7 +69,7 @@ TODO: use this
   </div>
 {% endmacro posts_group %}
 
-{% macro responsive_image(path, text, class, is_preemptive, new_width=0) %}
+{% macro responsive_image(path, text, class=false, is_preemptive=false, new_width=0) %}
     <picture>
       {% set width = 0 %}
       {% set height = 0 %}
@@ -77,7 +77,7 @@ TODO: use this
       {% if new_width > 0 %}
         {% set new_image = resize_image(path=path, width=new_width, op="fit_width", format="webp") %}
         {% set width = new_image.width %}
-        {% set height = new_image.width %}
+        {% set height = new_image.height %}
         <source srcset="{{ self::rel_url(path=new_image.url) | safe }}" type="image/webp">
 
         {# TODO: add avif when that's available #}

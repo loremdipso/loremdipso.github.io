@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% import "macros.html" as macros %}
+
+{% block header %}
+    {% include "partials/header.html" %}
+{% endblock header %}
+
+{% block extra_includes %}
+  {{ macros::inline_style(path='projects.css') }}
+{% endblock extra_includes %}
+
+{% block content %}
+<main class="fade-in">
+    <div class="sectionheader">
+        <h1>Projects</h1>
+    </div>
+
+    <ul class="projects-list">
+        {% for page in section.pages %}
+            {%if page.extra.link %}
+                <li class="project-card">
+                    <a href="{{ page.extra.link | safe }}">
+                        <h2>{{page.title}}</h2>
+
+                        {%if page.extra.alt and page.extra.thumbnail %}
+                            {{ macros::responsive_image(
+                                path=page.extra.thumbnail,
+                                text=page.extra.alt,
+                                new_width=500,
+                            ) }}
+                        {% endif %}
+                    </a>
+
+                    {{ page.content | safe }}
+                </li>
+            {% endif %}
+        {% endfor %}
+    </ul>
+</main>
+{% endblock content %}
