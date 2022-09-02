@@ -1,8 +1,7 @@
 ---
-slug: whats-with-the-name
 date: 2020-05-04T13:08:19-07:00
 title: What's with the name?
-slug: "weird-name-broh"
+slug: weird-name-broh
 description: "Weird name, huh? Does it mean anything? In this post we find out!"
 ---
 

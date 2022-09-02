@@ -11,8 +11,8 @@
         <item>
             <title>Secret Santa: a Saga</title>
             <pubDate>Thu, 27 Jan 2022 00:00:00 +0000</pubDate>
-            <link>https://loremdipso.com/posts/secret-santa/</link>
-            <guid>https://loremdipso.com/posts/secret-santa/</guid>
+            <link>https://loremdipso.com/posts/secret-santa-saga/</link>
+            <guid>https://loremdipso.com/posts/secret-santa-saga/</guid>
             <description>
 &lt;p&gt;
     &lt;picture&gt;&lt;img
@@ -21,7 +21,7 @@
             decoding=&quot;async&quot;
             alt=&quot;Santa!&quot;
             src=&quot;
-  https:&#x2F;&#x2F;loremdipso.com&#x2F;posts&#x2F;secret-santa&#x2F;santa.svg&quot;
+  https:&#x2F;&#x2F;loremdipso.com&#x2F;posts&#x2F;11-secret-santa&#x2F;santa.svg&quot;
             width=&quot;552&quot;
             height=&quot;485&quot;
             style=&quot;max-height: 300px&quot;
@@ -501,8 +501,8 @@
         <item>
             <title>Site V2</title>
             <pubDate>Mon, 27 Dec 2021 14:15:48 -0700</pubDate>
-            <link>https://loremdipso.com/posts/site-v2/</link>
-            <guid>https://loremdipso.com/posts/site-v2/</guid>
+            <link>https://loremdipso.com/posts/new-blog-same-content/</link>
+            <guid>https://loremdipso.com/posts/new-blog-same-content/</guid>
             <description>&lt;p&gt;Channeling my inner dev, I&#x27;ve gone ahead and completely re-written this site. [Original post for comparison]({{&amp;lt; ref &amp;quot;conception.md&amp;quot; &amp;gt;}}).&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;why&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#why&quot; aria-label=&quot;Anchor link for: why&quot;&gt;Why?&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
 &lt;p&gt;The original site was... poorly written. It used React, which can be fine, but was overkill for a site that wasn&#x27;t particularly complex interactive. And I&#x27;ve had a change of heart when it comes to SPAs: that they&#x27;re useful when they&#x27;re useful and not when they&#x27;re not.&lt;&#x2F;p&gt;
