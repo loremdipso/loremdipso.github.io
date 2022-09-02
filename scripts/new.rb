@@ -8,6 +8,16 @@ def readline(prompt)
   return rv.strip
 end
 
+def fake_snakecase(text)
+  return text
+    .downcase
+    .delete('^ a-z0-9')
+    .split(" ")
+    .map(&:strip)
+    .join("-")
+    .gsub(/--/, '-')
+end
+
 def readline_boolean(prompt)
   while true
     answer = readline(prompt).downcase
@@ -33,7 +43,8 @@ end
 def main(args)
   template = get_template()
   title = readline("Title of content: ")
-  slug = readline("Content slug (snake-case): ")
+  #slug = readline("Content slug (snake-case): ")
+  slug = fake_snakecase(title)
   description = readline("Description of content: ")
   tags = readline("Tags (comma-separated): ").split(",").map(&:strip)
   with_images = readline_boolean("Will there be images? (y/n): ")
