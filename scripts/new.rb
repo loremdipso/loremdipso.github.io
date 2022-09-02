@@ -50,9 +50,16 @@ def main(args)
   p result
 end
 
-def get_filename(slug)
-  p Dir['./content/posts/*']
+def get_output_path(slug, use_folder)
+  # TODO: deal with non-draft/numeric prefixes. For now just prefix with 'draft'
+  path = File.join(".", "content", "posts", "draft-" + slug)
+  if use_folder
+    Dir.mkdir(path)
+    path = File.join(path, "index.md")
+  end
+  return path
 end
 
-filename = get_filename("some-slug")
+filename = get_output_path("some-slug", true)
+p filename
 #main(ARGV.dup)
