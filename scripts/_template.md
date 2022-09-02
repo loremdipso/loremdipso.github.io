@@ -1,10 +1,9 @@
 ---
 title: "<%= title %>"
-title: "<%= description %>"
-date: <%= date %>
-slug: <%= slug %>
-draft: true
 description: "<%= description %>"
+slug: <%= slug %>
+date: <%= date %>
+draft: true
 taxonomies: {
   tags: <%= tags %>
 }
