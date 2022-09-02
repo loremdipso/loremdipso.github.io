@@ -2,6 +2,7 @@
 title: "Site V2"
 description: "A tale as old as time: software dev wants to blog, so first they have to invent blogs"
 date: 2021-12-27T14:15:48-07:00
+slug: "new-blog-same-content"
 taxonomies: {
     tags: ["meta", "software"]
 }
