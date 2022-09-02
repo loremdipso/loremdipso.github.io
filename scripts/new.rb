@@ -47,12 +47,14 @@ def main(args)
     date: date,
   })
 
-  p result
+  output_path = get_output_path(slug, with_images)
+  File.open(output_path, 'w') {|f| f.puts(result) }
+  puts "Done :)"
 end
 
 def get_output_path(slug, use_folder)
   # TODO: deal with non-draft/numeric prefixes. For now just prefix with 'draft'
-  path = File.join(".", "content", "posts", "draft-" + slug)
+  path = File.join(".", "content", "posts", "draft-%s.md" % slug)
   if use_folder
     Dir.mkdir(path)
     path = File.join(path, "index.md")
@@ -60,6 +62,4 @@ def get_output_path(slug, use_folder)
   return path
 end
 
-filename = get_output_path("some-slug", true)
-p filename
-#main(ARGV.dup)
+main(ARGV.dup)
