@@ -95,3 +95,9 @@ TODO: use this
         width="{{ width }}" height="{{ height }}" />
     </picture>
 {% endmacro responsive_image %}
+
+{% macro period(start, end) %}
+  <div class="period">
+    {{ start }} - {{ end }}
+  </div>
+{% endmacro period %}

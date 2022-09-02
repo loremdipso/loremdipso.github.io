@@ -19,12 +19,6 @@ feed_limit = 10
 build_search_index = false
 
 # The taxonomies to be rendered for the site and their configuration of the default languages
-# Example:
-#     taxonomies = [
-#       {name = "tags", feed = true}, # each tag will have its own feed
-#       {name = "tags"}, # you can have taxonomies with the same name in multiple languages
-#       {name = "categories", paginate_by = 5},  # 5 items per page for a term
-#
 taxonomies = [
     {name = "tags"},
     {name = "author"},
@@ -50,10 +44,10 @@ render_emoji = true
 external_links_target_blank = true
 
 # Whether to set rel="nofollow" for all external links
-external_links_no_follow = false
+external_links_no_follow = true
 
 # Whether to set rel="noreferrer" for all external links
-external_links_no_referrer = false
+external_links_no_referrer = true
 
 # Whether smart punctuation is enabled (changing quotes, dashes, dots in their typographic form)
 # For example, `...` into `…`, `"quote"` into `“curly”` etc
@@ -95,47 +89,7 @@ include_path = false
 include_content = true
 # At which character to truncate the content to. Useful if you have a lot of pages and the index would
 # become too big to load on the site. Defaults to not being set.
-# truncate_content_length = 100
-
-# Optional translation object for the default language
-# Example:
-#     default_language = "fr"
-#
-#
-# Additional languages definition
-# You can define language specific config values and translations: 
-# title, description, generate_feed, feed_filename, taxonomies, build_search_index
-# as well as its own search configuration and translations (see above for details on those)
-# [languages]
-# For example
-# generate_feed = true
-# taxonomies = [
-#    {name = "auteurs"},
-#    {name = "tags"},
-# ]
-# build_search_index = false
-
-# You can put any kind of data here. The data
-# will be accessible in all templates
-# Example:
-#     [extra]
-#     author = "Famous author"
-#
-# author value will be available using {{ config.extra.author }} in templates
-#
-
-
-# [markup.goldmark.renderer]
-	# unsafe = true
-
-# [markup.highlight]
-	# The below is pygmentsOptions
-	# codeFences = true
-	# guessSyntax = true
-	# hl_Lines = ""
-	# tabWidth = 2
-	# noClasses = false
-
+truncate_content_length = 100
 
 [extra.author]
     name = "Michael Adams"
@@ -196,14 +150,16 @@ include_content = true
 
 [[extra.resume.educations]]
     degree = "B.S. in Computer Science (cont'd)"
-    period = "2011 - 2014"
+    period_start = "2011"
+    period_end = "2014"
     description = "University of Tennessee, Knoxville"
     extra = "Member of the programming team for two years and then captain for one"
     website = "https://www.utk.edu/"
 
 [[extra.resume.educations]]
     degree = "B.S. in Computer Science"
-    period = "2010 - 2011"
+    period_start = "2010"
+    period_end = "2011"
     description = "Tennessee Tech, Cookeville"
     website = "https://www.tntech.edu/"
 
@@ -232,29 +188,31 @@ include_content = true
     name = "TypeScript"
     level = 95
 
-# [[extra.resume.experiences]]
-    # [extra.resume.experiences.company]
-    #     name = "Google"
-    #     description = "Cloud - Customer Experience"
-    #     website = "https://www.google.com"
-    #     job_title = "Software Engineer"
-    #     period = "Feb 2021 - present"
+[[extra.resume.experiences]]
+    [extra.resume.experiences.company]
+        name = "Google"
+        website = "https://www.google.com"
+        job_title = "Software Engineer"
+        period_start = "Feb 2021"
+        period_end = "Present"
 
-    #     [[extra.resume.experiences.company.teams]]
-    #         name = "Cross Product Portal"
-    #         role = "SWE"
-    #         period = "Feb 2021 - Mar 2022"
-    #         projects = [
-    #         # "TODO"
-    #         ]
+        [[extra.resume.experiences.company.teams]]
+            name = "Chat.Next"
+            role = "Tech Lead"
+            period_start = "Mar 2022"
+            period_end = "Present"
+            projects = [
+                "Led the Google Cloud chat support product."
+            ]
 
-    #     [[extra.resume.experiences.company.teams]]
-    #         name = "Chat.Next"
-    #         role = "SWE"
-    #         period = "Mar 2022 - present"
-    #         projects = [
-    #         # "TODO"
-    #         ]
+        [[extra.resume.experiences.company.teams]]
+            name = "Cross Product Portal"
+            role = "Software Engineer"
+            period_start = "Feb 2021"
+            period_end = "Mar 2022"
+            projects = [
+                "Launched the next-generation Google Cloud support platform."
+            ]
 
 [[extra.resume.experiences]]
     [extra.resume.experiences.company]
@@ -262,61 +220,73 @@ include_content = true
         description = "Electronic Health Record system with over 190 million patients worldwide"
         website = "https://www.epic.com"
         job_title = "Software Developer"
-        period = "June 2014 - Aug 2020"
+        period_start = "June 2014"
+        period_end = "Aug 2020"
 
         [[extra.resume.experiences.company.teams]]
             name = "ICU"
             role = "SD"
-            period = "Jan 2020 - Aug 2020"
+            period_start = "Jan 2020"
+            period_end = "Aug 2020"
             projects = [
-            "Created the infrastructure that allows generically integrating any video vendor's product with Epic's remote monitoring application. Previously these integrations had to be done manually and were thus extremely cost prohibitive."
+                "Designed and implemented the infrastructure that allows for easy integration of any video vendor's product."
+                #"Created the infrastructure that allows generically integrating any video vendor's product with Epic's remote monitoring application. Previously these integrations had to be done manually and were thus extremely cost prohibitive."
             ]
 
         [[extra.resume.experiences.company.teams]]
             name = "Special Projects (aka Skunkworks)"
             role = "SD"
             # description: Task force that meant to advance framework and improve developer retention
-            period = "Jan 2019 - Dec 2019"
+            period_start = "Jan 2019"
+            period_end = "Dec 2019"
             projects = [
-            "Updated the web framework to support something akin to \"hot reloading,\" whereby developers would be able to see their UI changes in near realtime.",
-            "Improved Epic's integration with version control tools, saving time and reducing user error.",
+                "Improved developer experience. Initiaties include: hot reloading, improving integration with an antiquated version control system, reducing boilerplate for new views, and improving fleet-wide performance via heavy use of immutable objects."
+            # "Updated the web framework to support something akin to \"hot reloading,\" whereby developers would be able to see their UI changes in near realtime.",
+            # "Improved Epic's integration with version control tools, saving time and reducing user error.",
             # could take out
-            "Obviated the need for two ASP.NET-specific files for all new projects, making development simpler and easier to port to other platforms.",
-            "Rewrote key parts of the core web framework to be immutable, dramatically improving performance.",
-            "Helped introduce React Functional Components to the existing architecture, which has helped foster increased reusability of components and, anecdotally, developer satisfaction.",
+            # "Obviated the need for two ASP.NET-specific files for all new projects, making development simpler and easier to port to other platforms.",
+            # "Rewrote key parts of the core web framework to be immutable, dramatically improving performance.",
+            # "Helped introduce React Functional Components to the existing architecture, which has helped foster increased reusability of components and, anecdotally, developer satisfaction.",
             ]
 
         [[extra.resume.experiences.company.teams]]
             name = "Social Care"
             role = "SD"
-            period = "Jan 2018 - Apr 2018"
+            period_start = "Jan 2018"
+            period_end = "Apr 2018"
             projects = [
-            "Created an interactive graphic of a patient's support network. It's being used today to ensure patients are properly cared for ouside of the medical setting."
+                "Created an interactive graphic of a patient's support network."
+                # "Created an interactive graphic of a patient's support network. It's being used today to ensure patients are properly cared for ouside of the medical setting."
             ]
 
         [[extra.resume.experiences.positions.teams]]
             name = "Telehealth"
             role = "SD"
-            period = "May 2017 - Dec 2018"
+            period_start = "May 2017"
+            period_end = "Dec 2018"
             projects = [
-            "Lead architect on flagship product that allows for organizations to pool resources for virtual care. This improved availability of these services, reduced patient wait times, and reduced unnecessary usage of in-person facilities."
+                "Lead architect on flagship product that allows for organizations to pool resources for virtual care."
+                # "Lead architect on flagship product that allows for organizations to pool resources for virtual care. This improved availability of these services, reduced patient wait times, and reduced unnecessary usage of in-person facilities."
             ]
 
         [[extra.resume.experiences.company.teams]]
             name = "Endocrinology"
             role = "SD"
-            period = "Nov 2016 - Apr 2017"
+            period_start = "Nov 2016"
+            period_end = "Apr 2017"
             projects = [
-            "Part of small team that pioneered Epic's first Endocrinology module."
-            # - "Part of small team that pioneered Epic's first Endocrinology module: a tool that standardized recording and displaying insulin instructions."
+                "Part of small team that pioneered Epic's first Endocrinology module."
+                # - "Part of small team that pioneered Epic's first Endocrinology module: a tool that standardized recording and displaying insulin instructions."
             ]
 
         [[extra.resume.experiences.company.teams]]
             name = "MyChart"
             role = "SD"
             description = "Team that builds the website patients use to connect to their healthcare organization"
-            period = "Jan 2016 - Aug 2016"
+            period_start = "Jan 2016"
+            period_end = "Aug 2016"
             projects = [
-            "Improved performance of graphing infrastructure by ~25%."
+                "Improved performance of graphing infrastructure."
+                # "Improved performance of graphing infrastructure by ~25%."
             ]
 

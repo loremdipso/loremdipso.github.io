@@ -28,9 +28,11 @@
                 <a class="company-name" href="{{- experience.company.website -}}">
                     {{- experience.company.name -}}
                 </a>
+                {% if experience.company.description %}
                 <div class="subtitle">{{- experience.company.description -}}</div>
+                {% endif %}
             </div>
-            <div class="period">{{- experience.company.period -}}</div>
+            {{ macros::period(start=experience.company.period_start, end=experience.company.period_end) }}
         </div>
 
         {% for team in experience.company.teams %}
@@ -39,8 +41,11 @@
                 <div class="name">
                     <span class="left-label">{{- config.extra.strings.team -}}</span>
                     <span>{{- team.name -}}</span>
+                    {% if team.role %}
+                        ({{- team.role -}})
+                    {% endif %}
                 </div>
-                <div class="period">{{- team.period -}}</div>
+                {{ macros::period(start=team.period_start, end=team.period_end) }}
             </div>
 
             {% for project in team.projects %}
@@ -65,7 +70,7 @@
                 {% endif %}
             </div>
 
-            <div class="period">{{- education.period -}}</div>
+            {{ macros::period(start=education.period_start, end=education.period_end) }}
         </div>
         {% endfor %}
     </div>
