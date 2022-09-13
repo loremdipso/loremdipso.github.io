@@ -13,18 +13,27 @@
             <pubDate>Thu, 27 Jan 2022 00:00:00 +0000</pubDate>
             <link>https://loremdipso.com/posts/secret-santa-saga/</link>
             <guid>https://loremdipso.com/posts/secret-santa-saga/</guid>
-            <description>
-&lt;p&gt;
-    &lt;picture&gt;&lt;img
-            title=&quot;OMG IT&amp;#x27;S SANTA!&quot;
-            loading=&quot;lazy&quot;
-            decoding=&quot;async&quot;
-            alt=&quot;Santa!&quot;
-            src=&quot;&amp;#x2F;posts&amp;#x2F;secret-santa-saga&amp;#x2F;santa.svg&quot;
-            width=&quot;552&quot;
-            height=&quot;485&quot;
-            style=&quot;max-height: 300px&quot;
-        &gt;
+            <description>&lt;p&gt;
+    &lt;picture&gt;
+    &lt;picture&gt;
+      
+      
+
+      
+        
+        
+        
+       
+
+      &lt;img src=&quot;&#x2F;posts&#x2F;secret-santa-saga&#x2F;santa.svg&quot;
+        alt=&quot;Santa!&quot;
+        title=&quot;OMG IT&amp;#x27;S SANTA!&quot;
+        
+        loading=&quot;lazy&quot; decoding=&quot;async&quot;
+        style=&quot;max-height: 300px&quot;
+        width=&quot;552&quot; height=&quot;552&quot; &#x2F;&gt;
+    &lt;&#x2F;picture&gt;
+
     &lt;&#x2F;picture&gt;
 &lt;&#x2F;p&gt;&lt;h2 id=&quot;the-end-result&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#the-end-result&quot; aria-label=&quot;Anchor link for: the-end-result&quot;&gt;The End Result&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
 &lt;p&gt;Before you commit to reading this thing, here&#x27;re the final versions of this app: &lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;loremdipso.com&#x2F;secret_santa&#x2F;&quot;&gt;Svelte&lt;&#x2F;a&gt;, &lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;loremdipso.com&#x2F;secret_santa_react&#x2F;&quot;&gt;React&lt;&#x2F;a&gt;. In future I&#x27;ll only be updating the Svelte version.&lt;&#x2F;p&gt;
