@@ -9,7 +9,7 @@ taxonomies: {
 }
 ---
 
-{{ image(alt="Santa!", path="content/posts/11-secret-santa/santa.svg", title="OMG IT'S SANTA!", max_height=300) }}
+{{ image(alt="Santa!", path="santa.svg", title="OMG IT'S SANTA!", max_height=300) }}
 
 ## The End Result
 

@@ -26,7 +26,7 @@
                         {%if page.extra.alt and page.extra.thumbnail %}
                             {{ macros::responsive_image(
                                 path=page.extra.thumbnail,
-                                text=page.extra.alt,
+                                alt=page.extra.alt,
                                 new_width=500,
                             ) }}
                         {% endif %}

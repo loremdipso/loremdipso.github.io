@@ -69,7 +69,7 @@ TODO: use this
   </div>
 {% endmacro posts_group %}
 
-{% macro responsive_image(path, text, class=false, is_preemptive=false, new_width=0) %}
+{% macro responsive_image(path, alt, class=false, is_preemptive=false, new_width=0) %}
     <picture>
       {% set width = 0 %}
       {% set height = 0 %}
@@ -90,7 +90,7 @@ TODO: use this
         {% set height = meta.width %}
       {% endif %} 
 
-      <img src="{{ path | safe }}" alt="{{ text }}" {% if class %}class="{{ class }}"{% endif %}
+      <img src="{{ path | safe }}" alt="{{ alt }}" {% if class %}class="{{ class }}"{% endif %}
         {% if not is_preemptive %}loading="lazy" decoding="async"{% endif %}
         width="{{ width }}" height="{{ height }}" />
     </picture>
