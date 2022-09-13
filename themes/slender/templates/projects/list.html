@@ -23,13 +23,13 @@
                     <a href="{{ page.extra.link | safe }}">
                         <h2>{{page.title}}</h2>
 
-                        {%if page.extra.alt and page.extra.thumbnail %}
-                            {{ macros::responsive_image(
+                        {%if page.extra.alt and page.extra.thumbnail %}{{
+                            macros::responsive_image(
                                 path=page.extra.thumbnail,
                                 alt=page.extra.alt,
                                 new_width=500,
-                            ) }}
-                        {% endif %}
+                            )
+                        }}{% endif %}
                     </a>
 
                     {{ page.content | safe }}

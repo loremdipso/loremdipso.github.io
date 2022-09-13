@@ -11,11 +11,6 @@
   {{- get_url(path=path, trailing_slash=false) | split(pat='/') | last -}}
 {% endmacro anchor_id %}
 
-{% macro post_image_url(path) %}
-  {% set url = path | replace(from="/content", to="") %}
-  {{- url | safe -}}
-{% endmacro post_image_url %}
-
 {% macro icon(name) %}
   <span class="inline-svg" >
     {% set fname = "themes/slender/static/icons/" ~ name ~ ".svg" %}
@@ -69,12 +64,12 @@ TODO: use this
   </div>
 {% endmacro posts_group %}
 
-{% macro responsive_image(path, alt, class=false, is_preemptive=false, new_width=0) %}
+{% macro responsive_image(path, alt, title="", class=false, is_preemptive=false, new_width=0, max_height=0) %}
     <picture>
       {% set width = 0 %}
       {% set height = 0 %}
 
-      {% if new_width > 0 %}
+      {% if new_width > 0 and path is matching("(png|jpg|jpeg|webp)$") %}
         {% set new_image = resize_image(path=path, width=new_width, op="fit_width", format="webp") %}
         {% set width = new_image.width %}
         {% set height = new_image.height %}
@@ -90,8 +85,12 @@ TODO: use this
         {% set height = meta.width %}
       {% endif %} 
 
-      <img src="{{ path | safe }}" alt="{{ alt }}" {% if class %}class="{{ class }}"{% endif %}
+      <img src="{{ path | safe }}"
+        alt="{{ alt }}"
+        {% if title %}title="{{ title }}"{% endif %}
+        {% if class %}class="{{ class }}"{% endif %}
         {% if not is_preemptive %}loading="lazy" decoding="async"{% endif %}
+        {% if max_height %}style="max-height: {{max_height}}px"{% endif %}
         width="{{ width }}" height="{{ height }}" />
     </picture>
 {% endmacro responsive_image %}
