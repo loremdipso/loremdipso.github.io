@@ -42,8 +42,7 @@ end
 
 def main(args)
   template = get_template()
-  title = readline("Title of content: ")
-  #slug = readline("Content slug (snake-case): ")
+  title = readline("Title of content (human readable): ")
   slug = fake_snakecase(title)
   description = readline("Description of content: ")
   tags = readline("Tags (comma-separated): ").split(",").map(&:strip)
@@ -63,12 +62,15 @@ def main(args)
   puts "Done :)"
 end
 
-def get_output_path(slug, use_folder)
+def get_output_path(slug, use_assets_folder)
   # TODO: deal with non-draft/numeric prefixes. For now just prefix with 'draft'
-  path = File.join(".", "content", "posts", "draft-%s.md" % slug)
-  if use_folder
+  path = File.join(".", "content", "posts", "draft-%s" % slug)
+  if use_assets_folder
     Dir.mkdir(path)
+    Dir.mkdir(File.join(path, "assets"))
     path = File.join(path, "index.md")
+  else
+    path += ".md"
   end
   return path
 end

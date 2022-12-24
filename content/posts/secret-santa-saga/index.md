@@ -7,7 +7,7 @@ description: "Dive deep into my Secret Santa obsession"
 taxonomies: { tags: ["one-shot", "performance", "svelte"] }
 ---
 
-{{ image(alt="Santa!", path="santa.svg", title="OMG IT'S SANTA!", max_height=300) }}
+{{ image(alt="Santa!", path="assets/santa.svg", title="OMG IT'S SANTA!", max_height=300) }}
 
 ## The End Result
 
