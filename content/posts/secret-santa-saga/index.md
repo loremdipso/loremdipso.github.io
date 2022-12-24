@@ -4,9 +4,7 @@ date: 2022-01-27
 draft: false
 slug: "secret-santa-saga"
 description: "Dive deep into my Secret Santa obsession"
-taxonomies: {
-  tags: ["one-shot", "performance", "svelte"]
-}
+taxonomies: { tags: ["one-shot", "performance", "svelte"] }
 ---
 
 {{ image(alt="Santa!", path="santa.svg", title="OMG IT'S SANTA!", max_height=300) }}
@@ -25,7 +23,7 @@ I have a groups of friends from college that have a [Secret Santa](https://en.wi
 
 ## Initial Approach
 
-At first I wrote a simple ruby script that would generate text files whose names were the gifter and whose contents were the giftee. The organizer would then send an email out to everyone, attaching the correct file to each email. This worked, but was relatively inflexible. Plus previous years didn't automatically carry over, so the organizer would have to
+At first I wrote a simple ruby script that would generate text files whose names were the gifter and whose contents were the giftee. The organizer would then send an email out to everyone, attaching the correct file to each email. This worked, but was relatively inflexible. Plus previous years didn't automatically carry over, so the organizer would have to manually update the ruby script with those pairings and prune old ones when there were too many for the script to find a valid solution.
 
 ## Existing Solutions
 
