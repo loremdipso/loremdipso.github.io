@@ -64,7 +64,8 @@ end
 
 def get_output_path(slug, use_assets_folder)
   # TODO: deal with non-draft/numeric prefixes. For now just prefix with 'draft'
-  path = File.join(".", "content", "posts", "draft-%s" % slug)
+  #path = File.join(".", "content", "posts", "draft-%s" % slug)
+  path = File.join(".", "content", "posts", slug)
   if use_assets_folder
     Dir.mkdir(path)
     Dir.mkdir(File.join(path, "assets"))

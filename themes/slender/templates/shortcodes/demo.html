@@ -1,0 +1,9 @@
+{% import "macros.html" as macros %}
+
+<div class="demo">
+    {%- set js_path = "/demos/" ~ key ~ ".js" -%}
+
+    {{ macros::script(path=js_path, is_module=true) }}
+
+    <div id="{{ key }}"></div>
+</div>
