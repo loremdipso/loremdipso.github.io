@@ -15,6 +15,7 @@ Before starting this project let's take a quick peek at the Svelte repo. Oh, huh
 
 ```html
 <span>Hello world!</span>
+
 <span>Goodbye!</span>
 ```
 

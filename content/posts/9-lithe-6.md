@@ -4,9 +4,7 @@ description: "Continued exploration of Lithe, an attempt at re-writing the Svelt
 slug: "lithe-6"
 date: 2022-01-13
 draft: false
-taxonomies: {
-  tags: ["lithe", "devlog", "svelte"]
-}
+taxonomies: { tags: ["lithe", "devlog", "svelte"] }
 ---
 
 ## Excuses

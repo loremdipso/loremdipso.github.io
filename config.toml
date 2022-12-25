@@ -29,7 +29,10 @@ taxonomies = [
 highlight_code = true
 
 # A list of directories used to search for additional `.sublime-syntax` and `.tmTheme` files.
-extra_syntaxes_and_themes = []
+extra_syntaxes_and_themes = [
+    # This doesn't seem to work for svelte files :/
+    "syntaxes",
+]
 
 # The theme to use for code highlighting.
 # See below for list of allowed values.

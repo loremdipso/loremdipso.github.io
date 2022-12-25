@@ -15,16 +15,108 @@ Let's find out.
 
 ## Creating the Bundle
 
-I hear that [Svelte](https://svelte.dev/) is great at integrating into existing applications. You just give it some home during initialization and it goes from there.
+I hear that [Svelte](https://svelte.dev/) is great at integrating into existing applications. You just give it some home in the `DOM` as an initialization argument and away it goes:
+
+```ts
+import Counter from "./demos/Counter.svelte";
+
+const app = new Counter({
+	target: document.getElementById("counter"),
+});
+
+export default app;
+```
+
+Let's make the classic simple counter for our test:
+
+```html
+<script lang="ts">
+	let count: number = 0;
+	const increment = () => {
+		count += 1;
+	};
+</script>
+
+<main>
+	<button on:click="{increment}">Clicked {count} times</button>
+</main>
+```
+
+We're using [Vite](https://vitejs.dev/) to build, and we'd like a separate JS bundle for each demo. As of Vite 3.2 we can use multiple lib entry points, like so:
+
+```ts
+export default defineConfig(({ command }) => ({
+	plugins: [svelte()],
+
+	cacheDir: "temp",
+
+	build: {
+		// Build to a common location accessible to Zola
+		outDir: "../static/demos",
+
+		sourcemap: command === "serve",
+		minify: "esbuild",
+		lib: {
+			entry: {
+				counter: "./src/counter.ts",
+			},
+			formats: ["es"],
+		},
+	},
+}));
+```
+
+While we're at it I'd like to have a test page to test out some of these demos, and that list of entries would be useful there, so let's extract that out:
+
+```ts
+export const demos = {
+	counter: "./src/counter.ts",
+};
+
+export default defineConfig(({ command }) => ({
+	// ...cut
+	build: {
+		// ...cut
+		lib: {
+			entry: {
+				counter: "./src/counter.ts",
+			},
+		},
+	},
+}));
+```
 
 ## Embedding the Bundle
 
--   Shortcode
--   Consistent naming
--   Only rebuild when necessary
+On the Zola side of things we can use a [shortcode](https://www.getzola.org/documentation/content/shortcodes/) to do our dirty work. So if we say our shortcode lives in `demo.html` and looks like this:
 
-## Test
+```html
+<div class="demo">
+    {%- set js_path = "/demos/" ~ key ~ ".js" -%}
+    {%- set js_path = get_url(path=js_path, trailing_slash=false, cachebust=true) -%}
+    {%- set js_path = js_path | replace(from=config.base_url, to="") -%}
 
-Will this work?
+    <script src="{% js_path %} type="module" crossorigin="anonymous"></script>
+    <div id="{{ key }}"></div>
+</div>
+```
 
-{{ demo(key="counter") }}
+Then to use in markdown we'd do something like:
+
+```md
+Will this work? Let's see: {{/* demo(key="counter") */}}
+```
+
+Will this work? Let's see: {{ demo(key="counter") }}
+
+Hooray! 🥳
+
+## Future work
+
+It's a bit unfortunate that to make a new demo I need to:
+
+1.  Modify a constant
+1.  Create a `.ts` file
+1.  Create the actual demo
+
+It'd be a bit cleaner to do away with the `.ts` file entirely, or generate it during build time from a template. But I'll save that work for another day.

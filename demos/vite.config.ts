@@ -12,7 +12,7 @@ export default defineConfig(({ command }) => ({
 		outDir: "../static/demos",
 		sourcemap: command === "serve",
 		minify: "esbuild",
-		emptyOutDir: true,
+		emptyOutDir: false, // just in case
 		copyPublicDir: false,
 		lib: {
 			entry: demos,
