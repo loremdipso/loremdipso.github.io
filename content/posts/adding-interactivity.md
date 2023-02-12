@@ -3,8 +3,8 @@ title: "Adding Interactivity"
 description: "Static sites are cool and all, but what about interactive demos???"
 slug: adding-interactivity
 date: 2022-12-24
-draft: true
-taxonomies: { tags: [] }
+draft: false
+taxonomies: { tags: ["mini", "svelte", "software"] }
 ---
 
 ## Looking For Problems To Solve
@@ -15,7 +15,7 @@ Let's find out.
 
 ## Creating the Bundle
 
-I hear that [Svelte](https://svelte.dev/) is great at integrating into existing applications. You just give it some home in the `DOM` as an initialization argument and away it goes:
+I hear that [Svelte](https://svelte.dev/) is great at integrating into existing applications. You just give it some home in the `DOM` as an argument and away it goes:
 
 ```ts
 import Counter from "./demos/Counter.svelte";
@@ -101,7 +101,7 @@ On the Zola side of things we can use a [shortcode](https://www.getzola.org/docu
 </div>
 ```
 
-Then to use in markdown we'd do something like:
+Then to use in markdown we could do something like:
 
 ```md
 Will this work? Let's see: {{/* demo(key="counter") */}}
@@ -109,14 +109,14 @@ Will this work? Let's see: {{/* demo(key="counter") */}}
 
 Will this work? Let's see: {{ demo(key="counter") }}
 
-Hooray! 🥳
+Et voilà! 🥳
 
 ## Future work
 
 It's a bit unfortunate that to make a new demo I need to:
 
-1.  Modify a constant
-1.  Create a `.ts` file
+1.  Modify an object
+1.  Create a shell `.ts` file
 1.  Create the actual demo
 
 It'd be a bit cleaner to do away with the `.ts` file entirely, or generate it during build time from a template. But I'll save that work for another day.
