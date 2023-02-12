@@ -15,7 +15,7 @@
   <h1>Tags</h1>
 
   <div class="tags-list">
-    {% for tag in terms %}
+    {% for tag in terms | sort(attribute='name') %}
       <a class="tag" href="{{ get_taxonomy_url(kind='tags', name=tag.slug) }}">
         {{ tag.name }}<span class="muted">{{ tag.pages | length }}</span>
       </a>

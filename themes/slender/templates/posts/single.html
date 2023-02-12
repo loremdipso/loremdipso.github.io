@@ -22,22 +22,21 @@
 				<h1>{{ page.title }}</h1>
 				<hr />
 
-				<div class="post-metadata">
-					<span>{{ page.date | date(format=config.extra.params.dateform) }}</span>
-					&middot;
-					<span>{{ page.word_count / 220.0 | round }} minute read</span>
+				<div class="post-subheader">
+					<div class="post-metadata">
+						{{ page.date | date(format=config.extra.params.dateform) }}
+						&middot;
+						{{ page.word_count / 220.0 | round }} minute read
+					</div>
 
 					{% if page.taxonomies.tags %}
-					&middot;
-					<span class="tags">
-						{% for tag in page.taxonomies.tags %}
-							<span class="tag">
-								<a href="{{get_taxonomy_url(kind='tags', name=tag)}}">
-									{{ macros::icon(name="tags") }}{{tag}}
-								</a>
-							</span>
+					<div class="tags">
+						{% for tag in page.taxonomies.tags | sort %}
+							<a href="{{get_taxonomy_url(kind='tags', name=tag)}}" class="tag">
+								{{ macros::icon(name="tags") }}{{tag}}
+							</a>
 						{% endfor %}
-					</span>
+						</div>
 					{% endif %}
 				</div>
 			</header>
@@ -72,26 +71,20 @@
 			</div>
 		</article>
 
-		<div class="sibling-post-links">
-            {% if page.higher %}
-			<a href="{{ macros::rel_url(path=page.higher.permalink) }}" class="previous-post">
-				<span class="label">
-                    {{ macros::icon(name="previous") }}&nbsp;
-					{{ config.extra.strings.previous }}
-				</span>
-                <br>
-                <span class="title">{{ page.higher.title }}</span>
+		<hr>
+
+		<div class="suggested-post-links">
+			<h3>{{ config.extra.strings.suggested_reading }}</h3>
+
+            {% if page.lower %}
+			<a href="{{ macros::rel_url(path=page.lower.permalink) }}">
+				{{ config.extra.strings.next }}: <b>{{ page.lower.title }}</b>
 			</a>
 			{% endif %}
 
-            {% if page.lower %}
-			<a href="{{ macros::rel_url(path=page.lower.permalink) }}" class="next-post">
-				<span class="label">
-					{{ config.extra.strings.next }}&nbsp;
-                    {{ macros::icon(name="next") }}
-				</span>
-				<br>
-                <span class="title">{{ page.lower.title }}</span>
+            {% if page.higher %}
+			<a href="{{ macros::rel_url(path=page.higher.permalink) }}">
+				{{ config.extra.strings.previous }}: <b>{{ page.higher.title }}</b>
 			</a>
 			{% endif %}
 		</div>

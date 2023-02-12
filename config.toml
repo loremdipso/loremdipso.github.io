@@ -105,6 +105,7 @@ truncate_content_length = 100
     not_found = "Sorry, I couldn't find that page :/"
     copy = "Copy"
     table_of_contents = "Contents"
+    suggested_reading = "Suggested reading"
     next = "Up next"
     previous = "Previously"
 

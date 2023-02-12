@@ -108,16 +108,27 @@ article {
 		}
 	}
 
+	.post-subheader {
+		display: flex;
+		flex-wrap: wrap;
+		column-gap: 20px;
+		align-items: center;
+	}
+
+	.post-metadata {
+		white-space: nowrap;
+	}
+
 	.tags {
+		display: inline-block;
 		font-size: 0.8rem;
 		line-height: normal;
 		opacity: 0.6;
 
 		.tag {
+			display: inline-block;
 			white-space: nowrap;
-			&:not(:last-child) {
-				padding-right: 5px;
-			}
+			padding: 5px;
 		}
 	}
 
@@ -168,37 +179,17 @@ article {
 	}
 }
 
-.sibling-post-links {
+.suggested-post-links {
 	display: flex;
-	justify-content: space-between;
-
-	$margin: 6px;
-
-	> * {
-		box-sizing: border-box;
-		width: calc(50% - #{$margin});
-		display: flex;
-		flex-direction: column;
-		background: black;
-		border-radius: 6px;
-		padding: 1rem;
+	flex-direction: column;
+	padding: 1rem;
+	background-color: $color-header-background;
+	h3 {
+		margin-top: 0;
+		text-align: center;
 	}
-
-	.next-post {
-		text-align: right;
-	}
-
-	.title {
-		white-space: nowrap;
-		text-overflow: ellipsis;
-		max-width: 100%;
-		overflow: hidden;
-	}
-
-	.label {
-		font-size: 0.8em;
-		opacity: 0.8;
-		text-transform: uppercase;
+	a {
+		padding: 1rem 0;
 	}
 }
 
