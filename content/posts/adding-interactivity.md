@@ -111,12 +111,35 @@ Will this work? Let's see: {{ demo(key="counter") }}
 
 Et voilà! 🥳
 
-## Future work
+## Automation
 
-It's a bit unfortunate that to make a new demo I need to:
+It's a bit unfortunate that to make a new demo I need to manually:
 
 1.  Modify an object
 1.  Create a shell `.ts` file
 1.  Create the actual demo
 
-It'd be a bit cleaner to do away with the `.ts` file entirely, or generate it during build time from a template. But I'll save that work for another day.
+It'd be a bit cleaner to do away with the `.ts` file entirely, or generate it during build time from a template, so let's do that. It's a bit easier to do it with a script, so let's do that.
+
+## Styles
+
+The way Svelte handles styles is [quite interesting](https://svelte.dev/tutorial/styling) (sort of reminiscent of Angular [component styles](https://angular.io/guide/component-styles) but without any shadow DOM nonsense) but for our purposes are not ideal. We either need to export a separate `css` file per entrypoint and explicitly include it with our shortcode or else pretend it's [1994](https://levelup.gitconnected.com/a-brief-history-of-css-in-js-how-we-got-here-and-where-were-going-ea6261c19f04) and use [CSS-in-JS](https://en.wikipedia.org/wiki/CSS-in-JS). OR we lean on the lovely [vite-plugin-css-injected-by-js](https://www.npmjs.com/package/vite-plugin-css-injected-by-js) package to do that for us. We simply need to add it to our vite config like so:
+
+```ts
+export default defineConfig(({ command }) => ({
+	plugins: [svelte(), cssInjectedByJsPlugin()],
+	// ...cut
+});
+```
+
+And it'll muck around in our JS bundle and have it insert styles directly into the page's header. Generally not a practice I like, but for our single-file demos this is just about perfect. I say just about since by default in a multi-output project this plugin just sort of picks one. To remedy this we simply need to provide a `jsAssetsFilterFunction` and we'll just have it return true:
+
+```ts
+cssInjectedByJsPlugin({
+	jsAssetsFilterFunction: () => {
+		return true;
+	},
+}),
+```
+
+That's it for now, hope you enjoyed. Come back soon!

@@ -1,5 +1,15 @@
 <script lang="ts">
 	export let fullscreen = false;
+
+	$: {
+		// NOTE: this is hacky and I'm sorry :(
+		// But not that sorry >:)
+		if (fullscreen) {
+			document.body.style.overflow = "hidden";
+		} else {
+			document.body.style.overflow = "";
+		}
+	}
 </script>
 
 <main class:fullscreen>
@@ -13,7 +23,7 @@
 		position: relative;
 
 		&.fullscreen {
-			position: absolute;
+			position: fixed;
 			width: 100vw;
 			height: 100vh;
 			left: 0;

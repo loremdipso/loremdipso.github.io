@@ -65,8 +65,11 @@
 		flex-direction: column;
 		background-color: black;
 
-		textarea {
+		textarea,
+		.bars {
 			font-size: 1rem;
+			color: white;
+			background-color: black;
 		}
 
 		&.fullscreen {
@@ -91,7 +94,7 @@
 		.bar {
 			padding: 0 0.5rem;
 			margin: 0 0.5rem;
-			background-color: grey;
+			background-color: #303030;
 		}
 	}
 </style>

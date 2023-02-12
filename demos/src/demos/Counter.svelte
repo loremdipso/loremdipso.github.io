@@ -10,3 +10,10 @@
 		Clicked {count} times
 	</button>
 </main>
+
+<style lang="scss">
+	main {
+		display: flex;
+		justify-content: center;
+	}
+</style>
