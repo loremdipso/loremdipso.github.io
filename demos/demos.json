@@ -1,1 +1,4 @@
-{ "counter": "./src/counter.ts" }
+{
+	"counter": "./src/counter.ts",
+	"hip_hop_helper_v1": "./src/hip_hop_helper_v1.ts"
+}
