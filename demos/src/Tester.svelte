@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { demos } from "../demos";
+	import demos from "../demos.json";
 
 	const QUERY_PARAM = "demo";
 	const keys = Object.keys(demos);
