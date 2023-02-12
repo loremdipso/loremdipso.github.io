@@ -5,9 +5,9 @@ require 'json'
 require 'erb'
 
 BOOTSTRAP_TEMPLATE = ERB.new <<~EOF
-  import <%= capitalized_name %> from "./demos/<%= capitalized_name %>.svelte";
+  import <%= title_name %> from "./demos/<%= title_name %>.svelte";
 
-  const app = new <%= capitalized_name %>({
+  const app = new <%= title_name %>({
   	target: document.getElementById("<%= name %>"),
   });
 
@@ -25,6 +25,7 @@ EOF
 
 def new_demo(name)
   usage unless valid_name(name)
+  name = name.downcase
 
   demos_filename = 'demos.json'
   Dir.chdir(File.dirname(__FILE__)) do
@@ -42,7 +43,7 @@ def new_demo(name)
 end
 
 def create_demo(name)
-  demo_filename = "./src/demos/#{name.capitalize}.svelte"
+  demo_filename = "./src/demos/#{get_title_name(name)}.svelte"
   File.open(demo_filename, 'w') do |f|
     f.puts(DEMO_TEMPLATE.result_with_hash({}))
   end
@@ -53,7 +54,7 @@ end
 def create_bootstrap(name)
   hash = {
     name: name,
-    capitalized_name: name.capitalize
+    title_name: get_title_name(name)
   }
 
   bootstrap_filename = "./src/#{name}.ts"
@@ -62,6 +63,11 @@ def create_bootstrap(name)
   end
 
   bootstrap_filename
+end
+
+def get_title_name(name)
+  pieces = name.split(/[_-]/)
+  pieces.map(&:capitalize).join
 end
 
 def valid_name(name)
