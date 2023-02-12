@@ -119,7 +119,7 @@ It's a bit unfortunate that to make a new demo I need to manually:
 1.  Create a shell `.ts` file
 1.  Create the actual demo
 
-It'd be a bit cleaner to do away with the `.ts` file entirely, or generate it during build time from a template, so let's do that. It's a bit easier to do it with a script, so let's do that.
+It'd be a bit cleaner to do away with the `.ts` file entirely, or else generate it during build time from a template, but it's a bit easier to just automate these steps with a script so let's just do that for now.
 
 ## Styles
 
