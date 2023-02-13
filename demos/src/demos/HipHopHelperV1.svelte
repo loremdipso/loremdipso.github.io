@@ -71,13 +71,15 @@
 			font-size: 1rem;
 			color: white;
 			background-color: black;
+			overflow: auto;
+			height: 2rem;
 		}
 
 		&.fullscreen {
 			textarea,
 			.bars {
 				height: 50vh;
-				overflow: auto;
+				max-height: 50vh;
 			}
 
 			.bars .inner {

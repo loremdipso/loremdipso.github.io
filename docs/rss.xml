@@ -30,7 +30,7 @@
 &lt;p&gt;With that, this is what we get:&lt;&#x2F;p&gt;
 &lt;div class=&quot;demo&quot;&gt;
     &lt;script
-      src=&quot;&#x2F;demos&amp;#x2F;hip_hop_helper_v1.js?h=06ee4a7265e2cc4a6f3925be292865cf2f423b0f7077e74b8b58e4bbb513d10a&quot;
+      src=&quot;&#x2F;demos&amp;#x2F;hip_hop_helper_v1.js?h=1c0efba3b0c1211d84e0c7496c413cc36f9d4f05b843af3caf29fcec866845e7&quot;
       async
       type=&quot;module&quot;
       crossorigin=&quot;anonymous&quot;&gt;
@@ -49,8 +49,8 @@
 &lt;li&gt;Splitting&#x2F;joining syllables to indicate how it&#x27;s spoken&lt;&#x2F;li&gt;
 &lt;li&gt;Support multiple stanzas&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
-&lt;p&gt;This seems a bit short, but I think I&#x27;ve done just about everything I set out to do with this prototype. Next I&#x27;ll do a bit of research and come back with a gameplan and we&#x27;ll (hopefully) make something actually useful. Wouldn&#x27;t that be fun? Anyway, until next time.&lt;&#x2F;p&gt;
-&lt;p&gt;Love,
+&lt;p&gt;This seems a bit short, but I think I&#x27;ve done just about everything I set out to do with this prototype. Next I&#x27;ll do a bit of research and come back with a gameplan and we&#x27;ll (hopefully) make something actually useful. Wouldn&#x27;t that be fun? Anyway, until next time,&lt;&#x2F;p&gt;
+&lt;p&gt;Stay frosty,
 Michael ❤️&lt;&#x2F;p&gt;
 </description>
         </item>
@@ -127,7 +127,7 @@ Michael ❤️&lt;&#x2F;p&gt;
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;Will this work? Let&#x27;s see: &lt;div class=&quot;demo&quot;&gt;
     &lt;script
-      src=&quot;&#x2F;demos&amp;#x2F;counter.js?h=c67358c42ad4fbd1c43bd8c6639166157a75b92e25c1f0bfaf18c3b3858b68c9&quot;
+      src=&quot;&#x2F;demos&amp;#x2F;counter.js?h=7136e20ee0e9414cf8d0029dd0fca3a4da5a65e22b4a8e9074353e8239465c50&quot;
       async
       type=&quot;module&quot;
       crossorigin=&quot;anonymous&quot;&gt;

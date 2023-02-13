@@ -14,6 +14,9 @@ html {
 
 .app-header {
 	background-color: $color-header-background;
+	position: fixed;
+	width: 100%;
+	z-index: 100;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -52,7 +55,7 @@ html {
 		}
 
 		a {
-			padding: 16px;
+			padding: 12px;
 		}
 	}
 
@@ -80,7 +83,7 @@ html {
 	justify-content: space-around;
 
 	a {
-		padding: 16px;
+		padding: 12px;
 	}
 
 	svg {
@@ -94,6 +97,7 @@ html {
 	flex-direction: column;
 	min-height: 100%;
 	flex-grow: 1;
+	margin-top: 2rem;
 }
 
 body {

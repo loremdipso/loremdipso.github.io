@@ -2,10 +2,6 @@
 
 {% import "macros.html" as macros %}
 
-{% block header %}
-    {% include "partials/header.html" %}
-{% endblock header %}
-
 {% block extra_includes %}
   {{ macros::inline_style(path='tags.css') }}
 {% endblock extra_includes %}

@@ -1,5 +1,5 @@
-(function(){"use strict";try{if(typeof document<"u"){var e=document.createElement("style");e.appendChild(document.createTextNode("main.svelte-x27xhg{display:flex;justify-content:center}main.svelte-e7todb{position:relative}main.fullscreen.svelte-e7todb{position:fixed;width:100vw;height:100vh;left:0;top:0;z-index:1000}button.svelte-e7todb{position:absolute;right:0;bottom:0}.bar.svelte-13x1b4a{padding:0 .5rem;margin:0 .1rem;background-color:#303030;text-align:center}.fade-in.svelte-13x1b4a{animation:svelte-13x1b4a-fadeIn .4s}@keyframes svelte-13x1b4a-fadeIn{0%{background-color:#f9e076}}.container.svelte-10hhzd9.svelte-10hhzd9{display:flex;width:100%;height:100%;flex-direction:column;background-color:#000}.container.svelte-10hhzd9 textarea.svelte-10hhzd9,.container.svelte-10hhzd9 .bars.svelte-10hhzd9{font-size:1rem;color:#fff;background-color:#000}.container.fullscreen.svelte-10hhzd9 textarea.svelte-10hhzd9,.container.fullscreen.svelte-10hhzd9 .bars.svelte-10hhzd9{height:50vh;overflow:auto}.container.fullscreen.svelte-10hhzd9 .bars .inner.svelte-10hhzd9{text-align:center;padding:1rem;margin-left:auto;margin-right:auto}.line.svelte-10hhzd9.svelte-10hhzd9{margin:.5rem 0}table.svelte-10hhzd9.svelte-10hhzd9,td.svelte-10hhzd9.svelte-10hhzd9,tr.svelte-10hhzd9.svelte-10hhzd9{all:revert}")),document.head.appendChild(e)}}catch(t){console.error("vite-plugin-css-injected-by-js",t)}})();
-import { S as nr, i as rr, s as an, g as Si, e as ge, h as Xt, a as Ne, j as Zt, b as Ke, c as Ie, l as Ba, u as Li, k as Mi, m as Wi, o as je, p as Je, f as qe, q as Hi, n as kr, t as Ji, d as _i, r as Ki, v as qi, w as za, x as Sa, y as Ui, z as La, A as Ar, B as Ma, C as Wa, D as Ha } from "./index-ba35a221.js";
+(function(){"use strict";try{if(typeof document<"u"){var e=document.createElement("style");e.appendChild(document.createTextNode("main.svelte-x27xhg{display:flex;justify-content:center}main.svelte-e7todb{position:relative}main.fullscreen.svelte-e7todb{position:fixed;width:100vw;height:100vh;left:0;top:0;z-index:1000}button.svelte-e7todb{position:absolute;right:0;bottom:0}.bar.svelte-13x1b4a{padding:0 .5rem;margin:0 .1rem;background-color:#303030;text-align:center}.fade-in.svelte-13x1b4a{animation:svelte-13x1b4a-fadeIn .4s}@keyframes svelte-13x1b4a-fadeIn{0%{background-color:#f9e076}}.container.svelte-c1q05p.svelte-c1q05p{display:flex;width:100%;height:100%;flex-direction:column;background-color:#000}.container.svelte-c1q05p textarea.svelte-c1q05p,.container.svelte-c1q05p .bars.svelte-c1q05p{font-size:1rem;color:#fff;background-color:#000;overflow:auto;height:2rem}.container.fullscreen.svelte-c1q05p textarea.svelte-c1q05p,.container.fullscreen.svelte-c1q05p .bars.svelte-c1q05p{height:50vh;max-height:50vh}.container.fullscreen.svelte-c1q05p .bars .inner.svelte-c1q05p{text-align:center;padding:1rem;margin-left:auto;margin-right:auto}.line.svelte-c1q05p.svelte-c1q05p{margin:.5rem 0}table.svelte-c1q05p.svelte-c1q05p,td.svelte-c1q05p.svelte-c1q05p,tr.svelte-c1q05p.svelte-c1q05p{all:revert}")),document.head.appendChild(e)}}catch(t){console.error("vite-plugin-css-injected-by-js",t)}})();
+import { S as nr, i as rr, s as an, g as Si, e as ge, h as Xt, a as Ne, j as Zt, b as qe, c as Ie, l as Ba, u as Li, k as Mi, m as Wi, o as je, p as Je, f as Ke, q as Hi, n as kr, t as Ji, d as _i, r as qi, v as Ki, w as za, x as Sa, y as Ui, z as La, A as Ar, B as Ma, C as Wa, D as Ha } from "./index-ba35a221.js";
 function Ri(e) {
   let t, n, r, o, a, i;
   const s = e[2].default, l = Si(s, e, e[1], null);
@@ -8,7 +8,7 @@ function Ri(e) {
       t = ge("main"), l && l.c(), n = Xt(), r = ge("button"), r.textContent = "Fullscreen", Ne(r, "class", "svelte-e7todb"), Ne(t, "class", "svelte-e7todb"), Zt(t, "fullscreen", e[0]);
     },
     m(u, c) {
-      Ke(u, t, c), l && l.m(t, null), Ie(t, n), Ie(t, r), o = !0, a || (i = Ba(r, "click", e[3]), a = !0);
+      qe(u, t, c), l && l.m(t, null), Ie(t, n), Ie(t, r), o = !0, a || (i = Ba(r, "click", e[3]), a = !0);
     },
     p(u, [c]) {
       l && l.p && (!o || c & 2) && Li(
@@ -27,7 +27,7 @@ function Ri(e) {
       Je(l, u), o = !1;
     },
     d(u) {
-      u && qe(t), l && l.d(u), a = !1, i();
+      u && Ke(t), l && l.d(u), a = !1, i();
     }
   };
 }
@@ -52,13 +52,13 @@ function $r(e) {
       t = ge("div"), n = Ji(e[0]), Ne(t, "class", "bar fade-in svelte-13x1b4a");
     },
     m(r, o) {
-      Ke(r, t, o), Ie(t, n);
+      qe(r, t, o), Ie(t, n);
     },
     p(r, o) {
       o & 1 && _i(n, r[0]);
     },
     d(r) {
-      r && qe(t);
+      r && Ke(t);
     }
   };
 }
@@ -69,7 +69,7 @@ function Xi(e) {
       r.c(), n = Hi();
     },
     m(o, a) {
-      r.m(o, a), Ke(o, n, a);
+      r.m(o, a), qe(o, n, a);
     },
     p(o, [a]) {
       a & 1 && an(t, t = o[0]) ? (r.d(1), r = $r(o), r.c(), r.m(n.parentNode, n)) : r.p(o, a);
@@ -77,7 +77,7 @@ function Xi(e) {
     i: kr,
     o: kr,
     d(o) {
-      o && qe(n), r.d(o);
+      o && Ke(n), r.d(o);
     }
   };
 }
@@ -447,7 +447,7 @@ const P = R, Ns = function(e) {
       });
     }), this;
   }
-}, xr = (e) => /^\p{Lu}[\p{Ll}'’]/u.test(e) || /^\p{Lu}$/u.test(e), Gs = (e) => e.replace(/^\p{Ll}/u, (t) => t.toUpperCase()), Bs = (e) => e.replace(/^\p{Lu}/u, (t) => t.toLowerCase()), Ka = (e, t, n) => {
+}, xr = (e) => /^\p{Lu}[\p{Ll}'’]/u.test(e) || /^\p{Lu}$/u.test(e), Gs = (e) => e.replace(/^\p{Ll}/u, (t) => t.toUpperCase()), Bs = (e) => e.replace(/^\p{Lu}/u, (t) => t.toLowerCase()), qa = (e, t, n) => {
   if (n.forEach((r) => r.dirty = !0), e) {
     let r = [t, 0].concat(n);
     Array.prototype.splice.apply(e, r);
@@ -476,10 +476,10 @@ const P = R, Ns = function(e) {
   o.tags.has("ProperNoun") || o.tags.has("Acronym") || xr(o.text) && o.text.length > 1 && (o.text = Bs(o.text));
 }, Ss = function(e, t, n, r) {
   let [o, a, i] = t;
-  a === 0 || i === r[o].length ? ot(n) : (ot(n), ot([e[t[1]]])), zs(e, a, n), Ka(e, a, n);
+  a === 0 || i === r[o].length ? ot(n) : (ot(n), ot([e[t[1]]])), zs(e, a, n), qa(e, a, n);
 }, Ls = function(e, t, n, r) {
   let [o, , a] = t, i = (r[o] || []).length;
-  a < i ? (Nr(e, a, n), ot(n)) : i === a && (ot(e), Nr(e, a, n), r[o + 1] && (n[n.length - 1].post += " ")), Ka(e, t[2], n), t[4] = n[n.length - 1].id;
+  a < i ? (Nr(e, a, n), ot(n)) : i === a && (ot(e), Nr(e, a, n), r[o + 1] && (n[n.length - 1].post += " ")), qa(e, t[2], n), t[4] = n[n.length - 1].id;
 };
 let ht = 0;
 const jr = (e) => (e = e.length < 3 ? "0" + e : e, e.length < 3 ? "0" + e : e), Ms = function(e) {
@@ -491,10 +491,10 @@ const jr = (e) => (e = e.length < 3 ? "0" + e : e, e.length < 3 ? "0" + e : e), 
   o = o.length < 2 ? "0" + o : o, r += o;
   let a = parseInt(Math.random() * 36, 10);
   return r += a.toString(36), e.normal + "|" + r.toUpperCase();
-}, qa = Ms, Er = function(e) {
+}, Ka = Ms, Er = function(e) {
   e.has("@hasContraction") && typeof e.contractions == "function" && e.grow("@hasContraction").contractions().expand();
 }, Tr = (e) => Object.prototype.toString.call(e) === "[object Array]", Ws = function(e) {
-  return e = e.map((t) => (t.id = qa(t), t)), e;
+  return e = e.map((t) => (t.id = Ka(t), t)), e;
 }, Hs = function(e, t) {
   const { methods: n } = t;
   return typeof e == "string" ? n.one.tokenize.fromString(e, t)[0] : typeof e == "object" && e.isView ? e.clone().docs[0] || [] : Tr(e) ? Tr(e[0]) ? e[0] : e : [];
@@ -519,9 +519,9 @@ const jr = (e) => (e = e.length < 3 ? "0" + e : e, e.length < 3 ? "0" + e : e), 
 _e.append = _e.insertAfter;
 _e.prepend = _e.insertBefore;
 _e.insert = _e.insertAfter;
-const Js = _e, _s = /\$[0-9a-z]+/g, ar = {}, Ks = function(e) {
+const Js = _e, _s = /\$[0-9a-z]+/g, ar = {}, qs = function(e) {
   return e.replace(/\w\S*/g, (t) => t.charAt(0).toUpperCase() + t.substring(1).toLowerCase());
-}, qs = function(e, t) {
+}, Ks = function(e, t) {
   return e.forEach((n) => {
     let r = t(n);
     n.replaceWith(r);
@@ -538,7 +538,7 @@ const Js = _e, _s = /\$[0-9a-z]+/g, ar = {}, Ks = function(e) {
 ar.replaceWith = function(e, t = {}) {
   let n = this.fullPointer, r = this;
   if (this.uncache(), typeof e == "function")
-    return qs(r, e);
+    return Ks(r, e);
   e = Us(e, r);
   let o = this.update(n);
   n = n.map((s) => s.slice(0, 3));
@@ -547,7 +547,7 @@ ar.replaceWith = function(e, t = {}) {
   let i = r.toView(n).compute(["index", "lexicon"]);
   return i.world.compute.preTagger && i.compute("preTagger"), t.tags && i.terms().forEach((s, l) => {
     s.tagSafe(a[l]);
-  }), t.case && i.docs[0] && i.docs[0][0] && i.docs[0][0].index[1] === 0 && (i.docs[0][0].text = Ks(i.docs[0][0].text)), i;
+  }), t.case && i.docs[0] && i.docs[0][0] && i.docs[0][0].index[1] === 0 && (i.docs[0][0].text = qs(i.docs[0][0].text)), i;
 };
 ar.replace = function(e, t, n) {
   if (e && !t)
@@ -733,7 +733,7 @@ const tl = yt, nl = (e, t) => e.normal < t.normal ? -1 : e.normal > t.normal ? 1
     for (let n = 0; n < t.length; n += 1)
       for (let r = 0; r < t[n].length; r += 1) {
         let o = t[n][r];
-        o.id = o.id || qa(o);
+        o.id = o.id || Ka(o);
       }
   }
 }, Il = $l, xl = {
@@ -838,7 +838,7 @@ const tl = yt, nl = (e, t) => e.normal < t.normal ? -1 : e.normal > t.normal ? 1
 }, Ml = /^([0-9.]{1,4}[a-z]{0,2}) ?[-–—] ?([0-9]{1,4}[a-z]{0,2})$/i, Wl = /^([0-9]{1,2}(:[0-9][0-9])?(am|pm)?) ?[-–—] ?([0-9]{1,2}(:[0-9][0-9])?(am|pm)?)$/i, Hl = /^[0-9]{3}-[0-9]{4}$/, Jl = function(e, t) {
   let n = e[t], r = n.text.match(Ml);
   return r !== null ? n.tags.has("PhoneNumber") === !0 || Hl.test(n.text) ? null : [r[1], "to", r[2]] : (r = n.text.match(Wl), r !== null ? [r[1], "to", r[4]] : null);
-}, _l = Jl, Kl = /^([+-]?[0-9][.,0-9]*)([a-z°²³µ/]+)$/, ql = /* @__PURE__ */ new Set([
+}, _l = Jl, ql = /^([+-]?[0-9][.,0-9]*)([a-z°²³µ/]+)$/, Kl = /* @__PURE__ */ new Set([
   "st",
   "nd",
   "rd",
@@ -850,10 +850,10 @@ const tl = yt, nl = (e, t) => e.normal < t.normal ? -1 : e.normal > t.normal ? 1
   "s",
   "e"
 ]), Ul = function(e, t) {
-  let r = e[t].text.match(Kl);
+  let r = e[t].text.match(ql);
   if (r !== null) {
     let o = r[2].toLowerCase().trim();
-    return ql.has(o) ? null : [r[1], o];
+    return Kl.has(o) ? null : [r[1], o];
   }
   return null;
 }, Rl = Ul, Dr = /'/, Ql = /^[0-9][^-–—]*[-–—].*?[0-9]/, Or = function(e, t, n, r) {
@@ -1228,7 +1228,7 @@ he.lookAfter = he.after;
 he.notIf = he.ifNo;
 const Hu = function(e) {
   Object.assign(e.prototype, he);
-}, Ju = Hu, _u = /(?:^|\s)([![^]*(?:<[^<]*>)?\/.*?[^\\/]\/[?\]+*$~]*)(?:\s|$)/, Ku = /([!~[^]*(?:<[^<]*>)?\([^)]+[^\\)]\)[?\]+*$~]*)(?:\s|$)/, qu = / /g, Uu = (e) => /^[![^]*(<[^<]*>)?\(/.test(e) && /\)[?\]+*$~]*$/.test(e), zr = (e) => /^[![^]*(<[^<]*>)?\//.test(e) && /\/[?\]+*$~]*$/.test(e), Sr = function(e) {
+}, Ju = Hu, _u = /(?:^|\s)([![^]*(?:<[^<]*>)?\/.*?[^\\/]\/[?\]+*$~]*)(?:\s|$)/, qu = /([!~[^]*(?:<[^<]*>)?\([^)]+[^\\)]\)[?\]+*$~]*)(?:\s|$)/, Ku = / /g, Uu = (e) => /^[![^]*(<[^<]*>)?\(/.test(e) && /\)[?\]+*$~]*$/.test(e), zr = (e) => /^[![^]*(<[^<]*>)?\//.test(e) && /\/[?\]+*$~]*$/.test(e), Sr = function(e) {
   return e = e.map((t) => t.trim()), e = e.filter((t) => t), e;
 }, Ru = function(e) {
   let t = e.split(_u), n = [];
@@ -1237,11 +1237,11 @@ const Hu = function(e) {
       n.push(o);
       return;
     }
-    n = n.concat(o.split(Ku));
+    n = n.concat(o.split(qu));
   }), n = Sr(n);
   let r = [];
   return n.forEach((o) => {
-    Uu(o) || zr(o) ? r.push(o) : r = r.concat(o.split(qu));
+    Uu(o) || zr(o) ? r.push(o) : r = r.concat(o.split(Ku));
   }), r = Sr(r), r;
 }, Qu = Ru, Lr = /\{([0-9]+)?(, *[0-9]*)?\}/, Mr = /&&/, Yu = new RegExp(/^<\s*(\S+)\s*>/), Wr = (e) => e.charAt(0).toUpperCase() + e.substring(1), ee = (e) => e.charAt(e.length - 1), Q = (e) => e.charAt(0), tt = (e) => e.substring(1), nt = (e) => e.substring(0, e.length - 1), dt = function(e) {
   return e = tt(e), e = nt(e), e;
@@ -1389,7 +1389,7 @@ const Hu = function(e) {
   const r = pc(e, t);
   let o = Math.max(e.length, t.length);
   return 1 - (o === 0 ? 0 : r / o);
-}, mc = gc, yc = /([\u0022\uFF02\u0027\u201C\u2018\u201F\u201B\u201E\u2E42\u201A\u00AB\u2039\u2035\u2036\u2037\u301D\u0060\u301F])/, bc = /([\u0022\uFF02\u0027\u201D\u2019\u00BB\u203A\u2032\u2033\u2034\u301E\u00B4])/, Kr = /^[-–—]$/, qr = / [-–—]{1,3} /, fe = (e, t) => e.post.indexOf(t) !== -1, Ur = (e, t) => e.pre.indexOf(t) !== -1, Sn = {
+}, mc = gc, yc = /([\u0022\uFF02\u0027\u201C\u2018\u201F\u201B\u201E\u2E42\u201A\u00AB\u2039\u2035\u2036\u2037\u301D\u0060\u301F])/, bc = /([\u0022\uFF02\u0027\u201D\u2019\u00BB\u203A\u2032\u2033\u2034\u301E\u00B4])/, qr = /^[-–—]$/, Kr = / [-–—]{1,3} /, fe = (e, t) => e.post.indexOf(t) !== -1, Ur = (e, t) => e.pre.indexOf(t) !== -1, Sn = {
   hasQuote: (e) => yc.test(e.pre) || bc.test(e.post),
   hasComma: (e) => fe(e, ","),
   hasPeriod: (e) => fe(e, ".") === !0 && fe(e, "...") === !1,
@@ -1399,8 +1399,8 @@ const Hu = function(e) {
   hasSemicolon: (e) => fe(e, ";"),
   hasColon: (e) => fe(e, ":"),
   hasSlash: (e) => /\//.test(e.text),
-  hasHyphen: (e) => Kr.test(e.post) || Kr.test(e.pre),
-  hasDash: (e) => qr.test(e.post) || qr.test(e.pre),
+  hasHyphen: (e) => qr.test(e.post) || qr.test(e.pre),
+  hasDash: (e) => Kr.test(e.post) || Kr.test(e.pre),
   hasContraction: (e) => Boolean(e.implicit),
   isAcronym: (e) => e.tags.has("Acronym"),
   isKnown: (e) => e.tags.size > 0,
@@ -1690,7 +1690,7 @@ const U = tn, wc = function(e, t) {
       r[a] = r[a] || [], r[a].push(o.groups[a]);
     });
   }), { ptrs: n, byGroup: r });
-}, _c = Jc, Kc = function(e, t, n) {
+}, _c = Jc, qc = function(e, t, n) {
   return e = e.filter((r) => {
     let [o, a, i] = r.pointer, s = n[o].slice(a, i);
     for (let l = 0; l < s.length; l += 1) {
@@ -1700,7 +1700,7 @@ const U = tn, wc = function(e, t) {
     }
     return !0;
   }), e;
-}, qc = Kc, ti = function(e, t) {
+}, Kc = qc, ti = function(e, t) {
   return e.pointer[0] = t, Object.keys(e.groups).forEach((n) => {
     e.groups[n][0] = t;
   }), e;
@@ -1739,7 +1739,7 @@ const U = tn, wc = function(e, t) {
   return r[r.length - 1].end === !0 && (i = i.filter((l) => {
     let u = l.pointer[0];
     return e[u].length === l.pointer[2];
-  })), t.notIf && (i = qc(i, t.notIf, e)), i = _c(i, o), i.ptrs.forEach((l) => {
+  })), t.notIf && (i = Kc(i, t.notIf, e)), i = _c(i, o), i.ptrs.forEach((l) => {
     let [u, c, h] = l;
     l[3] = e[u][c].id, l[4] = e[u][h - 1].id;
   }), i;
@@ -2121,27 +2121,27 @@ const jh = function(e = {}) {
   for (let n = 0; n < e.length; n += 1)
     t[e[n].join(",")] = e[n];
   return Object.values(t);
-}, Kh = function(e, t) {
+}, qh = function(e, t) {
   let [n, r] = e, o = t[1], a = t[2], i = {};
   if (r < o) {
     let s = o < e[2] ? o : e[2];
     i.before = [n, r, s];
   }
   return i.match = t, e[2] > a && (i.after = [n, a, e[2]]), i;
-}, qh = function(e, t) {
+}, Kh = function(e, t) {
   return e[1] <= t[1] && t[2] <= e[2];
 }, Uh = function(e, t) {
   let n = ln(t), r = [];
   return e.forEach((o) => {
     let [a] = o, i = n[a] || [];
-    if (i = i.filter((l) => qh(o, l)), i.length === 0) {
+    if (i = i.filter((l) => Kh(o, l)), i.length === 0) {
       r.push({ passthrough: o });
       return;
     }
     i = i.sort((l, u) => l[1] - u[1]);
     let s = o;
     i.forEach((l, u) => {
-      let c = Kh(s, l);
+      let c = qh(s, l);
       i[u + 1] ? (r.push({ before: c.before, match: c.match }), c.after && (s = c.after)) : r.push(c);
     });
   }), r;
@@ -2572,7 +2572,7 @@ const ld = function(e) {
   xe(e, (t, n) => {
     t.id && (t._cache.parents = t._cache.parents || [], n._cache.parents = t._cache.parents.concat([t.id]));
   });
-}, Kd = (e, t) => (Object.keys(t).forEach((n) => {
+}, qd = (e, t) => (Object.keys(t).forEach((n) => {
   if (t[n] instanceof Set) {
     let r = e[n] || /* @__PURE__ */ new Set();
     e[n] = /* @__PURE__ */ new Set([...r, ...t[n]]);
@@ -2581,8 +2581,8 @@ const ld = function(e) {
     e[n] = Object.assign({}, t[n], r);
   } else
     dr(t[n]) ? e[n] = t[n].concat(e[n] || []) : e[n] === void 0 && (e[n] = t[n]);
-}), e), qd = /\//;
-let Kt = class {
+}), e), Kd = /\//;
+let qt = class {
   constructor(t = {}) {
     Object.defineProperty(this, "json", { enumerable: !1, value: t, writable: !0 });
   }
@@ -2600,9 +2600,9 @@ let Kt = class {
     return typeof t == "string" && (n[t] = !0), this.json.props = Object.assign(n, t), this;
   }
   get(t) {
-    if (t = xt(t), !qd.test(t)) {
+    if (t = xt(t), !Kd.test(t)) {
       let r = this.json.children.find((o) => o.id === t);
-      return new Kt(r);
+      return new qt(r);
     }
     let n = ((r, o) => {
       let a = ((i) => typeof i != "string" ? i : (i = i.replace(/^\//, "")).split(/\//))(o = o || "");
@@ -2614,14 +2614,14 @@ let Kt = class {
       }
       return r;
     })(this.json, t) || Fe({});
-    return new Kt(n);
+    return new qt(n);
   }
   add(t, n = {}) {
     if (dr(t))
       return t.forEach((o) => this.add(xt(o), n)), this;
     t = xt(t);
     let r = Fe({ id: t, props: n });
-    return this.json.children.push(r), new Kt(r);
+    return this.json.children.push(r), new qt(r);
   }
   remove(t) {
     return t = xt(t), this.json.children = this.json.children.filter((n) => n.id !== t), this;
@@ -2649,7 +2649,7 @@ let Kt = class {
   fillDown() {
     var t;
     return t = this.json, xe(t, (n, r) => {
-      r.props = Kd(r.props, n.props);
+      r.props = qd(r.props, n.props);
     }), this;
   }
   depth() {
@@ -2671,7 +2671,7 @@ let Kt = class {
 };
 const di = function(e) {
   let t = Hd(e);
-  return new Kt(t);
+  return new qt(t);
 };
 di.prototype.plugin = function(e) {
   e(this);
@@ -2945,7 +2945,7 @@ const Ud = {
   for (let t = 1; t < e.length - 1; t++)
     Hf.test(e[t]) && (e[t - 1] += e[t] + e[t + 1], e[t] = null, e[t + 1] = null);
   return e;
-}, _f = Jf, Kf = /\S/, qf = /^[!?.]+$/, Uf = /(\S+)/;
+}, _f = Jf, qf = /\S/, Kf = /^[!?.]+$/, Uf = /(\S+)/;
 let _n = [".", "?", "!", ":", ";", "-", "–", "—", "--", "...", "(", ")", "[", "]", '"', "'", "`", "«", "»", "*"];
 _n = _n.reduce((e, t) => (e[t] = !0, e), {});
 const Rf = function(e) {
@@ -2965,7 +2965,7 @@ const Rf = function(e) {
   let a = "";
   for (let i = 0; i < r.length; i++) {
     let s = r[i];
-    Kf.test(s) === !0 && _n.hasOwnProperty(s) === !1 && qf.test(s) === !1 ? (n.length > 0 ? (n[n.length - 1] += a, n.push(s)) : n.push(a + s), a = "") : a += s;
+    qf.test(s) === !0 && _n.hasOwnProperty(s) === !1 && Kf.test(s) === !1 ? (n.length > 0 ? (n[n.length - 1] += a, n.push(s)) : n.push(a + s), a = "") : a += s;
   }
   return a && (n.length === 0 && (n[0] = ""), n[n.length - 1] += a), n = _f(n), n = Wf(n), n = n.filter((i) => i), n;
 }, Yf = Qf, so = /\p{Letter}/u, Nt = /[\p{Number}\p{Currency_Symbol}]/u, Xf = /^[a-z]\.([a-z]\.)+/i, Zf = /[sn]['’]$/, ep = function(e, t) {
@@ -3252,10 +3252,10 @@ let Fp = [
   [Ep, "Month"],
   [Cp, "Organization"],
   [Dp, "Place"]
-], gi = {}, qt = {};
+], gi = {}, Kt = {};
 Fp.forEach((e) => {
   e[0].forEach((t) => {
-    gi[t] = !0, qt[t] = "Abbreviation", e[1] !== void 0 && (qt[t] = [qt[t], e[1]]);
+    gi[t] = !0, Kt[t] = "Abbreviation", e[1] !== void 0 && (Kt[t] = [Kt[t], e[1]]);
   });
 });
 const Vp = [
@@ -3367,7 +3367,7 @@ const Bp = mi, zp = {
     suffixes: Gp,
     prePunctuation: zp,
     postPunctuation: Sp,
-    lexicon: qt,
+    lexicon: Kt,
     unicode: Bp,
     emoticons: Lp
   }
@@ -3381,10 +3381,10 @@ const Bp = mi, zp = {
     });
   }
   return e;
-}, _p = Jp, Kp = /^\p{Letter}+-\p{Letter}+$/u, qp = function(e) {
+}, _p = Jp, qp = /^\p{Letter}+-\p{Letter}+$/u, Kp = function(e) {
   let t = e.implicit || e.normal || e.text;
-  t = t.replace(/['’]s$/, ""), t = t.replace(/s['’]$/, "s"), t = t.replace(/([aeiou][ktrp])in'$/, "$1ing"), Kp.test(t) && (t = t.replace(/-/g, "")), t = t.replace(/^[#@]/, ""), t !== e.normal && (e.machine = t);
-}, Up = qp, Rp = function(e) {
+  t = t.replace(/['’]s$/, ""), t = t.replace(/s['’]$/, "s"), t = t.replace(/([aeiou][ktrp])in'$/, "$1ing"), qp.test(t) && (t = t.replace(/-/g, "")), t = t.replace(/^[#@]/, ""), t !== e.normal && (e.machine = t);
+}, Up = Kp, Rp = function(e) {
   let t = e.docs, n = {};
   for (let r = 0; r < t.length; r += 1)
     for (let o = 0; o < t[r].length; o += 1) {
@@ -3669,11 +3669,11 @@ const yi = {
   "Person|Verb": "true¦b8ch7dr6foster,gra5hope,ja9lan4ma2ni9ollie,p1rob,s0tra4wade;pike,t5ue;at,eg,ier2;ck,r0;k,shal;ce;ce,nt;ew;ase,u1;iff,l1ob,u0;ck;aze,ossom",
   "Person|Place": "true¦a5darw6h3jordan,k2orlando,s0victo7;a0ydney;lvador,mara,ntiago;ent,obe;amil0ous0;ton;lexand1ust0;in;ria",
   "Person|Date": "true¦a2j0sep;an0une;!uary;p0ugust,v0;ril"
-}, He = 36, Kn = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ", ho = Kn.split("").reduce(function(e, t, n) {
+}, He = 36, qn = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ", ho = qn.split("").reduce(function(e, t, n) {
   return e[t] = n, e;
 }, {}), vg = function(e) {
-  if (Kn[e] !== void 0)
-    return Kn[e];
+  if (qn[e] !== void 0)
+    return qn[e];
   let t = 1, n = He, r = "";
   for (; e >= n; e -= n, t++, n *= He)
     ;
@@ -3693,7 +3693,7 @@ const yi = {
     i > 10 && (i -= 7), t += i * o;
   }
   return t;
-}, qn = {
+}, Kn = {
   toAlphaCode: vg,
   fromAlphaCode: wg
 }, Pg = function(e) {
@@ -3704,11 +3704,11 @@ const yi = {
       e.symCount = n;
       break;
     }
-    e.syms[qn.fromAlphaCode(r[1])] = qn.fromAlphaCode(r[2]);
+    e.syms[Kn.fromAlphaCode(r[1])] = Kn.fromAlphaCode(r[2]);
   }
   e.nodes = e.nodes.slice(e.symCount, e.nodes.length);
 }, kg = Pg, Ag = function(e, t, n) {
-  const r = qn.fromAlphaCode(t);
+  const r = Kn.fromAlphaCode(t);
   return r < e.symCount ? e.syms[r] : n + r + 1 - e.symCount;
 }, $g = function(e) {
   const t = [], n = (r, o) => {
@@ -4362,17 +4362,17 @@ const Et = {
   afterTags: Object.assign({}, V.afterTags, Et.afterTags),
   beforeWords: Object.assign({}, V.beforeWords, Et.beforeWords),
   afterWords: Object.assign({}, V.afterWords, Et.afterWords)
-}, Kg = {
+}, qg = {
   afterTags: {
     Noun: "Adjective",
     Conjunction: void 0
   }
-}, qg = {
+}, Kg = {
   beforeTags: Object.assign({}, V.beforeTags, _.beforeTags, {
     Adverb: void 0,
     Negative: void 0
   }),
-  afterTags: Object.assign({}, V.afterTags, _.afterTags, Kg.afterTags),
+  afterTags: Object.assign({}, V.afterTags, _.afterTags, qg.afterTags),
   beforeWords: Object.assign({}, V.beforeWords, _.beforeWords, {
     have: void 0,
     had: void 0,
@@ -4386,7 +4386,7 @@ const Et = {
     to: void 0,
     as: "Adjective"
   })
-}, Ug = qg, Tt = {
+}, Ug = Kg, Tt = {
   beforeTags: {
     Copula: "Gerund",
     PastTense: "Gerund",
@@ -4899,7 +4899,7 @@ const cm = rt, k = "Adjective", M = "Infinitive", Be = "PresentTense", b = "Sing
   {
     electro: A
   }
-], j = "Adjective", Vt = "Infinitive", Gt = "PresentTense", be = "Singular", K = "PastTense", po = "Adverb", ve = "Expression", go = "Actor", mo = "Verb", yo = "Noun", Bt = "LastName", pm = {
+], j = "Adjective", Vt = "Infinitive", Gt = "PresentTense", be = "Singular", q = "PastTense", po = "Adverb", ve = "Expression", go = "Actor", mo = "Verb", yo = "Noun", Bt = "LastName", pm = {
   a: [
     [/.[aeiou]na$/, yo, "tuna"],
     [/.[oau][wvl]ska$/, Bt],
@@ -4908,24 +4908,24 @@ const cm = rt, k = "Adjective", M = "Infinitive", Be = "PresentTense", b = "Sing
   ],
   c: [[/.[^aeiou]ic$/, j]],
   d: [
-    [/[aeiou](pp|ll|ss|ff|gg|tt|rr|bb|nn|mm)ed$/, K, "popped"],
-    [/.[aeo]{2}[bdgmnprvz]ed$/, K, "rammed"],
-    [/.[aeiou][sg]hed$/, K, "gushed"],
-    [/.[aeiou]red$/, K, "hired"],
-    [/.[aeiou]r?ried$/, K, "hurried"],
+    [/[aeiou](pp|ll|ss|ff|gg|tt|rr|bb|nn|mm)ed$/, q, "popped"],
+    [/.[aeo]{2}[bdgmnprvz]ed$/, q, "rammed"],
+    [/.[aeiou][sg]hed$/, q, "gushed"],
+    [/.[aeiou]red$/, q, "hired"],
+    [/.[aeiou]r?ried$/, q, "hurried"],
     [/[^aeiou]ard$/, be, "steward"],
     [/[aeiou][^aeiou]id$/, j, ""],
     [/.[vrl]id$/, j, "livid"],
-    [/..led$/, K, "hurled"],
-    [/.[iao]sed$/, K, ""],
-    [/[aeiou]n?[cs]ed$/, K, ""],
-    [/[aeiou][rl]?[mnf]ed$/, K, ""],
-    [/[aeiou][ns]?c?ked$/, K, "bunked"],
-    [/[aeiou]gned$/, K],
-    [/[aeiou][nl]?ged$/, K],
-    [/.[tdbwxyz]ed$/, K],
-    [/[^aeiou][aeiou][tvx]ed$/, K],
-    [/.[cdflmnprstv]ied$/, K, "emptied"]
+    [/..led$/, q, "hurled"],
+    [/.[iao]sed$/, q, ""],
+    [/[aeiou]n?[cs]ed$/, q, ""],
+    [/[aeiou][rl]?[mnf]ed$/, q, ""],
+    [/[aeiou][ns]?c?ked$/, q, "bunked"],
+    [/[aeiou]gned$/, q],
+    [/[aeiou][nl]?ged$/, q],
+    [/.[tdbwxyz]ed$/, q],
+    [/[^aeiou][aeiou][tvx]ed$/, q],
+    [/.[cdflmnprstv]ied$/, q, "emptied"]
   ],
   e: [
     [/.[lnr]ize$/, Vt, "antagonize"],
@@ -5614,7 +5614,7 @@ const St = Ut, Bm = function(e) {
 }, _m = function(e, t) {
   const n = t.two.models.fromSuperlative;
   return ae(e, n);
-}, Km = function(e = "", t = []) {
+}, qm = function(e = "", t = []) {
   const n = e.length;
   let r = n <= 6 ? n - 1 : 6;
   for (let o = r; o >= 1; o -= 1) {
@@ -5625,7 +5625,7 @@ const St = Ut, Bm = function(e) {
     }
   }
   return null;
-}, mr = Km, v = "ically", qm = /* @__PURE__ */ new Set([
+}, mr = qm, v = "ically", Km = /* @__PURE__ */ new Set([
   "analyt" + v,
   "chem" + v,
   "class" + v,
@@ -5722,7 +5722,7 @@ const St = Ut, Bm = function(e) {
   quickly: "fast",
   well: "good"
 }, Qm = function(e) {
-  return e.endsWith("ly") ? qm.has(e) ? e.replace(/ically/, "ical") : Rm.has(e) ? null : ko.hasOwnProperty(e) ? ko[e] : mr(e, Um) || e : null;
+  return e.endsWith("ly") ? Km.has(e) ? e.replace(/ically/, "ical") : Rm.has(e) ? null : ko.hasOwnProperty(e) ? ko[e] : mr(e, Um) || e : null;
 }, Ym = Qm, Xm = [
   null,
   {
@@ -6147,12 +6147,12 @@ const x0 = Xn, N0 = function(e, t, n, r) {
   md: !0,
   dm: !0,
   ml: !0
-}, K0 = function(e, t, n) {
+}, q0 = function(e, t, n) {
   let r = e[t];
   r.index = r.index || [0, 0];
   let o = r.index[1], a = r.text || "";
   return o !== 0 && S0.test(a) === !0 && L0.test(a) === !1 ? M0.find((i) => r.tags.has(i)) || r.pre.match(/["']$/) || r.normal === "the" ? null : (It(e, t, n), r.tags.has("Noun") || r.tags.clear(), O(r, "ProperNoun", "2-titlecase"), !0) : a.length >= 2 && H0.test(a) && W0.test(a) && J0.test(a) && !_0[r.normal] ? (O(r, "RomanNumeral", "2-xvii"), !0) : null;
-}, q0 = K0, Eo = function(e = "", t = []) {
+}, K0 = q0, Eo = function(e = "", t = []) {
   const n = e.length;
   let r = 7;
   n <= r && (r = n - 1);
@@ -6394,7 +6394,7 @@ const x0 = Xn, N0 = function(e, t, n, r) {
   });
 }, V1 = function(e, t, n, r) {
   for (let o = 0; o < e.length; o += 1)
-    D0(e, o, t), r === !1 && q0(e, o, t), R0(e, o, t), X0(e, o, t, n), t1(e, o, t), i1(e, o);
+    D0(e, o, t), r === !1 && K0(e, o, t), R0(e, o, t), X0(e, o, t, n), t1(e, o, t), i1(e, o);
 }, G1 = function(e, t, n, r) {
   for (let o = 0; o < e.length; o += 1) {
     let a = g1(e, o, t);
@@ -6615,7 +6615,7 @@ const x0 = Xn, N0 = function(e, t, n, r) {
   Reflexive: {
     is: "Pronoun"
   }
-}, K1 = {
+}, q1 = {
   Verb: {
     not: ["Noun", "Adjective", "Adverb", "Value", "Expression"]
   },
@@ -6663,7 +6663,7 @@ const x0 = Xn, N0 = function(e, t, n, r) {
   Passive: {
     is: "Verb"
   }
-}, q1 = {
+}, K1 = {
   Value: {
     not: ["Verb", "Adjective", "Adverb"]
   },
@@ -6815,7 +6815,7 @@ const x0 = Xn, N0 = function(e, t, n, r) {
   },
   Hyphenated: {}
 };
-let Y1 = Object.assign({}, _1, K1, q1, U1, Q1);
+let Y1 = Object.assign({}, _1, q1, K1, U1, Q1);
 const X1 = Y1, Z1 = {
   compute: J1,
   methods: Qn,
@@ -7294,7 +7294,7 @@ const X1 = Y1, Z1 = {
   { match: "#Value #Unit [(per|an) (hr|hour|sec|second|min|minute)]", group: 0, tag: "Unit", reason: "12-miles-per-second" },
   { match: "#Value [(square|cubic)] #Unit", group: 0, tag: "Unit", reason: "square-miles" },
   { match: "^[#Value] (#Determiner|#Gerund)", group: 0, tag: "Expression", unTag: "Value", reason: "numbered-list" }
-], Ky = [
+], qy = [
   { match: "#Copula [(#Noun|#PresentTense)] #LastName", group: 0, tag: "FirstName", reason: "copula-noun-lastname" },
   { match: "(sister|pope|brother|father|aunt|uncle|grandpa|grandfather|grandma) #ProperNoun", tag: "Person", reason: "lady-titlecase", safe: !0 },
   { match: "#FirstName [#Determiner #Noun] #LastName", group: 0, tag: "Person", reason: "first-noun-last" },
@@ -7337,7 +7337,7 @@ const X1 = Y1, Z1 = {
   { match: "#Honorific #Actor", tag: "Honorific", reason: "Lieutenant colonel" },
   { match: "(first|second|third|1st|2nd|3rd) #Actor", tag: "Honorific", reason: "first lady" },
   { match: "#Person #RomanNumeral", tag: "Person", reason: "louis-IV" }
-], qy = [
+], Ky = [
   { match: "%Person|Date% #Acronym? #ProperNoun", tag: "Person", reason: "jan-thierson" },
   { match: "%Person|Noun% #Acronym? #ProperNoun", tag: "Person", reason: "switch-person", safe: !0 },
   { match: "%Person|Noun% #Organization", tag: "Organization", reason: "olive-garden" },
@@ -7611,8 +7611,8 @@ let ib = [].concat(
   Hy,
   Jy,
   _y,
-  Ky,
   qy,
+  Ky,
   Uy,
   Vy,
   Ry,
@@ -7767,15 +7767,15 @@ const Cb = function(e) {
     let r = Bb(this);
     return r = r.getNth(n), new t(this.document, r.pointer);
   }, e.prototype.clauses = Vb;
-}, Sb = zb, Ko = {
+}, Sb = zb, qo = {
   this: "Noun",
   then: "Pivot"
 }, Lb = function(e) {
   for (let t = 0; t < e.length; t += 1)
     for (let n = 0; n < e[t].length; n += 1) {
       let r = e[t][n];
-      if (Ko.hasOwnProperty(r.normal) === !0) {
-        r.chunk = Ko[r.normal];
+      if (qo.hasOwnProperty(r.normal) === !0) {
+        r.chunk = qo[r.normal];
         continue;
       }
       if (r.tags.has("Verb")) {
@@ -7864,19 +7864,19 @@ let In = null;
 const _b = function(e, t, n) {
   const { methods: r } = n;
   In = In || r.one.buildNet(Jb, n), e.sweep(In);
-}, Kb = _b, xn = function(e, t) {
+}, qb = _b, xn = function(e, t) {
   if ((typeof process > "u" || !process.env ? self.env || {} : process.env).DEBUG_CHUNKS) {
     let r = (e.normal + "'").padEnd(8);
     console.log(`  | '${r}  →  \x1B[34m${t.padEnd(12)}\x1B[0m \x1B[2m -fallback- \x1B[0m`);
   }
   e.chunk = t;
-}, qb = function(e) {
+}, Kb = function(e) {
   for (let t = 0; t < e.length; t += 1)
     for (let n = 0; n < e[t].length; n += 1) {
       let r = e[t][n];
       r.chunk === void 0 && (r.tags.has("Conjunction") || r.tags.has("Preposition") ? xn(r, "Pivot") : r.tags.has("Adverb") ? xn(r, "Verb") : r.chunk = "Noun");
     }
-}, Ub = qb, Rb = function(e) {
+}, Ub = Kb, Rb = function(e) {
   let t = [], n = null;
   e.forEach((r) => {
     for (let o = 0; o < r.length; o += 1) {
@@ -7888,7 +7888,7 @@ const _b = function(e, t, n) {
   });
 }, Qb = Rb, Yb = function(e) {
   const { document: t, world: n } = e;
-  Mb(t), Hb(t), Kb(e, t, n), Ub(t), Qb(t);
+  Mb(t), Hb(t), qb(e, t, n), Ub(t), Qb(t);
 }, Xb = { chunks: Yb }, Zb = {
   compute: Xb,
   api: Sb,
@@ -8050,7 +8050,7 @@ const _b = function(e, t, n) {
     let r = sv(this);
     return r = r.getNth(n), new t(r.document, r.pointer);
   };
-}, cv = uv, qo = /'s$/, hv = function(e) {
+}, cv = uv, Ko = /'s$/, hv = function(e) {
   let t = e.match("#Possessive+");
   return t.has("#Person") && (t = t.growLeft("#Person+")), t.has("#Place") && (t = t.growLeft("#Place+")), t.has("#Organization") && (t = t.growLeft("#Organization+")), t;
 }, dv = function(e) {
@@ -8061,7 +8061,7 @@ const _b = function(e, t, n) {
     strip() {
       return this.docs.forEach((r) => {
         r.forEach((o) => {
-          o.text = o.text.replace(qo, ""), o.normal = o.normal.replace(qo, "");
+          o.text = o.text.replace(Ko, ""), o.normal = o.normal.replace(Ko, "");
         });
       }), this;
     }
@@ -8335,12 +8335,12 @@ const Ev = {
   e.match(t.root).replaceWith(i, Hv).tag("Plural", "toPlural"), t.determiner.has("(a|an)") && e.remove(t.determiner);
   let s = t.root.after("not? #Adverb+? [#Copula]", 0);
   return s.found && (s.has("is") ? e.replace(s, "are") : s.has("was") && e.replace(s, "were")), e;
-}, Kv = _v, qv = { tags: !0 }, Uv = function(e, t) {
+}, qv = _v, Kv = { tags: !0 }, Uv = function(e, t) {
   if (t.isPlural === !1)
     return e;
   const { methods: n, model: r } = e.world, { toSingular: o } = n.two.transform.noun;
   let a = t.root.text("normal"), i = o(a, r);
-  return e.replace(t.root, i, qv).tag("Singular", "toPlural"), e;
+  return e.replace(t.root, i, Kv).tag("Singular", "toPlural"), e;
 }, Rv = Uv, Qv = function(e) {
   class t extends e {
     constructor(r, o, a) {
@@ -8370,7 +8370,7 @@ const Ev = {
       }), o.getNth(r);
     }
     toPlural(r) {
-      return this.getNth(r).map((o) => Kv(o, Me(o)));
+      return this.getNth(r).map((o) => qv(o, Me(o)));
     }
     toSingular(r) {
       return this.getNth(r).map((o) => {
@@ -9079,11 +9079,11 @@ const h2 = function(e) {
   places: !0
 }, _2 = function(e = {}) {
   return e = Object.assign({}, J2, e), e.people !== !1 && this.people().replaceWith("██████████"), e.emails !== !1 && this.emails().replaceWith("██████████"), e.places !== !1 && this.places().replaceWith("██████████"), e.phoneNumbers !== !1 && this.phoneNumbers().replaceWith("███████"), this;
-}, K2 = {
+}, q2 = {
   api: function(e) {
     e.prototype.redact = _2;
   }
-}, q2 = K2, U2 = function(e) {
+}, K2 = q2, U2 = function(e) {
   let t = e.clauses();
   return /\.\.$/.test(e.out("text")) || e.has("^#QuestionWord") && e.has("@hasComma") ? !1 : !!(e.has("or not$") || e.has("^#QuestionWord") || e.has("^(do|does|did|is|was|can|could|will|would|may) #Noun") || e.has("^(have|must) you") || t.has("(do|does|is|was) #Noun+ #Adverb? (#Adjective|#Infinitive)$"));
 }, R2 = function(e) {
@@ -9217,33 +9217,33 @@ const h2 = function(e) {
   t.firstName = e.match("#FirstName+"), t.lastName = e.match("#LastName+"), t.honorific = e.match("#Honorific+");
   let n = t.lastName, r = t.firstName;
   return (!r.found || !n.found) && !r.found && !n.found && e.has("^#Honorific .$") && (t.lastName = e.match(".$")), t;
-}, aa = b3, oe = "male", q = "female", ia = {
+}, aa = b3, oe = "male", K = "female", ia = {
   mr: oe,
-  mrs: q,
-  miss: q,
-  madam: q,
+  mrs: K,
+  miss: K,
+  madam: K,
   king: oe,
-  queen: q,
+  queen: K,
   duke: oe,
-  duchess: q,
+  duchess: K,
   baron: oe,
-  baroness: q,
+  baroness: K,
   count: oe,
-  countess: q,
+  countess: K,
   prince: oe,
-  princess: q,
+  princess: K,
   sire: oe,
-  dame: q,
-  lady: q,
+  dame: K,
+  lady: K,
   ayatullah: oe,
   congressman: oe,
-  congresswoman: q,
-  "first lady": q,
+  congresswoman: K,
+  "first lady": K,
   mx: null
 }, v3 = function(e, t) {
   let { firstName: n, honorific: r } = e;
   if (n.has("#FemaleName"))
-    return q;
+    return K;
   if (n.has("#MaleName"))
     return oe;
   if (r.found) {
@@ -9251,7 +9251,7 @@ const h2 = function(e) {
     if (a = a.replace(/\./g, ""), ia.hasOwnProperty(a))
       return ia[a];
     if (/^her /.test(a))
-      return q;
+      return K;
     if (/^his /.test(a))
       return oe;
   }
@@ -9264,7 +9264,7 @@ const h2 = function(e) {
     if (i && !s)
       return oe;
     if (s && !i)
-      return q;
+      return K;
   }
   return null;
 }, w3 = v3, P3 = function(e) {
@@ -9370,7 +9370,7 @@ const h2 = function(e) {
     negative: M3(t),
     phrasal: W3(n)
   };
-}, pe = H3, ue = { tense: "PresentTense" }, Jt = { conditional: !0 }, Pe = { tense: "FutureTense" }, Xe = { progressive: !0 }, S = { tense: "PastTense" }, Ze = { complete: !0, progressive: !1 }, De = { passive: !0 }, J3 = { plural: !0 }, _3 = { plural: !1 }, K3 = function(e) {
+}, pe = H3, ue = { tense: "PresentTense" }, Jt = { conditional: !0 }, Pe = { tense: "FutureTense" }, Xe = { progressive: !0 }, S = { tense: "PastTense" }, Ze = { complete: !0, progressive: !1 }, De = { passive: !0 }, J3 = { plural: !0 }, _3 = { plural: !1 }, q3 = function(e) {
   let t = {};
   return e.forEach((n) => {
     Object.assign(t, n);
@@ -9476,15 +9476,15 @@ Object.keys(sa).map((e) => {
     Bi.push({
       name: e,
       match: t[0],
-      data: K3(t[1])
+      data: q3(t[1])
     });
   });
 });
-const la = Bi, q3 = function(e, t) {
+const la = Bi, K3 = function(e, t) {
   return e = e.clone(), t.adverbs.post && t.adverbs.post.found && e.remove(t.adverbs.post), t.adverbs.pre && t.adverbs.pre.found && e.remove(t.adverbs.pre), e.has("#Negative") && (e = e.remove("#Negative")), e.has("#Prefix") && (e = e.remove("#Prefix")), t.root.has("#PhrasalVerb #Particle") && e.remove("#Particle$"), e = e.not("#Adverb"), e;
 }, U3 = function(e, t) {
   let n = {};
-  e = q3(e, t);
+  e = K3(e, t);
   for (let r = 0; r < la.length; r += 1) {
     let o = la[r];
     if (e.has(o.match) === !0) {
@@ -9947,7 +9947,7 @@ P.plugin(Iv);
 P.plugin(Ev);
 P.plugin(Xv);
 P.plugin(H2);
-P.plugin(q2);
+P.plugin(K2);
 P.plugin(g3);
 P.plugin(O3);
 P.plugin(mw);
@@ -10050,9 +10050,9 @@ const Jw = Hw, _w = function(e) {
       n.syllables = Jw(n.normal || n.text);
     });
   });
-}, Kw = _w, qw = {
+}, qw = _w, Kw = {
   soundsLike: Cw,
-  syllables: Kw
+  syllables: qw
 }, Uw = function(e) {
   e.prototype.syllables = function() {
     this.compute("syllables");
@@ -10075,7 +10075,7 @@ const Jw = Hw, _w = function(e) {
   };
 }, Rw = Uw, Qw = {
   api: Rw,
-  compute: qw
+  compute: Kw
 };
 function Da(e, t, n) {
   const r = e.slice();
@@ -10094,10 +10094,10 @@ function Fa(e) {
 				up into syllables.`;
     },
     m(n, r) {
-      Ke(n, t, r);
+      qe(n, t, r);
     },
     d(n) {
-      n && qe(t);
+      n && Ke(t);
     }
   };
 }
@@ -10105,10 +10105,10 @@ function Va(e) {
   let t, n, r;
   return n = new es({ props: { value: e[10] } }), {
     c() {
-      t = ge("td"), za(n.$$.fragment), Ne(t, "class", "svelte-10hhzd9");
+      t = ge("td"), za(n.$$.fragment), Ne(t, "class", "svelte-c1q05p");
     },
     m(o, a) {
-      Ke(o, t, a), Sa(n, t, null), r = !0;
+      qe(o, t, a), Sa(n, t, null), r = !0;
     },
     p(o, a) {
       const i = {};
@@ -10121,7 +10121,7 @@ function Va(e) {
       Je(n.$$.fragment, o), r = !1;
     },
     d(o) {
-      o && qe(t), La(n);
+      o && Ke(t), La(n);
     }
   };
 }
@@ -10137,10 +10137,10 @@ function Ga(e) {
       t = ge("tr");
       for (let s = 0; s < a.length; s += 1)
         a[s].c();
-      n = Xt(), Ne(t, "class", "line svelte-10hhzd9");
+      n = Xt(), Ne(t, "class", "line svelte-c1q05p");
     },
     m(s, l) {
-      Ke(s, t, l);
+      qe(s, t, l);
       for (let u = 0; u < a.length; u += 1)
         a[u].m(t, null);
       Ie(t, n), r = !0;
@@ -10172,7 +10172,7 @@ function Ga(e) {
       r = !1;
     },
     d(s) {
-      s && qe(t), Ha(a, s);
+      s && Ke(t), Ha(a, s);
     }
   };
 }
@@ -10188,10 +10188,10 @@ function Yw(e) {
       t = ge("div"), c && c.c(), n = Xt(), r = ge("textarea"), o = Xt(), a = ge("div"), i = ge("table");
       for (let $ = 0; $ < d.length; $ += 1)
         d[$].c();
-      Ne(r, "class", "svelte-10hhzd9"), Ne(i, "class", "inner svelte-10hhzd9"), Ne(a, "class", "bars svelte-10hhzd9"), Ne(t, "class", "container svelte-10hhzd9"), Zt(t, "fullscreen", e[1]);
+      Ne(r, "class", "svelte-c1q05p"), Ne(i, "class", "inner svelte-c1q05p"), Ne(a, "class", "bars svelte-c1q05p"), Ne(t, "class", "container svelte-c1q05p"), Zt(t, "fullscreen", e[1]);
     },
     m($, W) {
-      Ke($, t, W), c && c.m(t, null), Ie(t, n), Ie(t, r), Ar(r, e[0]), Ie(t, o), Ie(t, a), Ie(a, i);
+      qe($, t, W), c && c.m(t, null), Ie(t, n), Ie(t, r), Ar(r, e[0]), Ie(t, o), Ie(t, a), Ie(a, i);
       for (let B = 0; B < d.length; B += 1)
         d[B].m(i, null);
       s = !0, l || (u = Ba(r, "input", e[3]), l = !0);
@@ -10224,7 +10224,7 @@ function Yw(e) {
       s = !1;
     },
     d($) {
-      $ && qe(t), c && c.d(), Ha(d, $), l = !1, u();
+      $ && Ke(t), c && c.d(), Ha(d, $), l = !1, u();
     }
   };
 }
@@ -10237,7 +10237,7 @@ function Xw(e) {
     $$slots: { default: [Yw] },
     $$scope: { ctx: e }
   };
-  return e[1] !== void 0 && (a.fullscreen = e[1]), t = new Yi({ props: a }), Ki.push(() => qi(t, "fullscreen", o, e[1])), {
+  return e[1] !== void 0 && (a.fullscreen = e[1]), t = new Yi({ props: a }), qi.push(() => Ki(t, "fullscreen", o, e[1])), {
     c() {
       za(t.$$.fragment);
     },

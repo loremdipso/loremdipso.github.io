@@ -11,9 +11,9 @@
     {{ macros::script(path='js/post-scroll.js') }}
 {% endblock extra_includes %}
 
-{% block header %}
-  {% include "partials/header.html" %}
-{% endblock header %}
+{% block extra_nav_item %}
+	<a target="#" href="https://github.com/loremdipso/loremdipso.github.io/issues/new?title=Issue with {{ page.slug }}&body=I found an issue on page '{{ page.title }}'">{{ config.extra.strings.feedback }}</a>
+{% endblock extra_nav_item %}
 
 {% block content %}
 	<main>

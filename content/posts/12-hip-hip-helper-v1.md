@@ -44,7 +44,7 @@ Putting that award winning limerick aside for a moment I actually quite like thi
 -   Splitting/joining syllables to indicate how it's spoken
 -   Support multiple stanzas
 
-This seems a bit short, but I think I've done just about everything I set out to do with this prototype. Next I'll do a bit of research and come back with a gameplan and we'll (hopefully) make something actually useful. Wouldn't that be fun? Anyway, until next time.
+This seems a bit short, but I think I've done just about everything I set out to do with this prototype. Next I'll do a bit of research and come back with a gameplan and we'll (hopefully) make something actually useful. Wouldn't that be fun? Anyway, until next time,
 
-Love,
+Stay frosty,
 Michael ❤️

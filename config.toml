@@ -108,6 +108,7 @@ truncate_content_length = 100
     suggested_reading = "Suggested reading"
     next = "Up next"
     previous = "Previously"
+    feedback = "Feedback"
 
     # Resume strings
     resume = "Resume"
@@ -144,9 +145,9 @@ truncate_content_length = 100
     name = "Posts"
     url = "/posts/"
 
-[[extra.menus]]
-    name = "Resume"
-    url = "/resume/"
+# [[extra.menus]]
+#     name = "Resume"
+#     url = "/resume/"
 
 # Resume
 [extra.resume.contact]
