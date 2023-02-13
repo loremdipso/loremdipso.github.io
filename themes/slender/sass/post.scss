@@ -262,6 +262,25 @@ article {
 	}
 }
 
+.footnote-definition {
+	display: inline-block;
+	font-size: 0.8rem;
+	line-height: normal;
+	opacity: 0.6;
+	display: flex;
+	column-gap: 10px;
+	align-items: center;
+
+	> sup {
+		// TODO: why does _normalize.scss hate this?
+		top: 0;
+	}
+
+	> p {
+		margin: 0;
+	}
+}
+
 .demo {
 	background-color: #2b2c2f;
 	padding: 20px;

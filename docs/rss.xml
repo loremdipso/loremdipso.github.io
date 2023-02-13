@@ -7,14 +7,60 @@
         <generator>Zola</generator>
         <language>en</language>
         <atom:link href="https://loremdipso.com/rss.xml" rel="self" type="application/rss+xml"/>
-        <lastBuildDate>Sat, 24 Dec 2022 00:00:00 +0000</lastBuildDate>
+        <lastBuildDate>Sun, 12 Feb 2023 00:00:00 +0000</lastBuildDate>
+        <item>
+            <title>Hip Hop Helper</title>
+            <pubDate>Sun, 12 Feb 2023 00:00:00 +0000</pubDate>
+            <link>https://loremdipso.com/posts/hip-hop-helper/</link>
+            <guid>https://loremdipso.com/posts/hip-hop-helper/</guid>
+            <description>&lt;h2 id=&quot;the-pitch&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#the-pitch&quot; aria-label=&quot;Anchor link for: the-pitch&quot;&gt;The Pitch&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
+&lt;p&gt;Writing poetry with specified rhyming schemes is hard. Whenever I try I end up whisper singing to myself over and over as I try to think of synonyms that rhyme with &amp;quot;Timbucktoo&amp;quot;. Can we do any better?&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;disclaimer&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#disclaimer&quot; aria-label=&quot;Anchor link for: disclaimer&quot;&gt;Disclaimer&lt;&#x2F;a&gt;&lt;&#x2F;h3&gt;
+&lt;p&gt;Before we begin, yes hip hop is not rap, and this is more of a general tool for writing structured verse, but they&#x27;re all kind of related and hip hop has better alliteration so I&#x27;m keeping it.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;v1&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#v1&quot; aria-label=&quot;Anchor link for: v1&quot;&gt;V1&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
+&lt;p&gt;This has been an idea kicking around in the back of my head for years. Surely there&#x27;s a multitude of projects doing exactly this but better but I&#x27;ve purposefully avoided looking at any of them for fear of losing motivation. So I&#x27;ve split this project into at least two parts:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Part 1: (what you&#x27;re reading now) where I embrace my naivete and just try to optimize for what I know&lt;&#x2F;li&gt;
+&lt;li&gt;Part 2: where I do some research on the state of the art and then borrow&#x2F;re-implement the features I like the most&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;If there&#x27;s enough ground to cover I may end up stretching this into a trilogy, but I&#x27;m writing it one part at a time so who knows?&lt;&#x2F;p&gt;
+&lt;p&gt;For this first attempt I&#x27;d like to visualize the syllables of the words as I write them. To do that we just need to split our source text into syllables. I thought this would be the easy part. Surely there&#x27;s some ready-made mapping and I just have to pick one. Right? Right??&lt;&#x2F;p&gt;
+&lt;p&gt;Well half an hour of googling later I can semi-confidently say that I don&#x27;t think so, at least not ready-made. I did find out you can download &lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;en.wiktionary.org&#x2F;wiki&#x2F;Help:FAQ#Downloading_Wiktionary&quot;&gt;Wiktionary&lt;&#x2F;a&gt;, which is super cool, but more to the point that means I could could take that database and pull just the words and the associated syllables out into some smaller (but still quite massive) &lt;code&gt;JSON&lt;&#x2F;code&gt;. While that exercise seems doable and somewhat interesting it doesn&#x27;t cover all use-cases, particularly made up words (which, as you&#x27;ll soon see, I am quite the fan).&lt;&#x2F;p&gt;
+&lt;p&gt;So after even more searching I ended up using the lovely &lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;www.npmjs.com&#x2F;package&#x2F;compromise&quot;&gt;compromise&lt;&#x2F;a&gt; package. It certainly wasn&#x27;t built with syllable extraction in mind, and it&#x27;s definitely overkill for what I need, but we&#x27;re just exploring the problem space for now so I&#x27;m fine with it. This also required some enhancements to your &lt;a href=&quot;&#x2F;posts&#x2F;adding-interactivity&quot;&gt;interactivity&lt;&#x2F;a&gt; work (which I&#x27;ve now backported, so you can read about it there).&lt;&#x2F;p&gt;
+&lt;p&gt;With that, this is what we get:&lt;&#x2F;p&gt;
+&lt;div class=&quot;demo&quot;&gt;
+    &lt;script
+      src=&quot;&#x2F;demos&amp;#x2F;hip_hop_helper_v1.js?h=06ee4a7265e2cc4a6f3925be292865cf2f423b0f7077e74b8b58e4bbb513d10a&quot;
+      async
+      type=&quot;module&quot;
+      crossorigin=&quot;anonymous&quot;&gt;
+    &lt;&#x2F;script&gt;
+
+
+    &lt;div id=&quot;hip_hop_helper_v1&quot;&gt;&lt;&#x2F;div&gt;
+&lt;&#x2F;div&gt;
+&lt;p&gt;Putting that award winning limerick aside for a moment I actually quite like this. I mean clearly it&#x27;s imperfect (once is split into &amp;quot;on&amp;quot; and &amp;quot;ce&amp;quot;, for example) but it&#x27;s workable. I&#x27;d be happy sinking some more time into using a dictionary for all the real words and only falling back to &lt;code&gt;compromise&lt;&#x2F;code&gt; as a heuristic for the made up ones. Other enhancements I can think of:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Synonym finder&lt;&#x2F;li&gt;
+&lt;li&gt;Indicating rhymes&lt;&#x2F;li&gt;
+&lt;li&gt;Marking slant rhymes&lt;&#x2F;li&gt;
+&lt;li&gt;Specifying the rhyme scheme (with common presets)&lt;&#x2F;li&gt;
+&lt;li&gt;Indicating deviations from said rhyme scheme&lt;&#x2F;li&gt;
+&lt;li&gt;Splitting&#x2F;joining syllables to indicate how it&#x27;s spoken&lt;&#x2F;li&gt;
+&lt;li&gt;Support multiple stanzas&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;This seems a bit short, but I think I&#x27;ve done just about everything I set out to do with this prototype. Next I&#x27;ll do a bit of research and come back with a gameplan and we&#x27;ll (hopefully) make something actually useful. Wouldn&#x27;t that be fun? Anyway, until next time.&lt;&#x2F;p&gt;
+&lt;p&gt;Love,
+Michael ❤️&lt;&#x2F;p&gt;
+</description>
+        </item>
         <item>
             <title>Adding Interactivity</title>
             <pubDate>Sat, 24 Dec 2022 00:00:00 +0000</pubDate>
             <link>https://loremdipso.com/posts/adding-interactivity/</link>
             <guid>https://loremdipso.com/posts/adding-interactivity/</guid>
             <description>&lt;h2 id=&quot;looking-for-problems-to-solve&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#looking-for-problems-to-solve&quot; aria-label=&quot;Anchor link for: looking-for-problems-to-solve&quot;&gt;Looking For Problems To Solve&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
-&lt;p&gt;&lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;www.getzola.org&#x2F;&quot;&gt;Zola&lt;&#x2F;a&gt; is wonderful. It builds quickly, it&#x27;s so configurable, but it is (by design) not well suited for interactivity. I hadn&#x27;t thought I wanted that until I saw some on &lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;fasterthanli.me&#x2F;&quot;&gt;Amos&#x27;s site&lt;&#x2F;a&gt;. He ended up using &lt;code&gt;iframes&lt;&#x2F;code&gt; to manage that integration, which is a perfectly acceptable solution. But it did make me wonder: can we accomplish the same result without all of that nasty ugly &lt;code&gt;HTML&lt;&#x2F;code&gt;? Can we just write some clean JS and call it a day?&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;www.getzola.org&#x2F;&quot;&gt;Zola&lt;&#x2F;a&gt; is wonderful. It builds quickly, it&#x27;s extremely configurable, but it is (by design) not well suited for interactive elements or complex &lt;code&gt;JavaScript&lt;&#x2F;code&gt;. I hadn&#x27;t thought I wanted that until I saw some on &lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;fasterthanli.me&#x2F;&quot;&gt;Amos&#x27;s site&lt;&#x2F;a&gt;. He ended up using &lt;code&gt;iframes&lt;&#x2F;code&gt; to manage that integration, which is a perfectly acceptable solution. But it did make me wonder: can we accomplish the same result without all of that nasty ugly &lt;code&gt;HTML&lt;&#x2F;code&gt;? Can we just write some clean &lt;code&gt;JS&lt;&#x2F;code&gt; and call it a day?&lt;&#x2F;p&gt;
 &lt;p&gt;Let&#x27;s find out.&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;creating-the-bundle&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#creating-the-bundle&quot; aria-label=&quot;Anchor link for: creating-the-bundle&quot;&gt;Creating the Bundle&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
 &lt;p&gt;I hear that &lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;svelte.dev&#x2F;&quot;&gt;Svelte&lt;&#x2F;a&gt; is great at integrating into existing applications. You just give it some home in the &lt;code&gt;DOM&lt;&#x2F;code&gt; as an argument and away it goes:&lt;&#x2F;p&gt;
@@ -38,10 +84,11 @@
 &lt;&#x2F;span&gt;&lt;span&gt;	&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eb606b;&quot;&gt;button &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bb80b3;&quot;&gt;on:click&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;=&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99c794;&quot;&gt;{increment}&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;quot;&amp;gt;&lt;&#x2F;span&gt;&lt;span&gt;Clicked {count} times&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;lt;&#x2F;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eb606b;&quot;&gt;button&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;gt;
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;lt;&#x2F;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eb606b;&quot;&gt;main&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;gt;
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;p&gt;We&#x27;re using &lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;vitejs.dev&#x2F;&quot;&gt;Vite&lt;&#x2F;a&gt; to build, and we&#x27;d like a separate JS bundle for each demo. As of Vite 3.2 we can use multiple lib entry points, like so:&lt;&#x2F;p&gt;
+&lt;p&gt;We&#x27;re using &lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;vitejs.dev&#x2F;&quot;&gt;Vite&lt;&#x2F;a&gt; to build, and we&#x27;d like a separate JS bundle for each demo. As of version 3.2 we can use multiple lib entry points, like so:&lt;&#x2F;p&gt;
 &lt;pre data-lang=&quot;ts&quot; style=&quot;background-color:#2b2c2f;color:#cccece;&quot; class=&quot;language-ts &quot;&gt;&lt;code class=&quot;language-ts&quot; data-lang=&quot;ts&quot;&gt;&lt;span style=&quot;color:#c594c5;&quot;&gt;export default &lt;&#x2F;span&gt;&lt;span style=&quot;color:#6699cc;&quot;&gt;defineConfig&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;({ &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f99157;&quot;&gt;command &lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;}) &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c594c5;&quot;&gt;=&amp;gt; &lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;{
 &lt;&#x2F;span&gt;&lt;span&gt;	plugins&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;: &lt;&#x2F;span&gt;&lt;span&gt;[&lt;&#x2F;span&gt;&lt;span style=&quot;color:#6699cc;&quot;&gt;svelte&lt;&#x2F;span&gt;&lt;span&gt;()]&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;,
 &lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;	&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5f6364;&quot;&gt;&#x2F;&#x2F; Use a temporary directory to not much up our release
 &lt;&#x2F;span&gt;&lt;span&gt;	cacheDir&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;: &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99c794;&quot;&gt;temp&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;quot;,
 &lt;&#x2F;span&gt;&lt;span&gt;
 &lt;&#x2F;span&gt;&lt;span&gt;	build&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;: {
@@ -63,28 +110,16 @@
 &lt;pre data-lang=&quot;ts&quot; style=&quot;background-color:#2b2c2f;color:#cccece;&quot; class=&quot;language-ts &quot;&gt;&lt;code class=&quot;language-ts&quot; data-lang=&quot;ts&quot;&gt;&lt;span style=&quot;color:#c594c5;&quot;&gt;export const &lt;&#x2F;span&gt;&lt;span&gt;demos &lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;= {
 &lt;&#x2F;span&gt;&lt;span&gt;	counter&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;: &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99c794;&quot;&gt;.&#x2F;src&#x2F;counter.ts&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;quot;,
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;};
-&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c594c5;&quot;&gt;export default &lt;&#x2F;span&gt;&lt;span style=&quot;color:#6699cc;&quot;&gt;defineConfig&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;({ &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f99157;&quot;&gt;command &lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;}) &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c594c5;&quot;&gt;=&amp;gt; &lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;{
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;	&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5f6364;&quot;&gt;&#x2F;&#x2F; ...cut
-&lt;&#x2F;span&gt;&lt;span&gt;	build&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;: {
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;		&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5f6364;&quot;&gt;&#x2F;&#x2F; ...cut
-&lt;&#x2F;span&gt;&lt;span&gt;		lib&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;: {
-&lt;&#x2F;span&gt;&lt;span&gt;			entry&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;: {
-&lt;&#x2F;span&gt;&lt;span&gt;				counter&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;: &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99c794;&quot;&gt;.&#x2F;src&#x2F;counter.ts&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;quot;,
-&lt;&#x2F;span&gt;&lt;span&gt;			&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;},
-&lt;&#x2F;span&gt;&lt;span&gt;		&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;},
-&lt;&#x2F;span&gt;&lt;span&gt;	&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;},
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;}&lt;&#x2F;span&gt;&lt;span&gt;))&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;;
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;h2 id=&quot;embedding-the-bundle&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#embedding-the-bundle&quot; aria-label=&quot;Anchor link for: embedding-the-bundle&quot;&gt;Embedding the Bundle&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
-&lt;p&gt;On the Zola side of things we can use a &lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;content&#x2F;shortcodes&#x2F;&quot;&gt;shortcode&lt;&#x2F;a&gt; to do our dirty work. So if we say our shortcode lives in &lt;code&gt;demo.html&lt;&#x2F;code&gt; and looks like this:&lt;&#x2F;p&gt;
+&lt;p&gt;On the Zola side of things we can use a &lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;content&#x2F;shortcodes&#x2F;&quot;&gt;shortcode&lt;&#x2F;a&gt; to do our dirty work. So if we say our shortcode lives in &lt;code&gt;demo.html&lt;&#x2F;code&gt; and looks like this (forgive the messy &lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;tera.netlify.app&#x2F;&quot;&gt;Tera&lt;&#x2F;a&gt; code):&lt;&#x2F;p&gt;
 &lt;pre data-lang=&quot;html&quot; style=&quot;background-color:#2b2c2f;color:#cccece;&quot; class=&quot;language-html &quot;&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eb606b;&quot;&gt;div &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bb80b3;&quot;&gt;class&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;=&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99c794;&quot;&gt;demo&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;quot;&amp;gt;
-&lt;&#x2F;span&gt;&lt;span&gt;    {%- set js_path = &amp;quot;&#x2F;demos&#x2F;&amp;quot; ~ key ~ &amp;quot;.js&amp;quot; -%}
-&lt;&#x2F;span&gt;&lt;span&gt;    {%- set js_path = get_url(path=js_path, trailing_slash=false, cachebust=true) -%}
-&lt;&#x2F;span&gt;&lt;span&gt;    {%- set js_path = js_path | replace(from=config.base_url, to=&amp;quot;&amp;quot;) -%}
+&lt;&#x2F;span&gt;&lt;span&gt;	{%- set js_path = &amp;quot;&#x2F;demos&#x2F;&amp;quot; ~ key ~ &amp;quot;.js&amp;quot; -%} {%- set js_path =
+&lt;&#x2F;span&gt;&lt;span&gt;	get_url(path=js_path, trailing_slash=false, cachebust=true) -%} {%- set
+&lt;&#x2F;span&gt;&lt;span&gt;	js_path = js_path | replace(from=config.base_url, to=&amp;quot;&amp;quot;) -%}
 &lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eb606b;&quot;&gt;script &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bb80b3;&quot;&gt;src&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;=&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99c794;&quot;&gt;{% js_path %} type=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bb80b3;&quot;&gt;module&amp;quot; crossorigin&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;=&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99c794;&quot;&gt;anonymous&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;quot;&amp;gt;&amp;lt;&#x2F;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eb606b;&quot;&gt;script&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;gt;
-&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eb606b;&quot;&gt;div &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bb80b3;&quot;&gt;id&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;=&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99c794;&quot;&gt;{{ key }}&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;quot;&amp;gt;&amp;lt;&#x2F;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eb606b;&quot;&gt;div&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;	&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eb606b;&quot;&gt;script &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bb80b3;&quot;&gt;src&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;=&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99c794;&quot;&gt;{% js_path %}&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;quot; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bb80b3;&quot;&gt;type&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;=&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99c794;&quot;&gt;module&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;quot; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bb80b3;&quot;&gt;crossorigin&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;=&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99c794;&quot;&gt;anonymous&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;quot;&amp;gt;&amp;lt;&#x2F;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eb606b;&quot;&gt;script&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;	&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eb606b;&quot;&gt;div &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bb80b3;&quot;&gt;id&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;=&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99c794;&quot;&gt;{{ key }}&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;quot;&amp;gt;&amp;lt;&#x2F;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eb606b;&quot;&gt;div&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;gt;
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;lt;&#x2F;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eb606b;&quot;&gt;div&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;gt;
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;Then to use in markdown we could do something like:&lt;&#x2F;p&gt;
@@ -92,7 +127,7 @@
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;Will this work? Let&#x27;s see: &lt;div class=&quot;demo&quot;&gt;
     &lt;script
-      src=&quot;&#x2F;demos&amp;#x2F;counter.js?h=e09701ac2acbdb43a7854e332145cc3e7e30de8275e6318c9bdf91aace6b3c04&quot;
+      src=&quot;&#x2F;demos&amp;#x2F;counter.js?h=c67358c42ad4fbd1c43bd8c6639166157a75b92e25c1f0bfaf18c3b3858b68c9&quot;
       async
       type=&quot;module&quot;
       crossorigin=&quot;anonymous&quot;&gt;
@@ -106,12 +141,12 @@
 &lt;p&gt;It&#x27;s a bit unfortunate that to make a new demo I need to manually:&lt;&#x2F;p&gt;
 &lt;ol&gt;
 &lt;li&gt;Modify an object&lt;&#x2F;li&gt;
-&lt;li&gt;Create a shell &lt;code&gt;.ts&lt;&#x2F;code&gt; file&lt;&#x2F;li&gt;
+&lt;li&gt;Create a shell &lt;code&gt;.ts&lt;&#x2F;code&gt; file to bootstrap the demo&lt;&#x2F;li&gt;
 &lt;li&gt;Create the actual demo&lt;&#x2F;li&gt;
 &lt;&#x2F;ol&gt;
-&lt;p&gt;It&#x27;d be a bit cleaner to do away with the &lt;code&gt;.ts&lt;&#x2F;code&gt; file entirely, or else generate it during build time from a template, but it&#x27;s a bit easier to just automate these steps with a script so let&#x27;s just do that for now.&lt;&#x2F;p&gt;
+&lt;p&gt;It&#x27;d be a bit cleaner to do away with the shell &lt;code&gt;.ts&lt;&#x2F;code&gt; file entirely (perhaps by generating it during build time?) but it&#x27;s a bit easier to keep these steps explicit for now and just add a script to automate them. This smells like a premature workflow automation trap and I&#x27;m not falling for it this time. I swear! Look, if I make like 10 more demos then &lt;em&gt;maybe&lt;&#x2F;em&gt; I&#x27;ll look into this, but not until then.&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;styles&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#styles&quot; aria-label=&quot;Anchor link for: styles&quot;&gt;Styles&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
-&lt;p&gt;The way Svelte handles styles is &lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;svelte.dev&#x2F;tutorial&#x2F;styling&quot;&gt;quite interesting&lt;&#x2F;a&gt; (sort of reminiscent of Angular &lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;angular.io&#x2F;guide&#x2F;component-styles&quot;&gt;component styles&lt;&#x2F;a&gt; but without any shadow DOM nonsense) but for our purposes are not ideal. We either need to export a separate &lt;code&gt;css&lt;&#x2F;code&gt; file per entrypoint and explicitly include it with our shortcode or else pretend it&#x27;s &lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;levelup.gitconnected.com&#x2F;a-brief-history-of-css-in-js-how-we-got-here-and-where-were-going-ea6261c19f04&quot;&gt;1994&lt;&#x2F;a&gt; and use &lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;CSS-in-JS&quot;&gt;CSS-in-JS&lt;&#x2F;a&gt;. OR we lean on the lovely &lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;www.npmjs.com&#x2F;package&#x2F;vite-plugin-css-injected-by-js&quot;&gt;vite-plugin-css-injected-by-js&lt;&#x2F;a&gt; package to do that for us. We simply need to add it to our vite config like so:&lt;&#x2F;p&gt;
+&lt;p&gt;The way Svelte handles styles is quite interesting&lt;sup class=&quot;footnote-reference&quot;&gt;&lt;a href=&quot;#1&quot;&gt;1&lt;&#x2F;a&gt;&lt;&#x2F;sup&gt; but for our purposes are not ideal. We either need to export a separate &lt;code&gt;css&lt;&#x2F;code&gt; file per entrypoint and explicitly include it with our shortcode or else pretend it&#x27;s &lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;levelup.gitconnected.com&#x2F;a-brief-history-of-css-in-js-how-we-got-here-and-where-were-going-ea6261c19f04&quot;&gt;1994&lt;&#x2F;a&gt; and use &lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;CSS-in-JS&quot;&gt;CSS-in-JS&lt;&#x2F;a&gt;. OR we lean on the lovely &lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;www.npmjs.com&#x2F;package&#x2F;vite-plugin-css-injected-by-js&quot;&gt;vite-plugin-css-injected-by-js&lt;&#x2F;a&gt; package to do that for us. We simply need to add it to our vite config like so:&lt;&#x2F;p&gt;
 &lt;pre data-lang=&quot;ts&quot; style=&quot;background-color:#2b2c2f;color:#cccece;&quot; class=&quot;language-ts &quot;&gt;&lt;code class=&quot;language-ts&quot; data-lang=&quot;ts&quot;&gt;&lt;span style=&quot;color:#c594c5;&quot;&gt;export default &lt;&#x2F;span&gt;&lt;span style=&quot;color:#6699cc;&quot;&gt;defineConfig&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;({ &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f99157;&quot;&gt;command &lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;}) &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c594c5;&quot;&gt;=&amp;gt; &lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;{
 &lt;&#x2F;span&gt;&lt;span&gt;	plugins&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;: &lt;&#x2F;span&gt;&lt;span&gt;[&lt;&#x2F;span&gt;&lt;span style=&quot;color:#6699cc;&quot;&gt;svelte&lt;&#x2F;span&gt;&lt;span&gt;()&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#6699cc;&quot;&gt;cssInjectedByJsPlugin&lt;&#x2F;span&gt;&lt;span&gt;()]&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;,
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;	&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5f6364;&quot;&gt;&#x2F;&#x2F; ...cut
@@ -125,6 +160,9 @@
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;}&lt;&#x2F;span&gt;&lt;span&gt;)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;,
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;That&#x27;s it for now, hope you enjoyed. Come back soon!&lt;&#x2F;p&gt;
+&lt;div class=&quot;footnote-definition&quot; id=&quot;1&quot;&gt;&lt;sup class=&quot;footnote-definition-label&quot;&gt;1&lt;&#x2F;sup&gt;
+&lt;p&gt;Basically svelte does something sort of similar to how Angular does &lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;angular.io&#x2F;guide&#x2F;view-encapsulation&quot;&gt;component styles&lt;&#x2F;a&gt; but instead of using the &lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;developer.mozilla.org&#x2F;en-US&#x2F;docs&#x2F;Web&#x2F;Web_Components&#x2F;Using_shadow_DOM&quot;&gt;Shadow DOM&lt;&#x2F;a&gt; svelte basically converts classnames into unique-enough tokens to prevent collisions. So a &lt;code&gt;.container&lt;&#x2F;code&gt; might become &lt;code&gt;.container-svelteapp123&lt;&#x2F;code&gt;, though in practice it&#x27;s a much shorter string.&lt;&#x2F;p&gt;
+&lt;&#x2F;div&gt;
 </description>
         </item>
         <item>
@@ -624,24 +662,6 @@
 &lt;&#x2F;ul&gt;
 &lt;&#x2F;li&gt;
 &lt;&#x2F;ol&gt;
-</description>
-        </item>
-        <item>
-            <title>Site V2</title>
-            <pubDate>Mon, 27 Dec 2021 14:15:48 -0700</pubDate>
-            <link>https://loremdipso.com/posts/new-blog-same-content/</link>
-            <guid>https://loremdipso.com/posts/new-blog-same-content/</guid>
-            <description>&lt;p&gt;Channeling my inner dev, I&#x27;ve gone ahead and completely re-written this site. [Original post for comparison]({{&amp;lt; ref &amp;quot;conception.md&amp;quot; &amp;gt;}}).&lt;&#x2F;p&gt;
-&lt;h2 id=&quot;why&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#why&quot; aria-label=&quot;Anchor link for: why&quot;&gt;Why?&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
-&lt;p&gt;The original site was... poorly written. It used React, which can be fine, but was overkill for a site that wasn&#x27;t particularly complex interactive. And I&#x27;ve had a change of heart when it comes to SPAs: that they&#x27;re useful when they&#x27;re useful and not when they&#x27;re not.&lt;&#x2F;p&gt;
-&lt;h2 id=&quot;free&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#free&quot; aria-label=&quot;Anchor link for: free&quot;&gt;Free&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
-&lt;p&gt;Hosting this site is still basically free via Github pages (except for the domain name).&lt;&#x2F;p&gt;
-&lt;h2 id=&quot;fast&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#fast&quot; aria-label=&quot;Anchor link for: fast&quot;&gt;Fast&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
-&lt;p&gt;I switched from React and webpack to Hugo and I couldn&#x27;t be happier. My build times are basically &lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;gohugo.io&#x2F;troubleshooting&#x2F;build-performance&#x2F;&quot;&gt;instant now&lt;&#x2F;a&gt;, and the site is generally faster for users to load and to render. I may revisit turning this generate site into a SPA again, but it&#x27;d just be a vanity project. Each page&#x27;s chrome is so simple I wouldn&#x27;t actually save any real time by keeping it around and swapping out the content.&lt;&#x2F;p&gt;
-&lt;h2 id=&quot;fun&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#fun&quot; aria-label=&quot;Anchor link for: fun&quot;&gt;Fun&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
-&lt;p&gt;Eh, Hugo is great, but it&#x27;s also opinionated and a little difficult to grok at first if you haven&#x27;t worked with it before. Plus I&#x27;ve found the online forum moderators to be a little short-tempered. Overall I&#x27;m happy with my choice.&lt;&#x2F;p&gt;
-&lt;h2 id=&quot;fanciful&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#fanciful&quot; aria-label=&quot;Anchor link for: fanciful&quot;&gt;Fanciful&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
-&lt;p&gt;I added nifty slide-in effects for the header&#x2F;footer and a fade-in effect for the content to make the site just a little bit more interesting. The moving backgrounds are gone, though, for now (☹️). I may add them back in a bit, maybe as part of a shared library. I&#x27;m imagining you import some CSS file and it handles the rest, but idk.&lt;&#x2F;p&gt;
 </description>
         </item>
     </channel>

@@ -1,37 +1,37 @@
-(function(){"use strict";try{if(typeof document<"u"){var e=document.createElement("style");e.appendChild(document.createTextNode("main.svelte-x27xhg{display:flex;justify-content:center}main.svelte-e7todb{position:relative}main.fullscreen.svelte-e7todb{position:fixed;width:100vw;height:100vh;left:0;top:0;z-index:1000}button.svelte-e7todb{position:absolute;right:0;bottom:0}.container.svelte-jmg7lu.svelte-jmg7lu{display:flex;width:100%;height:100%;flex-direction:column;background-color:#000}.container.svelte-jmg7lu textarea.svelte-jmg7lu,.container.svelte-jmg7lu .bars.svelte-jmg7lu{font-size:1rem;color:#fff;background-color:#000}.container.fullscreen.svelte-jmg7lu textarea.svelte-jmg7lu,.container.fullscreen.svelte-jmg7lu .bars.svelte-jmg7lu{height:50vh;overflow:auto}.container.fullscreen.svelte-jmg7lu .bars .inner.svelte-jmg7lu{text-align:center;padding:1rem;margin-left:auto;margin-right:auto}.line.svelte-jmg7lu.svelte-jmg7lu{margin:.5rem 0}.line.svelte-jmg7lu .bar.svelte-jmg7lu{padding:0 .5rem;margin:0 .5rem;background-color:#303030}")),document.head.appendChild(e)}}catch(t){console.error("vite-plugin-css-injected-by-js",t)}})();
-import { S as ja, i as Ea, s as Ta, g as Ti, e as Ie, h as Rt, a as Te, j as Qt, b as gt, c as ke, l as Ca, u as Ci, k as Di, m as Oi, o as Da, p as Oa, f as mt, q as Fi, r as Vi, v as Gi, w as Bi, x as zi, y as Si, z as gr, A as Fa, t as Li, d as Mi } from "./index-bf08be85.js";
-function Wi(e) {
+(function(){"use strict";try{if(typeof document<"u"){var e=document.createElement("style");e.appendChild(document.createTextNode("main.svelte-x27xhg{display:flex;justify-content:center}main.svelte-e7todb{position:relative}main.fullscreen.svelte-e7todb{position:fixed;width:100vw;height:100vh;left:0;top:0;z-index:1000}button.svelte-e7todb{position:absolute;right:0;bottom:0}.bar.svelte-13x1b4a{padding:0 .5rem;margin:0 .1rem;background-color:#303030;text-align:center}.fade-in.svelte-13x1b4a{animation:svelte-13x1b4a-fadeIn .4s}@keyframes svelte-13x1b4a-fadeIn{0%{background-color:#f9e076}}.container.svelte-10hhzd9.svelte-10hhzd9{display:flex;width:100%;height:100%;flex-direction:column;background-color:#000}.container.svelte-10hhzd9 textarea.svelte-10hhzd9,.container.svelte-10hhzd9 .bars.svelte-10hhzd9{font-size:1rem;color:#fff;background-color:#000}.container.fullscreen.svelte-10hhzd9 textarea.svelte-10hhzd9,.container.fullscreen.svelte-10hhzd9 .bars.svelte-10hhzd9{height:50vh;overflow:auto}.container.fullscreen.svelte-10hhzd9 .bars .inner.svelte-10hhzd9{text-align:center;padding:1rem;margin-left:auto;margin-right:auto}.line.svelte-10hhzd9.svelte-10hhzd9{margin:.5rem 0}table.svelte-10hhzd9.svelte-10hhzd9,td.svelte-10hhzd9.svelte-10hhzd9,tr.svelte-10hhzd9.svelte-10hhzd9{all:revert}")),document.head.appendChild(e)}}catch(t){console.error("vite-plugin-css-injected-by-js",t)}})();
+import { S as nr, i as rr, s as an, g as Si, e as ge, h as Xt, a as Ne, j as Zt, b as Ke, c as Ie, l as Ba, u as Li, k as Mi, m as Wi, o as je, p as Je, f as qe, q as Hi, n as kr, t as Ji, d as _i, r as Ki, v as qi, w as za, x as Sa, y as Ui, z as La, A as Ar, B as Ma, C as Wa, D as Ha } from "./index-ba35a221.js";
+function Ri(e) {
   let t, n, r, o, a, i;
-  const s = e[2].default, l = Ti(s, e, e[1], null);
+  const s = e[2].default, l = Si(s, e, e[1], null);
   return {
     c() {
-      t = Ie("main"), l && l.c(), n = Rt(), r = Ie("button"), r.textContent = "Fullscreen", Te(r, "class", "svelte-e7todb"), Te(t, "class", "svelte-e7todb"), Qt(t, "fullscreen", e[0]);
+      t = ge("main"), l && l.c(), n = Xt(), r = ge("button"), r.textContent = "Fullscreen", Ne(r, "class", "svelte-e7todb"), Ne(t, "class", "svelte-e7todb"), Zt(t, "fullscreen", e[0]);
     },
     m(u, c) {
-      gt(u, t, c), l && l.m(t, null), ke(t, n), ke(t, r), o = !0, a || (i = Ca(r, "click", e[3]), a = !0);
+      Ke(u, t, c), l && l.m(t, null), Ie(t, n), Ie(t, r), o = !0, a || (i = Ba(r, "click", e[3]), a = !0);
     },
     p(u, [c]) {
-      l && l.p && (!o || c & 2) && Ci(
+      l && l.p && (!o || c & 2) && Li(
         l,
         s,
         u,
         u[1],
-        o ? Oi(s, u[1], c, null) : Di(u[1]),
+        o ? Wi(s, u[1], c, null) : Mi(u[1]),
         null
-      ), (!o || c & 1) && Qt(t, "fullscreen", u[0]);
+      ), (!o || c & 1) && Zt(t, "fullscreen", u[0]);
     },
     i(u) {
-      o || (Da(l, u), o = !0);
+      o || (je(l, u), o = !0);
     },
     o(u) {
-      Oa(l, u), o = !1;
+      Je(l, u), o = !1;
     },
     d(u) {
-      u && mt(t), l && l.d(u), a = !1, i();
+      u && qe(t), l && l.d(u), a = !1, i();
     }
   };
 }
-function Hi(e, t, n) {
+function Qi(e, t, n) {
   let { $$slots: r = {}, $$scope: o } = t, { fullscreen: a = !1 } = t;
   const i = () => n(0, a = !a);
   return e.$$set = (s) => {
@@ -40,34 +40,81 @@ function Hi(e, t, n) {
     e.$$.dirty & 1 && (a ? document.body.style.overflow = "hidden" : document.body.style.overflow = "");
   }, [a, o, r, i];
 }
-class Ji extends ja {
+class Yi extends nr {
   constructor(t) {
-    super(), Ea(this, t, Hi, Wi, Ta, { fullscreen: 0 });
+    super(), rr(this, t, Qi, Ri, an, { fullscreen: 0 });
   }
 }
-let _i = {
+function $r(e) {
+  let t, n;
+  return {
+    c() {
+      t = ge("div"), n = Ji(e[0]), Ne(t, "class", "bar fade-in svelte-13x1b4a");
+    },
+    m(r, o) {
+      Ke(r, t, o), Ie(t, n);
+    },
+    p(r, o) {
+      o & 1 && _i(n, r[0]);
+    },
+    d(r) {
+      r && qe(t);
+    }
+  };
+}
+function Xi(e) {
+  let t = e[0], n, r = $r(e);
+  return {
+    c() {
+      r.c(), n = Hi();
+    },
+    m(o, a) {
+      r.m(o, a), Ke(o, n, a);
+    },
+    p(o, [a]) {
+      a & 1 && an(t, t = o[0]) ? (r.d(1), r = $r(o), r.c(), r.m(n.parentNode, n)) : r.p(o, a);
+    },
+    i: kr,
+    o: kr,
+    d(o) {
+      o && qe(n), r.d(o);
+    }
+  };
+}
+function Zi(e, t, n) {
+  let { value: r } = t;
+  return e.$$set = (o) => {
+    "value" in o && n(0, r = o.value);
+  }, [r];
+}
+class es extends nr {
+  constructor(t) {
+    super(), rr(this, t, Zi, Xi, an, { value: 0 });
+  }
+}
+let ts = {
   one: {},
   two: {},
   three: {},
   four: {}
-}, Ki = {
+}, ns = {
   one: {},
   two: {},
   three: {}
-}, qi = {}, Ui = [];
-const Tn = { methods: _i, model: Ki, compute: qi, hooks: Ui }, Ri = (e) => Object.prototype.toString.call(e) === "[object Array]", Qi = {
+}, rs = {}, os = [];
+const Fn = { methods: ts, model: ns, compute: rs, hooks: os }, as = (e) => Object.prototype.toString.call(e) === "[object Array]", is = {
   compute: function(e) {
     const { world: t } = this, n = t.compute;
-    return typeof e == "string" && n.hasOwnProperty(e) ? n[e](this) : Ri(e) ? e.forEach((r) => {
+    return typeof e == "string" && n.hasOwnProperty(e) ? n[e](this) : as(e) ? e.forEach((r) => {
       t.compute.hasOwnProperty(r) ? n[r](this) : console.warn("no compute:", e);
     }) : typeof e == "function" ? e(this) : console.warn("no compute:", e), this;
   }
-}, Yi = Qi, Xi = function(e) {
+}, ss = is, ls = function(e) {
   return this.fullPointer.forEach((n, r) => {
     let o = this.update([n]);
     e(o, r);
   }), this;
-}, Zi = function(e, t) {
+}, us = function(e, t) {
   let r = this.fullPointer.map((a, i) => {
     let s = this.update([a]), l = e(s, i);
     return l === void 0 ? this.none() : l;
@@ -80,27 +127,27 @@ const Tn = { methods: _i, model: Ki, compute: qi, hooks: Ui }, Ri = (e) => Objec
   return r.forEach((a) => {
     o = o.concat(a.fullPointer);
   }), this.toView(o);
-}, es = function(e) {
+}, cs = function(e) {
   let t = this.fullPointer;
   return t = t.filter((r, o) => {
     let a = this.update([r]);
     return e(a, o);
   }), this.update(t);
-}, ts = function(e) {
+}, hs = function(e) {
   let n = this.fullPointer.find((r, o) => {
     let a = this.update([r]);
     return e(a, o);
   });
   return this.update([n]);
-}, ns = function(e) {
+}, ds = function(e) {
   return this.fullPointer.some((n, r) => {
     let o = this.update([n]);
     return e(o, r);
   });
-}, rs = function(e = 1) {
+}, fs = function(e = 1) {
   let t = this.fullPointer, n = Math.floor(Math.random() * t.length);
   return n + e > this.length && (n = this.length - e, n = n < 0 ? 0 : n), t = t.slice(n, n + e), this.update(t);
-}, os = { forEach: Xi, map: Zi, filter: es, find: ts, some: ns, random: rs }, le = {
+}, ps = { forEach: ls, map: us, filter: cs, find: hs, some: ds, random: fs }, ce = {
   termList: function() {
     return this.methods.one.termList(this.docs);
   },
@@ -172,19 +219,19 @@ const Tn = { methods: _i, model: Ki, compute: qi, hooks: Ui }, Ri = (e) => Objec
     return typeof e == "number" ? this.eq(e) : typeof e == "string" ? this.if(e) : this;
   }
 };
-le.group = le.groups;
-le.fullSentence = le.fullSentences;
-le.sentence = le.fullSentences;
-le.lastTerm = le.lastTerms;
-le.firstTerm = le.firstTerms;
-const as = le, Cn = Object.assign({}, as, Yi, os);
-Cn.get = Cn.eq;
-const is = Cn;
-class Ze {
+ce.group = ce.groups;
+ce.fullSentence = ce.fullSentences;
+ce.sentence = ce.fullSentences;
+ce.lastTerm = ce.lastTerms;
+ce.firstTerm = ce.firstTerms;
+const gs = ce, Vn = Object.assign({}, gs, ss, ps);
+Vn.get = Vn.eq;
+const ms = Vn;
+class at {
   constructor(t, n, r = {}) {
     [
       ["document", t],
-      ["world", Tn],
+      ["world", Fn],
       ["_groups", r],
       ["_cache", null],
       ["viewType", "View"]
@@ -197,7 +244,7 @@ class Ze {
   }
   get docs() {
     let t = this.document;
-    return this.ptrs && (t = Tn.methods.one.getDoc(this.ptrs, this.document)), t;
+    return this.ptrs && (t = Fn.methods.one.getDoc(this.ptrs, this.document)), t;
   }
   get pointer() {
     return this.ptrs;
@@ -228,7 +275,7 @@ class Ze {
     });
   }
   update(t) {
-    let n = new Ze(this.document, t);
+    let n = new at(this.document, t);
     if (this._cache && t && t.length > 0) {
       let r = [];
       t.forEach((o, a) => {
@@ -239,11 +286,11 @@ class Ze {
     return n.world = this.world, n;
   }
   toView(t) {
-    return new Ze(this.document, t || this.pointer);
+    return new at(this.document, t || this.pointer);
   }
   fromText(t) {
     const { methods: n } = this;
-    let r = n.one.tokenize.fromString(t, this.world), o = new Ze(r);
+    let r = n.one.tokenize.fromString(t, this.world), o = new at(r);
     return o.world = this.world, o.compute(["normal", "lexicon"]), this.world.compute.preTagger && o.compute("preTagger"), o;
   }
   clone() {
@@ -253,37 +300,37 @@ class Ze {
     return n.document = t, n._cache = this._cache, n;
   }
 }
-Object.assign(Ze.prototype, is);
-const Xn = Ze, ss = "14.8.2", mr = function(e) {
+Object.assign(at.prototype, ms);
+const or = at, ys = "14.8.2", Ir = function(e) {
   return e && typeof e == "object" && !Array.isArray(e);
 };
-function Va(e, t) {
-  if (mr(t))
+function Ja(e, t) {
+  if (Ir(t))
     for (const n in t)
-      mr(t[n]) ? (e[n] || Object.assign(e, { [n]: {} }), Va(e[n], t[n])) : Object.assign(e, { [n]: t[n] });
+      Ir(t[n]) ? (e[n] || Object.assign(e, { [n]: {} }), Ja(e[n], t[n])) : Object.assign(e, { [n]: t[n] });
   return e;
 }
-function ls(e, t) {
+function bs(e, t) {
   for (const n in t)
     e[n] = e[n] || {}, Object.assign(e[n], t[n]);
   return e;
 }
-const us = function(e, t) {
+const vs = function(e, t) {
   let n = e.two.models || {};
   Object.keys(t).forEach((r) => {
     t[r].pastTense && (n.toPast && (n.toPast.exceptions[r] = t[r].pastTense), n.fromPast && (n.fromPast.exceptions[t[r].pastTense] = r)), t[r].presentTense && (n.toPresent && (n.toPresent.exceptions[r] = t[r].presentTense), n.fromPresent && (n.fromPresent.exceptions[t[r].presentTense] = r)), t[r].gerund && (n.toGerund && (n.toGerund.exceptions[r] = t[r].gerund), n.fromGerund && (n.fromGerund.exceptions[t[r].gerund] = r)), t[r].comparative && (n.toComparative && (n.toComparative.exceptions[r] = t[r].comparative), n.fromComparative && (n.fromComparative.exceptions[t[r].comparative] = r)), t[r].superlative && (n.toSuperlative && (n.toSuperlative.exceptions[r] = t[r].superlative), n.fromSuperlative && (n.fromSuperlative.exceptions[t[r].superlative] = r));
   });
-}, cs = function(e, t, n, r) {
+}, ws = function(e, t, n, r) {
   const { methods: o, model: a, compute: i, hooks: s } = t;
-  e.methods && ls(o, e.methods), e.model && Va(a, e.model), e.irregulars && us(a, e.irregulars), e.compute && Object.assign(i, e.compute), s && (t.hooks = s.concat(e.hooks || [])), e.api && e.api(n), e.lib && Object.keys(e.lib).forEach((l) => r[l] = e.lib[l]), e.tags && r.addTags(e.tags), e.words && r.addWords(e.words), e.mutate && e.mutate(t);
-}, hs = cs, ds = function(e) {
+  e.methods && bs(o, e.methods), e.model && Ja(a, e.model), e.irregulars && vs(a, e.irregulars), e.compute && Object.assign(i, e.compute), s && (t.hooks = s.concat(e.hooks || [])), e.api && e.api(n), e.lib && Object.keys(e.lib).forEach((l) => r[l] = e.lib[l]), e.tags && r.addTags(e.tags), e.words && r.addWords(e.words), e.mutate && e.mutate(t);
+}, Ps = ws, ks = function(e) {
   const t = typeof process > "u" || !process.env ? self.env || {} : process.env;
   return t.DEBUG_TAGS = e === "tagger" || e === !0 ? !0 : "", t.DEBUG_MATCH = e === "match" || e === !0 ? !0 : "", t.DEBUG_CHUNKS = e === "chunker" || e === !0 ? !0 : "", this;
-}, fs = (e) => Object.prototype.toString.call(e) === "[object Object]", Dn = function(e) {
+}, As = (e) => Object.prototype.toString.call(e) === "[object Object]", Gn = function(e) {
   return Object.prototype.toString.call(e) === "[object Array]";
-}, ps = function(e) {
-  return e.map((t) => t.terms.map((n) => (Dn(n.tags) && (n.tags = new Set(n.tags)), n)));
-}, gs = function(e) {
+}, $s = function(e) {
+  return e.map((t) => t.terms.map((n) => (Gn(n.tags) && (n.tags = new Set(n.tags)), n)));
+}, Is = function(e) {
   return e.map((t) => t.map((n) => ({
     text: n,
     normal: n,
@@ -291,7 +338,7 @@ const us = function(e, t) {
     post: " ",
     tags: /* @__PURE__ */ new Set()
   })));
-}, ms = function(e, t, n) {
+}, xs = function(e, t, n) {
   const { methods: r } = n;
   let o = new t([]);
   if (o.world = n, typeof e == "number" && (e = String(e)), !e)
@@ -300,53 +347,53 @@ const us = function(e, t) {
     let a = r.one.tokenize.fromString(e, n);
     return new t(a);
   }
-  if (fs(e) && e.isView)
+  if (As(e) && e.isView)
     return new t(e.document, e.ptrs);
-  if (Dn(e)) {
-    if (Dn(e[0])) {
-      let i = gs(e);
+  if (Gn(e)) {
+    if (Gn(e[0])) {
+      let i = Is(e);
       return new t(i);
     }
-    let a = ps(e);
+    let a = $s(e);
     return new t(a);
   }
   return o;
-}, Ga = ms;
-let Yt = Object.assign({}, Tn);
-const q = function(e, t) {
-  t && q.addWords(t);
-  let n = Ga(e, Xn, Yt);
-  return e && n.compute(Yt.hooks), n;
+}, _a = xs;
+let en = Object.assign({}, Fn);
+const R = function(e, t) {
+  t && R.addWords(t);
+  let n = _a(e, or, en);
+  return e && n.compute(en.hooks), n;
 };
-Object.defineProperty(q, "_world", {
-  value: Yt,
+Object.defineProperty(R, "_world", {
+  value: en,
   writable: !0
 });
-q.tokenize = function(e, t) {
+R.tokenize = function(e, t) {
   const { compute: n } = this._world;
-  t && q.addWords(t);
-  let r = Ga(e, Xn, Yt);
+  t && R.addWords(t);
+  let r = _a(e, or, en);
   return n.contractions && r.compute(["alias", "normal", "machine", "contractions"]), r;
 };
-q.plugin = function(e) {
-  return hs(e, this._world, Xn, this), this;
+R.plugin = function(e) {
+  return Ps(e, this._world, or, this), this;
 };
-q.extend = q.plugin;
-q.world = function() {
+R.extend = R.plugin;
+R.world = function() {
   return this._world;
 };
-q.model = function() {
+R.model = function() {
   return this._world.model;
 };
-q.methods = function() {
+R.methods = function() {
   return this._world.methods;
 };
-q.hooks = function() {
+R.hooks = function() {
   return this._world.hooks;
 };
-q.verbose = ds;
-q.version = ss;
-const k = q, ys = function(e) {
+R.verbose = ks;
+R.version = ys;
+const P = R, Ns = function(e) {
   return e.map((n) => {
     let r = /* @__PURE__ */ new Set();
     return n.forEach((o) => {
@@ -356,28 +403,28 @@ const k = q, ys = function(e) {
         r.add("#" + a[i]);
     }), r;
   });
-}, bs = ys, vs = {
+}, js = Ns, Es = {
   one: {
-    cacheDoc: bs
+    cacheDoc: js
   }
-}, ws = {
+}, Ts = {
   cache: function() {
     return this._cache = this.methods.one.cacheDoc(this.document), this;
   },
   uncache: function() {
     return this._cache = null, this;
   }
-}, Ps = function(e) {
-  Object.assign(e.prototype, ws);
-}, ks = Ps, As = {
+}, Cs = function(e) {
+  Object.assign(e.prototype, Ts);
+}, Ds = Cs, Os = {
   cache: function(e) {
     e._cache = e.methods.one.cacheDoc(e.document);
   }
-}, Is = {
-  api: ks,
-  compute: As,
-  methods: vs
-}, $s = {
+}, Fs = {
+  api: Ds,
+  compute: Os,
+  methods: Es
+}, Vs = {
   toLowerCase: function() {
     return this.termList().forEach((e) => {
       e.text = e.text.toLowerCase();
@@ -400,17 +447,17 @@ const k = q, ys = function(e) {
       });
     }), this;
   }
-}, yr = (e) => /^\p{Lu}[\p{Ll}'’]/u.test(e) || /^\p{Lu}$/u.test(e), xs = (e) => e.replace(/^\p{Ll}/u, (t) => t.toUpperCase()), Ns = (e) => e.replace(/^\p{Lu}/u, (t) => t.toLowerCase()), Ba = (e, t, n) => {
+}, xr = (e) => /^\p{Lu}[\p{Ll}'’]/u.test(e) || /^\p{Lu}$/u.test(e), Gs = (e) => e.replace(/^\p{Ll}/u, (t) => t.toUpperCase()), Bs = (e) => e.replace(/^\p{Lu}/u, (t) => t.toLowerCase()), Ka = (e, t, n) => {
   if (n.forEach((r) => r.dirty = !0), e) {
     let r = [t, 0].concat(n);
     Array.prototype.splice.apply(e, r);
   }
   return e;
-}, Xe = function(e) {
+}, ot = function(e) {
   const t = / $/, n = /[-–—]/;
   let r = e[e.length - 1];
   r && !t.test(r.post) && !n.test(r.post) && (r.post += " ");
-}, br = (e, t, n) => {
+}, Nr = (e, t, n) => {
   const r = /[-.?!,;:)–—'"]/g;
   let o = e[t - 1];
   if (!o)
@@ -420,79 +467,79 @@ const k = q, ys = function(e) {
     let i = a.match(r).join(""), s = n[n.length - 1];
     s.post = i + s.post, o.post = o.post.replace(r, "");
   }
-}, js = function(e, t, n) {
+}, zs = function(e, t, n) {
   let r = e[t];
-  if (t !== 0 || !yr(r.text))
+  if (t !== 0 || !xr(r.text))
     return;
-  n[0].text = xs(n[0].text);
+  n[0].text = Gs(n[0].text);
   let o = e[t];
-  o.tags.has("ProperNoun") || o.tags.has("Acronym") || yr(o.text) && o.text.length > 1 && (o.text = Ns(o.text));
-}, Es = function(e, t, n, r) {
+  o.tags.has("ProperNoun") || o.tags.has("Acronym") || xr(o.text) && o.text.length > 1 && (o.text = Bs(o.text));
+}, Ss = function(e, t, n, r) {
   let [o, a, i] = t;
-  a === 0 || i === r[o].length ? Xe(n) : (Xe(n), Xe([e[t[1]]])), js(e, a, n), Ba(e, a, n);
-}, Ts = function(e, t, n, r) {
+  a === 0 || i === r[o].length ? ot(n) : (ot(n), ot([e[t[1]]])), zs(e, a, n), Ka(e, a, n);
+}, Ls = function(e, t, n, r) {
   let [o, , a] = t, i = (r[o] || []).length;
-  a < i ? (br(e, a, n), Xe(n)) : i === a && (Xe(e), br(e, a, n), r[o + 1] && (n[n.length - 1].post += " ")), Ba(e, t[2], n), t[4] = n[n.length - 1].id;
+  a < i ? (Nr(e, a, n), ot(n)) : i === a && (ot(e), Nr(e, a, n), r[o + 1] && (n[n.length - 1].post += " ")), Ka(e, t[2], n), t[4] = n[n.length - 1].id;
 };
-let at = 0;
-const vr = (e) => (e = e.length < 3 ? "0" + e : e, e.length < 3 ? "0" + e : e), Cs = function(e) {
+let ht = 0;
+const jr = (e) => (e = e.length < 3 ? "0" + e : e, e.length < 3 ? "0" + e : e), Ms = function(e) {
   let [t, n] = e.index || [0, 0];
-  at += 1, at = at > 46655 ? 0 : at, t = t > 46655 ? 0 : t, n = n > 1294 ? 0 : n;
-  let r = vr(at.toString(36));
-  r += vr(t.toString(36));
+  ht += 1, ht = ht > 46655 ? 0 : ht, t = t > 46655 ? 0 : t, n = n > 1294 ? 0 : n;
+  let r = jr(ht.toString(36));
+  r += jr(t.toString(36));
   let o = n.toString(36);
   o = o.length < 2 ? "0" + o : o, r += o;
   let a = parseInt(Math.random() * 36, 10);
   return r += a.toString(36), e.normal + "|" + r.toUpperCase();
-}, za = Cs, wr = function(e) {
+}, qa = Ms, Er = function(e) {
   e.has("@hasContraction") && typeof e.contractions == "function" && e.grow("@hasContraction").contractions().expand();
-}, Pr = (e) => Object.prototype.toString.call(e) === "[object Array]", Ds = function(e) {
-  return e = e.map((t) => (t.id = za(t), t)), e;
-}, Os = function(e, t) {
+}, Tr = (e) => Object.prototype.toString.call(e) === "[object Array]", Ws = function(e) {
+  return e = e.map((t) => (t.id = qa(t), t)), e;
+}, Hs = function(e, t) {
   const { methods: n } = t;
-  return typeof e == "string" ? n.one.tokenize.fromString(e, t)[0] : typeof e == "object" && e.isView ? e.clone().docs[0] || [] : Pr(e) ? Pr(e[0]) ? e[0] : e : [];
-}, kr = function(e, t, n) {
+  return typeof e == "string" ? n.one.tokenize.fromString(e, t)[0] : typeof e == "object" && e.isView ? e.clone().docs[0] || [] : Tr(e) ? Tr(e[0]) ? e[0] : e : [];
+}, Cr = function(e, t, n) {
   const { document: r, world: o } = t;
   t.uncache();
   let a = t.fullPointer, i = t.fullPointer;
   t.forEach((l, u) => {
-    let c = l.fullPointer[0], [h] = c, f = r[h], w = Os(e, o);
-    w.length !== 0 && (w = Ds(w), n ? (wr(t.update([c]).firstTerm()), Es(f, c, w, r)) : (wr(t.update([c]).lastTerm()), Ts(f, c, w, r)), r[h] && r[h][c[1]] && (c[3] = r[h][c[1]].id), i[u] = c, c[2] += w.length, a[u] = c);
+    let c = l.fullPointer[0], [h] = c, d = r[h], x = Hs(e, o);
+    x.length !== 0 && (x = Ws(x), n ? (Er(t.update([c]).firstTerm()), Ss(d, c, x, r)) : (Er(t.update([c]).lastTerm()), Ls(d, c, x, r)), r[h] && r[h][c[1]] && (c[3] = r[h][c[1]].id), i[u] = c, c[2] += x.length, a[u] = c);
   });
   let s = t.toView(a);
   return t.ptrs = i, s.compute(["id", "index", "lexicon"]), s.world.compute.preTagger && s.compute("preTagger"), s;
-}, Me = {
+}, _e = {
   insertAfter: function(e) {
-    return kr(e, this, !1);
+    return Cr(e, this, !1);
   },
   insertBefore: function(e) {
-    return kr(e, this, !0);
+    return Cr(e, this, !0);
   }
 };
-Me.append = Me.insertAfter;
-Me.prepend = Me.insertBefore;
-Me.insert = Me.insertAfter;
-const Fs = Me, Vs = /\$[0-9a-z]+/g, Zn = {}, Gs = function(e) {
+_e.append = _e.insertAfter;
+_e.prepend = _e.insertBefore;
+_e.insert = _e.insertAfter;
+const Js = _e, _s = /\$[0-9a-z]+/g, ar = {}, Ks = function(e) {
   return e.replace(/\w\S*/g, (t) => t.charAt(0).toUpperCase() + t.substring(1).toLowerCase());
-}, Bs = function(e, t) {
+}, qs = function(e, t) {
   return e.forEach((n) => {
     let r = t(n);
     n.replaceWith(r);
   }), e;
-}, zs = function(e, t) {
+}, Us = function(e, t) {
   if (typeof e != "string")
     return e;
   let n = t.groups();
-  return e = e.replace(Vs, (r) => {
+  return e = e.replace(_s, (r) => {
     let o = r.replace(/\$/, "");
     return n.hasOwnProperty(o) ? n[o].text() : r;
   }), e;
 };
-Zn.replaceWith = function(e, t = {}) {
+ar.replaceWith = function(e, t = {}) {
   let n = this.fullPointer, r = this;
   if (this.uncache(), typeof e == "function")
-    return Bs(r, e);
-  e = zs(e, r);
+    return qs(r, e);
+  e = Us(e, r);
   let o = this.update(n);
   n = n.map((s) => s.slice(0, 3));
   let a = (o.docs[0] || []).map((s) => Array.from(s.tags));
@@ -500,21 +547,21 @@ Zn.replaceWith = function(e, t = {}) {
   let i = r.toView(n).compute(["index", "lexicon"]);
   return i.world.compute.preTagger && i.compute("preTagger"), t.tags && i.terms().forEach((s, l) => {
     s.tagSafe(a[l]);
-  }), t.case && i.docs[0] && i.docs[0][0] && i.docs[0][0].index[1] === 0 && (i.docs[0][0].text = Gs(i.docs[0][0].text)), i;
+  }), t.case && i.docs[0] && i.docs[0][0] && i.docs[0][0].index[1] === 0 && (i.docs[0][0].text = Ks(i.docs[0][0].text)), i;
 };
-Zn.replace = function(e, t, n) {
+ar.replace = function(e, t, n) {
   if (e && !t)
     return this.replaceWith(e, n);
   let r = this.match(e);
   return r.found ? (this.soften(), r.replaceWith(t, n)) : this;
 };
-const Ss = Zn, Ls = function(e, t) {
+const Rs = ar, Qs = function(e, t) {
   let n = e.length - 1, r = e[n], o = e[n - t];
   o && r && (o.post += r.post, o.post = o.post.replace(/ +([.?!,;:])/, "$1"), o.post = o.post.replace(/[,;:]+([.?!])/, "$1"));
-}, Ms = function(e, t) {
+}, Ys = function(e, t) {
   t.forEach((n) => {
     let [r, o, a] = n, i = a - o;
-    e[r] && (a === e[r].length && a > 1 && Ls(e[r], i), e[r].splice(o, i));
+    e[r] && (a === e[r].length && a > 1 && Qs(e[r], i), e[r].splice(o, i));
   });
   for (let n = e.length - 1; n >= 0; n -= 1)
     if (e[n].length === 0 && (e.splice(n, 1), n === e.length && e[n - 1])) {
@@ -522,7 +569,7 @@ const Ss = Zn, Ls = function(e, t) {
       o && (o.post = o.post.trimEnd());
     }
   return e;
-}, Ws = Ms, Hs = function(e, t) {
+}, Xs = Ys, Zs = function(e, t) {
   return e = e.map((n) => {
     let [r] = n;
     return t[r] && t[r].forEach((o) => {
@@ -534,7 +581,7 @@ const Ss = Zn, Ls = function(e, t) {
       for (let o = r + 1; o < e.length; o += 1)
         e[o][0] -= 1, e[o][0] < 0 && (e[o][0] = 0);
   }), e = e.filter((n) => n[2] - n[1] > 0), e = e.map((n) => (n[3] = null, n[4] = null, n)), e;
-}, On = {
+}, Bn = {
   remove: function(e) {
     const { indexN: t } = this.methods.one.pointer;
     this.uncache();
@@ -542,12 +589,12 @@ const Ss = Zn, Ls = function(e, t) {
     e && (n = this, r = this.match(e));
     let o = !n.ptrs;
     r.has("@hasContraction") && r.contractions && r.grow("@hasContraction").contractions().expand();
-    let a = n.fullPointer, i = r.fullPointer.reverse(), s = Ws(this.document, i), l = t(i);
-    return a = Hs(a, l), n.ptrs = a, n.document = s, n.compute("index"), o && (n.ptrs = void 0), e ? n.toView(a) : (this.ptrs = [], n.none());
+    let a = n.fullPointer, i = r.fullPointer.reverse(), s = Xs(this.document, i), l = t(i);
+    return a = Zs(a, l), n.ptrs = a, n.document = s, n.compute("index"), o && (n.ptrs = void 0), e ? n.toView(a) : (this.ptrs = [], n.none());
   }
 };
-On.delete = On.remove;
-const Js = On, ht = {
+Bn.delete = Bn.remove;
+const el = Bn, yt = {
   pre: function(e, t) {
     return e === void 0 && this.found ? this.docs[0][0].pre : (this.docs.forEach((n) => {
       let r = n[0];
@@ -602,12 +649,12 @@ const Js = On, ht = {
     }), this;
   }
 };
-ht.deHyphenate = ht.dehyphenate;
-ht.toQuotation = ht.toQuotations;
-const _s = ht, Ks = (e, t) => e.normal < t.normal ? -1 : e.normal > t.normal ? 1 : 0, qs = (e, t) => {
+yt.deHyphenate = yt.dehyphenate;
+yt.toQuotation = yt.toQuotations;
+const tl = yt, nl = (e, t) => e.normal < t.normal ? -1 : e.normal > t.normal ? 1 : 0, rl = (e, t) => {
   let n = e.normal.trim().length, r = t.normal.trim().length;
   return n < r ? 1 : n > r ? -1 : 0;
-}, Us = (e, t) => e.words < t.words ? 1 : e.words > t.words ? -1 : 0, Rs = (e, t) => e[0] < t[0] ? 1 : e[0] > t[0] ? -1 : e[1] > t[1] ? 1 : -1, Qs = function(e) {
+}, ol = (e, t) => e.words < t.words ? 1 : e.words > t.words ? -1 : 0, al = (e, t) => e[0] < t[0] ? 1 : e[0] > t[0] ? -1 : e[1] > t[1] ? 1 : -1, il = function(e) {
   let t = {};
   return e.forEach((n) => {
     t[n.normal] = t[n.normal] || 0, t[n.normal] += 1;
@@ -615,13 +662,13 @@ const _s = ht, Ks = (e, t) => e.normal < t.normal ? -1 : e.normal > t.normal ? 1
     let o = t[n.normal], a = t[r.normal];
     return o < a ? 1 : o > a ? -1 : 0;
   }), e;
-}, an = { alpha: Ks, length: qs, wordCount: Us, sequential: Rs, byFreq: Qs }, Ys = /* @__PURE__ */ new Set(["index", "sequence", "seq", "sequential", "chron", "chronological"]), Xs = /* @__PURE__ */ new Set(["freq", "frequency", "topk", "repeats"]), Zs = /* @__PURE__ */ new Set(["alpha", "alphabetical"]), el = function(e, t) {
+}, cn = { alpha: nl, length: rl, wordCount: ol, sequential: al, byFreq: il }, sl = /* @__PURE__ */ new Set(["index", "sequence", "seq", "sequential", "chron", "chronological"]), ll = /* @__PURE__ */ new Set(["freq", "frequency", "topk", "repeats"]), ul = /* @__PURE__ */ new Set(["alpha", "alphabetical"]), cl = function(e, t) {
   let n = e.fullPointer;
   return n = n.sort((r, o) => (r = e.update([r]), o = e.update([o]), t(r, o))), e.ptrs = n, e;
-}, tl = function(e) {
+}, hl = function(e) {
   let { docs: t, pointer: n } = this;
   if (this.uncache(), typeof e == "function")
-    return el(this, e);
+    return cl(this, e);
   e = e || "alpha";
   let r = n || t.map((a, i) => [i]), o = t.map((a, i) => ({
     index: i,
@@ -629,31 +676,31 @@ const _s = ht, Ks = (e, t) => e.normal < t.normal ? -1 : e.normal > t.normal ? 1
     normal: a.map((s) => s.machine || s.normal || "").join(" "),
     pointer: r[i]
   }));
-  return Ys.has(e) && (e = "sequential"), Zs.has(e) && (e = "alpha"), Xs.has(e) ? (o = an.byFreq(o), this.update(o.map((a) => a.pointer))) : typeof an[e] == "function" ? (o = o.sort(an[e]), this.update(o.map((a) => a.pointer))) : this;
-}, nl = function() {
+  return sl.has(e) && (e = "sequential"), ul.has(e) && (e = "alpha"), ll.has(e) ? (o = cn.byFreq(o), this.update(o.map((a) => a.pointer))) : typeof cn[e] == "function" ? (o = o.sort(cn[e]), this.update(o.map((a) => a.pointer))) : this;
+}, dl = function() {
   let e = this.pointer || this.docs.map((t, n) => [n]);
   return e = [].concat(e), e = e.reverse(), this._cache && (this._cache = this._cache.reverse()), this.update(e);
-}, rl = function() {
+}, fl = function() {
   let e = /* @__PURE__ */ new Set();
   return this.filter((n) => {
     let r = n.text("machine");
     return e.has(r) ? !1 : (e.add(r), !0);
   });
-}, ol = { unique: rl, reverse: nl, sort: tl }, al = (e) => Object.prototype.toString.call(e) === "[object Array]", Sa = function(e, t) {
+}, pl = { unique: fl, reverse: dl, sort: hl }, gl = (e) => Object.prototype.toString.call(e) === "[object Array]", Ua = function(e, t) {
   if (e.length > 0) {
     let n = e[e.length - 1], r = n[n.length - 1];
     / /.test(r.post) === !1 && (r.post += " ");
   }
   return e = e.concat(t), e;
-}, il = function(e, t) {
+}, ml = function(e, t) {
   if (e.document === t.document) {
     let r = e.fullPointer.concat(t.fullPointer);
     return e.toView(r).compute("index");
   }
   return t.fullPointer.forEach((r) => {
     r[0] += e.document.length;
-  }), e.document = Sa(e.document, t.docs), e.all();
-}, sl = {
+  }), e.document = Ua(e.document, t.docs), e.all();
+}, yl = {
   concat: function(e) {
     if (typeof e == "string") {
       let t = this.fromText(e);
@@ -666,33 +713,33 @@ const _s = ht, Ks = (e, t) => e.normal < t.normal ? -1 : e.normal > t.normal ? 1
       return this.all().compute("index");
     }
     if (typeof e == "object" && e.isView)
-      return il(this, e);
-    if (al(e)) {
-      let t = Sa(this.document, e);
+      return ml(this, e);
+    if (gl(e)) {
+      let t = Ua(this.document, e);
       return this.document = t, this.all();
     }
     return this;
   }
-}, ll = function() {
+}, bl = function() {
   return this.ptrs = this.fullPointer, this;
-}, ul = function() {
+}, vl = function() {
   let e = this.ptrs;
   return !e || e.length < 1 ? this : (e = e.map((t) => t.slice(0, 3)), this.ptrs = e, this);
-}, cl = { harden: ll, soften: ul }, hl = Object.assign({}, $s, Fs, Ss, Js, _s, ol, sl, cl), dl = function(e) {
-  Object.assign(e.prototype, hl);
-}, fl = dl, pl = {
+}, wl = { harden: bl, soften: vl }, Pl = Object.assign({}, Vs, Js, Rs, el, tl, pl, yl, wl), kl = function(e) {
+  Object.assign(e.prototype, Pl);
+}, Al = kl, $l = {
   id: function(e) {
     let t = e.docs;
     for (let n = 0; n < t.length; n += 1)
       for (let r = 0; r < t[n].length; r += 1) {
         let o = t[n][r];
-        o.id = o.id || za(o);
+        o.id = o.id || qa(o);
       }
   }
-}, gl = pl, ml = {
-  api: fl,
-  compute: gl
-}, yl = [
+}, Il = $l, xl = {
+  api: Al,
+  compute: Il
+}, Nl = [
   { word: "@", out: ["at"] },
   { word: "alot", out: ["a", "lot"] },
   { word: "brb", out: ["be", "right", "back"] },
@@ -747,51 +794,51 @@ const _s = ht, Ks = (e, t) => e.normal < t.normal ? -1 : e.normal > t.normal ? 1
   { before: "qu", out: ["que"] },
   { before: "s", out: ["se"] },
   { before: "t", out: ["tu"] }
-], bl = { one: { contractions: yl } }, vl = function(e, t, n) {
+], jl = { one: { contractions: Nl } }, El = function(e, t, n) {
   let [r, o] = t;
   !n || n.length === 0 || (n = n.map((a, i) => (a.implicit = a.text, a.machine = a.text, a.pre = "", a.post = "", a.text = "", a.normal = "", a.index = [r, o + i], a)), n[0] && (n[0].pre = e[r][o].pre, n[n.length - 1].post = e[r][o].post, n[0].text = e[r][o].text, n[0].normal = e[r][o].normal), e[r].splice(o, 1, ...n));
-}, sn = vl, wl = /'/, Pl = /* @__PURE__ */ new Set([
+}, hn = El, Tl = /'/, Cl = /* @__PURE__ */ new Set([
   "what",
   "how",
   "when",
   "where",
   "why"
-]), kl = /* @__PURE__ */ new Set([
+]), Dl = /* @__PURE__ */ new Set([
   "be",
   "go",
   "start",
   "think",
   "need"
-]), Al = /* @__PURE__ */ new Set([
+]), Ol = /* @__PURE__ */ new Set([
   "been",
   "gone"
-]), Il = function(e, t) {
-  let n = e[t].normal.split(wl)[0];
-  if (Pl.has(n))
+]), Fl = function(e, t) {
+  let n = e[t].normal.split(Tl)[0];
+  if (Cl.has(n))
     return [n, "did"];
   if (e[t + 1]) {
-    if (Al.has(e[t + 1].normal))
+    if (Ol.has(e[t + 1].normal))
       return [n, "had"];
-    if (kl.has(e[t + 1].normal))
+    if (Dl.has(e[t + 1].normal))
       return [n, "would"];
   }
   return null;
-}, $l = Il, xl = function(e, t) {
+}, Vl = Fl, Gl = function(e, t) {
   return e[t].normal === "ain't" || e[t].normal === "aint" ? null : [e[t].normal.replace(/n't/, ""), "not"];
-}, Nl = xl, er = /'/, jl = (e, t) => {
-  let n = e[t].normal.split(er)[1];
+}, Bl = Gl, ir = /'/, zl = (e, t) => {
+  let n = e[t].normal.split(ir)[1];
   return n && n.endsWith("e") ? ["la", n] : ["le", n];
-}, El = (e, t) => {
-  let n = e[t].normal.split(er)[1];
+}, Sl = (e, t) => {
+  let n = e[t].normal.split(ir)[1];
   return n && n.endsWith("e") ? ["du", n] : n && n.endsWith("s") ? ["des", n] : ["de", n];
-}, Tl = (e, t) => ["je", e[t].normal.split(er)[1]], ln = {
-  preJ: Tl,
-  preL: jl,
-  preD: El
-}, Cl = /^([0-9.]{1,4}[a-z]{0,2}) ?[-–—] ?([0-9]{1,4}[a-z]{0,2})$/i, Dl = /^([0-9]{1,2}(:[0-9][0-9])?(am|pm)?) ?[-–—] ?([0-9]{1,2}(:[0-9][0-9])?(am|pm)?)$/i, Ol = /^[0-9]{3}-[0-9]{4}$/, Fl = function(e, t) {
-  let n = e[t], r = n.text.match(Cl);
-  return r !== null ? n.tags.has("PhoneNumber") === !0 || Ol.test(n.text) ? null : [r[1], "to", r[2]] : (r = n.text.match(Dl), r !== null ? [r[1], "to", r[4]] : null);
-}, Vl = Fl, Gl = /^([+-]?[0-9][.,0-9]*)([a-z°²³µ/]+)$/, Bl = /* @__PURE__ */ new Set([
+}, Ll = (e, t) => ["je", e[t].normal.split(ir)[1]], dn = {
+  preJ: Ll,
+  preL: zl,
+  preD: Sl
+}, Ml = /^([0-9.]{1,4}[a-z]{0,2}) ?[-–—] ?([0-9]{1,4}[a-z]{0,2})$/i, Wl = /^([0-9]{1,2}(:[0-9][0-9])?(am|pm)?) ?[-–—] ?([0-9]{1,2}(:[0-9][0-9])?(am|pm)?)$/i, Hl = /^[0-9]{3}-[0-9]{4}$/, Jl = function(e, t) {
+  let n = e[t], r = n.text.match(Ml);
+  return r !== null ? n.tags.has("PhoneNumber") === !0 || Hl.test(n.text) ? null : [r[1], "to", r[2]] : (r = n.text.match(Wl), r !== null ? [r[1], "to", r[4]] : null);
+}, _l = Jl, Kl = /^([+-]?[0-9][.,0-9]*)([a-z°²³µ/]+)$/, ql = /* @__PURE__ */ new Set([
   "st",
   "nd",
   "rd",
@@ -802,26 +849,26 @@ const _s = ht, Ks = (e, t) => e.normal < t.normal ? -1 : e.normal > t.normal ? 1
   "°",
   "s",
   "e"
-]), zl = function(e, t) {
-  let r = e[t].text.match(Gl);
+]), Ul = function(e, t) {
+  let r = e[t].text.match(Kl);
   if (r !== null) {
     let o = r[2].toLowerCase().trim();
-    return Bl.has(o) ? null : [r[1], o];
+    return ql.has(o) ? null : [r[1], o];
   }
   return null;
-}, Sl = zl, Ar = /'/, Ll = /^[0-9][^-–—]*[-–—].*?[0-9]/, Ir = function(e, t, n, r) {
+}, Rl = Ul, Dr = /'/, Ql = /^[0-9][^-–—]*[-–—].*?[0-9]/, Or = function(e, t, n, r) {
   let o = t.update();
   o.document = [e];
   let a = n + r;
   n > 0 && (n -= 1), e[a] && (a += 1), o.ptrs = [[0, n, a]];
-}, $r = {
-  t: (e, t) => Nl(e, t),
-  d: (e, t) => $l(e, t)
-}, xr = {
-  j: (e, t) => ln.preJ(e, t),
-  l: (e, t) => ln.preL(e, t),
-  d: (e, t) => ln.preD(e, t)
-}, Ml = function(e, t, n, r) {
+}, Fr = {
+  t: (e, t) => Bl(e, t),
+  d: (e, t) => Vl(e, t)
+}, Vr = {
+  j: (e, t) => dn.preJ(e, t),
+  l: (e, t) => dn.preL(e, t),
+  d: (e, t) => dn.preD(e, t)
+}, Yl = function(e, t, n, r) {
   for (let o = 0; o < e.length; o += 1) {
     let a = e[o];
     if (a.word === t.normal)
@@ -832,34 +879,34 @@ const _s = ht, Ks = (e, t) => e.normal < t.normal ? -1 : e.normal > t.normal ? 1
       return a.out.concat(r);
   }
   return null;
-}, un = function(e, t) {
+}, fn = function(e, t) {
   let n = t.fromText(e.join(" "));
   return n.compute(["id", "alias"]), n.docs[0];
-}, Wl = (e) => {
+}, Xl = (e) => {
   let { world: t, document: n } = e;
   const { model: r, methods: o } = t;
   let a = r.one.contractions || [];
   new Set(r.one.units || []), n.forEach((i, s) => {
     for (let l = i.length - 1; l >= 0; l -= 1) {
       let u = null, c = null;
-      Ar.test(i[l].normal) === !0 && ([u, c] = i[l].normal.split(Ar));
-      let h = Ml(a, i[l], u, c);
-      if (!h && $r.hasOwnProperty(c) && (h = $r[c](i, l, t)), !h && xr.hasOwnProperty(u) && (h = xr[u](i, l)), h) {
-        h = un(h, e), sn(n, [s, l], h), Ir(n[s], e, l, h.length);
+      Dr.test(i[l].normal) === !0 && ([u, c] = i[l].normal.split(Dr));
+      let h = Yl(a, i[l], u, c);
+      if (!h && Fr.hasOwnProperty(c) && (h = Fr[c](i, l, t)), !h && Vr.hasOwnProperty(u) && (h = Vr[u](i, l)), h) {
+        h = fn(h, e), hn(n, [s, l], h), Or(n[s], e, l, h.length);
         continue;
       }
-      if (Ll.test(i[l].normal)) {
-        h = Vl(i, l), h && (h = un(h, e), sn(n, [s, l], h), o.one.setTag(h, "NumberRange", t), h[2] && h[2].tags.has("Time") && o.one.setTag([h[0]], "Time", t, null, "time-range"), Ir(n[s], e, l, h.length));
+      if (Ql.test(i[l].normal)) {
+        h = _l(i, l), h && (h = fn(h, e), hn(n, [s, l], h), o.one.setTag(h, "NumberRange", t), h[2] && h[2].tags.has("Time") && o.one.setTag([h[0]], "Time", t, null, "time-range"), Or(n[s], e, l, h.length));
         continue;
       }
-      h = Sl(i, l), h && (h = un(h, e), sn(n, [s, l], h), o.one.setTag([h[1]], "Unit", t, null, "contraction-unit"));
+      h = Rl(i, l), h && (h = fn(h, e), hn(n, [s, l], h), o.one.setTag([h[1]], "Unit", t, null, "contraction-unit"));
     }
   });
-}, Hl = Wl, Jl = { contractions: Hl }, _l = {
-  model: bl,
-  compute: Jl,
+}, Zl = Xl, eu = { contractions: Zl }, tu = {
+  model: jl,
+  compute: eu,
   hooks: ["contractions"]
-}, Kl = _l, ql = function(e, t, n, r, o) {
+}, nu = tu, ru = function(e, t, n, r, o) {
   let a = t + 4 > e.length ? e.length - t : 4, i = e[t].machine || e[t].normal;
   for (let s = 1; s < a; s += 1) {
     let l = e[t + s], u = l.machine || l.normal;
@@ -869,11 +916,11 @@ const _s = ht, Ks = (e, t) => e.normal < t.normal ? -1 : e.normal > t.normal ? 1
     }
   }
   return !1;
-}, Ul = function(e, t, n) {
+}, ou = function(e, t, n) {
   const { model: r, methods: o } = n, a = o.one.setTag, i = r.one._multiCache || {}, s = r.one.lexicon || {};
   let l = e[t], u = l.machine || l.normal;
-  return e[t + 1] !== void 0 && i[u] === !0 ? ql(e, t, s, a, n) : null;
-}, Rl = Ul, Nr = /^(under|over|mis|re|un|dis|semi|pre|post)-?/, Ql = /* @__PURE__ */ new Set(["Verb", "Infinitive", "PastTense", "Gerund", "PresentTense", "Adjective", "Participle"]), Yl = function(e, t, n) {
+  return e[t + 1] !== void 0 && i[u] === !0 ? ru(e, t, s, a, n) : null;
+}, au = ou, Gr = /^(under|over|mis|re|un|dis|semi|pre|post)-?/, iu = /* @__PURE__ */ new Set(["Verb", "Infinitive", "PastTense", "Gerund", "PresentTense", "Adjective", "Participle"]), su = function(e, t, n) {
   const { model: r, methods: o } = n, a = o.one.setTag, i = r.one.lexicon;
   let s = e[t], l = s.machine || s.normal;
   if (i[l] !== void 0 && i.hasOwnProperty(l)) {
@@ -887,24 +934,24 @@ const _s = ht, Ks = (e, t) => e.normal < t.normal ? -1 : e.normal > t.normal ? 1
       return a([s], c, n, !1, "1-lexicon-alias"), !0;
     }
   }
-  if (Nr.test(l) === !0) {
-    let u = l.replace(Nr, "");
-    if (i.hasOwnProperty(u) && u.length > 3 && Ql.has(i[u]))
+  if (Gr.test(l) === !0) {
+    let u = l.replace(Gr, "");
+    if (i.hasOwnProperty(u) && u.length > 3 && iu.has(i[u]))
       return a([s], i[u], n, !1, "1-lexicon-prefix"), !0;
   }
   return null;
-}, Xl = Yl, Zl = function(e) {
+}, lu = su, uu = function(e) {
   const t = e.world;
   e.docs.forEach((n) => {
     for (let r = 0; r < n.length; r += 1)
       if (n[r].tags.size === 0) {
         let o = null;
-        o = o || Rl(n, r, t), o = o || Xl(n, r, t);
+        o = o || au(n, r, t), o = o || lu(n, r, t);
       }
   });
-}, eu = {
-  lexicon: Zl
-}, tu = function(e) {
+}, cu = {
+  lexicon: uu
+}, hu = function(e) {
   let t = {}, n = {};
   return Object.keys(e).forEach((r) => {
     let o = e[r];
@@ -912,11 +959,11 @@ const _s = ht, Ks = (e, t) => e.normal < t.normal ? -1 : e.normal > t.normal ? 1
     let a = r.split(/ /);
     a.length > 1 && (n[a[0]] = !0), t[r] = t[r] || o;
   }), delete t[""], delete t[null], delete t[" "], { lex: t, _multi: n };
-}, nu = tu, ru = {
+}, du = hu, fu = {
   one: {
-    expandLexicon: nu
+    expandLexicon: du
   }
-}, ou = function(e) {
+}, pu = function(e) {
   const t = this.world(), { methods: n, model: r } = t;
   if (e)
     if (Object.keys(e).forEach((o) => {
@@ -929,24 +976,24 @@ const _s = ht, Ks = (e, t) => e.normal < t.normal ? -1 : e.normal > t.normal ? 1
       Object.assign(r.one.lexicon, o), Object.assign(r.one._multiCache, a);
     } else
       Object.assign(r.one.lexicon, e);
-}, au = { addWords: ou }, iu = {
+}, gu = { addWords: pu }, mu = {
   one: {
     lexicon: {},
     _multiCache: {}
   }
-}, su = {
-  model: iu,
-  methods: ru,
-  compute: eu,
-  lib: au,
+}, yu = {
+  model: mu,
+  methods: fu,
+  compute: cu,
+  lib: gu,
   hooks: ["lexicon"]
-}, lu = function(e, t) {
+}, bu = function(e, t) {
   const { methods: n, model: r } = t;
   return n.one.tokenize.splitTerms(e, r).map((a) => n.one.tokenize.splitWhitespace(a, r)).map((a) => a.text.toLowerCase());
-}, uu = function(e, t) {
+}, vu = function(e, t) {
   let n = [{}], r = [null], o = [0], a = [], i = 0;
   e.forEach(function(s) {
-    let l = 0, u = lu(s, t);
+    let l = 0, u = bu(s, t);
     for (let c = 0; c < u.length; c++) {
       let h = u[c];
       n[l] && n[l].hasOwnProperty(h) ? l = n[l][h] : (i++, n[l][h] = i, n[i] = {}, l = i, r[i] = null);
@@ -962,14 +1009,14 @@ const _s = ht, Ks = (e, t) => e.normal < t.normal ? -1 : e.normal > t.normal ? 1
       for (a.push(h), i = o[s]; i > 0 && !n[i].hasOwnProperty(c); )
         i = o[i];
       if (n.hasOwnProperty(i)) {
-        let f = n[i][c];
-        o[h] = f, r[f] && (r[h] = r[h] || [], r[h] = r[h].concat(r[f]));
+        let d = n[i][c];
+        o[h] = d, r[d] && (r[h] = r[h] || [], r[h] = r[h].concat(r[d]));
       } else
         o[h] = 0;
     }
   }
   return { goNext: n, endAs: r, failTo: o };
-}, La = uu, cu = function(e, t, n) {
+}, Ra = vu, wu = function(e, t, n) {
   let r = 0, o = [];
   for (let a = 0; a < e.length; a++) {
     let i = e[a][n.form] || e[a].normal;
@@ -978,18 +1025,18 @@ const _s = ht, Ks = (e, t) => e.normal < t.normal ? -1 : e.normal > t.normal ? 1
     if (t.goNext[r].hasOwnProperty(i) && (r = t.goNext[r][i], t.endAs[r])) {
       let s = t.endAs[r];
       for (let l = 0; l < s.length; l++) {
-        let u = s[l], c = e[a - u + 1], [h, f] = c.index;
-        o.push([h, f, f + u, c.id]);
+        let u = s[l], c = e[a - u + 1], [h, d] = c.index;
+        o.push([h, d, d + u, c.id]);
       }
     }
   }
   return o;
-}, hu = function(e, t) {
+}, Pu = function(e, t) {
   for (let n = 0; n < e.length; n += 1)
     if (t.has(e[n]) === !0)
       return !1;
   return !0;
-}, du = function(e, t, n) {
+}, ku = function(e, t, n) {
   let r = [];
   n.form = n.form || "normal";
   let o = e.docs;
@@ -997,91 +1044,91 @@ const _s = ht, Ks = (e, t) => e.normal < t.normal ? -1 : e.normal > t.normal ? 1
     return console.error("Compromise invalid lookup trie"), e.none();
   let a = Object.keys(t.goNext[0]);
   for (let i = 0; i < o.length; i++) {
-    if (e._cache && e._cache[i] && hu(a, e._cache[i]) === !0)
+    if (e._cache && e._cache[i] && Pu(a, e._cache[i]) === !0)
       continue;
-    let s = o[i], l = cu(s, t, n);
+    let s = o[i], l = wu(s, t, n);
     l.length > 0 && (r = r.concat(l));
   }
   return e.update(r);
-}, fu = du, pu = (e) => Object.prototype.toString.call(e) === "[object Object]";
-function gu(e) {
+}, Au = ku, $u = (e) => Object.prototype.toString.call(e) === "[object Object]";
+function Iu(e) {
   e.prototype.lookup = function(t, n = {}) {
     if (!t)
       return this.none();
     typeof t == "string" && (t = [t]);
-    let r = pu(t) ? t : La(t, this.world), o = fu(this, r, n);
+    let r = $u(t) ? t : Ra(t, this.world), o = Au(this, r, n);
     return o = o.settle(), o;
   };
 }
-const cn = (e, t) => {
+const pn = (e, t) => {
   for (let n = e.length - 1; n >= 0; n -= 1)
     if (e[n] !== t)
       return e = e.slice(0, n + 1), e;
   return e;
-}, mu = function(e) {
+}, xu = function(e) {
   return e.goNext = e.goNext.map((t) => {
     if (Object.keys(t).length !== 0)
       return t;
-  }), e.goNext = cn(e.goNext, void 0), e.failTo = cn(e.failTo, 0), e.endAs = cn(e.endAs, null), e;
-}, yu = mu, Fn = {
+  }), e.goNext = pn(e.goNext, void 0), e.failTo = pn(e.failTo, 0), e.endAs = pn(e.endAs, null), e;
+}, Nu = xu, zn = {
   buildTrie: function(e) {
-    const t = La(e, this.world());
-    return yu(t);
+    const t = Ra(e, this.world());
+    return Nu(t);
   }
 };
-Fn.compile = Fn.buildTrie;
-const bu = {
-  api: gu,
-  lib: Fn
-}, jr = function(e, t) {
+zn.compile = zn.buildTrie;
+const ju = {
+  api: Iu,
+  lib: zn
+}, Br = function(e, t) {
   return t && e.forEach((n) => {
     let r = n[0];
     t[r] && (n[0] = t[r][0], n[1] += t[r][1], n[2] += t[r][1]);
   }), e;
-}, Ma = function(e, t) {
+}, Qa = function(e, t) {
   let { ptrs: n, byGroup: r } = e;
-  return n = jr(n, t), Object.keys(r).forEach((o) => {
-    r[o] = jr(r[o], t);
+  return n = Br(n, t), Object.keys(r).forEach((o) => {
+    r[o] = Br(r[o], t);
   }), { ptrs: n, byGroup: r };
-}, Wa = (e) => Object.prototype.toString.call(e) === "[object Object]", yt = (e) => e && Wa(e) && e.isView === !0, bt = (e) => e && Wa(e) && e.isNet === !0, vt = function(e, t, n) {
+}, Ya = (e) => Object.prototype.toString.call(e) === "[object Object]", Pt = (e) => e && Ya(e) && e.isView === !0, kt = (e) => e && Ya(e) && e.isNet === !0, At = function(e, t, n) {
   const r = n.methods.one;
   return typeof e == "number" && (e = String(e)), typeof e == "string" && (e = r.killUnicode(e, n), e = r.parseMatch(e, t, n)), e;
-}, vu = function(e, t, n) {
+}, Eu = function(e, t, n) {
   const r = this.methods.one;
-  if (yt(e))
+  if (Pt(e))
     return this.intersection(e);
-  if (bt(e))
+  if (kt(e))
     return this.sweep(e, { tagger: !1 }).view.settle();
-  e = vt(e, n, this.world);
-  let o = { regs: e, group: t }, a = r.match(this.docs, o, this._cache), { ptrs: i, byGroup: s } = Ma(a, this.fullPointer), l = this.toView(i);
+  e = At(e, n, this.world);
+  let o = { regs: e, group: t }, a = r.match(this.docs, o, this._cache), { ptrs: i, byGroup: s } = Qa(a, this.fullPointer), l = this.toView(i);
   return l._groups = s, l;
-}, wu = function(e, t, n) {
+}, Tu = function(e, t, n) {
   const r = this.methods.one;
-  if (yt(e))
+  if (Pt(e))
     return this.intersection(e).eq(0);
-  if (bt(e))
+  if (kt(e))
     return this.sweep(e, { tagger: !1, matchOne: !0 }).view;
-  e = vt(e, n, this.world);
-  let o = { regs: e, group: t, justOne: !0 }, a = r.match(this.docs, o, this._cache), { ptrs: i, byGroup: s } = Ma(a, this.fullPointer), l = this.toView(i);
+  e = At(e, n, this.world);
+  let o = { regs: e, group: t, justOne: !0 }, a = r.match(this.docs, o, this._cache), { ptrs: i, byGroup: s } = Qa(a, this.fullPointer), l = this.toView(i);
   return l._groups = s, l;
-}, Pu = function(e, t, n) {
+}, Cu = function(e, t, n) {
   const r = this.methods.one;
-  if (yt(e))
+  if (Pt(e))
     return e.fullPointer.length > 0;
-  if (bt(e))
+  if (kt(e))
     return this.sweep(e, { tagger: !1 }).view.found;
-  e = vt(e, n, this.world);
+  e = At(e, n, this.world);
   let o = { regs: e, group: t, justOne: !0 };
   return r.match(this.docs, o, this._cache).ptrs.length > 0;
-}, ku = function(e, t, n) {
+}, Du = function(e, t, n) {
   const r = this.methods.one;
-  if (yt(e))
+  if (Pt(e))
     return this.filter((l) => l.intersection(e).found);
-  if (bt(e)) {
+  if (kt(e)) {
     let l = this.sweep(e, { tagger: !1 }).view.settle();
     return this.if(l);
   }
-  e = vt(e, n, this.world);
+  e = At(e, n, this.world);
   let o = { regs: e, group: t, justOne: !0 }, a = this.fullPointer, i = this._cache || [];
   a = a.filter((l, u) => {
     let c = this.update([l]);
@@ -1089,21 +1136,21 @@ const bu = {
   });
   let s = this.update(a);
   return this._cache && (s._cache = a.map((l) => i[l[0]])), s;
-}, Au = function(e, t, n) {
+}, Ou = function(e, t, n) {
   const { methods: r } = this, o = r.one;
-  if (yt(e))
+  if (Pt(e))
     return this.filter((s) => !s.intersection(e).found);
-  if (bt(e)) {
+  if (kt(e)) {
     let s = this.sweep(e, { tagger: !1 }).view.settle();
     return this.ifNo(s);
   }
-  e = vt(e, n, this.world);
+  e = At(e, n, this.world);
   let a = this._cache || [], i = this.filter((s, l) => {
     let u = { regs: e, group: t, justOne: !0 };
     return o.match(s.docs, u, a[l]).ptrs.length === 0;
   });
   return this._cache && (i._cache = i.ptrs.map((s) => a[s[0]])), i;
-}, Iu = { matchOne: wu, match: vu, has: Pu, if: ku, ifNo: Au }, $u = function(e, t, n) {
+}, Fu = { matchOne: Tu, match: Eu, has: Cu, if: Du, ifNo: Ou }, Vu = function(e, t, n) {
   const { indexN: r } = this.methods.one.pointer;
   let o = [], a = r(this.fullPointer);
   Object.keys(a).forEach((s) => {
@@ -1112,16 +1159,16 @@ const bu = {
   });
   let i = this.toView(o);
   return e ? i.match(e, t, n) : i;
-}, xu = function(e, t, n) {
+}, Gu = function(e, t, n) {
   const { indexN: r } = this.methods.one.pointer;
   let o = [], a = r(this.fullPointer), i = this.document;
   Object.keys(a).forEach((l) => {
-    let u = a[l].sort((f, w) => f[1] > w[1] ? -1 : 1)[0], [c, , h] = u;
+    let u = a[l].sort((d, x) => d[1] > x[1] ? -1 : 1)[0], [c, , h] = u;
     h < i[c].length && o.push([c, h, i[c].length]);
   });
   let s = this.toView(o);
   return e ? s.match(e, t, n) : s;
-}, Nu = function(e, t, n) {
+}, Bu = function(e, t, n) {
   typeof e == "string" && (e = this.world.methods.one.parseMatch(e, n, this.world)), e[e.length - 1].end = !0;
   let r = this.fullPointer;
   return this.forEach((o, a) => {
@@ -1131,7 +1178,7 @@ const bu = {
       r[a][1] -= s.length, r[a][3] = s.docs[0][0].id;
     }
   }), this.update(r);
-}, ju = function(e, t, n) {
+}, zu = function(e, t, n) {
   typeof e == "string" && (e = this.world.methods.one.parseMatch(e, n, this.world)), e[0].start = !0;
   let r = this.fullPointer;
   return this.forEach((o, a) => {
@@ -1141,97 +1188,97 @@ const bu = {
       r[a][2] += s.length, r[a][4] = null;
     }
   }), this.update(r);
-}, Eu = function(e, t, n) {
+}, Su = function(e, t, n) {
   return this.growRight(e, t, n).growLeft(e, t, n);
-}, Tu = { before: $u, after: xu, growLeft: Nu, growRight: ju, grow: Eu }, Ha = function(e, t) {
+}, Lu = { before: Vu, after: Gu, growLeft: Bu, growRight: zu, grow: Su }, Xa = function(e, t) {
   return [e[0], e[1], t[2]];
-}, Cu = function(e) {
+}, Mu = function(e) {
   return Object.prototype.toString.call(e) === "[object Array]";
-}, tr = (e, t, n) => typeof e == "string" || Cu(e) ? t.match(e, n) : e || t.none(), nr = function(e, t) {
+}, sr = (e, t, n) => typeof e == "string" || Mu(e) ? t.match(e, n) : e || t.none(), lr = function(e, t) {
   let [n, r, o] = e;
   return t.document[n] && t.document[n][r] && (e[3] = e[3] || t.document[n][r].id, t.document[n][o - 1] && (e[4] = e[4] || t.document[n][o - 1].id)), e;
-}, et = {};
-et.splitOn = function(e, t) {
+}, it = {};
+it.splitOn = function(e, t) {
   const { splitAll: n } = this.methods.one.pointer;
-  let r = tr(e, this, t).fullPointer, o = n(this.fullPointer, r), a = [];
+  let r = sr(e, this, t).fullPointer, o = n(this.fullPointer, r), a = [];
   return o.forEach((i) => {
     a.push(i.passthrough), a.push(i.before), a.push(i.match), a.push(i.after);
-  }), a = a.filter((i) => i), a = a.map((i) => nr(i, this)), this.update(a);
+  }), a = a.filter((i) => i), a = a.map((i) => lr(i, this)), this.update(a);
 };
-et.splitBefore = function(e, t) {
+it.splitBefore = function(e, t) {
   const { splitAll: n } = this.methods.one.pointer;
-  let r = tr(e, this, t).fullPointer, o = n(this.fullPointer, r), a = [];
+  let r = sr(e, this, t).fullPointer, o = n(this.fullPointer, r), a = [];
   return o.forEach((i) => {
-    a.push(i.passthrough), a.push(i.before), i.match && i.after ? a.push(Ha(i.match, i.after)) : (a.push(i.match), a.push(i.after));
-  }), a = a.filter((i) => i), a = a.map((i) => nr(i, this)), this.update(a);
+    a.push(i.passthrough), a.push(i.before), i.match && i.after ? a.push(Xa(i.match, i.after)) : (a.push(i.match), a.push(i.after));
+  }), a = a.filter((i) => i), a = a.map((i) => lr(i, this)), this.update(a);
 };
-et.splitAfter = function(e, t) {
+it.splitAfter = function(e, t) {
   const { splitAll: n } = this.methods.one.pointer;
-  let r = tr(e, this, t).fullPointer, o = n(this.fullPointer, r), a = [];
+  let r = sr(e, this, t).fullPointer, o = n(this.fullPointer, r), a = [];
   return o.forEach((i) => {
-    a.push(i.passthrough), i.before && i.match ? a.push(Ha(i.before, i.match)) : (a.push(i.before), a.push(i.match)), a.push(i.after);
-  }), a = a.filter((i) => i), a = a.map((i) => nr(i, this)), this.update(a);
+    a.push(i.passthrough), i.before && i.match ? a.push(Xa(i.before, i.match)) : (a.push(i.before), a.push(i.match)), a.push(i.after);
+  }), a = a.filter((i) => i), a = a.map((i) => lr(i, this)), this.update(a);
 };
-et.split = et.splitAfter;
-const Du = et, ue = Object.assign({}, Iu, Tu, Du);
-ue.lookBehind = ue.before;
-ue.lookBefore = ue.before;
-ue.lookAhead = ue.after;
-ue.lookAfter = ue.after;
-ue.notIf = ue.ifNo;
-const Ou = function(e) {
-  Object.assign(e.prototype, ue);
-}, Fu = Ou, Vu = /(?:^|\s)([![^]*(?:<[^<]*>)?\/.*?[^\\/]\/[?\]+*$~]*)(?:\s|$)/, Gu = /([!~[^]*(?:<[^<]*>)?\([^)]+[^\\)]\)[?\]+*$~]*)(?:\s|$)/, Bu = / /g, zu = (e) => /^[![^]*(<[^<]*>)?\(/.test(e) && /\)[?\]+*$~]*$/.test(e), Er = (e) => /^[![^]*(<[^<]*>)?\//.test(e) && /\/[?\]+*$~]*$/.test(e), Tr = function(e) {
+it.split = it.splitAfter;
+const Wu = it, he = Object.assign({}, Fu, Lu, Wu);
+he.lookBehind = he.before;
+he.lookBefore = he.before;
+he.lookAhead = he.after;
+he.lookAfter = he.after;
+he.notIf = he.ifNo;
+const Hu = function(e) {
+  Object.assign(e.prototype, he);
+}, Ju = Hu, _u = /(?:^|\s)([![^]*(?:<[^<]*>)?\/.*?[^\\/]\/[?\]+*$~]*)(?:\s|$)/, Ku = /([!~[^]*(?:<[^<]*>)?\([^)]+[^\\)]\)[?\]+*$~]*)(?:\s|$)/, qu = / /g, Uu = (e) => /^[![^]*(<[^<]*>)?\(/.test(e) && /\)[?\]+*$~]*$/.test(e), zr = (e) => /^[![^]*(<[^<]*>)?\//.test(e) && /\/[?\]+*$~]*$/.test(e), Sr = function(e) {
   return e = e.map((t) => t.trim()), e = e.filter((t) => t), e;
-}, Su = function(e) {
-  let t = e.split(Vu), n = [];
+}, Ru = function(e) {
+  let t = e.split(_u), n = [];
   t.forEach((o) => {
-    if (Er(o)) {
+    if (zr(o)) {
       n.push(o);
       return;
     }
-    n = n.concat(o.split(Gu));
-  }), n = Tr(n);
+    n = n.concat(o.split(Ku));
+  }), n = Sr(n);
   let r = [];
   return n.forEach((o) => {
-    zu(o) || Er(o) ? r.push(o) : r = r.concat(o.split(Bu));
-  }), r = Tr(r), r;
-}, Lu = Su, Cr = /\{([0-9]+)?(, *[0-9]*)?\}/, Dr = /&&/, Mu = new RegExp(/^<\s*(\S+)\s*>/), Or = (e) => e.charAt(0).toUpperCase() + e.substring(1), X = (e) => e.charAt(e.length - 1), U = (e) => e.charAt(0), Re = (e) => e.substring(1), Qe = (e) => e.substring(0, e.length - 1), it = function(e) {
-  return e = Re(e), e = Qe(e), e;
-}, Ja = function(e, t) {
+    Uu(o) || zr(o) ? r.push(o) : r = r.concat(o.split(qu));
+  }), r = Sr(r), r;
+}, Qu = Ru, Lr = /\{([0-9]+)?(, *[0-9]*)?\}/, Mr = /&&/, Yu = new RegExp(/^<\s*(\S+)\s*>/), Wr = (e) => e.charAt(0).toUpperCase() + e.substring(1), ee = (e) => e.charAt(e.length - 1), Q = (e) => e.charAt(0), tt = (e) => e.substring(1), nt = (e) => e.substring(0, e.length - 1), dt = function(e) {
+  return e = tt(e), e = nt(e), e;
+}, Za = function(e, t) {
   let n = {};
   for (let r = 0; r < 2; r += 1) {
-    if (X(e) === "$" && (n.end = !0, e = Qe(e)), U(e) === "^" && (n.start = !0, e = Re(e)), (U(e) === "[" || X(e) === "]") && (n.group = null, U(e) === "[" && (n.groupStart = !0), X(e) === "]" && (n.groupEnd = !0), e = e.replace(/^\[/, ""), e = e.replace(/\]$/, ""), U(e) === "<")) {
-      const o = Mu.exec(e);
+    if (ee(e) === "$" && (n.end = !0, e = nt(e)), Q(e) === "^" && (n.start = !0, e = tt(e)), (Q(e) === "[" || ee(e) === "]") && (n.group = null, Q(e) === "[" && (n.groupStart = !0), ee(e) === "]" && (n.groupEnd = !0), e = e.replace(/^\[/, ""), e = e.replace(/\]$/, ""), Q(e) === "<")) {
+      const o = Yu.exec(e);
       o.length >= 2 && (n.group = o[1], e = e.replace(o[0], ""));
     }
-    if (X(e) === "+" && (n.greedy = !0, e = Qe(e)), e !== "*" && X(e) === "*" && e !== "\\*" && (n.greedy = !0, e = Qe(e)), X(e) === "?" && (n.optional = !0, e = Qe(e)), U(e) === "!" && (n.negative = !0, e = Re(e)), U(e) === "~" && X(e) === "~" && e.length > 2 && (e = it(e), n.fuzzy = !0, n.min = t.fuzzy || 0.85, /\(/.test(e) === !1))
+    if (ee(e) === "+" && (n.greedy = !0, e = nt(e)), e !== "*" && ee(e) === "*" && e !== "\\*" && (n.greedy = !0, e = nt(e)), ee(e) === "?" && (n.optional = !0, e = nt(e)), Q(e) === "!" && (n.negative = !0, e = tt(e)), Q(e) === "~" && ee(e) === "~" && e.length > 2 && (e = dt(e), n.fuzzy = !0, n.min = t.fuzzy || 0.85, /\(/.test(e) === !1))
       return n.word = e, n;
-    if (U(e) === "(" && X(e) === ")") {
-      Dr.test(e) ? (n.choices = e.split(Dr), n.operator = "and") : (n.choices = e.split("|"), n.operator = "or"), n.choices[0] = Re(n.choices[0]);
+    if (Q(e) === "(" && ee(e) === ")") {
+      Mr.test(e) ? (n.choices = e.split(Mr), n.operator = "and") : (n.choices = e.split("|"), n.operator = "or"), n.choices[0] = tt(n.choices[0]);
       let o = n.choices.length - 1;
-      n.choices[o] = Qe(n.choices[o]), n.choices = n.choices.map((a) => a.trim()), n.choices = n.choices.filter((a) => a), n.choices = n.choices.map((a) => a.split(/ /g).map((i) => Ja(i, t))), e = "";
+      n.choices[o] = nt(n.choices[o]), n.choices = n.choices.map((a) => a.trim()), n.choices = n.choices.filter((a) => a), n.choices = n.choices.map((a) => a.split(/ /g).map((i) => Za(i, t))), e = "";
     }
-    if (U(e) === "/" && X(e) === "/")
-      return e = it(e), t.caseSensitive && (n.use = "text"), n.regex = new RegExp(e), n;
-    if (U(e) === "{" && X(e) === "}") {
-      if (e = it(e), n.root = e, /\//.test(e)) {
+    if (Q(e) === "/" && ee(e) === "/")
+      return e = dt(e), t.caseSensitive && (n.use = "text"), n.regex = new RegExp(e), n;
+    if (Q(e) === "{" && ee(e) === "}") {
+      if (e = dt(e), n.root = e, /\//.test(e)) {
         let o = n.root.split(/\//);
         n.root = o[0], n.pos = o[1], n.pos === "adj" && (n.pos = "Adjective"), n.pos = n.pos.charAt(0).toUpperCase() + n.pos.substr(1).toLowerCase(), o[2] !== void 0 && (n.sense = o[2]);
       }
       return n;
     }
-    if (U(e) === "<" && X(e) === ">")
-      return e = it(e), n.chunk = Or(e), n.greedy = !0, n;
-    if (U(e) === "%" && X(e) === "%")
-      return e = it(e), n.switch = e, n;
+    if (Q(e) === "<" && ee(e) === ">")
+      return e = dt(e), n.chunk = Wr(e), n.greedy = !0, n;
+    if (Q(e) === "%" && ee(e) === "%")
+      return e = dt(e), n.switch = e, n;
   }
-  return Cr.test(e) === !0 && (e = e.replace(Cr, (r, o, a) => (a === void 0 ? (n.min = Number(o), n.max = Number(o)) : (a = a.replace(/, */, ""), o === void 0 ? (n.min = 0, n.max = Number(a)) : (n.min = Number(o), n.max = Number(a || 999))), n.greedy = !0, n.min || (n.optional = !0), ""))), U(e) === "#" ? (n.tag = Re(e), n.tag = Or(n.tag), n) : U(e) === "@" ? (n.method = Re(e), n) : e === "." ? (n.anything = !0, n) : e === "*" ? (n.anything = !0, n.greedy = !0, n.optional = !0, n) : (e && (e = e.replace("\\*", "*"), e = e.replace("\\.", "."), t.caseSensitive ? n.use = "text" : e = e.toLowerCase(), n.word = e), n);
-}, Wu = Ja, Hu = /[a-z0-9][-–—][a-z]/i, Ju = function(e, t) {
+  return Lr.test(e) === !0 && (e = e.replace(Lr, (r, o, a) => (a === void 0 ? (n.min = Number(o), n.max = Number(o)) : (a = a.replace(/, */, ""), o === void 0 ? (n.min = 0, n.max = Number(a)) : (n.min = Number(o), n.max = Number(a || 999))), n.greedy = !0, n.min || (n.optional = !0), ""))), Q(e) === "#" ? (n.tag = tt(e), n.tag = Wr(n.tag), n) : Q(e) === "@" ? (n.method = tt(e), n) : e === "." ? (n.anything = !0, n) : e === "*" ? (n.anything = !0, n.greedy = !0, n.optional = !0, n) : (e && (e = e.replace("\\*", "*"), e = e.replace("\\.", "."), t.caseSensitive ? n.use = "text" : e = e.toLowerCase(), n.word = e), n);
+}, Xu = Za, Zu = /[a-z0-9][-–—][a-z]/i, ec = function(e, t) {
   let n = t.model.one.prefixes;
   for (let r = e.length - 1; r >= 0; r -= 1) {
     let o = e[r];
-    if (o.word && Hu.test(o.word)) {
+    if (o.word && Zu.test(o.word)) {
       let a = o.word.split(/[-–—]/g);
       if (n.hasOwnProperty(a[0]))
         continue;
@@ -1242,33 +1289,33 @@ const Ou = function(e) {
     }
   }
   return e;
-}, _u = Ju, Fr = function(e, t) {
+}, tc = ec, Hr = function(e, t) {
   let { all: n } = t.methods.two.transform.verb || {}, r = e.root;
   return n ? n(r, t.model) : [];
-}, Vr = function(e, t) {
+}, Jr = function(e, t) {
   let { all: n } = t.methods.two.transform.noun || {};
   return n ? n(e.root, t.model) : [e.root];
-}, Gr = function(e, t) {
+}, _r = function(e, t) {
   let { all: n } = t.methods.two.transform.adjective || {};
   return n ? n(e.root, t.model) : [e.root];
-}, Ku = function(e, t) {
+}, nc = function(e, t) {
   return e = e.map((n) => {
     if (n.root)
       if (t.methods.two && t.methods.two.transform) {
         let r = [];
-        n.pos ? n.pos === "Verb" ? r = r.concat(Fr(n, t)) : n.pos === "Noun" ? r = r.concat(Vr(n, t)) : n.pos === "Adjective" && (r = r.concat(Gr(n, t))) : (r = r.concat(Fr(n, t)), r = r.concat(Vr(n, t)), r = r.concat(Gr(n, t))), r = r.filter((o) => o), r.length > 0 && (n.operator = "or", n.fastOr = new Set(r));
+        n.pos ? n.pos === "Verb" ? r = r.concat(Hr(n, t)) : n.pos === "Noun" ? r = r.concat(Jr(n, t)) : n.pos === "Adjective" && (r = r.concat(_r(n, t))) : (r = r.concat(Hr(n, t)), r = r.concat(Jr(n, t)), r = r.concat(_r(n, t))), r = r.filter((o) => o), r.length > 0 && (n.operator = "or", n.fastOr = new Set(r));
       } else
         n.machine = n.root, delete n.id, delete n.root;
     return n;
   }), e;
-}, qu = Ku, Uu = function(e) {
+}, rc = nc, oc = function(e) {
   let t = 0, n = null;
   for (let r = 0; r < e.length; r++) {
     const o = e[r];
     o.groupStart === !0 && (n = o.group, n === null && (n = String(t), t += 1)), n !== null && (o.group = n), o.groupEnd === !0 && (n = null);
   }
   return e;
-}, Ru = function(e) {
+}, ac = function(e) {
   return e.map((t) => {
     if (t.choices !== void 0) {
       if (t.operator !== "or" || t.fuzzy === !0)
@@ -1284,35 +1331,35 @@ const Ou = function(e) {
     }
     return t;
   });
-}, Qu = function(e) {
+}, ic = function(e) {
   return e.map((t) => (t.fuzzy && t.choices && t.choices.forEach((n) => {
     n.length === 1 && n[0].word && (n[0].fuzzy = !0, n[0].min = t.min);
   }), t));
-}, Yu = function(e) {
-  return e = Uu(e), e = Ru(e), e = Qu(e), e;
-}, Xu = Yu, Zu = function(e, t, n) {
+}, sc = function(e) {
+  return e = oc(e), e = ac(e), e = ic(e), e;
+}, lc = sc, uc = function(e, t, n) {
   if (e == null || e === "")
     return [];
   t = t || {}, typeof e == "number" && (e = String(e));
-  let r = Lu(e);
-  return r = r.map((o) => Wu(o, t)), r = _u(r, n), r = qu(r, n), r = Xu(r), r;
-}, ec = Zu, tc = function(e, t) {
+  let r = Qu(e);
+  return r = r.map((o) => Xu(o, t)), r = tc(r, n), r = rc(r, n), r = lc(r), r;
+}, cc = uc, hc = function(e, t) {
   for (let n of t)
     if (e.has(n))
       return !0;
   return !1;
-}, nc = function(e, t) {
+}, dc = function(e, t) {
   for (let n = 0; n < e.length; n += 1) {
     let r = e[n];
     if (!(r.optional === !0 || r.negative === !0 || r.fuzzy === !0)) {
       if (r.word !== void 0 && t.has(r.word) === !1 || r.tag !== void 0 && t.has("#" + r.tag) === !1)
         return !0;
-      if (r.fastOr && tc(r.fastOr, t) === !1)
+      if (r.fastOr && hc(r.fastOr, t) === !1)
         return !1;
     }
   }
   return !1;
-}, rc = nc, oc = function(e, t) {
+}, fc = dc, pc = function(e, t) {
   let n = e.length, r = t.length;
   if (n === 0)
     return r;
@@ -1322,49 +1369,49 @@ const Ou = function(e) {
   if (Math.abs(n - r) > (o || 100))
     return o || 100;
   let a = [];
-  for (let f = 0; f < o; f++)
-    a[f] = [f], a[f].length = o;
-  for (let f = 0; f < o; f++)
-    a[0][f] = f;
+  for (let d = 0; d < o; d++)
+    a[d] = [d], a[d].length = o;
+  for (let d = 0; d < o; d++)
+    a[0][d] = d;
   let i, s, l, u, c, h;
-  for (let f = 1; f <= n; ++f)
-    for (s = e[f - 1], i = 1; i <= r; ++i) {
-      if (f === i && a[f][i] > 4)
+  for (let d = 1; d <= n; ++d)
+    for (s = e[d - 1], i = 1; i <= r; ++i) {
+      if (d === i && a[d][i] > 4)
         return n;
-      l = t[i - 1], u = s === l ? 0 : 1, c = a[f - 1][i] + 1, (h = a[f][i - 1] + 1) < c && (c = h), (h = a[f - 1][i - 1] + u) < c && (c = h), f > 1 && i > 1 && s === t[i - 2] && e[f - 2] === l && (h = a[f - 2][i - 2] + u) < c ? a[f][i] = h : a[f][i] = c;
+      l = t[i - 1], u = s === l ? 0 : 1, c = a[d - 1][i] + 1, (h = a[d][i - 1] + 1) < c && (c = h), (h = a[d - 1][i - 1] + u) < c && (c = h), d > 1 && i > 1 && s === t[i - 2] && e[d - 2] === l && (h = a[d - 2][i - 2] + u) < c ? a[d][i] = h : a[d][i] = c;
     }
   return a[n][r];
-}, ac = function(e, t, n = 3) {
+}, gc = function(e, t, n = 3) {
   if (e === t)
     return 1;
   if (e.length < n || t.length < n)
     return 0;
-  const r = oc(e, t);
+  const r = pc(e, t);
   let o = Math.max(e.length, t.length);
   return 1 - (o === 0 ? 0 : r / o);
-}, ic = ac, sc = /([\u0022\uFF02\u0027\u201C\u2018\u201F\u201B\u201E\u2E42\u201A\u00AB\u2039\u2035\u2036\u2037\u301D\u0060\u301F])/, lc = /([\u0022\uFF02\u0027\u201D\u2019\u00BB\u203A\u2032\u2033\u2034\u301E\u00B4])/, Br = /^[-–—]$/, zr = / [-–—]{1,3} /, he = (e, t) => e.post.indexOf(t) !== -1, Sr = (e, t) => e.pre.indexOf(t) !== -1, Vn = {
-  hasQuote: (e) => sc.test(e.pre) || lc.test(e.post),
-  hasComma: (e) => he(e, ","),
-  hasPeriod: (e) => he(e, ".") === !0 && he(e, "...") === !1,
-  hasExclamation: (e) => he(e, "!"),
-  hasQuestionMark: (e) => he(e, "?") || he(e, "¿"),
-  hasEllipses: (e) => he(e, "..") || he(e, "…") || Sr(e, "..") || Sr(e, "…"),
-  hasSemicolon: (e) => he(e, ";"),
-  hasColon: (e) => he(e, ":"),
+}, mc = gc, yc = /([\u0022\uFF02\u0027\u201C\u2018\u201F\u201B\u201E\u2E42\u201A\u00AB\u2039\u2035\u2036\u2037\u301D\u0060\u301F])/, bc = /([\u0022\uFF02\u0027\u201D\u2019\u00BB\u203A\u2032\u2033\u2034\u301E\u00B4])/, Kr = /^[-–—]$/, qr = / [-–—]{1,3} /, fe = (e, t) => e.post.indexOf(t) !== -1, Ur = (e, t) => e.pre.indexOf(t) !== -1, Sn = {
+  hasQuote: (e) => yc.test(e.pre) || bc.test(e.post),
+  hasComma: (e) => fe(e, ","),
+  hasPeriod: (e) => fe(e, ".") === !0 && fe(e, "...") === !1,
+  hasExclamation: (e) => fe(e, "!"),
+  hasQuestionMark: (e) => fe(e, "?") || fe(e, "¿"),
+  hasEllipses: (e) => fe(e, "..") || fe(e, "…") || Ur(e, "..") || Ur(e, "…"),
+  hasSemicolon: (e) => fe(e, ";"),
+  hasColon: (e) => fe(e, ":"),
   hasSlash: (e) => /\//.test(e.text),
-  hasHyphen: (e) => Br.test(e.post) || Br.test(e.pre),
-  hasDash: (e) => zr.test(e.post) || zr.test(e.pre),
+  hasHyphen: (e) => Kr.test(e.post) || Kr.test(e.pre),
+  hasDash: (e) => qr.test(e.post) || qr.test(e.pre),
   hasContraction: (e) => Boolean(e.implicit),
   isAcronym: (e) => e.tags.has("Acronym"),
   isKnown: (e) => e.tags.size > 0,
   isTitleCase: (e) => /^\p{Lu}[a-z'\u00C0-\u00FF]/u.test(e.text),
   isUpperCase: (e) => /^\p{Lu}+$/u.test(e.text)
 };
-Vn.hasQuotation = Vn.hasQuote;
-const Gn = Vn;
-let Xt = function() {
+Sn.hasQuotation = Sn.hasQuote;
+const Ln = Sn;
+let tn = function() {
 };
-const uc = function(e, t, n, r) {
+const vc = function(e, t, n, r) {
   if (t.anything === !0)
     return !0;
   if (t.start === !0 && n !== 0 || t.end === !0 && n !== r - 1)
@@ -1372,11 +1419,11 @@ const uc = function(e, t, n, r) {
   if (t.id !== void 0 && t.id === e.id)
     return !0;
   if (t.word !== void 0)
-    return t.use ? t.word === e[t.use] : e.machine !== null && e.machine === t.word || e.alias !== void 0 && e.alias.hasOwnProperty(t.word) || t.fuzzy === !0 && (t.word === e.root || ic(t.word, e.normal) >= t.min) || e.alias && e.alias.some((o) => o === t.word) ? !0 : t.word === e.text || t.word === e.normal;
+    return t.use ? t.word === e[t.use] : e.machine !== null && e.machine === t.word || e.alias !== void 0 && e.alias.hasOwnProperty(t.word) || t.fuzzy === !0 && (t.word === e.root || mc(t.word, e.normal) >= t.min) || e.alias && e.alias.some((o) => o === t.word) ? !0 : t.word === e.text || t.word === e.normal;
   if (t.tag !== void 0)
     return e.tags.has(t.tag) === !0;
   if (t.method !== void 0)
-    return typeof Gn[t.method] == "function" && Gn[t.method](e) === !0;
+    return typeof Ln[t.method] == "function" && Ln[t.method](e) === !0;
   if (t.pre !== void 0)
     return e.pre && e.pre.includes(t.pre);
   if (t.post !== void 0)
@@ -1399,73 +1446,73 @@ const uc = function(e, t, n, r) {
     let o = e.root || e.implicit || e.machine || e.normal;
     return t.fastOr.has(o) || t.fastOr.has(e.text);
   }
-  return t.choices !== void 0 ? t.operator === "and" ? t.choices.every((o) => Xt(e, o, n, r)) : t.choices.some((o) => Xt(e, o, n, r)) : !1;
+  return t.choices !== void 0 ? t.operator === "and" ? t.choices.every((o) => tn(e, o, n, r)) : t.choices.some((o) => tn(e, o, n, r)) : !1;
 };
-Xt = function(e, t, n, r) {
-  let o = uc(e, t, n, r);
+tn = function(e, t, n, r) {
+  let o = vc(e, t, n, r);
   return t.negative === !0 ? !o : o;
 };
-const K = Xt, cc = function(e, t) {
+const U = tn, wc = function(e, t) {
   let n = Object.assign({}, e.regs[e.r], { start: !1, end: !1 }), r = e.t;
   for (; e.t < e.terms.length; e.t += 1) {
-    if (t && K(e.terms[e.t], t, e.start_i + e.t, e.phrase_length))
+    if (t && U(e.terms[e.t], t, e.start_i + e.t, e.phrase_length))
       return e.t;
     let o = e.t - r + 1;
     if (n.max !== void 0 && o === n.max)
       return e.t;
-    if (K(e.terms[e.t], n, e.start_i + e.t, e.phrase_length) === !1)
+    if (U(e.terms[e.t], n, e.start_i + e.t, e.phrase_length) === !1)
       return n.min !== void 0 && o < n.min ? null : e.t;
   }
   return e.t;
-}, hc = function(e, t) {
+}, Pc = function(e, t) {
   let n = e.t;
   if (!t)
     return e.terms.length;
   for (; n < e.terms.length; n += 1)
-    if (K(e.terms[n], t, e.start_i + n, e.phrase_length) === !0)
+    if (U(e.terms[n], t, e.start_i + n, e.phrase_length) === !0)
       return n;
   return null;
-}, dc = function(e, t) {
+}, kc = function(e, t) {
   if (e.end === !0 && e.greedy === !0 && t.start_i + t.t < t.phrase_length - 1) {
     let n = Object.assign({}, e, { end: !1 });
-    if (K(t.terms[t.t], n, t.start_i + t.t, t.phrase_length) === !0)
+    if (U(t.terms[t.t], n, t.start_i + t.t, t.phrase_length) === !0)
       return !0;
   }
   return !1;
-}, nn = function(e, t) {
+}, sn = function(e, t) {
   return e.groups[e.inGroup] || (e.groups[e.inGroup] = {
     start: t,
     length: 0
   }), e.groups[e.inGroup];
-}, fc = function(e) {
-  let { regs: t } = e, n = t[e.r], r = hc(e, t[e.r + 1]);
+}, Ac = function(e) {
+  let { regs: t } = e, n = t[e.r], r = Pc(e, t[e.r + 1]);
   if (r === null || r === 0 || n.min !== void 0 && r - e.t < n.min)
     return null;
   if (n.max !== void 0 && r - e.t > n.max)
     return e.t = e.t + n.max, !0;
   if (e.hasGroup === !0) {
-    const o = nn(e, e.t);
+    const o = sn(e, e.t);
     o.length = r - e.t;
   }
   return e.t = r, !0;
-}, pc = fc, gc = function(e) {
+}, $c = Ac, Ic = function(e) {
   return Object.prototype.toString.call(e) === "[object Array]";
-}, _a = function(e, t = 0) {
+}, ei = function(e, t = 0) {
   let n = e.regs[e.r], r = !1;
   for (let o = 0; o < n.choices.length; o += 1) {
     let a = n.choices[o];
-    if (!gc(a))
+    if (!Ic(a))
       return !1;
     if (r = a.every((i, s) => {
       let l = 0, u = e.t + s + t + l;
       if (e.terms[u] === void 0)
         return !1;
-      let c = K(e.terms[u], i, u + e.start_i, e.phrase_length);
+      let c = U(e.terms[u], i, u + e.start_i, e.phrase_length);
       if (c === !0 && i.greedy === !0)
         for (let h = 1; h < e.terms.length; h += 1) {
-          let f = e.terms[u + h];
-          if (f)
-            if (K(f, i, e.start_i + h, e.phrase_length) === !0)
+          let d = e.terms[u + h];
+          if (d)
+            if (U(d, i, e.start_i + h, e.phrase_length) === !0)
               l += 1;
             else
               break;
@@ -1476,24 +1523,24 @@ const K = Xt, cc = function(e, t) {
       break;
     }
   }
-  return r && n.greedy === !0 ? _a(e, t) : t;
-}, mc = function(e) {
+  return r && n.greedy === !0 ? ei(e, t) : t;
+}, xc = function(e) {
   let t = 0;
   return e.regs[e.r].choices.every((o) => {
     let a = o.every((i, s) => {
       let l = e.t + s;
-      return e.terms[l] === void 0 ? !1 : K(e.terms[l], i, l, e.phrase_length);
+      return e.terms[l] === void 0 ? !1 : U(e.terms[l], i, l, e.phrase_length);
     });
     return a === !0 && o.length > t && (t = o.length), a;
   }) === !0 ? t : !1;
-}, yc = function(e) {
+}, Nc = function(e) {
   const { regs: t } = e;
-  let n = t[e.r], r = _a(e);
+  let n = t[e.r], r = ei(e);
   if (r) {
     if (n.negative === !0)
       return null;
     if (e.hasGroup === !0) {
-      const o = nn(e, e.t);
+      const o = sn(e, e.t);
       o.length += r;
     }
     if (n.end === !0) {
@@ -1505,14 +1552,14 @@ const K = Xt, cc = function(e, t) {
   } else if (!n.optional)
     return null;
   return !0;
-}, bc = yc, vc = function(e) {
+}, jc = Nc, Ec = function(e) {
   const { regs: t } = e;
-  let n = t[e.r], r = mc(e);
+  let n = t[e.r], r = xc(e);
   if (r) {
     if (n.negative === !0)
       return null;
     if (e.hasGroup === !0) {
-      const o = nn(e, e.t);
+      const o = sn(e, e.t);
       o.length += r;
     }
     if (n.end === !0) {
@@ -1524,51 +1571,51 @@ const K = Xt, cc = function(e, t) {
   } else if (!n.optional)
     return null;
   return !0;
-}, wc = vc, Pc = function(e, t, n) {
+}, Tc = Ec, Cc = function(e, t, n) {
   let r = 0;
   for (let o = e.t; o < e.terms.length; o += 1) {
-    let a = K(e.terms[o], t, e.start_i + e.t, e.phrase_length);
-    if (a || n && (a = K(e.terms[o], n, e.start_i + e.t, e.phrase_length), a) || (r += 1, t.max !== void 0 && r === t.max))
+    let a = U(e.terms[o], t, e.start_i + e.t, e.phrase_length);
+    if (a || n && (a = U(e.terms[o], n, e.start_i + e.t, e.phrase_length), a) || (r += 1, t.max !== void 0 && r === t.max))
       break;
   }
   return r === 0 || t.min && t.min > r ? !1 : (e.t += r, !0);
-}, kc = Pc, Ac = function(e) {
+}, Dc = Cc, Oc = function(e) {
   const { regs: t } = e;
   let n = t[e.r], r = Object.assign({}, n);
-  if (r.negative = !1, K(e.terms[e.t], r, e.start_i + e.t, e.phrase_length))
+  if (r.negative = !1, U(e.terms[e.t], r, e.start_i + e.t, e.phrase_length))
     return !1;
   if (n.optional) {
     let a = t[e.r + 1];
-    a && (K(e.terms[e.t], a, e.start_i + e.t, e.phrase_length) ? e.r += 1 : a.optional && t[e.r + 2] && K(e.terms[e.t], t[e.r + 2], e.start_i + e.t, e.phrase_length) && (e.r += 2));
+    a && (U(e.terms[e.t], a, e.start_i + e.t, e.phrase_length) ? e.r += 1 : a.optional && t[e.r + 2] && U(e.terms[e.t], t[e.r + 2], e.start_i + e.t, e.phrase_length) && (e.r += 2));
   }
-  return n.greedy ? kc(e, r, t[e.r + 1]) : (e.t += 1, !0);
-}, Ic = Ac, $c = function(e) {
+  return n.greedy ? Dc(e, r, t[e.r + 1]) : (e.t += 1, !0);
+}, Fc = Oc, Vc = function(e) {
   const { regs: t } = e;
-  let n = t[e.r], r = e.terms[e.t], o = K(r, t[e.r + 1], e.start_i + e.t, e.phrase_length);
+  let n = t[e.r], r = e.terms[e.t], o = U(r, t[e.r + 1], e.start_i + e.t, e.phrase_length);
   if (n.negative || o) {
     let a = e.terms[e.t + 1];
-    (!a || !K(a, t[e.r + 1], e.start_i + e.t, e.phrase_length)) && (e.r += 1);
+    (!a || !U(a, t[e.r + 1], e.start_i + e.t, e.phrase_length)) && (e.r += 1);
   }
-}, xc = $c, Nc = function(e) {
+}, Gc = Vc, Bc = function(e) {
   const { regs: t, phrase_length: n } = e;
   let r = t[e.r];
-  return e.t = cc(e, t[e.r + 1]), e.t === null || r.min && r.min > e.t || r.end === !0 && e.start_i + e.t !== n ? null : !0;
-}, jc = Nc, Ec = function(e) {
+  return e.t = wc(e, t[e.r + 1]), e.t === null || r.min && r.min > e.t || r.end === !0 && e.start_i + e.t !== n ? null : !0;
+}, zc = Bc, Sc = function(e) {
   let t = e.terms[e.t], n = e.regs[e.r];
   if (t.implicit && e.terms[e.t + 1]) {
     if (!e.terms[e.t + 1].implicit)
       return;
     n.word === t.normal && (e.t += 1), n.method === "hasContraction" && (e.t += 1);
   }
-}, Tc = Ec, Cc = function(e, t) {
+}, Lc = Sc, Mc = function(e, t) {
   let n = e.regs[e.r];
-  const r = nn(e, t);
+  const r = sn(e, t);
   e.t > 1 && n.greedy ? r.length += e.t - t : r.length++;
-}, Dc = function(e) {
+}, Wc = function(e) {
   const { regs: t } = e;
   let n = t[e.r], r = e.terms[e.t], o = e.t;
-  return n.optional && t[e.r + 1] && n.negative ? !0 : (n.optional && t[e.r + 1] && xc(e), r.implicit && e.terms[e.t + 1] && Tc(e), e.t += 1, n.end === !0 && e.t !== e.terms.length && n.greedy !== !0 || n.greedy === !0 && !jc(e) ? null : (e.hasGroup === !0 && Cc(e, o), !0));
-}, hn = Dc, Oc = function(e, t, n, r) {
+  return n.optional && t[e.r + 1] && n.negative ? !0 : (n.optional && t[e.r + 1] && Gc(e), r.implicit && e.terms[e.t + 1] && Lc(e), e.t += 1, n.end === !0 && e.t !== e.terms.length && n.greedy !== !0 || n.greedy === !0 && !zc(e) ? null : (e.hasGroup === !0 && Mc(e, o), !0));
+}, gn = Wc, Hc = function(e, t, n, r) {
   if (e.length === 0 || t.length === 0)
     return null;
   let o = {
@@ -1589,37 +1636,37 @@ const K = Xt, cc = function(e, t) {
       return null;
     }
     if (s.anything === !0 && s.greedy === !0) {
-      if (!pc(o))
+      if (!$c(o))
         return null;
       continue;
     }
     if (s.choices !== void 0 && s.operator === "or") {
-      if (!bc(o))
+      if (!jc(o))
         return null;
       continue;
     }
     if (s.choices !== void 0 && s.operator === "and") {
-      if (!wc(o))
+      if (!Tc(o))
         return null;
       continue;
     }
     if (s.anything === !0) {
-      if (s.negative && s.anything || !hn(o))
+      if (s.negative && s.anything || !gn(o))
         return null;
       continue;
     }
-    if (dc(s, o) === !0) {
-      if (!hn(o))
+    if (kc(s, o) === !0) {
+      if (!gn(o))
         return null;
       continue;
     }
     if (s.negative) {
-      if (!Ic(o))
+      if (!Fc(o))
         return null;
       continue;
     }
-    if (K(o.terms[o.t], s, o.start_i + o.t, o.phrase_length) === !0) {
-      if (!hn(o))
+    if (U(o.terms[o.t], s, o.start_i + o.t, o.phrase_length) === !0) {
+      if (!gn(o))
         return null;
       continue;
     }
@@ -1634,7 +1681,7 @@ const K = Xt, cc = function(e, t) {
     let l = o.groups[s], u = n + l.start;
     i[s] = [null, u, u + l.length];
   }), { pointer: a, groups: i };
-}, rr = Oc, Fc = function(e, t) {
+}, ur = Hc, Jc = function(e, t) {
   let n = [], r = {};
   return e.length === 0 ? { ptrs: n, byGroup: r } : (typeof t == "number" && (t = String(t)), t ? e.forEach((o) => {
     o.groups[t] && n.push(o.groups[t]);
@@ -1643,24 +1690,24 @@ const K = Xt, cc = function(e, t) {
       r[a] = r[a] || [], r[a].push(o.groups[a]);
     });
   }), { ptrs: n, byGroup: r });
-}, Vc = Fc, Gc = function(e, t, n) {
+}, _c = Jc, Kc = function(e, t, n) {
   return e = e.filter((r) => {
     let [o, a, i] = r.pointer, s = n[o].slice(a, i);
     for (let l = 0; l < s.length; l += 1) {
       let u = s.slice(l);
-      if (rr(u, t, l, s.length) !== null)
+      if (ur(u, t, l, s.length) !== null)
         return !1;
     }
     return !0;
   }), e;
-}, Bc = Gc, Ka = function(e, t) {
+}, qc = Kc, ti = function(e, t) {
   return e.pointer[0] = t, Object.keys(e.groups).forEach((n) => {
     e.groups[n][0] = t;
   }), e;
-}, zc = function(e, t, n) {
-  let r = rr(e, t, 0, e.length);
-  return r ? (r = Ka(r, n), r) : null;
-}, Sc = function(e, t, n) {
+}, Uc = function(e, t, n) {
+  let r = ur(e, t, 0, e.length);
+  return r ? (r = ti(r, n), r) : null;
+}, Rc = function(e, t, n) {
   n = n || [];
   let { regs: r, group: o, justOne: a } = t, i = [];
   if (!r || r.length === 0)
@@ -1669,9 +1716,9 @@ const K = Xt, cc = function(e, t) {
   e:
     for (let l = 0; l < e.length; l += 1) {
       let u = e[l];
-      if (!(n[l] && rc(r, n[l]))) {
+      if (!(n[l] && fc(r, n[l]))) {
         if (r[0].start === !0) {
-          let c = zc(u, r, l);
+          let c = Uc(u, r, l);
           c && i.push(c);
           continue;
         }
@@ -1679,12 +1726,12 @@ const K = Xt, cc = function(e, t) {
           let h = u.slice(c);
           if (h.length < s)
             break;
-          let f = rr(h, r, c, u.length);
-          if (f) {
-            if (f = Ka(f, l), i.push(f), a === !0)
+          let d = ur(h, r, c, u.length);
+          if (d) {
+            if (d = ti(d, l), i.push(d), a === !0)
               break e;
-            let w = f.pointer[2];
-            Math.abs(w - 1) > c && (c = Math.abs(w - 1));
+            let x = d.pointer[2];
+            Math.abs(x - 1) > c && (c = Math.abs(x - 1));
           }
         }
       }
@@ -1692,33 +1739,33 @@ const K = Xt, cc = function(e, t) {
   return r[r.length - 1].end === !0 && (i = i.filter((l) => {
     let u = l.pointer[0];
     return e[u].length === l.pointer[2];
-  })), t.notIf && (i = Bc(i, t.notIf, e)), i = Vc(i, o), i.ptrs.forEach((l) => {
+  })), t.notIf && (i = qc(i, t.notIf, e)), i = _c(i, o), i.ptrs.forEach((l) => {
     let [u, c, h] = l;
     l[3] = e[u][c].id, l[4] = e[u][h - 1].id;
   }), i;
-}, Lc = Sc, Mc = {
+}, Qc = Rc, Yc = {
   one: {
-    termMethods: Gn,
-    parseMatch: ec,
-    match: Lc
+    termMethods: Ln,
+    parseMatch: cc,
+    match: Qc
   }
-}, Wc = Mc, Hc = {
+}, Xc = Yc, Zc = {
   parseMatch: function(e, t) {
     const n = this.world();
     let r = n.methods.one.killUnicode;
     return r && (e = r(e, n)), n.methods.one.parseMatch(e, t, n);
   }
-}, Jc = {
-  api: Fu,
-  methods: Wc,
-  lib: Hc
-}, _c = /^\../, Kc = /^#./, qc = (e) => (e = e.replace(/&/g, "&amp;"), e = e.replace(/</g, "&lt;"), e = e.replace(/>/g, "&gt;"), e = e.replace(/"/g, "&quot;"), e = e.replace(/'/g, "&apos;"), e), Uc = function(e) {
+}, eh = {
+  api: Ju,
+  methods: Xc,
+  lib: Zc
+}, th = /^\../, nh = /^#./, rh = (e) => (e = e.replace(/&/g, "&amp;"), e = e.replace(/</g, "&lt;"), e = e.replace(/>/g, "&gt;"), e = e.replace(/"/g, "&quot;"), e = e.replace(/'/g, "&apos;"), e), oh = function(e) {
   let t = "", n = "</span>";
-  return e = qc(e), _c.test(e) ? t = `<span class="${e.replace(/^\./, "")}"` : Kc.test(e) ? t = `<span id="${e.replace(/^#/, "")}"` : (t = `<${e}`, n = `</${e}>`), t += ">", { start: t, end: n };
-}, Rc = function(e, t) {
+  return e = rh(e), th.test(e) ? t = `<span class="${e.replace(/^\./, "")}"` : nh.test(e) ? t = `<span id="${e.replace(/^#/, "")}"` : (t = `<${e}`, n = `</${e}>`), t += ">", { start: t, end: n };
+}, ah = function(e, t) {
   let n = {}, r = {};
   return Object.keys(t).forEach((o) => {
-    let a = t[o], i = Uc(o);
+    let a = t[o], i = oh(o);
     typeof a == "string" && (a = e.match(a)), a.docs.forEach((s) => {
       if (s.every((c) => c.implicit))
         return;
@@ -1728,35 +1775,35 @@ const K = Xt, cc = function(e, t) {
       r[u] = r[u] || [], r[u].push(i.end);
     });
   }), { starts: n, ends: r };
-}, Qc = function(e) {
-  let { starts: t, ends: n } = Rc(this, e), r = "";
+}, ih = function(e) {
+  let { starts: t, ends: n } = ah(this, e), r = "";
   return this.docs.forEach((o) => {
     for (let a = 0; a < o.length; a += 1) {
       let i = o[a];
       t.hasOwnProperty(i.id) && (r += t[i.id].join("")), r += i.pre || "" + i.text || "", n.hasOwnProperty(i.id) && (r += n[i.id].join("")), r += i.post || "";
     }
   }), r;
-}, Yc = { html: Qc }, qa = /[,:;)\]*.?~!\u0022\uFF02\u201D\u2019\u00BB\u203A\u2032\u2033\u2034\u301E\u00B4—-]+$/, Bn = /^[(['"*~\uFF02\u201C\u2018\u201F\u201B\u201E\u2E42\u201A\u00AB\u2039\u2035\u2036\u2037\u301D\u0060\u301F]+/, Xc = /[,:;)('"\u201D\]]/, Zc = /^[-–—]$/, eh = / /, Be = function(e, t, n = !0) {
+}, sh = { html: ih }, ni = /[,:;)\]*.?~!\u0022\uFF02\u201D\u2019\u00BB\u203A\u2032\u2033\u2034\u301E\u00B4—-]+$/, Mn = /^[(['"*~\uFF02\u201C\u2018\u201F\u201B\u201E\u2E42\u201A\u00AB\u2039\u2035\u2036\u2037\u301D\u0060\u301F]+/, lh = /[,:;)('"\u201D\]]/, uh = /^[-–—]$/, ch = / /, Le = function(e, t, n = !0) {
   let r = "";
   return e.forEach((o) => {
     let a = o.pre || "", i = o.post || "";
-    t.punctuation === "some" && (a = a.replace(Bn, ""), Zc.test(i) && (i = " "), i = i.replace(Xc, ""), i = i.replace(/\?!+/, "?"), i = i.replace(/!+/, "!"), i = i.replace(/\?+/, "?"), i = i.replace(/\.{2,}/, ""), o.tags.has("Abbreviation") && (i = i.replace(/\./, ""))), t.whitespace === "some" && (a = a.replace(/\s/, ""), i = i.replace(/\s+/, " ")), t.keepPunct || (a = a.replace(Bn, ""), i === "-" ? i = " " : i = i.replace(qa, ""));
+    t.punctuation === "some" && (a = a.replace(Mn, ""), uh.test(i) && (i = " "), i = i.replace(lh, ""), i = i.replace(/\?!+/, "?"), i = i.replace(/!+/, "!"), i = i.replace(/\?+/, "?"), i = i.replace(/\.{2,}/, ""), o.tags.has("Abbreviation") && (i = i.replace(/\./, ""))), t.whitespace === "some" && (a = a.replace(/\s/, ""), i = i.replace(/\s+/, " ")), t.keepPunct || (a = a.replace(Mn, ""), i === "-" ? i = " " : i = i.replace(ni, ""));
     let s = o[t.form || "text"] || o.normal || "";
-    t.form === "implicit" && (s = o.implicit || o.text), t.form === "root" && o.implicit && (s = o.root || o.implicit || o.normal), (t.form === "machine" || t.form === "implicit" || t.form === "root") && o.implicit && (!i || !eh.test(i)) && (i += " "), r += a + s + i;
+    t.form === "implicit" && (s = o.implicit || o.text), t.form === "root" && o.implicit && (s = o.root || o.implicit || o.normal), (t.form === "machine" || t.form === "implicit" || t.form === "root") && o.implicit && (!i || !ch.test(i)) && (i += " "), r += a + s + i;
   }), n === !1 && (r = r.trim()), t.lowerCase === !0 && (r = r.toLowerCase()), r;
-}, th = function(e, t) {
+}, hh = function(e, t) {
   let n = "";
   if (!e || !e[0] || !e[0][0])
     return n;
   for (let r = 0; r < e.length; r += 1)
-    n += Be(e[r], t, !0);
+    n += Le(e[r], t, !0);
   if (t.keepSpace || (n = n.trim()), t.keepPunct === !1) {
-    e[0][0].tags.has("Emoticon") || (n = n.replace(Bn, ""));
+    e[0][0].tags.has("Emoticon") || (n = n.replace(Mn, ""));
     let r = e[e.length - 1];
-    r[r.length - 1].tags.has("Emoticon") || (n = n.replace(qa, ""));
+    r[r.length - 1].tags.has("Emoticon") || (n = n.replace(ni, ""));
   }
   return t.cleanWhitespace === !0 && (n = n.trim()), n;
-}, dt = {
+}, bt = {
   text: {
     form: "text"
   },
@@ -1787,17 +1834,17 @@ const K = Xt, cc = function(e, t) {
     form: "implicit"
   }
 };
-dt.clean = dt.normal;
-dt.reduced = dt.root;
-const Zt = dt;
-let Ua = [], Se = 0;
-for (; Se < 64; )
-  Ua[Se] = 0 | Math.sin(++Se % Math.PI) * 4294967296;
-function or(e) {
+bt.clean = bt.normal;
+bt.reduced = bt.root;
+const nn = bt;
+let ri = [], We = 0;
+for (; We < 64; )
+  ri[We] = 0 | Math.sin(++We % Math.PI) * 4294967296;
+function cr(e) {
   let t, n, r, o = [t = 1732584193, n = 4023233417, ~t, ~n], a = [], i = decodeURI(encodeURI(e)) + "", s = i.length;
   for (e = --s / 4 + 2 | 15, a[--e] = s * 8; ~s; )
     a[s >> 2] |= i.charCodeAt(s) << 8 * s--;
-  for (Se = i = 0; Se < e; Se += 16) {
+  for (We = i = 0; We < e; We += 16) {
     for (s = o; i < 64; s = [
       r = s[3],
       t + ((r = s[0] + [
@@ -1805,7 +1852,7 @@ function or(e) {
         r & t | ~r & n,
         t ^ n ^ r,
         n ^ (t | ~r)
-      ][s = i >> 4] + Ua[i] + ~~a[Se | [
+      ][s = i >> 4] + ri[i] + ~~a[We | [
         i,
         5 * i + 1,
         3 * i + 5,
@@ -1839,22 +1886,22 @@ function or(e) {
     e += (o[i >> 3] >> (1 ^ i++) * 4 & 15).toString(16);
   return e;
 }
-const nh = {
+const dh = {
   text: !0,
   terms: !0
 };
-let Lr = { case: "none", unicode: "some", form: "machine", punctuation: "some" };
-const dn = function(e, t) {
+let Rr = { case: "none", unicode: "some", form: "machine", punctuation: "some" };
+const mn = function(e, t) {
   return Object.assign({}, e, t);
-}, xe = {
-  text: (e) => Be(e, { keepPunct: !0 }, !1),
-  normal: (e) => Be(e, dn(Zt.normal, { keepPunct: !0 }), !1),
-  implicit: (e) => Be(e, dn(Zt.implicit, { keepPunct: !0 }), !1),
-  machine: (e) => Be(e, Lr, !1),
-  root: (e) => Be(e, dn(Lr, { form: "root" }), !1),
-  hash: (e) => or(Be(e, { keepPunct: !0 }, !1)),
+}, Te = {
+  text: (e) => Le(e, { keepPunct: !0 }, !1),
+  normal: (e) => Le(e, mn(nn.normal, { keepPunct: !0 }), !1),
+  implicit: (e) => Le(e, mn(nn.implicit, { keepPunct: !0 }), !1),
+  machine: (e) => Le(e, Rr, !1),
+  root: (e) => Le(e, mn(Rr, { form: "root" }), !1),
+  hash: (e) => cr(Le(e, { keepPunct: !0 }, !1)),
   offset: (e) => {
-    let t = xe.text(e).length;
+    let t = Te.text(e).length;
     return {
       index: e[0].offset.index,
       start: e[0].offset.start,
@@ -1870,24 +1917,24 @@ const dn = function(e, t) {
   sentence: (e, t, n) => t.eq(n).fullSentence().text(),
   dirty: (e) => e.some((t) => t.dirty === !0)
 };
-xe.sentences = xe.sentence;
-xe.clean = xe.normal;
-xe.reduced = xe.root;
-const rh = function(e, t) {
-  return t = t || {}, typeof t == "string" && (t = {}), t = Object.assign({}, nh, t), t.offset && e.compute("offset"), e.docs.map((n, r) => {
+Te.sentences = Te.sentence;
+Te.clean = Te.normal;
+Te.reduced = Te.root;
+const fh = function(e, t) {
+  return t = t || {}, typeof t == "string" && (t = {}), t = Object.assign({}, dh, t), t.offset && e.compute("offset"), e.docs.map((n, r) => {
     let o = {};
     return Object.keys(t).forEach((a) => {
-      t[a] && xe[a] && (o[a] = xe[a](n, e, r));
+      t[a] && Te[a] && (o[a] = Te[a](n, e, r));
     }), o;
   });
-}, zn = {
+}, Wn = {
   json: function(e) {
-    let t = rh(this, e);
+    let t = fh(this, e);
     return typeof e == "number" ? t[e] : t;
   }
 };
-zn.data = zn.json;
-const oh = zn, ah = function(e) {
+Wn.data = Wn.json;
+const ph = Wn, gh = function(e) {
   console.log("%c -=-=- ", "background-color:#6699cc;"), e.forEach((t) => {
     console.groupCollapsed(t.text());
     let r = t.docs[0].map((o) => {
@@ -1898,57 +1945,57 @@ const oh = zn, ah = function(e) {
     });
     console.table(r, ["text", "tags"]), console.groupEnd();
   });
-}, ih = ah, pe = "\x1B[0m", sh = {
-  green: (e) => "\x1B[32m" + e + pe,
-  red: (e) => "\x1B[31m" + e + pe,
-  blue: (e) => "\x1B[34m" + e + pe,
-  magenta: (e) => "\x1B[35m" + e + pe,
-  cyan: (e) => "\x1B[36m" + e + pe,
-  yellow: (e) => "\x1B[33m" + e + pe,
-  black: (e) => "\x1B[30m" + e + pe,
-  dim: (e) => "\x1B[2m" + e + pe,
-  i: (e) => "\x1B[3m" + e + pe
-}, Y = sh, lh = function(e, t) {
+}, mh = gh, ye = "\x1B[0m", yh = {
+  green: (e) => "\x1B[32m" + e + ye,
+  red: (e) => "\x1B[31m" + e + ye,
+  blue: (e) => "\x1B[34m" + e + ye,
+  magenta: (e) => "\x1B[35m" + e + ye,
+  cyan: (e) => "\x1B[36m" + e + ye,
+  yellow: (e) => "\x1B[33m" + e + ye,
+  black: (e) => "\x1B[30m" + e + ye,
+  dim: (e) => "\x1B[2m" + e + ye,
+  i: (e) => "\x1B[3m" + e + ye
+}, Z = yh, bh = function(e, t) {
   return t.one.tagSet && (e = e.map((n) => {
     if (!t.one.tagSet.hasOwnProperty(n))
       return n;
     const r = t.one.tagSet[n].color || "blue";
-    return Y[r](n);
+    return Z[r](n);
   })), e.join(", ");
-}, uh = function(e) {
+}, vh = function(e) {
   let { docs: t, model: n } = e;
-  t.length === 0 && console.log(Y.blue(`
+  t.length === 0 && console.log(Z.blue(`
      ──────`)), t.forEach((r) => {
-    console.log(Y.blue(`
+    console.log(Z.blue(`
   ┌─────────`)), r.forEach((o) => {
       let a = [...o.tags || []], i = o.text || "-";
-      o.sense && (i = `{${o.normal}/${o.sense}}`), o.implicit && (i = "[" + o.implicit + "]"), i = Y.yellow(i);
+      o.sense && (i = `{${o.normal}/${o.sense}}`), o.implicit && (i = "[" + o.implicit + "]"), i = Z.yellow(i);
       let s = "'" + i + "'";
       if (o.reference) {
         let u = e.update([o.reference]).text("normal");
-        s += ` - ${Y.dim(Y.i("[" + u + "]"))}`;
+        s += ` - ${Z.dim(Z.i("[" + u + "]"))}`;
       }
       s = s.padEnd(18);
-      let l = Y.blue("  │ ") + Y.i(s) + "  - " + lh(a, n);
+      let l = Z.blue("  │ ") + Z.i(s) + "  - " + bh(a, n);
       console.log(l);
     });
   });
-}, ch = uh, hh = function(e) {
+}, wh = vh, Ph = function(e) {
   let { docs: t } = e;
   console.log(""), t.forEach((n) => {
     let r = [];
     n.forEach((o) => {
-      o.chunk === "Noun" ? r.push(Y.blue(o.implicit || o.normal)) : o.chunk === "Verb" ? r.push(Y.green(o.implicit || o.normal)) : o.chunk === "Adjective" ? r.push(Y.yellow(o.implicit || o.normal)) : o.chunk === "Pivot" ? r.push(Y.red(o.implicit || o.normal)) : r.push(o.implicit || o.normal);
+      o.chunk === "Noun" ? r.push(Z.blue(o.implicit || o.normal)) : o.chunk === "Verb" ? r.push(Z.green(o.implicit || o.normal)) : o.chunk === "Adjective" ? r.push(Z.yellow(o.implicit || o.normal)) : o.chunk === "Pivot" ? r.push(Z.red(o.implicit || o.normal)) : r.push(o.implicit || o.normal);
     }), console.log(r.join(" "), `
 `);
   });
-}, dh = hh, fh = (e, t, n) => {
+}, kh = Ph, Ah = (e, t, n) => {
   let r = n * 9, o = t.start + r, a = o + t.length, i = e.substring(0, o), s = e.substring(o, a), l = e.substring(a, e.length);
   return [i, s, l];
-}, ph = function(e, t, n) {
-  let r = fh(e, t, n);
-  return `${r[0]}${Y.blue(r[1])}${r[2]}`;
-}, gh = function(e) {
+}, $h = function(e, t, n) {
+  let r = Ah(e, t, n);
+  return `${r[0]}${Z.blue(r[1])}${r[2]}`;
+}, Ih = function(e) {
   if (!e.found)
     return;
   let t = {};
@@ -1957,35 +2004,35 @@ const oh = zn, ah = function(e) {
   }), Object.keys(t).forEach((n) => {
     let o = e.update([[Number(n)]]).text();
     e.update(t[n]).json({ offset: !0 }).forEach((s, l) => {
-      o = ph(o, s.offset, l);
+      o = $h(o, s.offset, l);
     }), console.log(o);
   });
-}, mh = gh;
-function yh() {
+}, xh = Ih;
+function Nh() {
   return typeof window < "u" && window.document;
 }
-const bh = function(e = {}) {
+const jh = function(e = {}) {
   let t = this;
   if (typeof e == "string") {
     let n = {};
     n[e] = !0, e = n;
   }
-  return yh() ? (ih(t), t) : (e.tags !== !1 && (ch(t), console.log(`
-`)), e.chunks === !0 && (dh(t), console.log(`
-`)), e.highlight === !0 && (mh(t), console.log(`
+  return Nh() ? (mh(t), t) : (e.tags !== !1 && (wh(t), console.log(`
+`)), e.chunks === !0 && (kh(t), console.log(`
+`)), e.highlight === !0 && (xh(t), console.log(`
 `)), t);
-}, vh = bh, wh = function(e) {
+}, Eh = jh, Th = function(e) {
   let t = e.pre || "", n = e.post || "";
   return t + e.text + n;
-}, Ph = function(e, t) {
+}, Ch = function(e, t) {
   let n = {};
   return Object.keys(t).forEach((r) => {
     e.match(r).fullPointer.forEach((a) => {
       n[a[3]] = { fn: t[r], end: a[2] };
     });
   }), n;
-}, kh = function(e, t) {
-  let n = Ph(e, t), r = "";
+}, Dh = function(e, t) {
+  let n = Ch(e, t), r = "";
   return e.docs.forEach((o, a) => {
     for (let i = 0; i < o.length; i += 1) {
       let s = o[i];
@@ -1993,17 +2040,17 @@ const bh = function(e = {}) {
         let { fn: l, end: u } = n[s.id], c = e.update([[a, i, u]]);
         r += o[i].pre || "", r += l(c), i = u - 1, r += o[i].post || "";
       } else
-        r += wh(s);
+        r += Th(s);
     }
   }), r;
-}, Ra = kh, Ah = (e) => Object.prototype.toString.call(e) === "[object Object]", Ih = function(e) {
+}, oi = Dh, Oh = (e) => Object.prototype.toString.call(e) === "[object Object]", Fh = function(e) {
   let t = {};
   return e.forEach((r) => {
     t[r] = t[r] || 0, t[r] += 1;
   }), Object.keys(t).map((r) => ({ normal: r, count: t[r] })).sort((r, o) => r.count > o.count ? -1 : 0);
-}, $h = function(e) {
-  if (Ah(e))
-    return Ra(this, e);
+}, Vh = function(e) {
+  if (Oh(e))
+    return oi(this, e);
   if (e === "text")
     return this.text();
   if (e === "normal")
@@ -2013,7 +2060,7 @@ const bh = function(e = {}) {
   if (e === "machine" || e === "reduced")
     return this.text("machine");
   if (e === "hash" || e === "md5")
-    return or(this.text());
+    return cr(this.text());
   if (e === "json")
     return this.json();
   if (e === "offset" || e === "offsets")
@@ -2021,7 +2068,7 @@ const bh = function(e = {}) {
   if (e === "array")
     return this.docs.map((n) => n.reduce((r, o) => r + o.pre + o.text + o.post, "").trim()).filter((n) => n);
   if (e === "freq" || e === "frequency" || e === "topk")
-    return Ih(this.json({ normal: !0 }).map((t) => t.normal));
+    return Fh(this.json({ normal: !0 }).map((t) => t.normal));
   if (e === "terms") {
     let t = [];
     return this.docs.forEach((n) => {
@@ -2030,76 +2077,76 @@ const bh = function(e = {}) {
     }), t;
   }
   return e === "tags" ? this.docs.map((t) => t.reduce((n, r) => (n[r.implicit || r.normal] = Array.from(r.tags), n), {})) : e === "debug" ? this.debug() : this.text();
-}, xh = {
-  debug: vh,
-  out: $h,
+}, Gh = {
+  debug: Eh,
+  out: Vh,
   wrap: function(e) {
-    return Ra(this, e);
+    return oi(this, e);
   }
-}, Nh = xh, jh = (e) => Object.prototype.toString.call(e) === "[object Object]", Eh = {
+}, Bh = Gh, zh = (e) => Object.prototype.toString.call(e) === "[object Object]", Sh = {
   text: function(e) {
     let t = {};
-    if (e && typeof e == "string" && Zt.hasOwnProperty(e) ? t = Object.assign({}, Zt[e]) : e && jh(e) && (t = Object.assign({}, e)), t.keepSpace === void 0 && this.pointer && (t.keepSpace = !1), t.keepPunct === void 0 && this.pointer) {
+    if (e && typeof e == "string" && nn.hasOwnProperty(e) ? t = Object.assign({}, nn[e]) : e && zh(e) && (t = Object.assign({}, e)), t.keepSpace === void 0 && this.pointer && (t.keepSpace = !1), t.keepPunct === void 0 && this.pointer) {
       let n = this.pointer[0];
       n && n[1] ? t.keepPunct = !1 : t.keepPunct = !0;
     }
-    return t.keepPunct === void 0 && (t.keepPunct = !0), t.keepSpace === void 0 && (t.keepSpace = !0), th(this.docs, t);
+    return t.keepPunct === void 0 && (t.keepPunct = !0), t.keepSpace === void 0 && (t.keepSpace = !0), hh(this.docs, t);
   }
-}, Th = Object.assign({}, Nh, Eh, oh, Yc), Ch = function(e) {
-  Object.assign(e.prototype, Th);
-}, Dh = Ch, Oh = {
-  api: Dh,
+}, Lh = Object.assign({}, Bh, Sh, ph, sh), Mh = function(e) {
+  Object.assign(e.prototype, Lh);
+}, Wh = Mh, Hh = {
+  api: Wh,
   methods: {
     one: {
-      hash: or
+      hash: cr
     }
   }
-}, Qa = function(e, t) {
+}, ai = function(e, t) {
   if (e[0] !== t[0])
     return !1;
   let [, n, r] = e, [, o, a] = t;
   return n <= o && r > o || o <= n && a > n;
-}, Fh = function(e) {
+}, Jh = function(e) {
   let t = e[0][1], n = e[0][2];
   return e.forEach((r) => {
     r[1] < t && (t = r[1]), r[2] > n && (n = r[2]);
   }), [e[0][0], t, n];
-}, rn = function(e) {
+}, ln = function(e) {
   let t = {};
   return e.forEach((n) => {
     t[n[0]] = t[n[0]] || [], t[n[0]].push(n);
   }), t;
-}, Vh = function(e) {
+}, _h = function(e) {
   let t = {};
   for (let n = 0; n < e.length; n += 1)
     t[e[n].join(",")] = e[n];
   return Object.values(t);
-}, Gh = function(e, t) {
+}, Kh = function(e, t) {
   let [n, r] = e, o = t[1], a = t[2], i = {};
   if (r < o) {
     let s = o < e[2] ? o : e[2];
     i.before = [n, r, s];
   }
   return i.match = t, e[2] > a && (i.after = [n, a, e[2]]), i;
-}, Bh = function(e, t) {
+}, qh = function(e, t) {
   return e[1] <= t[1] && t[2] <= e[2];
-}, zh = function(e, t) {
-  let n = rn(t), r = [];
+}, Uh = function(e, t) {
+  let n = ln(t), r = [];
   return e.forEach((o) => {
     let [a] = o, i = n[a] || [];
-    if (i = i.filter((l) => Bh(o, l)), i.length === 0) {
+    if (i = i.filter((l) => qh(o, l)), i.length === 0) {
       r.push({ passthrough: o });
       return;
     }
     i = i.sort((l, u) => l[1] - u[1]);
     let s = o;
     i.forEach((l, u) => {
-      let c = Gh(s, l);
+      let c = Kh(s, l);
       i[u + 1] ? (r.push({ before: c.before, match: c.match }), c.after && (s = c.after)) : r.push(c);
     });
   }), r;
-}, Ya = zh, Sh = 20, Lh = function(e, t, n) {
-  for (let r = 0; r < Sh; r += 1) {
+}, ii = Uh, Rh = 20, Qh = function(e, t, n) {
+  for (let r = 0; r < Rh; r += 1) {
     if (t[n - r]) {
       let o = t[n - r].findIndex((a) => a.id === e);
       if (o !== -1)
@@ -2112,118 +2159,118 @@ const bh = function(e = {}) {
     }
   }
   return null;
-}, Mh = function(e, t) {
+}, Yh = function(e, t) {
   let [n, r, , , o] = e, a = t[n], i = a.findIndex((s) => s.id === o);
   return i === -1 ? (e[2] = t[n].length, e[4] = a.length ? a[a.length - 1].id : null) : e[2] = i, t[n].slice(r, e[2] + 1);
-}, Wh = function(e, t) {
+}, Xh = function(e, t) {
   let n = [];
   return e.forEach((r, o) => {
     if (!r)
       return;
     let [a, i, s, l, u] = r, c = t[a] || [];
     if (i === void 0 && (i = 0), s === void 0 && (s = c.length), l && (!c[i] || c[i].id !== l)) {
-      let h = Lh(l, t, a);
+      let h = Qh(l, t, a);
       if (h !== null) {
-        let f = s - i;
-        c = t[h[0]].slice(h[1], h[1] + f);
-        let w = c[0] ? c[0].id : null;
-        e[o] = [h[0], h[1], h[1] + f, w];
+        let d = s - i;
+        c = t[h[0]].slice(h[1], h[1] + d);
+        let x = c[0] ? c[0].id : null;
+        e[o] = [h[0], h[1], h[1] + d, x];
       }
     } else
       c = c.slice(i, s);
-    c.length !== 0 && i !== s && (u && c[c.length - 1].id !== u && (c = Mh(r, t)), n.push(c));
+    c.length !== 0 && i !== s && (u && c[c.length - 1].id !== u && (c = Yh(r, t)), n.push(c));
   }), n = n.filter((r) => r.length > 0), n;
-}, Hh = Wh, Jh = function(e) {
+}, Zh = Xh, ed = function(e) {
   let t = [];
   for (let n = 0; n < e.length; n += 1)
     for (let r = 0; r < e[n].length; r += 1)
       t.push(e[n][r]);
   return t;
-}, _h = {
+}, td = {
   one: {
-    termList: Jh,
-    getDoc: Hh,
+    termList: ed,
+    getDoc: Zh,
     pointer: {
-      indexN: rn,
-      splitAll: Ya
+      indexN: ln,
+      splitAll: ii
     }
   }
-}, Kh = function(e, t) {
-  let n = e.concat(t), r = rn(n), o = [];
+}, nd = function(e, t) {
+  let n = e.concat(t), r = ln(n), o = [];
   return n.forEach((a) => {
     let [i] = a;
     if (r[i].length === 1) {
       o.push(a);
       return;
     }
-    let s = r[i].filter((u) => Qa(a, u));
+    let s = r[i].filter((u) => ai(a, u));
     s.push(a);
-    let l = Fh(s);
+    let l = Jh(s);
     o.push(l);
-  }), o = Vh(o), o;
-}, Xa = Kh, qh = function(e, t) {
+  }), o = _h(o), o;
+}, si = nd, rd = function(e, t) {
   let n = [];
-  return Ya(e, t).forEach((o) => {
+  return ii(e, t).forEach((o) => {
     o.passthrough && n.push(o.passthrough), o.before && n.push(o.before), o.after && n.push(o.after);
   }), n;
-}, Za = qh, Uh = function(e, t) {
+}, li = rd, od = function(e, t) {
   let n = e[1] < t[1] ? t[1] : e[1], r = e[2] > t[2] ? t[2] : e[2];
   return n < r ? [e[0], n, r] : null;
-}, Rh = function(e, t) {
-  let n = rn(t), r = [];
+}, ad = function(e, t) {
+  let n = ln(t), r = [];
   return e.forEach((o) => {
     let a = n[o[0]] || [];
-    a = a.filter((i) => Qa(o, i)), a.length !== 0 && a.forEach((i) => {
-      let s = Uh(o, i);
+    a = a.filter((i) => ai(o, i)), a.length !== 0 && a.forEach((i) => {
+      let s = od(o, i);
       s && r.push(s);
     });
   }), r;
-}, Qh = Rh, Yh = function(e) {
+}, id = ad, sd = function(e) {
   return Object.prototype.toString.call(e) === "[object Array]";
-}, ar = (e, t) => typeof e == "string" || Yh(e) ? t.match(e) : e || t.none(), wt = function(e, t) {
+}, hr = (e, t) => typeof e == "string" || sd(e) ? t.match(e) : e || t.none(), $t = function(e, t) {
   return e.map((n) => {
     let [r, o] = n;
     return t[r] && t[r][o] && (n[3] = t[r][o].id), n;
   });
-}, fe = {};
-fe.union = function(e) {
-  e = ar(e, this);
-  let t = Xa(this.fullPointer, e.fullPointer);
-  return t = wt(t, this.document), this.toView(t);
+}, me = {};
+me.union = function(e) {
+  e = hr(e, this);
+  let t = si(this.fullPointer, e.fullPointer);
+  return t = $t(t, this.document), this.toView(t);
 };
-fe.and = fe.union;
-fe.intersection = function(e) {
-  e = ar(e, this);
-  let t = Qh(this.fullPointer, e.fullPointer);
-  return t = wt(t, this.document), this.toView(t);
+me.and = me.union;
+me.intersection = function(e) {
+  e = hr(e, this);
+  let t = id(this.fullPointer, e.fullPointer);
+  return t = $t(t, this.document), this.toView(t);
 };
-fe.not = function(e) {
-  e = ar(e, this);
-  let t = Za(this.fullPointer, e.fullPointer);
-  return t = wt(t, this.document), this.toView(t);
+me.not = function(e) {
+  e = hr(e, this);
+  let t = li(this.fullPointer, e.fullPointer);
+  return t = $t(t, this.document), this.toView(t);
 };
-fe.difference = fe.not;
-fe.complement = function() {
-  let e = this.all(), t = Za(e.fullPointer, this.fullPointer);
-  return t = wt(t, this.document), this.toView(t);
+me.difference = me.not;
+me.complement = function() {
+  let e = this.all(), t = li(e.fullPointer, this.fullPointer);
+  return t = $t(t, this.document), this.toView(t);
 };
-fe.settle = function() {
+me.settle = function() {
   let e = this.fullPointer;
   return e.forEach((t) => {
-    e = Xa(e, [t]);
-  }), e = wt(e, this.document), this.update(e);
+    e = si(e, [t]);
+  }), e = $t(e, this.document), this.update(e);
 };
-const Xh = function(e) {
-  Object.assign(e.prototype, fe);
-}, Zh = Xh, ed = {
-  methods: _h,
-  api: Zh
-}, td = {
+const ld = function(e) {
+  Object.assign(e.prototype, me);
+}, ud = ld, cd = {
+  methods: td,
+  api: ud
+}, hd = {
   buildNet: function(e) {
     let n = this.methods().one.buildNet(e, this.world());
     return n.isNet = !0, n;
   }
-}, nd = function(e) {
+}, dd = function(e) {
   e.prototype.sweep = function(t, n = {}) {
     const { world: r, docs: o } = this, { methods: a } = r;
     let i = a.one.bulkMatch(o, t, this.methods, n);
@@ -2241,38 +2288,38 @@ const Xh = function(e) {
       found: i
     };
   };
-}, rd = nd, Sn = function(e) {
+}, fd = dd, Hn = function(e) {
   return e.optional === !0 || e.negative === !0 ? null : e.tag ? "#" + e.tag : e.word ? e.word : e.switch ? `%${e.switch}%` : null;
-}, od = function(e) {
+}, pd = function(e) {
   let t = [];
   return e.forEach((n) => {
-    t.push(Sn(n)), n.operator === "and" && n.choices && n.choices.forEach((r) => {
+    t.push(Hn(n)), n.operator === "and" && n.choices && n.choices.forEach((r) => {
       r.forEach((o) => {
-        t.push(Sn(o));
+        t.push(Hn(o));
       });
     });
   }), t.filter((n) => n);
-}, ad = function(e) {
+}, gd = function(e) {
   let t = [], n = 0;
   return e.forEach((r) => {
     r.operator === "or" && !r.optional && !r.negative && (r.fastOr && Array.from(r.fastOr).forEach((o) => {
       t.push(o);
     }), r.choices && r.choices.forEach((o) => {
       o.forEach((a) => {
-        let i = Sn(a);
+        let i = Hn(a);
         i && t.push(i);
       });
     }), n += 1);
   }), { wants: t, count: n };
-}, id = function(e, t) {
+}, md = function(e, t) {
   const n = t.methods.one.parseMatch;
   return e.forEach((r) => {
-    r.regs = n(r.match, {}, t), typeof r.ifNo == "string" && (r.ifNo = [r.ifNo]), r.notIf && (r.notIf = n(r.notIf, {}, t)), r.needs = od(r.regs);
-    let { wants: o, count: a } = ad(r.regs);
+    r.regs = n(r.match, {}, t), typeof r.ifNo == "string" && (r.ifNo = [r.ifNo]), r.notIf && (r.notIf = n(r.notIf, {}, t)), r.needs = pd(r.regs);
+    let { wants: o, count: a } = gd(r.regs);
     r.wants = o, r.minWant = a, r.minWords = r.regs.filter((i) => !i.optional).length;
   }), e;
-}, sd = id, ld = function(e, t) {
-  e = sd(e, t);
+}, yd = md, bd = function(e, t) {
+  e = yd(e, t);
   let n = {};
   e.forEach((o) => {
     o.needs.forEach((a) => {
@@ -2289,7 +2336,7 @@ const Xh = function(e) {
     hooks: n,
     always: r
   };
-}, ud = ld, cd = function(e, t) {
+}, vd = bd, wd = function(e, t) {
   return e.map((n, r) => {
     let o = [];
     Object.keys(t).forEach((i) => {
@@ -2298,12 +2345,12 @@ const Xh = function(e) {
     let a = {};
     return o = o.filter((i) => a[i.match] ? !1 : (a[i.match] = !0, !0)), o;
   });
-}, hd = cd, dd = function(e, t) {
+}, Pd = wd, kd = function(e, t) {
   return e.map((n, r) => {
     let o = t[r];
     return n = n.filter((a) => a.needs.every((i) => o.has(i))), n = n.filter((a) => !(a.ifNo !== void 0 && a.ifNo.some((i) => o.has(i)) === !0)), n = n.filter((a) => a.wants.length === 0 ? !0 : a.wants.filter((s) => o.has(s)).length >= a.minWant), n;
   });
-}, fd = dd, pd = function(e, t, n, r, o) {
+}, Ad = kd, $d = function(e, t, n, r, o) {
   let a = [];
   for (let i = 0; i < e.length; i += 1)
     for (let s = 0; s < e[i].length; s += 1) {
@@ -2316,15 +2363,15 @@ const Xh = function(e) {
         return [a[0]];
     }
   return a;
-}, gd = pd, md = function(e, t) {
+}, Id = $d, xd = function(e, t) {
   return e.map((n, r) => {
     let o = t[r].length;
     return n = n.filter((a) => o >= a.minWords), n;
   });
-}, yd = function(e, t, n, r = {}) {
-  let o = n.one.cacheDoc(e), a = hd(o, t.hooks);
-  return a = fd(a, o), t.always.length > 0 && (a = a.map((s) => s.concat(t.always))), a = md(a, e), gd(a, e, o, n, r);
-}, bd = yd, vd = function(e, t, n) {
+}, Nd = function(e, t, n, r = {}) {
+  let o = n.one.cacheDoc(e), a = Pd(o, t.hooks);
+  return a = Ad(a, o), t.always.length > 0 && (a = a.map((s) => s.concat(t.always))), a = xd(a, e), Id(a, e, o, n, r);
+}, jd = Nd, Ed = function(e, t, n) {
   let r = n.one.tagSet;
   if (!r.hasOwnProperty(t))
     return !0;
@@ -2336,35 +2383,35 @@ const Xh = function(e) {
         return !1;
   }
   return !0;
-}, wd = vd, Pd = function(e, t, n) {
+}, Td = Ed, Cd = function(e, t, n) {
   const { model: r, methods: o } = n, { getDoc: a, setTag: i, unTag: s } = o.one, l = o.two.looksPlural;
   return e.length === 0 ? e : ((typeof process > "u" || !process.env ? self.env || {} : process.env).DEBUG_TAGS && console.log(`
 
   \x1B[32m→ ${e.length} post-tagger:\x1B[0m`), e.map((c) => {
     if (!c.tag && !c.chunk && !c.unTag)
       return;
-    let h = c.reason || c.match, f = a([c.pointer], t)[0];
-    if (!(c.safe === !0 && (wd(f, c.tag, r) === !1 || f[f.length - 1].post === "-"))) {
-      if (c.tag !== void 0 && (i(f, c.tag, n, c.safe, `[post] '${h}'`), c.tag === "Noun" && l)) {
-        let w = f[f.length - 1];
-        l(w.text) ? i([w], "Plural", n, c.safe, "quick-plural") : i([w], "Singular", n, c.safe, "quick-singular");
+    let h = c.reason || c.match, d = a([c.pointer], t)[0];
+    if (!(c.safe === !0 && (Td(d, c.tag, r) === !1 || d[d.length - 1].post === "-"))) {
+      if (c.tag !== void 0 && (i(d, c.tag, n, c.safe, `[post] '${h}'`), c.tag === "Noun" && l)) {
+        let x = d[d.length - 1];
+        l(x.text) ? i([x], "Plural", n, c.safe, "quick-plural") : i([x], "Singular", n, c.safe, "quick-singular");
       }
-      c.unTag !== void 0 && s(f, c.unTag, n, c.safe, h), c.chunk && f.forEach((w) => w.chunk = c.chunk);
+      c.unTag !== void 0 && s(d, c.unTag, n, c.safe, h), c.chunk && d.forEach((x) => x.chunk = c.chunk);
     }
   }));
-}, kd = Pd, Ad = {
-  buildNet: ud,
-  bulkMatch: bd,
-  bulkTagger: kd
-}, Id = {
-  lib: td,
-  api: rd,
+}, Dd = Cd, Od = {
+  buildNet: vd,
+  bulkMatch: jd,
+  bulkTagger: Dd
+}, Fd = {
+  lib: hd,
+  api: fd,
   methods: {
-    one: Ad
+    one: Od
   }
-}, ei = / /, Mr = function(e, t) {
+}, ui = / /, Qr = function(e, t) {
   t === "Noun" && (e.chunk = t), t === "Verb" && (e.chunk = t);
-}, ti = function(e, t, n, r) {
+}, ci = function(e, t, n, r) {
   if (e.tags.has(t) === !0 || t === ".")
     return null;
   let o = n[t];
@@ -2377,42 +2424,42 @@ const Xh = function(e) {
       }
     if (o.parents && o.parents.length > 0)
       for (let a = 0; a < o.parents.length; a += 1)
-        e.tags.add(o.parents[a]), Mr(e, o.parents[a]);
+        e.tags.add(o.parents[a]), Qr(e, o.parents[a]);
   }
-  return e.tags.add(t), e.dirty = !0, Mr(e, t), !0;
-}, $d = function(e, t, n, r) {
-  let o = t.split(ei);
+  return e.tags.add(t), e.dirty = !0, Qr(e, t), !0;
+}, Vd = function(e, t, n, r) {
+  let o = t.split(ui);
   e.forEach((a, i) => {
     let s = o[i];
-    s && (s = s.replace(/^#/, ""), ti(a, s, n, r));
+    s && (s = s.replace(/^#/, ""), ci(a, s, n, r));
   });
-}, xd = function(e) {
+}, Gd = function(e) {
   return Object.prototype.toString.call(e) === "[object Array]";
-}, Nd = (e, t, n = "") => {
+}, Bd = (e, t, n = "") => {
   const r = (i) => "\x1B[33m\x1B[3m" + i + "\x1B[0m", o = (i) => "\x1B[3m" + i + "\x1B[0m";
   let a = e.map((i) => i.text || "[" + i.implicit + "]").join(" ");
   typeof t != "string" && t.length > 2 && (t = t.slice(0, 2).join(", #") + " +"), t = typeof t != "string" ? t.join(", #") : t, console.log(` ${r(a).padEnd(24)} \x1B[32m→\x1B[0m #${t.padEnd(22)}  ${o(n)}`);
-}, ni = function(e, t, n = {}, r, o) {
+}, hi = function(e, t, n = {}, r, o) {
   const a = n.model.one.tagSet || {};
   if (!t)
     return;
   const i = typeof process > "u" || !process.env ? self.env || {} : process.env;
-  if (i && i.DEBUG_TAGS && Nd(e, t, o), xd(t) === !0) {
-    t.forEach((s) => ni(e, s, n, r));
+  if (i && i.DEBUG_TAGS && Bd(e, t, o), Gd(t) === !0) {
+    t.forEach((s) => hi(e, s, n, r));
     return;
   }
   if (typeof t != "string") {
     console.warn(`compromise: Invalid tag '${t}'`);
     return;
   }
-  if (t = t.trim(), ei.test(t)) {
-    $d(e, t, a, r);
+  if (t = t.trim(), ui.test(t)) {
+    Vd(e, t, a, r);
     return;
   }
   t = t.replace(/^#/, "");
   for (let s = 0; s < e.length; s += 1)
-    ti(e[s], t, a, r);
-}, jd = ni, Ed = function(e, t, n) {
+    ci(e[s], t, a, r);
+}, zd = hi, Sd = function(e, t, n) {
   t = t.trim().replace(/^#/, "");
   for (let r = 0; r < e.length; r += 1) {
     let o = e[r];
@@ -2426,9 +2473,9 @@ const Xh = function(e) {
         o.tags.delete(a.children[i]);
     o.tags.delete(t);
   }
-}, Td = Ed, Ce = function(e) {
+}, Ld = Sd, Fe = function(e) {
   return e.children = e.children || [], e._cache = e._cache || {}, e.props = e.props || {}, e._cache.parents = e._cache.parents || [], e._cache.children = e._cache.children || [], e;
-}, Cd = /^ *(#|\/\/)/, Dd = function(e) {
+}, Md = /^ *(#|\/\/)/, Wd = function(e) {
   let t = e.trim().split(/->/), n = [];
   t.forEach((o) => {
     n = n.concat(function(a) {
@@ -2436,16 +2483,16 @@ const Xh = function(e) {
         return null;
       if (/^\[/.test(a) && /\]$/.test(a)) {
         let i = (a = (a = a.replace(/^\[/, "")).replace(/\]$/, "")).split(/,/);
-        return i = i.map((s) => s.trim()).filter((s) => s), i = i.map((s) => Ce({ id: s })), i;
+        return i = i.map((s) => s.trim()).filter((s) => s), i = i.map((s) => Fe({ id: s })), i;
       }
-      return [Ce({ id: a })];
+      return [Fe({ id: a })];
     }(o));
   }), n = n.filter((o) => o);
   let r = n[0];
   for (let o = 1; o < n.length; o += 1)
     r.children.push(n[o]), r = n[o];
   return n[0];
-}, Ae = (e, t) => {
+}, xe = (e, t) => {
   let n = [], r = [e];
   for (; r.length > 0; ) {
     let o = r.pop();
@@ -2454,11 +2501,11 @@ const Xh = function(e) {
     });
   }
   return n;
-}, ir = (e) => Object.prototype.toString.call(e) === "[object Array]", At = (e) => (e = e || "").trim(), Od = function(e = []) {
+}, dr = (e) => Object.prototype.toString.call(e) === "[object Array]", xt = (e) => (e = e || "").trim(), Hd = function(e = []) {
   return typeof e == "string" ? function(n) {
     let r = n.split(/\r?\n/), o = [];
     r.forEach((i) => {
-      if (!i.trim() || Cd.test(i))
+      if (!i.trim() || Md.test(i))
         return;
       let s = ((l) => {
         const u = /^( {2}|\t)/;
@@ -2467,29 +2514,29 @@ const Xh = function(e) {
           l = l.replace(u, ""), c += 1;
         return c;
       })(i);
-      o.push({ indent: s, node: Dd(i) });
+      o.push({ indent: s, node: Wd(i) });
     });
     let a = function(i) {
       let s = { children: [] };
       return i.forEach((l, u) => {
         l.indent === 0 ? s.children = s.children.concat(l.node) : i[u - 1] && function(c, h) {
-          let f = c[h].indent;
+          let d = c[h].indent;
           for (; h >= 0; h -= 1)
-            if (c[h].indent < f)
+            if (c[h].indent < d)
               return c[h];
           return c[0];
         }(i, u).node.children.push(l.node);
       }), s;
     }(o);
-    return a = Ce(a), a;
-  }(e) : ir(e) ? function(n) {
+    return a = Fe(a), a;
+  }(e) : dr(e) ? function(n) {
     let r = {};
     n.forEach((a) => {
       r[a.id] = a;
     });
-    let o = Ce({});
+    let o = Fe({});
     return n.forEach((a) => {
-      if ((a = Ce(a)).parent)
+      if ((a = Fe(a)).parent)
         if (r.hasOwnProperty(a.parent)) {
           let i = r[a.parent];
           delete a.parent, i.children.push(a);
@@ -2498,34 +2545,34 @@ const Xh = function(e) {
       else
         o.children.push(a);
     }), o;
-  }(e) : (Ae(t = e).forEach(Ce), t);
+  }(e) : (xe(t = e).forEach(Fe), t);
   var t;
-}, Fd = (e) => "\x1B[31m" + e + "\x1B[0m", Vd = (e) => "\x1B[2m" + e + "\x1B[0m", Ln = function(e, t) {
+}, Jd = (e) => "\x1B[31m" + e + "\x1B[0m", _d = (e) => "\x1B[2m" + e + "\x1B[0m", Jn = function(e, t) {
   let n = "-> ";
-  t && (n = Vd("→ "));
+  t && (n = _d("→ "));
   let r = "";
-  return Ae(e).forEach((o, a) => {
+  return xe(e).forEach((o, a) => {
     let i = o.id || "";
-    if (t && (i = Fd(i)), a === 0 && !o.id)
+    if (t && (i = Jd(i)), a === 0 && !o.id)
       return;
     let s = o._cache.parents.length;
     r += "    ".repeat(s) + n + i + `
 `;
   }), r;
-}, Wr = function(e) {
-  let t = Ae(e);
+}, Yr = function(e) {
+  let t = xe(e);
   t.forEach((r) => {
     delete (r = Object.assign({}, r)).children;
   });
   let n = t[0];
   return n && !n.id && Object.keys(n.props).length === 0 && t.shift(), t;
-}, Hr = { text: Ln, txt: Ln, array: Wr, flat: Wr }, Jr = function(e, t) {
-  return t === "nested" || t === "json" ? e : t === "debug" ? (console.log(Ln(e, !0)), null) : Hr.hasOwnProperty(t) ? Hr[t](e) : e;
-}, fn = (e) => {
-  Ae(e, (t, n) => {
+}, Xr = { text: Jn, txt: Jn, array: Yr, flat: Yr }, Zr = function(e, t) {
+  return t === "nested" || t === "json" ? e : t === "debug" ? (console.log(Jn(e, !0)), null) : Xr.hasOwnProperty(t) ? Xr[t](e) : e;
+}, yn = (e) => {
+  xe(e, (t, n) => {
     t.id && (t._cache.parents = t._cache.parents || [], n._cache.parents = t._cache.parents.concat([t.id]));
   });
-}, Gd = (e, t) => (Object.keys(t).forEach((n) => {
+}, Kd = (e, t) => (Object.keys(t).forEach((n) => {
   if (t[n] instanceof Set) {
     let r = e[n] || /* @__PURE__ */ new Set();
     e[n] = /* @__PURE__ */ new Set([...r, ...t[n]]);
@@ -2533,9 +2580,9 @@ const Xh = function(e) {
     let r = e[n] || {};
     e[n] = Object.assign({}, t[n], r);
   } else
-    ir(t[n]) ? e[n] = t[n].concat(e[n] || []) : e[n] === void 0 && (e[n] = t[n]);
-}), e), Bd = /\//;
-let Ht = class {
+    dr(t[n]) ? e[n] = t[n].concat(e[n] || []) : e[n] === void 0 && (e[n] = t[n]);
+}), e), qd = /\//;
+let Kt = class {
   constructor(t = {}) {
     Object.defineProperty(this, "json", { enumerable: !1, value: t, writable: !0 });
   }
@@ -2553,9 +2600,9 @@ let Ht = class {
     return typeof t == "string" && (n[t] = !0), this.json.props = Object.assign(n, t), this;
   }
   get(t) {
-    if (t = At(t), !Bd.test(t)) {
+    if (t = xt(t), !qd.test(t)) {
       let r = this.json.children.find((o) => o.id === t);
-      return new Ht(r);
+      return new Kt(r);
     }
     let n = ((r, o) => {
       let a = ((i) => typeof i != "string" ? i : (i = i.replace(/^\//, "")).split(/\//))(o = o || "");
@@ -2566,25 +2613,25 @@ let Ht = class {
         r = s;
       }
       return r;
-    })(this.json, t) || Ce({});
-    return new Ht(n);
+    })(this.json, t) || Fe({});
+    return new Kt(n);
   }
   add(t, n = {}) {
-    if (ir(t))
-      return t.forEach((o) => this.add(At(o), n)), this;
-    t = At(t);
-    let r = Ce({ id: t, props: n });
-    return this.json.children.push(r), new Ht(r);
+    if (dr(t))
+      return t.forEach((o) => this.add(xt(o), n)), this;
+    t = xt(t);
+    let r = Fe({ id: t, props: n });
+    return this.json.children.push(r), new Kt(r);
   }
   remove(t) {
-    return t = At(t), this.json.children = this.json.children.filter((n) => n.id !== t), this;
+    return t = xt(t), this.json.children = this.json.children.filter((n) => n.id !== t), this;
   }
   nodes() {
-    return Ae(this.json).map((t) => (delete (t = Object.assign({}, t)).children, t));
+    return xe(this.json).map((t) => (delete (t = Object.assign({}, t)).children, t));
   }
   cache() {
     return ((t) => {
-      let n = Ae(t, (o, a) => {
+      let n = xe(t, (o, a) => {
         o.id && (o._cache.parents = o._cache.parents || [], o._cache.children = o._cache.children || [], a._cache.parents = o._cache.parents.concat([o.id]));
       }), r = {};
       n.forEach((o) => {
@@ -2597,17 +2644,17 @@ let Ht = class {
     })(this.json), this;
   }
   list() {
-    return Ae(this.json);
+    return xe(this.json);
   }
   fillDown() {
     var t;
-    return t = this.json, Ae(t, (n, r) => {
-      r.props = Gd(r.props, n.props);
+    return t = this.json, xe(t, (n, r) => {
+      r.props = Kd(r.props, n.props);
     }), this;
   }
   depth() {
-    fn(this.json);
-    let t = Ae(this.json), n = t.length > 1 ? 1 : 0;
+    yn(this.json);
+    let t = xe(this.json), n = t.length > 1 ? 1 : 0;
     return t.forEach((r) => {
       if (r._cache.parents.length === 0)
         return;
@@ -2616,20 +2663,20 @@ let Ht = class {
     }), n;
   }
   out(t) {
-    return fn(this.json), Jr(this.json, t);
+    return yn(this.json), Zr(this.json, t);
   }
   debug() {
-    return fn(this.json), Jr(this.json, "debug"), this;
+    return yn(this.json), Zr(this.json, "debug"), this;
   }
 };
-const ri = function(e) {
-  let t = Od(e);
-  return new Ht(t);
+const di = function(e) {
+  let t = Hd(e);
+  return new Kt(t);
 };
-ri.prototype.plugin = function(e) {
+di.prototype.plugin = function(e) {
   e(this);
 };
-const zd = {
+const Ud = {
   Noun: "blue",
   Verb: "green",
   Negative: "green",
@@ -2641,14 +2688,14 @@ const zd = {
   Determiner: "cyan",
   Hyphenated: "cyan",
   Adverb: "cyan"
-}, We = zd, Sd = function(e) {
-  if (We.hasOwnProperty(e.id))
-    return We[e.id];
-  if (We.hasOwnProperty(e.is))
-    return We[e.is];
-  let t = e._cache.parents.find((n) => We[n]);
-  return We[t];
-}, Ld = function(e) {
+}, Ue = Ud, Rd = function(e) {
+  if (Ue.hasOwnProperty(e.id))
+    return Ue[e.id];
+  if (Ue.hasOwnProperty(e.is))
+    return Ue[e.is];
+  let t = e._cache.parents.find((n) => Ue[n]);
+  return Ue[t];
+}, Qd = function(e) {
   const t = {};
   return e.forEach((n) => {
     let { not: r, also: o, is: a, novel: i } = n.props, s = n._cache.parents;
@@ -2659,7 +2706,7 @@ const zd = {
       also: o,
       parents: s,
       children: n._cache.children,
-      color: Sd(n)
+      color: Rd(n)
     };
   }), Object.keys(t).forEach((n) => {
     let r = new Set(t[n].not);
@@ -2667,45 +2714,45 @@ const zd = {
       t[o] && t[o].children.forEach((a) => r.add(a));
     }), t[n].not = Array.from(r);
   }), t;
-}, Md = Ld, _r = function(e) {
+}, Yd = Qd, eo = function(e) {
   return e ? typeof e == "string" ? [e] : e : [];
-}, Wd = function(e, t) {
+}, Xd = function(e, t) {
   return Object.keys(e).forEach((n) => {
     e[n].isA && (e[n].is = e[n].isA), e[n].notA && (e[n].not = e[n].notA), e[n].is && typeof e[n].is == "string" && !t.hasOwnProperty(e[n].is) && !e.hasOwnProperty(e[n].is) && (e[e[n].is] = {}), e[n].not && typeof e[n].not == "string" && !e.hasOwnProperty(e[n].not) && !t.hasOwnProperty(e[n].not) && !e.hasOwnProperty(e[n].not) && (e[e[n].not] = {});
   }), e;
-}, Hd = function(e, t) {
-  return e = Wd(e, t), Object.keys(e).forEach((n) => {
-    e[n].children = _r(e[n].children), e[n].not = _r(e[n].not);
+}, Zd = function(e, t) {
+  return e = Xd(e, t), Object.keys(e).forEach((n) => {
+    e[n].children = eo(e[n].children), e[n].not = eo(e[n].not);
   }), Object.keys(e).forEach((n) => {
     (e[n].not || []).forEach((o) => {
       e[o] && e[o].not && e[o].not.push(n);
     });
   }), e;
-}, Jd = Hd, _d = function(e) {
+}, ef = Zd, tf = function(e) {
   const t = Object.keys(e).map((r) => {
     let o = e[r];
     const a = { not: new Set(o.not), also: o.also, is: o.is, novel: o.novel };
     return { id: r, parent: o.is, props: a, children: [] };
   });
-  return ri(t).cache().fillDown().out("array");
-}, Kd = function(e) {
+  return di(t).cache().fillDown().out("array");
+}, nf = function(e) {
   return Object.keys(e).forEach((t) => {
     e[t] = Object.assign({}, e[t]), e[t].novel = !0;
   }), e;
-}, qd = function(e, t) {
-  Object.keys(t).length > 0 && (e = Kd(e)), e = Jd(e, t);
+}, rf = function(e, t) {
+  Object.keys(t).length > 0 && (e = nf(e)), e = ef(e, t);
   let n = Object.assign({}, t, e);
-  const r = _d(n);
-  return Md(r);
-}, Ud = qd, Rd = {
+  const r = tf(n);
+  return Yd(r);
+}, of = rf, af = {
   one: {
-    setTag: jd,
-    unTag: Td,
-    addTags: Ud
+    setTag: zd,
+    unTag: Ld,
+    addTags: of
   }
-}, Kr = function(e) {
+}, to = function(e) {
   return Object.prototype.toString.call(e) === "[object Array]";
-}, Qd = {
+}, sf = {
   tag: function(e, t = "", n) {
     if (!this.found || !e)
       return this;
@@ -2713,7 +2760,7 @@ const zd = {
     if (r.length === 0)
       return this;
     const { methods: o, verbose: a, world: i } = this;
-    return a === !0 && console.log(" +  ", e, t || ""), Kr(e) ? e.forEach((s) => o.one.setTag(r, s, i, n, t)) : o.one.setTag(r, e, i, n, t), this.uncache(), this;
+    return a === !0 && console.log(" +  ", e, t || ""), to(e) ? e.forEach((s) => o.one.setTag(r, s, i, n, t)) : o.one.setTag(r, e, i, n, t), this.uncache(), this;
   },
   tagSafe: function(e, t = "") {
     return this.tag(e, t, !0);
@@ -2727,7 +2774,7 @@ const zd = {
     const { methods: r, verbose: o, model: a } = this;
     o === !0 && console.log(" -  ", e, t || "");
     let i = a.one.tagSet;
-    return Kr(e) ? e.forEach((s) => r.one.unTag(n, s, i)) : r.one.unTag(n, e, i), this.uncache(), this;
+    return to(e) ? e.forEach((s) => r.one.unTag(n, s, i)) : r.one.unTag(n, e, i), this.uncache(), this;
   },
   canBe: function(e) {
     e = e.replace(/^#/, "");
@@ -2743,55 +2790,55 @@ const zd = {
     let o = this.update(r);
     return this.difference(o);
   }
-}, Yd = Qd, Xd = function(e) {
-  Object.assign(e.prototype, Yd);
-}, Zd = Xd, ef = function(e) {
+}, lf = sf, uf = function(e) {
+  Object.assign(e.prototype, lf);
+}, cf = uf, hf = function(e) {
   const { model: t, methods: n } = this.world(), r = t.one.tagSet, o = n.one.addTags;
   let a = o(e, r);
   return t.one.tagSet = a, this;
-}, tf = { addTags: ef }, qr = /* @__PURE__ */ new Set(["Auxiliary", "Possessive"]), nf = function(e, t) {
+}, df = { addTags: hf }, no = /* @__PURE__ */ new Set(["Auxiliary", "Possessive"]), ff = function(e, t) {
   return e = e.sort((n, r) => {
-    if (qr.has(n) || !t.hasOwnProperty(r))
+    if (no.has(n) || !t.hasOwnProperty(r))
       return 1;
-    if (qr.has(r) || !t.hasOwnProperty(n))
+    if (no.has(r) || !t.hasOwnProperty(n))
       return -1;
     let o = t[n].children || [], a = o.length;
     o = t[r].children || [];
     let i = o.length;
     return a - i;
   }), e;
-}, rf = function(e) {
+}, pf = function(e) {
   const { document: t, world: n } = e, r = n.model.one.tagSet;
   t.forEach((o) => {
     o.forEach((a) => {
       let i = Array.from(a.tags);
-      a.tagRank = nf(i, r);
+      a.tagRank = ff(i, r);
     });
   });
-}, of = rf, af = {
+}, gf = pf, mf = {
   model: {
     one: { tagSet: {} }
   },
   compute: {
-    tagRank: of
+    tagRank: gf
   },
-  methods: Rd,
-  api: Zd,
-  lib: tf
-}, sf = /([.!?\u203D\u2E18\u203C\u2047-\u2049\u3002]+\s)/g, lf = /^[.!?\u203D\u2E18\u203C\u2047-\u2049\u3002]+\s$/, uf = /((?:\r?\n|\r)+)/, cf = function(e) {
-  let t = [], n = e.split(uf);
+  methods: af,
+  api: cf,
+  lib: df
+}, yf = /([.!?\u203D\u2E18\u203C\u2047-\u2049\u3002]+\s)/g, bf = /^[.!?\u203D\u2E18\u203C\u2047-\u2049\u3002]+\s$/, vf = /((?:\r?\n|\r)+)/, wf = function(e) {
+  let t = [], n = e.split(vf);
   for (let r = 0; r < n.length; r++) {
-    let o = n[r].split(sf);
+    let o = n[r].split(yf);
     for (let a = 0; a < o.length; a++)
-      o[a + 1] && lf.test(o[a + 1]) === !0 && (o[a] += o[a + 1], o[a + 1] = ""), o[a] !== "" && t.push(o[a]);
+      o[a + 1] && bf.test(o[a + 1]) === !0 && (o[a] += o[a + 1], o[a + 1] = ""), o[a] !== "" && t.push(o[a]);
   }
   return t;
-}, hf = cf, df = /[a-z0-9\u00C0-\u00FF\u00a9\u00ae\u2000-\u3300\ud000-\udfff]/i, ff = /\S/, pf = function(e) {
+}, Pf = wf, kf = /[a-z0-9\u00C0-\u00FF\u00a9\u00ae\u2000-\u3300\ud000-\udfff]/i, Af = /\S/, $f = function(e) {
   let t = [];
   for (let n = 0; n < e.length; n++) {
     let r = e[n];
     if (!(r === void 0 || r === "")) {
-      if (ff.test(r) === !1 || df.test(r) === !1) {
+      if (Af.test(r) === !1 || kf.test(r) === !1) {
         if (t[t.length - 1]) {
           t[t.length - 1] += r;
           continue;
@@ -2804,7 +2851,7 @@ const zd = {
     }
   }
   return t;
-}, gf = pf, mf = function(e, t) {
+}, If = $f, xf = function(e, t) {
   const n = t.methods.one.tokenize.isSentence, r = t.model.one.abbreviations || /* @__PURE__ */ new Set();
   let o = [];
   for (let a = 0; a < e.length; a++) {
@@ -2812,7 +2859,7 @@ const zd = {
     e[a + 1] && n(i, r) === !1 ? e[a + 1] = i + (e[a + 1] || "") : i && i.length > 0 && (o.push(i), e[a] = "");
   }
   return o;
-}, yf = mf, Ur = 280, oi = {
+}, Nf = xf, ro = 280, fi = {
   '"': '"',
   "＂": "＂",
   "“": "”",
@@ -2827,23 +2874,23 @@ const zd = {
   "‷": "‴",
   "〝": "〞",
   "〟": "〞"
-}, bf = RegExp("(" + Object.keys(oi).join("|") + ")", "g"), vf = RegExp("(" + Object.values(oi).join("|") + ")", "g"), Rr = function(e) {
+}, jf = RegExp("(" + Object.keys(fi).join("|") + ")", "g"), Ef = RegExp("(" + Object.values(fi).join("|") + ")", "g"), oo = function(e) {
   if (!e)
     return !1;
-  let t = e.match(vf);
+  let t = e.match(Ef);
   return t !== null && t.length === 1;
-}, wf = function(e) {
+}, Tf = function(e) {
   let t = [];
   for (let n = 0; n < e.length; n += 1) {
-    let o = e[n].match(bf);
+    let o = e[n].match(jf);
     if (o !== null && o.length === 1) {
-      if (Rr(e[n + 1]) && e[n + 1].length < Ur) {
+      if (oo(e[n + 1]) && e[n + 1].length < ro) {
         e[n] += e[n + 1], t.push(e[n]), e[n + 1] = "", n += 1;
         continue;
       }
-      if (Rr(e[n + 2])) {
+      if (oo(e[n + 2])) {
         let a = e[n + 1] + e[n + 2];
-        if (a.length < Ur) {
+        if (a.length < ro) {
           e[n] += a, t.push(e[n]), e[n + 1] = "", e[n + 2] = "", n += 2;
           continue;
         }
@@ -2852,36 +2899,36 @@ const zd = {
     t.push(e[n]);
   }
   return t;
-}, Pf = wf, kf = 250, Qr = /\(/g, Af = /\)/g, If = function(e) {
+}, Cf = Tf, Df = 250, ao = /\(/g, Of = /\)/g, Ff = function(e) {
   let t = [];
   for (let n = 0; n < e.length; n += 1) {
-    let o = e[n].match(Qr);
-    if (o !== null && o.length === 1 && e[n + 1] && e[n + 1].length < kf && e[n + 1].match(Af) !== null && o.length === 1 && !Qr.test(e[n + 1])) {
+    let o = e[n].match(ao);
+    if (o !== null && o.length === 1 && e[n + 1] && e[n + 1].length < Df && e[n + 1].match(Of) !== null && o.length === 1 && !ao.test(e[n + 1])) {
       e[n] += e[n + 1], t.push(e[n]), e[n + 1] = "", n += 1;
       continue;
     }
     t.push(e[n]);
   }
   return t;
-}, $f = If, xf = /\S/, Yr = /^\s+/, Nf = function(e, t) {
-  if (e = e || "", e = String(e), !e || typeof e != "string" || xf.test(e) === !1)
+}, Vf = Ff, Gf = /\S/, io = /^\s+/, Bf = function(e, t) {
+  if (e = e || "", e = String(e), !e || typeof e != "string" || Gf.test(e) === !1)
     return [];
   e = e.replace(" ", " ");
-  let n = hf(e), r = gf(n);
-  if (r = yf(r, t), r = Pf(r), r = $f(r), r.length === 0)
+  let n = Pf(e), r = If(n);
+  if (r = Nf(r, t), r = Cf(r), r = Vf(r), r.length === 0)
     return [e];
   for (let o = 1; o < r.length; o += 1) {
-    let a = r[o].match(Yr);
-    a !== null && (r[o - 1] += a[0], r[o] = r[o].replace(Yr, ""));
+    let a = r[o].match(io);
+    a !== null && (r[o - 1] += a[0], r[o] = r[o].replace(io, ""));
   }
   return r;
-}, jf = Nf, Ef = function(e, t) {
+}, zf = Bf, Sf = function(e, t) {
   let n = e.split(/[-–—]/);
   if (n.length <= 1)
     return !1;
   const { prefixes: r, suffixes: o } = t.one;
   return n[0].length === 1 && /[a-z]/i.test(n[0]) || r.hasOwnProperty(n[0]) || (n[1] = n[1].trim().replace(/[.?!]$/, ""), o.hasOwnProperty(n[1])) ? !1 : /^([a-z\u00C0-\u00FF`"'/]+)[-–—]([a-z0-9\u00C0-\u00FF].*)/i.test(e) === !0 || /^([0-9]{1,4})[-–—]([a-z\u00C0-\u00FF`"'/-]+$)/i.test(e) === !0;
-}, Tf = function(e) {
+}, Lf = function(e) {
   let t = [];
   const n = e.split(/[-–—]/);
   let r = "-", o = e.match(/[-–—]/);
@@ -2889,28 +2936,28 @@ const zd = {
   for (let a = 0; a < n.length; a++)
     a === n.length - 1 ? t.push(n[a]) : t.push(n[a] + r);
   return t;
-}, Cf = function(e) {
+}, Mf = function(e) {
   const t = /^[0-9]{1,4}(:[0-9][0-9])?([a-z]{1,2})? ?[-–—] ?$/, n = /^[0-9]{1,4}([a-z]{1,2})? ?$/;
   for (let r = 0; r < e.length - 1; r += 1)
     e[r + 1] && t.test(e[r]) && n.test(e[r + 1]) && (e[r] = e[r] + e[r + 1], e[r + 1] = null);
   return e;
-}, Df = Cf, Of = /\p{L} ?\/ ?\p{L}+$/u, Ff = function(e) {
+}, Wf = Mf, Hf = /\p{L} ?\/ ?\p{L}+$/u, Jf = function(e) {
   for (let t = 1; t < e.length - 1; t++)
-    Of.test(e[t]) && (e[t - 1] += e[t] + e[t + 1], e[t] = null, e[t + 1] = null);
+    Hf.test(e[t]) && (e[t - 1] += e[t] + e[t + 1], e[t] = null, e[t + 1] = null);
   return e;
-}, Vf = Ff, Gf = /\S/, Bf = /^[!?.]+$/, zf = /(\S+)/;
-let Mn = [".", "?", "!", ":", ";", "-", "–", "—", "--", "...", "(", ")", "[", "]", '"', "'", "`", "«", "»", "*"];
-Mn = Mn.reduce((e, t) => (e[t] = !0, e), {});
-const Sf = function(e) {
+}, _f = Jf, Kf = /\S/, qf = /^[!?.]+$/, Uf = /(\S+)/;
+let _n = [".", "?", "!", ":", ";", "-", "–", "—", "--", "...", "(", ")", "[", "]", '"', "'", "`", "«", "»", "*"];
+_n = _n.reduce((e, t) => (e[t] = !0, e), {});
+const Rf = function(e) {
   return Object.prototype.toString.call(e) === "[object Array]";
-}, Lf = function(e, t) {
+}, Qf = function(e, t) {
   let n = [], r = [];
-  if (e = e || "", typeof e == "number" && (e = String(e)), Sf(e))
+  if (e = e || "", typeof e == "number" && (e = String(e)), Rf(e))
     return e;
-  const o = e.split(zf);
+  const o = e.split(Uf);
   for (let i = 0; i < o.length; i++) {
-    if (Ef(o[i], t) === !0) {
-      r = r.concat(Tf(o[i]));
+    if (Sf(o[i], t) === !0) {
+      r = r.concat(Lf(o[i]));
       continue;
     }
     r.push(o[i]);
@@ -2918,10 +2965,10 @@ const Sf = function(e) {
   let a = "";
   for (let i = 0; i < r.length; i++) {
     let s = r[i];
-    Gf.test(s) === !0 && Mn.hasOwnProperty(s) === !1 && Bf.test(s) === !1 ? (n.length > 0 ? (n[n.length - 1] += a, n.push(s)) : n.push(a + s), a = "") : a += s;
+    Kf.test(s) === !0 && _n.hasOwnProperty(s) === !1 && qf.test(s) === !1 ? (n.length > 0 ? (n[n.length - 1] += a, n.push(s)) : n.push(a + s), a = "") : a += s;
   }
-  return a && (n.length === 0 && (n[0] = ""), n[n.length - 1] += a), n = Vf(n), n = Df(n), n = n.filter((i) => i), n;
-}, Mf = Lf, Xr = /\p{Letter}/u, It = /[\p{Number}\p{Currency_Symbol}]/u, Wf = /^[a-z]\.([a-z]\.)+/i, Hf = /[sn]['’]$/, Jf = function(e, t) {
+  return a && (n.length === 0 && (n[0] = ""), n[n.length - 1] += a), n = _f(n), n = Wf(n), n = n.filter((i) => i), n;
+}, Yf = Qf, so = /\p{Letter}/u, Nt = /[\p{Number}\p{Currency_Symbol}]/u, Xf = /^[a-z]\.([a-z]\.)+/i, Zf = /[sn]['’]$/, ep = function(e, t) {
   let { prePunctuation: n, postPunctuation: r, emoticons: o } = t.one, a = e, i = "", s = "", l = Array.from(e);
   if (o.hasOwnProperty(e.trim()))
     return { str: e.trim(), pre: i, post: " " };
@@ -2929,7 +2976,7 @@ const Sf = function(e) {
   for (let c = 0; c < u; c += 1) {
     let h = l[0];
     if (n[h] !== !0) {
-      if ((h === "+" || h === "-") && It.test(l[1]) || h === "'" && h.length === 3 && It.test(l[1]) || Xr.test(h) || It.test(h))
+      if ((h === "+" || h === "-") && Nt.test(l[1]) || h === "'" && h.length === 3 && Nt.test(l[1]) || so.test(h) || Nt.test(h))
         break;
       i += l.shift();
     }
@@ -2938,70 +2985,70 @@ const Sf = function(e) {
   for (let c = 0; c < u; c += 1) {
     let h = l[l.length - 1];
     if (r[h] !== !0) {
-      if (Xr.test(h) || It.test(h))
+      if (so.test(h) || Nt.test(h))
         break;
-      h === "." && Wf.test(a) === !0 || h === "'" && Hf.test(a) === !0 || (s = l.pop() + s);
+      h === "." && Xf.test(a) === !0 || h === "'" && Zf.test(a) === !0 || (s = l.pop() + s);
     }
   }
   return e = l.join(""), e === "" && (a = a.replace(/ *$/, (c) => (s = c || "", "")), e = a, i = ""), { str: e, pre: i, post: s };
-}, _f = Jf, Kf = (e, t) => {
-  let { str: n, pre: r, post: o } = _f(e, t);
+}, tp = ep, np = (e, t) => {
+  let { str: n, pre: r, post: o } = tp(e, t);
   return {
     text: n,
     pre: r,
     post: o,
     tags: /* @__PURE__ */ new Set()
   };
-}, qf = Kf, Uf = function(e, t) {
+}, rp = np, op = function(e, t) {
   const n = t.model.one.unicode || {};
   e = e || "";
   let r = e.split("");
   return r.forEach((o, a) => {
     n[o] && (r[a] = n[o]);
   }), r.join("");
-}, Rf = Uf, Qf = function(e) {
+}, ap = op, ip = function(e) {
   e = e || "", e = e.toLowerCase(), e = e.trim();
   let t = e;
   return e = e.replace(/[,;.!?]+$/, ""), e = e.replace(/\u2026/g, "..."), e = e.replace(/\u2013/g, "-"), /^[:;]/.test(e) === !1 && (e = e.replace(/\.{3,}$/g, ""), e = e.replace(/[",.!:;?)]+$/g, ""), e = e.replace(/^['"(]+/g, "")), e = e.replace(/[\u200B-\u200D\uFEFF]/g, ""), e = e.trim(), e === "" && (e = t), e = e.replace(/([0-9]),([0-9])/g, "$1$2"), e;
-}, Yf = Qf, Xf = /([A-Z]\.)+[A-Z]?,?$/, Zf = /^[A-Z]\.,?$/, ep = /[A-Z]{2,}('s|,)?$/, tp = /([a-z]\.)+[a-z]\.?$/, np = function(e) {
-  return Xf.test(e) === !0 || tp.test(e) === !0 || Zf.test(e) === !0 || ep.test(e) === !0;
-}, rp = function(e) {
-  return np(e) && (e = e.replace(/\./g, "")), e;
-}, op = rp, ap = function(e, t) {
+}, sp = ip, lp = /([A-Z]\.)+[A-Z]?,?$/, up = /^[A-Z]\.,?$/, cp = /[A-Z]{2,}('s|,)?$/, hp = /([a-z]\.)+[a-z]\.?$/, dp = function(e) {
+  return lp.test(e) === !0 || hp.test(e) === !0 || up.test(e) === !0 || cp.test(e) === !0;
+}, fp = function(e) {
+  return dp(e) && (e = e.replace(/\./g, "")), e;
+}, pp = fp, gp = function(e, t) {
   const n = t.methods.one.killUnicode;
   let r = e.text || "";
-  r = Yf(r), r = n(r, t), r = op(r), e.normal = r;
-}, ai = ap, ip = function(e, t) {
+  r = sp(r), r = n(r, t), r = pp(r), e.normal = r;
+}, pi = gp, mp = function(e, t) {
   const { methods: n, model: r } = t, { splitSentences: o, splitTerms: a, splitWhitespace: i } = n.one.tokenize;
   return e = e || "", e = o(e, t).map((l) => {
     let u = a(l, r);
     return u = u.map((c) => i(c, r)), u.forEach((c) => {
-      ai(c, t);
+      pi(c, t);
     }), u;
   }), e;
-}, sp = ip, lp = /[ .][A-Z]\.? *$/i, up = /(?:\u2026|\.{2,}) *$/, cp = /\p{L}/u, hp = /^[A-Z]\. $/, dp = function(e, t) {
-  if (cp.test(e) === !1 || lp.test(e) === !0 || e.length === 3 && hp.test(e) || up.test(e) === !0)
+}, yp = mp, bp = /[ .][A-Z]\.? *$/i, vp = /(?:\u2026|\.{2,}) *$/, wp = /\p{L}/u, Pp = /^[A-Z]\. $/, kp = function(e, t) {
+  if (wp.test(e) === !1 || bp.test(e) === !0 || e.length === 3 && Pp.test(e) || vp.test(e) === !0)
     return !1;
   let r = e.replace(/[.!?\u203D\u2E18\u203C\u2047-\u2049] *$/, "").split(" "), o = r[r.length - 1].toLowerCase();
   return t.hasOwnProperty(o) !== !0;
-}, fp = dp, pp = {
+}, Ap = kp, $p = {
   one: {
-    killUnicode: Rf,
+    killUnicode: ap,
     tokenize: {
-      splitSentences: jf,
-      isSentence: fp,
-      splitTerms: Mf,
-      splitWhitespace: qf,
-      fromString: sp
+      splitSentences: zf,
+      isSentence: Ap,
+      splitTerms: Yf,
+      splitWhitespace: rp,
+      fromString: yp
     }
   }
-}, gp = {
+}, Ip = {
   "&": "and",
   "@": "at",
   "%": "percent",
   plz: "please",
   bein: "being"
-}, mp = gp, yp = [
+}, xp = Ip, Np = [
   "approx",
   "apt",
   "bc",
@@ -3053,7 +3100,7 @@ const Sf = function(e) {
   "vivo",
   "vitro",
   "wr"
-], bp = [
+], jp = [
   "adj",
   "adm",
   "adv",
@@ -3097,7 +3144,7 @@ const Sf = function(e) {
   "sr",
   "supt",
   "surg"
-], vp = ["jan", "feb", "mar", "apr", "jun", "jul", "aug", "sep", "sept", "oct", "nov", "dec"], wp = [
+], Ep = ["jan", "feb", "mar", "apr", "jun", "jul", "aug", "sep", "sept", "oct", "nov", "dec"], Tp = [
   "ad",
   "al",
   "arc",
@@ -3115,7 +3162,7 @@ const Sf = function(e) {
   "md",
   "pd",
   "tce"
-], Pp = ["dept", "univ", "assn", "bros", "inc", "ltd", "co"], kp = [
+], Cp = ["dept", "univ", "assn", "bros", "inc", "ltd", "co"], Dp = [
   "rd",
   "st",
   "dist",
@@ -3159,7 +3206,7 @@ const Sf = function(e) {
   "ont",
   "que",
   "sask"
-], Ap = [
+], Op = [
   "dl",
   "ml",
   "gal",
@@ -3197,21 +3244,21 @@ const Sf = function(e) {
   "fl oz",
   "yb"
 ];
-let Ip = [
-  [yp],
-  [Ap, "Unit"],
-  [wp, "Noun"],
-  [bp, "Honorific"],
-  [vp, "Month"],
-  [Pp, "Organization"],
-  [kp, "Place"]
-], ii = {}, Jt = {};
-Ip.forEach((e) => {
+let Fp = [
+  [Np],
+  [Op, "Unit"],
+  [Tp, "Noun"],
+  [jp, "Honorific"],
+  [Ep, "Month"],
+  [Cp, "Organization"],
+  [Dp, "Place"]
+], gi = {}, qt = {};
+Fp.forEach((e) => {
   e[0].forEach((t) => {
-    ii[t] = !0, Jt[t] = "Abbreviation", e[1] !== void 0 && (Jt[t] = [Jt[t], e[1]]);
+    gi[t] = !0, qt[t] = "Abbreviation", e[1] !== void 0 && (qt[t] = [qt[t], e[1]]);
   });
 });
-const $p = [
+const Vp = [
   "anti",
   "bi",
   "co",
@@ -3239,7 +3286,7 @@ const $p = [
   "un",
   "out",
   "ex"
-].reduce((e, t) => (e[t] = !0, e), {}), xp = {
+].reduce((e, t) => (e[t] = !0, e), {}), Gp = {
   like: !0,
   ish: !0,
   less: !0,
@@ -3248,7 +3295,7 @@ const $p = [
   type: !0,
   designate: !0
 };
-let Zr = {
+let lo = {
   "!": "¡",
   "?": "¿Ɂ",
   '"': '“”"❝❞',
@@ -3281,13 +3328,13 @@ let Zr = {
   x: "×ΧχϗϰХхҲҳӼӽӾӿ",
   y: "ÝýÿŶŷŸƳƴȲȳɎɏΎΥΫγψϒϓϔЎУучўѰѱҮүҰұӮӯӰӱӲӳ",
   z: "ŹźŻżŽžƵƶȤȥɀΖ"
-}, si = {};
-Object.keys(Zr).forEach(function(e) {
-  Zr[e].split("").forEach(function(t) {
-    si[t] = e;
+}, mi = {};
+Object.keys(lo).forEach(function(e) {
+  lo[e].split("").forEach(function(t) {
+    mi[t] = e;
   });
 });
-const Np = si, jp = {
+const Bp = mi, zp = {
   "#": !0,
   "@": !0,
   _: !0,
@@ -3296,7 +3343,7 @@ const Np = si, jp = {
   "‌": !0,
   "‍": !0,
   "\uFEFF": !0
-}, Ep = {
+}, Sp = {
   "%": !0,
   _: !0,
   "°": !0,
@@ -3304,7 +3351,7 @@ const Np = si, jp = {
   "‌": !0,
   "‍": !0,
   "\uFEFF": !0
-}, Tp = {
+}, Lp = {
   "<3": !0,
   "</3": !0,
   "<\\3": !0,
@@ -3312,32 +3359,32 @@ const Np = si, jp = {
   ":^p": !0,
   ":^O": !0,
   ":^3": !0
-}, Cp = {
+}, Mp = {
   one: {
-    aliases: mp,
-    abbreviations: ii,
-    prefixes: $p,
-    suffixes: xp,
-    prePunctuation: jp,
-    postPunctuation: Ep,
-    lexicon: Jt,
-    unicode: Np,
-    emoticons: Tp
+    aliases: xp,
+    abbreviations: gi,
+    prefixes: Vp,
+    suffixes: Gp,
+    prePunctuation: zp,
+    postPunctuation: Sp,
+    lexicon: qt,
+    unicode: Bp,
+    emoticons: Lp
   }
-}, eo = /\//, Dp = /[a-z]\.[a-z]/i, Op = /[0-9]/, Fp = function(e, t) {
+}, uo = /\//, Wp = /[a-z]\.[a-z]/i, Hp = /[0-9]/, Jp = function(e, t) {
   let n = e.normal || e.text || e.machine;
   const r = t.model.one.aliases;
-  if (r.hasOwnProperty(n) && (e.alias = e.alias || [], e.alias.push(r[n])), eo.test(n) && !Dp.test(n) && !Op.test(n)) {
-    let o = n.split(eo);
+  if (r.hasOwnProperty(n) && (e.alias = e.alias || [], e.alias.push(r[n])), uo.test(n) && !Wp.test(n) && !Hp.test(n)) {
+    let o = n.split(uo);
     o.length <= 2 && o.forEach((a) => {
       a = a.trim(), a !== "" && (e.alias = e.alias || [], e.alias.push(a));
     });
   }
   return e;
-}, Vp = Fp, Gp = /^\p{Letter}+-\p{Letter}+$/u, Bp = function(e) {
+}, _p = Jp, Kp = /^\p{Letter}+-\p{Letter}+$/u, qp = function(e) {
   let t = e.implicit || e.normal || e.text;
-  t = t.replace(/['’]s$/, ""), t = t.replace(/s['’]$/, "s"), t = t.replace(/([aeiou][ktrp])in'$/, "$1ing"), Gp.test(t) && (t = t.replace(/-/g, "")), t = t.replace(/^[#@]/, ""), t !== e.normal && (e.machine = t);
-}, zp = Bp, Sp = function(e) {
+  t = t.replace(/['’]s$/, ""), t = t.replace(/s['’]$/, "s"), t = t.replace(/([aeiou][ktrp])in'$/, "$1ing"), Kp.test(t) && (t = t.replace(/-/g, "")), t = t.replace(/^[#@]/, ""), t !== e.normal && (e.machine = t);
+}, Up = qp, Rp = function(e) {
   let t = e.docs, n = {};
   for (let r = 0; r < t.length; r += 1)
     for (let o = 0; o < t[r].length; o += 1) {
@@ -3349,7 +3396,7 @@ const Np = si, jp = {
       let a = t[r][o], i = a.machine || a.normal;
       a.freq = n[i];
     }
-}, Lp = Sp, Mp = function(e) {
+}, Qp = Rp, Yp = function(e) {
   let t = 0, n = 0, r = e.document;
   for (let o = 0; o < r.length; o += 1)
     for (let a = 0; a < r[o].length; a += 1) {
@@ -3360,35 +3407,35 @@ const Np = si, jp = {
         length: i.text.length
       }, t += i.pre.length + i.text.length + i.post.length, n += 1;
     }
-}, Wp = Mp, Hp = function(e) {
+}, Xp = Yp, Zp = function(e) {
   let t = e.document;
   for (let n = 0; n < t.length; n += 1)
     for (let r = 0; r < t[n].length; r += 1)
       t[n][r].index = [n, r];
-}, Jp = Hp, _p = function(e) {
+}, eg = Zp, tg = function(e) {
   let t = 0, n = e.docs;
   for (let r = 0; r < n.length; r += 1)
     for (let o = 0; o < n[r].length; o += 1)
       n[r][o].normal !== "" && (t += 1, n[r][o].wordCount = t);
-}, Kp = _p, pn = function(e, t) {
+}, ng = tg, bn = function(e, t) {
   let n = e.docs;
   for (let r = 0; r < n.length; r += 1)
     for (let o = 0; o < n[r].length; o += 1)
       t(n[r][o], e.world);
-}, qp = {
-  alias: (e) => pn(e, Vp),
-  machine: (e) => pn(e, zp),
-  normal: (e) => pn(e, ai),
-  freq: Lp,
-  offset: Wp,
-  index: Jp,
-  wordCount: Kp
-}, Up = qp, Rp = {
-  compute: Up,
-  methods: pp,
-  model: Cp,
+}, rg = {
+  alias: (e) => bn(e, _p),
+  machine: (e) => bn(e, Up),
+  normal: (e) => bn(e, pi),
+  freq: Qp,
+  offset: Xp,
+  index: eg,
+  wordCount: ng
+}, og = rg, ag = {
+  compute: og,
+  methods: $p,
+  model: Mp,
   hooks: ["alias", "machine", "index", "id"]
-}, Qp = function(e) {
+}, ig = function(e) {
   const t = e.model.one.typeahead, n = e.docs;
   if (n.length === 0 || Object.keys(t).length === 0)
     return;
@@ -3397,15 +3444,15 @@ const Np = si, jp = {
     let a = t[o.normal];
     o.implicit = a, o.machine = a, o.typeahead = !0, e.compute.preTagger && e.last().unTag("*").compute(["lexicon", "preTagger"]);
   }
-}, Yp = { typeahead: Qp }, Xp = function() {
+}, sg = { typeahead: ig }, lg = function() {
   const e = this.docs;
   if (e.length === 0)
     return this;
   let t = e[e.length - 1] || [], n = t[t.length - 1];
   return n.typeahead === !0 && n.machine && (n.text = n.machine, n.normal = n.machine), this;
-}, Zp = function(e) {
-  e.prototype.autoFill = Xp;
-}, eg = Zp, tg = function(e, t, n) {
+}, ug = function(e) {
+  e.prototype.autoFill = lg;
+}, cg = ug, hg = function(e, t, n) {
   let r = {}, o = [], a = n.prefixes || {};
   return e.forEach((i) => {
     i = i.toLowerCase().trim();
@@ -3428,13 +3475,13 @@ const Np = si, jp = {
   }), r = Object.assign({}, a, r), o.forEach((i) => {
     delete r[i];
   }), r;
-}, ng = tg, rg = (e) => Object.prototype.toString.call(e) === "[object Object]", og = {
+}, dg = hg, fg = (e) => Object.prototype.toString.call(e) === "[object Object]", pg = {
   safe: !0,
   min: 3
-}, ag = function(e = [], t = {}) {
+}, gg = function(e = [], t = {}) {
   let n = this.model();
-  t = Object.assign({}, og, t), rg(e) && (Object.assign(n.one.lexicon, e), e = Object.keys(e));
-  let r = ng(e, t, this.world());
+  t = Object.assign({}, pg, t), fg(e) && (Object.assign(n.one.lexicon, e), e = Object.keys(e));
+  let r = dg(e, t, this.world());
   return Object.keys(r).forEach((o) => {
     if (n.one.typeahead.hasOwnProperty(o)) {
       delete n.one.typeahead[o];
@@ -3442,32 +3489,32 @@ const Np = si, jp = {
     }
     n.one.typeahead[o] = r[o];
   }), this;
-}, ig = {
-  typeahead: ag
-}, sg = {
+}, mg = {
+  typeahead: gg
+}, yg = {
   one: {
     typeahead: {}
   }
-}, lg = {
-  model: sg,
-  api: eg,
-  lib: ig,
-  compute: Yp,
+}, bg = {
+  model: yg,
+  api: cg,
+  lib: mg,
+  compute: sg,
   hooks: ["typeahead"]
 };
-k.extend(ml);
-k.extend(Oh);
-k.extend(Jc);
-k.extend(ed);
-k.extend(af);
-k.plugin(Kl);
-k.extend(Rp);
-k.plugin(Is);
-k.extend(bu);
-k.extend(lg);
-k.extend(su);
-k.extend(Id);
-const li = {
+P.extend(xl);
+P.extend(Hh);
+P.extend(eh);
+P.extend(cd);
+P.extend(mf);
+P.plugin(nu);
+P.extend(ag);
+P.plugin(Fs);
+P.extend(ju);
+P.extend(bg);
+P.extend(yu);
+P.extend(Fd);
+const yi = {
   addendum: "addenda",
   corpus: "corpora",
   criterion: "criteria",
@@ -3556,7 +3603,7 @@ const li = {
   stomach: "stomachs",
   tornado: "tornados",
   tuxedo: "tuxedos"
-}, to = {
+}, co = {
   Comparative: "true¦better",
   Superlative: "true¦earlier",
   PresentTense: "true¦sounds",
@@ -3622,34 +3669,34 @@ const li = {
   "Person|Verb": "true¦b8ch7dr6foster,gra5hope,ja9lan4ma2ni9ollie,p1rob,s0tra4wade;pike,t5ue;at,eg,ier2;ck,r0;k,shal;ce;ce,nt;ew;ase,u1;iff,l1ob,u0;ck;aze,ossom",
   "Person|Place": "true¦a5darw6h3jordan,k2orlando,s0victo7;a0ydney;lvador,mara,ntiago;ent,obe;amil0ous0;ton;lexand1ust0;in;ria",
   "Person|Date": "true¦a2j0sep;an0une;!uary;p0ugust,v0;ril"
-}, Le = 36, Wn = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ", no = Wn.split("").reduce(function(e, t, n) {
+}, He = 36, Kn = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ", ho = Kn.split("").reduce(function(e, t, n) {
   return e[t] = n, e;
-}, {}), ug = function(e) {
-  if (Wn[e] !== void 0)
-    return Wn[e];
-  let t = 1, n = Le, r = "";
-  for (; e >= n; e -= n, t++, n *= Le)
+}, {}), vg = function(e) {
+  if (Kn[e] !== void 0)
+    return Kn[e];
+  let t = 1, n = He, r = "";
+  for (; e >= n; e -= n, t++, n *= He)
     ;
   for (; t--; ) {
-    const o = e % Le;
-    r = String.fromCharCode((o < 10 ? 48 : 55) + o) + r, e = (e - o) / Le;
+    const o = e % He;
+    r = String.fromCharCode((o < 10 ? 48 : 55) + o) + r, e = (e - o) / He;
   }
   return r;
-}, cg = function(e) {
-  if (no[e] !== void 0)
-    return no[e];
-  let t = 0, n = 1, r = Le, o = 1;
-  for (; n < e.length; t += r, n++, r *= Le)
+}, wg = function(e) {
+  if (ho[e] !== void 0)
+    return ho[e];
+  let t = 0, n = 1, r = He, o = 1;
+  for (; n < e.length; t += r, n++, r *= He)
     ;
-  for (let a = e.length - 1; a >= 0; a--, o *= Le) {
+  for (let a = e.length - 1; a >= 0; a--, o *= He) {
     let i = e.charCodeAt(a) - 48;
     i > 10 && (i -= 7), t += i * o;
   }
   return t;
-}, Hn = {
-  toAlphaCode: ug,
-  fromAlphaCode: cg
-}, hg = function(e) {
+}, qn = {
+  toAlphaCode: vg,
+  fromAlphaCode: wg
+}, Pg = function(e) {
   const t = new RegExp("([0-9A-Z]+):([0-9A-Z]+)");
   for (let n = 0; n < e.nodes.length; n++) {
     const r = t.exec(e.nodes[n]);
@@ -3657,13 +3704,13 @@ const li = {
       e.symCount = n;
       break;
     }
-    e.syms[Hn.fromAlphaCode(r[1])] = Hn.fromAlphaCode(r[2]);
+    e.syms[qn.fromAlphaCode(r[1])] = qn.fromAlphaCode(r[2]);
   }
   e.nodes = e.nodes.slice(e.symCount, e.nodes.length);
-}, dg = hg, fg = function(e, t, n) {
-  const r = Hn.fromAlphaCode(t);
+}, kg = Pg, Ag = function(e, t, n) {
+  const r = qn.fromAlphaCode(t);
   return r < e.symCount ? e.syms[r] : n + r + 1 - e.symCount;
-}, pg = function(e) {
+}, $g = function(e) {
   const t = [], n = (r, o) => {
     let a = e.nodes[r];
     a[0] === "!" && (t.push(o), a = a.slice(1));
@@ -3677,19 +3724,19 @@ const li = {
         t.push(c);
         continue;
       }
-      const h = fg(e, u, r);
+      const h = Ag(e, u, r);
       n(h, c);
     }
   };
   return n(0, ""), t;
-}, gg = function(e) {
+}, Ig = function(e) {
   const t = {
     nodes: e.split(";"),
     syms: [],
     symCount: 0
   };
-  return e.match(":") && dg(t), pg(t);
-}, mg = gg, yg = function(e) {
+  return e.match(":") && kg(t), $g(t);
+}, xg = Ig, Ng = function(e) {
   if (!e)
     return {};
   const t = e.split("|").reduce((r, o) => {
@@ -3697,15 +3744,15 @@ const li = {
     return r[a[0]] = a[1], r;
   }, {}), n = {};
   return Object.keys(t).forEach(function(r) {
-    const o = mg(t[r]);
+    const o = xg(t[r]);
     r === "true" && (r = !0);
     for (let a = 0; a < o.length; a++) {
       const i = o[a];
       n.hasOwnProperty(i) === !0 ? Array.isArray(n[i]) === !1 ? n[i] = [n[i], r] : n[i].push(r) : n[i] = r;
     }
   }), n;
-}, bg = yg, oe = ["Possessive", "Pronoun"];
-let vg = {
+}, jg = Ng, ie = ["Possessive", "Pronoun"];
+let Eg = {
   "20th century fox": "Organization",
   "7 eleven": "Organization",
   "motel 6": "Organization",
@@ -3744,17 +3791,17 @@ let vg = {
   are: ["Copula", "PresentTense"],
   am: ["Copula", "PresentTense"],
   were: ["Copula", "PastTense"],
-  her: oe,
-  his: oe,
-  hers: oe,
-  their: oe,
-  theirs: oe,
-  themselves: oe,
-  your: oe,
-  our: oe,
-  ours: oe,
-  my: oe,
-  its: oe,
+  her: ie,
+  his: ie,
+  hers: ie,
+  their: ie,
+  theirs: ie,
+  themselves: ie,
+  your: ie,
+  our: ie,
+  ours: ie,
+  my: ie,
+  its: ie,
   vs: ["Conjunction", "Abbreviation"],
   if: ["Condition", "Preposition"],
   closer: "Comparative",
@@ -3778,7 +3825,7 @@ let vg = {
   neared: "PastTense",
   no: ["Negative", "Expression"]
 };
-const wg = vg, Pg = [
+const Tg = Eg, Cg = [
   ":(",
   ":)",
   ":P",
@@ -3836,7 +3883,7 @@ const wg = vg, Pg = [
   "</3",
   "<\\3",
   "=("
-], kg = {
+], Dg = {
   a: [
     [/(antenn|formul|nebul|vertebr|vit)a$/i, "$1ae"],
     [/ia$/i, "ia"]
@@ -3870,46 +3917,46 @@ const wg = vg, Pg = [
   ],
   y: [[/([^aeiouy]|qu)y$/i, "$1ies"]],
   z: [[/(quiz)$/i, "$1zes"]]
-}, $t = kg, Ag = /([xsz]|ch|sh)$/, Ig = function(e) {
+}, jt = Dg, Og = /([xsz]|ch|sh)$/, Fg = function(e) {
   let t = e[e.length - 1];
-  if ($t.hasOwnProperty(t) === !0)
-    for (let n = 0; n < $t[t].length; n += 1) {
-      let r = $t[t][n][0];
+  if (jt.hasOwnProperty(t) === !0)
+    for (let n = 0; n < jt[t].length; n += 1) {
+      let r = jt[t][n][0];
       if (r.test(e) === !0)
-        return e.replace(r, $t[t][n][1]);
+        return e.replace(r, jt[t][n][1]);
     }
   return null;
-}, $g = function(e = "", t) {
+}, Vg = function(e = "", t) {
   let { irregularPlurals: n, uncountable: r } = t.two;
   if (r.hasOwnProperty(e))
     return e;
   if (n.hasOwnProperty(e))
     return n[e];
-  let o = Ig(e);
-  return o !== null ? o : Ag.test(e) ? e + "es" : e + "s";
-}, on = $g, xg = /\|/;
-let tt = wg, Jn = {};
-const Ng = { two: { irregularPlurals: li, uncountable: {} } };
-Object.keys(to).forEach((e) => {
-  let t = bg(to[e]);
-  if (!xg.test(e)) {
+  let o = Fg(e);
+  return o !== null ? o : Og.test(e) ? e + "es" : e + "s";
+}, un = Vg, Gg = /\|/;
+let st = Tg, Un = {};
+const Bg = { two: { irregularPlurals: yi, uncountable: {} } };
+Object.keys(co).forEach((e) => {
+  let t = jg(co[e]);
+  if (!Gg.test(e)) {
     Object.keys(t).forEach((n) => {
-      tt[n] = e;
+      st[n] = e;
     });
     return;
   }
   Object.keys(t).forEach((n) => {
-    if (Jn[n] = e, e === "Noun|Verb") {
-      let r = on(n, Ng);
-      Jn[r] = "Plural|Verb";
+    if (Un[n] = e, e === "Noun|Verb") {
+      let r = un(n, Bg);
+      Un[r] = "Plural|Verb";
     }
   });
 });
-Pg.forEach((e) => tt[e] = "Emoticon");
-delete tt[""];
-delete tt[null];
-delete tt[" "];
-const p = "Singular", j = {
+Cg.forEach((e) => st[e] = "Emoticon");
+delete st[""];
+delete st[null];
+delete st[" "];
+const p = "Singular", E = {
   beforeTags: {
     Determiner: p,
     Possessive: p,
@@ -4000,114 +4047,114 @@ const p = "Singular", j = {
     can: p,
     wise: p
   }
-}, d = "Infinitive", H = {
+}, f = "Infinitive", _ = {
   beforeTags: {
-    Modal: d,
-    Adverb: d,
-    Negative: d,
-    Plural: d
+    Modal: f,
+    Adverb: f,
+    Negative: f,
+    Plural: f
   },
   afterTags: {
-    Determiner: d,
-    Adverb: d,
-    Possessive: d,
-    Reflexive: d,
-    Preposition: d,
-    Cardinal: d,
-    Comparative: d,
-    Superlative: d
+    Determiner: f,
+    Adverb: f,
+    Possessive: f,
+    Reflexive: f,
+    Preposition: f,
+    Cardinal: f,
+    Comparative: f,
+    Superlative: f
   },
   beforeWords: {
-    i: d,
-    we: d,
-    you: d,
-    they: d,
-    to: d,
-    please: d,
-    will: d,
-    have: d,
-    had: d,
-    would: d,
-    could: d,
-    should: d,
-    do: d,
-    did: d,
-    does: d,
-    can: d,
-    must: d,
-    us: d,
-    me: d,
-    let: d,
-    even: d,
-    when: d,
-    help: d,
-    he: d,
-    she: d,
-    it: d,
-    being: d,
-    bi: d,
-    co: d,
-    contra: d,
-    de: d,
-    inter: d,
-    intra: d,
-    mis: d,
-    pre: d,
-    out: d,
-    counter: d,
-    nobody: d,
-    somebody: d,
-    anybody: d,
-    everybody: d
+    i: f,
+    we: f,
+    you: f,
+    they: f,
+    to: f,
+    please: f,
+    will: f,
+    have: f,
+    had: f,
+    would: f,
+    could: f,
+    should: f,
+    do: f,
+    did: f,
+    does: f,
+    can: f,
+    must: f,
+    us: f,
+    me: f,
+    let: f,
+    even: f,
+    when: f,
+    help: f,
+    he: f,
+    she: f,
+    it: f,
+    being: f,
+    bi: f,
+    co: f,
+    contra: f,
+    de: f,
+    inter: f,
+    intra: f,
+    mis: f,
+    pre: f,
+    out: f,
+    counter: f,
+    nobody: f,
+    somebody: f,
+    anybody: f,
+    everybody: f
   },
   afterWords: {
-    the: d,
-    me: d,
-    you: d,
-    him: d,
-    us: d,
-    her: d,
-    them: d,
-    it: d,
-    himself: d,
-    herself: d,
-    itself: d,
-    myself: d,
-    ourselves: d,
-    themselves: d,
-    something: d,
-    anything: d,
-    a: d,
-    an: d,
-    up: d,
-    down: d,
-    by: d,
-    out: d,
-    off: d,
-    under: d,
-    what: d,
-    all: d,
-    to: d,
-    because: d,
-    although: d,
-    after: d,
-    before: d,
-    how: d,
-    otherwise: d,
-    together: d,
-    though: d,
-    into: d,
-    yet: d,
-    more: d,
-    here: d,
-    there: d
+    the: f,
+    me: f,
+    you: f,
+    him: f,
+    us: f,
+    her: f,
+    them: f,
+    it: f,
+    himself: f,
+    herself: f,
+    itself: f,
+    myself: f,
+    ourselves: f,
+    themselves: f,
+    something: f,
+    anything: f,
+    a: f,
+    an: f,
+    up: f,
+    down: f,
+    by: f,
+    out: f,
+    off: f,
+    under: f,
+    what: f,
+    all: f,
+    to: f,
+    because: f,
+    although: f,
+    after: f,
+    before: f,
+    how: f,
+    otherwise: f,
+    together: f,
+    though: f,
+    into: f,
+    yet: f,
+    more: f,
+    here: f,
+    there: f
   }
-}, jg = {
-  beforeTags: Object.assign({}, H.beforeTags, j.beforeTags, {}),
-  afterTags: Object.assign({}, H.afterTags, j.afterTags, {}),
-  beforeWords: Object.assign({}, H.beforeWords, j.beforeWords, {}),
-  afterWords: Object.assign({}, H.afterWords, j.afterWords, {})
-}, Eg = jg, m = "Adjective", F = {
+}, zg = {
+  beforeTags: Object.assign({}, _.beforeTags, E.beforeTags, {}),
+  afterTags: Object.assign({}, _.afterTags, E.afterTags, {}),
+  beforeWords: Object.assign({}, _.beforeWords, E.beforeWords, {}),
+  afterWords: Object.assign({}, _.afterWords, E.afterWords, {})
+}, Sg = zg, m = "Adjective", V = {
   beforeTags: {
     Determiner: m,
     Possessive: m,
@@ -4161,7 +4208,7 @@ const p = "Singular", j = {
     also: m,
     or: m
   }
-}, g = "Gerund", De = {
+}, g = "Gerund", Ve = {
   beforeTags: {
     Adverb: g,
     Preposition: g,
@@ -4217,38 +4264,38 @@ const p = "Singular", j = {
     about: g,
     for: g
   }
-}, Tg = {
-  beforeTags: Object.assign({}, F.beforeTags, De.beforeTags, {
+}, Lg = {
+  beforeTags: Object.assign({}, V.beforeTags, Ve.beforeTags, {
     Imperative: "Gerund",
     Infinitive: "Adjective",
     PresentTense: "Gerund",
     Plural: "Gerund"
   }),
-  afterTags: Object.assign({}, F.afterTags, De.afterTags, {
+  afterTags: Object.assign({}, V.afterTags, Ve.afterTags, {
     Singular: "Adjective"
   }),
-  beforeWords: Object.assign({}, F.beforeWords, De.beforeWords, {
+  beforeWords: Object.assign({}, V.beforeWords, Ve.beforeWords, {
     is: "Adjective",
     was: "Adjective",
     of: "Adjective",
     suggest: "Gerund",
     recommend: "Gerund"
   }),
-  afterWords: Object.assign({}, F.afterWords, De.afterWords, {
+  afterWords: Object.assign({}, V.afterWords, Ve.afterWords, {
     to: "Gerund",
     not: "Gerund",
     the: "Gerund"
   })
-}, Cg = Tg, Dg = {
+}, Mg = Lg, Wg = {
   beforeTags: {
     Determiner: void 0,
     Cardinal: "Noun",
     PhrasalVerb: "Adjective"
   }
-}, Og = {
-  beforeTags: Object.assign({}, F.beforeTags, j.beforeTags, Dg.beforeTags),
-  afterTags: Object.assign({}, F.afterTags, j.afterTags),
-  beforeWords: Object.assign({}, F.beforeWords, j.beforeWords, {
+}, Hg = {
+  beforeTags: Object.assign({}, V.beforeTags, E.beforeTags, Wg.beforeTags),
+  afterTags: Object.assign({}, V.afterTags, E.afterTags),
+  beforeWords: Object.assign({}, V.beforeWords, E.beforeWords, {
     are: "Adjective",
     is: "Adjective",
     was: "Adjective",
@@ -4256,10 +4303,10 @@ const p = "Singular", j = {
     off: "Adjective",
     out: "Adjective"
   }),
-  afterWords: Object.assign({}, F.afterWords, j.afterWords)
-}, Fg = Og;
+  afterWords: Object.assign({}, V.afterWords, E.afterWords)
+}, Jg = Hg;
 let y = "PastTense";
-const xt = {
+const Et = {
   beforeTags: {
     Adverb: y,
     Pronoun: y,
@@ -4310,23 +4357,23 @@ const xt = {
     them: y,
     me: y
   }
-}, Vg = {
-  beforeTags: Object.assign({}, F.beforeTags, xt.beforeTags),
-  afterTags: Object.assign({}, F.afterTags, xt.afterTags),
-  beforeWords: Object.assign({}, F.beforeWords, xt.beforeWords),
-  afterWords: Object.assign({}, F.afterWords, xt.afterWords)
-}, Gg = {
+}, _g = {
+  beforeTags: Object.assign({}, V.beforeTags, Et.beforeTags),
+  afterTags: Object.assign({}, V.afterTags, Et.afterTags),
+  beforeWords: Object.assign({}, V.beforeWords, Et.beforeWords),
+  afterWords: Object.assign({}, V.afterWords, Et.afterWords)
+}, Kg = {
   afterTags: {
     Noun: "Adjective",
     Conjunction: void 0
   }
-}, Bg = {
-  beforeTags: Object.assign({}, F.beforeTags, H.beforeTags, {
+}, qg = {
+  beforeTags: Object.assign({}, V.beforeTags, _.beforeTags, {
     Adverb: void 0,
     Negative: void 0
   }),
-  afterTags: Object.assign({}, F.afterTags, H.afterTags, Gg.afterTags),
-  beforeWords: Object.assign({}, F.beforeWords, H.beforeWords, {
+  afterTags: Object.assign({}, V.afterTags, _.afterTags, Kg.afterTags),
+  beforeWords: Object.assign({}, V.beforeWords, _.beforeWords, {
     have: void 0,
     had: void 0,
     not: void 0,
@@ -4335,11 +4382,11 @@ const xt = {
     got: "Adjective",
     be: "Adjective"
   }),
-  afterWords: Object.assign({}, F.afterWords, H.afterWords, {
+  afterWords: Object.assign({}, V.afterWords, _.afterWords, {
     to: void 0,
     as: "Adjective"
   })
-}, zg = Bg, Nt = {
+}, Ug = qg, Tt = {
   beforeTags: {
     Copula: "Gerund",
     PastTense: "Gerund",
@@ -4369,207 +4416,207 @@ const xt = {
     us: "Gerund",
     them: "Gerund"
   }
-}, Sg = {
-  beforeTags: Object.assign({}, De.beforeTags, j.beforeTags, Nt.beforeTags),
-  afterTags: Object.assign({}, De.afterTags, j.afterTags, Nt.afterTags),
-  beforeWords: Object.assign({}, De.beforeWords, j.beforeWords, Nt.beforeWords),
-  afterWords: Object.assign({}, De.afterWords, j.afterWords, Nt.afterWords)
-}, Lg = Sg, He = "Singular", Oe = "Infinitive", Mg = {
-  beforeTags: Object.assign({}, H.beforeTags, j.beforeTags, {
-    Adjective: He,
-    Particle: He
+}, Rg = {
+  beforeTags: Object.assign({}, Ve.beforeTags, E.beforeTags, Tt.beforeTags),
+  afterTags: Object.assign({}, Ve.afterTags, E.afterTags, Tt.afterTags),
+  beforeWords: Object.assign({}, Ve.beforeWords, E.beforeWords, Tt.beforeWords),
+  afterWords: Object.assign({}, Ve.afterWords, E.afterWords, Tt.afterWords)
+}, Qg = Rg, Re = "Singular", Ge = "Infinitive", Yg = {
+  beforeTags: Object.assign({}, _.beforeTags, E.beforeTags, {
+    Adjective: Re,
+    Particle: Re
   }),
-  afterTags: Object.assign({}, H.afterTags, j.afterTags, {
-    ProperNoun: Oe,
-    Gerund: Oe,
-    Adjective: Oe,
-    Copula: He
+  afterTags: Object.assign({}, _.afterTags, E.afterTags, {
+    ProperNoun: Ge,
+    Gerund: Ge,
+    Adjective: Ge,
+    Copula: Re
   }),
-  beforeWords: Object.assign({}, H.beforeWords, j.beforeWords, {
-    is: He,
-    was: He,
-    of: He,
+  beforeWords: Object.assign({}, _.beforeWords, E.beforeWords, {
+    is: Re,
+    was: Re,
+    of: Re,
     have: null
   }),
-  afterWords: Object.assign({}, H.afterWords, j.afterWords, {
-    instead: Oe,
-    about: Oe,
-    his: Oe,
-    her: Oe,
+  afterWords: Object.assign({}, _.afterWords, E.afterWords, {
+    instead: Ge,
+    about: Ge,
+    his: Ge,
+    her: Ge,
     to: null,
     by: null,
     in: null
   })
-}, Wg = Mg, P = "Person", V = {
+}, Xg = Yg, w = "Person", G = {
   beforeTags: {
-    Honorific: P,
-    Person: P
+    Honorific: w,
+    Person: w
   },
   afterTags: {
-    Person: P,
-    ProperNoun: P,
-    Verb: P
+    Person: w,
+    ProperNoun: w,
+    Verb: w
   },
   ownTags: {
-    ProperNoun: P
+    ProperNoun: w
   },
   beforeWords: {
-    hi: P,
-    hey: P,
-    yo: P,
-    dear: P,
-    hello: P
+    hi: w,
+    hey: w,
+    yo: w,
+    dear: w,
+    hello: w
   },
   afterWords: {
-    said: P,
-    says: P,
-    told: P,
-    tells: P,
-    feels: P,
-    felt: P,
-    seems: P,
-    thinks: P,
-    thought: P,
-    spends: P,
-    spendt: P,
-    plays: P,
-    played: P,
-    sing: P,
-    sang: P,
-    learn: P,
-    learned: P,
-    wants: P,
-    wanted: P
+    said: w,
+    says: w,
+    told: w,
+    tells: w,
+    feels: w,
+    felt: w,
+    seems: w,
+    thinks: w,
+    thought: w,
+    spends: w,
+    spendt: w,
+    plays: w,
+    played: w,
+    sing: w,
+    sang: w,
+    learn: w,
+    learned: w,
+    wants: w,
+    wanted: w
   }
-}, x = "Month", jt = {
+}, N = "Month", Ct = {
   beforeTags: {
-    Date: x,
-    Value: x
+    Date: N,
+    Value: N
   },
   afterTags: {
-    Date: x,
-    Value: x
+    Date: N,
+    Value: N
   },
   beforeWords: {
-    by: x,
-    in: x,
-    on: x,
-    during: x,
-    after: x,
-    before: x,
-    between: x,
-    until: x,
-    til: x,
-    sometime: x,
-    of: x,
-    this: x,
-    next: x,
-    last: x,
-    previous: x,
-    following: x
+    by: N,
+    in: N,
+    on: N,
+    during: N,
+    after: N,
+    before: N,
+    between: N,
+    until: N,
+    til: N,
+    sometime: N,
+    of: N,
+    this: N,
+    next: N,
+    last: N,
+    previous: N,
+    following: N
   },
   afterWords: {
-    sometime: x,
-    in: x,
-    of: x,
-    until: x,
-    the: x
+    sometime: N,
+    in: N,
+    of: N,
+    until: N,
+    the: N
   }
-}, Hg = {
-  beforeTags: Object.assign({}, V.beforeTags, jt.beforeTags),
-  afterTags: Object.assign({}, V.afterTags, jt.afterTags),
-  beforeWords: Object.assign({}, V.beforeWords, jt.beforeWords),
-  afterWords: Object.assign({}, V.afterWords, jt.afterWords)
-}, Jg = {
-  beforeTags: Object.assign({}, j.beforeTags, V.beforeTags),
-  afterTags: Object.assign({}, j.afterTags, V.afterTags),
-  beforeWords: Object.assign({}, j.beforeWords, V.beforeWords, { i: "Infinitive", we: "Infinitive" }),
-  afterWords: Object.assign({}, j.afterWords, V.afterWords)
-}, _g = Jg, Kg = {
-  beforeTags: Object.assign({}, j.beforeTags, V.beforeTags, H.beforeTags),
-  afterTags: Object.assign({}, j.afterTags, V.afterTags, H.afterTags),
-  beforeWords: Object.assign({}, j.beforeWords, V.beforeWords, H.beforeWords),
-  afterWords: Object.assign({}, j.afterWords, V.afterWords, H.afterWords)
-}, qg = Kg, S = "Place", Et = {
+}, Zg = {
+  beforeTags: Object.assign({}, G.beforeTags, Ct.beforeTags),
+  afterTags: Object.assign({}, G.afterTags, Ct.afterTags),
+  beforeWords: Object.assign({}, G.beforeWords, Ct.beforeWords),
+  afterWords: Object.assign({}, G.afterWords, Ct.afterWords)
+}, em = {
+  beforeTags: Object.assign({}, E.beforeTags, G.beforeTags),
+  afterTags: Object.assign({}, E.afterTags, G.afterTags),
+  beforeWords: Object.assign({}, E.beforeWords, G.beforeWords, { i: "Infinitive", we: "Infinitive" }),
+  afterWords: Object.assign({}, E.afterWords, G.afterWords)
+}, tm = em, nm = {
+  beforeTags: Object.assign({}, E.beforeTags, G.beforeTags, _.beforeTags),
+  afterTags: Object.assign({}, E.afterTags, G.afterTags, _.afterTags),
+  beforeWords: Object.assign({}, E.beforeWords, G.beforeWords, _.beforeWords),
+  afterWords: Object.assign({}, E.afterWords, G.afterWords, _.afterWords)
+}, rm = nm, L = "Place", Dt = {
   beforeTags: {
-    Place: S
+    Place: L
   },
   afterTags: {
-    Place: S,
-    Abbreviation: S
+    Place: L,
+    Abbreviation: L
   },
   beforeWords: {
-    in: S,
-    by: S,
-    near: S,
-    from: S,
-    to: S
+    in: L,
+    by: L,
+    near: L,
+    from: L,
+    to: L
   },
   afterWords: {
-    in: S,
-    by: S,
-    near: S,
-    from: S,
-    to: S,
-    government: S,
-    council: S,
-    region: S,
-    city: S
+    in: L,
+    by: L,
+    near: L,
+    from: L,
+    to: L,
+    government: L,
+    council: L,
+    region: L,
+    city: L
   }
-}, Ug = {
-  beforeTags: Object.assign({}, Et.beforeTags, V.beforeTags),
-  afterTags: Object.assign({}, Et.afterTags, V.afterTags),
-  beforeWords: Object.assign({}, Et.beforeWords, V.beforeWords),
-  afterWords: Object.assign({}, Et.afterWords, V.afterWords)
-}, Rg = Ug, Qg = {
-  beforeTags: Object.assign({}, V.beforeTags, F.beforeTags),
-  afterTags: Object.assign({}, V.afterTags, F.afterTags),
-  beforeWords: Object.assign({}, V.beforeWords, F.beforeWords),
-  afterWords: Object.assign({}, V.afterWords, F.afterWords)
-}, Yg = Qg;
-let Z = "Unit";
-const Xg = {
-  beforeTags: { Value: Z },
+}, om = {
+  beforeTags: Object.assign({}, Dt.beforeTags, G.beforeTags),
+  afterTags: Object.assign({}, Dt.afterTags, G.afterTags),
+  beforeWords: Object.assign({}, Dt.beforeWords, G.beforeWords),
+  afterWords: Object.assign({}, Dt.afterWords, G.afterWords)
+}, am = om, im = {
+  beforeTags: Object.assign({}, G.beforeTags, V.beforeTags),
+  afterTags: Object.assign({}, G.afterTags, V.afterTags),
+  beforeWords: Object.assign({}, G.beforeWords, V.beforeWords),
+  afterWords: Object.assign({}, G.afterWords, V.afterWords)
+}, sm = im;
+let te = "Unit";
+const lm = {
+  beforeTags: { Value: te },
   afterTags: {},
   beforeWords: {
-    per: Z,
-    every: Z,
-    each: Z,
-    square: Z,
-    cubic: Z,
-    sq: Z,
-    metric: Z
+    per: te,
+    every: te,
+    each: te,
+    square: te,
+    cubic: te,
+    sq: te,
+    metric: te
   },
   afterWords: {
-    per: Z,
-    squared: Z,
-    cubed: Z,
-    long: Z
+    per: te,
+    squared: te,
+    cubed: te,
+    long: te
   }
-}, Zg = Xg, Ye = {
-  "Actor|Verb": Eg,
-  "Adj|Gerund": Cg,
-  "Adj|Noun": Fg,
-  "Adj|Past": Vg,
-  "Adj|Present": zg,
-  "Noun|Verb": Wg,
-  "Noun|Gerund": Lg,
-  "Person|Noun": _g,
-  "Person|Date": Hg,
-  "Person|Verb": qg,
-  "Person|Place": Rg,
-  "Person|Adj": Yg,
-  "Unit|Noun": Zg
-}, Tt = (e, t) => {
+}, um = lm, rt = {
+  "Actor|Verb": Sg,
+  "Adj|Gerund": Mg,
+  "Adj|Noun": Jg,
+  "Adj|Past": _g,
+  "Adj|Present": Ug,
+  "Noun|Verb": Xg,
+  "Noun|Gerund": Qg,
+  "Person|Noun": tm,
+  "Person|Date": Zg,
+  "Person|Verb": rm,
+  "Person|Place": am,
+  "Person|Adj": sm,
+  "Unit|Noun": um
+}, Ot = (e, t) => {
   let n = Object.keys(e).reduce((r, o) => (r[o] = e[o] === "Infinitive" ? "PresentTense" : "Plural", r), {});
   return Object.assign(n, t);
 };
-Ye["Plural|Verb"] = {
-  beforeWords: Tt(Ye["Noun|Verb"].beforeWords, {
+rt["Plural|Verb"] = {
+  beforeWords: Ot(rt["Noun|Verb"].beforeWords, {
     had: "Plural",
     have: "Plural"
   }),
-  afterWords: Tt(Ye["Noun|Verb"].afterWords, {
+  afterWords: Ot(rt["Noun|Verb"].afterWords, {
     his: "PresentTense",
     her: "PresentTense",
     its: "PresentTense",
@@ -4578,128 +4625,128 @@ Ye["Plural|Verb"] = {
     is: "PresentTense",
     by: "PresentTense"
   }),
-  beforeTags: Tt(Ye["Noun|Verb"].beforeTags, {
+  beforeTags: Ot(rt["Noun|Verb"].beforeTags, {
     Conjunction: "PresentTense",
     Noun: void 0,
     ProperNoun: "PresentTense"
   }),
-  afterTags: Tt(Ye["Noun|Verb"].afterTags, {
+  afterTags: Ot(rt["Noun|Verb"].afterTags, {
     Gerund: "Plural",
     Noun: "PresentTense",
     Value: "PresentTense"
   })
 };
-const em = Ye, A = "Adjective", L = "Infinitive", Fe = "PresentTense", b = "Singular", B = "PastTense", Je = "Adverb", R = "Plural", E = "Actor", Ct = "Verb", ee = "Noun", ae = "LastName", ro = "Modal", tm = "Place", gn = "Participle", nm = [
+const cm = rt, k = "Adjective", M = "Infinitive", Be = "PresentTense", b = "Singular", z = "PastTense", Qe = "Adverb", Y = "Plural", T = "Actor", Ft = "Verb", ne = "Noun", se = "LastName", fo = "Modal", hm = "Place", vn = "Participle", dm = [
   null,
   null,
   {
     ea: b,
-    ia: ee,
-    ic: A,
-    ly: Je,
-    "'n": Ct,
-    "'t": Ct
+    ia: ne,
+    ic: k,
+    ly: Qe,
+    "'n": Ft,
+    "'t": Ft
   },
   {
-    oed: B,
-    ued: B,
-    xed: B,
-    " so": Je,
-    "'ll": ro,
+    oed: z,
+    ued: z,
+    xed: z,
+    " so": Qe,
+    "'ll": fo,
     "'re": "Copula",
-    azy: A,
-    eer: ee,
-    end: Ct,
-    ped: B,
-    ffy: A,
-    ify: L,
+    azy: k,
+    eer: ne,
+    end: Ft,
+    ped: z,
+    ffy: k,
+    ify: M,
     ing: "Gerund",
-    ize: L,
-    ibe: L,
-    lar: A,
-    mum: A,
-    nes: Fe,
-    nny: A,
-    ous: A,
-    que: A,
-    ger: ee,
-    ber: ee,
+    ize: M,
+    ibe: M,
+    lar: k,
+    mum: k,
+    nes: Be,
+    nny: k,
+    ous: k,
+    que: k,
+    ger: ne,
+    ber: ne,
     rol: b,
     sis: b,
     ogy: b,
     oid: b,
     ian: b,
-    zes: Fe,
-    eld: B,
-    ken: gn,
-    ven: gn,
-    ten: gn,
-    ect: L,
-    ict: L,
-    ign: L,
-    ful: A,
-    bal: A
+    zes: Be,
+    eld: z,
+    ken: vn,
+    ven: vn,
+    ten: vn,
+    ect: M,
+    ict: M,
+    ign: M,
+    ful: k,
+    bal: k
   },
   {
-    amed: B,
-    aped: B,
-    ched: B,
-    lked: B,
-    rked: B,
-    reed: B,
-    nded: B,
-    mned: A,
-    cted: B,
-    dged: B,
+    amed: z,
+    aped: z,
+    ched: z,
+    lked: z,
+    rked: z,
+    reed: z,
+    nded: z,
+    mned: k,
+    cted: z,
+    dged: z,
     ield: b,
-    akis: ae,
-    cede: L,
-    chuk: ae,
-    czyk: ae,
-    ects: Fe,
-    ends: Ct,
-    enko: ae,
+    akis: se,
+    cede: M,
+    chuk: se,
+    czyk: se,
+    ects: Be,
+    ends: Ft,
+    enko: se,
     ette: b,
     iary: b,
     wner: b,
-    fies: Fe,
-    fore: Je,
-    gate: L,
-    gone: A,
-    ices: R,
-    ints: R,
-    ruct: L,
-    ines: R,
-    ions: R,
-    ners: R,
-    pers: R,
-    lers: R,
-    less: A,
-    llen: A,
-    made: A,
-    nsen: ae,
-    oses: Fe,
-    ould: ro,
-    some: A,
-    sson: ae,
-    ians: R,
+    fies: Be,
+    fore: Qe,
+    gate: M,
+    gone: k,
+    ices: Y,
+    ints: Y,
+    ruct: M,
+    ines: Y,
+    ions: Y,
+    ners: Y,
+    pers: Y,
+    lers: Y,
+    less: k,
+    llen: k,
+    made: k,
+    nsen: se,
+    oses: Be,
+    ould: fo,
+    some: k,
+    sson: se,
+    ians: Y,
     tion: b,
-    tage: ee,
+    tage: ne,
     ique: b,
-    tive: A,
-    tors: ee,
+    tive: k,
+    tors: ne,
     vice: b,
     lier: b,
     fier: b,
-    wned: B,
+    wned: z,
     gent: b,
-    tist: E,
-    pist: E,
-    rist: E,
-    mist: E,
-    yist: E,
-    vist: E,
-    ists: E,
+    tist: T,
+    pist: T,
+    rist: T,
+    mist: T,
+    yist: T,
+    vist: T,
+    ists: T,
     lite: b,
     site: b,
     rite: b,
@@ -4709,317 +4756,317 @@ const em = Ye, A = "Adjective", L = "Infinitive", Fe = "PresentTense", b = "Sing
     date: b,
     ndal: b,
     vent: b,
-    uist: E,
-    gist: E,
+    uist: T,
+    gist: T,
     note: b,
     cide: b,
     ence: b,
-    wide: A,
-    vide: L,
-    ract: L,
-    duce: L,
-    pose: L,
-    eive: L,
-    lyze: L,
-    lyse: L,
-    iant: A,
-    nary: A,
-    erer: E
+    wide: k,
+    vide: M,
+    ract: M,
+    duce: M,
+    pose: M,
+    eive: M,
+    lyze: M,
+    lyse: M,
+    iant: k,
+    nary: k,
+    erer: T
   },
   {
-    elist: E,
+    elist: T,
     holic: b,
     phite: b,
-    tized: B,
-    urned: B,
-    eased: B,
-    ances: R,
-    bound: A,
-    ettes: R,
-    fully: Je,
-    ishes: Fe,
-    ities: R,
-    marek: ae,
-    nssen: ae,
-    ology: ee,
+    tized: z,
+    urned: z,
+    eased: z,
+    ances: Y,
+    bound: k,
+    ettes: Y,
+    fully: Qe,
+    ishes: Be,
+    ities: Y,
+    marek: se,
+    nssen: se,
+    ology: ne,
     osome: b,
     tment: b,
-    ports: R,
-    rough: A,
-    tches: Fe,
+    ports: Y,
+    rough: k,
+    tches: Be,
     tieth: "Ordinal",
-    tures: R,
-    wards: Je,
-    where: Je,
-    archy: ee,
-    pathy: ee,
-    opoly: ee,
-    embly: ee,
-    phate: ee,
+    tures: Y,
+    wards: Qe,
+    where: Qe,
+    archy: ne,
+    pathy: ne,
+    opoly: ne,
+    embly: ne,
+    phate: ne,
     ndent: b,
     scent: b,
-    onist: E,
-    anist: E,
-    alist: E,
-    olist: E,
-    icist: E,
-    ounce: L,
-    iable: A,
-    borne: A,
-    gnant: A,
-    inant: A,
-    igent: A,
-    atory: A,
+    onist: T,
+    anist: T,
+    alist: T,
+    olist: T,
+    icist: T,
+    ounce: M,
+    iable: k,
+    borne: k,
+    gnant: k,
+    inant: k,
+    igent: k,
+    atory: k,
     rient: b,
     dient: b,
-    maker: E
+    maker: T
   },
   {
-    auskas: ae,
+    auskas: se,
     parent: b,
     cedent: b,
     ionary: b,
     cklist: b,
-    keeper: E,
-    logist: E,
+    keeper: T,
+    logist: T,
     teenth: "Value",
-    worker: E,
-    master: E,
-    writer: E
+    worker: T,
+    master: T,
+    writer: T
   },
   {
-    logists: E,
-    opoulos: ae,
-    borough: tm,
-    sdottir: ae
+    logists: T,
+    opoulos: se,
+    borough: hm,
+    sdottir: se
   }
-], Q = "Adjective", I = "Noun", st = "Verb", rm = [
+], X = "Adjective", A = "Noun", ft = "Verb", fm = [
   null,
   null,
   {},
   {
-    neo: I,
-    bio: I,
-    "de-": st,
-    "re-": st,
-    "un-": st
+    neo: A,
+    bio: A,
+    "de-": ft,
+    "re-": ft,
+    "un-": ft
   },
   {
-    anti: I,
-    auto: I,
-    faux: Q,
-    hexa: I,
-    kilo: I,
-    mono: I,
-    nano: I,
-    octa: I,
-    poly: I,
-    semi: Q,
-    tele: I,
-    "pro-": Q,
-    "mis-": st,
-    "dis-": st,
-    "pre-": Q
+    anti: A,
+    auto: A,
+    faux: X,
+    hexa: A,
+    kilo: A,
+    mono: A,
+    nano: A,
+    octa: A,
+    poly: A,
+    semi: X,
+    tele: A,
+    "pro-": X,
+    "mis-": ft,
+    "dis-": ft,
+    "pre-": X
   },
   {
-    anglo: I,
-    centi: I,
-    ethno: I,
-    ferro: I,
-    grand: I,
-    hepta: I,
-    hydro: I,
-    intro: I,
-    macro: I,
-    micro: I,
-    milli: I,
-    nitro: I,
-    penta: I,
-    quasi: Q,
-    radio: I,
-    tetra: I,
-    "omni-": Q,
-    "post-": Q
+    anglo: A,
+    centi: A,
+    ethno: A,
+    ferro: A,
+    grand: A,
+    hepta: A,
+    hydro: A,
+    intro: A,
+    macro: A,
+    micro: A,
+    milli: A,
+    nitro: A,
+    penta: A,
+    quasi: X,
+    radio: A,
+    tetra: A,
+    "omni-": X,
+    "post-": X
   },
   {
-    pseudo: Q,
-    "extra-": Q,
-    "hyper-": Q,
-    "inter-": Q,
-    "intra-": Q,
-    "deca-": Q
+    pseudo: X,
+    "extra-": X,
+    "hyper-": X,
+    "inter-": X,
+    "intra-": X,
+    "deca-": X
   },
   {
-    electro: I
+    electro: A
   }
-], N = "Adjective", Dt = "Infinitive", Ot = "PresentTense", ge = "Singular", J = "PastTense", oo = "Adverb", me = "Expression", ao = "Actor", io = "Verb", so = "Noun", Ft = "LastName", om = {
+], j = "Adjective", Vt = "Infinitive", Gt = "PresentTense", be = "Singular", K = "PastTense", po = "Adverb", ve = "Expression", go = "Actor", mo = "Verb", yo = "Noun", Bt = "LastName", pm = {
   a: [
-    [/.[aeiou]na$/, so, "tuna"],
-    [/.[oau][wvl]ska$/, Ft],
-    [/.[^aeiou]ica$/, ge, "harmonica"],
-    [/^([hyj]a+)+$/, me, "haha"]
+    [/.[aeiou]na$/, yo, "tuna"],
+    [/.[oau][wvl]ska$/, Bt],
+    [/.[^aeiou]ica$/, be, "harmonica"],
+    [/^([hyj]a+)+$/, ve, "haha"]
   ],
-  c: [[/.[^aeiou]ic$/, N]],
+  c: [[/.[^aeiou]ic$/, j]],
   d: [
-    [/[aeiou](pp|ll|ss|ff|gg|tt|rr|bb|nn|mm)ed$/, J, "popped"],
-    [/.[aeo]{2}[bdgmnprvz]ed$/, J, "rammed"],
-    [/.[aeiou][sg]hed$/, J, "gushed"],
-    [/.[aeiou]red$/, J, "hired"],
-    [/.[aeiou]r?ried$/, J, "hurried"],
-    [/[^aeiou]ard$/, ge, "steward"],
-    [/[aeiou][^aeiou]id$/, N, ""],
-    [/.[vrl]id$/, N, "livid"],
-    [/..led$/, J, "hurled"],
-    [/.[iao]sed$/, J, ""],
-    [/[aeiou]n?[cs]ed$/, J, ""],
-    [/[aeiou][rl]?[mnf]ed$/, J, ""],
-    [/[aeiou][ns]?c?ked$/, J, "bunked"],
-    [/[aeiou]gned$/, J],
-    [/[aeiou][nl]?ged$/, J],
-    [/.[tdbwxyz]ed$/, J],
-    [/[^aeiou][aeiou][tvx]ed$/, J],
-    [/.[cdflmnprstv]ied$/, J, "emptied"]
+    [/[aeiou](pp|ll|ss|ff|gg|tt|rr|bb|nn|mm)ed$/, K, "popped"],
+    [/.[aeo]{2}[bdgmnprvz]ed$/, K, "rammed"],
+    [/.[aeiou][sg]hed$/, K, "gushed"],
+    [/.[aeiou]red$/, K, "hired"],
+    [/.[aeiou]r?ried$/, K, "hurried"],
+    [/[^aeiou]ard$/, be, "steward"],
+    [/[aeiou][^aeiou]id$/, j, ""],
+    [/.[vrl]id$/, j, "livid"],
+    [/..led$/, K, "hurled"],
+    [/.[iao]sed$/, K, ""],
+    [/[aeiou]n?[cs]ed$/, K, ""],
+    [/[aeiou][rl]?[mnf]ed$/, K, ""],
+    [/[aeiou][ns]?c?ked$/, K, "bunked"],
+    [/[aeiou]gned$/, K],
+    [/[aeiou][nl]?ged$/, K],
+    [/.[tdbwxyz]ed$/, K],
+    [/[^aeiou][aeiou][tvx]ed$/, K],
+    [/.[cdflmnprstv]ied$/, K, "emptied"]
   ],
   e: [
-    [/.[lnr]ize$/, Dt, "antagonize"],
-    [/.[^aeiou]ise$/, Dt, "antagonise"],
-    [/.[aeiou]te$/, Dt, "bite"],
-    [/.[^aeiou][ai]ble$/, N, "fixable"],
-    [/.[^aeiou]eable$/, N, "maleable"],
-    [/.[ts]ive$/, N, "festive"],
-    [/[a-z]-like$/, N, "woman-like"]
+    [/.[lnr]ize$/, Vt, "antagonize"],
+    [/.[^aeiou]ise$/, Vt, "antagonise"],
+    [/.[aeiou]te$/, Vt, "bite"],
+    [/.[^aeiou][ai]ble$/, j, "fixable"],
+    [/.[^aeiou]eable$/, j, "maleable"],
+    [/.[ts]ive$/, j, "festive"],
+    [/[a-z]-like$/, j, "woman-like"]
   ],
   h: [
-    [/.[^aeiouf]ish$/, N, "cornish"],
-    [/.v[iy]ch$/, Ft, "..ovich"],
-    [/^ug?h+$/, me, "ughh"],
-    [/^uh[ -]?oh$/, me, "uhoh"],
-    [/[a-z]-ish$/, N, "cartoon-ish"]
+    [/.[^aeiouf]ish$/, j, "cornish"],
+    [/.v[iy]ch$/, Bt, "..ovich"],
+    [/^ug?h+$/, ve, "ughh"],
+    [/^uh[ -]?oh$/, ve, "uhoh"],
+    [/[a-z]-ish$/, j, "cartoon-ish"]
   ],
-  i: [[/.[oau][wvl]ski$/, Ft, "polish-male"]],
+  i: [[/.[oau][wvl]ski$/, Bt, "polish-male"]],
   k: [
-    [/^(k){2}$/, me, "kkkk"]
+    [/^(k){2}$/, ve, "kkkk"]
   ],
   l: [
-    [/.[gl]ial$/, N, "familial"],
-    [/.[^aeiou]ful$/, N, "fitful"],
-    [/.[nrtumcd]al$/, N, "natal"],
-    [/.[^aeiou][ei]al$/, N, "familial"]
+    [/.[gl]ial$/, j, "familial"],
+    [/.[^aeiou]ful$/, j, "fitful"],
+    [/.[nrtumcd]al$/, j, "natal"],
+    [/.[^aeiou][ei]al$/, j, "familial"]
   ],
   m: [
-    [/.[^aeiou]ium$/, ge, "magnesium"],
-    [/[^aeiou]ism$/, ge, "schism"],
-    [/^[hu]m+$/, me, "hmm"],
+    [/.[^aeiou]ium$/, be, "magnesium"],
+    [/[^aeiou]ism$/, be, "schism"],
+    [/^[hu]m+$/, ve, "hmm"],
     [/^\d+ ?[ap]m$/, "Date", "3am"]
   ],
   n: [
-    [/.[lsrnpb]ian$/, N, "republican"],
-    [/[^aeiou]ician$/, ao, "musician"],
+    [/.[lsrnpb]ian$/, j, "republican"],
+    [/[^aeiou]ician$/, go, "musician"],
     [/[aeiou][ktrp]in'$/, "Gerund", "cookin'"]
   ],
   o: [
-    [/^no+$/, me, "noooo"],
-    [/^(yo)+$/, me, "yoo"],
-    [/^wo{2,}[pt]?$/, me, "woop"]
+    [/^no+$/, ve, "noooo"],
+    [/^(yo)+$/, ve, "yoo"],
+    [/^wo{2,}[pt]?$/, ve, "woop"]
   ],
   r: [
     [/.[bdfklmst]ler$/, "Noun"],
-    [/[aeiou][pns]er$/, ge],
-    [/[^i]fer$/, Dt],
-    [/.[^aeiou][ao]pher$/, ao],
+    [/[aeiou][pns]er$/, be],
+    [/[^i]fer$/, Vt],
+    [/.[^aeiou][ao]pher$/, go],
     [/.[lk]er$/, "Noun"],
     [/.ier$/, "Comparative"]
   ],
   t: [
     [/.[di]est$/, "Superlative"],
-    [/.[icldtgrv]ent$/, N],
-    [/[aeiou].*ist$/, N],
-    [/^[a-z]et$/, io]
+    [/.[icldtgrv]ent$/, j],
+    [/[aeiou].*ist$/, j],
+    [/^[a-z]et$/, mo]
   ],
   s: [
-    [/.[^aeiou]ises$/, Ot],
-    [/.[rln]ates$/, Ot],
-    [/.[^z]ens$/, io],
-    [/.[lstrn]us$/, ge],
-    [/.[aeiou]sks$/, Ot],
-    [/.[aeiou]kes$/, Ot],
-    [/[aeiou][^aeiou]is$/, ge],
-    [/[a-z]'s$/, so],
-    [/^yes+$/, me]
+    [/.[^aeiou]ises$/, Gt],
+    [/.[rln]ates$/, Gt],
+    [/.[^z]ens$/, mo],
+    [/.[lstrn]us$/, be],
+    [/.[aeiou]sks$/, Gt],
+    [/.[aeiou]kes$/, Gt],
+    [/[aeiou][^aeiou]is$/, be],
+    [/[a-z]'s$/, yo],
+    [/^yes+$/, ve]
   ],
   v: [
-    [/.[^aeiou][ai][kln]ov$/, Ft]
+    [/.[^aeiou][ai][kln]ov$/, Bt]
   ],
   y: [
-    [/.[cts]hy$/, N],
-    [/.[st]ty$/, N],
-    [/.[tnl]ary$/, N],
-    [/.[oe]ry$/, ge],
-    [/[rdntkbhs]ly$/, oo],
-    [/.(gg|bb|zz)ly$/, N],
-    [/...lly$/, oo],
-    [/.[gk]y$/, N],
-    [/[bszmp]{2}y$/, N],
-    [/.[ai]my$/, N],
-    [/[ea]{2}zy$/, N],
-    [/.[^aeiou]ity$/, ge]
+    [/.[cts]hy$/, j],
+    [/.[st]ty$/, j],
+    [/.[tnl]ary$/, j],
+    [/.[oe]ry$/, be],
+    [/[rdntkbhs]ly$/, po],
+    [/.(gg|bb|zz)ly$/, j],
+    [/...lly$/, po],
+    [/.[gk]y$/, j],
+    [/[bszmp]{2}y$/, j],
+    [/.[ai]my$/, j],
+    [/[ea]{2}zy$/, j],
+    [/.[^aeiou]ity$/, be]
   ]
-}, M = "Verb", $ = "Noun", am = {
+}, H = "Verb", I = "Noun", gm = {
   leftTags: [
-    ["Adjective", $],
-    ["Possessive", $],
-    ["Determiner", $],
-    ["Adverb", M],
-    ["Pronoun", M],
-    ["Value", $],
-    ["Ordinal", $],
-    ["Modal", M],
-    ["Superlative", $],
-    ["Demonym", $],
+    ["Adjective", I],
+    ["Possessive", I],
+    ["Determiner", I],
+    ["Adverb", H],
+    ["Pronoun", H],
+    ["Value", I],
+    ["Ordinal", I],
+    ["Modal", H],
+    ["Superlative", I],
+    ["Demonym", I],
     ["Honorific", "Person"]
   ],
   leftWords: [
-    ["i", M],
-    ["first", $],
-    ["it", M],
-    ["there", M],
-    ["not", M],
-    ["because", $],
-    ["if", $],
-    ["but", $],
-    ["who", M],
-    ["this", $],
-    ["his", $],
-    ["when", $],
-    ["you", M],
+    ["i", H],
+    ["first", I],
+    ["it", H],
+    ["there", H],
+    ["not", H],
+    ["because", I],
+    ["if", I],
+    ["but", I],
+    ["who", H],
+    ["this", I],
+    ["his", I],
+    ["when", I],
+    ["you", H],
     ["very", "Adjective"],
-    ["old", $],
-    ["never", M],
-    ["before", $],
-    ["a", $],
-    ["the", $],
-    ["been", M]
+    ["old", I],
+    ["never", H],
+    ["before", I],
+    ["a", I],
+    ["the", I],
+    ["been", H]
   ],
   rightTags: [
-    ["Copula", $],
-    ["PastTense", $],
-    ["Conjunction", $],
-    ["Modal", $]
+    ["Copula", I],
+    ["PastTense", I],
+    ["Conjunction", I],
+    ["Modal", I]
   ],
   rightWords: [
-    ["there", M],
-    ["me", M],
+    ["there", H],
+    ["me", H],
     ["man", "Adjective"],
-    ["him", M],
-    ["it", M],
-    ["were", $],
-    ["took", $],
-    ["himself", M],
-    ["went", $],
-    ["who", $],
+    ["him", H],
+    ["it", H],
+    ["were", I],
+    ["took", I],
+    ["himself", H],
+    ["went", I],
+    ["who", I],
     ["jr", "Person"]
   ]
-}, nt = {
+}, lt = {
   Comparative: {
     rules: "ig|2ger,ng|2er,hin|3ner,n|1er,ot|2ter,lat|3ter,t|1er,ray|3er,y|ier,ross|4er,im|2mer,m|1er,f|1er,b|1er,er|2,r|1er,p|1er,h|1er,w|1er,k|1er,l|1er,d|1er,e|1r",
     exceptions: "good|better,bad|worse,wet|3ter,lay|3er,neat|4ter,fat|3ter,mad|3der,sad|3der,wide|4r,late|4r,safe|4r,fine|4r,dire|4r,fake|4r,pale|4r,rare|4r,rude|4r,sore|4r",
@@ -5050,20 +5097,20 @@ const em = Ye, A = "Adjective", L = "Infinitive", Fe = "PresentTense", b = "Sing
     exceptions: "good|best,bad|worst,wet|3test,far|1urthest,gay|3est,neat|4test,shy|3est,fat|3test,late|4st,wide|4st,fine|4st,severe|6st,fake|4st,pale|4st,rare|4st,rude|4st,sore|4st,dire|4st",
     rev: "east|4,argest|4,iggest|2,implest|5,afest|3,uthwest|7,hinnest|3,ncerest|5,urthest|ar,ravest|4,utest|3,eriest|4,rossest|4,dsomest|5,ugest|3,riciest|3ey,emotest|5,quarest|5,rangest|5,ipest|3,urest|3,cest|2,ermost|2,fest|1,best|1,amest|3,itest|3,ngest|2,uest|2,yest|1,tlest|3,mest|1,blest|3,sest|2,pest|1,hest|1,ttest|1,west|1,rest|1,kest|1,nest|1,lest|1,test|1,dest|1,iest|y"
   }
-}, lo = /^.([0-9]+)/, im = function(e, t) {
-  let n = t.exceptions[e], r = n.match(lo);
+}, bo = /^.([0-9]+)/, mm = function(e, t) {
+  let n = t.exceptions[e], r = n.match(bo);
   if (r === null)
     return t.exceptions[e];
   let o = Number(r[1]) || 0;
-  return e.substr(0, o) + n.replace(lo, "");
-}, sm = function(e, t = {}) {
+  return e.substr(0, o) + n.replace(bo, "");
+}, ym = function(e, t = {}) {
   let n = e[e.length - 1], r = t[n] || [];
   return t[""] && (r = r.concat(t[""])), r;
-}, lm = function(e, t, n) {
+}, bm = function(e, t, n) {
   if (t.exceptions.hasOwnProperty(e))
-    return n && console.log("exception, ", e, t.exceptions[e]), im(e, t);
+    return n && console.log("exception, ", e, t.exceptions[e]), mm(e, t);
   let r = t.rules;
-  t.reversed && (r = t.rev), r = sm(e, r);
+  t.reversed && (r = t.rev), r = ym(e, r);
   for (let o = 0; o < r.length; o += 1) {
     let a = r[o][0];
     if (e.endsWith(a)) {
@@ -5073,51 +5120,51 @@ const em = Ye, A = "Adjective", L = "Infinitive", Fe = "PresentTense", b = "Sing
     }
   }
   return n && console.log(" x - " + e), e;
-}, re = lm, uo = function(e) {
+}, ae = bm, vo = function(e) {
   let t = {};
   return e.forEach((n) => {
     let r = n[0] || "", o = r[r.length - 1] || "";
     t[o] = t[o] || [], t[o].push(n);
   }), t;
-}, co = /^([0-9]+)/, um = function(e = "", t = "") {
+}, wo = /^([0-9]+)/, vm = function(e = "", t = "") {
   t = String(t);
-  let n = t.match(co);
+  let n = t.match(wo);
   if (n === null)
     return [e, t];
-  let r = Number(n[1]) || 0, a = e.substring(0, r) + t.replace(co, "");
+  let r = Number(n[1]) || 0, a = e.substring(0, r) + t.replace(wo, "");
   return [e, a];
-}, mn = function(e) {
+}, wn = function(e) {
   const t = /\|/;
   return e.split(/,/).map((n) => {
     let r = n.split(t);
-    return um(r[0], r[1]);
+    return vm(r[0], r[1]);
   });
-}, cm = function(e = {}) {
-  return e = Object.assign({}, e), e.rules = mn(e.rules), e.rules = uo(e.rules), e.rev && (e.rev = mn(e.rev), e.rev = uo(e.rev)), e.exceptions = mn(e.exceptions), e.exceptions = e.exceptions.reduce((t, n) => (t[n[0]] = n[1], t), {}), e;
-}, rt = cm, hm = function(e) {
+}, wm = function(e = {}) {
+  return e = Object.assign({}, e), e.rules = wn(e.rules), e.rules = vo(e.rules), e.rev && (e.rev = wn(e.rev), e.rev = vo(e.rev)), e.exceptions = wn(e.exceptions), e.exceptions = e.exceptions.reduce((t, n) => (t[n[0]] = n[1], t), {}), e;
+}, ut = wm, Pm = function(e) {
   return Object.entries(e).reduce((t, n) => (t[n[1]] = n[0], t), {});
-}, dm = function(e) {
+}, km = function(e) {
   let { rules: t, exceptions: n, rev: r } = e;
-  return n = hm(n), {
+  return n = Pm(n), {
     reversed: !Boolean(e.reversed),
     rules: t,
     exceptions: n,
     rev: r
   };
-}, ot = dm, ui = rt(nt.PastTense), ci = rt(nt.PresentTense), hi = rt(nt.Gerund), di = rt(nt.Participle), fm = ot(ui), pm = ot(ci), gm = ot(hi), mm = ot(di), fi = rt(nt.Comparative), pi = rt(nt.Superlative), ym = ot(fi), bm = ot(pi), gi = {
-  fromPast: ui,
-  fromPresent: ci,
-  fromGerund: hi,
-  fromParticiple: di,
-  toPast: fm,
-  toPresent: pm,
-  toGerund: gm,
-  toParticiple: mm,
-  toComparative: fi,
-  toSuperlative: pi,
-  fromComparative: ym,
-  fromSuperlative: bm
-}, vm = [
+}, ct = km, bi = ut(lt.PastTense), vi = ut(lt.PresentTense), wi = ut(lt.Gerund), Pi = ut(lt.Participle), Am = ct(bi), $m = ct(vi), Im = ct(wi), xm = ct(Pi), ki = ut(lt.Comparative), Ai = ut(lt.Superlative), Nm = ct(ki), jm = ct(Ai), $i = {
+  fromPast: bi,
+  fromPresent: vi,
+  fromGerund: wi,
+  fromParticiple: Pi,
+  toPast: Am,
+  toPresent: $m,
+  toGerund: Im,
+  toParticiple: xm,
+  toComparative: ki,
+  toSuperlative: Ai,
+  fromComparative: Nm,
+  fromSuperlative: jm
+}, Em = [
   [/^[\w.]+@[\w.]+\.[a-z]{2,3}$/, "Email"],
   [/^(https?:\/\/|www\.)+\w+\.[a-z]{2,3}/, "Url", "http.."],
   [/^[a-z0-9./].+\.(com|net|gov|org|ly|edu|info|biz|dev|ru|jp|de|in|uk|br|io|ai)/, "Url", ".com"],
@@ -5131,14 +5178,14 @@ const em = Ye, A = "Adjective", L = "Infinitive", Fe = "PresentTense", b = "Sing
   [/^(un|de|re)\\-[a-z\u00C0-\u00FF]{2}/, "Verb", "un-vite"],
   [/^(m|k|cm|km)\/(s|h|hr)$/, "Unit", "5 k/m"],
   [/^(ug|ng|mg)\/(l|m3|ft3)$/, "Unit", "ug/L"]
-], wm = [
+], Tm = [
   [/^#[\p{Number}_]*\p{Letter}/u, "HashTag"],
   [/^@\w{2,}$/, "AtMention"],
   [/^([A-Z]\.){2}[A-Z]?/i, ["Acronym", "Noun"], "F.B.I"],
   [/.{3}[lkmnp]in['‘’‛‵′`´]$/, "Gerund", "chillin'"],
   [/.{4}s['‘’‛‵′`´]$/, "Possessive", "flanders'"],
   [/^[\p{Emoji_Presentation}\p{Extended_Pictographic}]/u, "Emoji", "emoji-class"]
-], Pm = [
+], Cm = [
   [/^@1?[0-9](am|pm)$/i, "Time", "3pm"],
   [/^@1?[0-9]:[0-9]{2}(am|pm)?$/i, "Time", "3:30pm"],
   [/^'[0-9]{2}$/, "Year"],
@@ -5174,7 +5221,7 @@ const em = Ye, A = "Adjective", L = "Infinitive", Fe = "PresentTense", b = "Sing
   [/^[0-9.]{1,3}[a-z]{0,2}[-–—][0-9]{1,3}[a-z]{0,2}$/, ["Value", "NumberRange"], "3-4"],
   [/^[0-9]{1,2}(:[0-9][0-9])?(am|pm)? ?[-–—] ?[0-9]{1,2}(:[0-9][0-9])?(am|pm)$/, ["Time", "NumberRange"], "3-4pm"],
   [/^[0-9.]+([a-z°]{1,4})$/, "NumericValue", "9km"]
-], km = [
+], Dm = [
   "academy",
   "administration",
   "agence",
@@ -5357,7 +5404,7 @@ const em = Ye, A = "Adjective", L = "Infinitive", Fe = "PresentTense", b = "Sing
   "university",
   "utilities",
   "workers"
-].reduce((e, t) => (e[t] = !0, e), {}), Vt = [
+].reduce((e, t) => (e[t] = !0, e), {}), zt = [
   [/([^v])ies$/i, "$1y"],
   [/(ise)s$/i, "$1"],
   [/(kn|[^o]l|w)ives$/i, "$1ife"],
@@ -5386,24 +5433,24 @@ const em = Ye, A = "Adjective", L = "Infinitive", Fe = "PresentTense", b = "Sing
   [/(ss)$/i, "$1"],
   [/(ic)s$/i, "$1"],
   [/s$/i, ""]
-], Am = function(e) {
+], Om = function(e) {
   return Object.keys(e).reduce((t, n) => (t[e[n]] = n, t), {});
-}, Im = function(e, t) {
+}, Fm = function(e, t) {
   const { irregularPlurals: n } = t.two;
-  let r = Am(n);
+  let r = Om(n);
   if (r.hasOwnProperty(e))
     return r[e];
-  for (let o = 0; o < Vt.length; o++)
-    if (Vt[o][0].test(e) === !0)
-      return e = e.replace(Vt[o][0], Vt[o][1]), e;
+  for (let o = 0; o < zt.length; o++)
+    if (zt[o][0].test(e) === !0)
+      return e = e.replace(zt[o][0], zt[o][1]), e;
   return e;
-}, mi = Im, $m = function(e, t) {
-  let n = [e], r = on(e, t);
+}, Ii = Fm, Vm = function(e, t) {
+  let n = [e], r = un(e, t);
   r !== e && n.push(r);
-  let o = mi(e, t);
+  let o = Ii(e, t);
   return o !== e && n.push(o), n;
-}, xm = { toPlural: on, toSingular: mi, all: $m };
-let _t = {
+}, Gm = { toPlural: un, toSingular: Ii, all: Vm };
+let Ut = {
   Gerund: ["ing"],
   Actor: ["erer"],
   Infinitive: [
@@ -5488,14 +5535,14 @@ let _t = {
   ],
   Participle: ["ken", "wn"]
 };
-_t = Object.keys(_t).reduce((e, t) => (_t[t].forEach((n) => e[n] = t), e), {});
-const Gt = _t, Nm = function(e) {
+Ut = Object.keys(Ut).reduce((e, t) => (Ut[t].forEach((n) => e[n] = t), e), {});
+const St = Ut, Bm = function(e) {
   let t = e.substring(e.length - 3);
-  if (Gt.hasOwnProperty(t) === !0)
-    return Gt[t];
+  if (St.hasOwnProperty(t) === !0)
+    return St[t];
   let n = e.substring(e.length - 2);
-  return Gt.hasOwnProperty(n) === !0 ? Gt[n] : e.substring(e.length - 1) === "s" ? "PresentTense" : null;
-}, yi = Nm, jm = function(e, t) {
+  return St.hasOwnProperty(n) === !0 ? St[n] : e.substring(e.length - 1) === "s" ? "PresentTense" : null;
+}, xi = Bm, zm = function(e, t) {
   let n = "", r = {};
   t.one && t.one.prefixes && (r = t.one.prefixes);
   let [o, a] = e.split(/ /);
@@ -5504,7 +5551,7 @@ const Gt = _t, Nm = function(e) {
     verb: o,
     particle: a
   };
-}, ho = {
+}, Po = {
   are: "be",
   were: "be",
   been: "be",
@@ -5513,23 +5560,23 @@ const Gt = _t, Nm = function(e) {
   was: "be",
   be: "be",
   being: "be"
-}, Em = function(e, t, n) {
+}, Sm = function(e, t, n) {
   const { fromPast: r, fromPresent: o, fromGerund: a, fromParticiple: i } = t.two.models;
-  let { prefix: s, verb: l, particle: u } = jm(e, t), c = "";
-  if (n || (n = yi(e)), ho.hasOwnProperty(e))
-    c = ho[e];
+  let { prefix: s, verb: l, particle: u } = zm(e, t), c = "";
+  if (n || (n = xi(e)), Po.hasOwnProperty(e))
+    c = Po[e];
   else if (n === "Participle")
-    c = re(l, i);
+    c = ae(l, i);
   else if (n === "PastTense")
-    c = re(l, r);
+    c = ae(l, r);
   else if (n === "PresentTense")
-    c = re(l, o);
+    c = ae(l, o);
   else if (n === "Gerund")
-    c = re(l, a);
+    c = ae(l, a);
   else
     return e;
   return u && (c += " " + u), s && (c = s + " " + c), c;
-}, _n = Em, Tm = (e) => / /.test(e) ? e.split(/ /) : [e, ""], Cm = function(e, t) {
+}, Rn = Sm, Lm = (e) => / /.test(e) ? e.split(/ /) : [e, ""], Mm = function(e, t) {
   const { toPast: n, toPresent: r, toGerund: o, toParticiple: a } = t.two.models;
   if (e === "be")
     return {
@@ -5538,36 +5585,36 @@ const Gt = _t, Nm = function(e) {
       PastTense: "was",
       PresentTense: "is"
     };
-  let [i, s] = Tm(e), l = {
+  let [i, s] = Lm(e), l = {
     Infinitive: e,
-    PastTense: re(i, n),
-    PresentTense: re(i, r),
-    Gerund: re(i, o),
+    PastTense: ae(i, n),
+    PresentTense: ae(i, r),
+    Gerund: ae(i, o),
     FutureTense: "will " + e
-  }, u = re(i, a);
+  }, u = ae(i, a);
   return u !== e && u !== l.PastTense && (l.Participle = u), s && Object.keys(l).forEach((c) => {
     l[c] += " " + s;
   }), l;
-}, sr = Cm, Dm = function(e, t) {
-  let n = sr(e, t);
+}, fr = Mm, Wm = function(e, t) {
+  let n = fr(e, t);
   return delete n.FutureTense, Object.values(n).filter((r) => r);
-}, Om = {
-  toInfinitive: _n,
-  conjugate: sr,
-  all: Dm
-}, lr = function(e, t) {
+}, Hm = {
+  toInfinitive: Rn,
+  conjugate: fr,
+  all: Wm
+}, pr = function(e, t) {
   const n = t.two.models.toSuperlative;
-  return re(e, n);
-}, ur = function(e, t) {
+  return ae(e, n);
+}, gr = function(e, t) {
   const n = t.two.models.toComparative;
-  return re(e, n);
-}, Fm = function(e, t) {
+  return ae(e, n);
+}, Jm = function(e, t) {
   const n = t.two.models.fromComparative;
-  return re(e, n);
-}, Vm = function(e, t) {
+  return ae(e, n);
+}, _m = function(e, t) {
   const n = t.two.models.fromSuperlative;
-  return re(e, n);
-}, Gm = function(e = "", t = []) {
+  return ae(e, n);
+}, Km = function(e = "", t = []) {
   const n = e.length;
   let r = n <= 6 ? n - 1 : 6;
   for (let o = r; o >= 1; o -= 1) {
@@ -5578,7 +5625,7 @@ const Gt = _t, Nm = function(e) {
     }
   }
   return null;
-}, cr = Gm, v = "ically", Bm = /* @__PURE__ */ new Set([
+}, mr = Km, v = "ically", qm = /* @__PURE__ */ new Set([
   "analyt" + v,
   "chem" + v,
   "class" + v,
@@ -5612,7 +5659,7 @@ const Gt = _t, Nm = function(e) {
   "typ" + v,
   "vert" + v,
   "whims" + v
-]), zm = [
+]), Um = [
   null,
   {},
   { ly: "" },
@@ -5639,7 +5686,7 @@ const Gt = _t, Nm = function(e) {
   {
     ically: "ic"
   }
-], Sm = /* @__PURE__ */ new Set([
+], Rm = /* @__PURE__ */ new Set([
   "early",
   "only",
   "hourly",
@@ -5663,7 +5710,7 @@ const Gt = _t, Nm = function(e) {
   "little",
   "long",
   "low"
-]), fo = {
+]), ko = {
   wholly: "whole",
   fully: "full",
   truly: "true",
@@ -5674,9 +5721,9 @@ const Gt = _t, Nm = function(e) {
   publically: "public",
   quickly: "fast",
   well: "good"
-}, Lm = function(e) {
-  return e.endsWith("ly") ? Bm.has(e) ? e.replace(/ically/, "ical") : Sm.has(e) ? null : fo.hasOwnProperty(e) ? fo[e] : cr(e, zm) || e : null;
-}, Mm = Lm, Wm = [
+}, Qm = function(e) {
+  return e.endsWith("ly") ? qm.has(e) ? e.replace(/ically/, "ical") : Rm.has(e) ? null : ko.hasOwnProperty(e) ? ko[e] : mr(e, Um) || e : null;
+}, Ym = Qm, Xm = [
   null,
   {
     y: "ily"
@@ -5696,7 +5743,7 @@ const Gt = _t, Nm = function(e) {
   {},
   {},
   {}
-], po = {
+], Ao = {
   cool: "cooly",
   whole: "wholly",
   full: "fully",
@@ -5705,12 +5752,12 @@ const Gt = _t, Nm = function(e) {
   public: "publicly",
   single: "singly",
   special: "especially"
-}, Hm = function(e) {
-  if (po.hasOwnProperty(e))
-    return po[e];
-  let t = cr(e, Wm);
+}, Zm = function(e) {
+  if (Ao.hasOwnProperty(e))
+    return Ao[e];
+  let t = mr(e, Xm);
   return t || e + "ly";
-}, bi = Hm, Jm = [
+}, Ni = Zm, e0 = [
   null,
   {
     y: "iness"
@@ -5746,7 +5793,7 @@ const Gt = _t, Nm = function(e) {
   {
     ionate: "ion"
   }
-], go = {
+], $o = {
   clean: "cleanliness",
   naive: "naivety",
   dramatic: "drama",
@@ -5762,33 +5809,33 @@ const Gt = _t, Nm = function(e) {
   quiet: "quiet",
   expensive: "expense",
   offensive: "offence"
-}, _m = /* @__PURE__ */ new Set([
+}, t0 = /* @__PURE__ */ new Set([
   "terrible",
   "annoying"
-]), Km = function(e) {
-  if (go.hasOwnProperty(e))
-    return go[e];
-  if (_m.has(e))
+]), n0 = function(e) {
+  if ($o.hasOwnProperty(e))
+    return $o[e];
+  if (t0.has(e))
     return null;
-  let t = cr(e, Jm);
+  let t = mr(e, e0);
   return t || e + "ness";
-}, qm = Km, Um = function(e, t) {
+}, r0 = n0, o0 = function(e, t) {
   let n = [e];
-  return n.push(lr(e, t)), n.push(ur(e, t)), n.push(bi(e)), n = n.filter((r) => r), n = new Set(n), Array.from(n);
-}, Rm = {
-  toSuperlative: lr,
-  toComparative: ur,
-  toAdverb: bi,
-  toNoun: qm,
-  fromAdverb: Mm,
-  fromSuperlative: Vm,
-  fromComparative: Fm,
-  all: Um
-}, Qm = {
-  noun: xm,
-  verb: Om,
-  adjective: Rm
-}, mo = {
+  return n.push(pr(e, t)), n.push(gr(e, t)), n.push(Ni(e)), n = n.filter((r) => r), n = new Set(n), Array.from(n);
+}, a0 = {
+  toSuperlative: pr,
+  toComparative: gr,
+  toAdverb: Ni,
+  toNoun: r0,
+  fromAdverb: Ym,
+  fromSuperlative: _m,
+  fromComparative: Jm,
+  all: o0
+}, i0 = {
+  noun: Gm,
+  verb: Hm,
+  adjective: a0
+}, Io = {
   Singular: (e, t, n, r) => {
     let o = r.one.lexicon, a = n.two.transform.noun.toPlural(e, r);
     o[a] || (t[a] = t[a] || "Plural");
@@ -5836,16 +5883,16 @@ const Gt = _t, Nm = function(e) {
   Ordinal: (e, t) => {
     t[e] = ["TextValue", "Ordinal"], t[e + "s"] = ["TextValue", "Fraction"];
   }
-}, Ym = function(e, t) {
+}, s0 = function(e, t) {
   const { methods: n, model: r } = t;
   let o = {}, a = {};
   return Object.keys(e).forEach((i) => {
     let s = e[i];
     i = i.toLowerCase().trim(), i = i.replace(/'s\b/, "");
     let l = i.split(/ /);
-    l.length > 1 && (a[l[0]] = !0), mo.hasOwnProperty(s) === !0 && mo[s](i, o, n, r), o[i] = o[i] || s;
+    l.length > 1 && (a[l[0]] = !0), Io.hasOwnProperty(s) === !0 && Io[s](i, o, n, r), o[i] = o[i] || s;
   }), delete o[""], delete o[null], delete o[" "], { lex: o, _multi: a };
-}, Xm = Ym, Zm = function(e, t) {
+}, l0 = s0, u0 = function(e, t) {
   const n = /^[0-9]+$/;
   let r = e[t];
   if (!r)
@@ -5860,16 +5907,16 @@ const Gt = _t, Nm = function(e) {
   }
   let a = r.normal;
   return !((a.length === 1 || a.length === 2 || a.length === 4) && n.test(a));
-}, e0 = function(e) {
+}, c0 = function(e) {
   const t = /[,:;]/;
   let n = [];
   return e.forEach((r) => {
     let o = 0;
     r.forEach((a, i) => {
-      t.test(a.post) && Zm(r, i + 1) && (n.push(r.slice(o, i + 1)), o = i + 1);
+      t.test(a.post) && u0(r, i + 1) && (n.push(r.slice(o, i + 1)), o = i + 1);
     }), o < r.length && n.push(r.slice(o, r.length));
   }), n;
-}, t0 = e0, yo = {
+}, h0 = c0, xo = {
   e: [
     "mice",
     "louse",
@@ -5895,12 +5942,12 @@ const Gt = _t, Nm = function(e) {
   t: [
     "feet"
   ]
-}, n0 = /* @__PURE__ */ new Set([
+}, d0 = /* @__PURE__ */ new Set([
   "formulas",
   "koalas",
   "israelis",
   "menus"
-]), r0 = [
+]), f0 = [
   "bus",
   "mas",
   "was",
@@ -5932,37 +5979,37 @@ const Gt = _t, Nm = function(e) {
   "xus",
   "'s",
   "ss"
-], o0 = function(e) {
+], p0 = function(e) {
   if (!e || e.length <= 3)
     return !1;
-  if (n0.has(e))
+  if (d0.has(e))
     return !0;
   let t = e[e.length - 1];
-  return yo.hasOwnProperty(t) ? yo[t].find((n) => e.endsWith(n)) : !(t !== "s" || r0.find((n) => e.endsWith(n)));
-}, vi = o0, Kn = {
+  return xo.hasOwnProperty(t) ? xo[t].find((n) => e.endsWith(n)) : !(t !== "s" || f0.find((n) => e.endsWith(n)));
+}, ji = p0, Qn = {
   two: {
-    quickSplit: t0,
-    expandLexicon: Xm,
-    transform: Qm,
-    looksPlural: vi
+    quickSplit: h0,
+    expandLexicon: l0,
+    transform: i0,
+    looksPlural: ji
   }
-}, a0 = function(e) {
+}, g0 = function(e) {
   const { irregularPlurals: t } = e.two, { lexicon: n } = e.one;
   return Object.entries(t).forEach((r) => {
     n[r[0]] = n[r[0]] || "Singular", n[r[1]] = n[r[1]] || "Plural";
   }), e;
-}, i0 = a0, lt = function(e, t, n) {
+}, m0 = g0, pt = function(e, t, n) {
   return Object.entries(e.exceptions).reduce((r, o) => (t && (r[o[0]] = t), r[o[1]] = n, r), {});
-}, s0 = function(e) {
+}, y0 = function(e) {
   let { lexicon: t } = e.one;
   const { toPast: n, toPresent: r, toGerund: o, toSuperlative: a, toComparative: i } = e.two.models;
   let s = {}, l = {};
-  return l = lt(n, "Infinitive", "PastTense"), Object.assign(s, l), l = lt(r, "Infinitive", "Verb"), Object.assign(s, l), l = lt(o, "Infinitive", "Gerund"), Object.assign(s, l), l = lt(a, "Adjective", "Superlative"), Object.assign(s, l), l = lt(i, "Adjective", "Comparative"), Object.assign(s, l), e.one.lexicon = Object.assign(s, t), e;
-}, l0 = s0;
-let qn = {
-  two: { models: gi }
+  return l = pt(n, "Infinitive", "PastTense"), Object.assign(s, l), l = pt(r, "Infinitive", "Verb"), Object.assign(s, l), l = pt(o, "Infinitive", "Gerund"), Object.assign(s, l), l = pt(a, "Adjective", "Superlative"), Object.assign(s, l), l = pt(i, "Adjective", "Comparative"), Object.assign(s, l), e.one.lexicon = Object.assign(s, t), e;
+}, b0 = y0;
+let Yn = {
+  two: { models: $i }
 };
-const u0 = {
+const v0 = {
   "Actor|Verb": "Actor",
   "Adj|Gerund": "Adjective",
   "Adj|Noun": "Adjective",
@@ -5977,65 +6024,65 @@ const u0 = {
   "Person|Adj": "Adjective",
   "Plural|Verb": "Plural",
   "Unit|Noun": "Noun"
-}, wi = function(e, t) {
-  const n = { model: t, methods: Kn };
-  let { lex: r, _multi: o } = Kn.two.expandLexicon(e, n);
+}, Ei = function(e, t) {
+  const n = { model: t, methods: Qn };
+  let { lex: r, _multi: o } = Qn.two.expandLexicon(e, n);
   return Object.assign(t.one.lexicon, r), Object.assign(t.one._multiCache, o), t;
-}, c0 = function(e, t) {
+}, w0 = function(e, t) {
   return Object.keys(e).forEach((n) => {
     e[n] === "Uncountable" && (t.two.uncountable[n] = !0, e[n] = "Uncountable");
   }), t;
-}, bo = function(e, t, n) {
-  let r = sr(e, qn);
+}, No = function(e, t, n) {
+  let r = fr(e, Yn);
   t[r.PastTense] = t[r.PastTense] || "PastTense", t[r.Gerund] = t[r.Gerund] || "Gerund", n === !0 && (t[r.PresentTense] = t[r.PresentTense] || "PresentTense");
-}, h0 = function(e, t, n) {
-  let r = lr(e, n);
+}, P0 = function(e, t, n) {
+  let r = pr(e, n);
   t[r] = t[r] || "Superlative";
-  let o = ur(e, n);
+  let o = gr(e, n);
   t[o] = t[o] || "Comparative";
-}, d0 = function(e, t, n) {
-  let r = on(e, n);
+}, k0 = function(e, t, n) {
+  let r = un(e, n);
   t[r] = t[r] || "Plural";
-}, f0 = function(e, t) {
+}, A0 = function(e, t) {
   let n = {};
   const r = t.one.lexicon;
   return Object.keys(e).forEach((o) => {
     const a = e[o];
-    if (n[o] = u0[a], (a === "Noun|Verb" || a === "Person|Verb" || a === "Actor|Verb") && bo(o, r, !1), a === "Adj|Present" && (bo(o, r, !0), h0(o, r, t)), a === "Adj|Gerund" || a === "Noun|Gerund") {
-      let i = _n(o, qn, "Gerund");
+    if (n[o] = v0[a], (a === "Noun|Verb" || a === "Person|Verb" || a === "Actor|Verb") && No(o, r, !1), a === "Adj|Present" && (No(o, r, !0), P0(o, r, t)), a === "Adj|Gerund" || a === "Noun|Gerund") {
+      let i = Rn(o, Yn, "Gerund");
       r[i] || (n[i] = "Infinitive");
     }
-    if ((a === "Noun|Gerund" || a === "Adj|Noun" || a === "Person|Noun") && d0(o, r, t), a === "Adj|Past") {
-      let i = _n(o, qn, "PastTense");
+    if ((a === "Noun|Gerund" || a === "Adj|Noun" || a === "Person|Noun") && k0(o, r, t), a === "Adj|Past") {
+      let i = Rn(o, Yn, "PastTense");
       r[i] || (n[i] = "Infinitive");
     }
-  }), t = wi(n, t), t;
-}, p0 = function(e) {
-  return e = wi(e.one.lexicon, e), e = c0(e.one.lexicon, e), e = f0(e.two.switches, e), e = l0(e), e = i0(e), e;
-}, g0 = p0;
-let Un = {
+  }), t = Ei(n, t), t;
+}, $0 = function(e) {
+  return e = Ei(e.one.lexicon, e), e = w0(e.one.lexicon, e), e = A0(e.two.switches, e), e = b0(e), e = m0(e), e;
+}, I0 = $0;
+let Xn = {
   one: {
     _multiCache: {},
-    lexicon: tt
+    lexicon: st
   },
   two: {
-    irregularPlurals: li,
-    models: gi,
-    suffixPatterns: nm,
-    prefixPatterns: rm,
-    endsWith: om,
-    neighbours: am,
-    regexNormal: vm,
-    regexText: wm,
-    regexNumbers: Pm,
-    switches: Jn,
-    clues: em,
+    irregularPlurals: yi,
+    models: $i,
+    suffixPatterns: dm,
+    prefixPatterns: fm,
+    endsWith: pm,
+    neighbours: gm,
+    regexNormal: Em,
+    regexText: Tm,
+    regexNumbers: Cm,
+    switches: Un,
+    clues: cm,
     uncountable: {},
-    orgWords: km
+    orgWords: Dm
   }
 };
-Un = g0(Un);
-const m0 = Un, y0 = function(e, t, n, r) {
+Xn = I0(Xn);
+const x0 = Xn, N0 = function(e, t, n, r) {
   const o = r.methods.one.setTag;
   if (t === 0 && e.length >= 3) {
     const a = /:/;
@@ -6046,30 +6093,30 @@ const m0 = Un, y0 = function(e, t, n, r) {
       o([e[0]], "Expression", r, null, "2-punct-colon''");
     }
   }
-}, b0 = y0, v0 = function(e, t, n, r) {
+}, j0 = N0, E0 = function(e, t, n, r) {
   const o = r.methods.one.setTag;
   e[t].post === "-" && e[t + 1] && o([e[t], e[t + 1]], "Hyphenated", r, null, "1-punct-hyphen''");
-}, w0 = v0, vo = /^(under|over|mis|re|un|dis|semi)-?/, P0 = function(e, t, n) {
+}, T0 = E0, jo = /^(under|over|mis|re|un|dis|semi)-?/, C0 = function(e, t, n) {
   const r = n.two.switches;
   let o = e[t];
   if (r.hasOwnProperty(o.normal)) {
     o.switch = r[o.normal];
     return;
   }
-  if (vo.test(o.normal)) {
-    let a = o.normal.replace(vo, "");
+  if (jo.test(o.normal)) {
+    let a = o.normal.replace(jo, "");
     a.length > 3 && r.hasOwnProperty(a) && (o.switch = r[a]);
   }
-}, k0 = P0, A0 = (e, t, n = "") => {
+}, D0 = C0, O0 = (e, t, n = "") => {
   const r = (i) => "\x1B[33m\x1B[3m" + i + "\x1B[0m", o = (i) => "\x1B[3m" + i + "\x1B[0m";
   let a = e.text || "[" + e.implicit + "]";
   typeof t != "string" && t.length > 2 && (t = t.slice(0, 2).join(", #") + " +"), t = typeof t != "string" ? t.join(", #") : t, console.log(` ${r(a).padEnd(24)} \x1B[32m→\x1B[0m #${t.padEnd(22)}  ${o(n)}`);
-}, I0 = function(e, t, n) {
+}, F0 = function(e, t, n) {
   if (!t || t.length === 0)
     return;
   const r = typeof process > "u" || !process.env ? self.env || {} : process.env;
-  r && r.DEBUG_TAGS && A0(e, t, n), e.tags = e.tags || /* @__PURE__ */ new Set(), typeof t == "string" ? e.tags.add(t) : t.forEach((o) => e.tags.add(o));
-}, D = I0, $0 = [
+  r && r.DEBUG_TAGS && O0(e, t, n), e.tags = e.tags || /* @__PURE__ */ new Set(), typeof t == "string" ? e.tags.add(t) : t.forEach((o) => e.tags.add(o));
+}, O = F0, V0 = [
   "Acronym",
   "Abbreviation",
   "ProperNoun",
@@ -6078,34 +6125,34 @@ const m0 = Un, y0 = function(e, t, n, r) {
   "Pronoun",
   "Activity",
   "Honorific"
-], x0 = function(e) {
-  !e.tags.has("Noun") || e.tags.has("Plural") || e.tags.has("Singular") || e.tags.has("Date") || $0.find((t) => e.tags.has(t)) || (vi(e.normal) ? D(e, "Plural", "3-plural-guess") : D(e, "Singular", "3-singular-guess"));
-}, N0 = function(e) {
+], G0 = function(e) {
+  !e.tags.has("Noun") || e.tags.has("Plural") || e.tags.has("Singular") || e.tags.has("Date") || V0.find((t) => e.tags.has(t)) || (ji(e.normal) ? O(e, "Plural", "3-plural-guess") : O(e, "Singular", "3-singular-guess"));
+}, B0 = function(e) {
   let t = e.tags;
   if (t.has("Verb") && t.size === 1) {
-    let n = yi(e.normal);
-    n && D(e, n, "3-verb-tense-guess");
+    let n = xi(e.normal);
+    n && O(e, n, "3-verb-tense-guess");
   }
-}, j0 = function(e, t, n) {
+}, z0 = function(e, t, n) {
   let r = e[t], o = Array.from(r.tags);
   for (let a = 0; a < o.length; a += 1)
     if (n.one.tagSet[o[a]]) {
       let i = n.one.tagSet[o[a]].parents;
-      D(r, i, ` -inferred by #${o[a]}`);
+      O(r, i, ` -inferred by #${o[a]}`);
     }
-  x0(r), N0(r);
-}, Pt = j0, E0 = /^\p{Lu}[\p{Ll}'’]/u, T0 = /[0-9]/, C0 = ["Date", "Month", "WeekDay", "Unit", "Expression"], D0 = /[IVX]/, O0 = /^[IVXLCDM]{2,}$/, F0 = /^M{0,4}(CM|CD|D?C{0,3})(XC|XL|L?X{0,3})(IX|IV|V?I{0,3})$/, V0 = {
+  G0(r), B0(r);
+}, It = z0, S0 = /^\p{Lu}[\p{Ll}'’]/u, L0 = /[0-9]/, M0 = ["Date", "Month", "WeekDay", "Unit", "Expression"], W0 = /[IVX]/, H0 = /^[IVXLCDM]{2,}$/, J0 = /^M{0,4}(CM|CD|D?C{0,3})(XC|XL|L?X{0,3})(IX|IV|V?I{0,3})$/, _0 = {
   li: !0,
   dc: !0,
   md: !0,
   dm: !0,
   ml: !0
-}, G0 = function(e, t, n) {
+}, K0 = function(e, t, n) {
   let r = e[t];
   r.index = r.index || [0, 0];
   let o = r.index[1], a = r.text || "";
-  return o !== 0 && E0.test(a) === !0 && T0.test(a) === !1 ? C0.find((i) => r.tags.has(i)) || r.pre.match(/["']$/) || r.normal === "the" ? null : (Pt(e, t, n), r.tags.has("Noun") || r.tags.clear(), D(r, "ProperNoun", "2-titlecase"), !0) : a.length >= 2 && O0.test(a) && D0.test(a) && F0.test(a) && !V0[r.normal] ? (D(r, "RomanNumeral", "2-xvii"), !0) : null;
-}, B0 = G0, wo = function(e = "", t = []) {
+  return o !== 0 && S0.test(a) === !0 && L0.test(a) === !1 ? M0.find((i) => r.tags.has(i)) || r.pre.match(/["']$/) || r.normal === "the" ? null : (It(e, t, n), r.tags.has("Noun") || r.tags.clear(), O(r, "ProperNoun", "2-titlecase"), !0) : a.length >= 2 && H0.test(a) && W0.test(a) && J0.test(a) && !_0[r.normal] ? (O(r, "RomanNumeral", "2-xvii"), !0) : null;
+}, q0 = K0, Eo = function(e = "", t = []) {
   const n = e.length;
   let r = 7;
   n <= r && (r = n - 1);
@@ -6115,22 +6162,22 @@ const m0 = Un, y0 = function(e, t, n, r) {
       return t[a.length][a];
   }
   return null;
-}, z0 = function(e, t, n) {
+}, U0 = function(e, t, n) {
   let r = e[t];
   if (r.tags.size === 0) {
-    let o = wo(r.normal, n.two.suffixPatterns);
+    let o = Eo(r.normal, n.two.suffixPatterns);
     if (o !== null)
-      return D(r, o, "2-suffix"), r.confidence = 0.7, !0;
-    if (r.implicit && (o = wo(r.implicit, n.two.suffixPatterns), o !== null))
-      return D(r, o, "2-implicit-suffix"), r.confidence = 0.7, !0;
+      return O(r, o, "2-suffix"), r.confidence = 0.7, !0;
+    if (r.implicit && (o = Eo(r.implicit, n.two.suffixPatterns), o !== null))
+      return O(r, o, "2-implicit-suffix"), r.confidence = 0.7, !0;
   }
   return null;
-}, S0 = z0, Po = /['‘’‛‵′`´]/, yn = function(e, t) {
+}, R0 = U0, To = /['‘’‛‵′`´]/, Pn = function(e, t) {
   for (let n = 0; n < t.length; n += 1)
     if (t[n][0].test(e) === !0)
       return t[n];
   return null;
-}, L0 = function(e = "", t) {
+}, Q0 = function(e = "", t) {
   let n = e[e.length - 1];
   if (t.hasOwnProperty(n) === !0) {
     let r = t[n] || [];
@@ -6139,13 +6186,13 @@ const m0 = Un, y0 = function(e, t, n, r) {
         return r[o];
   }
   return null;
-}, M0 = function(e, t, n, r) {
+}, Y0 = function(e, t, n, r) {
   const o = r.methods.one.setTag;
   let { regexText: a, regexNormal: i, regexNumbers: s, endsWith: l } = n.two, u = e[t], c = u.machine || u.normal, h = u.text;
-  Po.test(u.post) && !Po.test(u.pre) && (h += u.post.trim());
-  let f = yn(h, a) || yn(c, i);
-  return !f && /[0-9]/.test(c) && (f = yn(c, s)), !f && u.tags.size === 0 && (f = L0(c, l)), f ? (o([u], f[1], r, null, `2-regex-'${f[2] || f[0]}'`), u.confidence = 0.6, !0) : null;
-}, W0 = M0, H0 = function(e = "", t = []) {
+  To.test(u.post) && !To.test(u.pre) && (h += u.post.trim());
+  let d = Pn(h, a) || Pn(c, i);
+  return !d && /[0-9]/.test(c) && (d = Pn(c, s)), !d && u.tags.size === 0 && (d = Q0(c, l)), d ? (o([u], d[1], r, null, `2-regex-'${d[2] || d[0]}'`), u.confidence = 0.6, !0) : null;
+}, X0 = Y0, Z0 = function(e = "", t = []) {
   const n = e.length;
   let r = 7;
   r > n - 3 && (r = n - 3);
@@ -6155,15 +6202,15 @@ const m0 = Un, y0 = function(e, t, n, r) {
       return t[a.length][a];
   }
   return null;
-}, J0 = function(e, t, n) {
+}, e1 = function(e, t, n) {
   let r = e[t];
   if (r.tags.size === 0) {
-    let o = H0(r.normal, n.two.prefixPatterns);
+    let o = Z0(r.normal, n.two.prefixPatterns);
     if (o !== null)
-      return D(r, o, "2-prefix"), r.confidence = 0.5, !0;
+      return O(r, o, "2-prefix"), r.confidence = 0.5, !0;
   }
   return null;
-}, _0 = J0, K0 = 1400, q0 = 2100, U0 = /* @__PURE__ */ new Set([
+}, t1 = e1, n1 = 1400, r1 = 2100, o1 = /* @__PURE__ */ new Set([
   "in",
   "on",
   "by",
@@ -6188,186 +6235,186 @@ const m0 = Un, y0 = function(e, t, n, r) {
   "classic",
   "plan",
   "may"
-]), ko = function(e) {
+]), Co = function(e) {
   if (!e)
     return !1;
   let t = e.normal || e.implicit;
-  return !!(U0.has(t) || e.tags.has("Date") || e.tags.has("Month") || e.tags.has("WeekDay") || e.tags.has("Year") || e.tags.has("ProperNoun"));
-}, Ao = function(e) {
+  return !!(o1.has(t) || e.tags.has("Date") || e.tags.has("Month") || e.tags.has("WeekDay") || e.tags.has("Year") || e.tags.has("ProperNoun"));
+}, Do = function(e) {
   return e ? !!(e.tags.has("Ordinal") || e.tags.has("Cardinal") && e.normal.length < 3 || e.normal === "is" || e.normal === "was") : !1;
-}, Io = function(e) {
+}, Oo = function(e) {
   return e && (e.tags.has("Date") || e.tags.has("Month") || e.tags.has("WeekDay") || e.tags.has("Year"));
-}, R0 = function(e, t) {
+}, a1 = function(e, t) {
   const n = e[t];
   if (n.tags.has("NumericValue") && n.tags.has("Cardinal") && n.normal.length === 4) {
     let r = Number(n.normal);
-    if (r && !isNaN(r) && r > K0 && r < q0) {
+    if (r && !isNaN(r) && r > n1 && r < r1) {
       let o = e[t - 1], a = e[t + 1];
-      if (ko(o) || ko(a))
-        return D(n, "Year", "2-tagYear");
+      if (Co(o) || Co(a))
+        return O(n, "Year", "2-tagYear");
       if (r >= 1920 && r < 2025) {
-        if (Ao(o) || Ao(a))
-          return D(n, "Year", "2-tagYear-close");
-        if (Io(e[t - 2]) || Io(e[t + 2]))
-          return D(n, "Year", "2-tagYear-far");
+        if (Do(o) || Do(a))
+          return O(n, "Year", "2-tagYear-close");
+        if (Oo(e[t - 2]) || Oo(e[t + 2]))
+          return O(n, "Year", "2-tagYear-far");
         if (o && (o.tags.has("Determiner") || o.tags.has("Possessive")) && a && a.tags.has("Noun") && !a.tags.has("Plural"))
-          return D(n, "Year", "2-tagYear-noun");
+          return O(n, "Year", "2-tagYear-noun");
       }
     }
   }
   return null;
-}, Q0 = R0, Y0 = function(e, t, n, r) {
+}, i1 = a1, s1 = function(e, t, n, r) {
   const o = r.methods.one.setTag, a = e[t], i = ["PastTense", "PresentTense", "Auxiliary", "Modal", "Particle"];
   a.tags.has("Verb") && (i.find((l) => a.tags.has(l)) || o([a], "Infinitive", r, null, "2-verb-type''"));
-}, X0 = Y0, Pi = /^[A-Z]('s|,)?$/, ki = /^[A-Z-]+$/, Ai = /^[A-Z]+s$/, Z0 = /([A-Z]\.)+[A-Z]?,?$/, e1 = /[A-Z]{2,}('s|,)?$/, t1 = /([a-z]\.)+[a-z]\.?$/, Ii = {
+}, l1 = s1, Ti = /^[A-Z]('s|,)?$/, Ci = /^[A-Z-]+$/, Di = /^[A-Z]+s$/, u1 = /([A-Z]\.)+[A-Z]?,?$/, c1 = /[A-Z]{2,}('s|,)?$/, h1 = /([a-z]\.)+[a-z]\.?$/, Oi = {
   I: !0,
   A: !0
-}, n1 = {
+}, d1 = {
   la: !0,
   ny: !0,
   us: !0,
   dc: !0,
   gb: !0
-}, r1 = function(e, t) {
+}, f1 = function(e, t) {
   let n = e.text;
-  if (ki.test(n) === !1)
-    if (n.length > 3 && Ai.test(n) === !0)
+  if (Ci.test(n) === !1)
+    if (n.length > 3 && Di.test(n) === !0)
       n = n.replace(/s$/, "");
     else
       return !1;
-  return n.length > 5 || Ii.hasOwnProperty(n) || t.one.lexicon.hasOwnProperty(e.normal) ? !1 : Z0.test(n) === !0 || t1.test(n) === !0 || Pi.test(n) === !0 || e1.test(n) === !0;
-}, o1 = function(e, t, n) {
+  return n.length > 5 || Oi.hasOwnProperty(n) || t.one.lexicon.hasOwnProperty(e.normal) ? !1 : u1.test(n) === !0 || h1.test(n) === !0 || Ti.test(n) === !0 || c1.test(n) === !0;
+}, p1 = function(e, t, n) {
   let r = e[t];
-  return r.tags.has("RomanNumeral") || r.tags.has("Acronym") ? null : r1(r, n) ? (r.tags.clear(), D(r, ["Acronym", "Noun"], "3-no-period-acronym"), n1[r.normal] === !0 && D(r, "Place", "3-place-acronym"), Ai.test(r.text) === !0 && D(r, "Plural", "3-plural-acronym"), !0) : !Ii.hasOwnProperty(r.text) && Pi.test(r.text) ? (r.tags.clear(), D(r, ["Acronym", "Noun"], "3-one-letter-acronym"), !0) : r.tags.has("Organization") && r.text.length <= 3 ? (D(r, "Acronym", "3-org-acronym"), !0) : r.tags.has("Organization") && ki.test(r.text) && r.text.length <= 6 ? (D(r, "Acronym", "3-titlecase-acronym"), !0) : null;
-}, a1 = o1, $o = function(e, t) {
+  return r.tags.has("RomanNumeral") || r.tags.has("Acronym") ? null : f1(r, n) ? (r.tags.clear(), O(r, ["Acronym", "Noun"], "3-no-period-acronym"), d1[r.normal] === !0 && O(r, "Place", "3-place-acronym"), Di.test(r.text) === !0 && O(r, "Plural", "3-plural-acronym"), !0) : !Oi.hasOwnProperty(r.text) && Ti.test(r.text) ? (r.tags.clear(), O(r, ["Acronym", "Noun"], "3-one-letter-acronym"), !0) : r.tags.has("Organization") && r.text.length <= 3 ? (O(r, "Acronym", "3-org-acronym"), !0) : r.tags.has("Organization") && Ci.test(r.text) && r.text.length <= 6 ? (O(r, "Acronym", "3-titlecase-acronym"), !0) : null;
+}, g1 = p1, Fo = function(e, t) {
   if (!e)
     return null;
   let n = t.find((r) => e.normal === r[0]);
   return n ? n[1] : null;
-}, xo = function(e, t) {
+}, Vo = function(e, t) {
   if (!e)
     return null;
   let n = t.find((r) => e.tags.has(r[0]));
   return n ? n[1] : null;
-}, i1 = function(e, t, n) {
+}, m1 = function(e, t, n) {
   const { leftTags: r, leftWords: o, rightWords: a, rightTags: i } = n.two.neighbours;
   let s = e[t];
   if (s.tags.size === 0) {
     let l = null;
-    if (l = l || $o(e[t - 1], o), l = l || $o(e[t + 1], a), l = l || xo(e[t - 1], r), l = l || xo(e[t + 1], i), l)
-      return D(s, l, "3-[neighbour]"), Pt(e, t, n), e[t].confidence = 0.2, !0;
+    if (l = l || Fo(e[t - 1], o), l = l || Fo(e[t + 1], a), l = l || Vo(e[t - 1], r), l = l || Vo(e[t + 1], i), l)
+      return O(s, l, "3-[neighbour]"), It(e, t, n), e[t].confidence = 0.2, !0;
   }
   return null;
-}, s1 = i1, l1 = (e) => /^\p{Lu}[\p{Ll}'’]/u.test(e), No = function(e, t, n) {
-  return !e || e.tags.has("FirstName") || e.tags.has("Place") ? !1 : e.tags.has("ProperNoun") || e.tags.has("Organization") || e.tags.has("Acronym") ? !0 : !n && l1(e.text) ? t === 0 ? e.tags.has("Singular") : !0 : !1;
-}, u1 = function(e, t, n, r) {
+}, y1 = m1, b1 = (e) => /^\p{Lu}[\p{Ll}'’]/u.test(e), Go = function(e, t, n) {
+  return !e || e.tags.has("FirstName") || e.tags.has("Place") ? !1 : e.tags.has("ProperNoun") || e.tags.has("Organization") || e.tags.has("Acronym") ? !0 : !n && b1(e.text) ? t === 0 ? e.tags.has("Singular") : !0 : !1;
+}, v1 = function(e, t, n, r) {
   const o = n.model.two.orgWords, a = n.methods.one.setTag;
   let i = e[t], s = i.machine || i.normal;
-  if (o[s] === !0 && No(e[t - 1], t - 1, r)) {
+  if (o[s] === !0 && Go(e[t - 1], t - 1, r)) {
     a([e[t]], "Organization", n, null, "3-[org-word]");
-    for (let l = t; l >= 0 && No(e[l], l, r); l -= 1)
+    for (let l = t; l >= 0 && Go(e[l], l, r); l -= 1)
       a([e[l]], "Organization", n, null, "3-[org-word]");
   }
   return null;
-}, c1 = u1, h1 = function(e, t, n) {
+}, w1 = v1, P1 = function(e, t, n) {
   let r = !1, o = e[t].tags;
-  (o.size === 0 || o.size === 1 && (o.has("Hyphenated") || o.has("HashTag") || o.has("Prefix"))) && (r = !0), r && (D(e[t], "Noun", "3-[fallback]"), Pt(e, t, n), e[t].confidence = 0.1);
-}, d1 = h1, f1 = /^[A-Z][a-z]/, ie = (e, t) => e[t].tags.has("ProperNoun") && f1.test(e[t].text) ? "Noun" : null, jo = (e, t, n) => t === 0 && !e[1] ? n : null, p1 = function(e, t) {
+  (o.size === 0 || o.size === 1 && (o.has("Hyphenated") || o.has("HashTag") || o.has("Prefix"))) && (r = !0), r && (O(e[t], "Noun", "3-[fallback]"), It(e, t, n), e[t].confidence = 0.1);
+}, k1 = P1, A1 = /^[A-Z][a-z]/, le = (e, t) => e[t].tags.has("ProperNoun") && A1.test(e[t].text) ? "Noun" : null, Bo = (e, t, n) => t === 0 && !e[1] ? n : null, $1 = function(e, t) {
   return !e[t + 1] && e[t - 1] && e[t - 1].tags.has("Determiner") ? "Noun" : null;
-}, g1 = function(e, t, n) {
+}, I1 = function(e, t, n) {
   return t === 0 && e.length > 3 ? n : null;
-}, m1 = {
-  "Adj|Gerund": (e, t) => ie(e, t),
-  "Adj|Noun": (e, t) => ie(e, t) || p1(e, t),
-  "Actor|Verb": (e, t) => ie(e, t),
-  "Adj|Past": (e, t) => ie(e, t),
-  "Adj|Present": (e, t) => ie(e, t),
-  "Noun|Gerund": (e, t) => ie(e, t),
-  "Noun|Verb": (e, t) => ie(e, t) || jo(e, t, "Infinitive"),
-  "Plural|Verb": (e, t) => ie(e, t) || jo(e, t, "PresentTense") || g1(e, t, "Plural"),
-  "Person|Noun": (e, t) => ie(e, t),
-  "Person|Verb": (e, t) => t !== 0 ? ie(e, t) : null,
-  "Person|Adj": (e, t) => t === 0 && e.length > 1 || ie(e, t) ? "Person" : null
-}, Eo = m1, hr = typeof process > "u" || !process.env ? self.env || {} : process.env, To = /^(under|over|mis|re|un|dis|semi)-?/, Co = (e, t) => {
+}, x1 = {
+  "Adj|Gerund": (e, t) => le(e, t),
+  "Adj|Noun": (e, t) => le(e, t) || $1(e, t),
+  "Actor|Verb": (e, t) => le(e, t),
+  "Adj|Past": (e, t) => le(e, t),
+  "Adj|Present": (e, t) => le(e, t),
+  "Noun|Gerund": (e, t) => le(e, t),
+  "Noun|Verb": (e, t) => le(e, t) || Bo(e, t, "Infinitive"),
+  "Plural|Verb": (e, t) => le(e, t) || Bo(e, t, "PresentTense") || I1(e, t, "Plural"),
+  "Person|Noun": (e, t) => le(e, t),
+  "Person|Verb": (e, t) => t !== 0 ? le(e, t) : null,
+  "Person|Adj": (e, t) => t === 0 && e.length > 1 || le(e, t) ? "Person" : null
+}, zo = x1, yr = typeof process > "u" || !process.env ? self.env || {} : process.env, So = /^(under|over|mis|re|un|dis|semi)-?/, Lo = (e, t) => {
   if (!e || !t)
     return null;
   let n = e.normal || e.implicit, r = null;
-  return t.hasOwnProperty(n) && (r = t[n]), r && hr.DEBUG_TAGS && console.log(`
+  return t.hasOwnProperty(n) && (r = t[n]), r && yr.DEBUG_TAGS && console.log(`
   \x1B[2m\x1B[3m     ↓ - '${n}' \x1B[0m`), r;
-}, Do = (e, t = {}, n) => {
+}, Mo = (e, t = {}, n) => {
   if (!e || !t)
     return null;
   let o = Array.from(e.tags).sort((a, i) => {
     let s = n[a] ? n[a].parents.length : 0, l = n[i] ? n[i].parents.length : 0;
     return s > l ? -1 : 1;
   }).find((a) => t[a]);
-  return o && hr.DEBUG_TAGS && console.log(`  \x1B[2m\x1B[3m      ↓ - '${e.normal || e.implicit}' (#${o})  \x1B[0m`), o = t[o], o;
-}, y1 = function(e, t, n, r) {
+  return o && yr.DEBUG_TAGS && console.log(`  \x1B[2m\x1B[3m      ↓ - '${e.normal || e.implicit}' (#${o})  \x1B[0m`), o = t[o], o;
+}, N1 = function(e, t, n, r) {
   if (!n)
     return null;
   const o = r.one.tagSet;
-  let a = Co(e[t + 1], n.afterWords);
-  return a = a || Co(e[t - 1], n.beforeWords), a = a || Do(e[t - 1], n.beforeTags, o), a = a || Do(e[t + 1], n.afterTags, o), a;
-}, b1 = function(e, t, n) {
+  let a = Lo(e[t + 1], n.afterWords);
+  return a = a || Lo(e[t - 1], n.beforeWords), a = a || Mo(e[t - 1], n.beforeTags, o), a = a || Mo(e[t + 1], n.afterTags, o), a;
+}, j1 = function(e, t, n) {
   const r = n.model, o = n.methods.one.setTag, { switches: a, clues: i } = r.two, s = e[t];
   let l = s.normal || s.implicit || "";
-  if (To.test(l) && !a[l] && (l = l.replace(To, "")), s.switch) {
+  if (So.test(l) && !a[l] && (l = l.replace(So, "")), s.switch) {
     let u = s.switch;
     if (s.tags.has("Acronym") || s.tags.has("PhrasalVerb"))
       return;
-    let c = y1(e, t, i[u], r);
-    Eo[u] && (c = Eo[u](e, t) || c), c ? (o([s], c, n, null, `3-[switch] (${u})`), Pt(e, t, r)) : hr.DEBUG_TAGS && console.log(`
+    let c = N1(e, t, i[u], r);
+    zo[u] && (c = zo[u](e, t) || c), c ? (o([s], c, n, null, `3-[switch] (${u})`), It(e, t, r)) : yr.DEBUG_TAGS && console.log(`
  -> X  - '${l}'  : (${u})  `);
   }
-}, v1 = b1, w1 = {
+}, E1 = j1, T1 = {
   there: !0,
   this: !0,
   it: !0,
   him: !0,
   her: !0,
   us: !0
-}, P1 = function(e, t) {
+}, C1 = function(e, t) {
   const n = t.methods.one.setTag, r = t.model.one._multiCache || {};
   let o = e[0];
   if ((o.switch === "Noun|Verb" || o.tags.has("Infinitive")) && e.length >= 2) {
-    if (e.length < 4 && !w1[e[1].normal] || !o.tags.has("PhrasalVerb") && r.hasOwnProperty(o.normal))
+    if (e.length < 4 && !T1[e[1].normal] || !o.tags.has("PhrasalVerb") && r.hasOwnProperty(o.normal))
       return;
     (e[1].tags.has("Noun") || e[1].tags.has("Determiner")) && (!e.slice(1, 3).some((l) => l.tags.has("Verb")) || o.tags.has("#PhrasalVerb")) && n([o], "Imperative", t, null, "3-[imperative]");
   }
-}, k1 = P1, A1 = function(e) {
+}, D1 = C1, O1 = function(e) {
   if (e.filter((n) => !n.tags.has("ProperNoun")).length <= 3)
     return !1;
   const t = /^[a-z]/;
   return e.every((n) => !t.test(n.text));
-}, I1 = function(e, t, n) {
+}, F1 = function(e, t, n) {
   e.forEach((r) => {
-    b0(r, 0, t, n);
+    j0(r, 0, t, n);
     for (let o = 0; o < r.length; o += 1)
       ;
   });
-}, $1 = function(e, t, n, r) {
+}, V1 = function(e, t, n, r) {
   for (let o = 0; o < e.length; o += 1)
-    k0(e, o, t), r === !1 && B0(e, o, t), S0(e, o, t), W0(e, o, t, n), _0(e, o, t), Q0(e, o);
-}, x1 = function(e, t, n, r) {
+    D0(e, o, t), r === !1 && q0(e, o, t), R0(e, o, t), X0(e, o, t, n), t1(e, o, t), i1(e, o);
+}, G1 = function(e, t, n, r) {
   for (let o = 0; o < e.length; o += 1) {
-    let a = a1(e, o, t);
-    Pt(e, o, t), a = a || s1(e, o, t), a = a || d1(e, o, t);
+    let a = g1(e, o, t);
+    It(e, o, t), a = a || y1(e, o, t), a = a || k1(e, o, t);
   }
   for (let o = 0; o < e.length; o += 1)
-    c1(e, o, n, r), v1(e, o, n), X0(e, o, t, n), w0(e, o, t, n);
-  k1(e, n);
-}, N1 = function(e) {
+    w1(e, o, n, r), E1(e, o, n), l1(e, o, t, n), T0(e, o, t, n);
+  D1(e, n);
+}, B1 = function(e) {
   const { methods: t, model: n, world: r } = e;
   let o = e.docs;
-  I1(o, n, r);
+  F1(o, n, r);
   let a = t.two.quickSplit(o);
   for (let i = 0; i < a.length; i += 1) {
     let s = a[i];
-    const l = A1(s);
-    $1(s, n, r, l), x1(s, n, r, l);
+    const l = O1(s);
+    V1(s, n, r, l), G1(s, n, r, l);
   }
   return a;
-}, j1 = N1, Oo = {
+}, z1 = B1, Wo = {
   Possessive: (e) => {
     let t = e.machine || e.normal || e.text;
     return t = t.replace(/'s$/, ""), t;
@@ -6402,21 +6449,21 @@ const m0 = Un, y0 = function(e, t, n, r) {
     let r = e.machine || e.normal || e.text;
     return n(r);
   }
-}, E1 = function(e) {
-  const t = e.world, n = Object.keys(Oo);
+}, S1 = function(e) {
+  const t = e.world, n = Object.keys(Wo);
   e.docs.forEach((r) => {
     for (let o = 0; o < r.length; o += 1) {
       const a = r[o];
       for (let i = 0; i < n.length; i += 1)
         if (a.tags.has(n[i])) {
-          const s = Oo[n[i]];
+          const s = Wo[n[i]];
           let l = s(a, t);
           a.normal !== l && (a.root = l);
           break;
         }
     }
   });
-}, T1 = E1, Fo = {
+}, L1 = S1, Ho = {
   Adverb: "RB",
   Comparative: "JJR",
   Superlative: "JJS",
@@ -6447,7 +6494,7 @@ const m0 = Un, y0 = function(e, t, n, r) {
   Plural: "NNS",
   Noun: "NN",
   There: "EX"
-}, C1 = function(e) {
+}, M1 = function(e) {
   if (e.tags.has("ProperNoun") && e.tags.has("Plural"))
     return "NNPS";
   if (e.tags.has("Possessive") && e.tags.has("Pronoun"))
@@ -6458,16 +6505,16 @@ const m0 = Un, y0 = function(e, t, n, r) {
     return "TO";
   let t = e.tagRank || [];
   for (let n = 0; n < t.length; n += 1)
-    if (Fo.hasOwnProperty(t[n]))
-      return Fo[t[n]];
+    if (Ho.hasOwnProperty(t[n]))
+      return Ho[t[n]];
   return null;
-}, D1 = function(e) {
+}, W1 = function(e) {
   e.compute("tagRank"), e.docs.forEach((t) => {
     t.forEach((n) => {
-      n.penn = C1(n);
+      n.penn = M1(n);
     });
   });
-}, O1 = D1, F1 = { preTagger: j1, root: T1, penn: O1 }, bn = ["Person", "Place", "Organization"], V1 = {
+}, H1 = W1, J1 = { preTagger: z1, root: L1, penn: H1 }, kn = ["Person", "Place", "Organization"], _1 = {
   Noun: {
     not: ["Verb", "Adjective", "Adverb", "Value", "Determiner"]
   },
@@ -6543,7 +6590,7 @@ const m0 = Un, y0 = function(e, t, n, r) {
   },
   Pronoun: {
     is: "Noun",
-    not: bn
+    not: kn
   },
   Actor: {
     is: "Noun",
@@ -6555,12 +6602,12 @@ const m0 = Un, y0 = function(e, t, n, r) {
   },
   Unit: {
     is: "Noun",
-    not: bn
+    not: kn
   },
   Demonym: {
     is: "Noun",
     also: ["ProperNoun"],
-    not: bn
+    not: kn
   },
   Possessive: {
     is: "Noun"
@@ -6568,7 +6615,7 @@ const m0 = Un, y0 = function(e, t, n, r) {
   Reflexive: {
     is: "Pronoun"
   }
-}, G1 = {
+}, K1 = {
   Verb: {
     not: ["Noun", "Adjective", "Adverb", "Value", "Expression"]
   },
@@ -6616,7 +6663,7 @@ const m0 = Un, y0 = function(e, t, n, r) {
   Passive: {
     is: "Verb"
   }
-}, B1 = {
+}, q1 = {
   Value: {
     not: ["Verb", "Adjective", "Adverb"]
   },
@@ -6653,7 +6700,7 @@ const m0 = Un, y0 = function(e, t, n, r) {
   Percent: {
     is: "Value"
   }
-}, z1 = {
+}, U1 = {
   Date: {
     not: ["Verb", "Adverb", "Adjective"]
   },
@@ -6694,7 +6741,7 @@ const m0 = Un, y0 = function(e, t, n, r) {
     is: "Date",
     also: ["Noun"]
   }
-}, S1 = ["Noun", "Verb", "Adjective", "Adverb", "Value", "QuestionWord"], L1 = {
+}, R1 = ["Noun", "Verb", "Adjective", "Adverb", "Value", "QuestionWord"], Q1 = {
   Adjective: {
     not: ["Noun", "Verb", "Adverb", "Value"]
   },
@@ -6716,7 +6763,7 @@ const m0 = Un, y0 = function(e, t, n, r) {
     not: ["Noun", "Verb", "Adjective", "Adverb", "QuestionWord", "Conjunction"]
   },
   Conjunction: {
-    not: S1
+    not: R1
   },
   Preposition: {
     not: ["Noun", "Verb", "Adjective", "Adverb", "QuestionWord", "Determiner"]
@@ -6768,20 +6815,20 @@ const m0 = Un, y0 = function(e, t, n, r) {
   },
   Hyphenated: {}
 };
-let M1 = Object.assign({}, V1, G1, B1, z1, L1);
-const W1 = M1, H1 = {
-  compute: F1,
-  methods: Kn,
-  model: m0,
-  tags: W1,
+let Y1 = Object.assign({}, _1, K1, q1, U1, Q1);
+const X1 = Y1, Z1 = {
+  compute: J1,
+  methods: Qn,
+  model: x0,
+  tags: X1,
   hooks: ["preTagger"]
-}, J1 = /[,)"';:\-–—.…]/, ye = function(e, t) {
+}, ey = /[,)"';:\-–—.…]/, we = function(e, t) {
   if (!e.found)
     return;
   let n = e.termList();
   for (let r = 0; r < n.length - 1; r++) {
     const o = n[r];
-    if (J1.test(o.post))
+    if (ey.test(o.post))
       return;
   }
   n[0].implicit = n[0].normal, n[0].text += t, n[0].normal += t, n.slice(1).forEach((r) => {
@@ -6789,35 +6836,35 @@ const W1 = M1, H1 = {
   });
   for (let r = 0; r < n.length - 1; r++)
     n[r].post = n[r].post.replace(/ /, "");
-}, _1 = function() {
+}, ty = function() {
   let e = this.not("@hasContraction"), t = e.match("(we|they|you) are");
-  return ye(t, "'re"), t = e.match("(he|she|they|it|we|you) will"), ye(t, "'ll"), t = e.match("(he|she|they|it|we) is"), ye(t, "'s"), t = e.match("#Person is"), ye(t, "'s"), t = e.match("#Person would"), ye(t, "'d"), t = e.match("(is|was|had|would|should|could|do|does|have|has|can) not"), ye(t, "n't"), t = e.match("(i|we|they) have"), ye(t, "'ve"), t = e.match("(would|should|could) have"), ye(t, "'ve"), t = e.match("i am"), ye(t, "'m"), t = e.match("going to"), this;
-}, K1 = _1, q1 = /^\p{Lu}[\p{Ll}'’]/u, U1 = function(e = "") {
+  return we(t, "'re"), t = e.match("(he|she|they|it|we|you) will"), we(t, "'ll"), t = e.match("(he|she|they|it|we) is"), we(t, "'s"), t = e.match("#Person is"), we(t, "'s"), t = e.match("#Person would"), we(t, "'d"), t = e.match("(is|was|had|would|should|could|do|does|have|has|can) not"), we(t, "n't"), t = e.match("(i|we|they) have"), we(t, "'ve"), t = e.match("(would|should|could) have"), we(t, "'ve"), t = e.match("i am"), we(t, "'m"), t = e.match("going to"), this;
+}, ny = ty, ry = /^\p{Lu}[\p{Ll}'’]/u, oy = function(e = "") {
   return e = e.replace(/^ *[a-z\u00C0-\u00FF]/, (t) => t.toUpperCase()), e;
-}, R1 = function(e) {
+}, ay = function(e) {
   class t extends e {
     constructor(r, o, a) {
       super(r, o, a), this.viewType = "Contraction";
     }
     expand() {
       return this.docs.forEach((r) => {
-        let o = q1.test(r[0].text);
+        let o = ry.test(r[0].text);
         r.forEach((a, i) => {
           a.text = a.implicit, delete a.implicit, i < r.length - 1 && a.post === "" && (a.post += " "), a.dirty = !0;
-        }), o && (r[0].text = U1(r[0].text));
+        }), o && (r[0].text = oy(r[0].text));
       }), this.compute("normal"), this;
     }
   }
   e.prototype.contractions = function() {
     let n = this.match("@hasContraction+");
     return new t(this.document, n.pointer);
-  }, e.prototype.contract = K1;
-}, Q1 = R1, Y1 = function(e, t, n) {
+  }, e.prototype.contract = ny;
+}, iy = ay, sy = function(e, t, n) {
   let [r, o] = t;
   !n || n.length === 0 || (n = n.map((a, i) => (a.implicit = a.text, a.machine = a.text, a.pre = "", a.post = "", a.text = "", a.normal = "", a.index = [r, o + i], a)), n[0] && (n[0].pre = e[r][o].pre, n[n.length - 1].post = e[r][o].post, n[0].text = e[r][o].text, n[0].normal = e[r][o].normal), e[r].splice(o, 1, ...n));
-}, X1 = Y1, Z1 = /'/, ey = (e, t) => e.slice(t + 1, t + 3).some((r) => r.tags.has("PastTense")), ty = function(e, t) {
-  let n = e[t].normal.split(Z1)[0];
-  if (ey(e, t))
+}, ly = sy, uy = /'/, cy = (e, t) => e.slice(t + 1, t + 3).some((r) => r.tags.has("PastTense")), hy = function(e, t) {
+  let n = e[t].normal.split(uy)[0];
+  if (cy(e, t))
     return [n, "has"];
   if (n === "let")
     return [n, "us"];
@@ -6827,19 +6874,19 @@ const W1 = M1, H1 = {
       return [n, "are"];
   }
   return [n, "is"];
-}, ny = ty, ry = /'/, oy = (e, t) => e[t + 1] && e[t + 1].normal == "better" ? !0 : e.slice(t + 1, t + 3).some((r) => r.tags.has("PastTense")), ay = function(e, t) {
-  let n = e[t].normal.split(ry)[0];
-  return n === "how" || n === "what" ? [n, "did"] : oy(e, t) === !0 ? [n, "had"] : [n, "would"];
-}, iy = ay, sy = function(e, t) {
+}, dy = hy, fy = /'/, py = (e, t) => e[t + 1] && e[t + 1].normal == "better" ? !0 : e.slice(t + 1, t + 3).some((r) => r.tags.has("PastTense")), gy = function(e, t) {
+  let n = e[t].normal.split(fy)[0];
+  return n === "how" || n === "what" ? [n, "did"] : py(e, t) === !0 ? [n, "had"] : [n, "would"];
+}, my = gy, yy = function(e, t) {
   for (let n = t - 1; n >= 0; n -= 1)
     if (e[n].tags.has("Noun") || e[n].tags.has("Pronoun") || e[n].tags.has("Plural") || e[n].tags.has("Singular"))
       return e[n];
   return null;
-}, ly = function(e, t) {
+}, by = function(e, t) {
   if (e[t].normal === "ain't" || e[t].normal === "aint") {
     if (e[t + 1] && e[t + 1].normal === "never")
       return ["have"];
-    let r = sy(e, t);
+    let r = yy(e, t);
     if (r) {
       if (r.normal === "we" || r.normal === "they")
         return ["are", "not"];
@@ -6851,19 +6898,19 @@ const W1 = M1, H1 = {
     return ["is", "not"];
   }
   return [e[t].normal.replace(/n't/, ""), "not"];
-}, uy = ly, cy = {
+}, vy = by, wy = {
   that: !0,
   there: !0,
   let: !0,
   here: !0,
   everywhere: !0
-}, hy = {
+}, Py = {
   in: !0,
   by: !0,
   for: !0
-}, dy = (e, t) => {
+}, ky = (e, t) => {
   let n = e[t];
-  if (cy.hasOwnProperty(n.machine || n.normal))
+  if (wy.hasOwnProperty(n.machine || n.normal))
     return !1;
   if (n.tags.has("Possessive"))
     return !0;
@@ -6880,46 +6927,46 @@ const W1 = M1, H1 = {
     let a = r.machine || r.normal;
     return !(a === "here" || a === "there" || a === "everywhere" || r.tags.has("Possessive") || r.tags.has("ProperNoun") && !n.tags.has("ProperNoun"));
   }
-  if (e[t - 1] && hy[e[t - 1].normal] === !0)
+  if (e[t - 1] && Py[e[t - 1].normal] === !0)
     return !0;
   let o = e[t + 2];
   return o && o.tags.has("Noun") && !o.tags.has("Pronoun") ? !0 : (r.tags.has("Adjective") || r.tags.has("Adverb") || r.tags.has("Verb"), !1);
-}, fy = dy, Vo = /'/, py = function(e) {
+}, Ay = ky, Jo = /'/, $y = function(e) {
   e.forEach((t, n) => {
     t.index && (t.index[1] = n);
   });
-}, gy = function(e, t, n, r) {
+}, Iy = function(e, t, n, r) {
   let o = t.update();
   o.document = [e];
   let a = n + r;
-  n > 0 && (n -= 1), e[a] && (a += 1), o.ptrs = [[0, n, a]], o.compute(["lexicon", "preTagger"]), py(e);
-}, Go = {
-  d: (e, t) => iy(e, t),
-  t: (e, t) => uy(e, t),
-  s: (e, t, n) => fy(e, t) ? n.methods.one.setTag([e[t]], "Possessive", n, "2-contraction") : ny(e, t)
-}, my = function(e, t) {
+  n > 0 && (n -= 1), e[a] && (a += 1), o.ptrs = [[0, n, a]], o.compute(["lexicon", "preTagger"]), $y(e);
+}, _o = {
+  d: (e, t) => my(e, t),
+  t: (e, t) => vy(e, t),
+  s: (e, t, n) => Ay(e, t) ? n.methods.one.setTag([e[t]], "Possessive", n, "2-contraction") : dy(e, t)
+}, xy = function(e, t) {
   let n = t.fromText(e.join(" "));
   return n.compute("id"), n.docs[0];
-}, yy = (e) => {
+}, Ny = (e) => {
   let { world: t, document: n } = e;
   n.forEach((r, o) => {
     for (let a = r.length - 1; a >= 0; a -= 1) {
       if (r[a].implicit)
         return;
       let i = null;
-      Vo.test(r[a].normal) === !0 && ([, i] = r[a].normal.split(Vo));
+      Jo.test(r[a].normal) === !0 && ([, i] = r[a].normal.split(Jo));
       let s = null;
-      if (Go.hasOwnProperty(i) && (s = Go[i](r, a, t)), s) {
-        s = my(s, e), X1(n, [o, a], s), gy(n[o], e, a, s.length);
+      if (_o.hasOwnProperty(i) && (s = _o[i](r, a, t)), s) {
+        s = xy(s, e), ly(n, [o, a], s), Iy(n[o], e, a, s.length);
         continue;
       }
     }
   });
-}, by = { contractionTwo: yy }, vy = {
-  compute: by,
-  api: Q1,
+}, jy = { contractionTwo: Ny }, Ey = {
+  compute: jy,
+  api: iy,
   hooks: ["contractionTwo"]
-}, wy = [
+}, Ty = [
   { match: "[(all|both)] #Determiner #Noun", group: 0, tag: "Noun", reason: "all-noun" },
   { match: "#Copula [(just|alone)]$", group: 0, tag: "Adjective", reason: "not-adverb" },
   { match: "#Singular is #Adverb? [#PastTense$]", group: 0, tag: "Adjective", reason: "is-filled" },
@@ -6940,12 +6987,12 @@ const W1 = M1, H1 = {
   { match: "too much", tag: "Adverb Adjective", reason: "bit-4" },
   { match: "a bit much", tag: "Determiner Adverb Adjective", reason: "bit-3" },
   { match: "[(un|contra|extra|inter|intra|macro|micro|mid|mis|mono|multi|pre|sub|tri|ex)] #Adjective", group: 0, tag: ["Adjective", "Prefix"], reason: "un-skilled" }
-], Py = "(dark|bright|flat|light|soft|pale|dead|dim|faux|little|wee|sheer|most|near|good|extra|all)", ky = [
+], Cy = "(dark|bright|flat|light|soft|pale|dead|dim|faux|little|wee|sheer|most|near|good|extra|all)", Dy = [
   { match: "#Adverb [#Adverb] (and|or|then)", group: 0, tag: "Adjective", reason: "kinda-sparkly-and" },
-  { match: `[${Py}] #Adjective`, group: 0, tag: "Adverb", reason: "dark-green" },
+  { match: `[${Cy}] #Adjective`, group: 0, tag: "Adverb", reason: "dark-green" },
   { match: "#Copula [far too] #Adjective", group: 0, tag: "Adverb", reason: "far-too" },
   { match: "#Copula [still] (in|#Gerund|#Adjective)", group: 0, tag: "Adverb", reason: "was-still-walking" }
-], Ay = [
+], Oy = [
   { match: "(a|an) [#Gerund]", group: 0, tag: "Adjective", reason: "a|an" },
   { match: "as [#Gerund] as", group: 0, tag: "Adjective", reason: "as-gerund-as" },
   { match: "more [#Gerund] than", group: 0, tag: "Adjective", reason: "more-gerund-than" },
@@ -6953,7 +7000,7 @@ const W1 = M1, H1 = {
   { match: "(found|found) it #Adverb? [#Gerund]", group: 0, tag: "Adjective", reason: "found-it-gerund" },
   { match: "a (little|bit|wee) bit? [#Gerund]", group: 0, tag: "Adjective", reason: "a-bit-gerund" },
   { match: "#Gerund [#Gerund]", group: 0, tag: "Adjective", notIf: "(impersonating|practicing|considering|assuming)", reason: "looking-annoying" }
-], Iy = [
+], Fy = [
   { match: "#Determiner [#Adjective] #Copula", group: 0, tag: "Noun", reason: "the-adj-is" },
   { match: "#Adjective [#Adjective] #Copula", group: 0, tag: "Noun", reason: "adj-adj-is" },
   { match: "(his|its) [%Adj|Noun%]", group: 0, tag: "Noun", notIf: "#Hyphenated", reason: "his-fine" },
@@ -6969,7 +7016,7 @@ const W1 = M1, H1 = {
   { match: "#Determiner [#Adjective]$", tag: "Noun", notIf: "(this|that|#Comparative|#Superlative)", reason: "the-south" },
   { match: "(#Noun && #Hyphenated) (#Adjective && #Hyphenated)", tag: "Adjective", notIf: "(this|that|#Comparative|#Superlative)", reason: "company-wide" },
   { match: "#Determiner [#Adjective] (#Copula|#Determiner)", notIf: "(#Comparative|#Superlative)", group: 0, tag: "Noun", reason: "the-poor" }
-], $y = [
+], Vy = [
   { match: "(slowly|quickly) [#Adjective]", group: 0, tag: "Verb", reason: "slowly-adj" },
   { match: "does (#Adverb|not)? [#Adjective]", group: 0, tag: "PresentTense", reason: "does-mean" },
   { match: "[(fine|okay|cool|ok)] by me", group: 0, tag: "Adjective", reason: "okay-by-me" },
@@ -6990,7 +7037,7 @@ const W1 = M1, H1 = {
   { match: "as [#Infinitive] as", group: 0, tag: "Adjective", reason: "as-pale-as" },
   { match: "[%Adj|Past%] and #Adjective", group: 0, tag: "Adjective", reason: "faled-and-oppressive" },
   { match: "or [#PastTense] #Noun", group: 0, tag: "Adjective", notIf: "(#Copula|#Pronoun)", reason: "or-heightened-emotion" }
-], xy = [
+], Gy = [
   { match: "[still] #Adjective", group: 0, tag: "Adverb", reason: "still-advb" },
   { match: "[still] #Verb", group: 0, tag: "Adverb", reason: "still-verb" },
   { match: "[so] #Adjective", group: 0, tag: "Adverb", reason: "so-adv" },
@@ -7023,7 +7070,7 @@ const W1 = M1, H1 = {
   { match: "(#PresentTense|#PastTense) [back]", group: 0, tag: "Adverb", notIf: "(#PhrasalVerb|#Copula)", reason: "charge-back" },
   { match: "#Verb [around]", group: 0, tag: "Adverb", notIf: "#PhrasalVerb", reason: "send-around" },
   { match: "[later] #PresentTense", group: 0, tag: "Adverb", reason: "later-say" }
-], Ny = [
+], By = [
   { match: "#Holiday (day|eve)", tag: "Holiday", reason: "holiday-day" },
   { match: "#Value of #Month", tag: "Date", reason: "value-of-month" },
   { match: "#Cardinal #Month", tag: "Date", reason: "cardinal-month" },
@@ -7043,7 +7090,7 @@ const W1 = M1, H1 = {
   },
   { match: "#Time [(eastern|mountain|pacific|central|est|pst|gmt)]", group: 0, tag: "Timezone", reason: "5pm-central" },
   { match: "(central|western|eastern) european time", tag: "Timezone", reason: "cet" }
-], jy = [
+], zy = [
   { match: "[sun] the #Ordinal", tag: "WeekDay", reason: "sun-the-5th" },
   { match: "[sun] #Date", group: 0, tag: "WeekDay", reason: "sun-feb" },
   { match: "#Date (on|this|next|last|during)? [sun]", group: 0, tag: "WeekDay", reason: "1pm-sun" },
@@ -7059,7 +7106,7 @@ const W1 = M1, H1 = {
   { match: "#Date .? [(march|may)]", group: 0, tag: "Month", reason: "feb-and-march" },
   { match: "#Adverb [(march|may)]", group: 0, tag: "Verb", reason: "quickly-march" },
   { match: "[(march|may)] #Adverb", group: 0, tag: "Verb", reason: "march-quickly" }
-], Ey = "(feel|sense|process|rush|side|bomb|bully|challenge|cover|crush|dump|exchange|flow|function|issue|lecture|limit|march|process)", Ty = [
+], Sy = "(feel|sense|process|rush|side|bomb|bully|challenge|cover|crush|dump|exchange|flow|function|issue|lecture|limit|march|process)", Ly = [
   { match: "(the|any) [more]", group: 0, tag: "Singular", reason: "more-noun" },
   { match: "[more] #Noun", group: 0, tag: "Adjective", reason: "more-noun" },
   { match: "(right|rights) of .", tag: "Noun", reason: "right-of" },
@@ -7108,7 +7155,7 @@ const W1 = M1, H1 = {
   { match: "in [#Infinitive]", group: 0, tag: "Singular", reason: "in-age" },
   { match: "a [#Adjective] #Preposition", group: 0, tag: "Noun", reason: "a-minor-in" },
   { match: "#Determiner [#Singular] said", group: 0, tag: "Actor", reason: "the-actor-said" },
-  { match: `#Determiner #Noun [${Ey}] !(#Preposition|to|#Adverb)?`, group: 0, tag: "Noun", reason: "the-noun-sense" },
+  { match: `#Determiner #Noun [${Sy}] !(#Preposition|to|#Adverb)?`, group: 0, tag: "Noun", reason: "the-noun-sense" },
   { match: "[#PresentTense] (of|by|for) (a|an|the) #Noun #Copula", group: 0, tag: "Plural", reason: "photographs-of" },
   { match: "#Infinitive and [%Noun|Verb%]", group: 0, tag: "Infinitive", reason: "fight and win" },
   { match: "#Noun and [#Verb] and #Noun", group: 0, tag: "Noun", reason: "peace-and-flowers" },
@@ -7116,7 +7163,7 @@ const W1 = M1, H1 = {
   { match: "#Copula the [%Adj|Noun%] #Noun", group: 0, tag: "Adjective", reason: "the-premier-university" },
   { match: "i #Verb [me] #Noun", group: 0, tag: "Possessive", reason: "scottish-me" },
   { match: "[#PresentTense] (music|class|lesson|night|party|festival|league|ceremony)", group: 0, tag: "Noun", reason: "dance-music" }
-], Cy = [
+], My = [
   { match: "(this|that|the|a|an) [#Gerund #Infinitive]", group: 0, tag: "Singular", reason: "the-planning-process" },
   { match: "(that|the) [#Gerund #PresentTense]", group: 0, ifNo: "#Copula", tag: "Plural", reason: "the-paving-stones" },
   { match: "#Determiner [#Gerund] #Noun", group: 0, tag: "Adjective", reason: "the-gerund-noun" },
@@ -7127,7 +7174,7 @@ const W1 = M1, H1 = {
   { match: "#Singular for [%Noun|Gerund%]", group: 0, tag: "Gerund", reason: "noun-for-gerund" },
   { match: "#Comparative (for|at) [%Noun|Gerund%]", group: 0, tag: "Gerund", reason: "better-for-gerund" },
   { match: "#PresentTense the [#Gerund]", group: 0, tag: "Noun", reason: "keep-the-touching" }
-], Dy = [
+], Wy = [
   { match: "#Infinitive (this|that|the) [#Infinitive]", group: 0, tag: "Noun", reason: "do-this-dance" },
   { match: "#Gerund #Determiner [#Infinitive]", group: 0, tag: "Noun", reason: "running-a-show" },
   { match: "#Determiner (only|further|just|more|backward) [#Infinitive]", group: 0, tag: "Noun", reason: "the-only-reason" },
@@ -7205,11 +7252,11 @@ const W1 = M1, H1 = {
   { match: "#Determiner [%Adj|Noun%] #Noun", group: 0, tag: "Adjective", notIf: "(#Pronoun|#Possessive|#ProperNoun)", reason: "the-individual-goals" },
   { match: "[%Noun|Verb%] or #Infinitive", group: 0, tag: "Infinitive", reason: "work-or-prepare" },
   { match: "to #Infinitive [#PresentTense]", group: 0, tag: "Noun", notIf: "(#Gerund|#Copula|help)", reason: "to-give-thanks" }
-], Oy = [
+], Hy = [
   { match: "#Money and #Money #Currency?", tag: "Money", reason: "money-and-money" },
   { match: "#Value #Currency [and] #Value (cents|ore|centavos|sens)", group: 0, tag: "money", reason: "and-5-cents" },
   { match: "#Value (mark|rand|won|rub|ore)", tag: "#Money #Currency", reason: "4 mark" }
-], Fy = [
+], Jy = [
   { match: "[(half|quarter)] of? (a|an)", group: 0, tag: "Fraction", reason: "millionth" },
   { match: "#Adverb [half]", group: 0, tag: "Fraction", reason: "nearly-half" },
   { match: "[half] the", group: 0, tag: "Fraction", reason: "half-the" },
@@ -7221,7 +7268,7 @@ const W1 = M1, H1 = {
   { match: "[(#NumericValue && #Ordinal)] of .", group: 0, tag: "Fraction", reason: "num-ordinal-of" },
   { match: "(a|one) #Cardinal?+ #Ordinal", tag: "Fraction", reason: "a-ordinal" },
   { match: "#Cardinal+ out? of every? #Cardinal", tag: "Fraction", reason: "out-of" }
-], Vy = [
+], _y = [
   { match: "#Cardinal [second]", tag: "Unit", reason: "one-second" },
   {
     match: "!once? [(a|an)] (#Duration|hundred|thousand|million|billion|trillion)",
@@ -7247,7 +7294,7 @@ const W1 = M1, H1 = {
   { match: "#Value #Unit [(per|an) (hr|hour|sec|second|min|minute)]", group: 0, tag: "Unit", reason: "12-miles-per-second" },
   { match: "#Value [(square|cubic)] #Unit", group: 0, tag: "Unit", reason: "square-miles" },
   { match: "^[#Value] (#Determiner|#Gerund)", group: 0, tag: "Expression", unTag: "Value", reason: "numbered-list" }
-], Gy = [
+], Ky = [
   { match: "#Copula [(#Noun|#PresentTense)] #LastName", group: 0, tag: "FirstName", reason: "copula-noun-lastname" },
   { match: "(sister|pope|brother|father|aunt|uncle|grandpa|grandfather|grandma) #ProperNoun", tag: "Person", reason: "lady-titlecase", safe: !0 },
   { match: "#FirstName [#Determiner #Noun] #LastName", group: 0, tag: "Person", reason: "first-noun-last" },
@@ -7290,7 +7337,7 @@ const W1 = M1, H1 = {
   { match: "#Honorific #Actor", tag: "Honorific", reason: "Lieutenant colonel" },
   { match: "(first|second|third|1st|2nd|3rd) #Actor", tag: "Honorific", reason: "first lady" },
   { match: "#Person #RomanNumeral", tag: "Person", reason: "louis-IV" }
-], By = [
+], qy = [
   { match: "%Person|Date% #Acronym? #ProperNoun", tag: "Person", reason: "jan-thierson" },
   { match: "%Person|Noun% #Acronym? #ProperNoun", tag: "Person", reason: "switch-person", safe: !0 },
   { match: "%Person|Noun% #Organization", tag: "Organization", reason: "olive-garden" },
@@ -7308,7 +7355,7 @@ const W1 = M1, H1 = {
   { match: "(#FirstName && !#Possessive) [#Singular] #Verb", group: 0, safe: !0, tag: "LastName", reason: "jack-layton" },
   { match: "^[#Singular] #Person #Verb", group: 0, safe: !0, tag: "Person", reason: "sherwood-anderson" },
   { match: "(a|an) [#Person]$", group: 0, unTag: "Person", reason: "a-warhol" }
-], zy = [
+], Uy = [
   {
     match: "#Copula (pretty|dead|full|well|sure) (#Adjective|#Noun)",
     tag: "#Copula #Adverb #Adjective",
@@ -7352,7 +7399,7 @@ const W1 = M1, H1 = {
   { match: "[(co|mis|de|inter|intra|pre|re|un|out|under|over|counter)] #Verb", group: 0, tag: ["Verb", "Prefix"], notIf: "(#Copula|#PhrasalVerb)", reason: "co-write" },
   { match: "#PastTense and [%Adj|Past%]", group: 0, tag: "PastTense", reason: "dressed-and-left" },
   { match: "[%Adj|Past%] and #PastTense", group: 0, tag: "PastTense", reason: "dressed-and-left" }
-], Sy = [
+], Ry = [
   { match: "will (#Adverb|not)+? [have] (#Adverb|not)+? #Verb", group: 0, tag: "Auxiliary", reason: "will-have-vb" },
   { match: "[#Copula] (#Adverb|not)+? (#Gerund|#PastTense)", group: 0, tag: "Auxiliary", reason: "copula-walking" },
   { match: "[(#Modal|did)+] (#Adverb|not)+? #Verb", group: 0, tag: "Auxiliary", reason: "modal-verb" },
@@ -7376,7 +7423,7 @@ const W1 = M1, H1 = {
   { match: "[be] #Gerund", group: 0, tag: "Auxiliary", reason: "be-walking" },
   { match: "[better] #PresentTense", group: 0, tag: "Modal", notIf: "(#Copula|#Gerund)", reason: "better-go" },
   { match: "even better", tag: "Adverb #Comparative", reason: "even-better" }
-], Ly = [
+], Qy = [
   { match: "(#Verb && @hasHyphen) up", tag: "PhrasalVerb", reason: "foo-up" },
   { match: "(#Verb && @hasHyphen) off", tag: "PhrasalVerb", reason: "foo-off" },
   { match: "(#Verb && @hasHyphen) over", tag: "PhrasalVerb", reason: "foo-over" },
@@ -7397,12 +7444,12 @@ const W1 = M1, H1 = {
     tag: "Adverb",
     reason: "phrasal-pronoun-advb"
   }
-], vn = "(i|we|they)", My = [
-  { match: "^do not? [#Infinitive #Particle?]", notIf: vn, group: 0, tag: "Imperative", reason: "do-eat" },
+], An = "(i|we|they)", Yy = [
+  { match: "^do not? [#Infinitive #Particle?]", notIf: An, group: 0, tag: "Imperative", reason: "do-eat" },
   { match: "^please do? not? [#Infinitive #Particle?]", group: 0, tag: "Imperative", reason: "please-go" },
   { match: "^just do? not? [#Infinitive #Particle?]", group: 0, tag: "Imperative", reason: "just-go" },
-  { match: "^[#Infinitive] it #Comparative", notIf: vn, group: 0, tag: "Imperative", reason: "do-it-better" },
-  { match: "^[#Infinitive] it (please|now|again|plz)", notIf: vn, group: 0, tag: "Imperative", reason: "do-it-please" },
+  { match: "^[#Infinitive] it #Comparative", notIf: An, group: 0, tag: "Imperative", reason: "do-it-better" },
+  { match: "^[#Infinitive] it (please|now|again|plz)", notIf: An, group: 0, tag: "Imperative", reason: "do-it-please" },
   { match: "^[#Infinitive] (#Adjective|#Adverb)$", group: 0, tag: "Imperative", notIf: "(so|such|rather|enough)", reason: "go-quickly" },
   { match: "^[#Infinitive] (up|down|over) #Determiner", group: 0, tag: "Imperative", reason: "turn-down" },
   { match: "^[#Infinitive] (your|my|the|a|an|any|each|every|some|more|with|on)", group: 0, notIf: "like", tag: "Imperative", reason: "eat-my-shorts" },
@@ -7430,17 +7477,17 @@ const W1 = M1, H1 = {
   { match: "^[%Noun|Verb%] to", group: 0, tag: "Imperative", reason: "commit-to" },
   { match: "^[#Infinitive] #Adjective? #Singular #Singular", group: 0, tag: "Imperative", reason: "maintain-eye-contact" },
   { match: "do not (forget|omit|neglect) to [#Infinitive]", group: 0, tag: "Imperative", reason: "do-not-forget" }
-], Wy = [
+], Xy = [
   { match: "(that|which) were [%Adj|Gerund%]", group: 0, tag: "Gerund", reason: "that-were-growing" },
   { match: "#Gerund [#Gerund] #Plural", group: 0, tag: "Adjective", reason: "hard-working-fam" }
-], Hy = [
+], Zy = [
   { match: "(got|were|was|is|are|am) (#PastTense|#Participle)", tag: "Passive", reason: "got-walked" },
   { match: "(was|were|is|are|am) being (#PastTense|#Participle)", tag: "Passive", reason: "was-being" },
   { match: "(had|have|has) been (#PastTense|#Participle)", tag: "Passive", reason: "had-been" },
   { match: "will be being? (#PastTense|#Participle)", tag: "Passive", reason: "will-be-cleaned" },
   { match: "#Noun [(#PastTense|#Participle)] by (the|a) #Noun", group: 0, tag: "Passive", reason: "suffered-by" }
 ];
-let Jy = [
+let eb = [
   { match: "u r", tag: "#Pronoun #Copula", reason: "u r" },
   { match: "#Noun [(who|whom)]", group: 0, tag: "Determiner", reason: "captain-who" },
   { match: "[had] #Noun+ #PastTense", group: 0, tag: "Condition", reason: "had-he" },
@@ -7462,7 +7509,7 @@ let Jy = [
   { match: "a [while]", group: 0, tag: "Noun", reason: "a-while" },
   { match: "guess who", tag: "#Infinitive #QuestionWord", reason: "guess-who" }
 ];
-const _y = Jy, Ky = [
+const tb = eb, nb = [
   { match: "#Noun (&|n) #Noun", tag: "Organization", reason: "Noun-&-Noun" },
   { match: "#Organization of the? #ProperNoun", tag: "Organization", reason: "org-of-place", safe: !0 },
   { match: "#Organization #Country", tag: "Organization", reason: "org-country" },
@@ -7475,7 +7522,7 @@ const _y = Jy, Ky = [
     reason: "global-org"
   },
   { match: "#Noun+ (public|private) school", tag: "School", reason: "noun-public-school" }
-], qy = [
+], rb = [
   {
     match: "(west|north|south|east|western|northern|southern|eastern)+ #Place",
     tag: "Region",
@@ -7514,7 +7561,7 @@ const _y = Jy, Ky = [
     tag: "Address",
     reason: "address-st"
   }
-], Uy = [
+], ob = [
   { match: "[so] #Noun", group: 0, tag: "Conjunction", reason: "so-conj" },
   {
     match: "[(who|what|where|why|how|when)] #Noun #Copula #Adverb? (#Verb|#Adjective)",
@@ -7539,7 +7586,7 @@ const _y = Jy, Ky = [
   { match: "[#QuestionWord] #Participle", group: 0, tag: "Preposition", reason: "when-stolen" },
   { match: "[how] (#Determiner|#Copula|#Modal|#PastTense)", group: 0, tag: "QuestionWord", reason: "how-is" },
   { match: "#Plural [(who|which|when)] .", group: 0, tag: "Preposition", reason: "people-who" }
-], Ry = [
+], ab = [
   { match: "holy (shit|fuck|hell)", tag: "Expression", reason: "swears-expression" },
   { match: "^[(well|so|okay|now)] !#Adjective?", group: 0, tag: "Expression", reason: "well-" },
   { match: "^come on", tag: "Expression", reason: "come-on" },
@@ -7549,123 +7596,123 @@ const _y = Jy, Ky = [
   { match: "^(like && @hasComma)", tag: "Expression", reason: "like-" },
   { match: "^[(dude|man|girl)] #Pronoun", group: 0, tag: "Expression", reason: "dude-i" }
 ];
-let Qy = [].concat(
-  Hy,
-  wy,
-  ky,
-  Ay,
-  Iy,
-  xy,
-  jy,
-  Ny,
+let ib = [].concat(
+  Zy,
   Ty,
-  Cy,
   Dy,
   Oy,
   Fy,
-  Vy,
   Gy,
-  By,
   zy,
-  $y,
-  Sy,
+  By,
   Ly,
   My,
   Wy,
+  Hy,
+  Jy,
   _y,
   Ky,
   qy,
   Uy,
-  Ry
+  Vy,
+  Ry,
+  Qy,
+  Yy,
+  Xy,
+  tb,
+  nb,
+  rb,
+  ob,
+  ab
 );
-const Yy = {
+const sb = {
   two: {
-    matches: Qy
+    matches: ib
   }
 };
-let wn = null;
-const Xy = function(e) {
+let $n = null;
+const lb = function(e) {
   const { world: t } = e, { model: n, methods: r } = t;
-  wn = wn || r.one.buildNet(n.two.matches, t);
+  $n = $n || r.one.buildNet(n.two.matches, t);
   let a = r.two.quickSplit(e.document).map((s) => {
     let l = s[0];
     return [l.index[0], l.index[1], l.index[1] + s.length];
   }), i = e.update(a);
-  return i.cache(), i.sweep(wn), e.uncache(), e;
-}, Zy = (e) => e.compute(["lexicon", "preTagger", "postTagger"]), eb = { postTagger: Xy, tagger: Zy }, tb = (e) => Math.round(e * 100) / 100;
-function nb(e) {
+  return i.cache(), i.sweep($n), e.uncache(), e;
+}, ub = (e) => e.compute(["lexicon", "preTagger", "postTagger"]), cb = { postTagger: lb, tagger: ub }, hb = (e) => Math.round(e * 100) / 100;
+function db(e) {
   e.prototype.confidence = function() {
     let t = 0, n = 0;
     return this.docs.forEach((r) => {
       r.forEach((o) => {
         n += 1, t += o.confidence || 1;
       });
-    }), n === 0 ? 1 : tb(t / n);
+    }), n === 0 ? 1 : hb(t / n);
   }, e.prototype.tagger = function() {
     return this.compute(["tagger"]);
   };
 }
-const rb = {
-  api: nb,
-  compute: eb,
-  model: Yy,
+const fb = {
+  api: db,
+  compute: cb,
+  model: sb,
   hooks: ["postTagger"]
-}, ob = rb, ab = function(e) {
+}, pb = fb, gb = function(e) {
   return Object.keys(e.hooks).filter((t) => !t.startsWith("#") && !t.startsWith("%"));
-}, ib = function(e, t) {
-  let n = ab(t);
+}, mb = function(e, t) {
+  let n = gb(t);
   if (n.length === 0)
     return e;
   e._cache || e.cache();
   let r = e._cache;
   return e.filter((o, a) => n.some((i) => r[a].has(i)));
-}, sb = ib, lb = function(e, t) {
+}, yb = mb, bb = function(e, t) {
   let n = t;
   typeof t == "string" && (n = this.buildNet([{ match: t }]));
-  let r = this.tokenize(e), o = sb(r, n);
+  let r = this.tokenize(e), o = yb(r, n);
   return o.found ? (o.compute(["index", "tagger"]), o.match(t)) : r.none();
-}, ub = lb, cb = {
+}, vb = bb, wb = {
   lib: {
-    lazy: ub
+    lazy: vb
   }
-}, hb = function(e, t) {
+}, Pb = function(e, t) {
   const n = e.methods.two.transform.verb.conjugate;
   let r = n(t, e.model);
   return e.has("#Gerund") ? r.Gerund : e.has("#PastTense") ? r.PastTense : e.has("#PresentTense") ? r.PresentTense : e.has("#Gerund") ? r.Gerund : t;
-}, db = function(e, t) {
+}, kb = function(e, t) {
   let n = t;
   return e.forEach((r) => {
-    r.has("#Infinitive") || (n = hb(r, t)), r.replaceWith(n);
+    r.has("#Infinitive") || (n = Pb(r, t)), r.replaceWith(n);
   }), e;
-}, fb = db, pb = function(e, t) {
+}, Ab = kb, $b = function(e, t) {
   let n = t;
   if (e.has("#Plural")) {
     const r = e.methods.two.transform.noun.toPlural;
     n = r(t, e.model);
   }
   e.replaceWith(n);
-}, gb = function(e, t) {
+}, Ib = function(e, t) {
   const { toAdverb: n } = e.methods.two.transform.adjective;
   let o = n(t);
   o && e.replaceWith(o);
-}, mb = function(e, t) {
+}, xb = function(e, t) {
   const { toComparative: n, toSuperlative: r } = e.methods.two.transform.adjective;
   let o = t;
   e.has("#Comparative") ? o = n(o, e.model) : e.has("#Superlative") && (o = r(o, e.model)), o && e.replaceWith(o);
-}, yb = function(e, t, n) {
+}, Nb = function(e, t, n) {
   let r = e.split(/ /g).map((a) => `{${a}}`).join(" "), o = this.match(r);
-  return n && (o = o.if(n)), o.has("#Verb") ? fb(o, t) : o.has("#Noun") ? pb(o, t) : o.has("#Adverb") ? gb(o, t) : o.has("#Adjective") ? mb(o, t) : this;
-}, bb = yb, vb = function(e) {
-  e.prototype.swap = bb;
-}, wb = {
-  api: vb
+  return n && (o = o.if(n)), o.has("#Verb") ? Ab(o, t) : o.has("#Noun") ? $b(o, t) : o.has("#Adverb") ? Ib(o, t) : o.has("#Adjective") ? xb(o, t) : this;
+}, jb = Nb, Eb = function(e) {
+  e.prototype.swap = jb;
+}, Tb = {
+  api: Eb
 };
-k.plugin(H1);
-k.plugin(vy);
-k.plugin(ob);
-k.plugin(cb);
-k.plugin(wb);
-const Pb = function(e) {
+P.plugin(Z1);
+P.plugin(Ey);
+P.plugin(pb);
+P.plugin(wb);
+P.plugin(Tb);
+const Cb = function(e) {
   let t = e.match("@hasComma");
   return t = t.filter((n) => {
     if (n.growLeft(".").wordCount() === 1 || n.growRight(". .").wordCount() === 1)
@@ -7673,16 +7720,16 @@ const Pb = function(e) {
     let r = n.grow(".");
     return r = r.ifNo("@hasComma @hasComma"), r = r.ifNo("@hasComma (and|or) ."), r = r.ifNo("(#City && @hasComma) #Country"), r = r.ifNo("(#WeekDay && @hasComma) #Date"), r = r.ifNo("(#Date+ && @hasComma) #Value"), r = r.ifNo("(#Adjective && @hasComma) #Adjective"), r.found;
   }), e.splitAfter(t);
-}, kb = function(e) {
+}, Db = function(e) {
   let t = e.parentheses();
   return t = t.filter((n) => n.wordCount() >= 3 && n.has("#Verb") && n.has("#Noun")), e.splitOn(t);
-}, Ab = function(e) {
+}, Ob = function(e) {
   let t = e.quotations();
   return t = t.filter((n) => n.wordCount() >= 3 && n.has("#Verb") && n.has("#Noun")), e.splitOn(t);
-}, Ib = function(e) {
+}, Fb = function(e) {
   let t = this;
-  return t = kb(t), t = Ab(t), t = Pb(t), t = t.splitAfter("(@hasEllipses|@hasSemicolon|@hasDash|@hasColon)"), t = t.splitAfter("^#Pronoun (said|says)"), t = t.splitBefore("(said|says) #ProperNoun$"), t = t.splitBefore(". . if .{4}"), t = t.splitBefore("and while"), t = t.splitBefore("now that"), t = t.splitBefore("ever since"), t = t.splitBefore("(supposing|although)"), t = t.splitBefore("even (while|if|though)"), t = t.splitBefore("(whereas|whose)"), t = t.splitBefore("as (though|if)"), t = t.splitBefore("(til|until)"), typeof e == "number" && (t = t.get(e)), t;
-}, $b = Ib, xb = function(e) {
+  return t = Db(t), t = Ob(t), t = Cb(t), t = t.splitAfter("(@hasEllipses|@hasSemicolon|@hasDash|@hasColon)"), t = t.splitAfter("^#Pronoun (said|says)"), t = t.splitBefore("(said|says) #ProperNoun$"), t = t.splitBefore(". . if .{4}"), t = t.splitBefore("and while"), t = t.splitBefore("now that"), t = t.splitBefore("ever since"), t = t.splitBefore("(supposing|although)"), t = t.splitBefore("even (while|if|though)"), t = t.splitBefore("(whereas|whose)"), t = t.splitBefore("as (though|if)"), t = t.splitBefore("(til|until)"), typeof e == "number" && (t = t.get(e)), t;
+}, Vb = Fb, Gb = function(e) {
   let t = [], n = null, r = null;
   e.docs.forEach((a) => {
     a.forEach((i) => {
@@ -7691,7 +7738,7 @@ const Pb = function(e) {
   }), n && t.push(n);
   let o = e.update(t);
   return o = o.map((a) => a.has("<Noun>") ? a.nouns() : a), o;
-}, Nb = xb, jb = function(e) {
+}, Bb = Gb, zb = function(e) {
   class t extends e {
     constructor(r, o, a) {
       super(r, o, a), this.viewType = "Chunks";
@@ -7717,18 +7764,18 @@ const Pb = function(e) {
     }
   }
   e.prototype.chunks = function(n) {
-    let r = Nb(this);
+    let r = Bb(this);
     return r = r.getNth(n), new t(this.document, r.pointer);
-  }, e.prototype.clauses = $b;
-}, Eb = jb, Bo = {
+  }, e.prototype.clauses = Vb;
+}, Sb = zb, Ko = {
   this: "Noun",
   then: "Pivot"
-}, Tb = function(e) {
+}, Lb = function(e) {
   for (let t = 0; t < e.length; t += 1)
     for (let n = 0; n < e[t].length; n += 1) {
       let r = e[t][n];
-      if (Bo.hasOwnProperty(r.normal) === !0) {
-        r.chunk = Bo[r.normal];
+      if (Ko.hasOwnProperty(r.normal) === !0) {
+        r.chunk = Ko[r.normal];
         continue;
       }
       if (r.tags.has("Verb")) {
@@ -7748,7 +7795,7 @@ const Pb = function(e) {
         continue;
       }
     }
-}, Cb = Tb, Db = function(e) {
+}, Mb = Lb, Wb = function(e) {
   for (let t = 0; t < e.length; t += 1)
     for (let n = 0; n < e[t].length; n += 1) {
       let r = e[t][n];
@@ -7789,7 +7836,7 @@ const Pb = function(e) {
         }
       }
     }
-}, Ob = Db, Fb = [
+}, Hb = Wb, Jb = [
   { match: "[that] #Determiner #Noun", group: 0, chunk: "Pivot" },
   { match: "#PastTense [that]", group: 0, chunk: "Pivot" },
   { match: "[so] #Determiner", group: 0, chunk: "Pivot" },
@@ -7813,23 +7860,23 @@ const Pb = function(e) {
   { match: "#Plural [in] #Determiner? #Noun", group: 0, chunk: "Pivot" },
   { match: "#Noun and #Determiner? #Noun", notIf: "(#Possessive|#Pronoun)", chunk: "Noun" }
 ];
-let Pn = null;
-const Vb = function(e, t, n) {
+let In = null;
+const _b = function(e, t, n) {
   const { methods: r } = n;
-  Pn = Pn || r.one.buildNet(Fb, n), e.sweep(Pn);
-}, Gb = Vb, kn = function(e, t) {
+  In = In || r.one.buildNet(Jb, n), e.sweep(In);
+}, Kb = _b, xn = function(e, t) {
   if ((typeof process > "u" || !process.env ? self.env || {} : process.env).DEBUG_CHUNKS) {
     let r = (e.normal + "'").padEnd(8);
     console.log(`  | '${r}  →  \x1B[34m${t.padEnd(12)}\x1B[0m \x1B[2m -fallback- \x1B[0m`);
   }
   e.chunk = t;
-}, Bb = function(e) {
+}, qb = function(e) {
   for (let t = 0; t < e.length; t += 1)
     for (let n = 0; n < e[t].length; n += 1) {
       let r = e[t][n];
-      r.chunk === void 0 && (r.tags.has("Conjunction") || r.tags.has("Preposition") ? kn(r, "Pivot") : r.tags.has("Adverb") ? kn(r, "Verb") : r.chunk = "Noun");
+      r.chunk === void 0 && (r.tags.has("Conjunction") || r.tags.has("Preposition") ? xn(r, "Pivot") : r.tags.has("Adverb") ? xn(r, "Verb") : r.chunk = "Noun");
     }
-}, zb = Bb, Sb = function(e) {
+}, Ub = qb, Rb = function(e) {
   let t = [], n = null;
   e.forEach((r) => {
     for (let o = 0; o < r.length; o += 1) {
@@ -7839,14 +7886,14 @@ const Vb = function(e, t, n) {
   }), t.forEach((r) => {
     r.chunk === "Verb" && (r.terms.find((a) => a.tags.has("Verb")) || r.terms.forEach((a) => a.chunk = null));
   });
-}, Lb = Sb, Mb = function(e) {
+}, Qb = Rb, Yb = function(e) {
   const { document: t, world: n } = e;
-  Cb(t), Ob(t), Gb(e, t, n), zb(t), Lb(t);
-}, Wb = { chunks: Mb }, Hb = {
-  compute: Wb,
-  api: Eb,
+  Mb(t), Hb(t), Kb(e, t, n), Ub(t), Qb(t);
+}, Xb = { chunks: Yb }, Zb = {
+  compute: Xb,
+  api: Sb,
   hooks: ["chunks"]
-}, Bt = /\./g, Jb = function(e) {
+}, Lt = /\./g, ev = function(e) {
   class t extends e {
     constructor(r, o, a) {
       super(r, o, a), this.viewType = "Acronyms";
@@ -7854,14 +7901,14 @@ const Vb = function(e, t, n) {
     strip() {
       return this.docs.forEach((r) => {
         r.forEach((o) => {
-          o.text = o.text.replace(Bt, ""), o.normal = o.normal.replace(Bt, "");
+          o.text = o.text.replace(Lt, ""), o.normal = o.normal.replace(Lt, "");
         });
       }), this;
     }
     addPeriods() {
       return this.docs.forEach((r) => {
         r.forEach((o) => {
-          o.text = o.text.replace(Bt, ""), o.normal = o.normal.replace(Bt, ""), o.text = o.text.split("").join(".") + ".", o.normal = o.normal.split("").join(".") + ".";
+          o.text = o.text.replace(Lt, ""), o.normal = o.normal.replace(Lt, ""), o.text = o.text.split("").join(".") + ".", o.normal = o.normal.split("").join(".") + ".";
         });
       }), this;
     }
@@ -7870,11 +7917,11 @@ const Vb = function(e, t, n) {
     let r = this.match("#Acronym");
     return r = r.getNth(n), new t(r.document, r.pointer);
   };
-}, _b = Jb, _e = function(e) {
+}, tv = ev, Ye = function(e) {
   const { fromComparative: t, fromSuperlative: n } = e.methods.two.transform.adjective;
   let r = e.text("normal");
   return e.has("#Comparative") ? t(r, e.model) : e.has("#Superlative") ? n(r, e.model) : r;
-}, Kb = function(e) {
+}, nv = function(e) {
   class t extends e {
     constructor(r, o, a) {
       super(r, o, a), this.viewType = "Adjectives";
@@ -7882,7 +7929,7 @@ const Vb = function(e, t, n) {
     json(r = {}) {
       const { toAdverb: o, toNoun: a, toSuperlative: i, toComparative: s } = this.methods.two.transform.adjective;
       return r.normal = !0, this.map((l) => {
-        let u = l.toView().json(r)[0] || {}, c = _e(l);
+        let u = l.toView().json(r)[0] || {}, c = Ye(l);
         return u.adjective = {
           adverb: o(c),
           noun: a(c),
@@ -7897,7 +7944,7 @@ const Vb = function(e, t, n) {
     conjugate(r) {
       const { toComparative: o, toSuperlative: a, toNoun: i, toAdverb: s } = this.methods.two.transform.adjective;
       return this.getNth(r).map((l) => {
-        let u = _e(l);
+        let u = Ye(l);
         return {
           Adjective: u,
           Comparative: o(u, this.model),
@@ -7910,28 +7957,28 @@ const Vb = function(e, t, n) {
     toComparative(r) {
       const { toComparative: o } = this.methods.two.transform.adjective;
       return this.getNth(r).map((a) => {
-        let i = _e(a), s = o(i, this.model);
+        let i = Ye(a), s = o(i, this.model);
         return a.replaceWith(s);
       });
     }
     toSuperlative(r) {
       const { toSuperlative: o } = this.methods.two.transform.adjective;
       return this.getNth(r).map((a) => {
-        let i = _e(a), s = o(i, this.model);
+        let i = Ye(a), s = o(i, this.model);
         return a.replaceWith(s);
       });
     }
     toAdverb(r) {
       const { toAdverb: o } = this.methods.two.transform.adjective;
       return this.getNth(r).map((a) => {
-        let i = _e(a), s = o(i, this.model);
+        let i = Ye(a), s = o(i, this.model);
         return a.replaceWith(s);
       });
     }
     toNoun(r) {
       const { toNoun: o } = this.methods.two.transform.adjective;
       return this.getNth(r).map((a) => {
-        let i = _e(a), s = o(i, this.model);
+        let i = Ye(a), s = o(i, this.model);
         return a.replaceWith(s);
       });
     }
@@ -7946,7 +7993,7 @@ const Vb = function(e, t, n) {
     let r = this.match("#Comparative");
     return r = r.getNth(n), new t(r.document, r.pointer);
   };
-}, qb = Kb, Ub = function(e) {
+}, rv = nv, ov = function(e) {
   class t extends e {
     constructor(r, o, a) {
       super(r, o, a), this.viewType = "Adverbs";
@@ -7965,18 +8012,18 @@ const Vb = function(e, t, n) {
     let r = this.match("#Adverb");
     return r = r.getNth(n), new t(r.document, r.pointer);
   };
-}, Rb = Ub, $i = /\(/, xi = /\)/, Qb = function(e, t) {
+}, av = ov, Fi = /\(/, Vi = /\)/, iv = function(e, t) {
   for (; t < e.length; t += 1)
-    if (e[t].post && xi.test(e[t].post))
+    if (e[t].post && Vi.test(e[t].post))
       return t;
   return null;
-}, Yb = function(e) {
+}, sv = function(e) {
   let t = [];
   return e.docs.forEach((n) => {
     for (let r = 0; r < n.length; r += 1) {
       let o = n[r];
-      if (o.pre && $i.test(o.pre)) {
-        let a = Qb(n, r);
+      if (o.pre && Fi.test(o.pre)) {
+        let a = iv(n, r);
         if (a !== null) {
           let [i, s] = n[r].index;
           t.push([i, s, a + 1, n[r].id]), r = a;
@@ -7984,29 +8031,29 @@ const Vb = function(e, t, n) {
       }
     }
   }), e.update(t);
-}, Xb = function(e) {
+}, lv = function(e) {
   return e.docs.forEach((t) => {
-    t[0].pre = t[0].pre.replace($i, "");
+    t[0].pre = t[0].pre.replace(Fi, "");
     let n = t[t.length - 1];
-    n.post = n.post.replace(xi, "");
+    n.post = n.post.replace(Vi, "");
   }), e;
-}, Zb = function(e) {
+}, uv = function(e) {
   class t extends e {
     constructor(r, o, a) {
       super(r, o, a), this.viewType = "Possessives";
     }
     strip() {
-      return Xb(this);
+      return lv(this);
     }
   }
   e.prototype.parentheses = function(n) {
-    let r = Yb(this);
+    let r = sv(this);
     return r = r.getNth(n), new t(r.document, r.pointer);
   };
-}, ev = Zb, zo = /'s$/, tv = function(e) {
+}, cv = uv, qo = /'s$/, hv = function(e) {
   let t = e.match("#Possessive+");
   return t.has("#Person") && (t = t.growLeft("#Person+")), t.has("#Place") && (t = t.growLeft("#Place+")), t.has("#Organization") && (t = t.growLeft("#Organization+")), t;
-}, nv = function(e) {
+}, dv = function(e) {
   class t extends e {
     constructor(r, o, a) {
       super(r, o, a), this.viewType = "Possessives";
@@ -8014,16 +8061,16 @@ const Vb = function(e, t, n) {
     strip() {
       return this.docs.forEach((r) => {
         r.forEach((o) => {
-          o.text = o.text.replace(zo, ""), o.normal = o.normal.replace(zo, "");
+          o.text = o.text.replace(qo, ""), o.normal = o.normal.replace(qo, "");
         });
       }), this;
     }
   }
   e.prototype.possessives = function(n) {
-    let r = tv(this);
+    let r = hv(this);
     return r = r.getNth(n), new t(r.document, r.pointer);
   };
-}, rv = nv, en = {
+}, fv = dv, rn = {
   '"': '"',
   "＂": "＂",
   "'": "'",
@@ -8042,22 +8089,22 @@ const Vb = function(e, t, n) {
   "〝": "〞",
   "`": "´",
   "〟": "〞"
-}, dr = RegExp("(" + Object.keys(en).join("|") + ")"), ov = RegExp("(" + Object.values(en).join("|") + ")"), av = function(e, t) {
-  const n = e[t].pre.match(dr)[0] || "";
-  if (!n || !en[n])
+}, br = RegExp("(" + Object.keys(rn).join("|") + ")"), pv = RegExp("(" + Object.values(rn).join("|") + ")"), gv = function(e, t) {
+  const n = e[t].pre.match(br)[0] || "";
+  if (!n || !rn[n])
     return null;
-  const r = en[n];
+  const r = rn[n];
   for (; t < e.length; t += 1)
     if (e[t].post && e[t].post.match(r))
       return t;
   return null;
-}, iv = function(e) {
+}, mv = function(e) {
   let t = [];
   return e.docs.forEach((n) => {
     for (let r = 0; r < n.length; r += 1) {
       let o = n[r];
-      if (o.pre && dr.test(o.pre)) {
-        let a = av(n, r);
+      if (o.pre && br.test(o.pre)) {
+        let a = gv(n, r);
         if (a !== null) {
           let [i, s] = n[r].index;
           t.push([i, s, a + 1, n[r].id]), r = a;
@@ -8065,29 +8112,29 @@ const Vb = function(e, t, n) {
       }
     }
   }), e.update(t);
-}, sv = function(e) {
+}, yv = function(e) {
   e.docs.forEach((t) => {
-    t[0].pre = t[0].pre.replace(dr, "");
+    t[0].pre = t[0].pre.replace(br, "");
     let n = t[t.length - 1];
-    n.post = n.post.replace(ov, "");
+    n.post = n.post.replace(pv, "");
   });
-}, lv = function(e) {
+}, bv = function(e) {
   class t extends e {
     constructor(r, o, a) {
       super(r, o, a), this.viewType = "Possessives";
     }
     strip() {
-      return sv(this);
+      return yv(this);
     }
   }
   e.prototype.quotations = function(n) {
-    let r = iv(this);
+    let r = mv(this);
     return r = r.getNth(n), new t(r.document, r.pointer);
   };
-}, uv = lv, cv = function(e) {
+}, vv = bv, wv = function(e) {
   let t = this.splitAfter("@hasComma");
   return t = t.match("#PhoneNumber+"), t = t.getNth(e), t;
-}, hv = [
+}, Pv = [
   ["hyphenated", "@hasHyphen ."],
   ["hashTags", "#HashTag"],
   ["emails", "#Email"],
@@ -8100,44 +8147,44 @@ const Vb = function(e, t, n) {
   ["abbreviations", "#Abbreviation"],
   ["honorifics", "#Honorific"]
 ];
-let dv = [
+let kv = [
   ["emojis", "emoji"],
   ["atmentions", "atMentions"]
 ];
-const fv = function(e) {
-  hv.forEach((t) => {
+const Av = function(e) {
+  Pv.forEach((t) => {
     e.prototype[t[0]] = function(n) {
       let r = this.match(t[1]);
       return typeof n == "number" ? r.get(n) : r;
     };
-  }), e.prototype.phoneNumbers = cv, dv.forEach((t) => {
+  }), e.prototype.phoneNumbers = wv, kv.forEach((t) => {
     e.prototype[t[0]] = e.prototype[t[1]];
   });
-}, pv = fv, gv = {
+}, $v = Av, Iv = {
   api: function(e) {
-    _b(e), qb(e), Rb(e), ev(e), rv(e), uv(e), pv(e);
+    tv(e), rv(e), av(e), cv(e), fv(e), vv(e), $v(e);
   }
-}, zt = function(e, t) {
+}, Mt = function(e, t) {
   e.docs.forEach((n) => {
     n.forEach(t);
   });
-}, So = {
+}, Uo = {
   case: (e) => {
-    zt(e, (t) => {
+    Mt(e, (t) => {
       t.text = t.text.toLowerCase();
     });
   },
   unicode: (e) => {
     const t = e.world, n = t.methods.one.killUnicode;
-    zt(e, (r) => r.text = n(r.text, t));
+    Mt(e, (r) => r.text = n(r.text, t));
   },
   whitespace: (e) => {
-    zt(e, (t) => {
+    Mt(e, (t) => {
       t.post = t.post.replace(/\s+/g, " "), t.post = t.post.replace(/\s([.,?!:;])/g, "$1"), t.pre = t.pre.replace(/\s+/g, "");
     });
   },
   punctuation: (e) => {
-    zt(e, (r) => {
+    Mt(e, (r) => {
       r.post = r.post.replace(/[–—-]/g, " "), r.post = r.post.replace(/[,:;]/g, ""), r.post = r.post.replace(/\.{2,}/g, ""), r.post = r.post.replace(/\?{2,}/g, "?"), r.post = r.post.replace(/!{2,}/g, "!"), r.post = r.post.replace(/\?!+/g, "?");
     });
     let t = e.docs, n = t[t.length - 1];
@@ -8179,24 +8226,24 @@ const fv = function(e) {
   numbers: (e) => {
     e.numbers().toNumber();
   }
-}, An = (e) => e.split("|").reduce((t, n) => (t[n] = !0, t), {}), In = "unicode|punctuation|whitespace|acronyms", Lo = "|case|contractions|parentheses|quotations|emoji|honorifics", mv = "|possessives|adverbs|nouns|verbs", yv = {
-  light: An(In),
-  medium: An(In + Lo),
-  heavy: An(In + Lo + mv)
+}, Nn = (e) => e.split("|").reduce((t, n) => (t[n] = !0, t), {}), jn = "unicode|punctuation|whitespace|acronyms", Ro = "|case|contractions|parentheses|quotations|emoji|honorifics", xv = "|possessives|adverbs|nouns|verbs", Nv = {
+  light: Nn(jn),
+  medium: Nn(jn + Ro),
+  heavy: Nn(jn + Ro + xv)
 };
-function bv(e) {
+function jv(e) {
   e.prototype.normalize = function(t = "light") {
-    return typeof t == "string" && (t = yv[t]), Object.keys(t).forEach((n) => {
-      So.hasOwnProperty(n) && So[n](this, t[n]);
+    return typeof t == "string" && (t = Nv[t]), Object.keys(t).forEach((n) => {
+      Uo.hasOwnProperty(n) && Uo[n](this, t[n]);
     }), this;
   };
 }
-const vv = {
-  api: bv
-}, wv = function(e) {
+const Ev = {
+  api: jv
+}, Tv = function(e) {
   let t = e.clauses().match("<Noun>"), n = t.match("@hasComma");
   return n = n.not("#Place"), n.found && (t = t.splitAfter(n)), t = t.splitOn("#Expression"), t = t.splitOn("(he|she|we|you|they|i)"), t = t.splitOn("(#Noun|#Adjective) [(he|him|she|it)]", 0), t = t.splitOn("[(he|him|she|it)] (#Determiner|#Value)", 0), t = t.splitBefore("#Noun [(the|a|an)] #Adjective? #Noun", 0), t = t.splitOn("[(here|there)] #Noun", 0), t = t.splitOn("[#Noun] (here|there)", 0), t = t.splitBefore("(our|my|their|your)"), t = t.splitOn("#Noun [#Determiner]", 0), t = t.if("#Noun"), t;
-}, Pv = wv, Mo = [
+}, Cv = Tv, Qo = [
   "after",
   "although",
   "as if",
@@ -8232,103 +8279,103 @@ const vv = {
   "whom",
   "whomever",
   "whose"
-], kv = function(e) {
+], Dv = function(e) {
   if (e.before("#Preposition$").found)
     return !0;
   if (!e.before().found)
     return !1;
-  for (let n = 0; n < Mo.length; n += 1)
-    if (e.has(Mo[n]))
+  for (let n = 0; n < Qo.length; n += 1)
+    if (e.has(Qo[n]))
       return !0;
   return !1;
-}, Av = kv, Iv = "(#Pronoun|#Place|#Value|#Person|#Uncountable|#Month|#WeekDay|#Holiday|#Possessive)", $v = function(e, t) {
+}, Ov = Dv, Fv = "(#Pronoun|#Place|#Value|#Person|#Uncountable|#Month|#WeekDay|#Holiday|#Possessive)", Vv = function(e, t) {
   if (e.has("#Plural") || e.has("#Noun and #Noun") || e.has("(we|they)"))
     return !0;
-  if (t.has(Iv) === !0 || e.has("#Singular"))
+  if (t.has(Fv) === !0 || e.has("#Singular"))
     return !1;
   let n = t.text("normal");
   return n.length > 3 && n.endsWith("s") && !n.endsWith("ss");
-}, xv = $v, Nv = function(e) {
+}, Gv = Vv, Bv = function(e) {
   let t = e.clone();
   return t = t.match("#Noun+"), t = t.remove("(#Adjective|#Preposition|#Determiner|#Value)"), t = t.not("#Possessive"), t = t.first(), t.found ? t : e;
-}, jv = function(e) {
-  let t = Nv(e);
+}, zv = function(e) {
+  let t = Bv(e);
   return {
     determiner: e.match("#Determiner").eq(0),
     adjectives: e.match("#Adjective"),
     number: e.values(),
-    isPlural: xv(e, t),
-    isSubordinate: Av(e),
+    isPlural: Gv(e, t),
+    isSubordinate: Ov(e),
     root: t
   };
-}, ze = jv, Wo = (e) => e.text(), Ev = (e) => e.json({ terms: !1, normal: !0 }).map((t) => t.normal), Tv = function(e) {
+}, Me = zv, Yo = (e) => e.text(), Sv = (e) => e.json({ terms: !1, normal: !0 }).map((t) => t.normal), Lv = function(e) {
   let t = null;
   if (!e.found)
     return t;
   let n = e.values(0);
   return n.found ? (n.parse()[0] || {}).num : t;
-}, Cv = function(e) {
-  let t = ze(e);
+}, Mv = function(e) {
+  let t = Me(e);
   return {
-    root: Wo(t.root),
-    number: Tv(t.number),
-    determiner: Wo(t.determiner),
-    adjectives: Ev(t.adjectives),
+    root: Yo(t.root),
+    number: Lv(t.number),
+    determiner: Yo(t.determiner),
+    adjectives: Sv(t.adjectives),
     isPlural: t.isPlural,
     isSubordinate: t.isSubordinate
   };
-}, Dv = Cv, Ov = { tags: !0 }, Fv = function(e) {
+}, Wv = Mv, Hv = { tags: !0 }, Jv = function(e) {
   let { root: t } = e;
   return !t.has("^(#Uncountable|#Possessive|#ProperNoun|#Place|#Pronoun|#Acronym)+$");
-}, Vv = function(e, t) {
-  if (t.isPlural === !0 || !Fv(t))
+}, _v = function(e, t) {
+  if (t.isPlural === !0 || !Jv(t))
     return e;
   const { methods: n, model: r } = e.world, { toPlural: o } = n.two.transform.noun;
   let a = t.root.text({ keepPunct: !1 }), i = o(a, r);
-  e.match(t.root).replaceWith(i, Ov).tag("Plural", "toPlural"), t.determiner.has("(a|an)") && e.remove(t.determiner);
+  e.match(t.root).replaceWith(i, Hv).tag("Plural", "toPlural"), t.determiner.has("(a|an)") && e.remove(t.determiner);
   let s = t.root.after("not? #Adverb+? [#Copula]", 0);
   return s.found && (s.has("is") ? e.replace(s, "are") : s.has("was") && e.replace(s, "were")), e;
-}, Gv = Vv, Bv = { tags: !0 }, zv = function(e, t) {
+}, Kv = _v, qv = { tags: !0 }, Uv = function(e, t) {
   if (t.isPlural === !1)
     return e;
   const { methods: n, model: r } = e.world, { toSingular: o } = n.two.transform.noun;
   let a = t.root.text("normal"), i = o(a, r);
-  return e.replace(t.root, i, Bv).tag("Singular", "toPlural"), e;
-}, Sv = zv, Lv = function(e) {
+  return e.replace(t.root, i, qv).tag("Singular", "toPlural"), e;
+}, Rv = Uv, Qv = function(e) {
   class t extends e {
     constructor(r, o, a) {
       super(r, o, a), this.viewType = "Nouns";
     }
     parse(r) {
-      return this.getNth(r).map(ze);
+      return this.getNth(r).map(Me);
     }
     json(r) {
       let o = typeof r == "object" ? r : {};
       return this.getNth(r).map((a) => {
         let i = a.toView().json(o)[0] || {};
-        return o && o.noun !== !0 && (i.noun = Dv(a)), i;
+        return o && o.noun !== !0 && (i.noun = Wv(a)), i;
       }, []);
     }
     isPlural(r) {
-      return this.filter((a) => ze(a).isPlural).getNth(r);
+      return this.filter((a) => Me(a).isPlural).getNth(r);
     }
     isSingular(r) {
-      return this.filter((a) => !ze(a).isPlural).getNth(r);
+      return this.filter((a) => !Me(a).isPlural).getNth(r);
     }
     adjectives(r) {
       let o = this.update([]);
       return this.forEach((a) => {
-        let i = ze(a).adjectives;
+        let i = Me(a).adjectives;
         i.found && (o = o.concat(i));
       }), o.getNth(r);
     }
     toPlural(r) {
-      return this.getNth(r).map((o) => Gv(o, ze(o)));
+      return this.getNth(r).map((o) => Kv(o, Me(o)));
     }
     toSingular(r) {
       return this.getNth(r).map((o) => {
-        let a = ze(o);
-        return Sv(o, a);
+        let a = Me(o);
+        return Rv(o, a);
       });
     }
     update(r) {
@@ -8337,15 +8384,15 @@ const vv = {
     }
   }
   e.prototype.nouns = function(n) {
-    let r = Pv(this);
+    let r = Cv(this);
     return r = r.getNth(n), new t(this.document, r.pointer);
   };
-}, Mv = Lv, Wv = {
-  api: Mv
-}, Hv = function(e, t) {
+}, Yv = Qv, Xv = {
+  api: Yv
+}, Zv = function(e, t) {
   let n = e.match("#Fraction+");
   return n = n.filter((r) => !r.lookBehind("#Value and$").found), n = n.notIf("#Value seconds"), typeof t == "number" && (n = n.eq(t)), n;
-}, Jv = Hv, _v = (e) => {
+}, e2 = Zv, t2 = (e) => {
   const t = [
     {
       reg: /^(minus|negative)[\s-]/i,
@@ -8366,7 +8413,7 @@ const vv = {
     amount: 1,
     str: e
   };
-}, Kv = _v, O = {
+}, n2 = t2, F = {
   ones: {
     zeroth: 0,
     first: 1,
@@ -8452,144 +8499,144 @@ const vv = {
     septillion: 1e24,
     grand: 1e3
   }
-}, qv = (e, t) => {
-  if (O.ones.hasOwnProperty(e)) {
+}, r2 = (e, t) => {
+  if (F.ones.hasOwnProperty(e)) {
     if (t.ones || t.teens)
       return !1;
-  } else if (O.teens.hasOwnProperty(e)) {
+  } else if (F.teens.hasOwnProperty(e)) {
     if (t.ones || t.teens || t.tens)
       return !1;
-  } else if (O.tens.hasOwnProperty(e) && (t.ones || t.teens || t.tens))
+  } else if (F.tens.hasOwnProperty(e) && (t.ones || t.teens || t.tens))
     return !1;
   return !0;
-}, Uv = qv, Rv = function(e) {
+}, o2 = r2, a2 = function(e) {
   let t = "0.";
   for (let n = 0; n < e.length; n++) {
     let r = e[n];
-    if (O.ones.hasOwnProperty(r) === !0)
-      t += O.ones[r];
-    else if (O.teens.hasOwnProperty(r) === !0)
-      t += O.teens[r];
-    else if (O.tens.hasOwnProperty(r) === !0)
-      t += O.tens[r];
+    if (F.ones.hasOwnProperty(r) === !0)
+      t += F.ones[r];
+    else if (F.teens.hasOwnProperty(r) === !0)
+      t += F.teens[r];
+    else if (F.tens.hasOwnProperty(r) === !0)
+      t += F.tens[r];
     else if (/^[0-9]$/.test(r) === !0)
       t += r;
     else
       return 0;
   }
   return parseFloat(t);
-}, Qv = Rv, Yv = (e) => (e = e.replace(/1st$/, "1"), e = e.replace(/2nd$/, "2"), e = e.replace(/3rd$/, "3"), e = e.replace(/([4567890])r?th$/, "$1"), e = e.replace(/^[$€¥£¢]/, ""), e = e.replace(/[%$€¥£¢]$/, ""), e = e.replace(/,/g, ""), e = e.replace(/([0-9])([a-z\u00C0-\u00FF]{1,2})$/, "$1"), e), Xv = Yv, Zv = /^([0-9,. ]+)\/([0-9,. ]+)$/, Ho = {
+}, i2 = a2, s2 = (e) => (e = e.replace(/1st$/, "1"), e = e.replace(/2nd$/, "2"), e = e.replace(/3rd$/, "3"), e = e.replace(/([4567890])r?th$/, "$1"), e = e.replace(/^[$€¥£¢]/, ""), e = e.replace(/[%$€¥£¢]$/, ""), e = e.replace(/,/g, ""), e = e.replace(/([0-9])([a-z\u00C0-\u00FF]{1,2})$/, "$1"), e), l2 = s2, u2 = /^([0-9,. ]+)\/([0-9,. ]+)$/, Xo = {
   "a few": 3,
   "a couple": 2,
   "a dozen": 12,
   "two dozen": 24,
   zero: 0
-}, St = (e) => Object.keys(e).reduce((t, n) => (t += e[n], t), 0), e2 = function(e) {
-  if (Ho.hasOwnProperty(e) === !0)
-    return Ho[e];
+}, Wt = (e) => Object.keys(e).reduce((t, n) => (t += e[n], t), 0), c2 = function(e) {
+  if (Xo.hasOwnProperty(e) === !0)
+    return Xo[e];
   if (e === "a" || e === "an")
     return 1;
-  const t = Kv(e);
+  const t = n2(e);
   e = t.str;
   let n = null, r = {}, o = 0, a = !1;
   const i = e.split(/[ -]/);
   for (let s = 0; s < i.length; s++) {
     let l = i[s];
-    if (l = Xv(l), !l || l === "and")
+    if (l = l2(l), !l || l === "and")
       continue;
     if (l === "-" || l === "negative") {
       a = !0;
       continue;
     }
     if (l.charAt(0) === "-" && (a = !0, l = l.substring(1)), l === "point")
-      return o += St(r), o += Qv(i.slice(s + 1, i.length)), o *= t.amount, o;
-    const u = l.match(Zv);
+      return o += Wt(r), o += i2(i.slice(s + 1, i.length)), o *= t.amount, o;
+    const u = l.match(u2);
     if (u) {
       const c = parseFloat(u[1].replace(/[, ]/g, "")), h = parseFloat(u[2].replace(/[, ]/g, ""));
       h && (o += c / h || 0);
       continue;
     }
-    if (O.tens.hasOwnProperty(l) && r.ones && Object.keys(r).length === 1 && (o = r.ones * 100, r = {}), Uv(l, r) === !1)
+    if (F.tens.hasOwnProperty(l) && r.ones && Object.keys(r).length === 1 && (o = r.ones * 100, r = {}), o2(l, r) === !1)
       return null;
     if (/^[0-9.]+$/.test(l))
       r.ones = parseFloat(l);
-    else if (O.ones.hasOwnProperty(l) === !0)
-      r.ones = O.ones[l];
-    else if (O.teens.hasOwnProperty(l) === !0)
-      r.teens = O.teens[l];
-    else if (O.tens.hasOwnProperty(l) === !0)
-      r.tens = O.tens[l];
-    else if (O.multiples.hasOwnProperty(l) === !0) {
-      let c = O.multiples[l];
+    else if (F.ones.hasOwnProperty(l) === !0)
+      r.ones = F.ones[l];
+    else if (F.teens.hasOwnProperty(l) === !0)
+      r.teens = F.teens[l];
+    else if (F.tens.hasOwnProperty(l) === !0)
+      r.tens = F.tens[l];
+    else if (F.multiples.hasOwnProperty(l) === !0) {
+      let c = F.multiples[l];
       if (c === n)
         return null;
       if (c === 100 && i[s + 1] !== void 0) {
         const h = i[s + 1];
-        O.multiples[h] && (c *= O.multiples[h], s += 1);
+        F.multiples[h] && (c *= F.multiples[h], s += 1);
       }
-      n === null || c < n ? (o += (St(r) || 1) * c, n = c, r = {}) : (o += St(r), n = c, o = (o || 1) * c, r = {});
+      n === null || c < n ? (o += (Wt(r) || 1) * c, n = c, r = {}) : (o += Wt(r), n = c, o = (o || 1) * c, r = {});
     }
   }
-  return o += St(r), o *= t.amount, o *= a ? -1 : 1, o === 0 && Object.keys(r).length === 0 ? null : o;
-}, Rn = e2, Jo = /s$/, ft = function(e) {
+  return o += Wt(r), o *= t.amount, o *= a ? -1 : 1, o === 0 && Object.keys(r).length === 0 ? null : o;
+}, Zn = c2, Zo = /s$/, vt = function(e) {
   let t = e.text("reduced");
-  return Rn(t);
+  return Zn(t);
 };
-let tn = {
+let on = {
   half: 2,
   halve: 2,
   quarter: 4
 };
-const t2 = function(e) {
+const h2 = function(e) {
   let n = e.text("reduced").match(/^([-+]?[0-9]+)\/([-+]?[0-9]+)(st|nd|rd|th)?s?$/);
   return n && n[1] && n[0] ? {
     numerator: Number(n[1]),
     denominator: Number(n[2])
   } : null;
-}, n2 = function(e) {
+}, d2 = function(e) {
   let t = e.match("[<num>#Value+] out of every? [<den>#Value+]");
   if (t.found !== !0)
     return null;
   let { num: n, den: r } = t.groups();
-  return !n || !r || (n = ft(n), r = ft(r), !n || !r) ? null : typeof n == "number" && typeof r == "number" ? {
+  return !n || !r || (n = vt(n), r = vt(r), !n || !r) ? null : typeof n == "number" && typeof r == "number" ? {
     numerator: n,
     denominator: r
   } : null;
-}, r2 = function(e) {
+}, f2 = function(e) {
   let t = e.match("[<num>(#Cardinal|a)+] [<den>#Fraction+]");
   if (t.found !== !0)
     return null;
   let { num: n, den: r } = t.groups();
-  n.has("a") ? n = 1 : n = ft(n);
+  n.has("a") ? n = 1 : n = vt(n);
   let o = r.text("reduced");
-  return Jo.test(o) && (o = o.replace(Jo, ""), r = r.replaceWith(o)), tn.hasOwnProperty(o) ? r = tn[o] : r = ft(r), typeof n == "number" && typeof r == "number" ? {
+  return Zo.test(o) && (o = o.replace(Zo, ""), r = r.replaceWith(o)), on.hasOwnProperty(o) ? r = on[o] : r = vt(r), typeof n == "number" && typeof r == "number" ? {
     numerator: n,
     denominator: r
   } : null;
-}, o2 = function(e) {
+}, p2 = function(e) {
   let t = e.match("^#Ordinal$");
   return t.found !== !0 ? null : e.lookAhead("^of .") ? {
     numerator: 1,
-    denominator: ft(t)
+    denominator: vt(t)
   } : null;
-}, a2 = function(e) {
+}, g2 = function(e) {
   let t = e.text("reduced");
-  return tn.hasOwnProperty(t) ? { numerator: 1, denominator: tn[t] } : null;
-}, i2 = (e) => {
+  return on.hasOwnProperty(t) ? { numerator: 1, denominator: on[t] } : null;
+}, m2 = (e) => {
   let t = Math.round(e * 1e3) / 1e3;
   return t === 0 && e !== 0 ? e : t;
-}, s2 = function(e) {
+}, y2 = function(e) {
   e = e.clone();
-  let t = a2(e) || t2(e) || n2(e) || r2(e) || o2(e) || null;
-  return t !== null && t.numerator && t.denominator && (t.decimal = t.numerator / t.denominator, t.decimal = i2(t.decimal)), t;
-}, ve = s2, l2 = function(e) {
+  let t = g2(e) || h2(e) || d2(e) || f2(e) || p2(e) || null;
+  return t !== null && t.numerator && t.denominator && (t.decimal = t.numerator / t.denominator, t.decimal = m2(t.decimal)), t;
+}, ke = y2, b2 = function(e) {
   if (e < 1e6)
     return String(e);
   let t;
   return typeof e == "number" ? t = e.toFixed(0) : t = e, t.indexOf("e+") === -1 ? t : t.replace(".", "").split("e+").reduce(function(n, r) {
     return n + Array(r - n.length + 2).join(0);
   });
-}, fr = l2, Lt = [
+}, vr = b2, Ht = [
   ["ninety", 90],
   ["eighty", 80],
   ["seventy", 70],
@@ -8598,7 +8645,7 @@ const t2 = function(e) {
   ["forty", 40],
   ["thirty", 30],
   ["twenty", 20]
-], _o = [
+], ea = [
   "",
   "one",
   "two",
@@ -8619,7 +8666,7 @@ const t2 = function(e) {
   "seventeen",
   "eighteen",
   "nineteen"
-], u2 = [
+], v2 = [
   [1e24, "septillion"],
   [1e20, "hundred sextillion"],
   [1e21, "sextillion"],
@@ -8637,9 +8684,9 @@ const t2 = function(e) {
   [1e3, "thousand"],
   [100, "hundred"],
   [1, "one"]
-], c2 = function(e) {
+], w2 = function(e) {
   let t = e, n = [];
-  return u2.forEach((r) => {
+  return v2.forEach((r) => {
     if (e >= r[0]) {
       let o = Math.floor(t / r[0]);
       t -= o * r[0], o && n.push({
@@ -8648,16 +8695,16 @@ const t2 = function(e) {
       });
     }
   }), n;
-}, h2 = function(e) {
+}, P2 = function(e) {
   let t = [];
   if (e > 100)
     return t;
-  for (let n = 0; n < Lt.length; n++)
-    e >= Lt[n][1] && (e -= Lt[n][1], t.push(Lt[n][0]));
-  return _o[e] && t.push(_o[e]), t;
-}, d2 = (e) => {
+  for (let n = 0; n < Ht.length; n++)
+    e >= Ht[n][1] && (e -= Ht[n][1], t.push(Ht[n][0]));
+  return ea[e] && t.push(ea[e]), t;
+}, k2 = (e) => {
   const t = ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"];
-  let n = [], o = fr(e).match(/\.([0-9]+)/);
+  let n = [], o = vr(e).match(/\.([0-9]+)/);
   if (!o || !o[0])
     return n;
   n.push("point");
@@ -8665,25 +8712,25 @@ const t2 = function(e) {
   for (let i = 0; i < a.length; i++)
     n.push(t[a[i]]);
   return n;
-}, f2 = function(e) {
+}, A2 = function(e) {
   let t = e.num;
   if (t === 0 || t === "0")
     return "zero";
-  t > 1e21 && (t = fr(t));
+  t > 1e21 && (t = vr(t));
   let n = [];
   t < 0 && (n.push("minus"), t = Math.abs(t));
-  let r = c2(t);
+  let r = w2(t);
   for (let o = 0; o < r.length; o++) {
     let a = r[o].unit;
-    a === "one" && (a = "", n.length > 1 && n.push("and")), n = n.concat(h2(r[o].count)), n.push(a);
+    a === "one" && (a = "", n.length > 1 && n.push("and")), n = n.concat(P2(r[o].count)), n.push(a);
   }
-  return n = n.concat(d2(t)), n = n.filter((o) => o), n.length === 0 && (n[0] = ""), n.join(" ");
-}, pt = f2, p2 = function(e) {
+  return n = n.concat(k2(t)), n = n.filter((o) => o), n.length === 0 && (n[0] = ""), n.join(" ");
+}, wt = A2, $2 = function(e) {
   if (!e.numerator || !e.denominator)
     return "";
-  let t = pt({ num: e.numerator }), n = pt({ num: e.denominator });
+  let t = wt({ num: e.numerator }), n = wt({ num: e.denominator });
   return `${t} out of ${n}`;
-}, g2 = p2, Ko = {
+}, I2 = $2, ta = {
   one: "first",
   two: "second",
   three: "third",
@@ -8700,40 +8747,40 @@ const t2 = function(e) {
   seventy: "seventieth",
   eighty: "eightieth",
   ninety: "ninetieth"
-}, m2 = (e) => {
-  let t = pt(e).split(" "), n = t[t.length - 1];
-  return Ko.hasOwnProperty(n) ? t[t.length - 1] = Ko[n] : t[t.length - 1] = n.replace(/y$/, "i") + "th", t.join(" ");
-}, Ni = m2, y2 = function(e) {
+}, x2 = (e) => {
+  let t = wt(e).split(" "), n = t[t.length - 1];
+  return ta.hasOwnProperty(n) ? t[t.length - 1] = ta[n] : t[t.length - 1] = n.replace(/y$/, "i") + "th", t.join(" ");
+}, Gi = x2, N2 = function(e) {
   if (!e.numerator || !e.denominator)
     return "";
-  let t = pt({ num: e.numerator }), n = Ni({ num: e.denominator });
+  let t = wt({ num: e.numerator }), n = Gi({ num: e.denominator });
   return e.denominator === 2 && (n = "half"), t && n ? (e.numerator !== 1 && (n += "s"), `${t} ${n}`) : "";
-}, b2 = y2, v2 = function(e) {
+}, j2 = N2, E2 = function(e) {
   class t extends e {
     constructor(r, o, a) {
       super(r, o, a), this.viewType = "Fractions";
     }
     parse(r) {
-      return this.getNth(r).map(ve);
+      return this.getNth(r).map(ke);
     }
     get(r) {
-      return this.getNth(r).map(ve);
+      return this.getNth(r).map(ke);
     }
     json(r) {
       return this.getNth(r).map((o) => {
-        let a = o.toView().json(r)[0], i = ve(o);
+        let a = o.toView().json(r)[0], i = ke(o);
         return a.fraction = i, a;
       }, []);
     }
     toDecimal(r) {
       return this.getNth(r).forEach((o) => {
-        let { decimal: a } = ve(o);
+        let { decimal: a } = ke(o);
         o = o.replaceWith(String(a), !0), o.tag("NumericValue"), o.unTag("Fraction");
       }), this;
     }
     toFraction(r) {
       return this.getNth(r).forEach((o) => {
-        let a = ve(o);
+        let a = ke(o);
         if (a && typeof a.numerator == "number" && typeof a.denominator == "number") {
           let i = `${a.numerator}/${a.denominator}`;
           this.replace(o, i);
@@ -8742,42 +8789,42 @@ const t2 = function(e) {
     }
     toOrdinal(r) {
       return this.getNth(r).forEach((o) => {
-        let a = ve(o), i = b2(a);
+        let a = ke(o), i = j2(a);
         o.after("^#Noun").found && (i += " of"), o.replaceWith(i);
       }), this;
     }
     toCardinal(r) {
       return this.getNth(r).forEach((o) => {
-        let a = ve(o), i = g2(a);
+        let a = ke(o), i = I2(a);
         o.replaceWith(i);
       }), this;
     }
     toPercentage(r) {
       return this.getNth(r).forEach((o) => {
-        let { decimal: a } = ve(o), i = a * 100;
+        let { decimal: a } = ke(o), i = a * 100;
         i = Math.round(i * 100) / 100, o.replaceWith(`${i}%`);
       }), this;
     }
   }
   e.prototype.fractions = function(n) {
-    let r = Jv(this);
+    let r = e2(this);
     return r = r.getNth(n), new t(this.document, r.pointer);
   };
-}, w2 = v2, P2 = "one|two|three|four|five|six|seven|eight|nine", Ne = "twenty|thirty|forty|fifty|sixty|seventy|eighty|ninety|fourty", k2 = "eleven|twelve|thirteen|fourteen|fifteen|sixteen|seventeen|eighteen|nineteen", A2 = function(e) {
+}, T2 = E2, C2 = "one|two|three|four|five|six|seven|eight|nine", Ce = "twenty|thirty|forty|fifty|sixty|seventy|eighty|ninety|fourty", D2 = "eleven|twelve|thirteen|fourteen|fifteen|sixteen|seventeen|eighteen|nineteen", O2 = function(e) {
   let t = e.match("#Value+");
-  if (t.has("#NumericValue #NumericValue") && (t.has("#Value @hasComma #Value") ? t.splitAfter("@hasComma") : t.has("#NumericValue #Fraction") ? t.splitAfter("#NumericValue #Fraction") : t = t.splitAfter("#NumericValue")), t.has("#Value #Value #Value") && !t.has("#Multiple") && t.has("(" + Ne + ") #Cardinal #Cardinal") && (t = t.splitAfter("(" + Ne + ") #Cardinal")), t.has("#Value #Value")) {
-    t.has("#NumericValue #NumericValue") && (t = t.splitOn("#Year")), t.has("(" + Ne + ") (" + k2 + ")") && (t = t.splitAfter("(" + Ne + ")"));
+  if (t.has("#NumericValue #NumericValue") && (t.has("#Value @hasComma #Value") ? t.splitAfter("@hasComma") : t.has("#NumericValue #Fraction") ? t.splitAfter("#NumericValue #Fraction") : t = t.splitAfter("#NumericValue")), t.has("#Value #Value #Value") && !t.has("#Multiple") && t.has("(" + Ce + ") #Cardinal #Cardinal") && (t = t.splitAfter("(" + Ce + ") #Cardinal")), t.has("#Value #Value")) {
+    t.has("#NumericValue #NumericValue") && (t = t.splitOn("#Year")), t.has("(" + Ce + ") (" + D2 + ")") && (t = t.splitAfter("(" + Ce + ")"));
     let n = t.match("#Cardinal #Cardinal");
     if (n.found && !t.has("(point|decimal|#Fraction)") && !n.has("#Cardinal (#Multiple|point|decimal)")) {
-      let r = t.has(`(${P2}) (${Ne})`), o = n.has("(" + Ne + ") #Cardinal"), a = n.has("#Multiple #Value");
+      let r = t.has(`(${C2}) (${Ce})`), o = n.has("(" + Ce + ") #Cardinal"), a = n.has("#Multiple #Value");
       !r && !o && !a && n.terms().forEach((i) => {
         t = t.splitOn(i);
       });
     }
-    t.match("#Ordinal #Ordinal").match("#TextValue").found && !t.has("#Multiple") && (t.has("(" + Ne + ") #Ordinal") || (t = t.splitAfter("#Ordinal"))), t = t.splitBefore("#Ordinal [#Cardinal]", 0), t.has("#TextValue #NumericValue") && !t.has("(" + Ne + "|#Multiple)") && (t = t.splitBefore("#TextValue #NumericValue"));
+    t.match("#Ordinal #Ordinal").match("#TextValue").found && !t.has("#Multiple") && (t.has("(" + Ce + ") #Ordinal") || (t = t.splitAfter("#Ordinal"))), t = t.splitBefore("#Ordinal [#Cardinal]", 0), t.has("#TextValue #NumericValue") && !t.has("(" + Ce + "|#Multiple)") && (t = t.splitBefore("#TextValue #NumericValue"));
   }
   return t = t.splitAfter("#NumberRange"), t = t.splitBefore("#Year"), t;
-}, $n = A2, I2 = function(e, t) {
+}, En = O2, F2 = function(e, t) {
   e = e.replace(/,/g, "");
   let n = e.split(/([0-9.,]*)/), [r, o] = n, a = n.slice(2).join("");
   return o !== "" && t.length < 2 ? (o = Number(o || e), typeof o != "number" && (o = null), a = a || "", (a === "st" || a === "nd" || a === "rd" || a === "th") && (a = ""), {
@@ -8785,21 +8832,21 @@ const t2 = function(e) {
     num: o,
     suffix: a
   }) : null;
-}, $2 = function(e) {
+}, V2 = function(e) {
   if (typeof e == "string")
-    return { num: Rn(e) };
+    return { num: Zn(e) };
   let t = e.text("reduced"), n = e.growRight("#Unit").match("#Unit$").text("machine"), r = /[0-9],[0-9]/.test(e.text("text"));
   if (e.terms().length === 1 && !e.has("#Multiple")) {
-    let s = I2(t, e);
+    let s = F2(t, e);
     if (s !== null)
       return s.hasComma = r, s.unit = n, s;
   }
   let o = e.match("#Fraction{2,}$");
   o = o.found === !1 ? e.match("^#Fraction$") : o;
   let a = null;
-  o.found && (o.has("#Value and #Value #Fraction") && (o = o.match("and #Value #Fraction")), a = ve(o), e = e.not(o), e = e.not("and$"), t = e.text("reduced"));
+  o.found && (o.has("#Value and #Value #Fraction") && (o = o.match("and #Value #Fraction")), a = ke(o), e = e.not(o), e = e.not("and$"), t = e.text("reduced"));
   let i = 0;
-  return t && (i = Rn(t) || 0), a && a.decimal && (i += a.decimal), {
+  return t && (i = Zn(t) || 0), a && a.decimal && (i += a.decimal), {
     hasComma: r,
     prefix: "",
     num: i,
@@ -8810,7 +8857,7 @@ const t2 = function(e) {
     isMoney: e.has("#Money"),
     unit: n
   };
-}, W = $2, x2 = function(e) {
+}, J = V2, G2 = function(e) {
   let t = e.num;
   if (!t && t !== 0)
     return null;
@@ -8823,9 +8870,9 @@ const t2 = function(e) {
     2: "nd",
     3: "rd"
   };
-  let o = fr(t), a = o.slice(o.length - 1, o.length);
+  let o = vr(t), a = o.slice(o.length - 1, o.length);
   return r[a] ? o += r[a] : o += "th", o;
-}, N2 = x2, qo = {
+}, B2 = G2, na = {
   "¢": "cents",
   $: "dollars",
   "£": "pounds",
@@ -8838,43 +8885,43 @@ const t2 = function(e) {
   "₹": "rupees",
   "₽": "ruble",
   "₺": "liras"
-}, Uo = {
+}, ra = {
   "%": "percent",
   "°": "degrees"
-}, j2 = function(e) {
+}, z2 = function(e) {
   let t = {
     suffix: "",
     prefix: e.prefix
   };
-  return qo.hasOwnProperty(e.prefix) && (t.suffix += " " + qo[e.prefix], t.prefix = ""), Uo.hasOwnProperty(e.suffix) && (t.suffix += " " + Uo[e.suffix]), t.suffix && e.num === 1 && (t.suffix = t.suffix.replace(/s$/, "")), !t.suffix && e.suffix && (t.suffix += " " + e.suffix), t;
-}, Ro = j2, E2 = function(e, t) {
+  return na.hasOwnProperty(e.prefix) && (t.suffix += " " + na[e.prefix], t.prefix = ""), ra.hasOwnProperty(e.suffix) && (t.suffix += " " + ra[e.suffix]), t.suffix && e.num === 1 && (t.suffix = t.suffix.replace(/s$/, "")), !t.suffix && e.suffix && (t.suffix += " " + e.suffix), t;
+}, oa = z2, S2 = function(e, t) {
   if (t === "TextOrdinal") {
-    let { prefix: r, suffix: o } = Ro(e);
-    return r + Ni(e) + o;
+    let { prefix: r, suffix: o } = oa(e);
+    return r + Gi(e) + o;
   }
   if (t === "Ordinal")
-    return e.prefix + N2(e) + e.suffix;
+    return e.prefix + B2(e) + e.suffix;
   if (t === "TextCardinal") {
-    let { prefix: r, suffix: o } = Ro(e);
-    return r + pt(e) + o;
+    let { prefix: r, suffix: o } = oa(e);
+    return r + wt(e) + o;
   }
   let n = e.num;
   return e.hasComma && (n = n.toLocaleString()), e.prefix + String(n) + e.suffix;
-}, Ve = E2, T2 = function(e) {
+}, ze = S2, L2 = function(e) {
   class t extends e {
     constructor(r, o, a) {
       super(r, o, a), this.viewType = "Numbers";
     }
     parse(r) {
-      return this.getNth(r).map(W);
+      return this.getNth(r).map(J);
     }
     get(r) {
-      return this.getNth(r).map(W).map((o) => o.num);
+      return this.getNth(r).map(J).map((o) => o.num);
     }
     json(r) {
       let o = typeof r == "object" ? r : {};
       return this.getNth(r).map((a) => {
-        let i = a.toView().json(o)[0], s = W(a);
+        let i = a.toView().json(o)[0], s = J(a);
         return i.number = {
           prefix: s.prefix,
           num: s.num,
@@ -8895,21 +8942,21 @@ const t2 = function(e) {
     }
     toNumber() {
       return this.if("#TextValue").forEach((o) => {
-        let a = W(o);
+        let a = J(o);
         if (a.num === null)
           return;
-        let i = o.has("#Ordinal") ? "Ordinal" : "Cardinal", s = Ve(a, i);
+        let i = o.has("#Ordinal") ? "Ordinal" : "Cardinal", s = ze(a, i);
         o.replaceWith(s, { tags: !0 }), o.tag("NumericValue");
       }), this;
     }
     toLocaleString() {
       return this.forEach((o) => {
-        let a = W(o);
+        let a = J(o);
         if (a.num === null)
           return;
         let i = a.num.toLocaleString();
         if (o.has("#Ordinal")) {
-          let l = Ve(a, "Ordinal").match(/[a-z]+$/);
+          let l = ze(a, "Ordinal").match(/[a-z]+$/);
           l && (i += l[0] || "");
         }
         o.replaceWith(i, { tags: !0 });
@@ -8919,10 +8966,10 @@ const t2 = function(e) {
       let o = this.map((a) => {
         if (a.has("#TextValue"))
           return a;
-        let i = W(a);
+        let i = J(a);
         if (i.num === null)
           return a;
-        let s = a.has("#Ordinal") ? "TextOrdinal" : "TextCardinal", l = Ve(i, s);
+        let s = a.has("#Ordinal") ? "TextOrdinal" : "TextCardinal", l = ze(i, s);
         return a.replaceWith(l, { tags: !0 }), a.tag("TextValue"), a;
       });
       return new t(o.document, o.pointer);
@@ -8931,10 +8978,10 @@ const t2 = function(e) {
       let o = this.map((a) => {
         if (!a.has("#Ordinal"))
           return a;
-        let i = W(a);
+        let i = J(a);
         if (i.num === null)
           return a;
-        let s = a.has("#TextValue") ? "TextCardinal" : "Cardinal", l = Ve(i, s);
+        let s = a.has("#TextValue") ? "TextCardinal" : "Cardinal", l = ze(i, s);
         return a.replaceWith(l, { tags: !0 }), a.tag("Cardinal"), a;
       });
       return new t(o.document, o.pointer);
@@ -8943,40 +8990,40 @@ const t2 = function(e) {
       let o = this.map((a) => {
         if (a.has("#Ordinal"))
           return a;
-        let i = W(a);
+        let i = J(a);
         if (i.num === null)
           return a;
-        let s = a.has("#TextValue") ? "TextOrdinal" : "Ordinal", l = Ve(i, s);
+        let s = a.has("#TextValue") ? "TextOrdinal" : "Ordinal", l = ze(i, s);
         return a.replaceWith(l, { tags: !0 }), a.tag("Ordinal"), a;
       });
       return new t(o.document, o.pointer);
     }
     isEqual(r) {
-      return this.filter((o) => W(o).num === r);
+      return this.filter((o) => J(o).num === r);
     }
     greaterThan(r) {
-      return this.filter((o) => W(o).num > r);
+      return this.filter((o) => J(o).num > r);
     }
     lessThan(r) {
-      return this.filter((o) => W(o).num < r);
+      return this.filter((o) => J(o).num < r);
     }
     between(r, o) {
       return this.filter((a) => {
-        let i = W(a).num;
+        let i = J(a).num;
         return i > r && i < o;
       });
     }
     set(r) {
       if (r === void 0)
         return this;
-      typeof r == "string" && (r = W(r).num);
+      typeof r == "string" && (r = J(r).num);
       let a = this.map((i) => {
-        let s = W(i);
+        let s = J(i);
         if (s.num = r, s.num === null)
           return i;
         let l = i.has("#Ordinal") ? "Ordinal" : "Cardinal";
         i.has("#TextValue") && (l = i.has("#Ordinal") ? "TextOrdinal" : "TextCardinal");
-        let u = Ve(s, l);
+        let u = ze(s, l);
         return s.hasComma && l === "Cardinal" && (u = Number(u).toLocaleString()), i = i.not("#Currency"), i.replaceWith(u, { tags: !0 }), i;
       });
       return new t(a.document, a.pointer);
@@ -8984,15 +9031,15 @@ const t2 = function(e) {
     add(r) {
       if (!r)
         return this;
-      typeof r == "string" && (r = W(r).num);
+      typeof r == "string" && (r = J(r).num);
       let a = this.map((i) => {
-        let s = W(i);
+        let s = J(i);
         if (s.num === null)
           return i;
         s.num += r;
         let l = i.has("#Ordinal") ? "Ordinal" : "Cardinal";
         s.isText && (l = i.has("#Ordinal") ? "TextOrdinal" : "TextCardinal");
-        let u = Ve(s, l);
+        let u = ze(s, l);
         return i.replaceWith(u, { tags: !0 }), i;
       });
       return new t(a.document, a.pointer);
@@ -9012,49 +9059,49 @@ const t2 = function(e) {
     }
   }
   t.prototype.toNice = t.prototype.toLocaleString, t.prototype.isBetween = t.prototype.between, t.prototype.minus = t.prototype.subtract, t.prototype.plus = t.prototype.add, t.prototype.equals = t.prototype.isEqual, e.prototype.numbers = function(n) {
-    let r = $n(this);
+    let r = En(this);
     return r = r.getNth(n), new t(this.document, r.pointer);
   }, e.prototype.percentages = function(n) {
-    let r = $n(this);
+    let r = En(this);
     return r = r.filter((o) => o.has("#Percent") || o.after("^percent")), r = r.getNth(n), new t(this.document, r.pointer);
   }, e.prototype.money = function(n) {
-    let r = $n(this);
+    let r = En(this);
     return r = r.filter((o) => o.has("#Money") || o.after("^#Currency")), r = r.getNth(n), new t(this.document, r.pointer);
   }, e.prototype.values = e.prototype.numbers;
-}, C2 = T2, D2 = function(e) {
-  w2(e), C2(e);
-}, O2 = {
-  api: D2
-}, F2 = {
+}, M2 = L2, W2 = function(e) {
+  T2(e), M2(e);
+}, H2 = {
+  api: W2
+}, J2 = {
   people: !0,
   emails: !0,
   phoneNumbers: !0,
   places: !0
-}, V2 = function(e = {}) {
-  return e = Object.assign({}, F2, e), e.people !== !1 && this.people().replaceWith("██████████"), e.emails !== !1 && this.emails().replaceWith("██████████"), e.places !== !1 && this.places().replaceWith("██████████"), e.phoneNumbers !== !1 && this.phoneNumbers().replaceWith("███████"), this;
-}, G2 = {
+}, _2 = function(e = {}) {
+  return e = Object.assign({}, J2, e), e.people !== !1 && this.people().replaceWith("██████████"), e.emails !== !1 && this.emails().replaceWith("██████████"), e.places !== !1 && this.places().replaceWith("██████████"), e.phoneNumbers !== !1 && this.phoneNumbers().replaceWith("███████"), this;
+}, K2 = {
   api: function(e) {
-    e.prototype.redact = V2;
+    e.prototype.redact = _2;
   }
-}, B2 = G2, z2 = function(e) {
+}, q2 = K2, U2 = function(e) {
   let t = e.clauses();
   return /\.\.$/.test(e.out("text")) || e.has("^#QuestionWord") && e.has("@hasComma") ? !1 : !!(e.has("or not$") || e.has("^#QuestionWord") || e.has("^(do|does|did|is|was|can|could|will|would|may) #Noun") || e.has("^(have|must) you") || t.has("(do|does|is|was) #Noun+ #Adverb? (#Adjective|#Infinitive)$"));
-}, S2 = function(e) {
+}, R2 = function(e) {
   const t = /\?/, { document: n } = e;
   return e.filter((r) => {
     let o = r.docs[0] || [], a = o[o.length - 1];
-    return !a || n[a.index[0]].length !== o.length ? !1 : t.test(a.post) ? !0 : z2(r);
+    return !a || n[a.index[0]].length !== o.length ? !1 : t.test(a.post) ? !0 : U2(r);
   });
-}, L2 = S2, M2 = "(after|although|as|because|before|if|since|than|that|though|when|whenever|where|whereas|wherever|whether|while|why|unless|until|once)", W2 = "(that|which|whichever|who|whoever|whom|whose|whomever)", H2 = function(e) {
+}, Q2 = R2, Y2 = "(after|although|as|because|before|if|since|than|that|though|when|whenever|where|whereas|wherever|whether|while|why|unless|until|once)", X2 = "(that|which|whichever|who|whoever|whom|whose|whomever)", Z2 = function(e) {
   let t = e;
-  return t.length === 1 || (t = t.if("#Verb"), t.length === 1) || (t = t.ifNo(M2), t = t.ifNo("^even (if|though)"), t = t.ifNo("^so that"), t = t.ifNo("^rather than"), t = t.ifNo("^provided that"), t.length === 1) || (t = t.ifNo(W2), t.length === 1) || (t = t.ifNo("(despite|during|before|through|throughout)"), t.length === 1) ? t : (t.length === 0 && (t = e), t.eq(0));
-}, J2 = H2, _2 = function(e) {
+  return t.length === 1 || (t = t.if("#Verb"), t.length === 1) || (t = t.ifNo(Y2), t = t.ifNo("^even (if|though)"), t = t.ifNo("^so that"), t = t.ifNo("^rather than"), t = t.ifNo("^provided that"), t.length === 1) || (t = t.ifNo(X2), t.length === 1) || (t = t.ifNo("(despite|during|before|through|throughout)"), t.length === 1) ? t : (t.length === 0 && (t = e), t.eq(0));
+}, e3 = Z2, t3 = function(e) {
   let t = null;
   return e.has("#PastTense") ? t = "PastTense" : e.has("#FutureTense") ? t = "FutureTense" : e.has("#PresentTense") && (t = "PresentTense"), {
     tense: t
   };
-}, K2 = function(e) {
-  let t = e.clauses(), r = J2(t).chunks(), o = e.none(), a = e.none(), i = e.none();
+}, n3 = function(e) {
+  let t = e.clauses(), r = e3(t).chunks(), o = e.none(), a = e.none(), i = e.none();
   return r.forEach((s, l) => {
     if (l === 0 && !s.has("<Verb>")) {
       o = s;
@@ -9069,9 +9116,9 @@ const t2 = function(e) {
     subj: o,
     verb: a,
     pred: i,
-    grammar: _2(a)
+    grammar: t3(a)
   };
-}, Ge = K2, q2 = function(e) {
+}, Se = n3, r3 = function(e) {
   let t = e.verbs(), n = t.eq(0);
   if (n.has("#PastTense"))
     return e;
@@ -9081,10 +9128,10 @@ const t2 = function(e) {
     t = t.not(r), t.found && t.verbs().toPastTense();
   }
   return e;
-}, U2 = q2, R2 = function(e) {
+}, o3 = r3, a3 = function(e) {
   let t = e.verbs();
   return t.eq(0).toPresentTense(), t.length > 1 && (t = t.slice(1), t = t.filter((r) => !r.lookBehind("to$").found), t = t.notIf("#Gerund"), t.found && t.verbs().toPresentTense()), e;
-}, Q2 = R2, Y2 = function(e) {
+}, i3 = a3, s3 = function(e) {
   let t = e.verbs();
   if (t.eq(0).toFutureTense(), e = e.fullSentence(), t = e.verbs(), t.length > 1) {
     t = t.slice(1);
@@ -9098,20 +9145,20 @@ const t2 = function(e) {
     });
   }
   return e;
-}, X2 = Y2, Z2 = function(e) {
+}, l3 = s3, u3 = function(e) {
   return e.verbs().first().toNegative().compute("chunks"), e;
-}, e3 = function(e) {
+}, c3 = function(e) {
   return e.verbs().first().toPositive().compute("chunks"), e;
-}, t3 = function(e) {
+}, h3 = function(e) {
   return e.verbs().toInfinitive(), e;
-}, n3 = t3, r3 = function(e) {
+}, d3 = h3, f3 = function(e) {
   class t extends e {
     constructor(o, a, i) {
       super(o, a, i), this.viewType = "Sentences";
     }
     json(o = {}) {
       return this.map((a) => {
-        let i = a.toView().json(o)[0] || {}, { subj: s, verb: l, pred: u, grammar: c } = Ge(a);
+        let i = a.toView().json(o)[0] || {}, { subj: s, verb: l, pred: u, grammar: c } = Se(a);
         return i.sentence = {
           subject: s.text("normal"),
           verb: l.text("normal"),
@@ -9121,22 +9168,22 @@ const t2 = function(e) {
       }, []);
     }
     toPastTense(o) {
-      return this.getNth(o).map((a) => (Ge(a), U2(a)));
+      return this.getNth(o).map((a) => (Se(a), o3(a)));
     }
     toPresentTense(o) {
-      return this.getNth(o).map((a) => (Ge(a), Q2(a)));
+      return this.getNth(o).map((a) => (Se(a), i3(a)));
     }
     toFutureTense(o) {
-      return this.getNth(o).map((a) => (Ge(a), a = X2(a), a));
+      return this.getNth(o).map((a) => (Se(a), a = l3(a), a));
     }
     toInfinitive(o) {
-      return this.getNth(o).map((a) => (Ge(a), n3(a)));
+      return this.getNth(o).map((a) => (Se(a), d3(a)));
     }
     toNegative(o) {
-      return this.getNth(o).map((a) => (Ge(a), Z2(a)));
+      return this.getNth(o).map((a) => (Se(a), u3(a)));
     }
     toPositive(o) {
-      return this.getNth(o).map((a) => (Ge(a), e3(a)));
+      return this.getNth(o).map((a) => (Se(a), c3(a)));
     }
     isQuestion(o) {
       return this.questions(o);
@@ -9159,54 +9206,54 @@ const t2 = function(e) {
       return o = o.getNth(r), new t(this.document, o.pointer);
     },
     questions: function(r) {
-      return L2(this).getNth(r);
+      return Q2(this).getNth(r);
     }
   };
   Object.assign(e.prototype, n);
-}, o3 = r3, a3 = { api: o3 }, i3 = function(e) {
+}, p3 = f3, g3 = { api: p3 }, m3 = function(e) {
   return e.match("#Honorific+? #Person+");
-}, s3 = i3, l3 = function(e) {
+}, y3 = m3, b3 = function(e) {
   let t = {};
   t.firstName = e.match("#FirstName+"), t.lastName = e.match("#LastName+"), t.honorific = e.match("#Honorific+");
   let n = t.lastName, r = t.firstName;
   return (!r.found || !n.found) && !r.found && !n.found && e.has("^#Honorific .$") && (t.lastName = e.match(".$")), t;
-}, Qo = l3, ne = "male", _ = "female", Yo = {
-  mr: ne,
-  mrs: _,
-  miss: _,
-  madam: _,
-  king: ne,
-  queen: _,
-  duke: ne,
-  duchess: _,
-  baron: ne,
-  baroness: _,
-  count: ne,
-  countess: _,
-  prince: ne,
-  princess: _,
-  sire: ne,
-  dame: _,
-  lady: _,
-  ayatullah: ne,
-  congressman: ne,
-  congresswoman: _,
-  "first lady": _,
+}, aa = b3, oe = "male", q = "female", ia = {
+  mr: oe,
+  mrs: q,
+  miss: q,
+  madam: q,
+  king: oe,
+  queen: q,
+  duke: oe,
+  duchess: q,
+  baron: oe,
+  baroness: q,
+  count: oe,
+  countess: q,
+  prince: oe,
+  princess: q,
+  sire: oe,
+  dame: q,
+  lady: q,
+  ayatullah: oe,
+  congressman: oe,
+  congresswoman: q,
+  "first lady": q,
   mx: null
-}, u3 = function(e, t) {
+}, v3 = function(e, t) {
   let { firstName: n, honorific: r } = e;
   if (n.has("#FemaleName"))
-    return _;
+    return q;
   if (n.has("#MaleName"))
-    return ne;
+    return oe;
   if (r.found) {
     let a = r.text("normal");
-    if (a = a.replace(/\./g, ""), Yo.hasOwnProperty(a))
-      return Yo[a];
+    if (a = a.replace(/\./g, ""), ia.hasOwnProperty(a))
+      return ia[a];
     if (/^her /.test(a))
-      return _;
+      return q;
     if (/^his /.test(a))
-      return ne;
+      return oe;
   }
   let o = t.after();
   if (!o.has("#Person") && o.has("#Pronoun")) {
@@ -9215,28 +9262,28 @@ const t2 = function(e) {
       return null;
     let i = a.has("(he|his)"), s = a.has("(she|her|hers)");
     if (i && !s)
-      return ne;
+      return oe;
     if (s && !i)
-      return _;
+      return q;
   }
   return null;
-}, c3 = u3, h3 = function(e) {
+}, w3 = v3, P3 = function(e) {
   class t extends e {
     constructor(r, o, a) {
       super(r, o, a), this.viewType = "People";
     }
     parse(r) {
-      return this.getNth(r).map(Qo);
+      return this.getNth(r).map(aa);
     }
     json(r) {
       let o = typeof r == "object" ? r : {};
       return this.getNth(r).map((a) => {
-        let i = a.toView().json(o)[0], s = Qo(a);
+        let i = a.toView().json(o)[0], s = aa(a);
         return i.person = {
           firstName: s.firstName.text("normal"),
           lastName: s.lastName.text("normal"),
           honorific: s.honorific.text("normal"),
-          presumed_gender: c3(s, a)
+          presumed_gender: w3(s, a)
         }, i;
       }, []);
     }
@@ -9252,35 +9299,35 @@ const t2 = function(e) {
     }
   }
   e.prototype.people = function(n) {
-    let r = s3(this);
+    let r = y3(this);
     return r = r.getNth(n), new t(this.document, r.pointer);
   };
-}, d3 = h3, f3 = function(e) {
+}, k3 = P3, A3 = function(e) {
   let t = e.match("(#Place|#Address)+"), n = t.match("@hasComma");
   return n = n.filter((r) => r.has("(asia|africa|europe|america)$") ? !0 : !(r.has("(#City|#Region|#ProperNoun)$") && r.after("^(#Country|#Region)").found)), t = t.splitAfter(n), t;
-}, p3 = f3, g3 = function(e) {
+}, $3 = A3, I3 = function(e) {
   e.prototype.places = function(t) {
-    let n = p3(this);
+    let n = $3(this);
     return n = n.getNth(t), new e(this.document, n.pointer);
   };
-}, m3 = g3, y3 = function(e) {
+}, x3 = I3, N3 = function(e) {
   e.prototype.organizations = function(t) {
     return this.match("#Organization+").getNth(t);
   };
-}, b3 = y3, v3 = function(e) {
+}, j3 = N3, E3 = function(e) {
   let t = this.clauses(), n = t.people();
   return n = n.concat(t.places()), n = n.concat(t.organizations()), n = n.not("(someone|man|woman|mother|brother|sister|father)"), n = n.sort("seq"), n = n.getNth(e), n;
-}, w3 = function(e) {
-  e.prototype.topics = v3;
-}, P3 = w3, k3 = function(e) {
-  d3(e), m3(e), b3(e), P3(e);
-}, A3 = { api: k3 }, I3 = function(e) {
+}, T3 = function(e) {
+  e.prototype.topics = E3;
+}, C3 = T3, D3 = function(e) {
+  k3(e), x3(e), j3(e), C3(e);
+}, O3 = { api: D3 }, F3 = function(e) {
   let t = e.match("<Verb>");
   return t = t.not("(#Conjunction && !to)"), t = t.not("#Preposition"), t = t.splitAfter("@hasComma"), t = t.splitAfter("[(do|did|am|was|is|will)] (is|was)", 0), t = t.splitBefore("(#Verb && !#Copula) [being] #Verb", 0), t = t.splitBefore("#Verb [to be] #Verb", 0), t = t.splitAfter("[help] #PresentTense", 0), t = t.splitBefore("(#PresentTense|#PastTense) [#Copula]$", 0), t = t.splitBefore("(#PresentTense|#PastTense) [will be]$", 0), t = t.not("#Reflexive$"), t = t.splitAfter("[#PastTense] #PastTense", 0), t = t.splitAfter("[#PastTense] #Auxiliary+ #PastTense", 0), t = t.splitAfter("#Copula [#Gerund] #PastTense", 0), t = t.if("#Verb"), t.has("(#Verb && !#Auxiliary) #Adverb+? #Copula") && (t = t.splitBefore("#Copula")), t;
-}, $3 = I3, x3 = function(e) {
+}, V3 = F3, G3 = function(e) {
   let t = e;
   return e.wordCount() > 1 && (t = e.not("(#Negative|#Auxiliary|#Modal|#Adverb|#Prefix)")), t.length > 1 && !t.has("#Phrasal #Particle") && (t = t.last()), t = t.not("(want|wants|wanted) to"), t.found || (t = e.not("#Negative")), t;
-}, N3 = x3, j3 = function(e, t) {
+}, B3 = G3, z3 = function(e, t) {
   let n = {
     pre: e.none(),
     post: e.none()
@@ -9292,15 +9339,15 @@ const t2 = function(e) {
     pre: r.eq(0).adverbs(),
     post: r.eq(2).adverbs()
   } : r.eq(0).isDoc(t) ? (n.post = r.eq(1).adverbs(), n) : (n.pre = r.eq(0).adverbs(), n);
-}, E3 = j3, T3 = function(e, t) {
+}, S3 = z3, L3 = function(e, t) {
   let n = e.splitBefore(t);
   if (n.length <= 1)
     return e.none();
   let r = n.eq(0);
   return r = r.not("(#Adverb|#Negative|#Prefix)"), r;
-}, C3 = function(e) {
+}, M3 = function(e) {
   return e.match("#Negative");
-}, D3 = function(e) {
+}, W3 = function(e) {
   if (!e.has("(#Particle|#PhrasalVerb)"))
     return {
       verb: e.none(),
@@ -9311,110 +9358,110 @@ const t2 = function(e) {
     verb: e.not(t),
     particle: t
   };
-}, O3 = function(e) {
+}, H3 = function(e) {
   let t = e.clone();
   t.contractions().expand();
-  const n = N3(t);
+  const n = B3(t);
   return {
     root: n,
     prefix: t.match("#Prefix"),
-    adverbs: E3(t, n),
-    auxiliary: T3(t, n),
-    negative: C3(t),
-    phrasal: D3(n)
+    adverbs: S3(t, n),
+    auxiliary: L3(t, n),
+    negative: M3(t),
+    phrasal: W3(n)
   };
-}, de = O3, se = { tense: "PresentTense" }, Mt = { conditional: !0 }, be = { tense: "FutureTense" }, Ke = { progressive: !0 }, z = { tense: "PastTense" }, qe = { complete: !0, progressive: !1 }, je = { passive: !0 }, F3 = { plural: !0 }, V3 = { plural: !1 }, G3 = function(e) {
+}, pe = H3, ue = { tense: "PresentTense" }, Jt = { conditional: !0 }, Pe = { tense: "FutureTense" }, Xe = { progressive: !0 }, S = { tense: "PastTense" }, Ze = { complete: !0, progressive: !1 }, De = { passive: !0 }, J3 = { plural: !0 }, _3 = { plural: !1 }, K3 = function(e) {
   let t = {};
   return e.forEach((n) => {
     Object.assign(t, n);
   }), t;
-}, Xo = {
+}, sa = {
   imperative: [
     ["#Imperative", []]
   ],
   "want-infinitive": [
-    ["^(want|wants|wanted) to #Infinitive$", [se]],
-    ["^wanted to #Infinitive$", [z]],
-    ["^will want to #Infinitive$", [be]]
+    ["^(want|wants|wanted) to #Infinitive$", [ue]],
+    ["^wanted to #Infinitive$", [S]],
+    ["^will want to #Infinitive$", [Pe]]
   ],
   "gerund-phrase": [
-    ["^#PastTense #Gerund$", [z]],
-    ["^#PresentTense #Gerund$", [se]],
-    ["^#Infinitive #Gerund$", [se]],
-    ["^will #Infinitive #Gerund$", [be]],
-    ["^have #PastTense #Gerund$", [z]],
-    ["^will have #PastTense #Gerund$", [z]]
+    ["^#PastTense #Gerund$", [S]],
+    ["^#PresentTense #Gerund$", [ue]],
+    ["^#Infinitive #Gerund$", [ue]],
+    ["^will #Infinitive #Gerund$", [Pe]],
+    ["^have #PastTense #Gerund$", [S]],
+    ["^will have #PastTense #Gerund$", [S]]
   ],
   "simple-present": [
-    ["^#PresentTense$", [se]],
-    ["^#Infinitive$", [se]]
+    ["^#PresentTense$", [ue]],
+    ["^#Infinitive$", [ue]]
   ],
   "simple-past": [
-    ["^#PastTense$", [z]]
+    ["^#PastTense$", [S]]
   ],
   "simple-future": [
-    ["^will #Adverb? #Infinitive", [be]]
+    ["^will #Adverb? #Infinitive", [Pe]]
   ],
   "present-progressive": [
-    ["^(is|are|am) #Gerund$", [se, Ke]]
+    ["^(is|are|am) #Gerund$", [ue, Xe]]
   ],
   "past-progressive": [
-    ["^(was|were) #Gerund$", [z, Ke]]
+    ["^(was|were) #Gerund$", [S, Xe]]
   ],
   "future-progressive": [
-    ["^will be #Gerund$", [be, Ke]]
+    ["^will be #Gerund$", [Pe, Xe]]
   ],
   "present-perfect": [
-    ["^(has|have) #PastTense$", [z, qe]]
+    ["^(has|have) #PastTense$", [S, Ze]]
   ],
   "past-perfect": [
-    ["^had #PastTense$", [z, qe]],
-    ["^had #PastTense to #Infinitive", [z, qe]]
+    ["^had #PastTense$", [S, Ze]],
+    ["^had #PastTense to #Infinitive", [S, Ze]]
   ],
   "future-perfect": [
-    ["^will have #PastTense$", [be, qe]]
+    ["^will have #PastTense$", [Pe, Ze]]
   ],
   "present-perfect-progressive": [
-    ["^(has|have) been #Gerund$", [z, Ke]]
+    ["^(has|have) been #Gerund$", [S, Xe]]
   ],
   "past-perfect-progressive": [
-    ["^had been #Gerund$", [z, Ke]]
+    ["^had been #Gerund$", [S, Xe]]
   ],
   "future-perfect-progressive": [
-    ["^will have been #Gerund$", [be, Ke]]
+    ["^will have been #Gerund$", [Pe, Xe]]
   ],
   "passive-past": [
-    ["(got|were|was) #Passive", [z, je]],
-    ["^(was|were) being #Passive", [z, je]],
-    ["^(had|have) been #Passive", [z, je]]
+    ["(got|were|was) #Passive", [S, De]],
+    ["^(was|were) being #Passive", [S, De]],
+    ["^(had|have) been #Passive", [S, De]]
   ],
   "passive-present": [
-    ["^(is|are|am) #Passive", [se, je]],
-    ["^(is|are|am) being #Passive", [se, je]],
-    ["^has been #Passive", [se, je]]
+    ["^(is|are|am) #Passive", [ue, De]],
+    ["^(is|are|am) being #Passive", [ue, De]],
+    ["^has been #Passive", [ue, De]]
   ],
   "passive-future": [
-    ["will have been #Passive", [be, je, Mt]],
-    ["will be being? #Passive", [be, je, Mt]]
+    ["will have been #Passive", [Pe, De, Jt]],
+    ["will be being? #Passive", [Pe, De, Jt]]
   ],
   "present-conditional": [
-    ["would be #PastTense", [se, Mt]]
+    ["would be #PastTense", [ue, Jt]]
   ],
   "past-conditional": [
-    ["would have been #PastTense", [z, Mt]]
+    ["would have been #PastTense", [S, Jt]]
   ],
   "auxiliary-future": [
-    ["(is|are|am|was) going to (#Infinitive|#PresentTense)", [be]]
+    ["(is|are|am|was) going to (#Infinitive|#PresentTense)", [Pe]]
   ],
   "auxiliary-past": [
-    ["^did #Infinitive$", [z, V3]],
-    ["^used to #Infinitive$", [z, qe]]
+    ["^did #Infinitive$", [S, _3]],
+    ["^used to #Infinitive$", [S, Ze]]
   ],
   "auxiliary-present": [
-    ["^(does|do) #Infinitive$", [se, qe, F3]]
+    ["^(does|do) #Infinitive$", [ue, Ze, J3]]
   ],
   "modal-past": [
-    ["^(could|must|should|shall) have #PastTense$", [z]]
+    ["^(could|must|should|shall) have #PastTense$", [S]]
   ],
   "modal-infinitive": [
     ["^#Modal #Infinitive$", []]
@@ -9423,65 +9470,65 @@ const t2 = function(e) {
     ["^#Infinitive$", []]
   ]
 };
-let ji = [];
-Object.keys(Xo).map((e) => {
-  Xo[e].forEach((t) => {
-    ji.push({
+let Bi = [];
+Object.keys(sa).map((e) => {
+  sa[e].forEach((t) => {
+    Bi.push({
       name: e,
       match: t[0],
-      data: G3(t[1])
+      data: K3(t[1])
     });
   });
 });
-const Zo = ji, B3 = function(e, t) {
+const la = Bi, q3 = function(e, t) {
   return e = e.clone(), t.adverbs.post && t.adverbs.post.found && e.remove(t.adverbs.post), t.adverbs.pre && t.adverbs.pre.found && e.remove(t.adverbs.pre), e.has("#Negative") && (e = e.remove("#Negative")), e.has("#Prefix") && (e = e.remove("#Prefix")), t.root.has("#PhrasalVerb #Particle") && e.remove("#Particle$"), e = e.not("#Adverb"), e;
-}, z3 = function(e, t) {
+}, U3 = function(e, t) {
   let n = {};
-  e = B3(e, t);
-  for (let r = 0; r < Zo.length; r += 1) {
-    let o = Zo[r];
+  e = q3(e, t);
+  for (let r = 0; r < la.length; r += 1) {
+    let o = la[r];
     if (e.has(o.match) === !0) {
       n.form = o.name, Object.assign(n, o.data);
       break;
     }
   }
   return n.form || e.has("^#Verb$") && (n.form = "infinitive"), n.tense || (n.tense = t.root.has("#PastTense") ? "PastTense" : "PresentTense"), n.copula = t.root.has("#Copula"), n;
-}, Ee = z3, ea = function(e) {
+}, Oe = U3, ua = function(e) {
   return e.length <= 1 ? !1 : (e.parse()[0] || {}).isSubordinate;
-}, S3 = function(e) {
+}, R3 = function(e) {
   let t = e.clauses();
   return t = t.filter((n, r) => !(n.has("^(if|unless|while|but|for|per|at|by|that|which|who|from)") || r > 0 && n.has("^#Verb . #Noun+$") || r > 0 && n.has("^#Adverb"))), t.length === 0 ? e : t;
-}, L3 = function(e) {
+}, Q3 = function(e) {
   let t = e.before();
-  t = S3(t);
+  t = R3(t);
   let n = t.nouns(), r = n.last(), o = r.match("(i|he|she|we|you|they)");
   if (o.found)
     return o.nouns();
   let a = n.if("^(that|this|those)");
-  return a.found || n.found === !1 && (a = t.match("^(that|this|those)"), a.found) ? a : (r = n.last(), ea(r) && (n.remove(r), r = n.last()), ea(r) && (n.remove(r), r = n.last()), r);
-}, M3 = function(e, t) {
+  return a.found || n.found === !1 && (a = t.match("^(that|this|those)"), a.found) ? a : (r = n.last(), ua(r) && (n.remove(r), r = n.last()), ua(r) && (n.remove(r), r = n.last()), r);
+}, Y3 = function(e, t) {
   return t.has("(are|were|does)") || e.has("(those|they|we)") ? !0 : e.found && e.isPlural ? e.isPlural().found : !1;
-}, W3 = function(e) {
-  let t = L3(e);
+}, X3 = function(e) {
+  let t = Q3(e);
   return {
     subject: t,
-    plural: M3(t, e)
+    plural: Y3(t, e)
   };
-}, $e = W3, C = (e) => e, ut = (e, t) => {
-  let n = $e(e), r = n.subject;
+}, Ee = X3, D = (e) => e, gt = (e, t) => {
+  let n = Ee(e), r = n.subject;
   return r.has("i") || r.has("we") ? !0 : n.plural;
-}, H3 = (e, t) => {
-  let { subject: n, plural: r } = $e(e);
+}, Z3 = (e, t) => {
+  let { subject: n, plural: r } = Ee(e);
   return r || n.has("we") ? "were" : "was";
-}, ct = function(e, t) {
+}, mt = function(e, t) {
   if (e.has("were"))
     return "are";
-  let { subject: n, plural: r } = $e(e);
+  let { subject: n, plural: r } = Ee(e);
   return n.has("i") ? "am" : n.has("we") || r ? "are" : "is";
-}, pr = function(e, t) {
-  let n = $e(e), r = n.subject;
+}, wr = function(e, t) {
+  let n = Ee(e), r = n.subject;
   return r.has("i") || r.has("we") || n.plural ? "do" : "does";
-}, ce = function(e) {
+}, de = function(e) {
   if (e.has("#Infinitive"))
     return "Infinitive";
   if (e.has("#Participle"))
@@ -9492,228 +9539,228 @@ const Zo = ji, B3 = function(e, t) {
     return "Gerund";
   if (e.has("#PresentTense"))
     return "PresentTense";
-}, Qn = function(e, t) {
+}, er = function(e, t) {
   const { toInfinitive: n } = e.methods.two.transform.verb;
   let r = t.root.text({ keepPunct: !1 });
-  return r = n(r, e.model, ce(e)), r && e.replace(t.root, r), e;
-}, ta = (e) => e.has("will not") ? e.replace("will not", "have not") : e.remove("will"), na = function(e) {
+  return r = n(r, e.model, de(e)), r && e.replace(t.root, r), e;
+}, ca = (e) => e.has("will not") ? e.replace("will not", "have not") : e.remove("will"), ha = function(e) {
   if (!e || !e.isView)
     return [];
   const t = { normal: !0, terms: !1, text: !1 };
   return e.json(t).map((n) => n.normal);
-}, ra = function(e) {
+}, da = function(e) {
   return !e || !e.isView ? "" : e.text("normal");
-}, J3 = function(e) {
+}, ew = function(e) {
   const { toInfinitive: t } = e.methods.two.transform.verb;
   let n = e.text("normal");
-  return t(n, e.model, ce(e));
-}, _3 = function(e) {
-  let t = de(e);
+  return t(n, e.model, de(e));
+}, tw = function(e) {
+  let t = pe(e);
   e = e.clone().toView();
-  const n = Ee(e, t);
+  const n = Oe(e, t);
   return {
     root: t.root.text(),
-    preAdverbs: na(t.adverbs.pre),
-    postAdverbs: na(t.adverbs.post),
-    auxiliary: ra(t.auxiliary),
+    preAdverbs: ha(t.adverbs.pre),
+    postAdverbs: ha(t.adverbs.post),
+    auxiliary: da(t.auxiliary),
     negative: t.negative.found,
-    prefix: ra(t.prefix),
-    infinitive: J3(t.root),
+    prefix: da(t.prefix),
+    infinitive: ew(t.root),
     grammar: n
   };
-}, K3 = _3, q3 = { tags: !0 }, U3 = function(e, t) {
+}, nw = tw, rw = { tags: !0 }, ow = function(e, t) {
   const { toInfinitive: n } = e.methods.two.transform.verb, { root: r, auxiliary: o } = t;
   let a = o.terms().harden(), i = r.text("normal");
-  if (i = n(i, e.model, ce(r)), i && e.replace(r, i, q3).tag("Verb").firstTerm().tag("Infinitive"), a.found && e.remove(a), t.negative.found) {
+  if (i = n(i, e.model, de(r)), i && e.replace(r, i, rw).tag("Verb").firstTerm().tag("Infinitive"), a.found && e.remove(a), t.negative.found) {
     e.has("not") || e.prepend("not");
-    let s = pr(e);
+    let s = wr(e);
     e.prepend(s);
   }
   return e.fullSentence().compute(["lexicon", "preTagger", "postTagger", "chunks"]), e;
-}, oa = U3, te = { tags: !0 }, we = {
+}, fa = ow, re = { tags: !0 }, Ae = {
   noAux: (e, t) => (t.auxiliary.found && (e = e.remove(t.auxiliary)), e),
   simple: (e, t) => {
     const { conjugate: n, toInfinitive: r } = e.methods.two.transform.verb, o = t.root;
     if (o.has("#Modal"))
       return e;
     let a = o.text({ keepPunct: !1 });
-    return a = r(a, e.model, ce(o)), a = n(a, e.model).PastTense, a = a === "been" ? "was" : a, a === "was" && (a = H3(e)), a && e.replace(o, a, te), e;
+    return a = r(a, e.model, de(o)), a = n(a, e.model).PastTense, a = a === "been" ? "was" : a, a === "was" && (a = Z3(e)), a && e.replace(o, a, re), e;
   },
   both: function(e, t) {
-    return t.negative.found ? (e.replace("will", "did"), e) : (e = we.simple(e, t), e = we.noAux(e, t), e);
+    return t.negative.found ? (e.replace("will", "did"), e) : (e = Ae.simple(e, t), e = Ae.noAux(e, t), e);
   },
-  hasHad: (e) => (e.replace("has", "had", te), e),
+  hasHad: (e) => (e.replace("has", "had", re), e),
   hasParticiple: (e, t) => {
     const { conjugate: n, toInfinitive: r } = e.methods.two.transform.verb, o = t.root;
     let a = o.text("normal");
-    return a = r(a, e.model, ce(o)), n(a, e.model).Participle;
+    return a = r(a, e.model, de(o)), n(a, e.model).Participle;
   }
-}, aa = {
-  infinitive: we.simple,
-  "simple-present": we.simple,
-  "simple-past": C,
-  "simple-future": we.both,
-  "present-progressive": (e) => (e.replace("are", "were", te), e.replace("(is|are|am)", "was", te), e),
-  "past-progressive": C,
+}, pa = {
+  infinitive: Ae.simple,
+  "simple-present": Ae.simple,
+  "simple-past": D,
+  "simple-future": Ae.both,
+  "present-progressive": (e) => (e.replace("are", "were", re), e.replace("(is|are|am)", "was", re), e),
+  "past-progressive": D,
   "future-progressive": (e, t) => (e.match(t.root).insertBefore("was"), e.remove("(will|be)"), e),
-  "present-perfect": we.hasHad,
-  "past-perfect": C,
-  "future-perfect": (e, t) => (e.match(t.root).insertBefore("had"), e.has("will") && (e = ta(e)), e.remove("have"), e),
-  "present-perfect-progressive": we.hasHad,
-  "past-perfect-progressive": C,
-  "future-perfect-progressive": (e) => (e.remove("will"), e.replace("have", "had", te), e),
-  "passive-past": (e) => (e.replace("have", "had", te), e),
-  "passive-present": (e) => (e.replace("(is|are)", "was", te), e),
-  "passive-future": (e, t) => (t.auxiliary.has("will be") && (e.match(t.root).insertBefore("had been"), e.remove("(will|be)")), t.auxiliary.has("will have been") && (e.replace("have", "had", te), e.remove("will")), e),
+  "present-perfect": Ae.hasHad,
+  "past-perfect": D,
+  "future-perfect": (e, t) => (e.match(t.root).insertBefore("had"), e.has("will") && (e = ca(e)), e.remove("have"), e),
+  "present-perfect-progressive": Ae.hasHad,
+  "past-perfect-progressive": D,
+  "future-perfect-progressive": (e) => (e.remove("will"), e.replace("have", "had", re), e),
+  "passive-past": (e) => (e.replace("have", "had", re), e),
+  "passive-present": (e) => (e.replace("(is|are)", "was", re), e),
+  "passive-future": (e, t) => (t.auxiliary.has("will be") && (e.match(t.root).insertBefore("had been"), e.remove("(will|be)")), t.auxiliary.has("will have been") && (e.replace("have", "had", re), e.remove("will")), e),
   "present-conditional": (e) => (e.replace("be", "have been"), e),
-  "past-conditional": C,
-  "auxiliary-future": (e) => (e.replace("(is|are|am)", "was", te), e),
-  "auxiliary-past": C,
-  "auxiliary-present": (e) => (e.replace("(do|does)", "did", te), e),
-  "modal-infinitive": (e, t) => (e.has("can") ? e.replace("can", "could", te) : (we.simple(e, t), e.match("#Modal").insertAfter("have").tag("Auxiliary")), e),
-  "modal-past": C,
-  "want-infinitive": (e) => (e.replace("(want|wants)", "wanted", te), e.remove("will"), e),
-  "gerund-phrase": (e, t) => (t.root = t.root.not("#Gerund$"), we.simple(e, t), ta(e), e)
-}, R3 = function(e, t, n) {
-  return aa.hasOwnProperty(n) && (e = aa[n](e, t), e.fullSentence().compute(["tagger", "chunks"])), e;
-}, ia = R3, Pe = { tags: !0 }, Ue = (e, t) => {
+  "past-conditional": D,
+  "auxiliary-future": (e) => (e.replace("(is|are|am)", "was", re), e),
+  "auxiliary-past": D,
+  "auxiliary-present": (e) => (e.replace("(do|does)", "did", re), e),
+  "modal-infinitive": (e, t) => (e.has("can") ? e.replace("can", "could", re) : (Ae.simple(e, t), e.match("#Modal").insertAfter("have").tag("Auxiliary")), e),
+  "modal-past": D,
+  "want-infinitive": (e) => (e.replace("(want|wants)", "wanted", re), e.remove("will"), e),
+  "gerund-phrase": (e, t) => (t.root = t.root.not("#Gerund$"), Ae.simple(e, t), ca(e), e)
+}, aw = function(e, t, n) {
+  return pa.hasOwnProperty(n) && (e = pa[n](e, t), e.fullSentence().compute(["tagger", "chunks"])), e;
+}, ga = aw, $e = { tags: !0 }, et = (e, t) => {
   const { conjugate: n, toInfinitive: r } = e.methods.two.transform.verb, o = t.root;
   let a = o.text("normal");
-  return a = r(a, e.model, ce(o)), ut(e) === !1 && (a = n(a, e.model).PresentTense), o.has("#Copula") && (a = ct(e)), a && (e = e.replace(o, a, Pe), e.not("#Particle").tag("PresentTense")), e;
-}, sa = (e, t) => {
+  return a = r(a, e.model, de(o)), gt(e) === !1 && (a = n(a, e.model).PresentTense), o.has("#Copula") && (a = mt(e)), a && (e = e.replace(o, a, $e), e.not("#Particle").tag("PresentTense")), e;
+}, ma = (e, t) => {
   const { conjugate: n, toInfinitive: r } = e.methods.two.transform.verb, o = t.root;
   let a = o.text("normal");
-  return a = r(a, e.model, ce(o)), ut(e) === !1 && (a = n(a, e.model).Gerund), a && (e = e.replace(o, a, Pe), e.not("#Particle").tag("Gerund")), e;
-}, Q3 = (e, t) => {
+  return a = r(a, e.model, de(o)), gt(e) === !1 && (a = n(a, e.model).Gerund), a && (e = e.replace(o, a, $e), e.not("#Particle").tag("Gerund")), e;
+}, iw = (e, t) => {
   const { toInfinitive: n } = e.methods.two.transform.verb, r = t.root;
   let o = t.root.text("normal");
-  return o = n(o, e.model, ce(r)), o && (e = e.replace(t.root, o, Pe)), e;
-}, la = {
-  infinitive: Ue,
+  return o = n(o, e.model, de(r)), o && (e = e.replace(t.root, o, $e)), e;
+}, ya = {
+  infinitive: et,
   "simple-present": (e, t) => {
     const { conjugate: n } = e.methods.two.transform.verb;
     let { root: r } = t;
     if (r.has("#Infinitive")) {
-      let a = $e(e).subject;
-      if (ut(e) || a.has("i"))
+      let a = Ee(e).subject;
+      if (gt(e) || a.has("i"))
         return e;
       let i = r.text("normal"), s = n(i, e.model).PresentTense;
-      i !== s && e.replace(r, s, Pe);
+      i !== s && e.replace(r, s, $e);
     } else
-      return Ue(e, t);
+      return et(e, t);
     return e;
   },
-  "simple-past": Ue,
+  "simple-past": et,
   "simple-future": (e, t) => {
     const { root: n, auxiliary: r } = t;
     if (r.has("will") && n.has("be")) {
-      let o = ct(e);
+      let o = mt(e);
       e.replace(n, o), e = e.remove("will"), e.replace("not " + o, o + " not");
     } else
-      Ue(e, t), e = e.remove("will");
+      et(e, t), e = e.remove("will");
     return e;
   },
-  "present-progressive": C,
+  "present-progressive": D,
   "past-progressive": (e, t) => {
-    let n = ct(e);
-    return e.replace("(were|was)", n, Pe);
+    let n = mt(e);
+    return e.replace("(were|was)", n, $e);
   },
   "future-progressive": (e) => (e.match("will").insertBefore("is"), e.remove("be"), e.remove("will")),
-  "present-perfect": (e, t) => (Ue(e, t), e = e.remove("(have|had|has)"), e),
+  "present-perfect": (e, t) => (et(e, t), e = e.remove("(have|had|has)"), e),
   "past-perfect": (e, t) => {
-    let r = $e(e).subject;
-    return ut(e) || r.has("i") ? (e = Qn(e, t), e.remove("had"), e) : (e.replace("had", "has", Pe), e);
+    let r = Ee(e).subject;
+    return gt(e) || r.has("i") ? (e = er(e, t), e.remove("had"), e) : (e.replace("had", "has", $e), e);
   },
   "future-perfect": (e) => (e.match("will").insertBefore("has"), e.remove("have").remove("will")),
-  "present-perfect-progressive": C,
-  "past-perfect-progressive": (e) => e.replace("had", "has", Pe),
+  "present-perfect-progressive": D,
+  "past-perfect-progressive": (e) => e.replace("had", "has", $e),
   "future-perfect-progressive": (e) => (e.match("will").insertBefore("has"), e.remove("have").remove("will")),
   "passive-past": (e, t) => {
-    let n = ct(e);
-    return e.has("(had|have|has)") && e.has("been") ? (e.replace("(had|have|has)", n, Pe), e.replace("been", "being"), e) : e.replace("(got|was|were)", n);
+    let n = mt(e);
+    return e.has("(had|have|has)") && e.has("been") ? (e.replace("(had|have|has)", n, $e), e.replace("been", "being"), e) : e.replace("(got|was|were)", n);
   },
-  "passive-present": C,
+  "passive-present": D,
   "passive-future": (e) => (e.replace("will", "is"), e.replace("be", "being")),
-  "present-conditional": C,
+  "present-conditional": D,
   "past-conditional": (e) => (e.replace("been", "be"), e.remove("have")),
-  "auxiliary-future": (e, t) => (sa(e, t), e.remove("(going|to)"), e),
+  "auxiliary-future": (e, t) => (ma(e, t), e.remove("(going|to)"), e),
   "auxiliary-past": (e, t) => {
     if (t.auxiliary.has("did")) {
-      let n = pr(e);
+      let n = wr(e);
       return e.replace(t.auxiliary, n), e;
     }
-    return sa(e, t), e.replace(t.auxiliary, "is"), e;
+    return ma(e, t), e.replace(t.auxiliary, "is"), e;
   },
-  "auxiliary-present": C,
-  "modal-infinitive": C,
-  "modal-past": (e, t) => (Q3(e, t), e.remove("have")),
-  "gerund-phrase": (e, t) => (t.root = t.root.not("#Gerund$"), Ue(e, t), e.remove("(will|have)")),
+  "auxiliary-present": D,
+  "modal-infinitive": D,
+  "modal-past": (e, t) => (iw(e, t), e.remove("have")),
+  "gerund-phrase": (e, t) => (t.root = t.root.not("#Gerund$"), et(e, t), e.remove("(will|have)")),
   "want-infinitive": (e, t) => {
     let n = "wants";
-    return ut(e) && (n = "want"), e.replace("(want|wanted|wants)", n, Pe), e.remove("will"), e;
+    return gt(e) && (n = "want"), e.replace("(want|wanted|wants)", n, $e), e.remove("will"), e;
   }
-}, Y3 = function(e, t, n) {
-  return la.hasOwnProperty(n) && (e = la[n](e, t), e.fullSentence().compute(["tagger", "chunks"])), e;
-}, ua = Y3, Ei = { tags: !0 }, Wt = (e, t) => {
+}, sw = function(e, t, n) {
+  return ya.hasOwnProperty(n) && (e = ya[n](e, t), e.fullSentence().compute(["tagger", "chunks"])), e;
+}, ba = sw, zi = { tags: !0 }, _t = (e, t) => {
   const { toInfinitive: n } = e.methods.two.transform.verb, { root: r, auxiliary: o } = t;
   if (r.has("#Modal"))
     return e;
   let a = r.text("normal");
-  return a = n(a, e.model, ce(r)), a && (e = e.replace(r, a, Ei), e.not("#Particle").tag("Verb")), e.prepend("will").match("will").tag("Auxiliary"), e.remove(o), e;
-}, ca = (e, t) => {
+  return a = n(a, e.model, de(r)), a && (e = e.replace(r, a, zi), e.not("#Particle").tag("Verb")), e.prepend("will").match("will").tag("Auxiliary"), e.remove(o), e;
+}, va = (e, t) => {
   const { conjugate: n, toInfinitive: r } = e.methods.two.transform.verb, { root: o, auxiliary: a } = t;
   let i = o.text("normal");
-  return i = r(i, e.model, ce(o)), i && (i = n(i, e.model).Gerund, e.replace(o, i, Ei), e.not("#Particle").tag("PresentTense")), e.remove(a), e.prepend("will be").match("will be").tag("Auxiliary"), e;
-}, ha = {
-  infinitive: Wt,
-  "simple-present": Wt,
-  "simple-past": Wt,
-  "simple-future": C,
-  "present-progressive": ca,
-  "past-progressive": ca,
-  "future-progressive": C,
+  return i = r(i, e.model, de(o)), i && (i = n(i, e.model).Gerund, e.replace(o, i, zi), e.not("#Particle").tag("PresentTense")), e.remove(a), e.prepend("will be").match("will be").tag("Auxiliary"), e;
+}, wa = {
+  infinitive: _t,
+  "simple-present": _t,
+  "simple-past": _t,
+  "simple-future": D,
+  "present-progressive": va,
+  "past-progressive": va,
+  "future-progressive": D,
   "present-perfect": (e) => (e.match("(have|has)").replaceWith("will have"), e),
   "past-perfect": (e) => e.replace("(had|has)", "will have"),
-  "future-perfect": C,
+  "future-perfect": D,
   "present-perfect-progressive": (e) => e.replace("has", "will have"),
   "past-perfect-progressive": (e) => e.replace("had", "will have"),
-  "future-perfect-progressive": C,
+  "future-perfect-progressive": D,
   "passive-past": (e) => e.has("got") ? e.replace("got", "will get") : e.has("(was|were)") ? (e.replace("(was|were)", "will be"), e.remove("being")) : e.has("(have|has|had) been") ? e.replace("(have|has|had) been", "will be") : e,
   "passive-present": (e) => (e.replace("being", "will be"), e.remove("(is|are|am)"), e),
-  "passive-future": C,
+  "passive-future": D,
   "present-conditional": (e) => e.replace("would", "will"),
   "past-conditional": (e) => e.replace("would", "will"),
-  "auxiliary-future": C,
+  "auxiliary-future": D,
   "auxiliary-past": (e) => e.has("used") && e.has("to") ? (e.replace("used", "will"), e.remove("to")) : (e.replace("did", "will"), e),
   "auxiliary-present": (e) => e.replace("(do|does)", "will"),
-  "modal-infinitive": C,
-  "modal-past": C,
-  "gerund-phrase": (e, t) => (t.root = t.root.not("#Gerund$"), Wt(e, t), e.remove("(had|have)")),
+  "modal-infinitive": D,
+  "modal-past": D,
+  "gerund-phrase": (e, t) => (t.root = t.root.not("#Gerund$"), _t(e, t), e.remove("(had|have)")),
   "want-infinitive": (e) => (e.replace("(want|wants|wanted)", "will want"), e)
-}, X3 = function(e, t, n) {
-  return e.has("will") || e.has("going to") || ha.hasOwnProperty(n) && (e = ha[n](e, t), e.fullSentence().compute(["tagger", "chunks"])), e;
-}, da = X3, Z3 = { tags: !0 }, ew = function(e, t) {
+}, lw = function(e, t, n) {
+  return e.has("will") || e.has("going to") || wa.hasOwnProperty(n) && (e = wa[n](e, t), e.fullSentence().compute(["tagger", "chunks"])), e;
+}, Pa = lw, uw = { tags: !0 }, cw = function(e, t) {
   const { toInfinitive: n, conjugate: r } = e.methods.two.transform.verb, { root: o, auxiliary: a } = t;
   if (e.has("#Gerund"))
     return e;
   let i = o.text("normal");
-  i = n(i, e.model, ce(o));
+  i = n(i, e.model, de(o));
   let s = r(i, e.model).Gerund;
-  return s && (s = `${ct(e)} ${s}`, e.replace(o, s, Z3)), a.found && e.remove(a), e.replace("not is", "is not"), e.replace("not are", "are not"), e.fullSentence().compute(["tagger", "chunks"]), e;
-}, tw = ew, fa = { tags: !0 }, xn = function(e, t) {
-  let n = pr(e);
+  return s && (s = `${mt(e)} ${s}`, e.replace(o, s, uw)), a.found && e.remove(a), e.replace("not is", "is not"), e.replace("not are", "are not"), e.fullSentence().compute(["tagger", "chunks"]), e;
+}, hw = cw, ka = { tags: !0 }, Tn = function(e, t) {
+  let n = wr(e);
   return e.prepend(n + " not"), e;
-}, Kt = function(e) {
+}, Rt = function(e) {
   let t = e.match("be");
   return t.found ? (t.prepend("not"), e) : (t = e.match("(is|was|am|are|will|were)"), t.found && t.append("not"), e);
-}, qt = (e) => e.has("(is|was|am|are|will|were|be)"), pa = {
-  "simple-present": (e, t) => qt(e) === !0 ? Kt(e) : (e = Qn(e, t), e = xn(e), e),
-  "simple-past": (e, t) => qt(e) === !0 ? Kt(e) : (e = Qn(e, t), e.prepend("did not"), e),
+}, Qt = (e) => e.has("(is|was|am|are|will|were|be)"), Aa = {
+  "simple-present": (e, t) => Qt(e) === !0 ? Rt(e) : (e = er(e, t), e = Tn(e), e),
+  "simple-past": (e, t) => Qt(e) === !0 ? Rt(e) : (e = er(e, t), e.prepend("did not"), e),
   imperative: (e) => (e.prepend("do not"), e),
-  infinitive: (e, t) => qt(e) === !0 ? Kt(e) : xn(e),
+  infinitive: (e, t) => Qt(e) === !0 ? Rt(e) : Tn(e),
   "passive-past": (e) => {
     if (e.has("got"))
-      return e.replace("got", "get", fa), e.prepend("did not"), e;
+      return e.replace("got", "get", ka), e.prepend("did not"), e;
     let t = e.match("(was|were|had|have)");
     return t.found && t.append("not"), e;
   },
@@ -9723,81 +9770,81 @@ const Zo = ji, B3 = function(e, t) {
     let t = e.match("(did|does|do)");
     return t.found && t.append("not"), e;
   },
-  "want-infinitive": (e, t) => (e = xn(e), e = e.replace("wants", "want", fa), e)
-}, nw = function(e, t, n) {
+  "want-infinitive": (e, t) => (e = Tn(e), e = e.replace("wants", "want", ka), e)
+}, dw = function(e, t, n) {
   if (e.has("#Negative"))
     return e;
-  if (pa.hasOwnProperty(n))
-    return e = pa[n](e, t), e;
+  if (Aa.hasOwnProperty(n))
+    return e = Aa[n](e, t), e;
   let r = e.matchOne("be");
-  return r.found ? (r.prepend("not"), e) : qt(e) === !0 ? Kt(e) : (r = e.matchOne("(will|had|have|has|did|does|do|#Modal)"), r.found && r.append("not"), e);
-}, rw = nw, ow = function(e) {
+  return r.found ? (r.prepend("not"), e) : Qt(e) === !0 ? Rt(e) : (r = e.matchOne("(will|had|have|has|did|does|do|#Modal)"), r.found && r.append("not"), e);
+}, fw = dw, pw = function(e) {
   class t extends e {
     constructor(r, o, a) {
       super(r, o, a), this.viewType = "Verbs";
     }
     parse(r) {
-      return this.getNth(r).map(de);
+      return this.getNth(r).map(pe);
     }
     json(r, o) {
       return this.getNth(o).map((s) => {
         let l = s.toView().json(r)[0] || {};
-        return l.verb = K3(s), l;
+        return l.verb = nw(s), l;
       }, []);
     }
     subjects(r) {
-      return this.getNth(r).map((o) => (de(o), $e(o).subject));
+      return this.getNth(r).map((o) => (pe(o), Ee(o).subject));
     }
     adverbs(r) {
       return this.getNth(r).map((o) => o.match("#Adverb"));
     }
     isSingular(r) {
-      return this.getNth(r).filter((o) => $e(o).plural !== !0);
+      return this.getNth(r).filter((o) => Ee(o).plural !== !0);
     }
     isPlural(r) {
-      return this.getNth(r).filter((o) => $e(o).plural === !0);
+      return this.getNth(r).filter((o) => Ee(o).plural === !0);
     }
     isImperative(r) {
       return this.getNth(r).filter((o) => o.has("#Imperative"));
     }
     toInfinitive(r) {
       return this.getNth(r).map((o) => {
-        let a = de(o), i = Ee(o, a);
-        return oa(o, a, i.form);
+        let a = pe(o), i = Oe(o, a);
+        return fa(o, a, i.form);
       });
     }
     toPresentTense(r) {
       return this.getNth(r).map((o) => {
-        let a = de(o), i = Ee(o, a);
-        return ua(o, a, i.form);
+        let a = pe(o), i = Oe(o, a);
+        return ba(o, a, i.form);
       });
     }
     toPastTense(r) {
       return this.getNth(r).map((o) => {
-        let a = de(o), i = Ee(o, a);
-        return ia(o, a, i.form);
+        let a = pe(o), i = Oe(o, a);
+        return ga(o, a, i.form);
       });
     }
     toFutureTense(r) {
       return this.getNth(r).map((o) => {
-        let a = de(o), i = Ee(o, a);
-        return da(o, a, i.form);
+        let a = pe(o), i = Oe(o, a);
+        return Pa(o, a, i.form);
       });
     }
     toGerund(r) {
       return this.getNth(r).map((o) => {
-        let a = de(o), i = Ee(o, a);
-        return tw(o, a, i.form);
+        let a = pe(o), i = Oe(o, a);
+        return hw(o, a, i.form);
       });
     }
     conjugate(r) {
       return this.getNth(r).map((o) => {
-        let a = de(o), i = Ee(o, a);
+        let a = pe(o), i = Oe(o, a);
         return i.form === "imperative" && (i.form = "simple-present"), {
-          Infinitive: oa(o.clone(), a, i.form).text("normal"),
-          PastTense: ia(o.clone(), a, i.form).text("normal"),
-          PresentTense: ua(o.clone(), a, i.form).text("normal"),
-          FutureTense: da(o.clone(), a, i.form).text("normal")
+          Infinitive: fa(o.clone(), a, i.form).text("normal"),
+          PastTense: ga(o.clone(), a, i.form).text("normal"),
+          PresentTense: ba(o.clone(), a, i.form).text("normal"),
+          FutureTense: Pa(o.clone(), a, i.form).text("normal")
         };
       }, []);
     }
@@ -9813,8 +9860,8 @@ const Zo = ji, B3 = function(e, t) {
     }
     toNegative(r) {
       return this.getNth(r).map((o) => {
-        let a = de(o), i = Ee(o, a);
-        return rw(o, a, i.form);
+        let a = pe(o), i = Oe(o, a);
+        return fw(o, a, i.form);
       });
     }
     update(r) {
@@ -9823,12 +9870,12 @@ const Zo = ji, B3 = function(e, t) {
     }
   }
   t.prototype.toPast = t.prototype.toPastTense, t.prototype.toPresent = t.prototype.toPresentTense, t.prototype.toFuture = t.prototype.toFutureTense, e.prototype.verbs = function(n) {
-    let r = $3(this);
+    let r = V3(this);
     return r = r.getNth(n), new t(this.document, r.pointer);
   };
-}, aw = ow, iw = {
-  api: aw
-}, Yn = function(e, t) {
+}, gw = pw, mw = {
+  api: gw
+}, tr = function(e, t) {
   let n = t.match(e);
   if (n.found) {
     let r = n.pronouns().refersTo();
@@ -9836,36 +9883,36 @@ const Zo = ji, B3 = function(e, t) {
       return r;
   }
   return t.none();
-}, ga = function(e) {
+}, $a = function(e) {
   if (!e.found)
     return e;
   let [t] = e.fullPointer[0];
   return t && t > 0 ? e.update([[t - 1]]) : e.none();
-}, sw = function(e, t) {
+}, yw = function(e, t) {
   return t === "m" ? e.filter((n) => !n.presumedFemale().found) : t === "f" ? e.filter((n) => !n.presumedMale().found) : e;
-}, lw = function(e, t) {
+}, bw = function(e, t) {
   let n = e.people();
-  return n = sw(n, t), n.found || (n = e.nouns("#Actor"), n.found) ? n.last() : t === "f" ? Yn("(she|her|hers)", e) : t === "m" ? Yn("(he|him|his)", e) : e.none();
-}, ma = lw, uw = function(e) {
+  return n = yw(n, t), n.found || (n = e.nouns("#Actor"), n.found) ? n.last() : t === "f" ? tr("(she|her|hers)", e) : t === "m" ? tr("(he|him|his)", e) : e.none();
+}, Ia = bw, vw = function(e) {
   let t = e.nouns(), n = t.isPlural().notIf("#Pronoun");
   if (n.found)
     return n.last();
-  let r = Yn("(they|their|theirs)", e);
+  let r = tr("(they|their|theirs)", e);
   return r.found ? r : (n = t.match("(somebody|nobody|everybody|anybody|someone|noone|everyone|anyone)"), n.found ? n.last() : e.none());
-}, cw = uw, hw = function(e, t) {
+}, ww = vw, Pw = function(e, t) {
   if (t && t.found) {
     let n = e.docs[0][0];
     n.reference = t.ptrs[0];
   }
-}, Nn = function(e, t) {
+}, Cn = function(e, t) {
   let n = e.before(), r = t(n);
-  return r.found || (n = ga(e), r = t(n), r.found) || (n = ga(n), r = t(n), r.found) ? r : e.none();
-}, dw = function(e) {
+  return r.found || (n = $a(e), r = t(n), r.found) || (n = $a(n), r = t(n), r.found) ? r : e.none();
+}, kw = function(e) {
   e.pronouns().if("(he|him|his|she|her|hers|they|their|theirs|it|its)").forEach((n) => {
     let r = null;
-    n.has("(he|him|his)") ? r = Nn(n, (o) => ma(o, "m")) : n.has("(she|her|hers)") ? r = Nn(n, (o) => ma(o, "f")) : n.has("(they|their|theirs)") && (r = Nn(n, cw)), r && r.found && hw(n, r);
+    n.has("(he|him|his)") ? r = Cn(n, (o) => Ia(o, "m")) : n.has("(she|her|hers)") ? r = Cn(n, (o) => Ia(o, "f")) : n.has("(they|their|theirs)") && (r = Cn(n, ww)), r && r.found && Pw(n, r);
   });
-}, fw = dw, pw = function(e) {
+}, Aw = kw, $w = function(e) {
   class t extends e {
     constructor(r, o, a) {
       super(r, o, a), this.viewType = "Pronouns";
@@ -9890,21 +9937,21 @@ const Zo = ji, B3 = function(e, t) {
     let r = this.match("#Pronoun");
     return r = r.getNth(n), new t(r.document, r.pointer);
   };
-}, gw = pw, mw = {
-  compute: { coreference: fw },
-  api: gw
+}, Iw = $w, xw = {
+  compute: { coreference: Aw },
+  api: Iw
 };
-k.plugin(Hb);
-k.plugin(mw);
-k.plugin(gv);
-k.plugin(vv);
-k.plugin(Wv);
-k.plugin(O2);
-k.plugin(B2);
-k.plugin(a3);
-k.plugin(A3);
-k.plugin(iw);
-const yw = {
+P.plugin(Zb);
+P.plugin(xw);
+P.plugin(Iv);
+P.plugin(Ev);
+P.plugin(Xv);
+P.plugin(H2);
+P.plugin(q2);
+P.plugin(g3);
+P.plugin(O3);
+P.plugin(mw);
+const Nw = {
   dedup: (e) => e.replace(/([^c])\1/g, "$1"),
   dropInitialLetters: (e) => e.match(/^(kn|gn|pn|ae|wr)/) ? e.substring(1, e.length - 1) : e,
   dropBafterMAtEnd: (e) => e.replace(/mb$/, "m"),
@@ -9926,21 +9973,21 @@ const yw = {
   dropY: (e) => e.replace(/y([^aeiou]|$)/g, "$1"),
   changeZ: (e) => e.replace(/z/, "s"),
   dropVowels: (e) => e
-}, T = yw, bw = function(e) {
-  return e = T.dedup(e), e = T.dropInitialLetters(e), e = T.dropBafterMAtEnd(e), e = T.changeCK(e), e = T.cchange(e), e = T.dchange(e), e = T.dropG(e), e = T.changeG(e), e = T.dropH(e), e = T.changePH(e), e = T.changeQ(e), e = T.changeS(e), e = T.changeX(e), e = T.changeT(e), e = T.dropT(e), e = T.changeV(e), e = T.changeWH(e), e = T.dropW(e), e = T.dropY(e), e = T.changeZ(e), e = T.dropVowels(e), e.trim();
-}, vw = bw, ww = function(e) {
+}, C = Nw, jw = function(e) {
+  return e = C.dedup(e), e = C.dropInitialLetters(e), e = C.dropBafterMAtEnd(e), e = C.changeCK(e), e = C.cchange(e), e = C.dchange(e), e = C.dropG(e), e = C.changeG(e), e = C.dropH(e), e = C.changePH(e), e = C.changeQ(e), e = C.changeS(e), e = C.changeX(e), e = C.changeT(e), e = C.dropT(e), e = C.changeV(e), e = C.changeWH(e), e = C.dropW(e), e = C.dropY(e), e = C.changeZ(e), e = C.dropVowels(e), e.trim();
+}, Ew = jw, Tw = function(e) {
   e.docs.forEach((t) => {
     t.forEach((n) => {
-      n.soundsLike = vw(n.normal || n.text);
+      n.soundsLike = Ew(n.normal || n.text);
     });
   });
-}, Pw = ww, kw = /^(eu)/i, ya = /^[^aeiou]e([^d]|$)/, ba = /^([^aeiouy])[aeiouy]\1[aeiouy]/, va = /^[^aeiouy]([aeiouy])[^aeiouy]\1/, wa = /^([tg][aeiouy]){2}/, Aw = /^[^aeiouy]+$/, Pa = /[aeiouy]$/, ka = /^[^aeiouy]h?[aeiouy]/, jn = [
+}, Cw = Tw, Dw = /^(eu)/i, xa = /^[^aeiou]e([^d]|$)/, Na = /^([^aeiouy])[aeiouy]\1[aeiouy]/, ja = /^[^aeiouy]([aeiouy])[^aeiouy]\1/, Ea = /^([tg][aeiouy]){2}/, Ow = /^[^aeiouy]+$/, Ta = /[aeiouy]$/, Ca = /^[^aeiouy]h?[aeiouy]/, Dn = [
   /^[^aeiou]?ion/,
   /^[^aeiou]?ised/,
   /^[^aeiou]?iled/,
   /[aeiou]n[gt]$/,
   /\wa[gt]e$/
-], Iw = function(e) {
+], Fw = function(e) {
   e = e.map(function(n) {
     return n.trim();
   }), e = e.filter(function(n) {
@@ -9949,41 +9996,41 @@ const yw = {
   let t = e.length;
   if (t > 1) {
     let n = e[t - 2] + e[t - 1];
-    for (let r = 0; r < jn.length; r++)
-      n.match(jn[r]) && (e[t - 2] = e[t - 2] + e[t - 1], e.pop());
+    for (let r = 0; r < Dn.length; r++)
+      n.match(Dn[r]) && (e[t - 2] = e[t - 2] + e[t - 1], e.pop());
   }
   if (e.length > 1) {
-    let n = (e[0].length === 1 || e[0].match(ka)) && e[0].match(Pa), r = e[1].match(ya);
+    let n = (e[0].length === 1 || e[0].match(Ca)) && e[0].match(Ta), r = e[1].match(xa);
     if (n && r) {
       let o = e[0] + e[1];
-      o.match(ba) || o.match(va) || o.match(wa) || (e[0] = e[0] + e[1], e.splice(1, 1));
+      o.match(Na) || o.match(ja) || o.match(Ea) || (e[0] = e[0] + e[1], e.splice(1, 1));
     }
   }
   if (e.length > 1) {
-    let n = e[e.length - 2].match(ka) && e[e.length - 2].match(Pa), r = e[e.length - 1].match(ya) && jn.every((o) => !e[e.length - 1].match(o));
+    let n = e[e.length - 2].match(Ca) && e[e.length - 2].match(Ta), r = e[e.length - 1].match(xa) && Dn.every((o) => !e[e.length - 1].match(o));
     if (n && r) {
       let o = e[e.length - 2] + e[e.length - 1];
-      o.match(ba) || o.match(va) || o.match(wa) || (e[e.length - 2] = e[e.length - 2] + e[e.length - 1], e.splice(e.length - 1, 1));
+      o.match(Na) || o.match(ja) || o.match(Ea) || (e[e.length - 2] = e[e.length - 2] + e[e.length - 1], e.splice(e.length - 1, 1));
     }
   }
   if (e.length > 1) {
     let n = e[0] + e[1];
-    n.match(kw) && (e[0] = n, e.splice(1, 1));
+    n.match(Dw) && (e[0] = n, e.splice(1, 1));
   }
-  return e.length > 1 && e[e.length - 1].match(Aw) && (e[e.length - 2] = e[e.length - 2] + e[e.length - 1], e.splice(e.length - 1, 1)), e;
-}, $w = Iw, xw = / +/g, En = /[aeiouy]$/, Nw = /^[^aeiouy]h?[aeiouy]/, jw = /^e[sm]/, Ew = /^e/, Tw = /(eo|eu|ia|oa|ua|ui)$/i, Cw = /[aiouy]/, Dw = /ee$/, Ut = function(e) {
+  return e.length > 1 && e[e.length - 1].match(Ow) && (e[e.length - 2] = e[e.length - 2] + e[e.length - 1], e.splice(e.length - 1, 1)), e;
+}, Vw = Fw, Gw = / +/g, On = /[aeiouy]$/, Bw = /^[^aeiouy]h?[aeiouy]/, zw = /^e[sm]/, Sw = /^e/, Lw = /(eo|eu|ia|oa|ua|ui)$/i, Mw = /[aiouy]/, Ww = /ee$/, Yt = function(e) {
   let t = [], n = e.split(""), r = "", o = "", a = "";
   for (let i = 0; i < n.length; i++) {
     r = n.slice(0, i).join(""), a = n[i], o = n.slice(i + 1, n.length).join("");
     let s = r + n[i];
-    if (r.match(En) && !a.match(En))
-      return o.match(jw) && (s += "e", o = o.replace(Ew, "")), t.push(s), t.concat(Ut(o));
-    if (s.match(Tw))
-      return t.push(r), t.push(a), t.concat(Ut(o));
-    if (s.match(En) && o.match(Nw))
-      return t.push(s), t.concat(Ut(o));
+    if (r.match(On) && !a.match(On))
+      return o.match(zw) && (s += "e", o = o.replace(Sw, "")), t.push(s), t.concat(Yt(o));
+    if (s.match(Lw))
+      return t.push(r), t.push(a), t.concat(Yt(o));
+    if (s.match(On) && o.match(Bw))
+      return t.push(s), t.concat(Yt(o));
   }
-  if (e.match(Cw) || e.match(Dw))
+  if (e.match(Mw) || e.match(Ww))
     t.push(e);
   else if (e) {
     let i = t.length - 1;
@@ -9991,22 +10038,22 @@ const yw = {
   }
   return t;
 };
-let Ow = function(e) {
+let Hw = function(e) {
   let t = [];
-  return e && (e = e.replace(/[.,?]/g, ""), e.split(xw).map((n) => {
-    t = t.concat(Ut(n));
-  }), t = $w(t), t.length === 0 && (t = [e]), t = t.filter((n) => n)), t;
+  return e && (e = e.replace(/[.,?]/g, ""), e.split(Gw).map((n) => {
+    t = t.concat(Yt(n));
+  }), t = Vw(t), t.length === 0 && (t = [e]), t = t.filter((n) => n)), t;
 };
-const Fw = Ow, Vw = function(e) {
+const Jw = Hw, _w = function(e) {
   e.docs.forEach((t) => {
     t.forEach((n) => {
-      n.syllables = Fw(n.normal || n.text);
+      n.syllables = Jw(n.normal || n.text);
     });
   });
-}, Gw = Vw, Bw = {
-  soundsLike: Pw,
-  syllables: Gw
-}, zw = function(e) {
+}, Kw = _w, qw = {
+  soundsLike: Cw,
+  syllables: Kw
+}, Uw = function(e) {
   e.prototype.syllables = function() {
     this.compute("syllables");
     let t = [];
@@ -10026,173 +10073,212 @@ const Fw = Ow, Vw = function(e) {
       }), r.length > 0 && t.push(r);
     }), t;
   };
-}, Sw = zw, Lw = {
-  api: Sw,
-  compute: Bw
+}, Rw = Uw, Qw = {
+  api: Rw,
+  compute: qw
 };
-function Aa(e, t, n) {
+function Da(e, t, n) {
   const r = e.slice();
   return r[7] = t[n], r;
 }
-function Ia(e, t, n) {
+function Oa(e, t, n) {
   const r = e.slice();
   return r[10] = t[n], r;
 }
-function $a(e) {
+function Fa(e) {
   let t;
   return {
     c() {
-      t = Ie("p"), t.textContent = `Need help writing some gnarly bars?? Well hip hop helper is here
+      t = ge("p"), t.textContent = `Need help writing some gnarly bars?? Well hip hop helper is here
 				to hip hop help you out! Just input your text and we'll split it
 				up into syllables.`;
     },
     m(n, r) {
-      gt(n, t, r);
+      Ke(n, t, r);
     },
     d(n) {
-      n && mt(t);
+      n && qe(t);
     }
   };
 }
-function xa(e) {
-  let t, n = e[10] + "", r;
-  return {
+function Va(e) {
+  let t, n, r;
+  return n = new es({ props: { value: e[10] } }), {
     c() {
-      t = Ie("td"), r = Li(n), Te(t, "class", "bar svelte-jmg7lu");
+      t = ge("td"), za(n.$$.fragment), Ne(t, "class", "svelte-10hhzd9");
     },
     m(o, a) {
-      gt(o, t, a), ke(t, r);
+      Ke(o, t, a), Sa(n, t, null), r = !0;
     },
     p(o, a) {
-      a & 4 && n !== (n = o[10] + "") && Mi(r, n);
+      const i = {};
+      a & 4 && (i.value = o[10]), n.$set(i);
+    },
+    i(o) {
+      r || (je(n.$$.fragment, o), r = !0);
+    },
+    o(o) {
+      Je(n.$$.fragment, o), r = !1;
     },
     d(o) {
-      o && mt(t);
+      o && qe(t), La(n);
     }
   };
 }
-function Na(e) {
-  let t, n, r = e[7], o = [];
-  for (let a = 0; a < r.length; a += 1)
-    o[a] = xa(Ia(e, r, a));
+function Ga(e) {
+  let t, n, r, o = e[7], a = [];
+  for (let s = 0; s < o.length; s += 1)
+    a[s] = Va(Oa(e, o, s));
+  const i = (s) => Je(a[s], 1, 1, () => {
+    a[s] = null;
+  });
   return {
     c() {
-      t = Ie("tr");
-      for (let a = 0; a < o.length; a += 1)
-        o[a].c();
-      n = Rt(), Te(t, "class", "line svelte-jmg7lu");
+      t = ge("tr");
+      for (let s = 0; s < a.length; s += 1)
+        a[s].c();
+      n = Xt(), Ne(t, "class", "line svelte-10hhzd9");
     },
-    m(a, i) {
-      gt(a, t, i);
-      for (let s = 0; s < o.length; s += 1)
-        o[s].m(t, null);
-      ke(t, n);
+    m(s, l) {
+      Ke(s, t, l);
+      for (let u = 0; u < a.length; u += 1)
+        a[u].m(t, null);
+      Ie(t, n), r = !0;
     },
-    p(a, i) {
-      if (i & 4) {
-        r = a[7];
-        let s;
-        for (s = 0; s < r.length; s += 1) {
-          const l = Ia(a, r, s);
-          o[s] ? o[s].p(l, i) : (o[s] = xa(l), o[s].c(), o[s].m(t, n));
+    p(s, l) {
+      if (l & 4) {
+        o = s[7];
+        let u;
+        for (u = 0; u < o.length; u += 1) {
+          const c = Oa(s, o, u);
+          a[u] ? (a[u].p(c, l), je(a[u], 1)) : (a[u] = Va(c), a[u].c(), je(a[u], 1), a[u].m(t, n));
         }
-        for (; s < o.length; s += 1)
-          o[s].d(1);
-        o.length = r.length;
+        for (Ma(), u = o.length; u < a.length; u += 1)
+          i(u);
+        Wa();
       }
     },
-    d(a) {
-      a && mt(t), Fa(o, a);
+    i(s) {
+      if (!r) {
+        for (let l = 0; l < o.length; l += 1)
+          je(a[l]);
+        r = !0;
+      }
+    },
+    o(s) {
+      a = a.filter(Boolean);
+      for (let l = 0; l < a.length; l += 1)
+        Je(a[l]);
+      r = !1;
+    },
+    d(s) {
+      s && qe(t), Ha(a, s);
     }
   };
 }
-function Mw(e) {
-  let t, n, r, o, a, i, s, l, u = !e[1] && $a(), c = e[2], h = [];
-  for (let f = 0; f < c.length; f += 1)
-    h[f] = Na(Aa(e, c, f));
+function Yw(e) {
+  let t, n, r, o, a, i, s, l, u, c = !e[1] && Fa(), h = e[2], d = [];
+  for (let $ = 0; $ < h.length; $ += 1)
+    d[$] = Ga(Da(e, h, $));
+  const x = ($) => Je(d[$], 1, 1, () => {
+    d[$] = null;
+  });
   return {
     c() {
-      t = Ie("div"), u && u.c(), n = Rt(), r = Ie("textarea"), o = Rt(), a = Ie("div"), i = Ie("table");
-      for (let f = 0; f < h.length; f += 1)
-        h[f].c();
-      Te(r, "class", "svelte-jmg7lu"), Te(i, "class", "inner svelte-jmg7lu"), Te(a, "class", "bars svelte-jmg7lu"), Te(t, "class", "container svelte-jmg7lu"), Qt(t, "fullscreen", e[1]);
+      t = ge("div"), c && c.c(), n = Xt(), r = ge("textarea"), o = Xt(), a = ge("div"), i = ge("table");
+      for (let $ = 0; $ < d.length; $ += 1)
+        d[$].c();
+      Ne(r, "class", "svelte-10hhzd9"), Ne(i, "class", "inner svelte-10hhzd9"), Ne(a, "class", "bars svelte-10hhzd9"), Ne(t, "class", "container svelte-10hhzd9"), Zt(t, "fullscreen", e[1]);
     },
-    m(f, w) {
-      gt(f, t, w), u && u.m(t, null), ke(t, n), ke(t, r), gr(r, e[0]), ke(t, o), ke(t, a), ke(a, i);
-      for (let G = 0; G < h.length; G += 1)
-        h[G].m(i, null);
-      s || (l = Ca(r, "input", e[3]), s = !0);
+    m($, W) {
+      Ke($, t, W), c && c.m(t, null), Ie(t, n), Ie(t, r), Ar(r, e[0]), Ie(t, o), Ie(t, a), Ie(a, i);
+      for (let B = 0; B < d.length; B += 1)
+        d[B].m(i, null);
+      s = !0, l || (u = Ba(r, "input", e[3]), l = !0);
     },
-    p(f, w) {
-      if (f[1] ? u && (u.d(1), u = null) : u || (u = $a(), u.c(), u.m(t, n)), w & 1 && gr(r, f[0]), w & 4) {
-        c = f[2];
-        let G;
-        for (G = 0; G < c.length; G += 1) {
-          const kt = Aa(f, c, G);
-          h[G] ? h[G].p(kt, w) : (h[G] = Na(kt), h[G].c(), h[G].m(i, null));
+    p($, W) {
+      if ($[1] ? c && (c.d(1), c = null) : c || (c = Fa(), c.c(), c.m(t, n)), W & 1 && Ar(r, $[0]), W & 4) {
+        h = $[2];
+        let B;
+        for (B = 0; B < h.length; B += 1) {
+          const Pr = Da($, h, B);
+          d[B] ? (d[B].p(Pr, W), je(d[B], 1)) : (d[B] = Ga(Pr), d[B].c(), je(d[B], 1), d[B].m(i, null));
         }
-        for (; G < h.length; G += 1)
-          h[G].d(1);
-        h.length = c.length;
+        for (Ma(), B = h.length; B < d.length; B += 1)
+          x(B);
+        Wa();
       }
-      w & 2 && Qt(t, "fullscreen", f[1]);
+      (!s || W & 2) && Zt(t, "fullscreen", $[1]);
     },
-    d(f) {
-      f && mt(t), u && u.d(), Fa(h, f), s = !1, l();
+    i($) {
+      if (!s) {
+        for (let W = 0; W < h.length; W += 1)
+          je(d[W]);
+        s = !0;
+      }
+    },
+    o($) {
+      d = d.filter(Boolean);
+      for (let W = 0; W < d.length; W += 1)
+        Je(d[W]);
+      s = !1;
+    },
+    d($) {
+      $ && qe(t), c && c.d(), Ha(d, $), l = !1, u();
     }
   };
 }
-function Ww(e) {
+function Xw(e) {
   let t, n, r;
   function o(i) {
     e[4](i);
   }
   let a = {
-    $$slots: { default: [Mw] },
+    $$slots: { default: [Yw] },
     $$scope: { ctx: e }
   };
-  return e[1] !== void 0 && (a.fullscreen = e[1]), t = new Ji({ props: a }), Fi.push(() => Vi(t, "fullscreen", o, e[1])), {
+  return e[1] !== void 0 && (a.fullscreen = e[1]), t = new Yi({ props: a }), Ki.push(() => qi(t, "fullscreen", o, e[1])), {
     c() {
-      Gi(t.$$.fragment);
+      za(t.$$.fragment);
     },
     m(i, s) {
-      Bi(t, i, s), r = !0;
+      Sa(t, i, s), r = !0;
     },
     p(i, [s]) {
       const l = {};
-      s & 8199 && (l.$$scope = { dirty: s, ctx: i }), !n && s & 2 && (n = !0, l.fullscreen = i[1], zi(() => n = !1)), t.$set(l);
+      s & 8199 && (l.$$scope = { dirty: s, ctx: i }), !n && s & 2 && (n = !0, l.fullscreen = i[1], Ui(() => n = !1)), t.$set(l);
     },
     i(i) {
-      r || (Da(t.$$.fragment, i), r = !0);
+      r || (je(t.$$.fragment, i), r = !0);
     },
     o(i) {
-      Oa(t.$$.fragment, i), r = !1;
+      Je(t.$$.fragment, i), r = !1;
     },
     d(i) {
-      Si(t, i);
+      La(t, i);
     }
   };
 }
-function Hw(e, t, n) {
+function Zw(e, t, n) {
   let r;
-  k.extend(Lw);
+  P.extend(Qw);
   let o = !1, a = `There was a man from Californ-ya
 Who really did try to warny ya
 So turn off the light
 When you say goodnight
-Or you'll wish you'd a done it earlia`;
+Or you'll wish you'd a done it earl-ya`;
   function i(c) {
     return c.split(/\r?\n/).map(s);
   }
   function s(c) {
-    const h = k(c);
+    const h = P(c);
     h.compute("syllables");
-    const f = [];
-    for (const w of h.document)
-      for (const G of w)
-        for (const kt of G.syllables)
-          f.push(kt);
-    return f;
+    const d = [];
+    for (const x of h.document)
+      for (const $ of x)
+        for (const W of $.syllables)
+          d.push(W);
+    return d;
   }
   function l() {
     a = this.value, n(0, a);
@@ -10210,14 +10296,14 @@ Or you'll wish you'd a done it earlia`;
     u
   ];
 }
-class Jw extends ja {
+class eP extends nr {
   constructor(t) {
-    super(), Ea(this, t, Hw, Ww, Ta, {});
+    super(), rr(this, t, Zw, Xw, an, {});
   }
 }
-const qw = new Jw({
+const rP = new eP({
   target: document.getElementById("hip_hop_helper_v1")
 });
 export {
-  qw as default
+  rP as default
 };

@@ -1,12 +1,13 @@
 <script lang="ts">
 	import FullscreenContainer from "../lib/FullscreenContainer.svelte";
+	import Bar from "../lib/Bar.svelte";
 	import nlp from "compromise";
 	import plg from "compromise-speech";
 	nlp.extend(plg);
 
 	let fullscreen = false;
 	let value: string =
-		"There was a man from Californ-ya\nWho really did try to warny ya\nSo turn off the light\nWhen you say goodnight\nOr you'll wish you'd a done it earlia";
+		"There was a man from Californ-ya\nWho really did try to warny ya\nSo turn off the light\nWhen you say goodnight\nOr you'll wish you'd a done it earl-ya";
 
 	function get_lines(str: string) {
 		return str.split(/\r?\n/).map(get_bars);
@@ -46,8 +47,8 @@
 				{#each lines as line}
 					<tr class="line">
 						{#each line as bar}
-							<td class="bar">
-								{bar}
+							<td>
+								<Bar value={bar} />
 							</td>
 						{/each}
 					</tr>
@@ -90,11 +91,11 @@
 
 	.line {
 		margin: 0.5rem 0;
+	}
 
-		.bar {
-			padding: 0 0.5rem;
-			margin: 0 0.5rem;
-			background-color: #303030;
-		}
+	table,
+	td,
+	tr {
+		all: revert;
 	}
 </style>
