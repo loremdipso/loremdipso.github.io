@@ -9,7 +9,7 @@ taxonomies: {
 }
 ---
 
-## Rambling intro 
+## Rambling intro
 
 Web frameworks are a dime-a-dozen nowadays, perhaps always. I've worked with a handful, tried out several handfuls, and I often wonder why in the world there're so many. Perhaps it's simply a matter of taste. I mean, RoR is fundamentally just another Django but using Ruby instead of Python. Express is similar, though with perhaps a heavier focus on non-blocking IO. ASP.NET is Java Spring but with C#. PHP is (in my mind) a replacement for old-school Perl sites. And that's just for SSR. For SPAs there's even more choice since your backend can just turn into an API that your frontend calls.
 
@@ -45,4 +45,3 @@ Here're some of the features I think any modern web framework should enable:
 - Data encoding formats should be configurable
   - JSON is the golden standard, but protobuf and MessagePack are totally legitemate options that make a lot of sense in some applications.
 - Writing a WebSocket endpoint should be just as easy as writing a RESTful one
-
