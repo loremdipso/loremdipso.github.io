@@ -14,7 +14,8 @@ html {
 
 .app-header {
 	background-color: $color-header-background;
-	position: fixed;
+	position: sticky;
+	top: 0;
 	width: 100%;
 	z-index: 100;
 	display: flex;
@@ -97,7 +98,11 @@ html {
 	flex-direction: column;
 	min-height: 100%;
 	flex-grow: 1;
-	margin-top: 2rem;
+}
+
+// Prevent overlap with anchor links.
+[id] {
+	scroll-margin-top: 4rem;
 }
 
 body {
@@ -185,14 +190,14 @@ a {
 		flex-direction: column-reverse;
 	}
 
-	>* {
+	> * {
 		padding: 1rem;
 	}
 
 	.info {
 		text-align: center;
 
-		>* {
+		> * {
 			white-space: nowrap;
 		}
 
@@ -218,7 +223,7 @@ a {
 	align-items: baseline;
 	padding: 12px 0;
 
-	>* {
+	> * {
 		white-space: nowrap;
 	}
 

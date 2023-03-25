@@ -43,8 +43,6 @@
 
 
 			<div class="post-contents">
-                {{ page.content | safe }}
-
 				{% if page.toc %}
 				<div class="sidenav">
 					<aside class="toc-wrapper">
@@ -68,6 +66,8 @@
 					</aside>
 				</div>
 				{% endif %}
+
+                {{ page.content | safe }}
 			</div>
 		</article>
 
