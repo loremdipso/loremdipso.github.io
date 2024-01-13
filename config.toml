@@ -207,7 +207,8 @@ truncate_content_length = 100
             period_start = "Mar 2022"
             period_end = "Present"
             projects = [
-                "Led the Google Cloud chat support product."
+                "Designer and lead engineer for the Generative AI and live chat frontend.",
+                "Led the small team behind Google Cloud's chat support product.",
             ]
 
         [[extra.resume.experiences.company.teams]]
