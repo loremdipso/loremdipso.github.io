@@ -194,15 +194,15 @@ name = "Google"
 website = "https://www.google.com"
 job_title = "Software Engineer"
 period_start = "Feb 2021"
-period_end = "November 2024"
+period_end = "October 2024"
 
 [[extra.resume.experiences.company.teams]]
 name = "Chat.Next"
 role = "Tech Lead"
 period_start = "Mar 2022"
-period_end = "November 2024"
+period_end = "October 2024"
 projects = [
-    "Designer and lead engineer for the Generative AI and live chat frontend.",
+    "Architect and lead engineer for the Generative AI and live chat frontend.",
     "Led the small team behind Google Cloud's chat support product.",
 ]
 
