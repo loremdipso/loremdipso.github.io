@@ -9,72 +9,30 @@
 {% block header %}
 {% endblock header %}
 
+
 {% block contentwrapper %}
-    {% set resume = config.extra.resume %}
+    {% set resume = load_data(path="resume/resume.toml") %}
     <div class="header">
         <div class="name-section">
-            <h1>{{- config.extra.author.name -}}</h1>
-            <h2>{{- config.extra.author.job_title -}}</h2>
+            <h1>{{- resume.metadata.name -}}</h1>
+            <h2>{{- resume.metadata.title -}}</h2>
         </div>
-        <div class="contacts">
-            {{ resume.contact.email }}
-            <span class="right-label">{{ config.extra.strings.email }}</span>
-        </div>
+        {% if resume.metadata.email %}
+            <div class="contacts">
+                {{ resume.metadata.email }}
+                <span class="label">email</span>
+            </div>
+        {% endif %}
     </div>
 
+    {% for section in resume.data.sections %}
     <div class="section">
-        <h3>{{ config.extra.strings.experience }}</h3>
-        {% for experience in resume.experiences %}
-        <div class="team-header">
-            <div class="name">
-                <span class="left-label">{{- config.extra.strings.company -}}</span>
-                <a class="company-name" href="{{- experience.company.website -}}">
-                    {{- experience.company.name -}}
-                </a>
-                {% if experience.company.description %}
-                <div class="subtitle">{{- experience.company.description -}}</div>
-                {% endif %}
-            </div>
-            {{ macros::period(start=experience.company.period_start, end=experience.company.period_end) }}
-        </div>
+        <h3>{{ section.title }}</h3>
+        {{- macros::experiences(experiences=section.experiences) -}}
 
-        {% for team in experience.company.teams %}
-        <div class="teams">
-            <div class="team-header">
-                <div class="name">
-                    <span class="left-label">{{- config.extra.strings.team -}}</span>
-                    <span>{{- team.name -}}</span>
-                    {% if team.role %}
-                        ({{- team.role -}})
-                    {% endif %}
-                </div>
-                {{ macros::period(start=team.period_start, end=team.period_end) }}
-            </div>
-
-            {% for project in team.projects %}
-            <div class="blurb">
-                {{- project -}}
-            </div>
-            {% endfor %}
-        </div>
-        {% endfor %}
+        {% for organization in section.organizations %}
+            {{- macros::organization(organization=organization) -}}
         {% endfor %}
     </div>
-
-    <div class="section">
-        <h3>{{- config.extra.strings.education -}}</h3>
-        {% for education in resume.educations %}
-        <div class="team-header">
-            <div class="name">
-                <span>{{- education.description -}}</span>
-                <div class="subtitle">{{- education.degree -}}</div>
-                {% if education.extra %}
-                <div class="subtitle extra">{{- education.extra -}}</div>
-                {% endif %}
-            </div>
-
-            {{ macros::period(start=education.period_start, end=education.period_end) }}
-        </div>
-        {% endfor %}
-    </div>
+    {% endfor %}
 {% endblock contentwrapper %}

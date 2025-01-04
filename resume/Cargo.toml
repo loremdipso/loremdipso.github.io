@@ -1,0 +1,10 @@
+[package]
+name = "resume"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+pulldown-cmark = "0.12.2"
+serde = { version = "1.0.217", features = ["derive"] }
+serde_yaml = "0.9.34"
+toml = "0.8.19"

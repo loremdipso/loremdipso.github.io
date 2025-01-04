@@ -1,0 +1,90 @@
+[metadata]
+name = "Michael Adams"
+title = "Software Engineer"
+email = "mtadams42@gmail.com"
+
+[[data.sections]]
+title = "EXPERIENCE"
+experiences = []
+
+[[data.sections.organizations]]
+title = "Google"
+short_description = "Customer Support Software"
+long_description = ""
+url = "https://google.com"
+timeframe = "Mar 2022 - Oct 2024"
+
+[[data.sections.organizations.teams]]
+title = "Tech Lead for Chat.Next"
+timeframe = "April 2022 - Oct 2024"
+experiences = ["Led a small, collaborative team in developing Google Cloud's chat support product, focusing on enhancing communication tools for users.", "Fostered a supportive team culture by providing mentorship and resolving conflicts effectively, contributing to an open, empathetic work environment.", "Communicated complex technical information in a clear and approachable way, ensuring team members felt supported in achieving common goals."]
+
+[[data.sections.organizations.teams]]
+title = "Software Engineer on Cross Product Portal"
+timeframe = "Feb 2021 - Mar 2022"
+experiences = ["Launched and maintained the Google Cloud support platform, working closely with customer service teams to improve client interactions and problem-solving capabilities.", "Actively participated in meetings that involved brainstorming solutions for better user experiences, ensuring that every team member’s perspective was heard and valued.", "Used problem-solving and adaptability to address evolving needs and provide clear solutions for both technical and non-technical stakeholders."]
+
+[[data.sections.organizations]]
+title = "Epic"
+short_description = "Healthcare Software"
+long_description = ""
+url = "https://epic.com"
+timeframe = "June 2014 - Aug 2020"
+
+[[data.sections.organizations.teams]]
+title = "ICU"
+timeframe = "Jan 2020 - Aug 2020"
+experiences = ["Designed infrastructure that facilitated seamless integration of new video vendors, improving communication tools in critical care settings.", "Applied a user-centered design approach to ensure that health care professionals had the right tools to communicate with patients effectively."]
+
+[[data.sections.organizations.teams]]
+title = "Special Projects Team, Jan 2019 - Dec 2019"
+timeframe = ""
+experiences = ["Focused on improving developer experience and reducing friction within workflows, ensuring tools were easy to use and efficient, helping teams feel supported.", "Demonstrated the importance of a collaborative and inclusive environment to enhance team well-being and efficiency."]
+
+[[data.sections.organizations.teams]]
+title = "Social Care Team, Jan 2018 - Apr 2018"
+timeframe = ""
+experiences = ["Created an interactive graphic displaying a patient’s support network, enhancing communication between patients, family members, and health professionals.", "Gained experience in user experience design, ensuring the patient’s emotional and psychological needs were considered."]
+
+[[data.sections.organizations.teams]]
+title = "Endocrinology Team, Nov 2016 - Apr 2017"
+timeframe = ""
+experiences = ["Contributed to developing Epic’s first endocrinology module, which focused on personalized treatment and understanding individual patient needs, a mindset crucial in therapy work."]
+
+[[data.sections.organizations.teams]]
+title = "MyChart Team, Jan 2016 - Aug 2016"
+timeframe = ""
+experiences = ["Improved the performance of graphing infrastructure, ensuring patients and healthcare providers had a clear and efficient way of tracking progress."]
+
+[[data.sections]]
+title = "EDUCATION"
+experiences = []
+
+[[data.sections.organizations]]
+title = "University of Tennessee, Knoxville"
+short_description = ""
+long_description = ""
+url = "https://utk.edu/"
+timeframe = ""
+
+[[data.sections.organizations.teams]]
+title = "B.S. in Computer Science, 2014"
+timeframe = ""
+experiences = ["Participated as a member of the programming team for two years and served as team captain for one, honing leadership and collaboration skills."]
+
+[[data.sections.organizations]]
+title = "Tennessee Tech, Cookeville"
+short_description = ""
+long_description = ""
+url = "https://www.tntech.edu/"
+timeframe = ""
+
+[[data.sections.organizations.teams]]
+title = "B.S. in Computer Science, 2011"
+timeframe = ""
+experiences = ["Gained foundational knowledge in technology and problem-solving."]
+
+[[data.sections]]
+title = "SKILLS"
+organizations = []
+experiences = ["Interpersonal Communication: Able to effectively listen, empathize, and communicate with others, facilitating support and problem-solving in stressful situations.", "Team Collaboration: Proven ability to work in teams, focusing on both emotional and professional support to achieve collective goals.", "Problem Solving: Experience breaking down complex issues and providing clear solutions, ensuring all involved are understood and supported.", "Adaptability: Comfortable adjusting to new challenges and environments, making sure to maintain a calm, empathetic demeanor in the face of uncertainty."]
