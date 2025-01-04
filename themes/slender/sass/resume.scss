@@ -2,7 +2,11 @@
 @import "_mixins.scss";
 
 @media print {
-	* {
+	body {
+		max-width: unset !important;
+		padding: 1in !important;
+	}
+	.section * {
 		page-break-inside: avoid;
 		page-break-after: avoid;
 		page-break-before: avoid;
@@ -121,11 +125,21 @@ body {
 		text-transform: lowercase;
 	}
 
-	.blurb {
-		padding: 0.5em 1em;
-		margin-bottom: 1rem;
-		margin-left: 1rem;
-		background: #f7f7f7;
-		color: #444;
+	.blurbs {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+
+		// margin-bottom: 1rem;
+		// margin-left: 1rem;
+		> li {
+			$margin: 0.5rem;
+			margin-left: $margin;
+			margin-right: $margin;
+			margin-bottom: $margin;
+			padding: $margin;
+			background: #f7f7f7;
+			color: #444;
+		}
 	}
 }

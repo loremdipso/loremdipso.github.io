@@ -38,11 +38,13 @@
 
 {% macro experiences(experiences) %}
   {% if experiences %}
-    {% for experience in experiences %}
-      <div class="blurb">
+    <ul class="blurbs">
+      {% for experience in experiences %}
+      <li>
           {{- experience -}}
-      </div>
-    {% endfor %}
+      </li>
+      {% endfor %}
+    </ul>
   {% endif %}
 {% endmacro experiences %}
 
