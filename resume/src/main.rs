@@ -89,7 +89,6 @@ fn main() {
                 Tag::Link { dest_url, .. } => match last_action {
                     Action::StartOrganization => {
                         data.get_last_organization().url = dest_url.to_string();
-                        last_action = Action::Skip;
                     }
                     _ => panic!(),
                 },

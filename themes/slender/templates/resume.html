@@ -9,7 +9,6 @@
 {% block header %}
 {% endblock header %}
 
-
 {% block contentwrapper %}
     {% set resume = load_data(path="resume/resume.toml") %}
     <div class="header">
@@ -28,11 +27,65 @@
     {% for section in resume.data.sections %}
     <div class="section">
         <h3>{{ section.title }}</h3>
-        {{- macros::experiences(experiences=section.experiences) -}}
+        {{- self::experiences(experiences=section.experiences) -}}
 
         {% for organization in section.organizations %}
-            {{- macros::organization(organization=organization) -}}
+            {{- self::organization(organization=organization) -}}
         {% endfor %}
     </div>
     {% endfor %}
 {% endblock contentwrapper %}
+
+{% macro experiences(experiences) %}
+  {% if experiences %}
+    {% for experience in experiences %}
+      <div class="blurb">
+          {{- experience -}}
+      </div>
+    {% endfor %}
+  {% endif %}
+{% endmacro experiences %}
+
+{% macro organization(organization) %}
+  <div class="team-header">
+    <div class="name">
+      {% if organization.url %}
+        <a class="bold left" target="#" href="{{ organization.url }}">
+            {{- organization.title -}}
+        </a>
+      {% else %}
+        <div class="bold left">
+          {{- organization.title -}}
+        </div>
+      {% endif %}
+
+      {% if organization.short_description %}
+        <div>
+          {{- organization.short_description -}}
+        </div>
+      {% endif %}
+
+      {% if organization.timeframe %}
+        <div class="period right wide">
+            {{- organization.timeframe -}}
+        </div>
+      {% endif %}
+    </div>
+  </div>
+
+  {% if organization.long_description %}
+    <div class="subtitle">{{- organization.long_description -}}</div>
+  {% endif %}
+
+  {% for team in organization.teams %}
+    <div class="teams">
+      <div class="team-header">
+        <div class="name">
+          <!-- <span class="label">Team</span> -->
+          <span>{{- team.title -}}</span>
+        </div>
+      </div>
+      {{- self::experiences(experiences=team.experiences) -}}
+    </div>
+  {% endfor %}
+{% endmacro %}

@@ -10,13 +10,13 @@ experiences = []
 [[data.sections.organizations]]
 title = "Google"
 short_description = "Customer Support Software"
-long_description = ""
+long_description = "Created software that allowed customers receive better support and allowed support agents to provide that support."
 url = "https://google.com"
-timeframe = "Mar 2022 - Oct 2024"
+timeframe = "Feb 2021 - Oct 2024"
 
 [[data.sections.organizations.teams]]
 title = "Tech Lead for Chat.Next"
-timeframe = "April 2022 - Oct 2024"
+timeframe = "Mar 2022 - Nov 2024"
 experiences = ["Led a small, collaborative team in developing Google Cloud's chat support product, focusing on enhancing communication tools for users.", "Fostered a supportive team culture by providing mentorship and resolving conflicts effectively, contributing to an open, empathetic work environment.", "Communicated complex technical information in a clear and approachable way, ensuring team members felt supported in achieving common goals."]
 
 [[data.sections.organizations.teams]]
@@ -27,7 +27,7 @@ experiences = ["Launched and maintained the Google Cloud support platform, worki
 [[data.sections.organizations]]
 title = "Epic"
 short_description = "Healthcare Software"
-long_description = ""
+long_description = "Created software that allowed patients to receive better healthcare and allowed healthcare providers to provide that healthcare."
 url = "https://epic.com"
 timeframe = "June 2014 - Aug 2020"
 
@@ -37,23 +37,23 @@ timeframe = "Jan 2020 - Aug 2020"
 experiences = ["Designed infrastructure that facilitated seamless integration of new video vendors, improving communication tools in critical care settings.", "Applied a user-centered design approach to ensure that health care professionals had the right tools to communicate with patients effectively."]
 
 [[data.sections.organizations.teams]]
-title = "Special Projects Team, Jan 2019 - Dec 2019"
-timeframe = ""
+title = "Special Projects Team"
+timeframe = "Jan 2019 - Dec 2019"
 experiences = ["Focused on improving developer experience and reducing friction within workflows, ensuring tools were easy to use and efficient, helping teams feel supported.", "Demonstrated the importance of a collaborative and inclusive environment to enhance team well-being and efficiency."]
 
 [[data.sections.organizations.teams]]
-title = "Social Care Team, Jan 2018 - Apr 2018"
-timeframe = ""
+title = "Social Care Team"
+timeframe = "Jan 2018 - Apr 2018"
 experiences = ["Created an interactive graphic displaying a patient’s support network, enhancing communication between patients, family members, and health professionals.", "Gained experience in user experience design, ensuring the patient’s emotional and psychological needs were considered."]
 
 [[data.sections.organizations.teams]]
-title = "Endocrinology Team, Nov 2016 - Apr 2017"
-timeframe = ""
+title = "Endocrinology Team"
+timeframe = "Nov 2016 - Apr 2017"
 experiences = ["Contributed to developing Epic’s first endocrinology module, which focused on personalized treatment and understanding individual patient needs, a mindset crucial in therapy work."]
 
 [[data.sections.organizations.teams]]
-title = "MyChart Team, Jan 2016 - Aug 2016"
-timeframe = ""
+title = "MyChart Team"
+timeframe = "Jan 2016 - Aug 2016"
 experiences = ["Improved the performance of graphing infrastructure, ensuring patients and healthcare providers had a clear and efficient way of tracking progress."]
 
 [[data.sections]]
@@ -63,7 +63,7 @@ experiences = []
 [[data.sections.organizations]]
 title = "University of Tennessee, Knoxville"
 short_description = ""
-long_description = ""
+long_description = "https://utk.edu/"
 url = "https://utk.edu/"
 timeframe = ""
 
@@ -75,7 +75,7 @@ experiences = ["Participated as a member of the programming team for two years a
 [[data.sections.organizations]]
 title = "Tennessee Tech, Cookeville"
 short_description = ""
-long_description = ""
+long_description = "https://www.tntech.edu/"
 url = "https://www.tntech.edu/"
 timeframe = ""
 

@@ -1,6 +1,14 @@
 @import "_normalize.scss";
 @import "_mixins.scss";
 
+@media print {
+	* {
+		page-break-inside: avoid;
+		page-break-after: avoid;
+		page-break-before: avoid;
+	}
+}
+
 body {
 	font-family: Georgia, sans-serif;
 	padding: 1rem;
@@ -16,10 +24,6 @@ body {
 
 	h3 {
 		text-transform: uppercase;
-	}
-
-	.org-name {
-		font-weight: bold;
 	}
 
 	.subtitle {
@@ -61,10 +65,6 @@ body {
 			display: flex;
 			flex-grow: 1;
 			flex-direction: row;
-			gap: 5px;
-			> :last-child {
-				flex-grow: 1;
-			}
 		}
 	}
 
@@ -103,8 +103,17 @@ body {
 		margin-top: 1.6em;
 	}
 
-	.team-header {
-		margin-bottom: 1rem;
+	.bold {
+		font-weight: bold;
+	}
+	.left {
+		margin-right: 5px;
+	}
+	.right {
+		margin-left: 5px;
+	}
+	.wide {
+		flex-grow: 1;
 	}
 
 	.label {
