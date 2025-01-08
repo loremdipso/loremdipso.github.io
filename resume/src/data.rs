@@ -9,7 +9,8 @@ pub struct Wrapper {
 #[derive(Debug, PartialEq, Serialize, Deserialize, Default)]
 pub struct Metadata {
     pub name: String,
-    pub title: String,
+    pub title: Option<String>,
+    pub page_title: Option<String>,
     pub email: Option<String>,
 }
 

@@ -6,8 +6,9 @@ mod data;
 
 #[derive(Debug, PartialEq)]
 enum Action {
-    NONE,
-    Skip,
+    None,
+    Skip(Box<Action>),
+    StartDocument,
     StartSection,
     StartSectionExperiences,
     StartOrganization,
@@ -23,18 +24,21 @@ fn main() {
         .collect::<Vec<_>>();
     assert!(pieces.len() == 2, "Invalid format");
 
-    let metadata: Metadata = serde_yaml::from_str(pieces[0]).expect("Invalid frontmatter");
+    let mut metadata: Metadata = serde_yaml::from_str(pieces[0]).expect("Invalid frontmatter");
 
     let mut data = Data::default();
-    let mut last_action = Action::NONE;
+    let mut last_action = Action::None;
 
     for event in TextMergeStream::new(Parser::new(pieces[1])) {
         // dbg!(&event, &last_action);
         match &event {
             Event::Text(text) => {
                 match last_action {
-                    Action::Skip => {
-                        // last_action = Action::NONE;
+                    Action::Skip(next_action) => {
+                        last_action = *next_action;
+                    }
+                    Action::StartDocument => {
+                        metadata.page_title = Some(text.to_string());
                     }
                     Action::StartSection => {
                         let section = data.get_last_section();
@@ -83,16 +87,20 @@ fn main() {
                     }
                     _ => panic!(),
                 };
-                // last_action = Action::NONE;
+                // last_action = Action::None;
             }
             Event::Start(start_tag) => match start_tag {
                 Tag::Link { dest_url, .. } => match last_action {
                     Action::StartOrganization => {
                         data.get_last_organization().url = dest_url.to_string();
+                        last_action = Action::Skip(Box::new(Action::StartOrganization));
                     }
                     _ => panic!(),
                 },
                 Tag::Heading { level, .. } => match level {
+                    HeadingLevel::H1 => {
+                        last_action = Action::StartDocument;
+                    }
                     HeadingLevel::H2 => {
                         data.add_new_section();
                         last_action = Action::StartSection;
@@ -118,7 +126,7 @@ fn main() {
                 }
             },
             Event::End(_) => {
-                //     last_action = Action::NONE;
+                //     last_action = Action::None;
             }
             _ => panic!(),
         };

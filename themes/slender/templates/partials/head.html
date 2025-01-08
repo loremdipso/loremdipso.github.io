@@ -1,11 +1,13 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 
+{% block page_title %}
 {% if page.title %}
 <title>{{page.title}}</title>
 {% else %}
 <title>{{config.title}}</title>
 {% endif %}
+{% endblock page_title %}
 
 {% if page.description %}
     <meta name="description" content="{{- page.description -}}">

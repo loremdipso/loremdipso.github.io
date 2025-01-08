@@ -9,12 +9,24 @@
 {% block header %}
 {% endblock header %}
 
+{% block head %}
+  {% set resume = load_data(path="resume/resume.toml") %}
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  {% if resume.metadata.page_title %}
+    <title>{{resume.metadata.page_title}}</title>
+  {% endif %}
+{% endblock head %}
+
 {% block contentwrapper %}
     {% set resume = load_data(path="resume/resume.toml") %}
     <div class="header">
         <div class="name-section">
             <h1>{{- resume.metadata.name -}}</h1>
-            <h2>{{- resume.metadata.title -}}</h2>
+            {% if resume.metadata.title %}
+              <h2>{{- resume.metadata.title -}}</h2>
+              {% endif %}
         </div>
         {% if resume.metadata.email %}
             <div class="contacts">

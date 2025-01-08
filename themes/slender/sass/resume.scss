@@ -4,12 +4,18 @@
 @media print {
 	body {
 		max-width: unset !important;
-		padding: 1in !important;
+		padding: 0 !important;
 	}
-	.section * {
+	.team-header * {
 		page-break-inside: avoid;
 		page-break-after: avoid;
-		page-break-before: avoid;
+		// page-break-before: avoid;
+	}
+	@page {
+		margin: 0.5in;
+		footer {
+			display: none;
+		}
 	}
 }
 

@@ -1,6 +1,6 @@
 [metadata]
 name = "Michael Adams"
-title = "Software Engineer"
+page_title = "Michael Adams Resume"
 email = "mtadams42@gmail.com"
 
 [[data.sections]]
@@ -10,19 +10,19 @@ experiences = []
 [[data.sections.organizations]]
 title = "Google"
 short_description = "Customer Support Software"
-long_description = "Created software that allowed customers receive better support and allowed support agents to provide that support."
+long_description = ""
 url = "https://google.com"
 timeframe = "Feb 2021 - Oct 2024"
 
 [[data.sections.organizations.teams]]
 title = "Tech Lead for Chat.Next"
 timeframe = "Mar 2022 - Nov 2024"
-experiences = ["Led a small, collaborative team in developing Google Cloud's chat support product, focusing on enhancing communication tools for users.", "Fostered a supportive team culture by providing mentorship and resolving conflicts effectively, contributing to an open, empathetic work environment.", "Communicated complex technical information in a clear and approachable way, ensuring team members felt supported in achieving common goals."]
+experiences = ["Led a small, collaborative team to create and maintain Google Cloud's chat support product, committed to enhancing communication between users and support agents.", "Fostered a supportive team culture by providing mentorship, and resolving conflicts effectively, contributing to an open, empathetic work environment.", "Communicated complex technical information in a clear and approachable way, ensuring team members felt supported in achieving common goals."]
 
 [[data.sections.organizations.teams]]
 title = "Software Engineer on Cross Product Portal"
 timeframe = "Feb 2021 - Mar 2022"
-experiences = ["Launched and maintained the Google Cloud support platform, working closely with customer service teams to improve client interactions and problem-solving capabilities.", "Actively participated in meetings that involved brainstorming solutions for better user experiences, ensuring that every team member’s perspective was heard and valued.", "Used problem-solving and adaptability to address evolving needs and provide clear solutions for both technical and non-technical stakeholders."]
+experiences = ["Launched and maintained the Google Cloud support platform, working closely with customer service teams to improve client interactions.", "Actively participated in meetings that involved brainstorming solutions for better user experiences, ensuring that every team member’s perspective was heard and valued.", "Used problem-solving and adaptability to address evolving needs and provide clear solutions for both technical and non-technical stakeholders."]
 
 [[data.sections.organizations]]
 title = "Epic"
@@ -34,27 +34,27 @@ timeframe = "June 2014 - Aug 2020"
 [[data.sections.organizations.teams]]
 title = "ICU"
 timeframe = "Jan 2020 - Aug 2020"
-experiences = ["Designed infrastructure that facilitated seamless integration of new video vendors, improving communication tools in critical care settings.", "Applied a user-centered design approach to ensure that health care professionals had the right tools to communicate with patients effectively."]
+experiences = ["Created the infrastructure that facilitated seamless integration of new video vendors. This reduced costs not only for new video vendors (which had hitherto been an effective oligopoly) but also for hospitals.", "Applied a user-centered design approach to ensure that health care professionals had the right tools to communicate with patients effectively."]
 
 [[data.sections.organizations.teams]]
 title = "Special Projects Team"
 timeframe = "Jan 2019 - Dec 2019"
-experiences = ["Focused on improving developer experience and reducing friction within workflows, ensuring tools were easy to use and efficient, helping teams feel supported.", "Demonstrated the importance of a collaborative and inclusive environment to enhance team well-being and efficiency."]
+experiences = ["Focused on improving developer experience and reducing friction within workflows, ensuring tools were easy to use and efficient, helping teams feel supported.", "Each individual contributer was responsible not only for completing their work, but also for finding new work to do and getting that work prioritized, demonstrating organization and leadership."]
 
 [[data.sections.organizations.teams]]
 title = "Social Care Team"
 timeframe = "Jan 2018 - Apr 2018"
-experiences = ["Created an interactive graphic displaying a patient’s support network, enhancing communication between patients, family members, and health professionals.", "Gained experience in user experience design, ensuring the patient’s emotional and psychological needs were considered."]
+experiences = ["Created an interactive graphic displaying a patient’s support network, enhancing communication between patients, family members, and health professionals. This better allowed for an effective and holistic approach to patient wellbeing."]
 
 [[data.sections.organizations.teams]]
 title = "Endocrinology Team"
 timeframe = "Nov 2016 - Apr 2017"
-experiences = ["Contributed to developing Epic’s first endocrinology module, which focused on personalized treatment and understanding individual patient needs, a mindset crucial in therapy work."]
+experiences = ["Contributed to Epic’s first endocrinology module. We focused on personalized treatment and understanding individual patient needs."]
 
 [[data.sections.organizations.teams]]
 title = "MyChart Team"
 timeframe = "Jan 2016 - Aug 2016"
-experiences = ["Improved the performance of graphing infrastructure, ensuring patients and healthcare providers had a clear and efficient way of tracking progress."]
+experiences = ["Improved the performance of the graphing infrastructure, ensuring patients and healthcare providers had a clear and efficient way of tracking progress."]
 
 [[data.sections]]
 title = "EDUCATION"
@@ -63,28 +63,28 @@ experiences = []
 [[data.sections.organizations]]
 title = "University of Tennessee, Knoxville"
 short_description = ""
-long_description = "https://utk.edu/"
+long_description = ""
 url = "https://utk.edu/"
 timeframe = ""
 
 [[data.sections.organizations.teams]]
 title = "B.S. in Computer Science, 2014"
 timeframe = ""
-experiences = ["Participated as a member of the programming team for two years and served as team captain for one, honing leadership and collaboration skills."]
+experiences = ["Participated as a member of the programming team for two years and served as team captain for one, honing my leadership and collaboration skills.", "Served as a Teaching Assistant for the Intro To Computer Science course."]
 
 [[data.sections.organizations]]
 title = "Tennessee Tech, Cookeville"
 short_description = ""
-long_description = "https://www.tntech.edu/"
+long_description = ""
 url = "https://www.tntech.edu/"
 timeframe = ""
 
 [[data.sections.organizations.teams]]
 title = "B.S. in Computer Science, 2011"
 timeframe = ""
-experiences = ["Gained foundational knowledge in technology and problem-solving."]
+experiences = []
 
 [[data.sections]]
 title = "SKILLS"
 organizations = []
-experiences = ["Interpersonal Communication: Able to effectively listen, empathize, and communicate with others, facilitating support and problem-solving in stressful situations.", "Team Collaboration: Proven ability to work in teams, focusing on both emotional and professional support to achieve collective goals.", "Problem Solving: Experience breaking down complex issues and providing clear solutions, ensuring all involved are understood and supported.", "Adaptability: Comfortable adjusting to new challenges and environments, making sure to maintain a calm, empathetic demeanor in the face of uncertainty."]
+experiences = ["Interpersonal Communication: able to effectively listen, empathize, and communicate with others. Capable of creating a supportive and constructive environment, even in stressful situations.", "Team Collaboration: proven ability to work in teams, focusing on both emotional and professional support to achieve collective goals.", "Problem Solving: experience breaking down complex issues into bite-sized chunks and providing reasonable and clear solutions, ensuring all involved are understood and supported.", "Adaptability: comfortable adjusting to new challenges and environments, making sure to maintain a calm, empathetic demeanor in the face of uncertainty."]
