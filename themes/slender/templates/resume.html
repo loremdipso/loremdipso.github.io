@@ -53,12 +53,21 @@
     <ul class="blurbs">
       {% for experience in experiences %}
       <li>
-          {{- experience -}}
+          {{- self::fancy_string(string=experience) -}}
       </li>
       {% endfor %}
     </ul>
   {% endif %}
 {% endmacro experiences %}
+
+{% macro fancy_string(string) %}
+  {% set pieces = string | split(pat=":") %}
+  {% if pieces | length == 1 %}
+    {{- string -}}
+  {% else %}
+    <b>{{ pieces[0] }}</b>:{{ pieces[1] }}
+  {% endif %}
+{% endmacro fancy_string %}
 
 {% macro organization(organization) %}
   <div class="team-header">
