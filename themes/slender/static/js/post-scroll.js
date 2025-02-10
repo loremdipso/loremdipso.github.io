@@ -4,7 +4,6 @@
  * NOTE: this assumes it's loaded async. Otherwise we'd use the DOMContentLoaded event.
  */
 
-
 // map of elements to the IDs they represent
 const elementToAsideElementMap = new Map();
 const intersecting = new Set();
@@ -67,4 +66,21 @@ for (const element of document.querySelectorAll(
 		elementToAsideElementMap.set(element, currentAsideElement);
 		observer.observe(element);
 	}
+}
+
+// Animate the progress bar
+let progressBar = document.querySelector(".progress-bar");
+if (progressBar) {
+	let html = document.querySelector("html");
+	document.addEventListener("scroll", (event) => {
+		// Only enable this when the post is big enough
+		if (html.scrollHeight - html.clientHeight > 200) {
+			let newHeight = Math.round(
+				100 * (html.scrollTop / (html.scrollHeight - html.clientHeight))
+			);
+			progressBar.style.width = `${newHeight}%`;
+		} else {
+			progressBar.style.width = "0";
+		}
+	});
 }

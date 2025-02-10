@@ -3,7 +3,7 @@ title: "Hip Hop Helper"
 description: "Let's pursue our dreams of becoming the next [insert favorite poet here]"
 slug: hip-hop-helper
 date: 2023-02-12
-draft: false
+draft: true
 taxonomies: { tags: ["music", "programming"] }
 ---
 
@@ -19,8 +19,8 @@ Before we begin, yes hip hop is not rap, and this is more of a general tool for 
 
 This has been an idea kicking around in the back of my head for years. Surely there's a multitude of projects doing exactly this but better but I've purposefully avoided looking at any of them for fear of losing motivation. So I've split this project into at least two parts:
 
--   Part 1: (what you're reading now) where I embrace my naivete and just try to optimize for what I know
--   Part 2: where I do some research on the state of the art and then borrow/re-implement the features I like the most
+- Part 1: (what you're reading now) where I embrace my naivete and just try to optimize for what I know
+- Part 2: where I do some research on the state of the art and then borrow/re-implement the features I like the most
 
 If there's enough ground to cover I may end up stretching this into a trilogy, but I'm writing it one part at a time so who knows?
 
@@ -36,13 +36,13 @@ With that, this is what we get:
 
 Putting that award winning limerick aside for a moment I actually quite like this. I mean clearly it's imperfect (once is split into "on" and "ce", for example) but it's workable. I'd be happy sinking some more time into using a dictionary for all the real words and only falling back to `compromise` as a heuristic for the made up ones. Other enhancements I can think of:
 
--   Synonym finder
--   Indicating rhymes
--   Marking slant rhymes
--   Specifying the rhyme scheme (with common presets)
--   Indicating deviations from said rhyme scheme
--   Splitting/joining syllables to indicate how it's spoken
--   Support multiple stanzas
+- Synonym finder
+- Indicating rhymes
+- Marking slant rhymes
+- Specifying the rhyme scheme (with common presets)
+- Indicating deviations from said rhyme scheme
+- Splitting/joining syllables to indicate how it's spoken
+- Support multiple stanzas
 
 This seems a bit short, but I think I've done just about everything I set out to do with this prototype. Next I'll do a bit of research and come back with a gameplan and we'll (hopefully) make something actually useful. Wouldn't that be fun? Anyway, until next time,
 

@@ -327,3 +327,14 @@ article {
 		border-bottom-width: 4px;
 	}
 }
+
+.progress-bar {
+	position: fixed;
+	left: 0;
+	top: 0;
+	height: 3px;
+	background: #5ca3ff;
+	pointer-events: none;
+	z-index: 100;
+	transition: width 1s ease-in-out;
+}
