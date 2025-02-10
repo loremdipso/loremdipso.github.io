@@ -40,6 +40,8 @@ article {
 				background: #444d56;
 				border-radius: 0 0 8px 0;
 				font-weight: bold;
+				position: sticky;
+				left: 0;
 			}
 		}
 
@@ -47,6 +49,7 @@ article {
 		@include before("language-ts", "TypeScript code");
 		@include before("language-rust", "Rust code");
 		@include before("language-html", "HTML");
+		@include before("language-css", "CSS");
 
 		:before {
 			padding: 0.2rem 0.5rem;
