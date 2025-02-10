@@ -7,7 +7,50 @@
         <generator>Zola</generator>
         <language>en</language>
         <atom:link href="https://loremdipso.com/rss.xml" rel="self" type="application/rss+xml"/>
-        <lastBuildDate>Sun, 09 Feb 2025 00:00:00 +0000</lastBuildDate>
+        <lastBuildDate>Mon, 10 Feb 2025 00:00:00 +0000</lastBuildDate>
+        <item>
+            <title>Dynamic reading progress bar</title>
+            <pubDate>Mon, 10 Feb 2025 00:00:00 +0000</pubDate>
+            <link>https://loremdipso.com/minis/mini-01/</link>
+            <guid>https://loremdipso.com/minis/mini-01/</guid>
+            <description>&lt;p&gt;I&#x27;m sure &lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;fjall-rs.github.io&#x2F;&quot;&gt;fjall-rs&lt;&#x2F;a&gt; isn&#x27;t the first tech blog to implement a dynamic reading progress bar, but it&#x27;s the first the caught my eye. Implementing it was trivially easy, though there are some browser pitfalls to be aware of. Here it is, in full:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;js&quot; style=&quot;background-color:#2b2c2f;color:#cccece;&quot; class=&quot;language-js &quot;&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt;&lt;span style=&quot;color:#c594c5;&quot;&gt;let &lt;&#x2F;span&gt;&lt;span&gt;progressBar &lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#6699cc;&quot;&gt;document&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#6699cc;&quot;&gt;querySelector&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99c794;&quot;&gt;.progress-bar&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c594c5;&quot;&gt;if &lt;&#x2F;span&gt;&lt;span&gt;(progressBar) &lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;{
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c594c5;&quot;&gt;let &lt;&#x2F;span&gt;&lt;span&gt;html &lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#6699cc;&quot;&gt;document&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#6699cc;&quot;&gt;querySelector&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99c794;&quot;&gt;html&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#6699cc;&quot;&gt;document&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#6699cc;&quot;&gt;addEventListener&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99c794;&quot;&gt;scroll&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;quot;, (&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f99157;&quot;&gt;event&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;) &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c594c5;&quot;&gt;=&amp;gt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;{
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#5f6364;&quot;&gt;&#x2F;&#x2F; Only enable this when the post is big enough
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c594c5;&quot;&gt;if &lt;&#x2F;span&gt;&lt;span&gt;(html&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span&gt;scrollHeight &lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;- &lt;&#x2F;span&gt;&lt;span&gt;html&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span&gt;clientHeight &lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;gt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f99157;&quot;&gt;200&lt;&#x2F;span&gt;&lt;span&gt;) &lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;{
+&lt;&#x2F;span&gt;&lt;span&gt;      &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c594c5;&quot;&gt;let &lt;&#x2F;span&gt;&lt;span&gt;newHeight &lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f99157;&quot;&gt;Math&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#6699cc;&quot;&gt;round&lt;&#x2F;span&gt;&lt;span&gt;(
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f99157;&quot;&gt;100 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;* &lt;&#x2F;span&gt;&lt;span&gt;(html&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span&gt;scrollTop &lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&#x2F; &lt;&#x2F;span&gt;&lt;span&gt;(html&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span&gt;scrollHeight &lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;- &lt;&#x2F;span&gt;&lt;span&gt;html&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span&gt;clientHeight))
+&lt;&#x2F;span&gt;&lt;span&gt;      )&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;      progressBar&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span&gt;style&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span&gt;width &lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;= `${&lt;&#x2F;span&gt;&lt;span&gt;newHeight&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;}&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99c794;&quot;&gt;%&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;`;
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;} &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c594c5;&quot;&gt;else &lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;{
+&lt;&#x2F;span&gt;&lt;span&gt;      progressBar&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span&gt;style&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span&gt;width &lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;= &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99c794;&quot;&gt;0&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;quot;;
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;}
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;}&lt;&#x2F;span&gt;&lt;span&gt;)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;}
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;pre data-lang=&quot;css&quot; style=&quot;background-color:#2b2c2f;color:#cccece;&quot; class=&quot;language-css &quot;&gt;&lt;code class=&quot;language-css&quot; data-lang=&quot;css&quot;&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bb80b3;&quot;&gt;progress-bar &lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;{
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fac863;&quot;&gt;position&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f99157;&quot;&gt;fixed&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fac863;&quot;&gt;left&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f99157;&quot;&gt;0&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fac863;&quot;&gt;top&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f99157;&quot;&gt;0&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fac863;&quot;&gt;height&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f99157;&quot;&gt;3px&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fac863;&quot;&gt;background&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;: #5ca3ff;
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#5f6364;&quot;&gt;&#x2F;* so you can click through *&#x2F;
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fac863;&quot;&gt;pointer-events&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f99157;&quot;&gt;none&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#5f6364;&quot;&gt;&#x2F;* raise above everything else *&#x2F;
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fac863;&quot;&gt;z-index&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f99157;&quot;&gt;100&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#5f6364;&quot;&gt;&#x2F;* make the transition nice and smooth *&#x2F;
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fac863;&quot;&gt;transition&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f99157;&quot;&gt;width 1s ease-in-out&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;}
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;And I think the result is quite pleasing:
+&lt;p&gt;&lt;video loop autoplay&gt;
+        &lt;source src=&quot;&amp;#x2F;minis&amp;#x2F;mini-01&amp;#x2F;assets&amp;#x2F;demo.mp4&quot; type=&quot;video&#x2F;mp4&quot;&gt;
+    &lt;&#x2F;video&gt;
+&lt;&#x2F;p&gt;&lt;&#x2F;p&gt;
+</description>
+        </item>
         <item>
             <title>Wait, should I start a link-blog too??</title>
             <pubDate>Sun, 09 Feb 2025 00:00:00 +0000</pubDate>
@@ -573,66 +616,6 @@
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;}
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;Alright, seems simple enough. What if I just write a very very very basic compiler that parses the DOM tree looking for Elements and then spits out the resultant JavaScript as it chugs along? If we merge all the compilation steps we avoid running through the file multiple times, a plus for performance. So I gave it a shot, and got something that produced exactly the same output, but only for the simplest cases. After, I realized that, while this approach would yield something very very fast, doing everything in one step made the program fairly difficult to change. I think I&#x27;d be better off sacrificing just a little performance in exchange for modularity. Let&#x27;s shelve this attempt for now and try something more traditional.&lt;&#x2F;p&gt;
-</description>
-        </item>
-        <item>
-            <title>Lithe 1: The Motivation</title>
-            <pubDate>Mon, 03 Jan 2022 16:12:04 -0700</pubDate>
-            <link>https://loremdipso.com/posts/lithe-1/</link>
-            <guid>https://loremdipso.com/posts/lithe-1/</guid>
-            <description>&lt;p&gt;Svelte is like Rust for me in that I had heard good things for years before I even gave it a try.&lt;&#x2F;p&gt;
-&lt;p&gt;Svelte is like Rust for me in that I loved it immediately.&lt;&#x2F;p&gt;
-&lt;p&gt;It&#x27;s really very simple to write in, the basic idea is engaging, and after trying it I wanted so badly for it to succeed. For context I have professional experience with vanilla JavaScript, React, and Angular. After transitioning a small app from Angular to Svelte, here were my takeaways:&lt;&#x2F;p&gt;
-&lt;ol&gt;
-&lt;li&gt;It&#x27;s very much like Vue
-&lt;ul&gt;
-&lt;li&gt;Single file structure&lt;&#x2F;li&gt;
-&lt;li&gt;Framework provides a lot out of the box&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;&#x2F;li&gt;
-&lt;li&gt;It&#x27;s got a better pattern for reactive programming than React
-&lt;ul&gt;
-&lt;li&gt;I&#x27;m guessing Svelte is a large part of the motivation behind React&#x27;s new &lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=lGEMwh32soc&quot;&gt;React without memo&lt;&#x2F;a&gt; project&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;&#x2F;li&gt;
-&lt;li&gt;It&#x27;s had five years to become popular, and yet it has not.
-&lt;ul&gt;
-&lt;li&gt;I can only guess at this, but I&#x27;d say Svelte was simply late to the game. So much of the web is written using other frameworks, and no one wants to re-write it all&lt;&#x2F;li&gt;
-&lt;li&gt;Initially Svelte touted itself as providing all the functionality you&#x27;d expect from a big JS framework with way less code. That&#x27;s turned out to not be the &lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;sveltejs&#x2F;svelte&#x2F;issues&#x2F;2546#issuecomment-678845774&quot;&gt;full story&lt;&#x2F;a&gt;, and an app with lots of components will end up being less LOC if written in, say, React than Svelte&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;&#x2F;li&gt;
-&lt;&#x2F;ol&gt;
-&lt;p&gt;To appease my most recent hyperfixation I was listening to anything with Rich Harris (the creator of Svelte) in it. One such piece of media was &lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;changelog.com&#x2F;jsparty&#x2F;205&quot;&gt;JS Party 205&lt;&#x2F;a&gt;. In it Rich had a throwaway line about maybe someday rewriting the compiler in Rust. It came across as a &amp;quot;it&#x27;d be nice to have, but it&#x27;s definitely not a priority&amp;quot; project. Which makes sense. The Svelte compiler is already mostly TypeScript, so it&#x27;s got enough static typing to be safe and is also very easy for new people to contribute to, a must for any open source project. Rich is wise to stick to improving the Developer Experience first before doing a largely unnecessary rewrite. React is proof that if your JS framework makes it quick to develop apps people will use it regardless of bundle size.&lt;&#x2F;p&gt;
-&lt;p&gt;But that doesn&#x27;t stop this project from being very tempting to take on, and it definitely doesn&#x27;t stop me from trying. So this is going to be the start of a new series in which I chronicle my journey of rewriting a compiler (which I&#x27;ve never done before) for a project I&#x27;ve barely used. What I&#x27;m hoping to get out of it:&lt;&#x2F;p&gt;
-&lt;ol&gt;
-&lt;li&gt;A better understanding of:
-&lt;ul&gt;
-&lt;li&gt;Svelte&lt;&#x2F;li&gt;
-&lt;li&gt;JavaScript&lt;&#x2F;li&gt;
-&lt;li&gt;Compilers&lt;&#x2F;li&gt;
-&lt;li&gt;Rust&lt;&#x2F;li&gt;
-&lt;li&gt;Tackling big projects&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;&#x2F;li&gt;
-&lt;li&gt;A compiler that can do a significant subset of what the Svelte compiler can do, but much much faster
-&lt;ul&gt;
-&lt;li&gt;I don&#x27;t yet care for Server-Side Rendering, so that should cut the work a bit&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;&#x2F;li&gt;
-&lt;li&gt;Smaller bundle sizes
-&lt;ul&gt;
-&lt;li&gt;Code splitting can only do so much&lt;&#x2F;li&gt;
-&lt;li&gt;Not caring about bundle sizes is how we end up with 5MB of JS&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;&#x2F;li&gt;
-&lt;li&gt;A list of changes I&#x27;d like to make to the Svelte compiler so even if my compiler doesn&#x27;t get used the community can still benefit
-&lt;ul&gt;
-&lt;li&gt;Can we decrease bundle size?&lt;&#x2F;li&gt;
-&lt;li&gt;Can we speed up compilation?&lt;&#x2F;li&gt;
-&lt;li&gt;Are there any edge-cases not currently handled well?&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;&#x2F;li&gt;
-&lt;&#x2F;ol&gt;
 </description>
         </item>
     </channel>

@@ -10,6 +10,13 @@
         <loc>https://loremdipso.com/minis/</loc>
     </url>
     <url>
+        <loc>https://loremdipso.com/minis/mini-01/</loc>
+        <lastmod>2025-02-10</lastmod>
+    </url>
+    <url>
+        <loc>https://loremdipso.com/minis/page/1/</loc>
+    </url>
+    <url>
         <loc>https://loremdipso.com/posts/</loc>
     </url>
     <url>
@@ -127,6 +134,9 @@
     </url>
     <url>
         <loc>https://loremdipso.com/tags/svelte/</loc>
+    </url>
+    <url>
+        <loc>https://loremdipso.com/tags/ux/</loc>
     </url>
     <url>
         <loc>https://loremdipso.com/tags/writing/</loc>
