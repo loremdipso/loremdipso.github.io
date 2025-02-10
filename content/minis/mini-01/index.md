@@ -44,4 +44,4 @@ if (progressBar) {
 ```
 
 And I think the result is quite pleasing:
-{{ video(alt="Progress bar", path="assets/demo.mp4", max_height=300) }}
+{{ video(title="Progress bar", path="assets/demo.mp4", width=786, height=200) }}

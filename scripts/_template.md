@@ -3,10 +3,8 @@ title: "<%= title %>"
 description: "<%= description %>"
 slug: <%= slug %>
 date: <%= date %>
-draft: true
-taxonomies: {
-  tags: <%= tags %>
-}
+draft: <%= is_draft %>
+taxonomies: { tags: <%= tags %> }
 ---
 
 TODO 😎

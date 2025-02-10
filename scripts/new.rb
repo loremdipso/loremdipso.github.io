@@ -9,7 +9,7 @@ def main(_args)
   is_mini = readline_boolean('Is this a mini? (y/n): ')
   title = is_mini ? get_mini_title : custom_readline('Title of content (human readable): ')
   slug = fake_snakecase(title)
-  description = is_mini ? "" : custom_readline('Description of content: ')
+  description = is_mini ? '' : custom_readline('Description of content: ')
   tags = get_user_tags
   with_images = readline_boolean('Will there be images? (y/n): ')
   date = Time.now.strftime('%Y-%m-%d')
@@ -18,7 +18,8 @@ def main(_args)
     {
       title: title, slug: slug,
       description: description,
-      tags: tags, date: date
+      tags: tags, date: date,
+      is_draft: !is_mini
     }
   )
 
@@ -28,11 +29,13 @@ def main(_args)
   exec("vim \"#{output_path}\"")
 end
 
-def get_mini_title()
-  numbers = Dir['content/minis/*'].map{|e| File.basename(e, File.extname(e))}.filter{|e| e =~ /^mini-[0-9]+$/}.map{|e| e.split("-")[1].to_i}
+def get_mini_title
+  numbers = Dir['content/minis/*'].map do |e|
+    File.basename(e, File.extname(e))
+  end.filter { |e| e =~ /^mini-[0-9]+$/ }.map { |e| e.split('-')[1].to_i }
   numbers.push(0)
   max = numbers.max
-  "mini %02d" % (max+1)
+  format('mini %02d', (max + 1))
 end
 
 def custom_readline(prompt)

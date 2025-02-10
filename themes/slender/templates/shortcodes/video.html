@@ -2,7 +2,11 @@
 
 <p>
     {%- set path = page.path ~ path -%}
-    <video loop autoplay>
+    {%- set aspect_ratio = width / height -%}
+    <video loop autoplay muted
+        {%if title%}title="{{ title }}"{%endif%}
+        style="aspect-ratio: {{aspect_ratio}}"
+    >
         <source src="{{ path }}" type="video/mp4">
     </video>
 </p>
