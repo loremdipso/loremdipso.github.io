@@ -26,52 +26,6 @@
 </description>
         </item>
         <item>
-            <title>Hip Hop Helper</title>
-            <pubDate>Sun, 12 Feb 2023 00:00:00 +0000</pubDate>
-            <link>https://loremdipso.com/posts/hip-hop-helper/</link>
-            <guid>https://loremdipso.com/posts/hip-hop-helper/</guid>
-            <description>&lt;h2 id=&quot;the-pitch&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#the-pitch&quot; aria-label=&quot;Anchor link for: the-pitch&quot;&gt;The Pitch&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
-&lt;p&gt;Writing poetry with specified rhyming schemes is hard. Whenever I try I end up whisper singing to myself over and over as I try to think of synonyms that rhyme with &amp;quot;Timbucktoo&amp;quot;. Can we do any better?&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;disclaimer&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#disclaimer&quot; aria-label=&quot;Anchor link for: disclaimer&quot;&gt;Disclaimer&lt;&#x2F;a&gt;&lt;&#x2F;h3&gt;
-&lt;p&gt;Before we begin, yes hip hop is not rap, and this is more of a general tool for writing structured verse, but they&#x27;re all kind of related and hip hop has better alliteration so I&#x27;m keeping it.&lt;&#x2F;p&gt;
-&lt;h2 id=&quot;v1&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#v1&quot; aria-label=&quot;Anchor link for: v1&quot;&gt;V1&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
-&lt;p&gt;This has been an idea kicking around in the back of my head for years. Surely there&#x27;s a multitude of projects doing exactly this but better but I&#x27;ve purposefully avoided looking at any of them for fear of losing motivation. So I&#x27;ve split this project into at least two parts:&lt;&#x2F;p&gt;
-&lt;ul&gt;
-&lt;li&gt;Part 1: (what you&#x27;re reading now) where I embrace my naivete and just try to optimize for what I know&lt;&#x2F;li&gt;
-&lt;li&gt;Part 2: where I do some research on the state of the art and then borrow&#x2F;re-implement the features I like the most&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;p&gt;If there&#x27;s enough ground to cover I may end up stretching this into a trilogy, but I&#x27;m writing it one part at a time so who knows?&lt;&#x2F;p&gt;
-&lt;p&gt;For this first attempt I&#x27;d like to visualize the syllables of the words as I write them. To do that we just need to split our source text into syllables. I thought this would be the easy part. Surely there&#x27;s some ready-made mapping and I just have to pick one. Right? Right??&lt;&#x2F;p&gt;
-&lt;p&gt;Well half an hour of googling later I can semi-confidently say that I don&#x27;t think so, at least not ready-made. I did find out you can download &lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;en.wiktionary.org&#x2F;wiki&#x2F;Help:FAQ#Downloading_Wiktionary&quot;&gt;Wiktionary&lt;&#x2F;a&gt;, which is super cool, but more to the point that means I could could take that database and pull just the words and the associated syllables out into some smaller (but still quite massive) &lt;code&gt;JSON&lt;&#x2F;code&gt;. While that exercise seems doable and somewhat interesting it doesn&#x27;t cover all use-cases, particularly made up words (which, as you&#x27;ll soon see, I am quite the fan).&lt;&#x2F;p&gt;
-&lt;p&gt;So after even more searching I ended up using the lovely &lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;www.npmjs.com&#x2F;package&#x2F;compromise&quot;&gt;compromise&lt;&#x2F;a&gt; package. It certainly wasn&#x27;t built with syllable extraction in mind, and it&#x27;s definitely overkill for what I need, but we&#x27;re just exploring the problem space for now so I&#x27;m fine with it. This also required some enhancements to your &lt;a href=&quot;&#x2F;posts&#x2F;adding-interactivity&quot;&gt;interactivity&lt;&#x2F;a&gt; work (which I&#x27;ve now backported, so you can read about it there).&lt;&#x2F;p&gt;
-&lt;p&gt;With that, this is what we get:&lt;&#x2F;p&gt;
-&lt;div class=&quot;demo&quot;&gt;
-    &lt;script
-      src=&quot;&#x2F;demos&amp;#x2F;hip_hop_helper_v1.js?h=1c0efba3b0c1211d84e0c7496c413cc36f9d4f05b843af3caf29fcec866845e7&quot;
-      async
-      type=&quot;module&quot;
-      crossorigin=&quot;anonymous&quot;&gt;
-    &lt;&#x2F;script&gt;
-
-
-    &lt;div id=&quot;hip_hop_helper_v1&quot;&gt;&lt;&#x2F;div&gt;
-&lt;&#x2F;div&gt;
-&lt;p&gt;Putting that award winning limerick aside for a moment I actually quite like this. I mean clearly it&#x27;s imperfect (once is split into &amp;quot;on&amp;quot; and &amp;quot;ce&amp;quot;, for example) but it&#x27;s workable. I&#x27;d be happy sinking some more time into using a dictionary for all the real words and only falling back to &lt;code&gt;compromise&lt;&#x2F;code&gt; as a heuristic for the made up ones. Other enhancements I can think of:&lt;&#x2F;p&gt;
-&lt;ul&gt;
-&lt;li&gt;Synonym finder&lt;&#x2F;li&gt;
-&lt;li&gt;Indicating rhymes&lt;&#x2F;li&gt;
-&lt;li&gt;Marking slant rhymes&lt;&#x2F;li&gt;
-&lt;li&gt;Specifying the rhyme scheme (with common presets)&lt;&#x2F;li&gt;
-&lt;li&gt;Indicating deviations from said rhyme scheme&lt;&#x2F;li&gt;
-&lt;li&gt;Splitting&#x2F;joining syllables to indicate how it&#x27;s spoken&lt;&#x2F;li&gt;
-&lt;li&gt;Support multiple stanzas&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;p&gt;This seems a bit short, but I think I&#x27;ve done just about everything I set out to do with this prototype. Next I&#x27;ll do a bit of research and come back with a gameplan and we&#x27;ll (hopefully) make something actually useful. Wouldn&#x27;t that be fun? Anyway, until next time,&lt;&#x2F;p&gt;
-&lt;p&gt;Stay frosty,
-Michael ❤️&lt;&#x2F;p&gt;
-</description>
-        </item>
-        <item>
             <title>Adding Interactivity</title>
             <pubDate>Sat, 24 Dec 2022 00:00:00 +0000</pubDate>
             <link>https://loremdipso.com/posts/adding-interactivity/</link>
@@ -619,6 +573,66 @@ Michael ❤️&lt;&#x2F;p&gt;
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;}
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;Alright, seems simple enough. What if I just write a very very very basic compiler that parses the DOM tree looking for Elements and then spits out the resultant JavaScript as it chugs along? If we merge all the compilation steps we avoid running through the file multiple times, a plus for performance. So I gave it a shot, and got something that produced exactly the same output, but only for the simplest cases. After, I realized that, while this approach would yield something very very fast, doing everything in one step made the program fairly difficult to change. I think I&#x27;d be better off sacrificing just a little performance in exchange for modularity. Let&#x27;s shelve this attempt for now and try something more traditional.&lt;&#x2F;p&gt;
+</description>
+        </item>
+        <item>
+            <title>Lithe 1: The Motivation</title>
+            <pubDate>Mon, 03 Jan 2022 16:12:04 -0700</pubDate>
+            <link>https://loremdipso.com/posts/lithe-1/</link>
+            <guid>https://loremdipso.com/posts/lithe-1/</guid>
+            <description>&lt;p&gt;Svelte is like Rust for me in that I had heard good things for years before I even gave it a try.&lt;&#x2F;p&gt;
+&lt;p&gt;Svelte is like Rust for me in that I loved it immediately.&lt;&#x2F;p&gt;
+&lt;p&gt;It&#x27;s really very simple to write in, the basic idea is engaging, and after trying it I wanted so badly for it to succeed. For context I have professional experience with vanilla JavaScript, React, and Angular. After transitioning a small app from Angular to Svelte, here were my takeaways:&lt;&#x2F;p&gt;
+&lt;ol&gt;
+&lt;li&gt;It&#x27;s very much like Vue
+&lt;ul&gt;
+&lt;li&gt;Single file structure&lt;&#x2F;li&gt;
+&lt;li&gt;Framework provides a lot out of the box&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;It&#x27;s got a better pattern for reactive programming than React
+&lt;ul&gt;
+&lt;li&gt;I&#x27;m guessing Svelte is a large part of the motivation behind React&#x27;s new &lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=lGEMwh32soc&quot;&gt;React without memo&lt;&#x2F;a&gt; project&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;It&#x27;s had five years to become popular, and yet it has not.
+&lt;ul&gt;
+&lt;li&gt;I can only guess at this, but I&#x27;d say Svelte was simply late to the game. So much of the web is written using other frameworks, and no one wants to re-write it all&lt;&#x2F;li&gt;
+&lt;li&gt;Initially Svelte touted itself as providing all the functionality you&#x27;d expect from a big JS framework with way less code. That&#x27;s turned out to not be the &lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;sveltejs&#x2F;svelte&#x2F;issues&#x2F;2546#issuecomment-678845774&quot;&gt;full story&lt;&#x2F;a&gt;, and an app with lots of components will end up being less LOC if written in, say, React than Svelte&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;p&gt;To appease my most recent hyperfixation I was listening to anything with Rich Harris (the creator of Svelte) in it. One such piece of media was &lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;changelog.com&#x2F;jsparty&#x2F;205&quot;&gt;JS Party 205&lt;&#x2F;a&gt;. In it Rich had a throwaway line about maybe someday rewriting the compiler in Rust. It came across as a &amp;quot;it&#x27;d be nice to have, but it&#x27;s definitely not a priority&amp;quot; project. Which makes sense. The Svelte compiler is already mostly TypeScript, so it&#x27;s got enough static typing to be safe and is also very easy for new people to contribute to, a must for any open source project. Rich is wise to stick to improving the Developer Experience first before doing a largely unnecessary rewrite. React is proof that if your JS framework makes it quick to develop apps people will use it regardless of bundle size.&lt;&#x2F;p&gt;
+&lt;p&gt;But that doesn&#x27;t stop this project from being very tempting to take on, and it definitely doesn&#x27;t stop me from trying. So this is going to be the start of a new series in which I chronicle my journey of rewriting a compiler (which I&#x27;ve never done before) for a project I&#x27;ve barely used. What I&#x27;m hoping to get out of it:&lt;&#x2F;p&gt;
+&lt;ol&gt;
+&lt;li&gt;A better understanding of:
+&lt;ul&gt;
+&lt;li&gt;Svelte&lt;&#x2F;li&gt;
+&lt;li&gt;JavaScript&lt;&#x2F;li&gt;
+&lt;li&gt;Compilers&lt;&#x2F;li&gt;
+&lt;li&gt;Rust&lt;&#x2F;li&gt;
+&lt;li&gt;Tackling big projects&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;A compiler that can do a significant subset of what the Svelte compiler can do, but much much faster
+&lt;ul&gt;
+&lt;li&gt;I don&#x27;t yet care for Server-Side Rendering, so that should cut the work a bit&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;Smaller bundle sizes
+&lt;ul&gt;
+&lt;li&gt;Code splitting can only do so much&lt;&#x2F;li&gt;
+&lt;li&gt;Not caring about bundle sizes is how we end up with 5MB of JS&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;A list of changes I&#x27;d like to make to the Svelte compiler so even if my compiler doesn&#x27;t get used the community can still benefit
+&lt;ul&gt;
+&lt;li&gt;Can we decrease bundle size?&lt;&#x2F;li&gt;
+&lt;li&gt;Can we speed up compilation?&lt;&#x2F;li&gt;
+&lt;li&gt;Are there any edge-cases not currently handled well?&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
 </description>
         </item>
     </channel>
