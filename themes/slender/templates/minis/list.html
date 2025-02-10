@@ -12,17 +12,19 @@
         {% for page in paginator.pages | reverse %}
         <li class="mini-item">
             <a href="{{ macros::rel_url(path=page.permalink) | safe }}" class="mini-title">
+                {% if page.title %}<h3>{{ page.title }}</h3>{% endif %}
                 <span class="post-day">{{ page.date | date(format=config.extra.params.dateform) }}</span>
-                {% if page.title %}<span>{{ page.title }}</span>{% endif %}
             </a>
 
-            <div class="post-contents">
-                {{ page.content | safe }}
-            </div>
+            <article>
+                <div class="post-contents">
+                    {{ page.content | safe }}
+                </div>
+            </article>
 
-					{%if page.taxonomies.tags %}
-						{{ macros::tags(tags=page.taxonomies.tags) }}
-					{% endif %}
+            {%if page.taxonomies.tags %}
+                {{ macros::tags(tags=page.taxonomies.tags) }}
+            {% endif %}
         </li>
         {% endfor %}
     </ul>
