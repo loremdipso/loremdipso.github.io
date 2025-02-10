@@ -69,6 +69,7 @@
 
 		<hr>
 
+		{% if page.lower or page.higher %}
 		<div class="suggested-post-links">
 			<h3>{{ config.extra.strings.suggested_reading }}</h3>
 
@@ -84,5 +85,6 @@
 			</a>
 			{% endif %}
 		</div>
+		{% endif %}
 	</main>
 {% endblock content %}
