@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% import "macros.html" as macros %}
+
+{% block extra_includes %}
+    {{ macros::style(path='post.css') }}
+{% endblock extra_includes %}
+
+{% block content %}
+<main class="fade-in">
+    <ul class="minis-list">
+        {% for page in paginator.pages | reverse %}
+        <li class="mini-item">
+            <a href="{{ macros::rel_url(path=page.permalink) | safe }}" class="mini-title">
+                <span class="post-day">{{ page.date | date(format=config.extra.params.dateform) }}</span>
+                {% if page.title %}<span>{{ page.title }}</span>{% endif %}
+            </a>
+
+            <div class="post-contents">
+                {{ page.content | safe }}
+            </div>
+
+					{%if page.taxonomies.tags %}
+						{{ macros::tags(tags=page.taxonomies.tags) }}
+					{% endif %}
+        </li>
+        {% endfor %}
+    </ul>
+
+    <nav class="pagination">
+    {% if paginator.previous %}
+        <a class="previous" href="{{ paginator.previous }}">‹ Previous</a>
+    {% endif %}
+    {% if paginator.next %}
+        <a class="next" href="{{ paginator.next }}">Next ›</a>
+    {% endif %}
+    </nav>
+</main>
+{% endblock content %}

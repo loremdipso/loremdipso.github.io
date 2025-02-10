@@ -139,6 +139,10 @@ url = "/"
 name = "Posts"
 url = "/posts/"
 
+[[extra.menus]]
+name = "Minis"
+url = "/minis/"
+
 # [[extra.menus]]
 #     name = "Resume"
 #     url = "/resume/"

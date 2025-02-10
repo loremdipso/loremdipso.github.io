@@ -163,6 +163,36 @@ a {
 	}
 }
 
+.minis-list {
+	flex-grow: 1;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+
+	.mini-title {
+		.post-day {
+			font-weight: bold;
+		}
+	}
+
+	.mini-item {
+		margin-top: 1rem;
+		margin-bottom: 1rem;
+		border-bottom: 1px $post-item-border-bottom dashed;
+	}
+
+	.tags {
+		text-align: right;
+	}
+}
+
+nav.pagination {
+	display: flex;
+	.next {
+		margin-left: auto;
+	}
+}
+
 .subheader {
 	margin: 1rem 0;
 	display: block;
@@ -256,4 +286,14 @@ main {
 	a {
 		margin-left: 1rem;
 	}
+}
+
+blockquote {
+	padding: 0.5rem;
+	margin-right: 0;
+	background-color: $color-quote-background;
+}
+
+video {
+	width: 100%;
 }

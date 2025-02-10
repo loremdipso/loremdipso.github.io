@@ -6,9 +6,10 @@ require 'readline'
 
 def main(_args)
   template = generate_template
-  title = custom_readline('Title of content (human readable): ')
+  is_mini = readline_boolean('Is this a mini? (y/n): ')
+  title = is_mini ? get_mini_title : custom_readline('Title of content (human readable): ')
   slug = fake_snakecase(title)
-  description = custom_readline('Description of content: ')
+  description = is_mini ? "" : custom_readline('Description of content: ')
   tags = get_user_tags
   with_images = readline_boolean('Will there be images? (y/n): ')
   date = Time.now.strftime('%Y-%m-%d')
@@ -21,10 +22,17 @@ def main(_args)
     }
   )
 
-  output_path = get_output_path(slug, with_images)
+  output_path = get_output_path(slug, with_images, is_mini)
   File.open(output_path, 'w') { |f| f.puts(result) }
   puts 'Done :)'
   exec("vim \"#{output_path}\"")
+end
+
+def get_mini_title()
+  numbers = Dir['content/minis/*'].map{|e| File.basename(e, File.extname(e))}.filter{|e| e =~ /^mini-[0-9]+$/}.map{|e| e.split("-")[1].to_i}
+  numbers.push(0)
+  max = numbers.max
+  "mini %02d" % (max+1)
 end
 
 def custom_readline(prompt)
@@ -91,10 +99,10 @@ def get_existent_tags
   Dir['docs/tags/*'].keep_if { |f| File.directory?(f) }.map { |e| File.basename(e) }
 end
 
-def get_output_path(slug, use_assets_folder)
+def get_output_path(slug, use_assets_folder, is_mini)
   # TODO: deal with non-draft/numeric prefixes. For now just prefix with 'draft'
   # path = File.join(".", "content", "posts", "draft-%s" % slug)
-  path = File.join('.', 'content', 'posts', slug)
+  path = is_mini ? File.join('.', 'content', 'minis', slug) : File.join('.', 'content', 'posts', slug)
   if use_assets_folder
     Dir.mkdir(path)
     Dir.mkdir(File.join(path, 'assets'))

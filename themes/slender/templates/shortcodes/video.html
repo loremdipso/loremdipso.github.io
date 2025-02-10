@@ -1,0 +1,8 @@
+{% import "macros.html" as macros %}
+
+<p>
+    {%- set path = page.path ~ path -%}
+    <video loop autoplay>
+        <source src="{{ path }}" type="video/mp4">
+    </video>
+</p>

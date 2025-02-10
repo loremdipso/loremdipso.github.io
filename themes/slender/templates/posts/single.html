@@ -31,14 +31,8 @@
 						{{ page.word_count / 220.0 | round }} minute read
 					</div>
 
-					{% if page.taxonomies.tags %}
-					<div class="tags">
-						{% for tag in page.taxonomies.tags | sort %}
-							<a href="{{get_taxonomy_url(kind='tags', name=tag)}}" class="tag">
-								{{ macros::icon(name="tags") }}{{tag}}
-							</a>
-						{% endfor %}
-						</div>
+					{%if page.taxonomies.tags %}
+						{{ macros::tags(tags=page.taxonomies.tags) }}
 					{% endif %}
 				</div>
 			</header>

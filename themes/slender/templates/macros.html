@@ -105,3 +105,15 @@ TODO: use this
     {{ start }} - {{ end }}
   </div>
 {% endmacro period %}
+
+{% macro tags(tags) %}
+  {% if tags %}
+  <div class="tags">
+    {% for tag in tags | sort %}
+      <a href="{{get_taxonomy_url(kind='tags', name=tag)}}" class="tag">
+        {{ macros::icon(name="tags") }}{{tag}}
+      </a>
+    {% endfor %}
+    </div>
+  {% endif %}
+{% endmacro %}
