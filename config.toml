@@ -91,7 +91,7 @@ truncate_content_length = 100
 
 [extra.author]
 name = "Michael Adams"
-job_title = "Software Engineer"
+job_title = "Just a silly lil guy"
 profile_pic_url = "images/profile_pic.jpg"
 
 [extra.strings]
