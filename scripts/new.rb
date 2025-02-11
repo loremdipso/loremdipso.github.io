@@ -16,7 +16,7 @@ def main(_args)
 
   result = template.result_with_hash(
     {
-      title: title, slug: slug,
+      title: is_mini ? '' : title, slug: slug,
       description: description,
       tags: tags, date: date,
       is_draft: !is_mini

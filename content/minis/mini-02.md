@@ -1,5 +1,5 @@
 ---
-title: "mini 02"
+title: ""
 description: ""
 slug: mini-02
 date: 2025-02-10

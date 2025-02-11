@@ -12,19 +12,29 @@ I'm sure [fjall-rs](https://fjall-rs.github.io/) isn't the first tech blog to im
 ```js
 let progressBar = document.querySelector(".progress-bar");
 if (progressBar) {
-  let html = document.querySelector("html");
-  document.addEventListener("scroll", (event) => {
-    // Only enable this when the post is big enough
-    if (html.scrollHeight - html.clientHeight > 200) {
-      let newHeight = Math.round(
-        100 * (html.scrollTop / (html.scrollHeight - html.clientHeight))
-      );
-      progressBar.style.width = `${newHeight}%`;
-    } else {
-      progressBar.style.width = "0";
-    }
-  });
+ let html = document.querySelector("html");
+ const updateProgressBar = () => {
+  // Only enable this when the post is big enough
+  if (html.scrollHeight - html.clientHeight > 200) {
+   let newHeight = Math.round(
+    100 * (html.scrollTop / (html.scrollHeight - html.clientHeight))
+   );
+   progressBar.style.width = `${newHeight}%`;
+  } else {
+   progressBar.style.width = "0";
+  }
+ };
+
+ document.addEventListener("scroll", () => {
+  updateProgressBar();
+ });
+ // Scroll events don't always fire,
+ // especially on mobile when the header comes and goes
+ document.addEventListener("resize", () => {
+  updateProgressBar();
+ });
 }
+
 ```
 
 ```css
