@@ -10,14 +10,18 @@ taxonomies: { tags: ["writing", "ux"] }
 I'm sure [fjall-rs](https://fjall-rs.github.io/) isn't the first tech blog to implement a dynamic reading progress bar, but it's the first the caught my eye. Implementing it was trivially easy, though there are some browser pitfalls to be aware of. Here it is, in full:
 
 ```js
+// Animate the progress bar
 let progressBar = document.querySelector(".progress-bar");
 if (progressBar) {
  let html = document.querySelector("html");
+ let header = document.querySelector("header");
  const updateProgressBar = () => {
+  // This is the only way I found to deal with the mobile address bar
+  let effectiveScrollHeight = html.scrollHeight - window.innerHeight;
   // Only enable this when the post is big enough
-  if (html.scrollHeight - html.clientHeight > 200) {
+  if (effectiveScrollHeight > 200) {
    let newHeight = Math.round(
-    100 * (html.scrollTop / (html.scrollHeight - html.clientHeight))
+    100 * (html.scrollTop / effectiveScrollHeight)
    );
    progressBar.style.width = `${newHeight}%`;
   } else {

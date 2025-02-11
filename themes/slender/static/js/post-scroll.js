@@ -74,8 +74,8 @@ if (progressBar) {
 	let html = document.querySelector("html");
 	let header = document.querySelector("header");
 	const updateProgressBar = () => {
-		let effectiveScrollHeight =
-			html.scrollHeight - (window.outerHeight - header.clientHeight);
+		// This is the only way I found to deal with the mobile address bar
+		let effectiveScrollHeight = html.scrollHeight - window.innerHeight;
 		// Only enable this when the post is big enough
 		if (effectiveScrollHeight > 200) {
 			let newHeight = Math.round(
