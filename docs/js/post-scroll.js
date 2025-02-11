@@ -72,7 +72,7 @@ for (const element of document.querySelectorAll(
 let progressBar = document.querySelector(".progress-bar");
 if (progressBar) {
 	let html = document.querySelector("html");
-	document.addEventListener("scroll", (event) => {
+	const updateProgressBar = () => {
 		// Only enable this when the post is big enough
 		if (html.scrollHeight - html.clientHeight > 200) {
 			let newHeight = Math.round(
@@ -82,5 +82,12 @@ if (progressBar) {
 		} else {
 			progressBar.style.width = "0";
 		}
+	};
+
+	document.addEventListener("scroll", () => {
+		updateProgressBar();
+	});
+	document.addEventListener("resize", () => {
+		updateProgressBar();
 	});
 }
