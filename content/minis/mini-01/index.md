@@ -28,8 +28,7 @@ if (progressBar) {
  document.addEventListener("scroll", () => {
   updateProgressBar();
  });
- // Scroll events don't always fire,
- // especially on mobile when the header comes and goes
+ // Scroll events don't always fire when the window resizes
  document.addEventListener("resize", () => {
   updateProgressBar();
  });

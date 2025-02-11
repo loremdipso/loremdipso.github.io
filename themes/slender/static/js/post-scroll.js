@@ -74,9 +74,9 @@ if (progressBar) {
 	let html = document.querySelector("html");
 	const updateProgressBar = () => {
 		// Only enable this when the post is big enough
-		if (html.scrollHeight - html.clientHeight > 200) {
+		if (html.clientHeight > 200) {
 			let newHeight = Math.round(
-				100 * (html.scrollTop / (html.scrollHeight - html.clientHeight))
+				100 * (html.scrollTop / html.clientHeight)
 			);
 			progressBar.style.width = `${newHeight}%`;
 		} else {
