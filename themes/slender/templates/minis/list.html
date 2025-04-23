@@ -1,41 +1,39 @@
-{% extends "base.html" %}
-
-{% import "macros.html" as macros %}
-
-{% block extra_includes %}
-    {{ macros::style(path='post.css') }}
-{% endblock extra_includes %}
-
-{% block content %}
+{% extends "base.html" %} {% import "macros.html" as macros %} {% block
+extra_includes %} {{ macros::style(path='post.css') }} {% endblock
+extra_includes %} {% block content %}
 <main class="fade-in">
     <ul class="minis-list">
-        {% for page in paginator.pages | reverse %}
+        {% for page in paginator.pages %}
         <li class="mini-item">
-            <a href="{{ macros::rel_url(path=page.permalink) | safe }}" class="mini-title">
-                {% if page.title %}<h3>{{ page.title }}</h3>{% endif %}
-                <span class="post-day">{{ page.date | date(format=config.extra.params.dateform) }}</span>
+            <a
+                href="{{ macros::rel_url(path=page.permalink) | safe }}"
+                class="mini-title"
+            >
+                {% if page.title %}
+                <h3>{{ page.title }}</h3>
+                {% endif %}
+                <span class="post-day"
+                    >{{ page.date | date(format=config.extra.params.dateform)
+                    }}</span
+                >
             </a>
 
             <article>
-                <div class="post-contents">
-                    {{ page.content | safe }}
-                </div>
+                <div class="post-contents">{{ page.content | safe }}</div>
             </article>
 
-            {%if page.taxonomies.tags %}
-                {{ macros::tags(tags=page.taxonomies.tags) }}
-            {% endif %}
+            {%if page.taxonomies.tags %} {{
+            macros::tags(tags=page.taxonomies.tags) }} {% endif %}
         </li>
         {% endfor %}
     </ul>
 
     <nav class="pagination">
-    {% if paginator.previous %}
+        {% if paginator.previous %}
         <a class="previous" href="{{ paginator.previous }}">‹ Previous</a>
-    {% endif %}
-    {% if paginator.next %}
+        {% endif %} {% if paginator.next %}
         <a class="next" href="{{ paginator.next }}">Next ›</a>
-    {% endif %}
+        {% endif %}
     </nav>
 </main>
 {% endblock content %}
