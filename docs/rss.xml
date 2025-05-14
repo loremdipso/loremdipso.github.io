@@ -7,7 +7,29 @@
         <generator>Zola</generator>
         <language>en</language>
         <atom:link href="https://loremdipso.com/rss.xml" rel="self" type="application/rss+xml"/>
-        <lastBuildDate>Mon, 10 Feb 2025 00:00:00 +0000</lastBuildDate>
+        <lastBuildDate>Thu, 20 Feb 2025 00:00:00 +0000</lastBuildDate>
+        <item>
+            <title></title>
+            <pubDate>Thu, 20 Feb 2025 00:00:00 +0000</pubDate>
+            <link>https://loremdipso.com/minis/mini-03/</link>
+            <guid>https://loremdipso.com/minis/mini-03/</guid>
+            <description>&lt;p&gt;I think one of the worst hit by the LLM mania is Stack Overflow. Not only has
+its content been essentially stolen and regurgitated by ChatGPT in an,
+admittedly, convenient and easy-to-understand package, but LLMs have made it
+easier than ever before to give yourself credability via a bot network of
+reasonable sounding answers that get reasonable sounding praise.&lt;&#x2F;p&gt;
+&lt;p&gt;So I&#x27;d like to just highlight one of my favorites posts. No fat to be trimmed,
+just a simple, honest answer to a simple, earnest question.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;q&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#q&quot; aria-label=&quot;Anchor link for: q&quot;&gt;Q:&lt;&#x2F;a&gt;&lt;&#x2F;h3&gt;
+&lt;p&gt;How can I display a child process&#x27;s output in realitime with Ruby?&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;a&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#a&quot; aria-label=&quot;Anchor link for: a&quot;&gt;A:&lt;&#x2F;a&gt;&lt;&#x2F;h3&gt;
+&lt;pre data-lang=&quot;ruby&quot; style=&quot;background-color:#2b2c2f;color:#cccece;&quot; class=&quot;language-ruby &quot;&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span style=&quot;color:#fac863;&quot;&gt;IO&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span&gt;popen&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;(&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99c794;&quot;&gt;s3sync.rb …&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;quot;).&lt;&#x2F;span&gt;&lt;span&gt;each &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c594c5;&quot;&gt;do &lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;|&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f99157;&quot;&gt;line&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;|
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#6699cc;&quot;&gt;print&lt;&#x2F;span&gt;&lt;span&gt; line
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c594c5;&quot;&gt;end
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Beautiful. &lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;stackoverflow.com&#x2F;a&#x2F;1974748&quot;&gt;Source&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+</description>
+        </item>
         <item>
             <title>Dynamic reading progress bar</title>
             <pubDate>Mon, 10 Feb 2025 00:00:00 +0000</pubDate>
@@ -252,7 +274,7 @@ The result is what you see below, and here&#x27;s the zola shortcode I made:&lt;
 
     &lt;&#x2F;picture&gt;
 &lt;&#x2F;p&gt;&lt;h2 id=&quot;the-end-result&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#the-end-result&quot; aria-label=&quot;Anchor link for: the-end-result&quot;&gt;The End Result&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
-&lt;p&gt;Before you commit to reading this thing, here&#x27;re the final versions of this app: &lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;loremdipso.com&#x2F;secret_santa&#x2F;&quot;&gt;Svelte&lt;&#x2F;a&gt;, &lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;loremdipso.com&#x2F;secret_santa_react&#x2F;&quot;&gt;React&lt;&#x2F;a&gt;. In future I&#x27;ll only be updating the Svelte version.&lt;&#x2F;p&gt;
+&lt;p&gt;Here ya go! &lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;loremdipso.com&#x2F;secret-santa&#x2F;&quot;&gt;Secret Santa&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;backstory&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#backstory&quot; aria-label=&quot;Anchor link for: backstory&quot;&gt;Backstory&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
 &lt;p&gt;I have a groups of friends from college that have a &lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Secret_Santa&quot;&gt;Secret Santa&lt;&#x2F;a&gt; event every year. Even after we all moved apart we&#x27;ve kept it up, jumping to Zoom to unwrap our gifts and guess who was our gifter. One of my most favorite traditions, a delight tempered only by the daunting task of logistics. You see, there are some constraints:&lt;&#x2F;p&gt;
 &lt;ol&gt;
@@ -263,7 +285,7 @@ The result is what you see below, and here&#x27;s the zola shortcode I made:&lt;
 &lt;h2 id=&quot;initial-approach&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#initial-approach&quot; aria-label=&quot;Anchor link for: initial-approach&quot;&gt;Initial Approach&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
 &lt;p&gt;At first I wrote a simple ruby script that would generate text files whose names were the gifter and whose contents were the giftee. The organizer would then send an email out to everyone, attaching the correct file to each email. This worked, but was relatively inflexible. Plus previous years didn&#x27;t automatically carry over, so the organizer would have to manually update the ruby script with those pairings and prune old ones when there were too many for the script to find a valid solution.&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;existing-solutions&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#existing-solutions&quot; aria-label=&quot;Anchor link for: existing-solutions&quot;&gt;Existing Solutions&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
-&lt;p&gt;The closest thing I found out in the wild that didn&#x27;t collect any info or show any ads was https:&#x2F;&#x2F;arcanis.github.io&#x2F;secretsanta&#x2F;. It wasn&#x27;t exactly what I was looking for, plus the exclusions seemed a bit broken, but it had the fantastic idea of encoding the giftee&#x27;s information in the URL, using AES with a static key as an obfuscator. Neat!&lt;&#x2F;p&gt;
+&lt;p&gt;The closest thing I found out in the wild that didn&#x27;t collect any info or show any ads was &lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;arcanis.github.io&#x2F;secretsanta&#x2F;&quot;&gt;https:&#x2F;&#x2F;arcanis.github.io&#x2F;secretsanta&#x2F;&lt;&#x2F;a&gt;. It wasn&#x27;t exactly what I was looking for, plus the exclusions seemed a bit broken, but it had the fantastic idea of encoding the giftee&#x27;s information in the URL, using AES with a static key as an obfuscator. Neat!&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;the-classic-excuse&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#the-classic-excuse&quot; aria-label=&quot;Anchor link for: the-classic-excuse&quot;&gt;The Classic Excuse&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
 &lt;p&gt;If I&#x27;m being honest with myself I could have pretty easily extended the ruby script to do everything a web app could, but I&#x27;m always looking for any reason to try out a new technology. This time it was &lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;svelte.dev&#x2F;&quot;&gt;Svelte&lt;&#x2F;a&gt;. I&#x27;d heard it has Vue-like structure and Syntax, Vanilla JavaScript performance, and I&#x27;d already &lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;loremdipso.com&#x2F;tags&#x2F;lithe&#x2F;&quot;&gt;started writing a compiler for it&lt;&#x2F;a&gt;. So let&#x27;s give a go, shall we?&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;ui&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#ui&quot; aria-label=&quot;Anchor link for: ui&quot;&gt;UI&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
@@ -300,7 +322,7 @@ The result is what you see below, and here&#x27;s the zola shortcode I made:&lt;
 &lt;p&gt;I was a little disappointed that the Svelte-based Material UI library spit out &lt;strong&gt;500 KB&lt;&#x2F;strong&gt; just in styles. I&#x27;d love to get rid of most of that, but even so the whole project comes in at under &lt;strong&gt;1 MB&lt;&#x2F;strong&gt; total. Okay, but how does it compare to, say, React? Well, luckily I first wrote this app using React and &lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;ant.design&#x2F;&quot;&gt;Antd&lt;&#x2F;a&gt;. The implementations aren&#x27;t exactly the same but they have nearly the same set of features. All told, the build of the React version comes out at around &lt;strong&gt;3.4 MB&lt;&#x2F;strong&gt;, which seems awfully high to me, even for React. After some digging it turns out it was due to that version of antd having &lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;stackoverflow.com&#x2F;questions&#x2F;48721290&#x2F;ant-design-huge-imports&quot;&gt;some issues&lt;&#x2F;a&gt;, so if I just &lt;code&gt;npm update&lt;&#x2F;code&gt; and rebuild I get...&lt;&#x2F;p&gt;
 &lt;p&gt;&lt;strong&gt;11 MB&lt;&#x2F;strong&gt; ?!?! Whoa whoa whoa, that can&#x27;t be right. Alright, what if we use &lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;umijs&#x2F;babel-plugin-import&quot;&gt;babel-plugin-import&lt;&#x2F;a&gt;, so that imports like &lt;code&gt;import { Button } from &#x27;antd&#x27;;&lt;&#x2F;code&gt; automatically turn into something more like &lt;code&gt;import Button from &#x27;antd&#x2F;lib&#x2F;button&#x27;;&lt;&#x2F;code&gt;. Apparently that&#x27;s good for tree shaking. Aaaand... I actually kind of hate babel, so let&#x27;s try and avoid it by just manually updating these imports. Aaaand...&lt;&#x2F;p&gt;
 &lt;p&gt;&lt;strong&gt;7.7 MB&lt;&#x2F;strong&gt;. Wellllll, that&#x27;s... better, at least, but something&#x27;s definitely squiffy. Alright, fine, I&#x27;ll use babel. Aaaand... no change. Darn. Oh, wait! Looks like the real space-taker are &lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;ant-design&#x2F;ant-design&#x2F;issues&#x2F;12011#issuecomment-623043192&quot;&gt;the icons&lt;&#x2F;a&gt;, and we should use babel for that too. And with that I&#x27;m down to... &lt;strong&gt;4.8MB&lt;&#x2F;strong&gt;! &lt;em&gt;sigh&lt;&#x2F;em&gt; Alright, at this point I&#x27;ve had a gut full and just want to try something new.&lt;&#x2F;p&gt;
-&lt;h2 id=&quot;meanwhile-in-svelte-land&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#meanwhile-in-svelte-land&quot; aria-label=&quot;Anchor link for: meanwhile-in-svelte-land&quot;&gt;Meanwhile, in Svelte land...&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
+&lt;h2 id=&quot;meanwhile-in-svelte-land&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#meanwhile-in-svelte-land&quot; aria-label=&quot;Anchor link for: meanwhile-in-svelte-land&quot;&gt;Meanwhile, in Svelte land&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
 &lt;p&gt;So &lt;strong&gt;1 MB&lt;&#x2F;strong&gt;, huh? Alright, just in case I was doing something silly let&#x27;s go ahead and just try to use a &lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;carbon-components-svelte.onrender.com&#x2F;&quot;&gt;similar UI library&lt;&#x2F;a&gt; in an app built using &lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;kit.svelte.dev&#x2F;&quot;&gt;Svelte Kit&lt;&#x2F;a&gt;&#x27;s starter app template. That should give me the latest and greatest setup. But no, that also ended up costing ~500KB in styles, base, before I even started to pull in components. Why am I paying for junk I&#x27;m not even using? Hopefully users of that lib have a way to cut those out, but for the life of me I haven&#x27;t been able to find it.&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;enter-smelte&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#enter-smelte&quot; aria-label=&quot;Anchor link for: enter-smelte&quot;&gt;Enter Smelte&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
 &lt;p&gt;&lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;smeltejs.com&#x2F;&quot;&gt;Smelte&lt;&#x2F;a&gt;. The elevator pitch is basically &lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;material.io&#x2F;&quot;&gt;Material Design&lt;&#x2F;a&gt; + &lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;tailwindcss.com&#x2F;&quot;&gt;Tailwind CSS&lt;&#x2F;a&gt;. You can use all of the normal Tailwind styles in your app plus a tonne of pre-built components. There was one outstanding issue where Smelte doesn&#x27;t currently list a specific version of purgecss and is slightly incompatible with it. Hopefully that PR gets accepted soon, but until then I had great luck using an older version of &lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;www.npmjs.com&#x2F;package&#x2F;purgecss&quot;&gt;purgecss&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
@@ -311,22 +333,22 @@ The result is what you see below, and here&#x27;s the zola shortcode I made:&lt;
 &lt;p&gt;Please tease me if I spend any more time re-writing this silly app again.&lt;&#x2F;p&gt;
 &lt;details&gt;
   &lt;summary&gt;
-	Bonus: 2048
+ Bonus: 2048
   &lt;&#x2F;summary&gt;
 &lt;p&gt;
-	I did this same exercise with another of my old projects: &lt;a target=&quot;#&quot; href=&quot;https:&#x2F;&#x2F;loremdipso.com&#x2F;YAN2048&quot;&gt;YAN2048&lt;&#x2F;a&gt;. This one was written in Angular and only used its UI framework for the buttons and a game-over dialog. The &lt;a target=&quot;#&quot; href=&quot;https:&#x2F;&#x2F;loremdipso.com&#x2F;YAN2048_Svelte&quot;&gt;clone&lt;&#x2F;a&gt; does the same, and I copy&#x2F;pasted very nearly all the same logic and styles, yielding two very similar apps.
+ I did this same exercise with another of my old projects: &lt;a target=&quot;#&quot; href=&quot;https:&#x2F;&#x2F;loremdipso.com&#x2F;YAN2048&quot;&gt;YAN2048&lt;&#x2F;a&gt;. This one was written in Angular and only used its UI framework for the buttons and a game-over dialog. The &lt;a target=&quot;#&quot; href=&quot;https:&#x2F;&#x2F;loremdipso.com&#x2F;YAN2048_Svelte&quot;&gt;clone&lt;&#x2F;a&gt; does the same, and I copy&#x2F;pasted very nearly all the same logic and styles, yielding two very similar apps.
   &lt;&#x2F;p&gt;
 &lt;h2&gt;
-	Results
+ Results
   &lt;&#x2F;h2&gt;
 &lt;p&gt;
-	On-disk space, Angular: an even &lt;b&gt;500 KB&lt;&#x2F;b&gt;, Svelte: &lt;b&gt;84 KB&lt;&#x2F;b&gt;.
+ On-disk space, Angular: an even &lt;b&gt;500 KB&lt;&#x2F;b&gt;, Svelte: &lt;b&gt;84 KB&lt;&#x2F;b&gt;.
   &lt;&#x2F;p&gt;
 &lt;p&gt;
-	Total delivered to browser (according to my network tab), Angular: &lt;b&gt;587 KB&lt;&#x2F;b&gt; inflated (&lt;b&gt;251 KB&lt;&#x2F;b&gt; with gzip), Svelte: &lt;b&gt;224 KB&lt;&#x2F;b&gt; inflated (&lt;b&gt;179 KB&lt;&#x2F;b&gt; with gzip).
+ Total delivered to browser (according to my network tab), Angular: &lt;b&gt;587 KB&lt;&#x2F;b&gt; inflated (&lt;b&gt;251 KB&lt;&#x2F;b&gt; with gzip), Svelte: &lt;b&gt;224 KB&lt;&#x2F;b&gt; inflated (&lt;b&gt;179 KB&lt;&#x2F;b&gt; with gzip).
   &lt;&#x2F;p&gt;
 &lt;p&gt;
-	But is this comparison worthwhile? Is what I observed experimentally vaguely in line with what they should be? Well, according to &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;LayZeeDK&#x2F;ngx-ivy-minimal-app-with-ngzone&quot;&gt;this git repo&lt;&#x2F;a&gt;, a hello world using the &lt;a href=&quot;https:&#x2F;&#x2F;docs.angular.lat&#x2F;guide&#x2F;ivy&quot;&gt;Ivy renderer&lt;&#x2F;a&gt; costs around &lt;b&gt;131 KB&lt;&#x2F;b&gt; uncompressed. So, yeah, I think the results here are reasonable.
+ But is this comparison worthwhile? Is what I observed experimentally vaguely in line with what they should be? Well, according to &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;LayZeeDK&#x2F;ngx-ivy-minimal-app-with-ngzone&quot;&gt;this git repo&lt;&#x2F;a&gt;, a hello world using the &lt;a href=&quot;https:&#x2F;&#x2F;docs.angular.lat&#x2F;guide&#x2F;ivy&quot;&gt;Ivy renderer&lt;&#x2F;a&gt; costs around &lt;b&gt;131 KB&lt;&#x2F;b&gt; uncompressed. So, yeah, I think the results here are reasonable.
   &lt;&#x2F;p&gt;
 &lt;&#x2F;details&gt;
 </description>
@@ -569,35 +591,6 @@ The result is what you see below, and here&#x27;s the zola shortcode I made:&lt;
 	Lithe is far from done, but it can easily render the example programs above. In release mode, 1000 &lt;code&gt;span&lt;&#x2F;code&gt;s takes just &lt;code&gt;5ms&lt;&#x2F;code&gt; to run (!!!), most of which is simply the initial DOM parsing provided by an external library. Time is lost initializing FFI and shuttling strings to&#x2F;from Node, but even so it turns out Rust is really really fast (who knew?). As we add more features lithe can only slow down, but for now I&#x27;ll take this as a sign that this work might actually be useful.
   &lt;&#x2F;p&gt;
 &lt;&#x2F;details&gt;
-</description>
-        </item>
-        <item>
-            <title>Lithe 3: A Rewrite</title>
-            <pubDate>Mon, 03 Jan 2022 17:07:07 -0700</pubDate>
-            <link>https://loremdipso.com/posts/lithe-3/</link>
-            <guid>https://loremdipso.com/posts/lithe-3/</guid>
-            <description>&lt;p&gt;What if I just copied the Svelte compiler, written in TypeScript, changed all of the file extensions from &lt;code&gt;.ts&lt;&#x2F;code&gt; to &lt;code&gt;.rs&lt;&#x2F;code&gt;, and fixed all the bugs? It&#x27;d be a slog, sure, but at the end of the day I&#x27;d have a compiler that was very nearly the same, but presumably more performant.&lt;&#x2F;p&gt;
-&lt;p&gt;This attempt I gave a real try, spending maybe three nights just chugging away. What I got was just more and more errors, which was fairly disheartening. I also realized just how different Rust is, and that a 1-to-1 rewrite would result in something that wouldn&#x27;t be as ideal as it could be. For example, take this very simple TypeScript class:&lt;&#x2F;p&gt;
-&lt;pre data-lang=&quot;ts&quot; style=&quot;background-color:#2b2c2f;color:#cccece;&quot; class=&quot;language-ts &quot;&gt;&lt;code class=&quot;language-ts&quot; data-lang=&quot;ts&quot;&gt;&lt;span style=&quot;color:#c594c5;&quot;&gt;class &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fac863;&quot;&gt;Node &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c594c5;&quot;&gt;extends &lt;&#x2F;span&gt;&lt;span style=&quot;color:#99c794;&quot;&gt;BaseNode &lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;{
-&lt;&#x2F;span&gt;&lt;span&gt;	name&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;: &lt;&#x2F;span&gt;&lt;span&gt;String&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;? = &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f99157;&quot;&gt;null&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;,
-&lt;&#x2F;span&gt;&lt;span&gt;	children&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;: &lt;&#x2F;span&gt;&lt;span&gt;Node[] &lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span&gt;[]&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;,
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;}
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;p&gt;The equivalent Rust struct might look like:&lt;&#x2F;p&gt;
-&lt;pre data-lang=&quot;rust&quot; style=&quot;background-color:#2b2c2f;color:#cccece;&quot; class=&quot;language-rust &quot;&gt;&lt;code class=&quot;language-rust&quot; data-lang=&quot;rust&quot;&gt;&lt;span style=&quot;color:#c594c5;&quot;&gt;struct &lt;&#x2F;span&gt;&lt;span&gt;Node &lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;{
-&lt;&#x2F;span&gt;&lt;span&gt;	base&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span&gt; BaseNode,
-&lt;&#x2F;span&gt;&lt;span&gt;	name&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fac863;&quot;&gt;Option&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fac863;&quot;&gt;String&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;gt;&lt;&#x2F;span&gt;&lt;span&gt;,
-&lt;&#x2F;span&gt;&lt;span&gt;	children&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fac863;&quot;&gt;Vec&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span&gt;Node&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;}
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;p&gt;I don&#x27;t think that&#x27;s great. What fields belong on Node? Which belong on BaseNode? Plus TypeScript&#x27;s got a garbage collector, so for parity any &lt;code&gt;T&lt;&#x2F;code&gt; should probably be wrapped in an &lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;doc.rust-lang.org&#x2F;std&#x2F;rc&#x2F;struct.Rc.html&quot;&gt;&lt;code&gt;Rc&amp;lt;T&amp;gt;&lt;&#x2F;code&gt;&lt;&#x2F;a&gt;. Plus everything&#x27;s mutable, so we&#x27;d want to wrap that in a &lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;doc.rust-lang.org&#x2F;std&#x2F;cell&#x2F;struct.RefCell.html&quot;&gt;&lt;code&gt;RefCell&amp;lt;T&amp;gt;&lt;&#x2F;code&gt;&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
-&lt;pre data-lang=&quot;rust&quot; style=&quot;background-color:#2b2c2f;color:#cccece;&quot; class=&quot;language-rust &quot;&gt;&lt;code class=&quot;language-rust&quot; data-lang=&quot;rust&quot;&gt;&lt;span style=&quot;color:#c594c5;&quot;&gt;struct &lt;&#x2F;span&gt;&lt;span&gt;Node &lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;{
-&lt;&#x2F;span&gt;&lt;span&gt;	base&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span&gt; BaseNode,
-&lt;&#x2F;span&gt;&lt;span&gt;	name&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fac863;&quot;&gt;Option&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fac863;&quot;&gt;String&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;gt;&lt;&#x2F;span&gt;&lt;span&gt;,
-&lt;&#x2F;span&gt;&lt;span&gt;	children&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fac863;&quot;&gt;Vec&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span&gt;Rc&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span&gt;RefCell&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span&gt;Node&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;gt;&amp;gt;&amp;gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;}
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;p&gt;While probably fine, this just looks it&#x27;d like a pain to work with. I think we can do better. These nodes don&#x27;t really reference each other, so we don&#x27;t actually need an &lt;code&gt;Rc&lt;&#x2F;code&gt;, and without that we wouldn&#x27;t need a &lt;code&gt;RefCell&lt;&#x2F;code&gt;. Also I&#x27;m up to &lt;code&gt;1337&lt;&#x2F;code&gt; errors, so I&#x27;m pretty happy ending this attempt here.&lt;&#x2F;p&gt;
 </description>
         </item>
     </channel>
