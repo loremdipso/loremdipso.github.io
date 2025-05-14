@@ -2,7 +2,7 @@
 title: Secret Santa
 date: 2020-10-22T13:08:19-07:00
 extra: {
-    link: https://loremdipso.com/secret_santa/,
+    link: https://loremdipso.com/secret-santa/,
     thumbnail: /images/projects/secret_santa.png,
     alt: Secret santa screenshot
 }

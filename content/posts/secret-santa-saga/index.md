@@ -11,7 +11,7 @@ taxonomies: { tags: ["one-shot", "performance", "svelte"] }
 
 ## The End Result
 
-Before you commit to reading this thing, here're the final versions of this app: [Svelte](https://loremdipso.com/secret_santa/), [React](https://loremdipso.com/secret_santa_react/). In future I'll only be updating the Svelte version.
+Here ya go! [Secret Santa](https://loremdipso.com/secret-santa/).
 
 ## Backstory
 
@@ -27,7 +27,7 @@ At first I wrote a simple ruby script that would generate text files whose names
 
 ## Existing Solutions
 
-The closest thing I found out in the wild that didn't collect any info or show any ads was https://arcanis.github.io/secretsanta/. It wasn't exactly what I was looking for, plus the exclusions seemed a bit broken, but it had the fantastic idea of encoding the giftee's information in the URL, using AES with a static key as an obfuscator. Neat!
+The closest thing I found out in the wild that didn't collect any info or show any ads was <https://arcanis.github.io/secretsanta/>. It wasn't exactly what I was looking for, plus the exclusions seemed a bit broken, but it had the fantastic idea of encoding the giftee's information in the URL, using AES with a static key as an obfuscator. Neat!
 
 ## The Classic Excuse
 
@@ -65,7 +65,7 @@ I was a little disappointed that the Svelte-based Material UI library spit out *
 
 **7.7 MB**. Wellllll, that's... better, at least, but something's definitely squiffy. Alright, fine, I'll use babel. Aaaand... no change. Darn. Oh, wait! Looks like the real space-taker are [the icons](https://github.com/ant-design/ant-design/issues/12011#issuecomment-623043192), and we should use babel for that too. And with that I'm down to... **4.8MB**! _sigh_ Alright, at this point I've had a gut full and just want to try something new.
 
-## Meanwhile, in Svelte land...
+## Meanwhile, in Svelte land
 
 So **1 MB**, huh? Alright, just in case I was doing something silly let's go ahead and just try to use a [similar UI library](https://carbon-components-svelte.onrender.com/) in an app built using [Svelte Kit](https://kit.svelte.dev/)'s starter app template. That should give me the latest and greatest setup. But no, that also ended up costing ~500KB in styles, base, before I even started to pull in components. Why am I paying for junk I'm not even using? Hopefully users of that lib have a way to cut those out, but for the life of me I haven't been able to find it.
 
@@ -85,26 +85,26 @@ Please tease me if I spend any more time re-writing this silly app again.
 
 <details>
   <summary>
-	Bonus: 2048
+ Bonus: 2048
   </summary>
   
   <p>
-	I did this same exercise with another of my old projects: <a target="#" href="https://loremdipso.com/YAN2048">YAN2048</a>. This one was written in Angular and only used its UI framework for the buttons and a game-over dialog. The <a target="#" href="https://loremdipso.com/YAN2048_Svelte">clone</a> does the same, and I copy/pasted very nearly all the same logic and styles, yielding two very similar apps.
+ I did this same exercise with another of my old projects: <a target="#" href="https://loremdipso.com/YAN2048">YAN2048</a>. This one was written in Angular and only used its UI framework for the buttons and a game-over dialog. The <a target="#" href="https://loremdipso.com/YAN2048_Svelte">clone</a> does the same, and I copy/pasted very nearly all the same logic and styles, yielding two very similar apps.
   </p>
 
   <h2>
-	Results
+ Results
   </h2>
 
   <p>
-	On-disk space, Angular: an even <b>500 KB</b>, Svelte: <b>84 KB</b>.
+ On-disk space, Angular: an even <b>500 KB</b>, Svelte: <b>84 KB</b>.
   </p>
 
   <p>
-	Total delivered to browser (according to my network tab), Angular: <b>587 KB</b> inflated (<b>251 KB</b> with gzip), Svelte: <b>224 KB</b> inflated (<b>179 KB</b> with gzip).
+ Total delivered to browser (according to my network tab), Angular: <b>587 KB</b> inflated (<b>251 KB</b> with gzip), Svelte: <b>224 KB</b> inflated (<b>179 KB</b> with gzip).
   </p>
 
   <p>
-	But is this comparison worthwhile? Is what I observed experimentally vaguely in line with what they should be? Well, according to <a href="https://github.com/LayZeeDK/ngx-ivy-minimal-app-with-ngzone">this git repo</a>, a hello world using the <a href="https://docs.angular.lat/guide/ivy">Ivy renderer</a> costs around <b>131 KB</b> uncompressed. So, yeah, I think the results here are reasonable.
+ But is this comparison worthwhile? Is what I observed experimentally vaguely in line with what they should be? Well, according to <a href="https://github.com/LayZeeDK/ngx-ivy-minimal-app-with-ngzone">this git repo</a>, a hello world using the <a href="https://docs.angular.lat/guide/ivy">Ivy renderer</a> costs around <b>131 KB</b> uncompressed. So, yeah, I think the results here are reasonable.
   </p>
 </details>
