@@ -1,0 +1,3 @@
+[submodule "resume/resume_markdown_to_toml"]
+	path = resume/resume_markdown_to_toml
+	url = git@github.com:loremdipso/resume_markdown_to_toml.git

@@ -1,6 +1,11 @@
 #!/bin/bash
 
+set -e
+
 cd "${0%/*}/.."
+
+./resume/publish.sh
+
 ./scripts/export.sh
 
 # RIP in peace :'(
