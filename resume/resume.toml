@@ -34,12 +34,12 @@ timeframe = "June 2014 - Aug 2020"
 [[data.sections.organizations.teams]]
 title = "ICU"
 timeframe = "Jan 2020 - Aug 2020"
-experiences = ["Launched and maintained the Google Cloud support platform, working closely with customer service teams to improve client interactions."]
+experiences = ["Created the infrastructure that facilitated seamless integration of new video vendors, reducing costs for both video vendors and hospitals."]
 
 [[data.sections.organizations.teams]]
 title = "Special Projects (aka Skunkworks)"
 timeframe = "Jan 2019 - Dec 2019"
-experiences = ["Improved developer experience. Initiaties include: hot reloading, improving integration with an antiquated version control system, reducing boilerplate for new views, and improving fleet-wide performance via heavy use of immutable objects."]
+experiences = ["Improved developer experience. This included hot reloading, improving integration with an antiquated version control system, reducing boilerplate for new views, and improving fleet-wide performance via heavy use of immutable objects."]
 
 [[data.sections.organizations.teams]]
 title = "Social Care"
