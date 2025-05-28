@@ -86,32 +86,6 @@ article {
 		background-color: #666;
 	}
 
-	details {
-		$margin: 16px;
-		background-color: $color-details-body;
-		padding: 0.5rem;
-		height: auto;
-		max-height: 1.5rem; /* set to line height */
-		transition: all 0.1s ease;
-
-		&[open] {
-			max-height: 99rem;
-			transition: all 1s ease;
-		}
-
-		summary {
-			margin: -0.5em -0.5em 0;
-			padding: $margin;
-			cursor: pointer;
-			background-color: $color-details-header;
-		}
-
-		> * {
-			margin: $margin;
-			padding: 0;
-		}
-	}
-
 	.post-subheader {
 		display: flex;
 		flex-wrap: wrap;
@@ -340,4 +314,10 @@ article {
 	pointer-events: none;
 	z-index: 100;
 	transition: width 0.8s ease-in-out;
+}
+
+.feedback {
+	font-size: 0.8rem;
+	line-height: normal;
+	opacity: 0.6;
 }

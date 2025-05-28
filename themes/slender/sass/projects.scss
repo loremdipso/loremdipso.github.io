@@ -1,34 +1,34 @@
 @import "_theme.scss";
 
 .projects-list {
-    list-style: none;
-    padding: 0;
+	list-style: none;
+	padding: 0;
 
-    li {
-        background-color: $color-card-background;
-        margin: 1rem 0;
-        padding: 1rem;
-        border-radius: 10px;
+	> li {
+		background-color: $color-card-background;
+		margin: 1rem 0;
+		padding: 1rem;
+		border-radius: 10px;
 
-        > a {
-            display: block;
-            > h2 {
-                margin: 0;
-                padding-bottom: 1rem;
-            }
-        }
+		> a {
+			display: block;
+			> h2 {
+				margin: 0;
+				padding-bottom: 1rem;
+			}
+		}
 
-        img {
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-            width: 100%;
-            max-width: 300px;
-            height: auto;
-        }
+		img {
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+			width: 100%;
+			max-width: 300px;
+			height: auto;
+		}
 
-        > :last-child {
-            margin-bottom: 0;
-        }
-    }
+		> :last-child {
+			margin-bottom: 0;
+		}
+	}
 }

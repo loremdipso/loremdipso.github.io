@@ -16,11 +16,11 @@ reasonable sounding answers that get reasonable sounding praise.
 So I'd like to just highlight one of my favorites posts. No fat to be trimmed,
 just a simple, honest answer to a simple, earnest question.
 
-### Q:
+### Question
 
-How can I display a child process's output in realitime with Ruby?
+How can I display a child process's output in real time with Ruby?
 
-### A:
+### Answer
 
 ```ruby
 IO.popen("s3sync.rb …").each do |line|

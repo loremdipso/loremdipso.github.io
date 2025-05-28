@@ -23,7 +23,13 @@
 				{% for menu_item in config.extra.menus %}
 				{% set is_active = false %}
 				{% if current_path %}
-					{% set is_active = current_path == menu_item.url %}
+					{% if current_path == "/" %}
+						{% set is_active = current_path == menu_item.url %}
+					{% else %}
+						{%if current_path is starting_with(menu_item.url) and menu_item.url != "/" %}
+							{% set is_active = true %}
+						{% endif %}
+					{% endif %}
 				{% endif %}
 
 				<a href="{{ menu_item.url }}" {% if is_active %}class="active" {% endif %}>{{ menu_item.name }}</a>

@@ -16,7 +16,7 @@
         {% for page in section.pages %}
             {%if page.extra.link %}
                 <li class="project-card">
-                    <a href="{{ page.extra.link | safe }}">
+                    <a href="{{ page.extra.link | safe }}" target="_blank">
                         <h2>{{page.title}}</h2>
 
                         {%if page.extra.alt and page.extra.thumbnail %}{{

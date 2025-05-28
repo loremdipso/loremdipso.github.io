@@ -1,5 +1,5 @@
 ---
-title: "Spooky Face Game"
+title: "Spooky Face"
 date: 2020-10-28T13:08:19-07:00
 extra: {
     link: https://loremdipso.com/spooky_face/,

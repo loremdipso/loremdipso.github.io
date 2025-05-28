@@ -103,7 +103,7 @@ table_of_contents = "Contents"
 suggested_reading = "Suggested reading"
 next = "Up next"
 previous = "Previously"
-feedback = "Feedback"
+feedback = "Found a mistake? Let me know!"
 
 # Resume strings
 resume = "Resume"
@@ -142,6 +142,10 @@ url = "/posts/"
 [[extra.menus]]
 name = "Minis"
 url = "/minis/"
+
+[[extra.menus]]
+name = "Projects"
+url = "/projects/"
 
 # [[extra.menus]]
 #     name = "Resume"

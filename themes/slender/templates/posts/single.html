@@ -12,7 +12,6 @@
 {% endblock extra_includes %}
 
 {% block extra_nav_item %}
-	<a target="#" href="https://github.com/loremdipso/loremdipso.github.io/issues/new?title=Issue with {{ page.slug }}&body=I found an issue on page '{{ page.title }}'">{{ config.extra.strings.feedback }}</a>
 {% endblock extra_nav_item %}
 
 {% block content %}
@@ -37,6 +36,8 @@
 						{{ macros::tags(tags=page.taxonomies.tags) }}
 					{% endif %}
 				</div>
+
+				<a class="feedback" target="#" href="https://github.com/loremdipso/loremdipso.github.io/issues/new?title=Issue with {{ page.slug }}&body=I found an issue on page '{{ page.title }}'">{{ config.extra.strings.feedback }}</a>
 			</header>
 
 
