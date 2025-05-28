@@ -7,7 +7,46 @@
         <generator>Zola</generator>
         <language>en</language>
         <atom:link href="https://loremdipso.com/rss.xml" rel="self" type="application/rss+xml"/>
-        <lastBuildDate>Thu, 20 Feb 2025 00:00:00 +0000</lastBuildDate>
+        <lastBuildDate>Wed, 28 May 2025 10:08:19 -0700</lastBuildDate>
+        <item>
+            <title>What should I read next?</title>
+            <pubDate>Wed, 28 May 2025 10:08:19 -0700</pubDate>
+            <link>https://loremdipso.com/projects/what-should-i-read-next/</link>
+            <guid>https://loremdipso.com/projects/what-should-i-read-next/</guid>
+            <description>&lt;p&gt;I&#x27;ve got a huge reading list and go through seasons where I want to listen to an audiobook. For that I absolutely love &lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;libbyapp.com&#x2F;&quot;&gt;Libby&lt;&#x2F;a&gt;. You just add all your library cards and it&#x27;ll let you know if a particular book is available at any of those locations.&lt;&#x2F;p&gt;
+&lt;p&gt;Great! But doing this process manually for every book on my list until I find one that&#x27;s available &lt;em&gt;right now&lt;&#x2F;em&gt; is tedius. So I threw together this project (which is to-date possibly the ugliest thing I&#x27;ve ever made). Without any authentication (I ❤️ open APIs) it&#x27;ll query your libraries for you and collate the results.&lt;&#x2F;p&gt;
+&lt;p&gt;You can even install it as a PWA 😎&lt;&#x2F;p&gt;
+</description>
+        </item>
+        <item>
+            <title>Recipleasy</title>
+            <pubDate>Wed, 28 May 2025 00:00:00 +0000</pubDate>
+            <link>https://loremdipso.com/projects/recipe-thing/</link>
+            <guid>https://loremdipso.com/projects/recipe-thing/</guid>
+            <description>&lt;p&gt;Grabs the content of a given recipe and makes it as useful as possible, for free! Current features include:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;input disabled=&quot;&quot; type=&quot;checkbox&quot; checked=&quot;&quot;&#x2F;&gt;
+Recipe syntax highlighting&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;input disabled=&quot;&quot; type=&quot;checkbox&quot; checked=&quot;&quot;&#x2F;&gt;
+Unit conversion&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;input disabled=&quot;&quot; type=&quot;checkbox&quot; checked=&quot;&quot;&#x2F;&gt;
+Shopping list support&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;input disabled=&quot;&quot; type=&quot;checkbox&quot; checked=&quot;&quot;&#x2F;&gt;
+Local storage&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;input disabled=&quot;&quot; type=&quot;checkbox&quot; checked=&quot;&quot;&#x2F;&gt;
+Import&#x2F;export&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;You can even install it as a PWA 😎&lt;&#x2F;p&gt;
+&lt;details&gt;
+  &lt;summary&gt;
+      About the name...
+  &lt;&#x2F;summary&gt;
+&lt;p&gt;
+    Recipease is a much better name. Unfortunately it is already taken. Right now I&#x27;m trying out recipleasy, as a &lt;a src=&quot;https:&#x2F;&#x2F;youtu.be&#x2F;QVn1PZGZxaI?si=Fosxo2VzP8-DUaYw&amp;t=57&quot; target=&quot;_blank&quot;&gt;portmantrois&lt;&#x2F;a&gt; of &lt;b&gt;recipe&lt;&#x2F;b&gt;+&lt;b&gt;easy&lt;&#x2F;b&gt;+&lt;b&gt;please&lt;&#x2F;b&gt;. I know, I&#x27;m not happy about it either.
+  &lt;&#x2F;p&gt;
+&lt;&#x2F;details&gt;
+</description>
+        </item>
         <item>
             <title></title>
             <pubDate>Thu, 20 Feb 2025 00:00:00 +0000</pubDate>
@@ -20,9 +59,9 @@ easier than ever before to give yourself credability via a bot network of
 reasonable sounding answers that get reasonable sounding praise.&lt;&#x2F;p&gt;
 &lt;p&gt;So I&#x27;d like to just highlight one of my favorites posts. No fat to be trimmed,
 just a simple, honest answer to a simple, earnest question.&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;q&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#q&quot; aria-label=&quot;Anchor link for: q&quot;&gt;Q:&lt;&#x2F;a&gt;&lt;&#x2F;h3&gt;
-&lt;p&gt;How can I display a child process&#x27;s output in realitime with Ruby?&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;a&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#a&quot; aria-label=&quot;Anchor link for: a&quot;&gt;A:&lt;&#x2F;a&gt;&lt;&#x2F;h3&gt;
+&lt;h3 id=&quot;question&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#question&quot; aria-label=&quot;Anchor link for: question&quot;&gt;Question&lt;&#x2F;a&gt;&lt;&#x2F;h3&gt;
+&lt;p&gt;How can I display a child process&#x27;s output in real time with Ruby?&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;answer&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#answer&quot; aria-label=&quot;Anchor link for: answer&quot;&gt;Answer&lt;&#x2F;a&gt;&lt;&#x2F;h3&gt;
 &lt;pre data-lang=&quot;ruby&quot; style=&quot;background-color:#2b2c2f;color:#cccece;&quot; class=&quot;language-ruby &quot;&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span style=&quot;color:#fac863;&quot;&gt;IO&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span&gt;popen&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;(&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99c794;&quot;&gt;s3sync.rb …&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;quot;).&lt;&#x2F;span&gt;&lt;span&gt;each &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c594c5;&quot;&gt;do &lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;|&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f99157;&quot;&gt;line&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;|
 &lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#6699cc;&quot;&gt;print&lt;&#x2F;span&gt;&lt;span&gt; line
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c594c5;&quot;&gt;end
@@ -446,149 +485,6 @@ The result is what you see below, and here&#x27;s the zola shortcode I made:&lt;
   &lt;&#x2F;summary&gt;
 &lt;p&gt;
 	I did have to enable node&#x27;s &lt;code&gt;--experimental-wasm-modules&lt;&#x2F;code&gt; flag to get my WASM binary to even load. I&#x27;m hoping that flag goes away and WASM is supported by default, but I suppose there&#x27;s a chance WASM goes the &lt;a href=&quot;https:&#x2F;&#x2F;www.zdnet.com&#x2F;article&#x2F;flash-is-dead-long-live-html5&#x2F;&quot;&gt;way of flash&lt;&#x2F;a&gt;.
-  &lt;&#x2F;p&gt;
-&lt;&#x2F;details&gt;
-</description>
-        </item>
-        <item>
-            <title>Lithe 5: Optimize for the minifier</title>
-            <pubDate>Sat, 08 Jan 2022 19:49:55 -0700</pubDate>
-            <link>https://loremdipso.com/posts/lithe-5/</link>
-            <guid>https://loremdipso.com/posts/lithe-5/</guid>
-            <description>&lt;p&gt;&lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;halfnelson&quot;&gt;halfnelson&lt;&#x2F;a&gt; did a lovely &lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;halfnelson&#x2F;svelte-it-will-scale&#x2F;blob&#x2F;master&#x2F;README.md&quot;&gt;investigation of how large Svelte projects scale&lt;&#x2F;a&gt;. I&#x27;m not looking to rehash that per se, but I am interested in how well the current Svelte compiler&#x27;s output gets minified.&lt;&#x2F;p&gt;
-&lt;p&gt;For this investigation I&#x27;ll be pulling as many &lt;code&gt;.svelte&lt;&#x2F;code&gt; files as I can. Let&#x27;s use the &lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;copilot.github.com&#x2F;&quot;&gt;Autopilot&lt;&#x2F;a&gt; strategy and pull from GitHub repos with permissive enough licenses.&lt;&#x2F;p&gt;
-&lt;p&gt;Even doing this was a bit of a project. I figured this might come up again, so I made the code clean enough that I wasn&#x27;t embarrassed to release it. You can see what I came up with at the &lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;loremdipso&#x2F;github_batch_download&quot;&gt;github repo&lt;&#x2F;a&gt;. I used Rust with the lovely &lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;docs.rs&#x2F;octocrab&#x2F;latest&#x2F;octocrab&#x2F;&quot;&gt;octocrab&lt;&#x2F;a&gt; crate to handle the Github API, &lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;docs.rs&#x2F;git2&#x2F;latest&#x2F;git2&#x2F;&quot;&gt;git2&lt;&#x2F;a&gt; to handle downloading the repositories, and a little bit of &lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;tokio-rs&#x2F;tokio&quot;&gt;tokio&lt;&#x2F;a&gt; for async and multi-threading. I&#x27;m very happy with the result, though I did run into rate-limiting for the GitHub API fairly quickly even with a &lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;docs.github.com&#x2F;en&#x2F;authentication&#x2F;keeping-your-account-and-data-secure&#x2F;creating-a-personal-access-token&quot;&gt;personal access token&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
-&lt;p&gt;Even so, I was able to come out of that with 220 repos without much trouble, from which I extracted 20MB of raw &lt;code&gt;.svelte&lt;&#x2F;code&gt; files. Once I removed the empties and the duplicates I was left with a respectable &lt;code&gt;18MB&lt;&#x2F;code&gt; worth of files. I ran those files through the svelte compiler, skipping any that wouldn&#x27;t compile. I didn&#x27;t expect to run this too often, so I ended up using ruby to call a shell script that told node to compile a particular file with some options, which I ran over every file twice: once with minification and once without. While I ended up with a workflow that took several minutes to run it was the fastest for me to write.&lt;&#x2F;p&gt;
-&lt;p&gt;After a cuppa I had this:&lt;&#x2F;p&gt;
-&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Type&lt;&#x2F;th&gt;&lt;th&gt;Total size (KB)&lt;&#x2F;th&gt;&lt;&#x2F;tr&gt;&lt;&#x2F;thead&gt;&lt;tbody&gt;
-&lt;tr&gt;&lt;td&gt;raw &lt;code&gt;.svelte&lt;&#x2F;code&gt; files&lt;&#x2F;td&gt;&lt;td&gt;18420&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
-&lt;tr&gt;&lt;td&gt;compiled&lt;&#x2F;td&gt;&lt;td&gt;23188&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
-&lt;tr&gt;&lt;td&gt;minified&lt;&#x2F;td&gt;&lt;td&gt;15764&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
-&lt;tr&gt;&lt;td&gt;gzipped&lt;&#x2F;td&gt;&lt;td&gt;10836&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
-&lt;&#x2F;tbody&gt;&lt;&#x2F;table&gt;
-&lt;p&gt;Very interestingly there were two files whose minified size was actually slightly larger than the original. This makes me think I could find a better minifier than &lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;www.npmjs.com&#x2F;package&#x2F;minify&quot;&gt;minify&lt;&#x2F;a&gt;. Even after playing with the available options, going so far as to enable some unsafe operations, I still couldn&#x27;t get that number down. I might try another minifier entirely (&lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;www.npmjs.com&#x2F;package&#x2F;node-minify&quot;&gt;node-minify&lt;&#x2F;a&gt; looks cool), but for now I&#x27;ll keep what I&#x27;ve got.&lt;&#x2F;p&gt;
-&lt;p&gt;I think that&#x27;s enough for now. Once I get a compiler going I can use this to measure just how well my output fairs against Svelte&#x27;s, both raw and after minification. I believe there&#x27;s some room for improvement if we try and output code that&#x27;s easy for the minifier to minify. For example, I&#x27;ve noticed the Svelte compiler outputs something sort of like this for detaching a component (heavily edited for simplicity):&lt;&#x2F;p&gt;
-&lt;pre data-lang=&quot;js&quot; style=&quot;background-color:#2b2c2f;color:#cccece;&quot; class=&quot;language-js &quot;&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt;&lt;span style=&quot;color:#c594c5;&quot;&gt;import &lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;{ &lt;&#x2F;span&gt;&lt;span&gt;detach &lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;} &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c594c5;&quot;&gt;from &lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99c794;&quot;&gt;.&#x2F;svelte&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;quot;;
-&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c594c5;&quot;&gt;let &lt;&#x2F;span&gt;&lt;span&gt;a&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c594c5;&quot;&gt;let &lt;&#x2F;span&gt;&lt;span&gt;b&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c594c5;&quot;&gt;let &lt;&#x2F;span&gt;&lt;span&gt;c&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c594c5;&quot;&gt;function &lt;&#x2F;span&gt;&lt;span style=&quot;color:#6699cc;&quot;&gt;fn&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f99157;&quot;&gt;do_detach&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;) {
-&lt;&#x2F;span&gt;&lt;span&gt;	&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c594c5;&quot;&gt;if &lt;&#x2F;span&gt;&lt;span&gt;(do_detach) &lt;&#x2F;span&gt;&lt;span style=&quot;color:#6699cc;&quot;&gt;detach&lt;&#x2F;span&gt;&lt;span&gt;(a)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span&gt;	&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c594c5;&quot;&gt;if &lt;&#x2F;span&gt;&lt;span&gt;(do_detach) &lt;&#x2F;span&gt;&lt;span style=&quot;color:#6699cc;&quot;&gt;detach&lt;&#x2F;span&gt;&lt;span&gt;(b)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span&gt;	&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c594c5;&quot;&gt;if &lt;&#x2F;span&gt;&lt;span&gt;(do_detach) &lt;&#x2F;span&gt;&lt;span style=&quot;color:#6699cc;&quot;&gt;detach&lt;&#x2F;span&gt;&lt;span&gt;(c)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;}
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;p&gt;Which get minified to:&lt;&#x2F;p&gt;
-&lt;pre data-lang=&quot;js&quot; style=&quot;background-color:#2b2c2f;color:#cccece;&quot; class=&quot;language-js &quot;&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt;&lt;span style=&quot;color:#c594c5;&quot;&gt;import &lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;{ &lt;&#x2F;span&gt;&lt;span&gt;detach &lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;} &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c594c5;&quot;&gt;from &lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99c794;&quot;&gt;.&#x2F;svelte&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;quot;;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c594c5;&quot;&gt;let &lt;&#x2F;span&gt;&lt;span&gt;a&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span&gt;b&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span&gt;c&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c594c5;&quot;&gt;function &lt;&#x2F;span&gt;&lt;span style=&quot;color:#6699cc;&quot;&gt;fn&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f99157;&quot;&gt;t&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;) {
-&lt;&#x2F;span&gt;&lt;span&gt;	t &lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;amp;&amp;amp; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#6699cc;&quot;&gt;detach&lt;&#x2F;span&gt;&lt;span&gt;(a)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span&gt;t &lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;amp;&amp;amp; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#6699cc;&quot;&gt;detach&lt;&#x2F;span&gt;&lt;span&gt;(b)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span&gt;t &lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;amp;&amp;amp; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#6699cc;&quot;&gt;detach&lt;&#x2F;span&gt;&lt;span&gt;(c)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;}
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;p&gt;If, instead, the source was:&lt;&#x2F;p&gt;
-&lt;pre data-lang=&quot;js&quot; style=&quot;background-color:#2b2c2f;color:#cccece;&quot; class=&quot;language-js &quot;&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt;&lt;span style=&quot;color:#c594c5;&quot;&gt;import &lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;{ &lt;&#x2F;span&gt;&lt;span&gt;detach &lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;} &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c594c5;&quot;&gt;from &lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99c794;&quot;&gt;.&#x2F;svelte&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;quot;;
-&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c594c5;&quot;&gt;let &lt;&#x2F;span&gt;&lt;span&gt;a&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c594c5;&quot;&gt;let &lt;&#x2F;span&gt;&lt;span&gt;b&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c594c5;&quot;&gt;let &lt;&#x2F;span&gt;&lt;span&gt;c&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c594c5;&quot;&gt;function &lt;&#x2F;span&gt;&lt;span style=&quot;color:#6699cc;&quot;&gt;fn&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f99157;&quot;&gt;do_detach&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;) {
-&lt;&#x2F;span&gt;&lt;span&gt;	&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c594c5;&quot;&gt;if &lt;&#x2F;span&gt;&lt;span&gt;(do_detach) &lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;{
-&lt;&#x2F;span&gt;&lt;span&gt;		&lt;&#x2F;span&gt;&lt;span style=&quot;color:#6699cc;&quot;&gt;detach&lt;&#x2F;span&gt;&lt;span&gt;(a)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span&gt;		&lt;&#x2F;span&gt;&lt;span style=&quot;color:#6699cc;&quot;&gt;detach&lt;&#x2F;span&gt;&lt;span&gt;(b)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span&gt;		&lt;&#x2F;span&gt;&lt;span style=&quot;color:#6699cc;&quot;&gt;detach&lt;&#x2F;span&gt;&lt;span&gt;(c)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span&gt;	&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;}
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;}
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;p&gt;Which, in this example at least, is functionally equivalent. I haven&#x27;t dug into Svelte enough to know if this is always going to be a safe transformation. In any case, this can be minified to:&lt;&#x2F;p&gt;
-&lt;pre data-lang=&quot;js&quot; style=&quot;background-color:#2b2c2f;color:#cccece;&quot; class=&quot;language-js &quot;&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt;&lt;span style=&quot;color:#c594c5;&quot;&gt;import &lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;{ &lt;&#x2F;span&gt;&lt;span&gt;detach &lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;} &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c594c5;&quot;&gt;from &lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99c794;&quot;&gt;.&#x2F;svelte&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;quot;;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c594c5;&quot;&gt;let &lt;&#x2F;span&gt;&lt;span&gt;a&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span&gt;b&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span&gt;c&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c594c5;&quot;&gt;function &lt;&#x2F;span&gt;&lt;span style=&quot;color:#6699cc;&quot;&gt;fn&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f99157;&quot;&gt;t&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;) {
-&lt;&#x2F;span&gt;&lt;span&gt;	t &lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;amp;&amp;amp; &lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#6699cc;&quot;&gt;detach&lt;&#x2F;span&gt;&lt;span&gt;(a)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#6699cc;&quot;&gt;detach&lt;&#x2F;span&gt;&lt;span&gt;(b)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#6699cc;&quot;&gt;detach&lt;&#x2F;span&gt;&lt;span&gt;(c))&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;}
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;p&gt;A whole 4 characters saved! I know, I know, it doesn&#x27;t seem like much, but that&#x27;s basically free and is a function of how many variables your svelte program has. One last consideration is aliasing. We could, for example, imagine a minifier smart enough to output this:&lt;&#x2F;p&gt;
-&lt;pre data-lang=&quot;js&quot; style=&quot;background-color:#2b2c2f;color:#cccece;&quot; class=&quot;language-js &quot;&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt;&lt;span style=&quot;color:#c594c5;&quot;&gt;import &lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;{ &lt;&#x2F;span&gt;&lt;span&gt;detach &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c594c5;&quot;&gt;as &lt;&#x2F;span&gt;&lt;span&gt;d &lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;} &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c594c5;&quot;&gt;from &lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99c794;&quot;&gt;.&#x2F;svelte&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;quot;;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c594c5;&quot;&gt;let &lt;&#x2F;span&gt;&lt;span&gt;a&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span&gt;b&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span&gt;c&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c594c5;&quot;&gt;function &lt;&#x2F;span&gt;&lt;span style=&quot;color:#6699cc;&quot;&gt;fn&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f99157;&quot;&gt;t&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;) {
-&lt;&#x2F;span&gt;&lt;span&gt;	t &lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;amp;&amp;amp; &lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#6699cc;&quot;&gt;d&lt;&#x2F;span&gt;&lt;span&gt;(a)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#6699cc;&quot;&gt;d&lt;&#x2F;span&gt;&lt;span&gt;(b)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#6699cc;&quot;&gt;d&lt;&#x2F;span&gt;&lt;span&gt;(c))&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;}
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;p&gt;We could also eschew aliasing and just have a separate svelte library that only has these minified functions to avoid the &amp;quot;as x&amp;quot; bit:&lt;&#x2F;p&gt;
-&lt;pre data-lang=&quot;js&quot; style=&quot;background-color:#2b2c2f;color:#cccece;&quot; class=&quot;language-js &quot;&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt;&lt;span style=&quot;color:#c594c5;&quot;&gt;import &lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;{ &lt;&#x2F;span&gt;&lt;span&gt;d &lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;} &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c594c5;&quot;&gt;from &lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99c794;&quot;&gt;.&#x2F;svelte-mini&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;quot;;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c594c5;&quot;&gt;let &lt;&#x2F;span&gt;&lt;span&gt;a&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span&gt;b&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span&gt;c&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c594c5;&quot;&gt;function &lt;&#x2F;span&gt;&lt;span style=&quot;color:#6699cc;&quot;&gt;fn&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f99157;&quot;&gt;t&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;) {
-&lt;&#x2F;span&gt;&lt;span&gt;	t &lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;amp;&amp;amp; &lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#6699cc;&quot;&gt;d&lt;&#x2F;span&gt;&lt;span&gt;(a)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#6699cc;&quot;&gt;d&lt;&#x2F;span&gt;&lt;span&gt;(b)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#6699cc;&quot;&gt;d&lt;&#x2F;span&gt;&lt;span&gt;(c))&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;}
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;p&gt;The downside of some of these optimizations, of course, is that it becomes harder and harder to debug in production. But if we&#x27;re already at the point of minifying I say it&#x27;s &lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;No_Holds_Barred_(1989_film)&quot;&gt;no holds barred&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
-&lt;details&gt;
-  &lt;summary&gt;
-	Extra considerations
-  &lt;&#x2F;summary&gt;
-&lt;p&gt;
-	While minimizing the compiled svelte files seems like an obvious win it may not actually amount to much given how good gzip is. We&#x27;ll need to run out output through gzip to know if we&#x27;ll actually be sending fewer bytes down the wire.
-  &lt;&#x2F;p&gt;
-&lt;p&gt;
-	The examples above are so small that gzip doesn&#x27;t actually help. The original version is unchanged at 114 bytes while the hand-optimized one is actually larger after compression, growing from 91 to 113 bytes.
-  &lt;&#x2F;p&gt;
-&lt;&#x2F;details&gt;
-</description>
-        </item>
-        <item>
-            <title>Lithe 4: On the Shoulders of Giants</title>
-            <pubDate>Mon, 03 Jan 2022 18:39:44 -0700</pubDate>
-            <link>https://loremdipso.com/posts/lithe-4/</link>
-            <guid>https://loremdipso.com/posts/lithe-4/</guid>
-            <description>&lt;p&gt;Starting from characters and parsing that into an AST that could render a Svelte program could definitely open open possibilities for some low-level optimizations, but even just parsing a normal HTML document is not a small project, and Svelte includes JavaScript, TypeScript, Handlebars-esque blocks, CSS, and SCSS, too. Doing all that at once would be the mother of all slogs. But, luckily, I don&#x27;t have to! There exist many, many pre-build alternatives. The Svelte compiler itself even uses a couple.&lt;&#x2F;p&gt;
-&lt;p&gt;So here&#x27;s the new plan:&lt;&#x2F;p&gt;
-&lt;ol&gt;
-&lt;li&gt;Create a basic Rust lib and make sure I can get communication working to&#x2F;from JavaScript via FFI in Node&lt;&#x2F;li&gt;
-&lt;li&gt;Send a svelte file as a string through a DOM parser to get a basic AST&lt;&#x2F;li&gt;
-&lt;li&gt;Convert that AST to our own custom one
-&lt;ul&gt;
-&lt;li&gt;This is where we should do any conversions we might want to the original AST, like squashing child Text nodes, splitting nodes or inserting nodes, etc.&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;&#x2F;li&gt;
-&lt;li&gt;Render that custom AST to a string
-&lt;ul&gt;
-&lt;li&gt;We should eventually keep track of other things, warnings, CSS, etc., but for now we&#x27;re simply trying to replicate the JavaScript string&lt;&#x2F;li&gt;
-&lt;li&gt;We should keep in mind that whatever we do here we&#x27;ll need to do something very similar when rendering for SSR, so we should do as much AST manipulation as possible before this step. This should be a simple &amp;quot;let&#x27;s render a string&amp;quot;&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;&#x2F;li&gt;
-&lt;&#x2F;ol&gt;
-&lt;p&gt;But before we really get started let&#x27;s see what kind of performance we&#x27;re getting out of the original compiler. I&#x27;m only looking to test execution times, so to ignore however long it takes to load everything into Node&#x27;s runtime we&#x27;ll simply do two runs per test: once to ensure everything&#x27;s loaded, and the other we&#x27;ll actually time. How long does Svelte take to compile this simple program?&lt;&#x2F;p&gt;
-&lt;pre data-lang=&quot;html&quot; style=&quot;background-color:#2b2c2f;color:#cccece;&quot; class=&quot;language-html &quot;&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eb606b;&quot;&gt;span&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;gt;&lt;&#x2F;span&gt;&lt;span&gt;Hello world!&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;lt;&#x2F;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eb606b;&quot;&gt;span&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;gt;
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;p&gt;On my machine this is about &lt;code&gt;5ms&lt;&#x2F;code&gt;. That seems... high? I think? I haven&#x27;t written a compiler before, but computers are fast and this program is absolutely tiny. Maybe there&#x27;s some cost to compile anything, regardless of program size? Let&#x27;s see how it scales. What if we do 10x?&lt;&#x2F;p&gt;
-&lt;pre data-lang=&quot;html&quot; style=&quot;background-color:#2b2c2f;color:#cccece;&quot; class=&quot;language-html &quot;&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eb606b;&quot;&gt;span&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;gt;&lt;&#x2F;span&gt;&lt;span&gt;Hello world!&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;lt;&#x2F;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eb606b;&quot;&gt;span&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eb606b;&quot;&gt;span&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;gt;&lt;&#x2F;span&gt;&lt;span&gt;Hello world!&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;lt;&#x2F;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eb606b;&quot;&gt;span&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eb606b;&quot;&gt;span&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;gt;&lt;&#x2F;span&gt;&lt;span&gt;Hello world!&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;lt;&#x2F;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eb606b;&quot;&gt;span&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eb606b;&quot;&gt;span&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;gt;&lt;&#x2F;span&gt;&lt;span&gt;Hello world!&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;lt;&#x2F;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eb606b;&quot;&gt;span&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eb606b;&quot;&gt;span&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;gt;&lt;&#x2F;span&gt;&lt;span&gt;Hello world!&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;lt;&#x2F;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eb606b;&quot;&gt;span&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eb606b;&quot;&gt;span&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;gt;&lt;&#x2F;span&gt;&lt;span&gt;Hello world!&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;lt;&#x2F;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eb606b;&quot;&gt;span&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eb606b;&quot;&gt;span&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;gt;&lt;&#x2F;span&gt;&lt;span&gt;Hello world!&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;lt;&#x2F;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eb606b;&quot;&gt;span&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eb606b;&quot;&gt;span&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;gt;&lt;&#x2F;span&gt;&lt;span&gt;Hello world!&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;lt;&#x2F;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eb606b;&quot;&gt;span&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eb606b;&quot;&gt;span&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;gt;&lt;&#x2F;span&gt;&lt;span&gt;Hello world!&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;lt;&#x2F;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eb606b;&quot;&gt;span&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eb606b;&quot;&gt;span&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;gt;&lt;&#x2F;span&gt;&lt;span&gt;Hello world!&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;lt;&#x2F;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eb606b;&quot;&gt;span&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;gt;
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;p&gt;I should note this renders extra calls to a &lt;code&gt;space()&lt;&#x2F;code&gt; function by default (I assume so the resultant DOM looks nice), so to avoid this I remove all newlines during tests. Anyway, with newlines removed this takes &lt;code&gt;16ms&lt;&#x2F;code&gt;. Hmmm.... let&#x27;s do a few more:&lt;&#x2F;p&gt;
-&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Number of &lt;code&gt;span&lt;&#x2F;code&gt;s&lt;&#x2F;th&gt;&lt;th&gt;Time to render&lt;&#x2F;th&gt;&lt;&#x2F;tr&gt;&lt;&#x2F;thead&gt;&lt;tbody&gt;
-&lt;tr&gt;&lt;td&gt;1&lt;&#x2F;td&gt;&lt;td&gt;5ms&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
-&lt;tr&gt;&lt;td&gt;10&lt;&#x2F;td&gt;&lt;td&gt;16ms&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
-&lt;tr&gt;&lt;td&gt;100&lt;&#x2F;td&gt;&lt;td&gt;62ms&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
-&lt;tr&gt;&lt;td&gt;1000&lt;&#x2F;td&gt;&lt;td&gt;432ms&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
-&lt;&#x2F;tbody&gt;&lt;&#x2F;table&gt;
-&lt;p&gt;Okay, so half a second for 1000 elements isn&#x27;t super great, but it&#x27;s still probably okay. How often are you writing components this big anyhow? And any half-decent system would only recompile whenever you make changes. Still, fast compiles make for happy devs, so this is the mark we&#x27;re trying to beat.&lt;&#x2F;p&gt;
-&lt;p&gt;The only other order of business for now is the name. I did what I always do and looked up some synonyms for similar projects, in this case Svelte. After some browsing I landed on &lt;code&gt;lithe&lt;&#x2F;code&gt;, so that&#x27;s what I&#x27;ll use for now until I find some other JS project already picked that name.&lt;&#x2F;p&gt;
-&lt;details&gt;
-  &lt;summary&gt;
-	Click for spoilers
-  &lt;&#x2F;summary&gt;
-&lt;p&gt;
-	Lithe is far from done, but it can easily render the example programs above. In release mode, 1000 &lt;code&gt;span&lt;&#x2F;code&gt;s takes just &lt;code&gt;5ms&lt;&#x2F;code&gt; to run (!!!), most of which is simply the initial DOM parsing provided by an external library. Time is lost initializing FFI and shuttling strings to&#x2F;from Node, but even so it turns out Rust is really really fast (who knew?). As we add more features lithe can only slow down, but for now I&#x27;ll take this as a sign that this work might actually be useful.
   &lt;&#x2F;p&gt;
 &lt;&#x2F;details&gt;
 </description>
