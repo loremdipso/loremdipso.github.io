@@ -189,9 +189,11 @@ a {
 
 nav.pagination {
 	display: flex;
-	.next {
-		margin-left: auto;
-	}
+}
+
+.next {
+	margin-left: auto;
+	text-align: right;
 }
 
 .subheader {

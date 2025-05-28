@@ -194,25 +194,26 @@ article {
 			.toc-wrapper {
 				margin-left: 3rem;
 				position: sticky;
-			}
-
-			li {
-				a {
-					transition: text-shadow 0.5s ease-in-out;
-
-					&:active,
-					&:hover {
-						$width: 1px;
-						border-left: $width solid $toc-border-color;
-						padding-left: #{$left-padding - $width};
-						text-shadow: 0.5px 0.5px 0 currentColor;
-					}
-
-					&.active {
+				border-left: 1px solid #aaa;
+				li {
+					a {
 						$width: 2px;
-						border-left: $width solid $toc-border-color;
-						padding-left: #{$left-padding - $width};
-						text-shadow: 0.5px 0.5px 0 currentColor;
+						transition: font-weight, color 0.2s ease-in-out;
+						padding-left: $left-padding;
+
+						&:not(.active) {
+							color: #aaa;
+						}
+
+						// &:active {
+						// 	border-left: $width solid $toc-border-color;
+						// 	padding-left: #{$left-padding - $width};
+						// 	font-weight: 400;
+						// }
+
+						&:hover {
+							font-weight: 400;
+						}
 					}
 				}
 			}
@@ -223,7 +224,6 @@ article {
 			padding-bottom: 2rem;
 			top: 3rem;
 			list-style: none;
-			border-left: 1px solid white;
 
 			.toc-title,
 			a {
@@ -246,7 +246,6 @@ article {
 				width: 100%;
 
 				a {
-					padding-left: $left-padding;
 					overflow: hidden;
 					text-overflow: ellipsis;
 					white-space: nowrap;
@@ -280,6 +279,7 @@ article {
 .demo {
 	background-color: #2b2c2f;
 	padding: 20px;
+	border-radius: 8px;
 }
 
 .post-header {

@@ -76,15 +76,15 @@
 		<div class="suggested-post-links">
 			<h3>{{ config.extra.strings.suggested_reading }}</h3>
 
-            {% if page.lower %}
-			<a href="{{ macros::rel_url(path=page.lower.permalink) }}">
-				{{ config.extra.strings.next }}: <b>{{ page.lower.title }}</b>
+            {% if page.higher %}
+			<a class="previous" href="{{ macros::rel_url(path=page.higher.permalink) }}">
+				{{ config.extra.strings.previous }}: <b>{{ page.higher.title }}</b>
 			</a>
 			{% endif %}
 
-            {% if page.higher %}
-			<a href="{{ macros::rel_url(path=page.higher.permalink) }}">
-				{{ config.extra.strings.previous }}: <b>{{ page.higher.title }}</b>
+            {% if page.lower %}
+			<a class="next" href="{{ macros::rel_url(path=page.lower.permalink) }}">
+				{{ config.extra.strings.next }}: <b>{{ page.lower.title }}</b>
 			</a>
 			{% endif %}
 		</div>
