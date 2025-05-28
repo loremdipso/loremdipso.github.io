@@ -198,18 +198,21 @@ article {
 
 			li {
 				a {
+					transition: text-shadow 0.5s ease-in-out;
+
 					&:active,
 					&:hover {
 						$width: 1px;
 						border-left: $width solid $toc-border-color;
 						padding-left: #{$left-padding - $width};
+						text-shadow: 0.5px 0.5px 0 currentColor;
 					}
 
 					&.active {
 						$width: 2px;
 						border-left: $width solid $toc-border-color;
 						padding-left: #{$left-padding - $width};
-						font-weight: bold;
+						text-shadow: 0.5px 0.5px 0 currentColor;
 					}
 				}
 			}
