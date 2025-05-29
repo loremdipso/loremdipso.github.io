@@ -74,7 +74,18 @@ TODO: use this
       {% set width = 0 %}
       {% set height = 0 %}
 
-      {% if new_width > 0 and path is matching("(png|jpg|jpeg|webp)$") %}
+      {% if new_width > 0 and path is matching("(jpg|jpeg)$") %}
+        {# Use a reasonable quality for webp #}
+        {% set new_image = resize_image(path=path, width=new_width, op="fit_width", format="webp", quality=75) %}
+        {% set width = new_image.width %}
+        {% set height = new_image.height %}
+        <source srcset="{{ self::rel_url(path=new_image.url) | safe }}" type="image/webp">
+
+        {# TODO: add avif when that's available #}
+
+        {% set backup_image = resize_image(path=path, width=new_width, op="fit_width") %}
+        {% set path = self::rel_url(path=backup_image.url) %}
+      {% elif new_width > 0 and path is matching("(png|webp)$") %}
         {% set new_image = resize_image(path=path, width=new_width, op="fit_width", format="webp") %}
         {% set width = new_image.width %}
         {% set height = new_image.height %}
