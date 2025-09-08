@@ -1,0 +1,511 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+      <title>Welcome weary traveler</title>
+      <link>https://loremdipso.com/</link>
+      <description></description>
+      <generator>Zola</generator>
+      <language>en</language>
+      <atom:link href="https://loremdipso.com/rss.xml" rel="self" type="application/rss+xml"/>
+      <lastBuildDate>Wed, 28 May 2025 10:08:19 -0700</lastBuildDate>
+      <item>
+          <title>What should I read next?</title>
+          <pubDate>Wed, 28 May 2025 10:08:19 -0700</pubDate>
+          <author>Unknown</author>
+          <link>https://loremdipso.com/projects/what-should-i-read-next/</link>
+          <guid>https://loremdipso.com/projects/what-should-i-read-next/</guid>
+          <description xml:base="https://loremdipso.com/projects/what-should-i-read-next/">&lt;p&gt;I&#x27;ve got a huge reading list and go through seasons where I want to listen to an audiobook. For that I absolutely love &lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;libbyapp.com&#x2F;&quot;&gt;Libby&lt;&#x2F;a&gt;. You just add all your library cards and it&#x27;ll let you know if a particular book is available at any of those locations.&lt;&#x2F;p&gt;
+&lt;p&gt;Great! But doing this process manually for every book on my list until I find one that&#x27;s available &lt;em&gt;right now&lt;&#x2F;em&gt; is tedius. So I threw together this project (which is to-date possibly the ugliest thing I&#x27;ve ever made). Without any authentication (I ❤️ open APIs) it&#x27;ll query your libraries for you and collate the results.&lt;&#x2F;p&gt;
+&lt;p&gt;You can even install it as a PWA 😎&lt;&#x2F;p&gt;
+</description>
+      </item>
+      <item>
+          <title>Recipleasy</title>
+          <pubDate>Wed, 28 May 2025 00:00:00 +0000</pubDate>
+          <author>Unknown</author>
+          <link>https://loremdipso.com/projects/recipe-thing/</link>
+          <guid>https://loremdipso.com/projects/recipe-thing/</guid>
+          <description xml:base="https://loremdipso.com/projects/recipe-thing/">&lt;p&gt;Grabs the content of a given recipe and makes it as useful as possible, for free! Current features include:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;input disabled=&quot;&quot; type=&quot;checkbox&quot; checked=&quot;&quot;&#x2F;&gt;
+Recipe syntax highlighting&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;input disabled=&quot;&quot; type=&quot;checkbox&quot; checked=&quot;&quot;&#x2F;&gt;
+Unit conversion&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;input disabled=&quot;&quot; type=&quot;checkbox&quot; checked=&quot;&quot;&#x2F;&gt;
+Shopping list support&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;input disabled=&quot;&quot; type=&quot;checkbox&quot; checked=&quot;&quot;&#x2F;&gt;
+Local storage&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;input disabled=&quot;&quot; type=&quot;checkbox&quot; checked=&quot;&quot;&#x2F;&gt;
+Import&#x2F;export&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;You can even install it as a PWA 😎&lt;&#x2F;p&gt;
+&lt;details&gt;
+  &lt;summary&gt;
+      About the name...
+  &lt;&#x2F;summary&gt;
+  &lt;p&gt;
+    Recipease is a much better name. Unfortunately it is already taken. Right now I&#x27;m trying out recipleasy, as a &lt;a src=&quot;https:&#x2F;&#x2F;youtu.be&#x2F;QVn1PZGZxaI?si=Fosxo2VzP8-DUaYw&amp;t=57&quot; target=&quot;_blank&quot;&gt;portmantrois&lt;&#x2F;a&gt; of &lt;b&gt;recipe&lt;&#x2F;b&gt;+&lt;b&gt;easy&lt;&#x2F;b&gt;+&lt;b&gt;please&lt;&#x2F;b&gt;. I know, I&#x27;m not happy about it either.
+  &lt;&#x2F;p&gt;
+&lt;&#x2F;details&gt;
+</description>
+      </item>
+      <item>
+          <title></title>
+          <pubDate>Thu, 20 Feb 2025 00:00:00 +0000</pubDate>
+          <author>Unknown</author>
+          <link>https://loremdipso.com/minis/mini-03/</link>
+          <guid>https://loremdipso.com/minis/mini-03/</guid>
+          <description xml:base="https://loremdipso.com/minis/mini-03/">&lt;p&gt;I think one of the worst hit by the LLM mania is Stack Overflow. Not only has
+its content been essentially stolen and regurgitated by ChatGPT in an,
+admittedly, convenient and easy-to-understand package, but LLMs have made it
+easier than ever before to give yourself credability via a bot network of
+reasonable sounding answers that get reasonable sounding praise.&lt;&#x2F;p&gt;
+&lt;p&gt;So I&#x27;d like to just highlight one of my favorites posts. No fat to be trimmed,
+just a simple, honest answer to a simple, earnest question.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;question&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#question&quot; aria-label=&quot;Anchor link for: question&quot;&gt;Question&lt;&#x2F;a&gt;&lt;&#x2F;h3&gt;
+&lt;p&gt;How can I display a child process&#x27;s output in real time with Ruby?&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;answer&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#answer&quot; aria-label=&quot;Anchor link for: answer&quot;&gt;Answer&lt;&#x2F;a&gt;&lt;&#x2F;h3&gt;
+&lt;pre data-lang=&quot;ruby&quot; style=&quot;background-color:#2b2c2f;color:#cccece;&quot; class=&quot;language-ruby &quot;&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span style=&quot;color:#fac863;&quot;&gt;IO&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span&gt;popen&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;(&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99c794;&quot;&gt;s3sync.rb …&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;quot;).&lt;&#x2F;span&gt;&lt;span&gt;each &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c594c5;&quot;&gt;do &lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;|&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f99157;&quot;&gt;line&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;|
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#6699cc;&quot;&gt;print&lt;&#x2F;span&gt;&lt;span&gt; line
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c594c5;&quot;&gt;end
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Beautiful. &lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;stackoverflow.com&#x2F;a&#x2F;1974748&quot;&gt;Source&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+</description>
+      </item>
+      <item>
+          <title>Dynamic reading progress bar</title>
+          <pubDate>Mon, 10 Feb 2025 00:00:00 +0000</pubDate>
+          <author>Unknown</author>
+          <link>https://loremdipso.com/minis/mini-01/</link>
+          <guid>https://loremdipso.com/minis/mini-01/</guid>
+          <description xml:base="https://loremdipso.com/minis/mini-01/">&lt;p&gt;I&#x27;m sure &lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;fjall-rs.github.io&#x2F;&quot;&gt;fjall-rs&lt;&#x2F;a&gt; isn&#x27;t the first tech blog to implement a dynamic reading progress bar, but it&#x27;s the first the caught my eye. Implementing it was trivially easy, though there are some browser pitfalls to be aware of. Here it is, in full:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;js&quot; style=&quot;background-color:#2b2c2f;color:#cccece;&quot; class=&quot;language-js &quot;&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt;&lt;span style=&quot;color:#5f6364;&quot;&gt;&#x2F;&#x2F; Animate the progress bar
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c594c5;&quot;&gt;let &lt;&#x2F;span&gt;&lt;span&gt;progressBar &lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#6699cc;&quot;&gt;document&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#6699cc;&quot;&gt;querySelector&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99c794;&quot;&gt;.progress-bar&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c594c5;&quot;&gt;if &lt;&#x2F;span&gt;&lt;span&gt;(progressBar) &lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;{
+&lt;&#x2F;span&gt;&lt;span&gt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c594c5;&quot;&gt;let &lt;&#x2F;span&gt;&lt;span&gt;html &lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#6699cc;&quot;&gt;document&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#6699cc;&quot;&gt;querySelector&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99c794;&quot;&gt;html&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c594c5;&quot;&gt;let &lt;&#x2F;span&gt;&lt;span&gt;header &lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#6699cc;&quot;&gt;document&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#6699cc;&quot;&gt;querySelector&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99c794;&quot;&gt;header&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c594c5;&quot;&gt;const &lt;&#x2F;span&gt;&lt;span style=&quot;color:#6699cc;&quot;&gt;updateProgressBar &lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;= () &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c594c5;&quot;&gt;=&amp;gt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;{
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#5f6364;&quot;&gt;&#x2F;&#x2F; This is the only way I found to deal with the mobile address bar
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c594c5;&quot;&gt;let &lt;&#x2F;span&gt;&lt;span&gt;effectiveScrollHeight &lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span&gt;html&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span&gt;scrollHeight &lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;- &lt;&#x2F;span&gt;&lt;span&gt;window&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span&gt;innerHeight&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#5f6364;&quot;&gt;&#x2F;&#x2F; Only enable this when the post is big enough
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c594c5;&quot;&gt;if &lt;&#x2F;span&gt;&lt;span&gt;(effectiveScrollHeight &lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;gt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f99157;&quot;&gt;200&lt;&#x2F;span&gt;&lt;span&gt;) &lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;{
+&lt;&#x2F;span&gt;&lt;span&gt;   &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c594c5;&quot;&gt;let &lt;&#x2F;span&gt;&lt;span&gt;newHeight &lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f99157;&quot;&gt;Math&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#6699cc;&quot;&gt;round&lt;&#x2F;span&gt;&lt;span&gt;(
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f99157;&quot;&gt;100 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;* &lt;&#x2F;span&gt;&lt;span&gt;(html&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span&gt;scrollTop &lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&#x2F; &lt;&#x2F;span&gt;&lt;span&gt;effectiveScrollHeight)
+&lt;&#x2F;span&gt;&lt;span&gt;   )&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;   progressBar&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span&gt;style&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span&gt;width &lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;= `${&lt;&#x2F;span&gt;&lt;span&gt;newHeight&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;}&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99c794;&quot;&gt;%&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;`;
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;} &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c594c5;&quot;&gt;else &lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;{
+&lt;&#x2F;span&gt;&lt;span&gt;   progressBar&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span&gt;style&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span&gt;width &lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;= &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99c794;&quot;&gt;0&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;quot;;
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;}
+&lt;&#x2F;span&gt;&lt;span&gt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;};
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#6699cc;&quot;&gt;document&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#6699cc;&quot;&gt;addEventListener&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99c794;&quot;&gt;scroll&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;quot;, () &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c594c5;&quot;&gt;=&amp;gt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;{
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#6699cc;&quot;&gt;updateProgressBar&lt;&#x2F;span&gt;&lt;span&gt;()&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;}&lt;&#x2F;span&gt;&lt;span&gt;)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#5f6364;&quot;&gt;&#x2F;&#x2F; Scroll events don&amp;#39;t always fire when the window resizes
+&lt;&#x2F;span&gt;&lt;span&gt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#6699cc;&quot;&gt;document&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#6699cc;&quot;&gt;addEventListener&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99c794;&quot;&gt;resize&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;quot;, () &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c594c5;&quot;&gt;=&amp;gt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;{
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#6699cc;&quot;&gt;updateProgressBar&lt;&#x2F;span&gt;&lt;span&gt;()&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;}&lt;&#x2F;span&gt;&lt;span&gt;)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;}
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;pre data-lang=&quot;css&quot; style=&quot;background-color:#2b2c2f;color:#cccece;&quot; class=&quot;language-css &quot;&gt;&lt;code class=&quot;language-css&quot; data-lang=&quot;css&quot;&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bb80b3;&quot;&gt;progress-bar &lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;{
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fac863;&quot;&gt;position&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f99157;&quot;&gt;fixed&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fac863;&quot;&gt;left&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f99157;&quot;&gt;0&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fac863;&quot;&gt;top&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f99157;&quot;&gt;0&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fac863;&quot;&gt;height&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f99157;&quot;&gt;3px&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fac863;&quot;&gt;background&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;: #5ca3ff;
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#5f6364;&quot;&gt;&#x2F;* so you can click through *&#x2F;
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fac863;&quot;&gt;pointer-events&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f99157;&quot;&gt;none&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#5f6364;&quot;&gt;&#x2F;* raise above everything else *&#x2F;
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fac863;&quot;&gt;z-index&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f99157;&quot;&gt;100&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#5f6364;&quot;&gt;&#x2F;* make the transition nice and smooth *&#x2F;
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fac863;&quot;&gt;transition&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f99157;&quot;&gt;width 1s ease-in-out&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;}
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;And I think the result is quite pleasing:
+&lt;p&gt;&lt;video loop autoplay muted
+        title=&quot;Progress bar&quot;
+        style=&quot;aspect-ratio: 3.93&quot;
+    &gt;
+        &lt;source src=&quot;&amp;#x2F;minis&amp;#x2F;mini-01&amp;#x2F;assets&amp;#x2F;demo.mp4&quot; type=&quot;video&#x2F;mp4&quot;&gt;
+    &lt;&#x2F;video&gt;
+&lt;&#x2F;p&gt;&lt;&#x2F;p&gt;
+</description>
+      </item>
+      <item>
+          <title></title>
+          <pubDate>Mon, 10 Feb 2025 00:00:00 +0000</pubDate>
+          <author>Unknown</author>
+          <link>https://loremdipso.com/minis/mini-02/</link>
+          <guid>https://loremdipso.com/minis/mini-02/</guid>
+          <description xml:base="https://loremdipso.com/minis/mini-02/">&lt;p&gt;I just added in the ability to render videos in my blog, and in so doing came
+across a question I hadn&#x27;t considered before: how do I reserve space for a
+video that loads after the page does? Also, are videos loaded after page load,
+or what&#x27;s the deal there?&lt;&#x2F;p&gt;
+&lt;p&gt;Turns out: yes! You can reserve space for a video. In my case, I want my video
+to take up 100% of the available width and let the height work itself out. So
+do that I used the &lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;developer.mozilla.org&#x2F;en-US&#x2F;docs&#x2F;Web&#x2F;CSS&#x2F;aspect-ratio&quot;&gt;aspect-ratio&lt;&#x2F;a&gt;
+property and calculate on in my template with the video&#x27;s width and height.
+The result is what you see below, and here&#x27;s the zola shortcode I made:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;html&quot; style=&quot;background-color:#2b2c2f;color:#cccece;&quot; class=&quot;language-html &quot;&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span&gt;{%- set path = page.path ~ path -%}
+&lt;&#x2F;span&gt;&lt;span&gt;{%- set aspect_ratio = width &#x2F; height -%}
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eb606b;&quot;&gt;video &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bb80b3;&quot;&gt;loop autoplay muted
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bb80b3;&quot;&gt;{%if title%}title&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;=&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99c794;&quot;&gt;{{ title }}&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bb80b3;&quot;&gt;{%endif%}
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bb80b3;&quot;&gt;style&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;=&amp;quot;aspect-ratio: {{aspect_ratio}}&amp;quot;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eb606b;&quot;&gt;source &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bb80b3;&quot;&gt;src&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;=&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99c794;&quot;&gt;{{ path }}&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;quot; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bb80b3;&quot;&gt;type&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;=&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99c794;&quot;&gt;video&#x2F;mp4&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;quot;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;lt;&#x2F;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eb606b;&quot;&gt;video&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Which I can embed in my markdown documents like so (make sure to surround it in curly braces!):&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;md&quot; style=&quot;background-color:#2b2c2f;color:#cccece;&quot; class=&quot;language-md &quot;&gt;&lt;code class=&quot;language-md&quot; data-lang=&quot;md&quot;&gt;&lt;span&gt;video(title=&amp;quot;Progress bar&amp;quot;, path=&amp;quot;assets&#x2F;demo.mp4&amp;quot;, width=786, height=200)
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;A tad manual, but it avoids big page reflows, so I don&#x27;t mind.&lt;&#x2F;p&gt;
+</description>
+      </item>
+      <item>
+          <title>Wait, should I start a link-blog too??</title>
+          <pubDate>Sun, 09 Feb 2025 00:00:00 +0000</pubDate>
+          <author>Unknown</author>
+          <link>https://loremdipso.com/posts/wait-should-i-start-a-linkblog/</link>
+          <guid>https://loremdipso.com/posts/wait-should-i-start-a-linkblog/</guid>
+          <description xml:base="https://loremdipso.com/posts/wait-should-i-start-a-linkblog/">&lt;p&gt;About a week ago I read &lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;xuanwo.io&#x2F;links&#x2F;2025&#x2F;01&#x2F;link-blog&#x2F;&quot;&gt;Xuanwo&#x27;s post&lt;&#x2F;a&gt;, which referenced &lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;simonwillison.net&#x2F;2024&#x2F;Dec&#x2F;22&#x2F;link-blog&#x2F;&quot;&gt;Simon Wilson&#x27;s post&lt;&#x2F;a&gt;, which was then responed to in another of &lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;simonwillison.net&#x2F;2025&#x2F;Feb&#x2F;4&#x2F;build-a-link-blog&#x2F;&quot;&gt;Simon Wilson&#x27;s post&lt;&#x2F;a&gt; in a delightful flurry of back-and-forths reminiscent of Civil War era &lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=ODM5WqKLxTA&quot;&gt;letters from the front&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;tl;dr - you write baby posts based off of your reaction to other people&#x27;s posts. Like a twitter with only one person posting.&lt;&#x2F;p&gt;
+&lt;p&gt;The value proposition for me as a writer is attractive: I can write more, think less, I don&#x27;t have to worry about being original or doing a big project, and at the end of it all have something to look back on. And let&#x27;s hope this is actually interesting for anyone who wanders over into my corner of the internet.&lt;&#x2F;p&gt;
+&lt;p&gt;In any case I&#x27;ll give it a go. If it doesn&#x27;t work out then hopefully only the &lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;web.archive.org&#x2F;&quot;&gt;Wayback Machine&lt;&#x2F;a&gt;&lt;sup class=&quot;footnote-reference&quot; id=&quot;fr-1-1&quot;&gt;&lt;a href=&quot;#fn-1&quot;&gt;1&lt;&#x2F;a&gt;&lt;&#x2F;sup&gt; will know my failure.&lt;&#x2F;p&gt;
+&lt;section class=&quot;footnotes&quot;&gt;
+&lt;ol class=&quot;footnotes-list&quot;&gt;
+&lt;li id=&quot;fn-1&quot;&gt;
+&lt;p&gt;Sidenote, the default result for the Wayback Machine is http, not https, and it doesn&#x27;t automatically redirect you.&lt;sup class=&quot;footnote-reference&quot; id=&quot;fr-2-1&quot;&gt;&lt;a href=&quot;#fn-2&quot;&gt;2&lt;&#x2F;a&gt;&lt;&#x2F;sup&gt; &lt;a href=&quot;#fr-1-1&quot;&gt;↩&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li id=&quot;fn-2&quot;&gt;
+&lt;p&gt;What, you came to the footnotes looking for something interesting? They&#x27;re &lt;em&gt;footnotes&lt;&#x2F;em&gt;. There&#x27;s a reason they didn&#x27;t make it into the main draft. &lt;a href=&quot;#fr-2-1&quot;&gt;↩&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;&#x2F;section&gt;
+</description>
+      </item>
+      <item>
+          <title>Adding Interactivity</title>
+          <pubDate>Sat, 24 Dec 2022 00:00:00 +0000</pubDate>
+          <author>Unknown</author>
+          <link>https://loremdipso.com/posts/adding-interactivity/</link>
+          <guid>https://loremdipso.com/posts/adding-interactivity/</guid>
+          <description xml:base="https://loremdipso.com/posts/adding-interactivity/">&lt;h2 id=&quot;looking-for-problems-to-solve&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#looking-for-problems-to-solve&quot; aria-label=&quot;Anchor link for: looking-for-problems-to-solve&quot;&gt;Looking For Problems To Solve&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
+&lt;p&gt;&lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;www.getzola.org&#x2F;&quot;&gt;Zola&lt;&#x2F;a&gt; is wonderful. It builds quickly, it&#x27;s extremely configurable, but it is (by design) not well suited for interactive elements or complex &lt;code&gt;JavaScript&lt;&#x2F;code&gt;. I hadn&#x27;t thought I wanted that until I saw some on &lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;fasterthanli.me&#x2F;&quot;&gt;Amos&#x27;s site&lt;&#x2F;a&gt;. He ended up using &lt;code&gt;iframes&lt;&#x2F;code&gt; to manage that integration, which is a perfectly acceptable solution. But it did make me wonder: can we accomplish the same result without all of that nasty ugly &lt;code&gt;HTML&lt;&#x2F;code&gt;? Can we just write some clean &lt;code&gt;JS&lt;&#x2F;code&gt; and call it a day?&lt;&#x2F;p&gt;
+&lt;p&gt;Let&#x27;s find out.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;creating-the-bundle&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#creating-the-bundle&quot; aria-label=&quot;Anchor link for: creating-the-bundle&quot;&gt;Creating the Bundle&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
+&lt;p&gt;I hear that &lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;svelte.dev&#x2F;&quot;&gt;Svelte&lt;&#x2F;a&gt; is great at integrating into existing applications. You just give it some home in the &lt;code&gt;DOM&lt;&#x2F;code&gt; as an argument and away it goes:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;ts&quot; style=&quot;background-color:#2b2c2f;color:#cccece;&quot; class=&quot;language-ts &quot;&gt;&lt;code class=&quot;language-ts&quot; data-lang=&quot;ts&quot;&gt;&lt;span style=&quot;color:#c594c5;&quot;&gt;import &lt;&#x2F;span&gt;&lt;span&gt;Counter &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c594c5;&quot;&gt;from &lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99c794;&quot;&gt;.&#x2F;demos&#x2F;Counter.svelte&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;quot;;
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c594c5;&quot;&gt;const &lt;&#x2F;span&gt;&lt;span&gt;app &lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;= new &lt;&#x2F;span&gt;&lt;span&gt;Counter(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;{
+&lt;&#x2F;span&gt;&lt;span&gt;	target&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#6699cc;&quot;&gt;document&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#6699cc;&quot;&gt;getElementById&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99c794;&quot;&gt;counter&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;,
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;}&lt;&#x2F;span&gt;&lt;span&gt;)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c594c5;&quot;&gt;export default &lt;&#x2F;span&gt;&lt;span&gt;app&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Let&#x27;s make the classic simple counter for our test:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;html&quot; style=&quot;background-color:#2b2c2f;color:#cccece;&quot; class=&quot;language-html &quot;&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eb606b;&quot;&gt;script &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bb80b3;&quot;&gt;lang&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;=&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99c794;&quot;&gt;ts&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;quot;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;	&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c594c5;&quot;&gt;let &lt;&#x2F;span&gt;&lt;span&gt;count: number &lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f99157;&quot;&gt;0&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;	&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c594c5;&quot;&gt;const &lt;&#x2F;span&gt;&lt;span&gt;increment &lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;= () &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c594c5;&quot;&gt;=&amp;gt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;{
+&lt;&#x2F;span&gt;&lt;span&gt;		count &lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;+= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f99157;&quot;&gt;1&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;	&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;};
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;lt;&#x2F;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eb606b;&quot;&gt;script&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eb606b;&quot;&gt;main&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;	&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eb606b;&quot;&gt;button &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bb80b3;&quot;&gt;on:click&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;=&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99c794;&quot;&gt;{increment}&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;quot;&amp;gt;&lt;&#x2F;span&gt;&lt;span&gt;Clicked {count} times&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;lt;&#x2F;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eb606b;&quot;&gt;button&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;lt;&#x2F;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eb606b;&quot;&gt;main&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;We&#x27;re using &lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;vitejs.dev&#x2F;&quot;&gt;Vite&lt;&#x2F;a&gt; to build, and we&#x27;d like a separate JS bundle for each demo. As of version 3.2 we can use multiple lib entry points, like so:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;ts&quot; style=&quot;background-color:#2b2c2f;color:#cccece;&quot; class=&quot;language-ts &quot;&gt;&lt;code class=&quot;language-ts&quot; data-lang=&quot;ts&quot;&gt;&lt;span style=&quot;color:#c594c5;&quot;&gt;export default &lt;&#x2F;span&gt;&lt;span style=&quot;color:#6699cc;&quot;&gt;defineConfig&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;({ &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f99157;&quot;&gt;command &lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;}) &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c594c5;&quot;&gt;=&amp;gt; &lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;{
+&lt;&#x2F;span&gt;&lt;span&gt;	plugins&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;: &lt;&#x2F;span&gt;&lt;span&gt;[&lt;&#x2F;span&gt;&lt;span style=&quot;color:#6699cc;&quot;&gt;svelte&lt;&#x2F;span&gt;&lt;span&gt;()]&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;,
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;	&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5f6364;&quot;&gt;&#x2F;&#x2F; Use a temporary directory to not much up our release
+&lt;&#x2F;span&gt;&lt;span&gt;	cacheDir&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;: &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99c794;&quot;&gt;temp&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;quot;,
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;	build&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;: {
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;		&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5f6364;&quot;&gt;&#x2F;&#x2F; Build to a common location accessible to Zola
+&lt;&#x2F;span&gt;&lt;span&gt;		outDir&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;: &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99c794;&quot;&gt;..&#x2F;static&#x2F;demos&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;quot;,
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;		sourcemap&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;: &lt;&#x2F;span&gt;&lt;span&gt;command &lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;=== &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99c794;&quot;&gt;serve&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;quot;,
+&lt;&#x2F;span&gt;&lt;span&gt;		minify&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;: &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99c794;&quot;&gt;esbuild&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;quot;,
+&lt;&#x2F;span&gt;&lt;span&gt;		lib&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;: {
+&lt;&#x2F;span&gt;&lt;span&gt;			entry&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;: {
+&lt;&#x2F;span&gt;&lt;span&gt;				counter&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;: &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99c794;&quot;&gt;.&#x2F;src&#x2F;counter.ts&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;quot;,
+&lt;&#x2F;span&gt;&lt;span&gt;			&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;},
+&lt;&#x2F;span&gt;&lt;span&gt;			formats&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;: &lt;&#x2F;span&gt;&lt;span&gt;[&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99c794;&quot;&gt;es&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;]&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;,
+&lt;&#x2F;span&gt;&lt;span&gt;		&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;},
+&lt;&#x2F;span&gt;&lt;span&gt;	&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;},
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;}&lt;&#x2F;span&gt;&lt;span&gt;))&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;While we&#x27;re at it I&#x27;d like to have a test page to test out some of these demos, and that list of entries would be useful there, so let&#x27;s extract that out:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;ts&quot; style=&quot;background-color:#2b2c2f;color:#cccece;&quot; class=&quot;language-ts &quot;&gt;&lt;code class=&quot;language-ts&quot; data-lang=&quot;ts&quot;&gt;&lt;span style=&quot;color:#c594c5;&quot;&gt;export const &lt;&#x2F;span&gt;&lt;span&gt;demos &lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;= {
+&lt;&#x2F;span&gt;&lt;span&gt;	counter&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;: &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99c794;&quot;&gt;.&#x2F;src&#x2F;counter.ts&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;quot;,
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;};
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h2 id=&quot;embedding-the-bundle&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#embedding-the-bundle&quot; aria-label=&quot;Anchor link for: embedding-the-bundle&quot;&gt;Embedding the Bundle&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
+&lt;p&gt;On the Zola side of things we can use a &lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;content&#x2F;shortcodes&#x2F;&quot;&gt;shortcode&lt;&#x2F;a&gt; to do our dirty work. So if we say our shortcode lives in &lt;code&gt;demo.html&lt;&#x2F;code&gt; and looks like this (forgive the messy &lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;tera.netlify.app&#x2F;&quot;&gt;Tera&lt;&#x2F;a&gt; code):&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;html&quot; style=&quot;background-color:#2b2c2f;color:#cccece;&quot; class=&quot;language-html &quot;&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eb606b;&quot;&gt;div &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bb80b3;&quot;&gt;class&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;=&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99c794;&quot;&gt;demo&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;quot;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;	{%- set js_path = &amp;quot;&#x2F;demos&#x2F;&amp;quot; ~ key ~ &amp;quot;.js&amp;quot; -%} {%- set js_path =
+&lt;&#x2F;span&gt;&lt;span&gt;	get_url(path=js_path, trailing_slash=false, cachebust=true) -%} {%- set
+&lt;&#x2F;span&gt;&lt;span&gt;	js_path = js_path | replace(from=config.base_url, to=&amp;quot;&amp;quot;) -%}
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;	&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eb606b;&quot;&gt;script &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bb80b3;&quot;&gt;src&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;=&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99c794;&quot;&gt;{% js_path %}&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;quot; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bb80b3;&quot;&gt;type&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;=&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99c794;&quot;&gt;module&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;quot; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bb80b3;&quot;&gt;crossorigin&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;=&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99c794;&quot;&gt;anonymous&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;quot;&amp;gt;&amp;lt;&#x2F;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eb606b;&quot;&gt;script&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;	&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eb606b;&quot;&gt;div &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bb80b3;&quot;&gt;id&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;=&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99c794;&quot;&gt;{{ key }}&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;quot;&amp;gt;&amp;lt;&#x2F;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eb606b;&quot;&gt;div&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;lt;&#x2F;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eb606b;&quot;&gt;div&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Then to use in markdown we could do something like:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;md&quot; style=&quot;background-color:#2b2c2f;color:#cccece;&quot; class=&quot;language-md &quot;&gt;&lt;code class=&quot;language-md&quot; data-lang=&quot;md&quot;&gt;&lt;span&gt;Will this work? Let&amp;#39;s see: {{ demo(key=&amp;quot;counter&amp;quot;) }}
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Will this work? Let&#x27;s see: &lt;div class=&quot;demo&quot;&gt;
+    &lt;script
+      src=&quot;&#x2F;demos&amp;#x2F;counter.js?h=7136e20ee0e9414cf8d0&quot;
+      async
+      type=&quot;module&quot;
+      crossorigin=&quot;anonymous&quot;&gt;
+    &lt;&#x2F;script&gt;
+
+
+    &lt;div id=&quot;counter&quot;&gt;&lt;&#x2F;div&gt;
+&lt;&#x2F;div&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;Et voilà! 🥳&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;automation&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#automation&quot; aria-label=&quot;Anchor link for: automation&quot;&gt;Automation&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
+&lt;p&gt;It&#x27;s a bit unfortunate that to make a new demo I need to manually:&lt;&#x2F;p&gt;
+&lt;ol&gt;
+&lt;li&gt;Modify an object&lt;&#x2F;li&gt;
+&lt;li&gt;Create a shell &lt;code&gt;.ts&lt;&#x2F;code&gt; file to bootstrap the demo&lt;&#x2F;li&gt;
+&lt;li&gt;Create the actual demo&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;p&gt;It&#x27;d be a bit cleaner to do away with the shell &lt;code&gt;.ts&lt;&#x2F;code&gt; file entirely (perhaps by generating it during build time?) but it&#x27;s a bit easier to keep these steps explicit for now and just add a script to automate them. This smells like a premature workflow automation trap and I&#x27;m not falling for it this time. I swear! Look, if I make like 10 more demos then &lt;em&gt;maybe&lt;&#x2F;em&gt; I&#x27;ll look into this, but not until then.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;styles&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#styles&quot; aria-label=&quot;Anchor link for: styles&quot;&gt;Styles&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
+&lt;p&gt;The way Svelte handles styles is quite interesting&lt;sup class=&quot;footnote-reference&quot; id=&quot;fr-1-1&quot;&gt;&lt;a href=&quot;#fn-1&quot;&gt;1&lt;&#x2F;a&gt;&lt;&#x2F;sup&gt; but for our purposes are not ideal. We either need to export a separate &lt;code&gt;css&lt;&#x2F;code&gt; file per entrypoint and explicitly include it with our shortcode or else pretend it&#x27;s &lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;levelup.gitconnected.com&#x2F;a-brief-history-of-css-in-js-how-we-got-here-and-where-were-going-ea6261c19f04&quot;&gt;1994&lt;&#x2F;a&gt; and use &lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;CSS-in-JS&quot;&gt;CSS-in-JS&lt;&#x2F;a&gt;. OR we lean on the lovely &lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;www.npmjs.com&#x2F;package&#x2F;vite-plugin-css-injected-by-js&quot;&gt;vite-plugin-css-injected-by-js&lt;&#x2F;a&gt; package to do that for us. We simply need to add it to our vite config like so:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;ts&quot; style=&quot;background-color:#2b2c2f;color:#cccece;&quot; class=&quot;language-ts &quot;&gt;&lt;code class=&quot;language-ts&quot; data-lang=&quot;ts&quot;&gt;&lt;span style=&quot;color:#c594c5;&quot;&gt;export default &lt;&#x2F;span&gt;&lt;span style=&quot;color:#6699cc;&quot;&gt;defineConfig&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;({ &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f99157;&quot;&gt;command &lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;}) &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c594c5;&quot;&gt;=&amp;gt; &lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;{
+&lt;&#x2F;span&gt;&lt;span&gt;	plugins&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;: &lt;&#x2F;span&gt;&lt;span&gt;[&lt;&#x2F;span&gt;&lt;span style=&quot;color:#6699cc;&quot;&gt;svelte&lt;&#x2F;span&gt;&lt;span&gt;()&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#6699cc;&quot;&gt;cssInjectedByJsPlugin&lt;&#x2F;span&gt;&lt;span&gt;()]&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;,
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;	&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5f6364;&quot;&gt;&#x2F;&#x2F; ...cut
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;}&lt;&#x2F;span&gt;&lt;span&gt;);
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;And it&#x27;ll muck around in our JS bundle and have it insert styles directly into the page&#x27;s header. Generally not a practice I like, but for our single-file demos this is just about perfect. I say just about since by default in a multi-output project this plugin just sort of picks one. To remedy this we simply need to provide a &lt;code&gt;jsAssetsFilterFunction&lt;&#x2F;code&gt; and we&#x27;ll just have it return true:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;ts&quot; style=&quot;background-color:#2b2c2f;color:#cccece;&quot; class=&quot;language-ts &quot;&gt;&lt;code class=&quot;language-ts&quot; data-lang=&quot;ts&quot;&gt;&lt;span style=&quot;color:#6699cc;&quot;&gt;cssInjectedByJsPlugin&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;{
+&lt;&#x2F;span&gt;&lt;span&gt;	&lt;&#x2F;span&gt;&lt;span style=&quot;color:#6699cc;&quot;&gt;jsAssetsFilterFunction&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;: () &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c594c5;&quot;&gt;=&amp;gt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;{
+&lt;&#x2F;span&gt;&lt;span&gt;		&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c594c5;&quot;&gt;return &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f99157;&quot;&gt;true&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;	&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;},
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;}&lt;&#x2F;span&gt;&lt;span&gt;)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;,
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;That&#x27;s it for now, hope you enjoyed. Come back soon!&lt;&#x2F;p&gt;
+&lt;section class=&quot;footnotes&quot;&gt;
+&lt;ol class=&quot;footnotes-list&quot;&gt;
+&lt;li id=&quot;fn-1&quot;&gt;
+&lt;p&gt;Basically svelte does something sort of similar to how Angular does &lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;angular.io&#x2F;guide&#x2F;view-encapsulation&quot;&gt;component styles&lt;&#x2F;a&gt; but instead of using the &lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;developer.mozilla.org&#x2F;en-US&#x2F;docs&#x2F;Web&#x2F;Web_Components&#x2F;Using_shadow_DOM&quot;&gt;Shadow DOM&lt;&#x2F;a&gt; svelte basically converts classnames into unique-enough tokens to prevent collisions. So a &lt;code&gt;.container&lt;&#x2F;code&gt; might become &lt;code&gt;.container-svelteapp123&lt;&#x2F;code&gt;, though in practice it&#x27;s a much shorter string. &lt;a href=&quot;#fr-1-1&quot;&gt;↩&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;&#x2F;section&gt;
+</description>
+      </item>
+      <item>
+          <title>Secret Santa: a Saga</title>
+          <pubDate>Thu, 27 Jan 2022 00:00:00 +0000</pubDate>
+          <author>Unknown</author>
+          <link>https://loremdipso.com/posts/secret-santa-saga/</link>
+          <guid>https://loremdipso.com/posts/secret-santa-saga/</guid>
+          <description xml:base="https://loremdipso.com/posts/secret-santa-saga/">&lt;p&gt;
+    &lt;picture&gt;
+    &lt;picture&gt;
+      
+      
+
+      
+        
+        
+        
+       
+
+      &lt;img src=&quot;&#x2F;posts&#x2F;secret-santa-saga&#x2F;assets&#x2F;santa.svg&quot;
+        alt=&quot;Santa!&quot;
+        title=&quot;OMG IT&amp;#x27;S SANTA!&quot;
+        
+        loading=&quot;lazy&quot; decoding=&quot;async&quot;
+        style=&quot;max-height: 300px&quot;
+        width=&quot;552&quot; height=&quot;552&quot; &#x2F;&gt;
+    &lt;&#x2F;picture&gt;
+
+    &lt;&#x2F;picture&gt;
+&lt;&#x2F;p&gt;&lt;h2 id=&quot;the-end-result&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#the-end-result&quot; aria-label=&quot;Anchor link for: the-end-result&quot;&gt;The End Result&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
+&lt;p&gt;Here ya go! &lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;loremdipso.com&#x2F;secret-santa&#x2F;&quot;&gt;Secret Santa&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;backstory&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#backstory&quot; aria-label=&quot;Anchor link for: backstory&quot;&gt;Backstory&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
+&lt;p&gt;I have a groups of friends from college that have a &lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Secret_Santa&quot;&gt;Secret Santa&lt;&#x2F;a&gt; event every year. Even after we all moved apart we&#x27;ve kept it up, jumping to Zoom to unwrap our gifts and guess who was our gifter. One of my most favorite traditions, a delight tempered only by the daunting task of logistics. You see, there are some constraints:&lt;&#x2F;p&gt;
+&lt;ol&gt;
+&lt;li&gt;Couples are already going to give each other gifts so they shouldn&#x27;t be each other&#x27;s Secret Santa&lt;&#x2F;li&gt;
+&lt;li&gt;Secret Santa gifter&#x2F;giftee pairs shouldn&#x27;t be repeated (if possible). If not possible then we should prefer repeats that are as chronologically separate as possible. That is, a repeat from five years ago is much better than one from last year.&lt;&#x2F;li&gt;
+&lt;li&gt;No one should know their Secret Santa, including the person doing the organizing.&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;h2 id=&quot;initial-approach&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#initial-approach&quot; aria-label=&quot;Anchor link for: initial-approach&quot;&gt;Initial Approach&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
+&lt;p&gt;At first I wrote a simple ruby script that would generate text files whose names were the gifter and whose contents were the giftee. The organizer would then send an email out to everyone, attaching the correct file to each email. This worked, but was relatively inflexible. Plus previous years didn&#x27;t automatically carry over, so the organizer would have to manually update the ruby script with those pairings and prune old ones when there were too many for the script to find a valid solution.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;existing-solutions&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#existing-solutions&quot; aria-label=&quot;Anchor link for: existing-solutions&quot;&gt;Existing Solutions&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
+&lt;p&gt;The closest thing I found out in the wild that didn&#x27;t collect any info or show any ads was &lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;arcanis.github.io&#x2F;secretsanta&#x2F;&quot;&gt;https:&#x2F;&#x2F;arcanis.github.io&#x2F;secretsanta&#x2F;&lt;&#x2F;a&gt;. It wasn&#x27;t exactly what I was looking for, plus the exclusions seemed a bit broken, but it had the fantastic idea of encoding the giftee&#x27;s information in the URL, using AES with a static key as an obfuscator. Neat!&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;the-classic-excuse&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#the-classic-excuse&quot; aria-label=&quot;Anchor link for: the-classic-excuse&quot;&gt;The Classic Excuse&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
+&lt;p&gt;If I&#x27;m being honest with myself I could have pretty easily extended the ruby script to do everything a web app could, but I&#x27;m always looking for any reason to try out a new technology. This time it was &lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;svelte.dev&#x2F;&quot;&gt;Svelte&lt;&#x2F;a&gt;. I&#x27;d heard it has Vue-like structure and Syntax, Vanilla JavaScript performance, and I&#x27;d already &lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;loremdipso.com&#x2F;tags&#x2F;lithe&#x2F;&quot;&gt;started writing a compiler for it&lt;&#x2F;a&gt;. So let&#x27;s give a go, shall we?&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;ui&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#ui&quot; aria-label=&quot;Anchor link for: ui&quot;&gt;UI&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
+&lt;p&gt;The one thing anyone who uses Svelte seems willing to criticize is the lack of ecosystem. However I was able to find a &lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;sveltematerialui.com&#x2F;&quot;&gt;SMUI&lt;&#x2F;a&gt;, a Svelte implementation of &lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;material.io&#x2F;&quot;&gt;Material Design&lt;&#x2F;a&gt; that seemed reasonable enough.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;dev-experience&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#dev-experience&quot; aria-label=&quot;Anchor link for: dev-experience&quot;&gt;Dev Experience&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
+&lt;p&gt;Here were some initial thoughts and minor complaints:&lt;&#x2F;p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Setup was easy enough with a good project template.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Webpack continues to be terribly complex, so for this project I finally gave &lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;rollupjs.org&quot;&gt;rollup&lt;&#x2F;a&gt; a shot. It kind of seemed like a Webpack with less historical baggage, which is exactly what I wanted.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Svelte&#x27;s component-specific styles are very nice.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Svelte&#x27;s hot reloading: also very nice&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Wow, I really like those &lt;code&gt;$&lt;&#x2F;code&gt;. I&#x27;ve written enough using React&#x27;s hooks that I&#x27;m never confident my code&#x27;s going to be fast unless I memoize everything, so it&#x27;s great to see something that just works.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;At first Svelte&#x27;s loud complaints about unused styles got on my nerves, but I&#x27;ve come to accept that they&#x27;re probably for the best.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;I don&#x27;t think my app was complex enough to really take advantage of Svelte&#x27;s proclaimed runtime performance benefits, but I have no complaints.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;I noticed a couple of minor consistency issues. If I had a bug in a &lt;code&gt;.ts&lt;&#x2F;code&gt; file that wasn&#x27;t used anywhere, and I renamed it so it was a &lt;code&gt;.txt&lt;&#x2F;code&gt; just to get rid of the errors, Rollup or Svelte or TSC or whoever should notice did not. I had to restart the dev server for it to see that change.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;h2 id=&quot;bundle-size&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#bundle-size&quot; aria-label=&quot;Anchor link for: bundle-size&quot;&gt;Bundle Size&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
+&lt;p&gt;I was a little disappointed that the Svelte-based Material UI library spit out &lt;strong&gt;500 KB&lt;&#x2F;strong&gt; just in styles. I&#x27;d love to get rid of most of that, but even so the whole project comes in at under &lt;strong&gt;1 MB&lt;&#x2F;strong&gt; total. Okay, but how does it compare to, say, React? Well, luckily I first wrote this app using React and &lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;ant.design&#x2F;&quot;&gt;Antd&lt;&#x2F;a&gt;. The implementations aren&#x27;t exactly the same but they have nearly the same set of features. All told, the build of the React version comes out at around &lt;strong&gt;3.4 MB&lt;&#x2F;strong&gt;, which seems awfully high to me, even for React. After some digging it turns out it was due to that version of antd having &lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;stackoverflow.com&#x2F;questions&#x2F;48721290&#x2F;ant-design-huge-imports&quot;&gt;some issues&lt;&#x2F;a&gt;, so if I just &lt;code&gt;npm update&lt;&#x2F;code&gt; and rebuild I get...&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;11 MB&lt;&#x2F;strong&gt; ?!?! Whoa whoa whoa, that can&#x27;t be right. Alright, what if we use &lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;umijs&#x2F;babel-plugin-import&quot;&gt;babel-plugin-import&lt;&#x2F;a&gt;, so that imports like &lt;code&gt;import { Button } from &#x27;antd&#x27;;&lt;&#x2F;code&gt; automatically turn into something more like &lt;code&gt;import Button from &#x27;antd&#x2F;lib&#x2F;button&#x27;;&lt;&#x2F;code&gt;. Apparently that&#x27;s good for tree shaking. Aaaand... I actually kind of hate babel, so let&#x27;s try and avoid it by just manually updating these imports. Aaaand...&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;7.7 MB&lt;&#x2F;strong&gt;. Wellllll, that&#x27;s... better, at least, but something&#x27;s definitely squiffy. Alright, fine, I&#x27;ll use babel. Aaaand... no change. Darn. Oh, wait! Looks like the real space-taker are &lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;ant-design&#x2F;ant-design&#x2F;issues&#x2F;12011#issuecomment-623043192&quot;&gt;the icons&lt;&#x2F;a&gt;, and we should use babel for that too. And with that I&#x27;m down to... &lt;strong&gt;4.8MB&lt;&#x2F;strong&gt;! &lt;em&gt;sigh&lt;&#x2F;em&gt; Alright, at this point I&#x27;ve had a gut full and just want to try something new.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;meanwhile-in-svelte-land&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#meanwhile-in-svelte-land&quot; aria-label=&quot;Anchor link for: meanwhile-in-svelte-land&quot;&gt;Meanwhile, in Svelte land&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
+&lt;p&gt;So &lt;strong&gt;1 MB&lt;&#x2F;strong&gt;, huh? Alright, just in case I was doing something silly let&#x27;s go ahead and just try to use a &lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;carbon-components-svelte.onrender.com&#x2F;&quot;&gt;similar UI library&lt;&#x2F;a&gt; in an app built using &lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;kit.svelte.dev&#x2F;&quot;&gt;Svelte Kit&lt;&#x2F;a&gt;&#x27;s starter app template. That should give me the latest and greatest setup. But no, that also ended up costing ~500KB in styles, base, before I even started to pull in components. Why am I paying for junk I&#x27;m not even using? Hopefully users of that lib have a way to cut those out, but for the life of me I haven&#x27;t been able to find it.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;enter-smelte&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#enter-smelte&quot; aria-label=&quot;Anchor link for: enter-smelte&quot;&gt;Enter Smelte&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
+&lt;p&gt;&lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;smeltejs.com&#x2F;&quot;&gt;Smelte&lt;&#x2F;a&gt;. The elevator pitch is basically &lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;material.io&#x2F;&quot;&gt;Material Design&lt;&#x2F;a&gt; + &lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;tailwindcss.com&#x2F;&quot;&gt;Tailwind CSS&lt;&#x2F;a&gt;. You can use all of the normal Tailwind styles in your app plus a tonne of pre-built components. There was one outstanding issue where Smelte doesn&#x27;t currently list a specific version of purgecss and is slightly incompatible with it. Hopefully that PR gets accepted soon, but until then I had great luck using an older version of &lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;www.npmjs.com&#x2F;package&#x2F;purgecss&quot;&gt;purgecss&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;So now that I&#x27;ve got my UI framework swapped out and patched up and worked like a dream, let&#x27;s see the build size... &lt;strong&gt;200 KB&lt;&#x2F;strong&gt;!!! Alright, now that&#x27;s more like it.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;caveats-and-conclusions&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#caveats-and-conclusions&quot; aria-label=&quot;Anchor link for: caveats-and-conclusions&quot;&gt;Caveats and Conclusions&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
+&lt;p&gt;I should clarify that comparing the React+Carbon app against the Svelte+Smelte app isn&#x27;t entirely fair. For one I just gave up on React+Carbon after a certain point. I&#x27;d hope that production apps aren&#x27;t shipping with a framework that&#x27;s got a &lt;strong&gt;4 MB&lt;&#x2F;strong&gt; &quot;Hello World&quot;. Also, Carbon embeds its icons as SVG directly in its final bundle, whereas I reference Google Material Icons font library as an external URL. So to be more fair I should either increase the Svelte app&#x27;s total size or decrease the React app&#x27;s total size.&lt;&#x2F;p&gt;
+&lt;p&gt;That said, I don&#x27;t think I can definitively claim something as sweeping as &quot;Svelte &amp;gt; React&quot; or &quot;Smelte &amp;gt; Carbon&quot;. What I can say is that testing performance is, as usual, important and &lt;em&gt;hard&lt;&#x2F;em&gt;. Even after deciding that bundle size was the metric I wanted to improve, actually going about improving it meant a lot of trial and error. I learned a lot, but if this project wasn&#x27;t for fun I definitely wouldn&#x27;t have put this much time or effort into it. And in the end I did find a combination of technologies that I&#x27;m really happy with that I&#x27;d love to try out in future projects, so I&#x27;ll chalk this one up as smashing success.&lt;&#x2F;p&gt;
+&lt;p&gt;Please tease me if I spend any more time re-writing this silly app again.&lt;&#x2F;p&gt;
+&lt;details&gt;
+  &lt;summary&gt;
+ Bonus: 2048
+  &lt;&#x2F;summary&gt;
+  &lt;p&gt;
+ I did this same exercise with another of my old projects: &lt;a target=&quot;#&quot; href=&quot;https:&#x2F;&#x2F;loremdipso.com&#x2F;YAN2048&quot;&gt;YAN2048&lt;&#x2F;a&gt;. This one was written in Angular and only used its UI framework for the buttons and a game-over dialog. The &lt;a target=&quot;#&quot; href=&quot;https:&#x2F;&#x2F;loremdipso.com&#x2F;YAN2048_Svelte&quot;&gt;clone&lt;&#x2F;a&gt; does the same, and I copy&#x2F;pasted very nearly all the same logic and styles, yielding two very similar apps.
+  &lt;&#x2F;p&gt;
+  &lt;h2&gt;
+ Results
+  &lt;&#x2F;h2&gt;
+  &lt;p&gt;
+ On-disk space, Angular: an even &lt;b&gt;500 KB&lt;&#x2F;b&gt;, Svelte: &lt;b&gt;84 KB&lt;&#x2F;b&gt;.
+  &lt;&#x2F;p&gt;
+  &lt;p&gt;
+ Total delivered to browser (according to my network tab), Angular: &lt;b&gt;587 KB&lt;&#x2F;b&gt; inflated (&lt;b&gt;251 KB&lt;&#x2F;b&gt; with gzip), Svelte: &lt;b&gt;224 KB&lt;&#x2F;b&gt; inflated (&lt;b&gt;179 KB&lt;&#x2F;b&gt; with gzip).
+  &lt;&#x2F;p&gt;
+  &lt;p&gt;
+ But is this comparison worthwhile? Is what I observed experimentally vaguely in line with what they should be? Well, according to &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;LayZeeDK&#x2F;ngx-ivy-minimal-app-with-ngzone&quot;&gt;this git repo&lt;&#x2F;a&gt;, a hello world using the &lt;a href=&quot;https:&#x2F;&#x2F;docs.angular.lat&#x2F;guide&#x2F;ivy&quot;&gt;Ivy renderer&lt;&#x2F;a&gt; costs around &lt;b&gt;131 KB&lt;&#x2F;b&gt; uncompressed. So, yeah, I think the results here are reasonable.
+  &lt;&#x2F;p&gt;
+&lt;&#x2F;details&gt;
+</description>
+      </item>
+      <item>
+          <title>Lithe 7 - Apples to Apples</title>
+          <pubDate>Sat, 15 Jan 2022 12:46:47 -0700</pubDate>
+          <author>Unknown</author>
+          <link>https://loremdipso.com/posts/lithe-7/</link>
+          <guid>https://loremdipso.com/posts/lithe-7/</guid>
+          <description xml:base="https://loremdipso.com/posts/lithe-7/">&lt;h2 id=&quot;confession-time&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#confession-time&quot; aria-label=&quot;Anchor link for: confession-time&quot;&gt;Confession Time&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
+&lt;p&gt;My performance testing methodology so far has been extremely flawed. It serves mostly as an indicator for how rigorous performance testing might go when I eventually get around to it. Which I think is reasonable, but it doesn&#x27;t have to be quite so unfair to Svelte. Svelte is doing quite a lot more than Lithe, so I really shouldn&#x27;t be comparing them side by side. It&#x27;d be good to re-run some earlier tests, but with the JavaScript equivalent of what Lithe is doing. Which, let&#x27;s be honest, is mostly just parsing the HTML into an AST.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;disambiguation&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#disambiguation&quot; aria-label=&quot;Anchor link for: disambiguation&quot;&gt;Disambiguation&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
+&lt;p&gt;It&#x27;s good to have names for things, so let&#x27;s call this super-basic JavaScript version &lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Tongue-in-cheek&quot;&gt;LitheJS&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;the-specifics&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#the-specifics&quot; aria-label=&quot;Anchor link for: the-specifics&quot;&gt;The Specifics&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
+&lt;p&gt;Lithe has been using the &lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;crates.io&#x2F;crates&#x2F;html_parser&quot;&gt;html_parser crate&lt;&#x2F;a&gt;. For LitheJS I&#x27;ll use the very popular &lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;www.npmjs.com&#x2F;package&#x2F;node-html-parser&quot;&gt;Fast HTML Parser&lt;&#x2F;a&gt;. It&#x27;s got 2.3M downloads a week, and it&#x27;s even got Fast in the name. If anything&#x27;s going to give Lithe a run for its money it&#x27;s going to be that.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;the-methodology&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#the-methodology&quot; aria-label=&quot;Anchor link for: the-methodology&quot;&gt;The Methodology&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
+&lt;p&gt;We&#x27;ll do the same as before: super simple HTML files, just N &lt;code&gt;&amp;lt;span&amp;gt;Hello world!&amp;lt;&#x2F;span&amp;gt;&lt;&#x2F;code&gt; elements. No nesting, no scripting, and I&#x27;m not even going to ask LitheJS to produce any output or perform any transformations. I just want to know: how long does it take to parse the HTML into an AST, and how does that compare with Lithe?&lt;&#x2F;p&gt;
+&lt;p&gt;My thought is if Lithe can still beat out LitheJS, even after giving it all these advantages, then we&#x27;re on the right track.&lt;&#x2F;p&gt;
+&lt;p&gt;Notably, though, I&#x27;m not going to bother improving any of the rest of my methodology just yet. I&#x27;m not averaging multiple runs, I&#x27;m not going to nest HTML elements, I&#x27;m measuring performance directly in Node, all results are in ms, etc.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;the-results&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#the-results&quot; aria-label=&quot;Anchor link for: the-results&quot;&gt;The Results&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
+&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Number of &lt;code&gt;span&lt;&#x2F;code&gt;s&lt;&#x2F;th&gt;&lt;th&gt;Svelte&lt;&#x2F;th&gt;&lt;th&gt;Lithe - native&lt;&#x2F;th&gt;&lt;th&gt;Lithe - WASM&lt;&#x2F;th&gt;&lt;th&gt;LitheJS&lt;&#x2F;th&gt;&lt;&#x2F;tr&gt;&lt;&#x2F;thead&gt;&lt;tbody&gt;
+&lt;tr&gt;&lt;td&gt;1&lt;&#x2F;td&gt;&lt;td&gt;7ms&lt;&#x2F;td&gt;&lt;td&gt;3ms&lt;&#x2F;td&gt;&lt;td&gt;1ms&lt;&#x2F;td&gt;&lt;td&gt;1ms&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;10&lt;&#x2F;td&gt;&lt;td&gt;10ms&lt;&#x2F;td&gt;&lt;td&gt;1ms&lt;&#x2F;td&gt;&lt;td&gt;1ms&lt;&#x2F;td&gt;&lt;td&gt;1ms&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;100&lt;&#x2F;td&gt;&lt;td&gt;108ms&lt;&#x2F;td&gt;&lt;td&gt;4ms&lt;&#x2F;td&gt;&lt;td&gt;3ms&lt;&#x2F;td&gt;&lt;td&gt;1ms&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;1000&lt;&#x2F;td&gt;&lt;td&gt;348ms&lt;&#x2F;td&gt;&lt;td&gt;6ms&lt;&#x2F;td&gt;&lt;td&gt;9ms&lt;&#x2F;td&gt;&lt;td&gt;3ms&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;10,000&lt;&#x2F;td&gt;&lt;td&gt;N&#x2F;A (&lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Stack_buffer_overflow&quot;&gt;SO&lt;&#x2F;a&gt;)&lt;&#x2F;td&gt;&lt;td&gt;53ms&lt;&#x2F;td&gt;&lt;td&gt;81ms&lt;&#x2F;td&gt;&lt;td&gt;125ms&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;&#x2F;tbody&gt;&lt;&#x2F;table&gt;
+&lt;p&gt;Wow, that Fast HTML Parser really is fast! At least until you get into really big files. But let&#x27;s dig into that a bit more. Right now I&#x27;m just parsing these file contents and throwing away the result:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;ts&quot; style=&quot;background-color:#2b2c2f;color:#cccece;&quot; class=&quot;language-ts &quot;&gt;&lt;code class=&quot;language-ts&quot; data-lang=&quot;ts&quot;&gt;&lt;span style=&quot;color:#c594c5;&quot;&gt;function &lt;&#x2F;span&gt;&lt;span style=&quot;color:#6699cc;&quot;&gt;simple_html_parser&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f99157;&quot;&gt;contents&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;: &lt;&#x2F;span&gt;&lt;span&gt;String&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;) {
+&lt;&#x2F;span&gt;&lt;span&gt;	&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c594c5;&quot;&gt;const &lt;&#x2F;span&gt;&lt;span&gt;root &lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#6699cc;&quot;&gt;parse&lt;&#x2F;span&gt;&lt;span&gt;(contents)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;}
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;I haven&#x27;t read the source, but I suppose it&#x27;s possible that Fast HTML Parser is being super &lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Lazy_evaluation&quot;&gt;lazy&lt;&#x2F;a&gt; and not fully parsing the HTML string it was given until it has to. Let&#x27;s make it work a little harder:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;ts&quot; style=&quot;background-color:#2b2c2f;color:#cccece;&quot; class=&quot;language-ts &quot;&gt;&lt;code class=&quot;language-ts&quot; data-lang=&quot;ts&quot;&gt;&lt;span style=&quot;color:#c594c5;&quot;&gt;function &lt;&#x2F;span&gt;&lt;span style=&quot;color:#6699cc;&quot;&gt;simple_html_parser&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f99157;&quot;&gt;contents&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;: &lt;&#x2F;span&gt;&lt;span&gt;String&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;) {
+&lt;&#x2F;span&gt;&lt;span&gt;	&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c594c5;&quot;&gt;const &lt;&#x2F;span&gt;&lt;span&gt;root &lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#6699cc;&quot;&gt;parse&lt;&#x2F;span&gt;&lt;span&gt;(contents)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;	&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c594c5;&quot;&gt;const &lt;&#x2F;span&gt;&lt;span&gt;result &lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span&gt;contents&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#6699cc;&quot;&gt;toString&lt;&#x2F;span&gt;&lt;span&gt;()&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;	&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c594c5;&quot;&gt;return &lt;&#x2F;span&gt;&lt;span&gt;result&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;}
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Let&#x27;s re-run those last couple of tests. I included a range here since the results were highly variable:&lt;&#x2F;p&gt;
+&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Number of &lt;code&gt;span&lt;&#x2F;code&gt;s&lt;&#x2F;th&gt;&lt;th&gt;LitheJS&lt;&#x2F;th&gt;&lt;&#x2F;tr&gt;&lt;&#x2F;thead&gt;&lt;tbody&gt;
+&lt;tr&gt;&lt;td&gt;1000&lt;&#x2F;td&gt;&lt;td&gt;8ms-18ms&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;10,000&lt;&#x2F;td&gt;&lt;td&gt;58ms-140ms&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;&#x2F;tbody&gt;&lt;&#x2F;table&gt;
+&lt;p&gt;Alright, so it&#x27;s a little bit slower, but not by that much. I&#x27;m guessing there&#x27;s no lazy evaluation going on here: Fast HTML Parser is just fast. For fun I added timing inside the native version of Lithe just around the HTML parsing bit. And if we get rid of the &lt;code&gt;toString()&lt;&#x2F;code&gt; call in our &lt;code&gt;simple_html_parser&lt;&#x2F;code&gt; we can compare just the DOM parsing.&lt;&#x2F;p&gt;
+&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Number of &lt;code&gt;span&lt;&#x2F;code&gt;s&lt;&#x2F;th&gt;&lt;th&gt;LitheJS (just HTML parsing)&lt;&#x2F;th&gt;&lt;th&gt;Lithe - native (just HTML parsing)&lt;&#x2F;th&gt;&lt;&#x2F;tr&gt;&lt;&#x2F;thead&gt;&lt;tbody&gt;
+&lt;tr&gt;&lt;td&gt;100&lt;&#x2F;td&gt;&lt;td&gt;1ms&lt;&#x2F;td&gt;&lt;td&gt;0ms&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;1000&lt;&#x2F;td&gt;&lt;td&gt;4ms-13ms&lt;&#x2F;td&gt;&lt;td&gt;1ms&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;10,000&lt;&#x2F;td&gt;&lt;td&gt;41ms-142ms&lt;&#x2F;td&gt;&lt;td&gt;18ms-27ms&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;&#x2F;tbody&gt;&lt;&#x2F;table&gt;
+&lt;p&gt;And with that we&#x27;re finally comparing like with like. And the results look how I&#x27;d expect. If we take out the FFI overhead and only parse the HTML then the Rust version is looking to be a bit faster, especially for larger files.&lt;&#x2F;p&gt;
+</description>
+      </item>
+      <item>
+          <title>Lithe 6: What about WASM?</title>
+          <pubDate>Thu, 13 Jan 2022 00:00:00 +0000</pubDate>
+          <author>Unknown</author>
+          <link>https://loremdipso.com/posts/lithe-6/</link>
+          <guid>https://loremdipso.com/posts/lithe-6/</guid>
+          <description xml:base="https://loremdipso.com/posts/lithe-6/">&lt;h2 id=&quot;excuses&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#excuses&quot; aria-label=&quot;Anchor link for: excuses&quot;&gt;Excuses&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
+&lt;p&gt;I know I haven&#x27;t talked much about the state of Lithe except to mention how fast it is while run natively, but that&#x27;s only because Lithe is still very very bare bones. It parses the contents of svelte files into an HTML AST, which it then transforms into a more Svelte-y AST, which it then runs through to generate the final output. And it only works for the simplest of svelte files.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;thinking-ahead&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#thinking-ahead&quot; aria-label=&quot;Anchor link for: thinking-ahead&quot;&gt;Thinking Ahead&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
+&lt;p&gt;But before I write more about the internals of Lithe or implement any new features, I thought it&#x27;d be a fun diversion to think ahead to when this is a smash success and absolutely everyone wants it. How are we going to package and release it? The obvious (and my initial) answer was as a native extension that we talk to via FFI. But how will that be received? JavaScript developers like fast build times, even at the very start. Projects like &lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;www.snowpack.dev&#x2F;&quot;&gt;Snowpack&lt;&#x2F;a&gt; are successful exactly because of that. No frontend engineer wants to wait for the latest compiler to be downloaded and build on their local machine, especially if that requires the Rust toolchain.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;an-aside&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#an-aside&quot; aria-label=&quot;Anchor link for: an-aside&quot;&gt;An Aside&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
+&lt;p&gt;I never knew, but apparently tsc is, itself, written in TypeScript. Which really calls into question this whole endeavor. If something as successful as tsc (which I never felt was all that slow) is written in TypeScript, why can&#x27;t Svelte? The move to Rust has never been a sure one, and this might just be another reason against. Perhaps the performance limitations I&#x27;m trying to solve are more algorithmic than they are technical.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;what-s-wasm-again&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#what-s-wasm-again&quot; aria-label=&quot;Anchor link for: what-s-wasm-again&quot;&gt;What&#x27;s WASM again?&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
+&lt;p&gt;In any case, assuming Lithe is alive and well and we want to release it to impatient developers, we could maybe release native binaries. This seems (to me, anyway) to be something of a hassle, plus your consumers need to have the utmost trust in you. So what about &lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;webassembly.org&#x2F;&quot;&gt;WASM&lt;&#x2F;a&gt;? It&#x27;s cross-platform, I assume Node can run it, and I can only imagine that it&#x27;s cutoff from anything dangerous like network or file IO by default.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;how-to&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#how-to&quot; aria-label=&quot;Anchor link for: how-to&quot;&gt;How to&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
+&lt;p&gt;I set to work slightly modifying Lithe to output a WASM module rather than a native Rust lib. There were only two non-obvious changes I had to make. First, I needed to set my WASM&#x27;s &lt;code&gt;package.json&lt;&#x2F;code&gt;&#x27;s &lt;code&gt;type&lt;&#x2F;code&gt; to be &lt;code&gt;module&lt;&#x2F;code&gt; to get it to load correctly:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;js&quot; style=&quot;background-color:#2b2c2f;color:#cccece;&quot; class=&quot;language-js &quot;&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;{
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99c794;&quot;&gt;name&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99c794;&quot;&gt;lithe&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;quot;,
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99c794;&quot;&gt;version&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99c794;&quot;&gt;0.1.0&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;quot;,
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99c794;&quot;&gt;files&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;: [
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99c794;&quot;&gt;lithe_bg.wasm&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;quot;,
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99c794;&quot;&gt;lithe.js&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;quot;,
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99c794;&quot;&gt;lithe_bg.js&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;quot;,
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99c794;&quot;&gt;lithe.d.ts&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;quot;
+&lt;&#x2F;span&gt;&lt;span&gt;  ]&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;,
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99c794;&quot;&gt;module&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99c794;&quot;&gt;lithe.js&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;quot;,
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99c794;&quot;&gt;types&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99c794;&quot;&gt;lithe.d.ts&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;quot;,
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99c794;&quot;&gt;sideEffects&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f99157;&quot;&gt;false&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;,
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99c794;&quot;&gt;type&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99c794;&quot;&gt;module&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;quot;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#5f6364;&quot;&gt;&#x2F;&#x2F; &amp;lt;- new
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;}
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;I also had to refrain from using &lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;doc.rust-lang.org&#x2F;std&#x2F;time&#x2F;index.html&quot;&gt;&lt;code&gt;std::time&lt;&#x2F;code&gt;&lt;&#x2F;a&gt;, though luckily I was only using that for detailed performance tracing. With those two small changes done it just... worked. I am now able to import my compiler with a wondrously simple:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;ts&quot; style=&quot;background-color:#2b2c2f;color:#cccece;&quot; class=&quot;language-ts &quot;&gt;&lt;code class=&quot;language-ts&quot; data-lang=&quot;ts&quot;&gt;&lt;span style=&quot;color:#c594c5;&quot;&gt;import &lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;{ &lt;&#x2F;span&gt;&lt;span&gt;wasm_compile &lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;} &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c594c5;&quot;&gt;from &lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99c794;&quot;&gt;.&#x2F;wasm&#x2F;lithe.js&lt;&#x2F;span&gt;&lt;span style=&quot;color:#5fb3b3;&quot;&gt;&amp;quot;;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Wow. And the timings were better than I could have hoped: just &lt;code&gt;4ms&lt;&#x2F;code&gt; for 1000 &lt;code&gt;span&lt;&#x2F;code&gt;&#x27;s, which is just as fast as native!!!&lt;&#x2F;p&gt;
+&lt;p&gt;I checked my enthusiasm, and then I checked the output to make sure it was actually doing what it should (it was). Then to make sure I was actually doing the timing correctly (I was) I tried 10,000 &lt;code&gt;span&lt;&#x2F;code&gt;&#x27;s, and that took only &lt;code&gt;42ms&lt;&#x2F;code&gt;. Svelte, for comparison, had long since overflowed its stack.&lt;&#x2F;p&gt;
+&lt;p&gt;I should note that I don&#x27;t actually think WASM is just as fast as native. Maybe it is in some instances, but the times involved here are so small and the testing itself so basic that I can&#x27;t confidently prove anything. But what I can do is predict that, when all is said and done, that the WASM version of Lithe is probably going to run about as fast as the native version most of the time. But even if it&#x27;s 20x slower that&#x27;s still far faster than Svelte&#x27;s TypeScript compiler and that&#x27;s good enough for me.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;conclusion&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#conclusion&quot; aria-label=&quot;Anchor link for: conclusion&quot;&gt;Conclusion&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
+&lt;p&gt;It might be too early to tell, but just from this it&#x27;s looking like releasing this compiler via WASM might be totally viable. And the icing on the cake? The current version of Lithe, when compiled to WASM, weighs in at a mere &lt;code&gt;268K&lt;&#x2F;code&gt;. &lt;code&gt;268K&lt;&#x2F;code&gt;! That&#x27;s even smaller than a native &lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;stackoverflow.com&#x2F;questions&#x2F;29008127&#x2F;why-are-rust-executables-so-huge&quot;&gt;hello world in Rust&lt;&#x2F;a&gt;. Color me impressed.&lt;&#x2F;p&gt;
+&lt;details&gt;
+  &lt;summary&gt;
+	Disclaimer
+  &lt;&#x2F;summary&gt;
+  &lt;p&gt;
+	I did have to enable node&#x27;s &lt;code&gt;--experimental-wasm-modules&lt;&#x2F;code&gt; flag to get my WASM binary to even load. I&#x27;m hoping that flag goes away and WASM is supported by default, but I suppose there&#x27;s a chance WASM goes the &lt;a href=&quot;https:&#x2F;&#x2F;www.zdnet.com&#x2F;article&#x2F;flash-is-dead-long-live-html5&#x2F;&quot;&gt;way of flash&lt;&#x2F;a&gt;.
+  &lt;&#x2F;p&gt;
+&lt;&#x2F;details&gt;
+</description>
+      </item>
+    </channel>
+</rss>
