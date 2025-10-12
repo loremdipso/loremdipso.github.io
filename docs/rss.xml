@@ -78,7 +78,7 @@ or what&#x27;s the deal there?&lt;&#x2F;p&gt;
           <link>https://loremdipso.com/blog/adding-interactivity/</link>
           <guid>https://loremdipso.com/blog/adding-interactivity/</guid>
           <description xml:base="https://loremdipso.com/blog/adding-interactivity/">&lt;p&gt;&lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;www.getzola.org&#x2F;&quot;&gt;Zola&lt;&#x2F;a&gt; is wonderful. It builds quickly, it&#x27;s extremely configurable, but it is (by design) not well suited for interactive elements or complex &lt;code&gt;JavaScript&lt;&#x2F;code&gt;. I hadn&#x27;t thought I wanted that until I saw some on &lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;fasterthanli.me&#x2F;&quot;&gt;Amos&#x27;s site&lt;&#x2F;a&gt;. He ended up using &lt;code&gt;iframes&lt;&#x2F;code&gt; to manage that integration, which is a perfectly acceptable solution. But it did make me wonder: can we accomplish the same result without all of that nasty ugly &lt;code&gt;HTML&lt;&#x2F;code&gt;? Can we just write some clean &lt;code&gt;JS&lt;&#x2F;code&gt; and call it a day?&lt;&#x2F;p&gt;
-&lt;p&gt;Let&#x27;s find out.&amp;hellip;
+&lt;p&gt;Let&#x27;s find out&amp;hellip;
 &lt;&#x2F;p&gt;
 </description>
       </item>
