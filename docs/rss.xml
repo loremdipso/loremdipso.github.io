@@ -53,17 +53,17 @@ Import&#x2F;export&lt;&#x2F;li&gt;
           <title>Dynamic Reading Progress Bar</title>
           <pubDate>Mon, 10 Feb 2025 00:00:00 +0000</pubDate>
           <author>Unknown</author>
-          <link>https://loremdipso.com/posts/mini-01/</link>
-          <guid>https://loremdipso.com/posts/mini-01/</guid>
-          <description xml:base="https://loremdipso.com/posts/mini-01/">&lt;p&gt;I&#x27;m sure &lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;fjall-rs.github.io&#x2F;&quot;&gt;fjall-rs&lt;&#x2F;a&gt; isn&#x27;t the first tech blog to implement a dynamic reading progress bar, but it&#x27;s the first the caught my eye. Implementing it was trivially easy, though there are some browser pitfalls to be aware of.</description>
+          <link>https://loremdipso.com/blog/mini-01/</link>
+          <guid>https://loremdipso.com/blog/mini-01/</guid>
+          <description xml:base="https://loremdipso.com/blog/mini-01/">&lt;p&gt;I&#x27;m sure &lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;fjall-rs.github.io&#x2F;&quot;&gt;fjall-rs&lt;&#x2F;a&gt; isn&#x27;t the first tech blog to implement a dynamic reading progress bar, but it&#x27;s the first the caught my eye. Implementing it was trivially easy, though there are some browser pitfalls to be aware of.</description>
       </item>
       <item>
           <title>Adding Videos to This Blog</title>
           <pubDate>Mon, 10 Feb 2025 00:00:00 +0000</pubDate>
           <author>Unknown</author>
-          <link>https://loremdipso.com/posts/mini-02/</link>
-          <guid>https://loremdipso.com/posts/mini-02/</guid>
-          <description xml:base="https://loremdipso.com/posts/mini-02/">&lt;p&gt;I just added in the ability to render videos in my blog, and in so doing came
+          <link>https://loremdipso.com/blog/mini-02/</link>
+          <guid>https://loremdipso.com/blog/mini-02/</guid>
+          <description xml:base="https://loremdipso.com/blog/mini-02/">&lt;p&gt;I just added in the ability to render videos in my blog, and in so doing came
 across a question I hadn&#x27;t considered before: how do I reserve space for a
 video that loads after the page does? Also, are videos loaded after page load,
 or what&#x27;s the deal there?&lt;&#x2F;p&gt;
@@ -75,9 +75,9 @@ or what&#x27;s the deal there?&lt;&#x2F;p&gt;
           <title>Adding Interactivity</title>
           <pubDate>Sat, 24 Dec 2022 00:00:00 +0000</pubDate>
           <author>Unknown</author>
-          <link>https://loremdipso.com/posts/adding-interactivity/</link>
-          <guid>https://loremdipso.com/posts/adding-interactivity/</guid>
-          <description xml:base="https://loremdipso.com/posts/adding-interactivity/">&lt;p&gt;&lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;www.getzola.org&#x2F;&quot;&gt;Zola&lt;&#x2F;a&gt; is wonderful. It builds quickly, it&#x27;s extremely configurable, but it is (by design) not well suited for interactive elements or complex &lt;code&gt;JavaScript&lt;&#x2F;code&gt;. I hadn&#x27;t thought I wanted that until I saw some on &lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;fasterthanli.me&#x2F;&quot;&gt;Amos&#x27;s site&lt;&#x2F;a&gt;. He ended up using &lt;code&gt;iframes&lt;&#x2F;code&gt; to manage that integration, which is a perfectly acceptable solution. But it did make me wonder: can we accomplish the same result without all of that nasty ugly &lt;code&gt;HTML&lt;&#x2F;code&gt;? Can we just write some clean &lt;code&gt;JS&lt;&#x2F;code&gt; and call it a day?&lt;&#x2F;p&gt;
+          <link>https://loremdipso.com/blog/adding-interactivity/</link>
+          <guid>https://loremdipso.com/blog/adding-interactivity/</guid>
+          <description xml:base="https://loremdipso.com/blog/adding-interactivity/">&lt;p&gt;&lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;www.getzola.org&#x2F;&quot;&gt;Zola&lt;&#x2F;a&gt; is wonderful. It builds quickly, it&#x27;s extremely configurable, but it is (by design) not well suited for interactive elements or complex &lt;code&gt;JavaScript&lt;&#x2F;code&gt;. I hadn&#x27;t thought I wanted that until I saw some on &lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;fasterthanli.me&#x2F;&quot;&gt;Amos&#x27;s site&lt;&#x2F;a&gt;. He ended up using &lt;code&gt;iframes&lt;&#x2F;code&gt; to manage that integration, which is a perfectly acceptable solution. But it did make me wonder: can we accomplish the same result without all of that nasty ugly &lt;code&gt;HTML&lt;&#x2F;code&gt;? Can we just write some clean &lt;code&gt;JS&lt;&#x2F;code&gt; and call it a day?&lt;&#x2F;p&gt;
 &lt;p&gt;Let&#x27;s find out.&amp;hellip;
 &lt;&#x2F;p&gt;
 </description>
@@ -86,9 +86,9 @@ or what&#x27;s the deal there?&lt;&#x2F;p&gt;
           <title>Secret Santa: a Saga</title>
           <pubDate>Thu, 27 Jan 2022 00:00:00 +0000</pubDate>
           <author>Unknown</author>
-          <link>https://loremdipso.com/posts/secret-santa-saga/</link>
-          <guid>https://loremdipso.com/posts/secret-santa-saga/</guid>
-          <description xml:base="https://loremdipso.com/posts/secret-santa-saga/">&lt;p&gt;
+          <link>https://loremdipso.com/blog/secret-santa-saga/</link>
+          <guid>https://loremdipso.com/blog/secret-santa-saga/</guid>
+          <description xml:base="https://loremdipso.com/blog/secret-santa-saga/">&lt;p&gt;
     &lt;picture&gt;
       
       
@@ -99,7 +99,7 @@ or what&#x27;s the deal there?&lt;&#x2F;p&gt;
         
        
 
-      &lt;img src=&quot;&#x2F;posts&#x2F;secret-santa-saga&#x2F;assets&#x2F;santa.svg&quot;
+      &lt;img src=&quot;&#x2F;blog&#x2F;secret-santa-saga&#x2F;assets&#x2F;santa.svg&quot;
         alt=&quot;Santa!&quot;
         title=&quot;OMG IT&amp;#x27;S SANTA!&quot;
         
@@ -115,9 +115,9 @@ or what&#x27;s the deal there?&lt;&#x2F;p&gt;
           <title>Lithe 7 - Apples to Apples</title>
           <pubDate>Sat, 15 Jan 2022 12:46:47 -0700</pubDate>
           <author>Unknown</author>
-          <link>https://loremdipso.com/posts/lithe-7/</link>
-          <guid>https://loremdipso.com/posts/lithe-7/</guid>
-          <description xml:base="https://loremdipso.com/posts/lithe-7/">&lt;h2 id=&quot;confession-time&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#confession-time&quot; aria-label=&quot;Anchor link for: confession-time&quot;&gt;Confession Time&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
+          <link>https://loremdipso.com/blog/lithe-7/</link>
+          <guid>https://loremdipso.com/blog/lithe-7/</guid>
+          <description xml:base="https://loremdipso.com/blog/lithe-7/">&lt;h2 id=&quot;confession-time&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#confession-time&quot; aria-label=&quot;Anchor link for: confession-time&quot;&gt;Confession Time&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
 &lt;p&gt;My performance testing methodology so far has been extremely flawed. It serves mostly as an indicator for how rigorous performance testing might go when I eventually get around to it. Which I think is reasonable, but it doesn&#x27;t have to be quite so unfair to Svelte. Svelte is doing quite a lot more than Lithe, so I really shouldn&#x27;t be comparing them side by side. It&#x27;d be good to re-run some earlier tests, but with the JavaScript equivalent of what Lithe is doing. Which, let&#x27;s be honest, is mostly just parsing the HTML into an AST.&amp;hellip;
 &lt;&#x2F;p&gt;
 </description>
@@ -126,9 +126,9 @@ or what&#x27;s the deal there?&lt;&#x2F;p&gt;
           <title>Lithe 6: What about WASM?</title>
           <pubDate>Thu, 13 Jan 2022 00:00:00 +0000</pubDate>
           <author>Unknown</author>
-          <link>https://loremdipso.com/posts/lithe-6/</link>
-          <guid>https://loremdipso.com/posts/lithe-6/</guid>
-          <description xml:base="https://loremdipso.com/posts/lithe-6/">&lt;h2 id=&quot;excuses&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#excuses&quot; aria-label=&quot;Anchor link for: excuses&quot;&gt;Excuses&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
+          <link>https://loremdipso.com/blog/lithe-6/</link>
+          <guid>https://loremdipso.com/blog/lithe-6/</guid>
+          <description xml:base="https://loremdipso.com/blog/lithe-6/">&lt;h2 id=&quot;excuses&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#excuses&quot; aria-label=&quot;Anchor link for: excuses&quot;&gt;Excuses&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
 &lt;p&gt;I know I haven&#x27;t talked much about the state of Lithe except to mention how fast it is while run natively, but that&#x27;s only because Lithe is still very very bare bones. It parses the contents of svelte files into an HTML AST, which it then transforms into a more Svelte-y AST, which it then runs through to generate the final output. And it only works for the simplest of svelte files.&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;thinking-ahead&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#thinking-ahead&quot; aria-label=&quot;Anchor link for: thinking-ahead&quot;&gt;Thinking Ahead&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
 &lt;p&gt;But before I write more about the internals of Lithe or implement any new features, I thought it&#x27;d be a fun diversion to think ahead to when this is a smash success and absolutely everyone wants it. How are we going to package and release it?&amp;hellip;
@@ -139,18 +139,18 @@ or what&#x27;s the deal there?&lt;&#x2F;p&gt;
           <title>Lithe 5: Optimize for the minifier</title>
           <pubDate>Sat, 08 Jan 2022 19:49:55 -0700</pubDate>
           <author>Unknown</author>
-          <link>https://loremdipso.com/posts/lithe-5/</link>
-          <guid>https://loremdipso.com/posts/lithe-5/</guid>
-          <description xml:base="https://loremdipso.com/posts/lithe-5/">&lt;p&gt;&lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;halfnelson&quot;&gt;halfnelson&lt;&#x2F;a&gt; did a lovely &lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;halfnelson&#x2F;svelte-it-will-scale&#x2F;blob&#x2F;master&#x2F;README.md&quot;&gt;investigation of how large Svelte projects scale&lt;&#x2F;a&gt;. I&#x27;m not looking to rehash that per se, but I am interested in how well the current Svelte compiler&#x27;s output gets minified.&lt;&#x2F;p&gt;
+          <link>https://loremdipso.com/blog/lithe-5/</link>
+          <guid>https://loremdipso.com/blog/lithe-5/</guid>
+          <description xml:base="https://loremdipso.com/blog/lithe-5/">&lt;p&gt;&lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;halfnelson&quot;&gt;halfnelson&lt;&#x2F;a&gt; did a lovely &lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;halfnelson&#x2F;svelte-it-will-scale&#x2F;blob&#x2F;master&#x2F;README.md&quot;&gt;investigation of how large Svelte projects scale&lt;&#x2F;a&gt;. I&#x27;m not looking to rehash that per se, but I am interested in how well the current Svelte compiler&#x27;s output gets minified.&lt;&#x2F;p&gt;
 &lt;p&gt;For this investigation I&#x27;ll be pulling as many &lt;code&gt;.svelte&lt;&#x2F;code&gt; files as I can. Let&#x27;s use the &lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;copilot.github.com&#x2F;&quot;&gt;Copilot&lt;&#x2F;a&gt; strategy and pull from GitHub repos with permissive enough licenses.</description>
       </item>
       <item>
           <title>Lithe 4: On the Shoulders of Giants</title>
           <pubDate>Mon, 03 Jan 2022 18:39:44 -0700</pubDate>
           <author>Unknown</author>
-          <link>https://loremdipso.com/posts/lithe-4/</link>
-          <guid>https://loremdipso.com/posts/lithe-4/</guid>
-          <description xml:base="https://loremdipso.com/posts/lithe-4/">&lt;p&gt;Starting from characters and parsing that into an AST that could render a Svelte program could definitely open open possibilities for some low-level optimizations, but even just parsing a normal HTML document is not a small project, and Svelte includes JavaScript, TypeScript, Handlebars-esque blocks, CSS, and SCSS, too. Doing all that at once would be the mother of all slogs. But, luckily, I don&#x27;t have to! There exist many, many pre-build alternatives. The Svelte compiler itself even uses a couple.&lt;&#x2F;p&gt;
+          <link>https://loremdipso.com/blog/lithe-4/</link>
+          <guid>https://loremdipso.com/blog/lithe-4/</guid>
+          <description xml:base="https://loremdipso.com/blog/lithe-4/">&lt;p&gt;Starting from characters and parsing that into an AST that could render a Svelte program could definitely open open possibilities for some low-level optimizations, but even just parsing a normal HTML document is not a small project, and Svelte includes JavaScript, TypeScript, Handlebars-esque blocks, CSS, and SCSS, too. Doing all that at once would be the mother of all slogs. But, luckily, I don&#x27;t have to! There exist many, many pre-build alternatives. The Svelte compiler itself even uses a couple.&lt;&#x2F;p&gt;
 &lt;p&gt;So here&#x27;s the new plan&amp;hellip;
 &lt;&#x2F;p&gt;
 </description>
