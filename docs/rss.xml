@@ -58,7 +58,7 @@ Import&#x2F;export&lt;&#x2F;li&gt;
           <description xml:base="https://loremdipso.com/blog/mini-01/">&lt;p&gt;I&#x27;m sure &lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;fjall-rs.github.io&#x2F;&quot;&gt;fjall-rs&lt;&#x2F;a&gt; isn&#x27;t the first tech blog to implement a dynamic reading progress bar, but it&#x27;s the first the caught my eye. Implementing it was trivially easy, though there are some browser pitfalls to be aware of.</description>
       </item>
       <item>
-          <title>Adding Videos to This Blog</title>
+          <title>Adding Videos</title>
           <pubDate>Mon, 10 Feb 2025 00:00:00 +0000</pubDate>
           <author>Unknown</author>
           <link>https://loremdipso.com/blog/mini-02/</link>
@@ -112,17 +112,6 @@ or what&#x27;s the deal there?&lt;&#x2F;p&gt;
 &lt;p&gt;I have a groups of friends from college that have a &lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Secret_Santa&quot;&gt;Secret Santa&lt;&#x2F;a&gt; event every year. Even after we all moved apart we&#x27;ve kept it up, jumping to Zoom to unwrap our gifts and guess who was our gifter. One of my most favorite traditions, a delight tempered only by the daunting task of logistics. You see, there are some constraints</description>
       </item>
       <item>
-          <title>Lithe 7 - Apples to Apples</title>
-          <pubDate>Sat, 15 Jan 2022 12:46:47 -0700</pubDate>
-          <author>Unknown</author>
-          <link>https://loremdipso.com/blog/lithe/lithe-7/</link>
-          <guid>https://loremdipso.com/blog/lithe/lithe-7/</guid>
-          <description xml:base="https://loremdipso.com/blog/lithe/lithe-7/">&lt;h2 id=&quot;confession-time&quot;&gt;Confession Time&lt;&#x2F;h2&gt;
-&lt;p&gt;My performance testing methodology so far has been extremely flawed. It serves mostly as an indicator for how rigorous performance testing might go when I eventually get around to it. Which I think is reasonable, but it doesn&#x27;t have to be quite so unfair to Svelte. Svelte is doing quite a lot more than Lithe, so I really shouldn&#x27;t be comparing them side by side. It&#x27;d be good to re-run some earlier tests, but with the JavaScript equivalent of what Lithe is doing. Which, let&#x27;s be honest, is mostly just parsing the HTML into an AST.&amp;hellip;
-&lt;&#x2F;p&gt;
-</description>
-      </item>
-      <item>
           <title>Lithe</title>
           <pubDate>Mon, 03 Jan 2022 16:12:04 -0700</pubDate>
           <author>Unknown</author>
@@ -136,22 +125,13 @@ or what&#x27;s the deal there?&lt;&#x2F;p&gt;
 </description>
       </item>
       <item>
-          <title>Site V2</title>
-          <pubDate>Mon, 27 Dec 2021 14:15:48 -0700</pubDate>
+          <title>Secret Santa</title>
+          <pubDate>Thu, 22 Oct 2020 13:08:19 -0700</pubDate>
           <author>Unknown</author>
-          <link>https://loremdipso.com/blog/new-blog-same-content/</link>
-          <guid>https://loremdipso.com/blog/new-blog-same-content/</guid>
-          <description xml:base="https://loremdipso.com/blog/new-blog-same-content/">&lt;p&gt;Channeling my inner dev, I&#x27;ve gone ahead and completely re-written this site.&amp;hellip;
-&lt;&#x2F;p&gt;
+          <link>https://loremdipso.com/projects/secret-santa/</link>
+          <guid>https://loremdipso.com/projects/secret-santa/</guid>
+          <description xml:base="https://loremdipso.com/projects/secret-santa/">&lt;p&gt;Simple client project to help me manage my yearly remote secret santas. Very similar in concept to this project, but with some extra features. Includes import&#x2F;export functionality for if you play with the same group multiple years and don&#x27;t want duplicate pairings.&lt;&#x2F;p&gt;
 </description>
-      </item>
-      <item>
-          <title>Finding My Voice</title>
-          <pubDate>Mon, 27 Dec 2021 13:33:48 -0700</pubDate>
-          <author>Unknown</author>
-          <link>https://loremdipso.com/blog/finding-my-voice/</link>
-          <guid>https://loremdipso.com/blog/finding-my-voice/</guid>
-          <description xml:base="https://loremdipso.com/blog/finding-my-voice/">&lt;p&gt;I started this site for the same reason I imagine most software developers do: to get hired. Looking back, I&#x27;m not really surprised by the result: I was a perfectionist, it took a very long time (and a few tries), and it did not help me get hired. So, with that, and the face that I&#x27;ve been gainfully employed for almost a year now, why resurrect this old thing?&lt;&#x2F;p&gt;</description>
       </item>
     </channel>
 </rss>
