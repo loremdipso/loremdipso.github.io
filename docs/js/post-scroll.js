@@ -59,7 +59,7 @@ function getAsideElement(target) {
 // Track all sections that have an `id` applied, but skip the last child since that's the sidenav
 let currentAsideElement = null;
 for (const element of document.querySelectorAll(
-	".post-contents > *:not(:last-child)"
+	".post-contents > *:not(:last-child)",
 )) {
 	if (element.tagName === "H2") {
 		currentAsideElement = getAsideElement(element);
@@ -72,22 +72,19 @@ for (const element of document.querySelectorAll(
 }
 
 // Animate the progress bar
-let progressBar = document.querySelector(".progress-bar");
-if (progressBar) {
+let header = document.querySelector(".app-header");
+if (header) {
 	let html = document.querySelector("html");
-	let header = document.querySelector("header");
 	const updateProgressBar = () => {
 		// This is the only way I found to deal with the mobile address bar
 		let effectiveScrollHeight = html.scrollHeight - window.innerHeight;
 		// Only enable this when the post is big enough
+		let width = 0;
 		if (effectiveScrollHeight > 200) {
-			let newHeight = Math.round(
-				100 * (html.scrollTop / effectiveScrollHeight)
-			);
-			progressBar.style.width = `${newHeight}%`;
-		} else {
-			progressBar.style.width = "0";
+			width = Math.round(100 * (html.scrollTop / effectiveScrollHeight));
 		}
+
+		header.style.setProperty("--split", `${width}%`);
 	};
 
 	document.addEventListener("scroll", () => {
