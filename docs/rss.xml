@@ -75,7 +75,7 @@ Import&#x2F;export&lt;&#x2F;li&gt;
 </description>
       </item>
       <item>
-          <title>Adding Videos to This Blog</title>
+          <title>Adding Videos</title>
           <pubDate>Mon, 10 Feb 2025 00:00:00 +0000</pubDate>
           <author>Unknown</author>
           <link>https://loremdipso.com/blog/adding-videos-mini/</link>
@@ -95,6 +95,14 @@ or what&#x27;s the deal there?&lt;&#x2F;p&gt;
           <link>https://loremdipso.com/blog/dynamic-reading-progress-bar-mini/</link>
           <guid>https://loremdipso.com/blog/dynamic-reading-progress-bar-mini/</guid>
           <description xml:base="https://loremdipso.com/blog/dynamic-reading-progress-bar-mini/">&lt;p&gt;I&#x27;m sure &lt;a rel=&quot;noopener nofollow noreferrer external&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;fjall-rs.github.io&#x2F;&quot;&gt;fjall-rs&lt;&#x2F;a&gt; isn&#x27;t the first tech blog to implement a dynamic reading progress bar, but it&#x27;s the first the caught my eye. Implementing it was trivially easy, though there are some browser pitfalls to be aware of.</description>
+      </item>
+      <item>
+          <title>Dynamic Reading Progress Bar</title>
+          <pubDate>Mon, 10 Feb 2025 00:00:00 +0000</pubDate>
+          <author>Unknown</author>
+          <link>https://loremdipso.com/blog/mini-01/</link>
+          <guid>https://loremdipso.com/blog/mini-01/</guid>
+          <description xml:base="https://loremdipso.com/blog/mini-01/">&lt;p&gt;I&#x27;m sure &lt;a rel=&quot;noopener nofollow noreferrer external&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;fjall-rs.github.io&#x2F;&quot;&gt;fjall-rs&lt;&#x2F;a&gt; isn&#x27;t the first tech blog to implement a dynamic reading progress bar, but it&#x27;s the first the caught my eye. Implementing it was trivially easy, though there are some browser pitfalls to be aware of.</description>
       </item>
       <item>
           <title>Adding Interactivity</title>
@@ -126,7 +134,7 @@ or what&#x27;s the deal there?&lt;&#x2F;p&gt;
 
       &lt;img src=&quot;&#x2F;blog&#x2F;secret-santa-saga&#x2F;assets&#x2F;santa.svg&quot;
         alt=&quot;Santa!&quot;
-        title=&quot;OMG IT&amp;#x27;S SANTA!&quot;
+        title=&quot;Santa!&quot;
         
         loading=&quot;lazy&quot; decoding=&quot;async&quot;
         style=&quot;max-height: 300px; max-width: 100%&quot;
@@ -146,16 +154,6 @@ or what&#x27;s the deal there?&lt;&#x2F;p&gt;
 &lt;p&gt;Svelte is like Rust for me in that I had heard good things for years before I even gave it a try.&lt;&#x2F;p&gt;
 &lt;p&gt;Svelte is like Rust for me in that I loved it immediately.&lt;&#x2F;p&gt;
 &lt;p&gt;It&#x27;s really very simple to write in, the basic idea is engaging, and after trying it I wanted so badly for it to succeed. For context I have professional experience with vanilla JavaScript, React, and Angular. After transitioning a small app from Angular to Svelte, here were my takeaways&amp;hellip;
-&lt;&#x2F;p&gt;
-</description>
-      </item>
-      <item>
-          <title>Site V2</title>
-          <pubDate>Mon, 27 Dec 2021 14:15:48 -0700</pubDate>
-          <author>Unknown</author>
-          <link>https://loremdipso.com/blog/new-blog-same-content/</link>
-          <guid>https://loremdipso.com/blog/new-blog-same-content/</guid>
-          <description xml:base="https://loremdipso.com/blog/new-blog-same-content/">&lt;p&gt;Channeling my inner dev, I&#x27;ve gone ahead and completely re-written this site.&amp;hellip;
 &lt;&#x2F;p&gt;
 </description>
       </item>
