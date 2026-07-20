@@ -4,6 +4,7 @@ const setup_footnotes = () => {
     return;
   }
 
+  let currentFootnoteId = null;
   const footnoteLinks = document.querySelectorAll(".footnote-reference a");
   footnoteLinks.forEach((link) => {
     link.addEventListener("click", function (e) {
@@ -18,6 +19,14 @@ const setup_footnotes = () => {
       const targetId = decodeURIComponent(
         link.getAttribute("href").substring(1),
       );
+
+      // Double clicking the same footnote should close it.
+      if (targetId == currentFootnoteId) {
+        currentFootnoteId = null;
+        return;
+      }
+      currentFootnoteId = targetId;
+
       const targetLi = document.getElementById(targetId);
       if (!targetLi) {
         return;
@@ -62,6 +71,7 @@ const setup_footnotes = () => {
   // TODO: is this valid?
   document.addEventListener("click", function (e) {
     if (!e.target.closest(".footnote-reference")) {
+      currentFootnoteId = null;
       document
         .querySelectorAll(".inline-footnote-popup")
         .forEach((p) => p.remove());

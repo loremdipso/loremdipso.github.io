@@ -92,9 +92,9 @@ or what&#x27;s the deal there?&lt;&#x2F;p&gt;
           <title>Dynamic Reading Progress Bar</title>
           <pubDate>Mon, 10 Feb 2025 00:00:00 +0000</pubDate>
           <author>Unknown</author>
-          <link>https://loremdipso.com/blog/dynamic-reading-progress-bar-mini/</link>
-          <guid>https://loremdipso.com/blog/dynamic-reading-progress-bar-mini/</guid>
-          <description xml:base="https://loremdipso.com/blog/dynamic-reading-progress-bar-mini/">&lt;p&gt;I&#x27;m sure &lt;a rel=&quot;noopener nofollow noreferrer external&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;fjall-rs.github.io&#x2F;&quot;&gt;fjall-rs&lt;&#x2F;a&gt; isn&#x27;t the first tech blog to implement a dynamic reading progress bar, but it&#x27;s the first the caught my eye. Implementing it was trivially easy, though there are some browser pitfalls to be aware of.</description>
+          <link>https://loremdipso.com/blog/dynamic-reading-progress-bar/</link>
+          <guid>https://loremdipso.com/blog/dynamic-reading-progress-bar/</guid>
+          <description xml:base="https://loremdipso.com/blog/dynamic-reading-progress-bar/">&lt;p&gt;I&#x27;m sure &lt;a rel=&quot;noopener nofollow noreferrer external&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;fjall-rs.github.io&#x2F;&quot;&gt;fjall-rs&lt;&#x2F;a&gt; isn&#x27;t the first tech blog to implement a dynamic reading progress bar, but it&#x27;s the first the caught my eye. Implementing it was trivially easy, though there are some browser pitfalls to be aware of.</description>
       </item>
       <item>
           <title>Dynamic Reading Progress Bar</title>
@@ -136,12 +136,11 @@ or what&#x27;s the deal there?&lt;&#x2F;p&gt;
         alt=&quot;Santa!&quot;
         title=&quot;Santa!&quot;
         
-        loading=&quot;lazy&quot; decoding=&quot;async&quot;
-        style=&quot;max-height: 300px; max-width: 100%&quot;
-        width=&quot;552&quot; height=&quot;552&quot; &#x2F;&gt;
+        loading=&quot;lazy&quot; decoding=&quot;async&quot;style=&quot;height:auto;max-height:300px;max-width:100%&quot;&#x2F;&gt;
     &lt;&#x2F;picture&gt;
 
-&lt;&#x2F;p&gt;&lt;h2 id=&quot;backstory&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#backstory&quot; aria-label=&quot;Anchor link for: backstory&quot;&gt;Backstory&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
+&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;backstory&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#backstory&quot; aria-label=&quot;Anchor link for: backstory&quot;&gt;Backstory&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
 &lt;p&gt;I have a groups of friends from college that have a &lt;a rel=&quot;noopener nofollow noreferrer external&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Secret_Santa&quot;&gt;Secret Santa&lt;&#x2F;a&gt; event every year. Even after we all moved apart we&#x27;ve kept it up, jumping to Zoom to unwrap our gifts and guess who was our gifter. One of my most favorite traditions, a delight tempered only by the daunting task of logistics. You see, there are some constraints</description>
       </item>
       <item>
