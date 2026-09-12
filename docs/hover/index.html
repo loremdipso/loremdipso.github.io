@@ -1,0 +1,2060 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Hover! Maze</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+		<meta name="theme-color" content="#05070c">
+		<meta name="mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+		<script>
+			// All asset URLs are relative, so the game can live at any sub-path
+			// (e.g. example.com/hover/). If it is opened without the trailing slash
+			// (example.com/hover) the browser would resolve "js/..." against the
+			// site root, so anchor relative URLs to the directory explicitly.
+			( function () {
+				var path = window.location.pathname;
+				var last = path.slice( path.lastIndexOf( '/' ) + 1 );
+				if ( last !== '' && last.indexOf( '.' ) === - 1 ) {
+					var base = document.createElement( 'base' );
+					base.setAttribute( 'href', path + '/' );
+					document.head.appendChild( base );
+				}
+			} )();
+		</script>
+		<style>
+			:root {
+				--safe-top: env(safe-area-inset-top, 0px);
+				--safe-bottom: env(safe-area-inset-bottom, 0px);
+				--safe-left: env(safe-area-inset-left, 0px);
+				--safe-right: env(safe-area-inset-right, 0px);
+				--gold: #e7c86a;
+				--panel: rgba(8, 11, 18, 0.86);
+			}
+
+			* { box-sizing: border-box; }
+
+			html, body {
+				margin: 0;
+				padding: 0;
+				height: 100%;
+				overflow: hidden;
+				background: #05070c;
+				color: #f2f4f8;
+				font-family: "Trebuchet MS", "Segoe UI", system-ui, sans-serif;
+				overscroll-behavior: none;
+				-webkit-user-select: none;
+				user-select: none;
+				-webkit-tap-highlight-color: transparent;
+				-webkit-text-size-adjust: 100%;
+			}
+
+			canvas { display: block; touch-action: none; }
+
+			/* --- in-game readouts ------------------------------------- */
+
+			#hud {
+				position: fixed;
+				inset: 0;
+				pointer-events: none;
+				z-index: 10;
+				display: none;
+				padding: calc(var(--safe-top) + 8px) calc(var(--safe-right) + 12px)
+				         calc(var(--safe-bottom) + 8px) calc(var(--safe-left) + 12px);
+			}
+
+			body.playing #hud { display: block; }
+
+			#hud .readout {
+				position: absolute;
+				top: calc(var(--safe-top) + 10px);
+				font-size: clamp(20px, 4.4vmin, 44px);
+				font-weight: 700;
+				letter-spacing: 0.04em;
+				text-shadow: 0 2px 6px rgba(0, 0, 0, 0.85);
+				font-variant-numeric: tabular-nums;
+			}
+
+			#score { left: calc(var(--safe-left) + 20px); }
+			#time { right: calc(var(--safe-right) + 20px); }
+			#time.warning { color: #ff6b5e; }
+
+			/* Slotted into the two dials of the cockpit artwork. */
+			body.cockpit #hud .readout {
+				top: 2.6%;
+				font-size: clamp(18px, 3.4vmin, 38px);
+				transform: translateX(-50%);
+				text-shadow: none;
+			}
+
+			body.cockpit #score { left: 16%; }
+			body.cockpit #time { left: 84%; right: auto; }
+			body.cockpit #levelName { display: none; }
+			body.cockpit #flags { font-size: clamp(10px, 1.9vmin, 15px); }
+
+			#flags {
+				position: absolute;
+				left: 50%;
+				transform: translateX(-50%);
+				bottom: calc(var(--safe-bottom) + 34px);
+				font-size: clamp(12px, 2.3vmin, 19px);
+				letter-spacing: 0.18em;
+				text-transform: uppercase;
+				text-shadow: 0 2px 6px rgba(0, 0, 0, 0.85);
+			}
+
+			#flags span {
+				font-size: clamp(17px, 3.4vmin, 30px);
+				font-weight: 700;
+				letter-spacing: 0;
+				color: var(--gold);
+				margin-right: 6px;
+				font-variant-numeric: tabular-nums;
+			}
+
+			/* Over the three slots moulded into the cockpit's left-hand panel. */
+			body.cockpit #flags {
+				left: 19.5%;
+				bottom: 4.5%;
+				text-shadow: none;
+			}
+
+			#levelName {
+				position: absolute;
+				left: 50%;
+				transform: translateX(-50%);
+				bottom: calc(var(--safe-bottom) + 10px);
+				font-size: clamp(11px, 2.1vmin, 18px);
+				letter-spacing: 0.22em;
+				text-transform: uppercase;
+				opacity: 0.65;
+				white-space: nowrap;
+			}
+
+			#flash {
+				position: absolute;
+				left: 50%;
+				top: 46%;
+				transform: translate(-50%, -50%);
+				font-size: clamp(22px, 5vmin, 52px);
+				font-weight: 700;
+				letter-spacing: 0.08em;
+				text-shadow: 0 3px 14px rgba(0, 0, 0, 0.9);
+				opacity: 0;
+				transition: opacity 0.25s ease;
+				white-space: nowrap;
+			}
+
+			#flash.show { opacity: 1; }
+
+			/* --- touch controls --------------------------------------- */
+
+			#touchZone {
+				position: fixed;
+				inset: 0;
+				z-index: 20;
+				touch-action: none;
+				display: none;
+			}
+
+			body.touch.playing #touchZone { display: block; }
+
+			#stick {
+				position: fixed;
+				width: 148px;
+				height: 148px;
+				margin: -74px 0 0 -74px;
+				border-radius: 50%;
+				border: 2px solid rgba(231, 200, 106, 0.5);
+				background: radial-gradient(circle, rgba(231, 200, 106, 0.13), rgba(231, 200, 106, 0.02) 70%);
+				opacity: 0;
+				transition: opacity 0.15s ease;
+				pointer-events: none;
+				z-index: 21;
+			}
+
+			#stick.is-active { opacity: 1; }
+
+			#knob {
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				width: 62px;
+				height: 62px;
+				margin: 0;
+				border-radius: 50%;
+				background: rgba(231, 200, 106, 0.32);
+				border: 2px solid rgba(255, 255, 255, 0.55);
+				transform: translate(-50%, -50%);
+			}
+
+			#pause {
+				position: fixed;
+				right: calc(var(--safe-right) + 14px);
+				bottom: calc(var(--safe-bottom) + 14px);
+				z-index: 30;
+				display: none;
+				width: 52px;
+				height: 52px;
+				border-radius: 50%;
+				border: 1px solid rgba(255, 255, 255, 0.28);
+				background: rgba(8, 11, 18, 0.6);
+				color: #fff;
+				font-size: 17px;
+				line-height: 1;
+				cursor: pointer;
+			}
+
+			body.touch.playing #pause { display: block; }
+
+			/* --- menus ------------------------------------------------- */
+
+			#overlay {
+				position: fixed;
+				inset: 0;
+				z-index: 40;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				padding: calc(var(--safe-top) + 16px) calc(var(--safe-right) + 16px)
+				         calc(var(--safe-bottom) + 16px) calc(var(--safe-left) + 16px);
+				background: radial-gradient(ellipse at center, rgba(6, 9, 16, 0.78), rgba(3, 4, 8, 0.96));
+				overflow-y: auto;
+				-webkit-overflow-scrolling: touch;
+			}
+
+			body.playing #overlay { display: none; }
+
+			.panel {
+				width: min(640px, 100%);
+				background: var(--panel);
+				border: 1px solid rgba(231, 200, 106, 0.3);
+				border-radius: 14px;
+				padding: clamp(18px, 4vmin, 34px);
+				text-align: center;
+				box-shadow: 0 24px 70px rgba(0, 0, 0, 0.6);
+			}
+
+			.panel h1 {
+				margin: 0 0 2px;
+				font-size: clamp(30px, 7.5vmin, 58px);
+				letter-spacing: 0.06em;
+				color: var(--gold);
+				text-shadow: 0 3px 0 rgba(0, 0, 0, 0.5);
+			}
+
+			.panel h2 {
+				margin: 0 0 14px;
+				font-size: clamp(19px, 4.4vmin, 30px);
+				letter-spacing: 0.04em;
+			}
+
+			.panel p {
+				margin: 0 0 16px;
+				font-size: clamp(13px, 2.6vmin, 16px);
+				line-height: 1.55;
+				opacity: 0.8;
+			}
+
+			.stats {
+				display: flex;
+				justify-content: center;
+				gap: clamp(14px, 5vmin, 44px);
+				margin: 4px 0 20px;
+			}
+
+			.stats div { font-size: clamp(12px, 2.4vmin, 14px); opacity: 0.65; letter-spacing: 0.12em; text-transform: uppercase; }
+			.stats strong { display: block; margin-top: 4px; font-size: clamp(22px, 5vmin, 34px); color: var(--gold); opacity: 1; letter-spacing: 0; }
+
+			button {
+				font-family: inherit;
+				font-size: clamp(14px, 2.9vmin, 18px);
+				font-weight: 700;
+				letter-spacing: 0.09em;
+				text-transform: uppercase;
+				color: #080b12;
+				background: linear-gradient(#f0d789, #cba949);
+				border: none;
+				border-radius: 9px;
+				padding: 14px 28px;
+				margin: 5px;
+				cursor: pointer;
+				min-height: 48px;
+				touch-action: manipulation;
+			}
+
+			button.ghost {
+				background: transparent;
+				color: #d8dde6;
+				border: 1px solid rgba(255, 255, 255, 0.26);
+			}
+
+			button:disabled { opacity: 0.32; cursor: default; }
+
+			#levelList {
+				display: grid;
+				grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+				gap: 9px;
+				margin: 18px 0;
+				text-align: left;
+			}
+
+			.levelCard {
+				display: block;
+				width: 100%;
+				margin: 0;
+				padding: 12px 14px;
+				text-transform: none;
+				letter-spacing: 0;
+				font-size: 15px;
+				background: rgba(255, 255, 255, 0.07);
+				border: 1px solid rgba(255, 255, 255, 0.14);
+				color: #eef1f6;
+				text-align: left;
+			}
+
+			.levelCard .n { display: block; font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; opacity: 0.55; }
+			.levelCard .best { display: block; font-size: 12px; margin-top: 3px; color: var(--gold); }
+			.levelCard.locked { opacity: 0.3; }
+
+			.rank {
+				margin: -8px 0 14px;
+				font-size: clamp(13px, 2.6vmin, 17px);
+				font-weight: 700;
+				letter-spacing: 0.08em;
+				text-transform: uppercase;
+				color: var(--gold);
+				opacity: 1;
+			}
+
+			#boardTabs {
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: center;
+				gap: 5px;
+				margin-bottom: 14px;
+			}
+
+			#boardTabs button {
+				margin: 0;
+				padding: 8px 13px;
+				min-height: 0;
+				font-size: 12px;
+				letter-spacing: 0.06em;
+				background: rgba(255, 255, 255, 0.08);
+				color: #d8dde6;
+				border: 1px solid rgba(255, 255, 255, 0.16);
+			}
+
+			#boardTabs button.on {
+				background: linear-gradient(#f0d789, #cba949);
+				color: #080b12;
+				border-color: transparent;
+			}
+
+			#boardTable { min-height: 150px; }
+
+			#boardTable table {
+				width: 100%;
+				border-collapse: collapse;
+				font-size: clamp(12px, 2.4vmin, 15px);
+				font-variant-numeric: tabular-nums;
+			}
+
+			#boardTable th {
+				font-size: 10px;
+				letter-spacing: 0.16em;
+				text-transform: uppercase;
+				opacity: 0.5;
+				font-weight: 600;
+				padding: 0 6px 7px;
+				text-align: right;
+			}
+
+			#boardTable th:first-child, #boardTable td:first-child { text-align: center; width: 2.2em; }
+			#boardTable th:nth-child(2), #boardTable td:nth-child(2) { text-align: left; }
+
+			#boardTable td {
+				padding: 7px 6px;
+				text-align: right;
+				border-top: 1px solid rgba(255, 255, 255, 0.08);
+			}
+
+			#boardTable td.score { color: var(--gold); font-weight: 700; }
+			#boardTable tr.fresh td { background: rgba(231, 200, 106, 0.14); }
+			#boardTable tr.dnf td { opacity: 0.5; }
+
+			/* A phone in portrait has no room for the date column. */
+			@media (max-width: 430px) {
+				#boardTable th:last-child, #boardTable td:last-child { display: none; }
+			}
+			#boardTable .empty { padding: 34px 0; opacity: 0.45; font-size: clamp(12px, 2.4vmin, 15px); }
+
+			.settings input {
+				font: inherit;
+				font-weight: 700;
+				letter-spacing: 0.12em;
+				text-transform: uppercase;
+				width: 7em;
+				margin-left: 8px;
+				padding: 7px 10px;
+				border-radius: 7px;
+				background: rgba(255, 255, 255, 0.1);
+				color: var(--gold);
+				border: 1px solid rgba(255, 255, 255, 0.2);
+			}
+
+			.settings { margin-top: 14px; font-size: clamp(12px, 2.4vmin, 14px); opacity: 0.75; }
+			.settings select {
+				font: inherit;
+				margin-left: 8px;
+				padding: 7px 10px;
+				border-radius: 7px;
+				background: rgba(255, 255, 255, 0.1);
+				color: #eef1f6;
+				border: 1px solid rgba(255, 255, 255, 0.2);
+			}
+
+			.keys { font-size: clamp(12px, 2.4vmin, 14px); opacity: 0.6; margin-top: 12px; }
+
+			#bar {
+				height: 6px;
+				border-radius: 3px;
+				background: rgba(255, 255, 255, 0.12);
+				overflow: hidden;
+				margin: 20px auto 0;
+				max-width: 320px;
+			}
+
+			#barFill { height: 100%; width: 0%; background: var(--gold); transition: width 0.2s ease; }
+
+			.hidden { display: none !important; }
+		</style>
+	</head>
+	<body>
+
+		<div id="hud">
+			<div class="readout" id="score">0</div>
+			<div class="readout" id="time">0:00</div>
+			<div id="flags"><span id="flagCount">0/0</span> flags</div>
+			<div id="levelName"></div>
+			<div id="flash"></div>
+		</div>
+
+		<div id="touchZone"></div>
+		<div id="stick"><div id="knob"></div></div>
+		<button id="pause" aria-label="Pause">❚❚</button>
+
+		<div id="overlay">
+
+			<div class="panel" id="loadingPanel">
+				<h1>Hover! Maze</h1>
+				<p id="loadingText">Loading…</p>
+				<div id="bar"><div id="barFill"></div></div>
+			</div>
+
+			<div class="panel hidden" id="menuPanel">
+				<h1>Hover! Maze</h1>
+				<p>Six wards, one hovercraft. Find every flag before the clock runs out. They are scattered across the rooftops as well as the ground, so look for the beams of light and follow a ramp up — walls cost you points, and some of them move.</p>
+				<div id="levelList"></div>
+				<button class="ghost" id="openBoard">Best runs</button>
+				<div class="keys" id="controlHint"></div>
+				<div class="settings">
+					<label>Detail
+						<select id="qualitySelect">
+							<option value="auto">Auto</option>
+							<option value="high">High</option>
+							<option value="medium">Medium</option>
+							<option value="low">Low</option>
+						</select>
+					</label>
+				</div>
+			</div>
+
+			<div class="panel hidden" id="boardPanel">
+				<h2>Best runs</h2>
+				<div id="boardTabs"></div>
+				<div id="boardTable"></div>
+				<div class="settings">
+					<label>Tag
+						<input id="boardName" maxlength="8" autocomplete="off" autocapitalize="characters" spellcheck="false">
+					</label>
+				</div>
+				<button class="ghost" id="boardBack">Back</button>
+			</div>
+
+			<div class="panel hidden" id="pausePanel">
+				<h2>Paused</h2>
+				<button id="resumeButton">Resume</button>
+				<button class="ghost" id="quitButton">Quit to menu</button>
+			</div>
+
+			<div class="panel hidden" id="resultPanel">
+				<h2 id="resultTitle"></h2>
+				<p id="resultText"></p>
+				<p id="resultRank" class="rank"></p>
+				<div class="stats">
+					<div>Level<strong id="resultScore">0</strong></div>
+					<div>Total<strong id="resultTotal">0</strong></div>
+				</div>
+				<button id="primaryButton"></button>
+				<button class="ghost" id="resultBoard">Best runs</button>
+				<button class="ghost" id="menuButton">Level select</button>
+			</div>
+
+		</div>
+
+		<script src="js/three.js"></script>
+		<script src="js/GLTFLoader.js"></script>
+		<script src="js/levels.js"></script>
+		<script src="js/animutils.js"></script>
+		<script src="js/worldmap.js"></script>
+		<script src="js/particles.js"></script>
+		<script src="js/drones.js"></script>
+		<script src="js/touchcontrols.js"></script>
+		<script>
+
+			/* =====================================================================
+				Quality tiers
+
+				Everything that scales with the device lives here: a phone builds
+				the same maze as a desktop, just with fewer lights, coarser wall
+				meshes, smaller mirrors and a lighter skybox.
+			   =================================================================== */
+
+			var QUALITY = {
+
+				high: {
+					pixelRatio: 2, antialias: true, wallSegments: 4, anisotropy: 8,
+					maxLights: 32, maxDecals: 48, particles: 400,
+					mirrorWidth: 512, mirrorHeight: 384, mapSize: 448,
+					mirrorInterval: 1, skybox: 'data/Maskonaive2/', crunchyFilter: true
+				},
+
+				medium: {
+					pixelRatio: 1.5, antialias: false, wallSegments: 2, anisotropy: 4,
+					maxLights: 10, maxDecals: 28, particles: 220,
+					mirrorWidth: 320, mirrorHeight: 240, mapSize: 288,
+					mirrorInterval: 2, skybox: 'data/Maskonaive2/1k/', crunchyFilter: false
+				},
+
+				low: {
+					pixelRatio: 1.25, antialias: false, wallSegments: 1, anisotropy: 2,
+					maxLights: 0, maxDecals: 14, particles: 120,
+					mirrorWidth: 224, mirrorHeight: 168, mapSize: 208,
+					mirrorInterval: 3, skybox: 'data/Maskonaive2/1k/', crunchyFilter: false
+				}
+
+			};
+
+			var isTouch = ( window.matchMedia && window.matchMedia( '(pointer: coarse)' ).matches ) ||
+				( 'ontouchstart' in window && navigator.maxTouchPoints > 0 );
+
+			/* Picks a tier from what the device tells us about itself. */
+			function detectQualityName() {
+
+				var cores = navigator.hardwareConcurrency || 4;
+				var memory = navigator.deviceMemory || ( isTouch ? 4 : 8 );
+				var shortEdge = Math.min( screen.width, screen.height );
+
+				if ( ! isTouch && cores >= 4 ) return 'high';
+				if ( isTouch && memory >= 6 && cores >= 6 && shortEdge >= 390 ) return 'medium';
+				if ( ! isTouch ) return 'medium';
+
+				return 'low';
+
+			}
+
+			var qualityPreference = loadSetting( 'quality', 'auto' );
+			var qualityName = qualityPreference === 'auto' ? detectQualityName() : qualityPreference;
+			var quality = QUALITY[ qualityName ] || QUALITY.medium;
+
+
+			/* =====================================================================
+				Persistence
+			   =================================================================== */
+
+			function loadSetting( key, fallback ) {
+
+				try {
+
+					var value = window.localStorage.getItem( 'hoverMaze.' + key );
+					return value === null ? fallback : value;
+
+				} catch ( e ) {
+
+					return fallback;
+
+				}
+
+			}
+
+			function saveSetting( key, value ) {
+
+				try {
+
+					window.localStorage.setItem( 'hoverMaze.' + key, value );
+
+				} catch ( e ) { /* private browsing; progress just won't stick */ }
+
+			}
+
+			function loadProgress() {
+
+				try {
+
+					return JSON.parse( loadSetting( 'progress', '' ) ) || { unlocked: 0, best: {} };
+
+				} catch ( e ) {
+
+					return { unlocked: 0, best: {} };
+
+				}
+
+			}
+
+			var progress = loadProgress();
+
+			function saveProgress() {
+
+				saveSetting( 'progress', JSON.stringify( progress ) );
+
+			}
+
+			/* --- leader board ------------------------------------------------
+
+				Every finished attempt is kept, per ward, best first; clearing the
+				last ward also files the whole chain of wards as one campaign run.
+				All of it lives in local storage, so it survives the tab closing
+				but never leaves the machine. */
+
+			var BOARD_SIZE = 10;
+			var DEFAULT_TAG = 'PILOT';
+
+			var scores = loadScores();
+			var playerTag = loadSetting( 'tag', DEFAULT_TAG );
+
+			function loadScores() {
+
+				var stored = null;
+
+				try {
+
+					stored = JSON.parse( loadSetting( 'scores', '' ) );
+
+				} catch ( e ) { /* nothing worth keeping */ }
+
+				var table = ( stored && stored.levels ) ? stored : { levels: {}, campaigns: [] };
+
+				// Earlier versions kept a single best score per level. Fold those
+				// in once so nobody's records vanish under the new board.
+				if ( progress.best ) {
+
+					for ( var key in progress.best ) {
+
+						if ( ! progress.best.hasOwnProperty( key ) ) continue;
+						if ( table.levels[ key ] && table.levels[ key ].length ) continue;
+
+						table.levels[ key ] = [ {
+							name: DEFAULT_TAG, score: progress.best[ key ],
+							flags: null, total: null, seconds: null, complete: true, date: null
+						} ];
+
+					}
+
+					delete progress.best;
+					saveProgress();
+
+				}
+
+				return table;
+
+			}
+
+			function saveScores() {
+
+				saveSetting( 'scores', JSON.stringify( scores ) );
+
+			}
+
+			function boardFor( key ) {
+
+				if ( key === 'campaign' ) return scores.campaigns;
+				if ( ! scores.levels[ key ] ) scores.levels[ key ] = [];
+				return scores.levels[ key ];
+
+			}
+
+			function bestScoreFor( index ) {
+
+				var list = scores.levels[ index ];
+				return ( list && list.length ) ? list[ 0 ].score : 0;
+
+			}
+
+			/* Files an entry and reports where it landed, or -1 if it missed the
+				board entirely. */
+			function fileScore( key, entry ) {
+
+				var list = boardFor( key );
+
+				list.push( entry );
+				list.sort( function ( a, b ) {
+
+					return b.score - a.score;
+
+				} );
+
+				if ( list.length > BOARD_SIZE ) list.length = BOARD_SIZE;
+				saveScores();
+
+				return list.indexOf( entry );
+
+			}
+
+
+			/* =====================================================================
+				Scene, cameras, renderer
+			   =================================================================== */
+
+			var scene, camera, renderer;
+			var uiScene, uiCamera;
+			var rearCamera, rearTarget, rearQuad;
+			var mapCamera, mapTarget, mapQuad, craftMarker;
+
+			var MAP_HEIGHT = 8000;		// how far above the maze the map camera sits
+			var MAP_LAYER = 1;			// objects drawn only into the minimap
+			var cockpitQuad;
+
+			var ambientLight, headlight;
+			var hovercraft = null;
+			var flagMarkers = [];		// billboards, beams and fountains, per flag
+			var flagsTaken = 0;
+			var swarm = null;			// the drones patrolling this ward
+
+			var loadingManager = new THREE.LoadingManager();
+			var textureLoader = new THREE.TextureLoader( loadingManager );
+			var textureCache = {};
+
+			/* Shared, cached textures. Levels are torn down and rebuilt, so these
+				must outlive any one level's materials. */
+			function getTexture( url ) {
+
+				if ( textureCache[ url ] === undefined ) {
+
+					textureCache[ url ] = textureLoader.load( url );
+
+				}
+
+				return textureCache[ url ];
+
+			}
+
+			var clock = new THREE.Clock();
+			var craftCollider = new THREE.Sphere( new THREE.Vector3(), 15 );
+
+			// Gameplay tuning. Speeds are per second; the originals were per frame
+			// at 60fps, so they are scaled by 60 to stay honest on any refresh rate.
+			// The original turned at 1.25 degrees a frame, which at full speed is a
+			// turning circle wider than a cell - fine down a straight corridor,
+			// hopeless for lining up on a doorway or a ramp.
+			var TURN_RATE = THREE.Math.degToRad( 1.9 ) * 60;
+			var MAX_FORWARD = 11 * 60;
+			var MAX_REVERSE = 6 * 60;
+			var THRUST = 8 * 60;
+			var REVERSE_THRUST = 5 * 60;
+			var RESPONSE = 0.1;			// lerp per 60th of a second
+			var SPIN_TIME = 0.65;		// seconds of spin-out after a wall hit
+
+			// The craft used to sit 15 units up, which was a seventh of the old
+			// 100-unit walls. Walls are more than twice that now they carry a
+			// storey, so the same eye line reads as scraping along the floor.
+			var HOVER_HEIGHT = 30;		// how far the craft floats above its deck
+			var GRAVITY = 1900;			// units per second squared
+			var MAX_FALL = 2600;
+
+			var velocity = new THREE.Vector3();
+			var fallSpeed = 0;
+			var yaw = 0;
+			var pitch = 0;
+
+			var state = 'loading';
+			var levelIndex = 0;
+			var levelScore = 0;
+			var totalScore = 0;
+			var timeLeft = 0;
+			var spinTimer = 0;
+			var spinDirection = 1;
+			var frameCount = 0;
+			var hasWon = false;
+
+			var campaignChain = [];		// wards cleared without going back to the menu
+			var campaignStarted = 0;
+
+			var keys = { left: false, right: false, forward: false, back: false };
+			var touchControls = null;
+
+			var dom = {};
+			[ 'hud', 'score', 'time', 'flags', 'flagCount', 'levelName', 'flash', 'overlay', 'loadingPanel', 'loadingText',
+				'barFill', 'menuPanel', 'levelList', 'controlHint', 'qualitySelect', 'pausePanel',
+				'resumeButton', 'quitButton', 'resultPanel', 'resultTitle', 'resultText', 'resultRank', 'resultScore',
+				'resultTotal', 'primaryButton', 'menuButton', 'resultBoard', 'pause', 'touchZone', 'stick', 'knob',
+				'openBoard', 'boardPanel', 'boardTabs', 'boardTable', 'boardName', 'boardBack'
+			].forEach( function ( id ) {
+
+				dom[ id ] = document.getElementById( id );
+
+			} );
+
+
+			/* =====================================================================
+				Boot
+			   =================================================================== */
+
+			init();
+
+			function init() {
+
+				scene = new THREE.Scene();
+
+				// A near plane of 1 against a far plane of 20000 spends most of the
+				// depth buffer on the first few units in front of the lens.
+				camera = new THREE.PerspectiveCamera( 70, 1, 4, 20000 );
+				camera.rotation.order = 'YXZ';
+				camera.layers.enable( GROUND_LAYER );
+				scene.add( camera );
+
+				rearCamera = new THREE.PerspectiveCamera( 70, 1, 4, 8000 );
+				rearCamera.rotation.order = 'YXZ';
+				rearCamera.layers.enable( GROUND_LAYER );
+				scene.add( rearCamera );
+
+				// Near and far slice a thin slab above one storey's deck, so the map
+				// shows wall tops against black instead of a sheet of floor. The
+				// slice follows the craft up; see syncCameras().
+				mapCamera = new THREE.OrthographicCamera( - 1, 1, 1, - 1, MAP_HEIGHT - 232, MAP_HEIGHT - 8 );
+				mapCamera.rotation.order = 'YXZ';
+				mapCamera.layers.enable( MAP_LAYER );
+				scene.add( mapCamera );
+
+				// A marker only the minimap can see.
+				var markerGeometry = new THREE.ConeBufferGeometry( 55, 150, 3 );
+				markerGeometry.rotateX( - Math.PI / 2 );
+				craftMarker = new THREE.Mesh( markerGeometry, new THREE.MeshBasicMaterial( { color: 0xffcf5a } ) );
+				craftMarker.layers.set( MAP_LAYER );
+				scene.add( craftMarker );
+
+				ambientLight = new THREE.AmbientLight( 0x707070, 2.5 );
+				scene.add( ambientLight );
+
+				headlight = new THREE.DirectionalLight( 0xffffff, 0.7 );
+				camera.add( headlight );
+
+				renderer = new THREE.WebGLRenderer( {
+					antialias: quality.antialias,
+					powerPreference: 'high-performance'
+				} );
+				renderer.setPixelRatio( Math.min( window.devicePixelRatio || 1, quality.pixelRatio ) );
+				document.body.appendChild( renderer.domElement );
+
+				createRenderTargets();
+				createUI();
+
+				loadSkybox();
+				loadHovercraft();
+
+				window.addEventListener( 'resize', onResize, false );
+				window.addEventListener( 'orientationchange', onResize, false );
+				window.addEventListener( 'keydown', onKeyDown, false );
+				window.addEventListener( 'keyup', onKeyUp, false );
+				window.addEventListener( 'blur', onBlur, false );
+				document.addEventListener( 'visibilitychange', onBlur, false );
+
+				// Stop iOS from bouncing or zooming the page during play.
+				document.addEventListener( 'gesturestart', function ( e ) { e.preventDefault(); }, { passive: false } );
+				document.addEventListener( 'contextmenu', function ( e ) { e.preventDefault(); } );
+
+				if ( isTouch ) {
+
+					document.body.classList.add( 'touch' );
+					touchControls = new TouchControls( { zone: dom.touchZone, stick: dom.stick, knob: dom.knob } );
+
+				}
+
+				bindMenus();
+				onResize();
+
+				loadingManager.onProgress = function ( url, loaded, total ) {
+
+					dom.barFill.style.width = Math.round( loaded / Math.max( total, 1 ) * 100 ) + '%';
+
+				};
+
+				loadingManager.onLoad = function () {
+
+					dom.barFill.style.width = '100%';
+					showMenu();
+
+				};
+
+				loadingManager.onError = function ( url ) {
+
+					console.warn( 'Failed to load ' + url );
+
+				};
+
+				// Pull the shared textures into the manager's queue up front so the
+				// progress bar covers everything a level needs.
+				[ 'data/stone.png', 'data/stone_floor.jpg', 'data/solar_particle.png', 'data/flag.png',
+					'data/Hover_HUD.png', 'data/crossed_swords_shield.png', 'data/prussian_shield.png',
+					'data/red_banner.jpg' ].forEach( getTexture );
+
+				animate();
+
+			}
+
+			/* The skybox is only handed to the scene once all six faces have
+				decoded. Assigning the texture up front leaves the renderer with a
+				half-populated cube map for the first few frames, which is what used
+				to leave the sky black until a reload warmed the image cache. */
+			function loadSkybox() {
+
+				var format = '.jpg';
+				var urls = [
+					quality.skybox + 'px' + format, quality.skybox + 'nx' + format,
+					quality.skybox + 'py' + format, quality.skybox + 'ny' + format,
+					quality.skybox + 'pz' + format, quality.skybox + 'nz' + format
+				];
+
+				new THREE.CubeTextureLoader( loadingManager ).load( urls, function ( texture ) {
+
+					texture.format = THREE.RGBFormat;
+					texture.needsUpdate = true;
+					scene.background = texture;
+
+				} );
+
+			}
+
+			function loadHovercraft() {
+
+				new THREE.GLTFLoader( loadingManager ).load( 'data/hovercraft.gltf', function ( gltf ) {
+
+					hovercraft = gltf.scene;
+					hovercraft.position.y = 1000;		// parked out of sight, as before
+					camera.add( hovercraft );
+
+				} );
+
+			}
+
+			function createRenderTargets() {
+
+				var options = { minFilter: THREE.LinearFilter, magFilter: THREE.LinearFilter, depthBuffer: true };
+
+				rearTarget = new THREE.WebGLRenderTarget( quality.mirrorWidth, quality.mirrorHeight, options );
+				mapTarget = new THREE.WebGLRenderTarget( quality.mapSize, quality.mapSize, options );
+
+				rearCamera.aspect = quality.mirrorWidth / quality.mirrorHeight;
+				rearCamera.updateProjectionMatrix();
+
+			}
+
+
+			/* =====================================================================
+				Screen furniture
+
+				The mirrors have to stay in WebGL because they are render targets, so
+				they live in an orthographic overlay scene addressed in 0..1 screen
+				space. Everything textual is DOM, which keeps it crisp and lets it
+				reflow for a phone.
+			   =================================================================== */
+
+			function createUI() {
+
+				uiScene = new THREE.Scene();
+				uiCamera = new THREE.OrthographicCamera( 0, 1, 1, 0, - 10, 10 );
+
+				cockpitQuad = makeQuad( getTexture( 'data/Hover_HUD.png' ), 2, true );
+				rearQuad = makeQuad( rearTarget.texture, 1, false );
+				mapQuad = makeQuad( mapTarget.texture, 1, false );
+
+				uiScene.add( rearQuad, mapQuad, cockpitQuad );
+
+			}
+
+			/* Mirrors are opaque: the parts of a render target nothing drew into
+				are cleared to transparent black, and blending those would let the
+				3D view show through the glass. */
+			function makeQuad( map, depth, transparent ) {
+
+				var material = new THREE.MeshBasicMaterial( { map: map, transparent: transparent, depthTest: false, depthWrite: false } );
+				var mesh = new THREE.Mesh( new THREE.PlaneBufferGeometry( 1, 1 ), material );
+				mesh.renderOrder = depth;
+				return mesh;
+
+			}
+
+			/* Places a quad from a rect given in 0..1 screen space, origin top-left. */
+			function placeQuad( mesh, rect ) {
+
+				mesh.visible = rect !== null;
+				if ( ! rect ) return;
+
+				mesh.scale.set( rect.w, rect.h, 1 );
+				mesh.position.set( rect.x + rect.w / 2, 1 - rect.y - rect.h / 2, 0 );
+
+			}
+
+			/* Two layouts: the original cockpit on a wide screen, and a stripped
+				back corner HUD anywhere too small or too tall to wear it. */
+			function updateLayout() {
+
+				var width = window.innerWidth;
+				var height = window.innerHeight;
+				var aspect = width / height;
+
+				var cockpit = aspect >= 1.3 && Math.min( width, height ) >= 430;
+				document.body.classList.toggle( 'cockpit', cockpit );
+
+				if ( cockpit ) {
+
+					placeQuad( cockpitQuad, { x: 0, y: 0, w: 1, h: 1 } );
+					placeQuad( rearQuad, { x: 0.3, y: 0.01, w: 0.375, h: 0.15 } );
+					placeQuad( mapQuad, { x: 0.3755, y: 0.74, w: 0.25, h: 0.24 } );
+
+				} else {
+
+					// Both readouts sit in the top corners and both thumbs cover the
+					// bottom ones, so the mirrors take the space in between.
+					var mirrorWidth = aspect < 1 ? 0.34 : 0.17;
+					var mirrorHeight = mirrorWidth * ( quality.mirrorHeight / quality.mirrorWidth ) * aspect;
+					var mapWidth = aspect < 1 ? 0.28 : 0.15;
+
+					placeQuad( cockpitQuad, null );
+					placeQuad( rearQuad, { x: ( 1 - mirrorWidth ) / 2, y: 0.015, w: mirrorWidth, h: mirrorHeight } );
+					placeQuad( mapQuad, { x: 0.015, y: 0.13, w: mapWidth, h: mapWidth * aspect } );
+
+				}
+
+				// Ortho half-extent of the minimap, in world units.
+				var extent = CELL * 5;
+				mapCamera.left = - extent;
+				mapCamera.right = extent;
+				mapCamera.top = extent;
+				mapCamera.bottom = - extent;
+				mapCamera.updateProjectionMatrix();
+
+			}
+
+			function onResize() {
+
+				var width = window.innerWidth;
+				var height = window.innerHeight;
+
+				renderer.setPixelRatio( Math.min( window.devicePixelRatio || 1, quality.pixelRatio ) );
+				renderer.setSize( width, height );
+
+				camera.aspect = width / height;
+
+				// A phone held upright is so narrow that a fixed 70 degree vertical
+				// field leaves barely 35 degrees across, which is unplayable. Widen
+				// the vertical field to buy back horizontal view.
+				camera.fov = camera.aspect >= 1 ? 70 : THREE.Math.clamp(
+					THREE.Math.radToDeg( 2 * Math.atan( Math.tan( THREE.Math.degToRad( 70 ) / 2 ) / camera.aspect ) ),
+					70, 100 );
+
+				camera.updateProjectionMatrix();
+
+				updateLayout();
+
+			}
+
+
+			/* =====================================================================
+				Level lifecycle
+			   =================================================================== */
+
+			function startLevel( index ) {
+
+				levelIndex = index;
+				var def = LEVELS[ index ];
+
+				disposeFlags();
+				if ( swarm ) swarm.dispose();
+
+				var start = buildLevel( def, quality );
+
+				ambientLight.color.setHex( def.theme.ambient );
+				ambientLight.intensity = def.theme.ambientI;
+
+				makeFlags();
+
+				swarm = new DroneSwarm( def.drones || 0,
+					{ r: Math.round( start.x / CELL ), c: Math.round( start.z / CELL ) }, index + 1 );
+
+				camera.position.set( start.x, start.y + HOVER_HEIGHT, start.z );
+				yaw = THREE.Math.degToRad( start.heading );
+				pitch = 0;
+				camera.rotation.set( 0, yaw, 0 );
+
+				velocity.set( 0, 0, 0 );
+				fallSpeed = 0;
+				spinTimer = 0;
+				hasWon = false;
+				flagsTaken = 0;
+				levelScore = 1000;
+				timeLeft = def.timeLimit;
+
+				dom.levelName.textContent = ( index + 1 ) + '.  ' + def.name;
+				flash( 'Level ' + ( index + 1 ) + ' \u00b7 ' + def.name, 2600 );
+				updateReadouts();
+
+				setState( 'playing' );
+
+			}
+
+			/* Each flag gets a banner, a fountain and a beam of light that carries
+				far enough to be picked out from the other side of the level - the
+				beam is how you find them, the map only says roughly where. */
+			function makeFlags() {
+
+				var banner = getTexture( 'data/flag.png' );
+				var spark = getTexture( 'data/solar_particle.png' );
+				var perFountain = THREE.Math.clamp( Math.round( quality.particles / World.flags.length ), 16, 70 );
+
+				for ( var i = 0; i < World.flags.length; i ++ ) {
+
+					var flag = World.flags[ i ];
+					var group = new THREE.Group();
+					group.position.set( flag.x, flag.y, flag.z );
+
+					var bannerMaterial = new THREE.MeshBasicMaterial( {
+						map: banner, transparent: true, side: THREE.DoubleSide, depthWrite: false } );
+					var bannerMesh = new THREE.Mesh( new THREE.PlaneBufferGeometry( 60, 150 ), bannerMaterial );
+					bannerMesh.position.y = 85;
+					group.add( bannerMesh );
+
+					var beamMaterial = new THREE.MeshBasicMaterial( {
+						color: 0xffd070, transparent: true, opacity: 0.14,
+						blending: THREE.AdditiveBlending, depthWrite: false, side: THREE.DoubleSide } );
+					var beamMesh = new THREE.Mesh( new THREE.CylinderBufferGeometry( 46, 30, 2600, 10, 1, true ), beamMaterial );
+					beamMesh.position.y = 1300;
+					group.add( beamMesh );
+
+					scene.add( group );
+
+					var fountain = new ParticleFountain( {
+						count: perFountain,
+						map: spark,
+						origin: new THREE.Vector3( flag.x, flag.y + 8, flag.z ),
+						velocity: new THREE.Vector3( 0, 46, 0 ),
+						lifespan: 70
+					} );
+					scene.add( fountain );
+
+					// A gold pip on the map, lifted onto whichever storey the craft
+					// is looking at so every flag stays visible however high it is.
+					var marker = new THREE.Mesh(
+						new THREE.CylinderBufferGeometry( 0, 70, 130, 4 ),
+						new THREE.MeshBasicMaterial( { color: 0xffd070 } ) );
+					marker.layers.set( MAP_LAYER );
+					scene.add( marker );
+
+					flagMarkers.push( {
+						flag: flag, group: group, fountain: fountain, marker: marker,
+						banner: bannerMesh, taken: false
+					} );
+
+				}
+
+			}
+
+			function disposeFlags() {
+
+				for ( var i = 0; i < flagMarkers.length; i ++ ) {
+
+					var entry = flagMarkers[ i ];
+
+					scene.remove( entry.group );
+					entry.group.traverse( function ( object ) {
+
+						if ( object.geometry ) object.geometry.dispose();
+						if ( object.material ) object.material.dispose();
+
+					} );
+
+					scene.remove( entry.fountain );
+					entry.fountain.dispose();
+
+					scene.remove( entry.marker );
+					entry.marker.geometry.dispose();
+					entry.marker.material.dispose();
+
+				}
+
+				flagMarkers = [];
+
+			}
+
+			/* Flags are taken by touching them on their own storey - flying past
+				underneath a balcony does not count. */
+			function updateFlags( delta, mapSliceY ) {
+
+				var remaining = 0;
+
+				for ( var i = 0; i < flagMarkers.length; i ++ ) {
+
+					var entry = flagMarkers[ i ];
+					if ( entry.taken ) continue;
+
+					entry.group.rotation.y += delta * 0.8;
+					entry.banner.quaternion.copy( camera.quaternion );
+					entry.fountain.update( delta );
+
+					entry.marker.position.set( entry.flag.x, mapSliceY, entry.flag.z );
+					entry.marker.rotation.y += delta * 1.6;
+
+					var dx = camera.position.x - entry.flag.x;
+					var dz = camera.position.z - entry.flag.z;
+					var dy = camera.position.y - entry.flag.y;
+
+					if ( dx * dx + dz * dz < 130 * 130 && dy > - 40 && dy < 200 ) {
+
+						takeFlag( entry );
+						continue;
+
+					}
+
+					remaining ++;
+
+				}
+
+				return remaining;
+
+			}
+
+			function takeFlag( entry ) {
+
+				entry.taken = true;
+				entry.group.visible = false;
+				entry.fountain.visible = false;
+				entry.marker.visible = false;
+
+				flagsTaken ++;
+				levelScore += 150;
+
+				var left = World.flags.length - flagsTaken;
+				flash( left === 0 ? 'All flags taken!' : 'Flag ' + flagsTaken + ' of ' + World.flags.length, 1600 );
+
+				updateReadouts();
+
+			}
+
+			/* =====================================================================
+				Input
+			   =================================================================== */
+
+			function onKeyDown( event ) {
+
+				if ( event.repeat ) return;
+
+				switch ( event.code ) {
+
+					case 'KeyA': case 'ArrowLeft': keys.left = true; break;
+					case 'KeyD': case 'ArrowRight': keys.right = true; break;
+					case 'KeyW': case 'ArrowUp': keys.forward = true; break;
+					case 'KeyS': case 'ArrowDown': keys.back = true; break;
+
+					case 'Escape': case 'KeyP':
+						if ( state === 'playing' ) pauseGame();
+						else if ( state === 'paused' ) setState( 'playing' );
+						return;
+
+					default: return;
+
+				}
+
+				event.preventDefault();
+
+			}
+
+			function onKeyUp( event ) {
+
+				switch ( event.code ) {
+
+					case 'KeyA': case 'ArrowLeft': keys.left = false; break;
+					case 'KeyD': case 'ArrowRight': keys.right = false; break;
+					case 'KeyW': case 'ArrowUp': keys.forward = false; break;
+					case 'KeyS': case 'ArrowDown': keys.back = false; break;
+
+				}
+
+			}
+
+			function onBlur() {
+
+				if ( state === 'playing' && ( document.hidden || document.visibilityState === 'hidden' ) ) pauseGame();
+				keys.left = keys.right = keys.forward = keys.back = false;
+				if ( touchControls ) touchControls.release();
+
+			}
+
+			/* Combines keyboard and thumbstick into one analogue pair. */
+			function readInput() {
+
+				var steer = 0;
+				var throttle = 0;
+
+				if ( keys.left ) steer -= 1;
+				if ( keys.right ) steer += 1;
+				if ( keys.forward ) throttle += 1;
+				if ( keys.back ) throttle -= 1;
+
+				if ( touchControls && touchControls.active ) {
+
+					steer = THREE.Math.clamp( steer + touchControls.steer, - 1, 1 );
+					throttle = THREE.Math.clamp( throttle + touchControls.throttle, - 1, 1 );
+
+				}
+
+				return { steer: steer, throttle: throttle };
+
+			}
+
+
+			/* =====================================================================
+				Simulation
+			   =================================================================== */
+
+			function updateGame( delta ) {
+
+				var input = readInput();
+
+				timeLeft -= delta;
+
+				if ( spinTimer > 0 ) {
+
+					// Spun out: the craft turns away from the wall and ignores input.
+					spinTimer -= delta;
+					yaw += TURN_RATE * spinDirection * delta;
+
+				} else {
+
+					yaw -= input.steer * TURN_RATE * delta;
+
+					if ( input.throttle !== 0 ) {
+
+						var forward = new THREE.Vector3( - Math.sin( yaw ), 0, - Math.cos( yaw ) );
+						var accelerating = input.throttle > 0;
+
+						forward.multiplyScalar( input.throttle * ( accelerating ? THRUST : REVERSE_THRUST ) );
+
+						var blend = 1 - Math.pow( 1 - RESPONSE, delta * 60 );
+						velocity.lerp( forward, blend );
+
+						var limit = accelerating ? MAX_FORWARD : MAX_REVERSE;
+						if ( velocity.length() > limit ) velocity.setLength( limit );
+
+					} else {
+
+						// Coast down when nothing is on the throttle. The original
+						// drifted forever, which is unforgiving on a thumbstick.
+						velocity.multiplyScalar( Math.pow( 0.82, delta ) );
+
+					}
+
+				}
+
+				updateMovingWalls();
+				moveCraft( delta );
+				settleCraft( delta );
+
+				camera.rotation.set( pitch, yaw, 0 );
+
+				var mapSliceY = syncCameras();
+				var remaining = updateFlags( delta, mapSliceY );
+				updateDrones( delta, mapSliceY );
+				updateReadouts();
+
+				if ( ! hasWon && remaining === 0 ) {
+
+					completeLevel();
+
+				} else if ( timeLeft <= 0 ) {
+
+					failLevel();
+
+				}
+
+			}
+
+			/* Rides the craft over whatever is underneath it.
+
+				Decks are not solid: what holds the craft up is the height the world
+				reports below it. Climbing is quick, so ramps feel driven rather
+				than clambered, but there is nothing to climb onto without one -
+				drive off a terrace and the only surface left is the one below. */
+			function settleCraft( delta ) {
+
+				var surface = surfaceAt( camera.position.x, camera.position.z, camera.position.y - HOVER_HEIGHT );
+				var target = surface + HOVER_HEIGHT;
+				var before = camera.position.y;
+
+				if ( target >= camera.position.y ) {
+
+					// Track a rising surface exactly. Easing towards it instead
+					// leaves the camera a fixed distance behind on any sustained
+					// climb, and a ramp is long enough that it ends up under the
+					// slope, looking out through the underside of it.
+					camera.position.y = target;
+					fallSpeed = 0;
+
+				} else {
+
+					fallSpeed = Math.max( - MAX_FALL, fallSpeed - GRAVITY * delta );
+					camera.position.y += fallSpeed * delta;
+
+					if ( camera.position.y < target ) {
+
+						camera.position.y = target;
+						fallSpeed = 0;
+
+					}
+
+				}
+
+				// Tip the nose to follow the slope. Taken from the climb actually
+				// achieved, so ramps and drops both read without special cases.
+				var travelled = Math.sqrt( velocity.x * velocity.x + velocity.z * velocity.z ) * delta;
+				var slope = travelled > 1 ? ( camera.position.y - before ) / travelled : 0;
+				var wanted = THREE.Math.clamp( Math.atan( slope ) * 0.6, - 0.45, 0.45 );
+
+				pitch += ( wanted - pitch ) * ( 1 - Math.pow( 0.02, delta ) );
+
+			}
+
+			/* Advances the craft and keeps it out of the walls.
+
+				The move is split into short steps so a dropped frame cannot carry
+				the craft straight through a wall, and walls stay solid even while
+				the craft is spinning out - only the penalty and the spin itself are
+				held off, so one scrape cannot be charged for twice. */
+			function moveCraft( delta ) {
+
+				var distance = Math.sqrt( velocity.x * velocity.x + velocity.z * velocity.z ) * delta;
+				var steps = Math.min( 8, Math.max( 1, Math.ceil( distance / 20 ) ) );
+				var step = delta / steps;
+
+				for ( var i = 0; i < steps; i ++ ) {
+
+					camera.position.x += velocity.x * step;
+					camera.position.z += velocity.z * step;
+					craftCollider.center.copy( camera.position );
+
+					var hit = collideWorld( craftCollider );
+					if ( ! hit ) continue;
+
+					velocity.reflect( hit.normal );
+
+					// Lift the craft clear so it cannot stick to the wall.
+					camera.position.x = hit.point.x + hit.normal.x * ( craftCollider.radius + 1 );
+					camera.position.z = hit.point.z + hit.normal.z * ( craftCollider.radius + 1 );
+					craftCollider.center.copy( camera.position );
+
+					if ( spinTimer > 0 ) continue;
+
+					spinTimer = SPIN_TIME;
+					spinDirection = hit.normal.x * Math.sin( yaw ) + hit.normal.z * Math.cos( yaw ) > 0 ? 1 : - 1;
+
+					levelScore = Math.max( 0, levelScore - 5 );
+					flash( '\u2212 5', 500 );
+
+				}
+
+			}
+
+			/* Drones own the plaza. Up a ramp or down in the passages they cannot
+				follow, which is most of what makes those routes worth taking. */
+			function updateDrones( delta, mapSliceY ) {
+
+				if ( ! swarm || ! swarm.drones.length ) return;
+
+				var onGround = storeyAt( camera.position.y - HOVER_HEIGHT ) === World.ground;
+
+				swarm.update( delta, camera.position, onGround, mapSliceY );
+
+				if ( spinTimer > 0 ) return;
+
+				var hit = swarm.strike( camera.position, onGround );
+				if ( ! hit ) return;
+
+				// Shove the craft away from the drone and spin it out.
+				var dx = camera.position.x - hit.x;
+				var dz = camera.position.z - hit.z;
+				var length = Math.sqrt( dx * dx + dz * dz ) || 1;
+
+				velocity.set( dx / length * 320, 0, dz / length * 320 );
+
+				spinTimer = SPIN_TIME;
+				spinDirection = Math.random() < 0.5 ? 1 : - 1;
+
+				levelScore = Math.max( 0, levelScore - 100 );
+				flash( 'Drone! \u2212 100', 900 );
+
+			}
+
+			function updateMovingWalls() {
+
+				var def = LEVELS[ levelIndex ];
+				if ( World.movingWalls.length === 0 ) return;
+
+				var t = ( ( def.timeLimit - timeLeft ) / def.period ) % 1;
+
+				for ( var i = 0; i < World.movingWalls.length; i ++ ) {
+
+					var mesh = World.movingWalls[ i ];
+					mesh.position.x = evaluateTrack( World.movingKeys[ i ], t ) * CELL;
+					mesh.updateMatrixWorld( true );
+					World.movingColliders[ i ].setFromObject( mesh );
+
+				}
+
+			}
+
+			/* Points the mirror and the map, and slices the map to the storey the
+				craft is on so a terrace overhead does not hide the plan below it.
+				Returns the height that slice sits at, for the flag pips. */
+			function syncCameras() {
+
+				rearCamera.position.copy( camera.position );
+				rearCamera.rotation.set( 0, yaw + Math.PI, 0 );
+
+				var storey = THREE.Math.clamp( storeyAt( camera.position.y - HOVER_HEIGHT ),
+					0, ( World.plan ? World.plan.floors : 1 ) - 1 );
+
+				var deck = storeyY( storey );
+
+				mapCamera.position.set( camera.position.x, MAP_HEIGHT, camera.position.z );
+				mapCamera.rotation.set( - Math.PI / 2, yaw, 0 );
+				mapCamera.near = MAP_HEIGHT - ( deck + FLOOR_HEIGHT - 8 );
+				mapCamera.far = MAP_HEIGHT - ( deck - 16 );
+				mapCamera.updateProjectionMatrix();
+
+				craftMarker.position.set( camera.position.x, deck + 120, camera.position.z );
+				craftMarker.rotation.set( 0, yaw, 0 );
+
+				return deck + 120;
+
+			}
+
+
+			/* =====================================================================
+				Scoring and flow
+			   =================================================================== */
+
+			function completeLevel() {
+
+				hasWon = true;
+
+				var bonus = Math.round( Math.max( 0, timeLeft ) * 3 );
+				levelScore += bonus;
+				totalScore += levelScore;
+
+				progress.unlocked = Math.min(
+					Math.max( progress.unlocked, levelIndex + 1 ), LEVELS.length - 1 );
+				saveProgress();
+
+				var rank = recordRun( true );
+
+				if ( campaignChain.indexOf( levelIndex ) === - 1 ) campaignChain.push( levelIndex );
+
+				var last = levelIndex === LEVELS.length - 1;
+
+				// Clearing the last ward files the whole chain as a campaign run.
+				if ( last ) rank = recordCampaign() || rank;
+
+				showResult( {
+					title: last ? 'All wards cleared' : 'Level complete',
+					rank: rank,
+					text: last ?
+						'Every flag in every ward, taken.' :
+						'Time bonus ' + bonus + '. Next up: ' + LEVELS[ levelIndex + 1 ].name + '.',
+					primary: last ? 'Play again' : 'Next level',
+					action: last ? function () {
+
+						totalScore = 0;
+						startLevel( 0 );
+
+					} : function () {
+
+						startLevel( levelIndex + 1 );
+
+					}
+				} );
+
+			}
+
+			function failLevel() {
+
+				showResult( {
+					title: 'Out of time',
+					text: 'You found ' + flagsTaken + ' of ' + World.flags.length +
+						'. Give ' + LEVELS[ levelIndex ].name + ' another run.',
+					rank: recordRun( false ),
+					primary: 'Retry',
+					action: function () {
+
+						totalScore -= levelScore;
+						if ( totalScore < 0 ) totalScore = 0;
+						startLevel( levelIndex );
+
+					}
+				} );
+
+			}
+
+			function showResult( options ) {
+
+				dom.resultTitle.textContent = options.title;
+				dom.resultText.textContent = options.text;
+				dom.resultRank.textContent = options.rank || '';
+				dom.resultScore.textContent = Math.max( 0, Math.round( levelScore ) );
+				dom.resultTotal.textContent = Math.round( totalScore );
+				dom.primaryButton.textContent = options.primary;
+				dom.primaryButton.onclick = options.action;
+
+				showPanel( dom.resultPanel );
+				setState( 'result' );
+
+			}
+
+			function pauseGame() {
+
+				if ( touchControls ) touchControls.release();
+				showPanel( dom.pausePanel );
+				setState( 'paused' );
+
+			}
+
+			function setState( next ) {
+
+				state = next;
+				document.body.classList.toggle( 'playing', next === 'playing' );
+
+				if ( next === 'playing' ) clock.getDelta();		// drop time spent in menus
+
+			}
+
+			function showPanel( panel ) {
+
+				[ dom.loadingPanel, dom.menuPanel, dom.pausePanel, dom.resultPanel, dom.boardPanel ].forEach( function ( p ) {
+
+					p.classList.toggle( 'hidden', p !== panel );
+
+				} );
+
+			}
+
+			function showMenu() {
+
+				buildLevelList();
+				showPanel( dom.menuPanel );
+				setState( 'menu' );
+
+			}
+
+			function buildLevelList() {
+
+				dom.levelList.innerHTML = '';
+
+				LEVELS.forEach( function ( def, index ) {
+
+					var locked = index > progress.unlocked;
+					var best = bestScoreFor( index );
+
+					var card = document.createElement( 'button' );
+					card.className = 'levelCard' + ( locked ? ' locked' : '' );
+					card.disabled = locked;
+					var flags = ( def.grid.join( '' ).match( /F/g ) || [] ).length;
+
+					card.innerHTML = '<span class="n">Level ' + ( index + 1 ) + '</span>' + def.name +
+						'<span class="best">' + ( locked ? 'Locked' :
+							flags + ' flags · ' + def.floors + ' storeys' + ( best ? ' · best ' + best : '' ) ) + '</span>';
+
+					card.addEventListener( 'click', function () {
+
+						totalScore = 0;
+						campaignChain = [];
+						campaignStarted = Date.now();
+						enterFullscreen();
+						startLevel( index );
+
+					} );
+
+					dom.levelList.appendChild( card );
+
+				} );
+
+			}
+
+			function bindMenus() {
+
+				dom.resumeButton.addEventListener( 'click', function () {
+
+					setState( 'playing' );
+
+				} );
+
+				dom.quitButton.addEventListener( 'click', showMenu );
+				dom.menuButton.addEventListener( 'click', showMenu );
+				dom.pause.addEventListener( 'click', pauseGame );
+
+				dom.openBoard.addEventListener( 'click', function () {
+
+					boardHighlight = null;
+					boardReturn = showMenu;
+					showBoard();
+
+				} );
+
+				dom.resultBoard.addEventListener( 'click', function () {
+
+					boardReturn = function () {
+
+						showPanel( dom.resultPanel );
+						setState( 'result' );
+
+					};
+					showBoard();
+
+				} );
+
+				dom.boardBack.addEventListener( 'click', function () {
+
+					boardReturn();
+
+				} );
+
+				dom.boardName.addEventListener( 'input', function () {
+
+					playerTag = dom.boardName.value.toUpperCase().replace( /[^A-Z0-9 _-]/g, '' ).slice( 0, 8 ) || DEFAULT_TAG;
+					saveSetting( 'tag', playerTag );
+
+				} );
+
+				dom.qualitySelect.value = qualityPreference;
+				dom.qualitySelect.addEventListener( 'change', function () {
+
+					qualityPreference = dom.qualitySelect.value;
+					saveSetting( 'quality', qualityPreference );
+					applyQuality( qualityPreference === 'auto' ? detectQualityName() : qualityPreference );
+
+				} );
+
+				dom.controlHint.textContent = controlHintText();
+
+			}
+
+			/* Takes what can change without a new WebGL context. Anti-aliasing and
+				the skybox resolution are fixed once loaded, so those wait for a
+				reload; mesh detail and lighting land on the next level build. */
+			function applyQuality( name ) {
+
+				quality = QUALITY[ name ] || QUALITY.medium;
+				qualityName = name;
+
+				renderer.setPixelRatio( Math.min( window.devicePixelRatio || 1, quality.pixelRatio ) );
+				rearTarget.setSize( quality.mirrorWidth, quality.mirrorHeight );
+				mapTarget.setSize( quality.mapSize, quality.mapSize );
+
+				rearCamera.aspect = quality.mirrorWidth / quality.mirrorHeight;
+				rearCamera.updateProjectionMatrix();
+
+				updateLayout();
+
+				dom.controlHint.textContent = controlHintText() +
+					' Anti-aliasing and sky detail change after a reload.';
+
+			}
+
+			function controlHintText() {
+
+				return isTouch ?
+					'Touch and drag anywhere to steer and throttle.' :
+					'W / S to thrust and reverse, A / D to steer, Esc to pause.';
+
+			}
+
+			function enterFullscreen() {
+
+				if ( ! isTouch ) return;
+
+				var element = document.documentElement;
+
+				if ( element.requestFullscreen ) {
+
+					element.requestFullscreen().then( function () {
+
+						if ( screen.orientation && screen.orientation.lock ) {
+
+							return screen.orientation.lock( 'landscape' );
+
+						}
+
+					} ).catch( function () { /* the player can rotate the phone themselves */ } );
+
+				}
+
+			}
+
+
+			/* =====================================================================
+				Readouts
+			   =================================================================== */
+
+			var boardTab = 'campaign';
+			var boardHighlight = null;
+			var boardReturn = function () {};
+
+			function formatClock( seconds ) {
+
+				if ( seconds === null || seconds === undefined ) return '\u2013';
+				seconds = Math.max( 0, Math.round( seconds ) );
+				return Math.floor( seconds / 60 ) + ':' + ( '0' + ( seconds % 60 ) ).slice( - 2 );
+
+			}
+
+			function formatDate( stamp ) {
+
+				if ( ! stamp ) return '\u2013';
+				return new Date( stamp ).toLocaleDateString( undefined, { month: 'short', day: 'numeric' } );
+
+			}
+
+			/* Files the run just finished and returns a line for the result panel. */
+			function recordRun( complete ) {
+
+				var def = LEVELS[ levelIndex ];
+
+				var entry = {
+					name: playerTag,
+					score: Math.max( 0, Math.round( levelScore ) ),
+					flags: flagsTaken,
+					total: World.flags.length,
+					seconds: Math.round( def.timeLimit - Math.max( 0, timeLeft ) ),
+					complete: complete,
+					date: Date.now()
+				};
+
+				boardHighlight = entry;
+				boardTab = String( levelIndex );
+
+				var rank = fileScore( boardTab, entry );
+
+				if ( rank === 0 ) return 'New best on ' + def.name;
+				if ( rank > 0 ) return '#' + ( rank + 1 ) + ' on ' + def.name;
+				return '';
+
+			}
+
+			/* A campaign entry covers the unbroken chain of wards just cleared. */
+			function recordCampaign() {
+
+				var entry = {
+					name: playerTag,
+					score: Math.round( totalScore ),
+					wards: campaignChain.length,
+					seconds: Math.round( ( Date.now() - campaignStarted ) / 1000 ),
+					date: Date.now()
+				};
+
+				var rank = fileScore( 'campaign', entry );
+
+				boardHighlight = entry;
+				boardTab = 'campaign';
+
+				return rank === 0 ? 'New best campaign' : rank > 0 ? '#' + ( rank + 1 ) + ' campaign' : '';
+
+			}
+
+			function renderBoard() {
+
+				dom.boardTabs.innerHTML = '';
+
+				var tabs = [ { key: 'campaign', label: 'Campaign' } ];
+				LEVELS.forEach( function ( def, index ) {
+
+					tabs.push( { key: String( index ), label: String( index + 1 ) } );
+
+				} );
+
+				tabs.forEach( function ( tab ) {
+
+					var button = document.createElement( 'button' );
+					button.textContent = tab.label;
+					button.className = tab.key === boardTab ? 'on' : '';
+					button.addEventListener( 'click', function () {
+
+						boardTab = tab.key;
+						renderBoard();
+
+					} );
+					dom.boardTabs.appendChild( button );
+
+				} );
+
+				var list = boardFor( boardTab );
+				var campaign = boardTab === 'campaign';
+
+				if ( ! list.length ) {
+
+					dom.boardTable.innerHTML = '<div class="empty">' +
+						( campaign ? 'Clear the last ward to file a campaign run.' : 'No runs on this ward yet.' ) +
+						'</div>';
+					return;
+
+				}
+
+				var head = campaign ?
+					'<tr><th>#</th><th>Tag</th><th>Wards</th><th>Time</th><th>Score</th><th>Date</th></tr>' :
+					'<tr><th>#</th><th>Tag</th><th>Flags</th><th>Time</th><th>Score</th><th>Date</th></tr>';
+
+				var rows = list.map( function ( entry, index ) {
+
+					var middle = campaign ?
+						entry.wards + '/' + LEVELS.length :
+						( entry.flags === null ? '\u2013' : entry.flags + '/' + entry.total );
+
+					var classes = [];
+					if ( entry === boardHighlight ) classes.push( 'fresh' );
+					if ( ! campaign && entry.complete === false ) classes.push( 'dnf' );
+
+					return '<tr' + ( classes.length ? ' class="' + classes.join( ' ' ) + '"' : '' ) + '>' +
+						'<td>' + ( index + 1 ) + '</td>' +
+						'<td>' + escapeText( entry.name || DEFAULT_TAG ) + '</td>' +
+						'<td>' + middle + '</td>' +
+						'<td>' + formatClock( entry.seconds ) + '</td>' +
+						'<td class="score">' + entry.score + '</td>' +
+						'<td>' + formatDate( entry.date ) + '</td></tr>';
+
+				} ).join( '' );
+
+				dom.boardTable.innerHTML = '<table>' + head + rows + '</table>';
+
+			}
+
+			function escapeText( text ) {
+
+				return String( text ).replace( /[&<>"]/g, function ( ch ) {
+
+					return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[ ch ];
+
+				} );
+
+			}
+
+			function showBoard() {
+
+				renderBoard();
+				dom.boardName.value = playerTag;
+				showPanel( dom.boardPanel );
+				setState( 'board' );
+
+			}
+
+			var flashTimer = 0;
+
+			function flash( text, duration ) {
+
+				dom.flash.textContent = text;
+				dom.flash.classList.add( 'show' );
+				flashTimer = duration / 1000;
+
+			}
+
+			function updateReadouts() {
+
+				var seconds = Math.max( 0, Math.ceil( timeLeft ) );
+				var text = Math.floor( seconds / 60 ) + ':' + ( '0' + ( seconds % 60 ) ).slice( - 2 );
+
+				if ( dom.time.textContent !== text ) dom.time.textContent = text;
+				dom.time.classList.toggle( 'warning', seconds <= 15 );
+
+				var score = String( Math.max( 0, Math.round( levelScore ) ) );
+				if ( dom.score.textContent !== score ) dom.score.textContent = score;
+
+				var total = World.flags ? World.flags.length : 0;
+				var flags = flagsTaken + '/' + total;
+				if ( dom.flagCount.textContent !== flags ) dom.flagCount.textContent = flags;
+
+			}
+
+
+			/* =====================================================================
+				Frame loop
+			   =================================================================== */
+
+			function animate() {
+
+				requestAnimationFrame( animate );
+
+				var delta = Math.min( clock.getDelta(), 0.1 );	// a long stall must not teleport the craft
+
+				if ( state === 'playing' ) {
+
+					updateGame( delta );
+
+					if ( flashTimer > 0 ) {
+
+						flashTimer -= delta;
+						if ( flashTimer <= 0 ) dom.flash.classList.remove( 'show' );
+
+					}
+
+				}
+
+				render();
+
+			}
+
+			function render() {
+
+				frameCount ++;
+
+				if ( state === 'playing' ) {
+
+					// Mirrors are a second and third pass over the whole maze, so on
+					// weaker devices they refresh every other frame or slower.
+					if ( frameCount % quality.mirrorInterval === 0 ) {
+
+						renderer.setRenderTarget( rearTarget );
+						renderer.render( scene, rearCamera );
+
+						renderer.setRenderTarget( mapTarget );
+						renderer.render( scene, mapCamera );
+
+					}
+
+				}
+
+				renderer.setRenderTarget( null );
+				renderer.autoClear = true;
+				renderer.render( scene, camera );
+
+				if ( state === 'playing' ) {
+
+					renderer.autoClear = false;
+					renderer.clearDepth();
+					renderer.render( uiScene, uiCamera );
+					renderer.autoClear = true;
+
+				}
+
+			}
+
+		</script>
+
+	</body>
+</html>
