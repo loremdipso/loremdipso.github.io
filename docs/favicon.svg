@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="loremdipso">
+  <!-- Colors track --background and --accent in themes/slender/sass/_colors.scss -->
+  <rect width="32" height="32" rx="7" fill="#1b1b1e"/>
+  <path d="M8 10 L14 16 L8 22" fill="none" stroke="#5ca3ff" stroke-width="3"
+        stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M17 22 H24" fill="none" stroke="#e8eef2" stroke-width="3" stroke-linecap="round"/>
+</svg>
