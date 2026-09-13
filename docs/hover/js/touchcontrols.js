@@ -1,6 +1,11 @@
 /*
-	Touch controls: a floating thumbstick that appears wherever the player's
-	thumb lands in the control zone.
+	Touch controls: a thumbstick that sits in the corner of the screen so it is
+	obvious how to drive, with direction arrows drawn on its base.
+
+	Touching the stick itself drives from its centre - a thumb on the ▲ is
+	instant thrust. Touching anywhere else in the zone floats the stick to that
+	spot, so a player whose thumb has wandered is never stuck. On release the
+	stick snaps back home.
 
 	Horizontal travel steers, vertical travel drives forward and back, both as
 	analogue values so a light touch is a gentle turn. Written against pointer
@@ -12,6 +17,7 @@ function TouchControls( options ) {
 	this.zone = options.zone;			// element that captures the drags
 	this.stick = options.stick;			// visual base
 	this.knob = options.knob;			// visual thumb
+	this.hint = options.hint || null;	// "drag to drive" label, hidden on first touch
 
 	this.radius = 62;					// travel of the knob, in CSS pixels
 	this.deadZone = 0.12;
@@ -43,15 +49,37 @@ TouchControls.prototype._onDown = function ( event ) {
 	this.pointerId = event.pointerId;
 	this.zone.setPointerCapture( event.pointerId );
 
-	this.originX = event.clientX;
-	this.originY = event.clientY;
+	// A touch on the resting stick drives from its centre rather than moving
+	// it, so the arrows drawn on the base behave like the buttons they look like.
+	var home = this.stick.getBoundingClientRect();
+	var homeX = home.left + home.width / 2;
+	var homeY = home.top + home.height / 2;
+	var dx = event.clientX - homeX;
+	var dy = event.clientY - homeY;
+	var onStick = Math.sqrt( dx * dx + dy * dy ) <= home.width / 2;
+
+	if ( onStick ) {
+
+		this.originX = homeX;
+		this.originY = homeY;
+
+	} else {
+
+		this.originX = event.clientX;
+		this.originY = event.clientY;
+		dx = dy = 0;
+
+	}
+
 	this.active = true;
 
-	this.stick.style.left = event.clientX + 'px';
-	this.stick.style.top = event.clientY + 'px';
+	this.stick.style.left = this.originX + 'px';
+	this.stick.style.top = this.originY + 'px';
+	this.stick.style.bottom = 'auto';
 	this.stick.classList.add( 'is-active' );
 
-	this._place( 0, 0 );
+	this.hideHint();
+	this._place( dx, dy );
 	event.preventDefault();
 
 };
@@ -93,7 +121,11 @@ TouchControls.prototype._onUp = function ( event ) {
 	this.steer = 0;
 	this.throttle = 0;
 
-	this.stick.classList.remove( 'is-active' );
+	// Clearing the inline position lets the stylesheet put the stick back home.
+	this.stick.classList.remove( 'is-active', 'up', 'down', 'left', 'right' );
+	this.stick.style.left = '';
+	this.stick.style.top = '';
+	this.stick.style.bottom = '';
 	this.knob.style.transform = 'translate(-50%, -50%)';
 
 };
@@ -104,6 +136,11 @@ TouchControls.prototype._place = function ( dx, dy ) {
 
 	this.steer = this._shape( dx / this.radius );
 	this.throttle = this._shape( - dy / this.radius );
+
+	this.stick.classList.toggle( 'up', this.throttle > 0 );
+	this.stick.classList.toggle( 'down', this.throttle < 0 );
+	this.stick.classList.toggle( 'left', this.steer < 0 );
+	this.stick.classList.toggle( 'right', this.steer > 0 );
 
 };
 
@@ -118,6 +155,18 @@ TouchControls.prototype._shape = function ( value ) {
 	magnitude = ( magnitude - this.deadZone ) / ( 1 - this.deadZone );
 
 	return sign * magnitude * magnitude;
+
+};
+
+TouchControls.prototype.showHint = function () {
+
+	if ( this.hint ) this.hint.classList.add( 'show' );
+
+};
+
+TouchControls.prototype.hideHint = function () {
+
+	if ( this.hint ) this.hint.classList.remove( 'show' );
 
 };
 

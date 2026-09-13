@@ -160,21 +160,60 @@
 
 			body.touch.playing #touchZone { display: block; }
 
+			/* The stick rests in the bottom-left corner and only leaves it when the
+			   player touches somewhere else; touchcontrols.js sets the inline
+			   position while a drag is live and clears it again on release. */
 			#stick {
 				position: fixed;
+				left: calc(var(--safe-left) + 104px);
+				bottom: calc(var(--safe-bottom) + 30px);
 				width: 148px;
 				height: 148px;
 				margin: -74px 0 0 -74px;
 				border-radius: 50%;
-				border: 2px solid rgba(231, 200, 106, 0.5);
-				background: radial-gradient(circle, rgba(231, 200, 106, 0.13), rgba(231, 200, 106, 0.02) 70%);
+				border: 2px solid rgba(231, 200, 106, 0.55);
+				background: radial-gradient(circle, rgba(231, 200, 106, 0.16), rgba(8, 11, 18, 0.45) 72%);
+				box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.35), 0 4px 18px rgba(0, 0, 0, 0.45);
 				opacity: 0;
 				transition: opacity 0.15s ease;
 				pointer-events: none;
 				z-index: 21;
 			}
 
-			#stick.is-active { opacity: 1; }
+			body.touch.playing #stick { opacity: 0.72; }
+			body.touch.playing #stick.is-active { opacity: 1; }
+
+			/* On the cockpit layout the corner is the flag panel, so sit above the dash. */
+			body.cockpit #stick { bottom: calc(var(--safe-bottom) + 33% + 6px); }
+
+			/* Direction arrows around the rim, lit when that axis is driven. */
+			#stick .arrow {
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				width: 0;
+				height: 0;
+				border: 9px solid transparent;
+				opacity: 0.7;
+				transition: opacity 0.1s ease;
+				filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.7));
+			}
+
+			#stick .arrow.up    { transform: translate(-50%, -50%) translateY(-56px); border-bottom-color: #fff; border-top-width: 0; }
+			#stick .arrow.down  { transform: translate(-50%, -50%) translateY(56px);  border-top-color: #fff;    border-bottom-width: 0; }
+			#stick .arrow.left  { transform: translate(-50%, -50%) translateX(-56px); border-right-color: #fff;  border-left-width: 0; }
+			#stick .arrow.right { transform: translate(-50%, -50%) translateX(56px);  border-left-color: #fff;   border-right-width: 0; }
+
+			#stick.up .arrow.up, #stick.down .arrow.down,
+			#stick.left .arrow.left, #stick.right .arrow.right {
+				opacity: 1;
+				filter: drop-shadow(0 0 6px var(--gold));
+			}
+
+			#stick.up .arrow.up { border-bottom-color: var(--gold); }
+			#stick.down .arrow.down { border-top-color: var(--gold); }
+			#stick.left .arrow.left { border-right-color: var(--gold); }
+			#stick.right .arrow.right { border-left-color: var(--gold); }
 
 			#knob {
 				position: absolute;
@@ -184,9 +223,50 @@
 				height: 62px;
 				margin: 0;
 				border-radius: 50%;
-				background: rgba(231, 200, 106, 0.32);
-				border: 2px solid rgba(255, 255, 255, 0.55);
+				background: radial-gradient(circle at 40% 35%, rgba(255, 240, 190, 0.6), rgba(231, 200, 106, 0.35) 65%);
+				border: 2px solid rgba(255, 255, 255, 0.7);
+				box-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
 				transform: translate(-50%, -50%);
+			}
+
+			/* Told once per level, gone the moment the stick is touched. */
+			#stickHint {
+				position: fixed;
+				left: calc(var(--safe-left) + 104px);
+				bottom: calc(var(--safe-bottom) + 190px);
+				transform: translateX(-50%);
+				padding: 7px 12px;
+				border-radius: 8px;
+				background: rgba(8, 11, 18, 0.7);
+				border: 1px solid rgba(231, 200, 106, 0.5);
+				color: var(--gold);
+				font-size: 12px;
+				font-weight: 700;
+				letter-spacing: 0.16em;
+				text-transform: uppercase;
+				white-space: nowrap;
+				pointer-events: none;
+				z-index: 21;
+				opacity: 0;
+				transition: opacity 0.3s ease;
+			}
+
+			body.touch.playing #stickHint.show { opacity: 1; animation: nudge 1.2s ease-in-out infinite; }
+			body.cockpit #stickHint { bottom: calc(var(--safe-bottom) + 33% + 166px); }
+
+			@keyframes nudge {
+				0%, 100% { transform: translateX(-50%) translateY(0); }
+				50% { transform: translateX(-50%) translateY(-5px); }
+			}
+
+			/* A phone in portrait has no room for the stick and the flag count side by side. */
+			@media (orientation: portrait) {
+				body.touch #flags, body.touch #levelName {
+					left: auto;
+					right: calc(var(--safe-right) + 82px);
+					transform: none;
+					text-align: right;
+				}
 			}
 
 			#pause {
@@ -200,13 +280,16 @@
 				border-radius: 50%;
 				border: 1px solid rgba(255, 255, 255, 0.28);
 				background: rgba(8, 11, 18, 0.6);
+				padding: 0;
 				color: #fff;
 				font-size: 17px;
 				line-height: 1;
 				cursor: pointer;
+				align-items: center;
+				justify-content: center;
 			}
 
-			body.touch.playing #pause { display: block; }
+			body.touch.playing #pause { display: flex; }
 
 			/* --- menus ------------------------------------------------- */
 
@@ -443,7 +526,12 @@
 		</div>
 
 		<div id="touchZone"></div>
-		<div id="stick"><div id="knob"></div></div>
+		<div id="stick">
+			<span class="arrow up"></span><span class="arrow down"></span>
+			<span class="arrow left"></span><span class="arrow right"></span>
+			<div id="knob"></div>
+		</div>
+		<div id="stickHint">Drag to drive</div>
 		<button id="pause" aria-label="Pause">❚❚</button>
 
 		<div id="overlay">
@@ -816,7 +904,7 @@
 			[ 'hud', 'score', 'time', 'flags', 'flagCount', 'levelName', 'flash', 'overlay', 'loadingPanel', 'loadingText',
 				'barFill', 'menuPanel', 'levelList', 'controlHint', 'qualitySelect', 'pausePanel',
 				'resumeButton', 'quitButton', 'resultPanel', 'resultTitle', 'resultText', 'resultRank', 'resultScore',
-				'resultTotal', 'primaryButton', 'menuButton', 'resultBoard', 'pause', 'touchZone', 'stick', 'knob',
+				'resultTotal', 'primaryButton', 'menuButton', 'resultBoard', 'pause', 'touchZone', 'stick', 'knob', 'stickHint',
 				'openBoard', 'boardPanel', 'boardTabs', 'boardTable', 'boardName', 'boardBack'
 			].forEach( function ( id ) {
 
@@ -895,7 +983,7 @@
 				if ( isTouch ) {
 
 					document.body.classList.add( 'touch' );
-					touchControls = new TouchControls( { zone: dom.touchZone, stick: dom.stick, knob: dom.knob } );
+					touchControls = new TouchControls( { zone: dom.touchZone, stick: dom.stick, knob: dom.knob, hint: dom.stickHint } );
 
 				}
 
@@ -1134,6 +1222,7 @@
 				flash( 'Level ' + ( index + 1 ) + ' \u00b7 ' + def.name, 2600 );
 				updateReadouts();
 
+				if ( touchControls ) touchControls.showHint();
 				setState( 'playing' );
 
 			}
@@ -1911,7 +2000,7 @@
 			function controlHintText() {
 
 				return isTouch ?
-					'Touch and drag anywhere to steer and throttle.' :
+					'Drag the stick: up to thrust, down to reverse, sideways to steer. Dragging anywhere else works too.' :
 					'W / S to thrust and reverse, A / D to steer, Esc to pause.';
 
 			}
