@@ -767,15 +767,28 @@
 			var RESPONSE = 0.1;			// lerp per 60th of a second
 			var SPIN_TIME = 0.65;		// seconds of spin-out after a wall hit
 
+			// Booster strips throw the craft on at well over full throttle. The
+			// raised speed cap holds for BOOST_TIME and then eases back to normal
+			// over BOOST_FADE rather than snapping, so the end of a boost is a
+			// long exhale instead of a wall.
+			var BOOST_SPEED = MAX_FORWARD * 1.75;
+			var BOOST_TIME = 1.6;		// seconds at full boost
+			var BOOST_FADE = 0.6;		// seconds for the cap to fall back
+			var BOOST_FOV = 9;			// degrees of extra field at full boost
+
 			// The craft used to sit 15 units up, which was a seventh of the old
 			// 100-unit walls. Walls are more than twice that now they carry a
 			// storey, so the same eye line reads as scraping along the floor.
 			var HOVER_HEIGHT = 30;		// how far the craft floats above its deck
 			var GRAVITY = 1900;			// units per second squared
 			var MAX_FALL = 2600;
+			var HOVER_EASE = 0.08;		// seconds for the hover to settle on a new height
 
 			var velocity = new THREE.Vector3();
 			var fallSpeed = 0;
+			var hoverSpeed = 0;			// vertical speed of the eased hover, units/s
+			var deckY = 0;				// hover height over the deck last ridden
+			var grounded = false;
 			var yaw = 0;
 			var pitch = 0;
 
@@ -786,6 +799,10 @@
 			var timeLeft = 0;
 			var spinTimer = 0;
 			var spinDirection = 1;
+			var boostTimer = 0;
+			var boostCell = null;		// booster the craft is on, so one pass fires once
+			var boostPhase = 0;			// scroll of the strip textures
+			var baseFov = 70;
 			var frameCount = 0;
 			var hasWon = false;
 
@@ -1061,9 +1078,10 @@
 				// A phone held upright is so narrow that a fixed 70 degree vertical
 				// field leaves barely 35 degrees across, which is unplayable. Widen
 				// the vertical field to buy back horizontal view.
-				camera.fov = camera.aspect >= 1 ? 70 : THREE.Math.clamp(
+				baseFov = camera.aspect >= 1 ? 70 : THREE.Math.clamp(
 					THREE.Math.radToDeg( 2 * Math.atan( Math.tan( THREE.Math.degToRad( 70 ) / 2 ) / camera.aspect ) ),
 					70, 100 );
+				camera.fov = baseFov;
 
 				camera.updateProjectionMatrix();
 
@@ -1101,7 +1119,12 @@
 
 				velocity.set( 0, 0, 0 );
 				fallSpeed = 0;
+				hoverSpeed = 0;
+				deckY = camera.position.y;
+				grounded = true;
 				spinTimer = 0;
+				boostTimer = 0;
+				boostCell = null;
 				hasWon = false;
 				flagsTaken = 0;
 				levelScore = 1000;
@@ -1349,12 +1372,16 @@
 						var forward = new THREE.Vector3( - Math.sin( yaw ), 0, - Math.cos( yaw ) );
 						var accelerating = input.throttle > 0;
 
-						forward.multiplyScalar( input.throttle * ( accelerating ? THRUST : REVERSE_THRUST ) );
+						// The throttle pulls the velocity towards the thrust vector,
+						// so under boost the thrust itself is raised or holding W
+						// would bleed the boost off in half a second.
+						var thrust = accelerating ? Math.max( THRUST, boostCap() ) : REVERSE_THRUST;
+						forward.multiplyScalar( input.throttle * thrust );
 
 						var blend = 1 - Math.pow( 1 - RESPONSE, delta * 60 );
 						velocity.lerp( forward, blend );
 
-						var limit = accelerating ? MAX_FORWARD : MAX_REVERSE;
+						var limit = accelerating ? Math.max( MAX_FORWARD, boostCap() ) : MAX_REVERSE;
 						if ( velocity.length() > limit ) velocity.setLength( limit );
 
 					} else {
@@ -1370,6 +1397,7 @@
 				updateMovingWalls();
 				moveCraft( delta );
 				settleCraft( delta );
+				updateBoosters( delta );
 
 				camera.rotation.set( pitch, yaw, 0 );
 
@@ -1393,45 +1421,146 @@
 			/* Rides the craft over whatever is underneath it.
 
 				Decks are not solid: what holds the craft up is the height the world
-				reports below it. Climbing is quick, so ramps feel driven rather
-				than clambered, but there is nothing to climb onto without one -
-				drive off a terrace and the only surface left is the one below. */
+				reports below it. The hover is a soft suspension: it never sinks
+				below its ride height, so a climb is tracked as fast as the ramp
+				rises, but it is free to float above it, so the top of a ramp, the
+				start of a drop and the bottom of a descent all ease rather than
+				snap. A deck falling away faster than any ramp can is an edge, and
+				the craft falls off it; there is nothing to climb onto without a
+				ramp. */
 			function settleCraft( delta ) {
 
 				var surface = surfaceAt( camera.position.x, camera.position.z, camera.position.y - HOVER_HEIGHT );
 				var target = surface + HOVER_HEIGHT;
 				var before = camera.position.y;
+				var travelled = Math.sqrt( velocity.x * velocity.x + velocity.z * velocity.z ) * delta;
 
-				if ( target >= camera.position.y ) {
+				// The most a ramp can drop away under the craft in one step.
+				// Anything further is not a slope but an edge.
+				var reach = travelled * FLOOR_HEIGHT / CELL + 2;
 
-					// Track a rising surface exactly. Easing towards it instead
-					// leaves the camera a fixed distance behind on any sustained
-					// climb, and a ramp is long enough that it ends up under the
-					// slope, looking out through the underside of it.
-					camera.position.y = target;
-					fallSpeed = 0;
+				if ( grounded && target < deckY - reach ) grounded = false;
 
-				} else {
+				if ( ! grounded ) {
 
 					fallSpeed = Math.max( - MAX_FALL, fallSpeed - GRAVITY * delta );
 					camera.position.y += fallSpeed * delta;
 
-					if ( camera.position.y < target ) {
+					if ( camera.position.y <= target ) {
 
 						camera.position.y = target;
 						fallSpeed = 0;
+						hoverSpeed = 0;
+						grounded = true;
+
+					}
+
+				} else {
+
+					// Critically damped spring towards the ride height.
+					var omega = 2 / HOVER_EASE;
+					var x = omega * delta;
+					var decay = 1 / ( 1 + x + 0.48 * x * x + 0.235 * x * x * x );
+					var change = before - target;
+					var temp = ( hoverSpeed + omega * change ) * delta;
+
+					hoverSpeed = ( hoverSpeed - omega * temp ) * decay;
+					camera.position.y = target + ( change + temp ) * decay;
+
+					if ( camera.position.y < target ) {
+
+						// Never under the ride height: track a rising deck exactly,
+						// carrying its rate so the top of the ramp eases out.
+						camera.position.y = target;
+						hoverSpeed = Math.max( hoverSpeed, ( target - before ) / delta );
 
 					}
 
 				}
 
+				if ( grounded ) deckY = target;
+
 				// Tip the nose to follow the slope. Taken from the climb actually
 				// achieved, so ramps and drops both read without special cases.
-				var travelled = Math.sqrt( velocity.x * velocity.x + velocity.z * velocity.z ) * delta;
 				var slope = travelled > 1 ? ( camera.position.y - before ) / travelled : 0;
 				var wanted = THREE.Math.clamp( Math.atan( slope ) * 0.6, - 0.45, 0.45 );
 
 				pitch += ( wanted - pitch ) * ( 1 - Math.pow( 0.02, delta ) );
+
+			}
+
+			/* The speed the craft may hold right now on account of a booster:
+				full boost, then a straight fade down to nothing extra. */
+			function boostCap() {
+
+				if ( boostTimer <= 0 ) return 0;
+				var t = Math.min( 1, boostTimer / BOOST_FADE );
+				return MAX_FORWARD + ( BOOST_SPEED - MAX_FORWARD ) * t;
+
+			}
+
+			/* Fires a booster when the craft rides onto one, and keeps the strips
+				and the camera's field of view in step with the boost.
+
+				A strip boosts along whichever way the craft is already going, so
+				it can be taken from either end; crossing it sideways still throws
+				you sideways, which is a fair price for cutting a corner over it.
+				Each strip fires once per pass - the craft has to leave the cell
+				before it will fire again. */
+			function updateBoosters( delta ) {
+
+				if ( boostTimer > 0 ) boostTimer = Math.max( 0, boostTimer - delta );
+
+				var key = null;
+
+				if ( grounded && World.plan ) {
+
+					var floor = storeyAt( deckY - HOVER_HEIGHT );
+					key = floor + ':' + Math.round( camera.position.x / CELL ) + ':' + Math.round( camera.position.z / CELL );
+					if ( World.boosterLookup[ key ] === undefined ) key = null;
+
+				}
+
+				if ( key !== null && key !== boostCell && spinTimer <= 0 ) {
+
+					var speed = Math.sqrt( velocity.x * velocity.x + velocity.z * velocity.z );
+
+					if ( speed > 1 ) {
+
+						velocity.multiplyScalar( BOOST_SPEED / speed );
+
+					} else {
+
+						velocity.set( - Math.sin( yaw ) * BOOST_SPEED, 0, - Math.cos( yaw ) * BOOST_SPEED );
+
+					}
+
+					boostTimer = BOOST_TIME + BOOST_FADE;
+					flash( 'BOOST', 600 );
+
+				}
+
+				boostCell = key;
+
+				// The strips pulse along their length, faster while a boost is on.
+				boostPhase = ( boostPhase + delta * ( boostTimer > 0 ? 3.2 : 1.1 ) ) % 1;
+
+				for ( var i = 0; i < World.boosters.length; i ++ ) {
+
+					World.boosters[ i ].texture.offset.y = - boostPhase;
+
+				}
+
+				// A wider field of view sells the speed better than any number.
+				var strength = boostTimer > 0 ? ( boostCap() - MAX_FORWARD ) / ( BOOST_SPEED - MAX_FORWARD ) : 0;
+				var fov = baseFov + BOOST_FOV * strength;
+
+				if ( Math.abs( fov - camera.fov ) > 0.01 ) {
+
+					camera.fov += ( fov - camera.fov ) * ( 1 - Math.pow( 0.001, delta ) );
+					camera.updateProjectionMatrix();
+
+				}
 
 			}
 

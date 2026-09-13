@@ -10,6 +10,9 @@
 		V( f, r, c )   wall on the +Z side of cell ( r, c ) on storey f
 		H( f, r, c )   wall on the +X side of cell ( r, c ) on storey f
 
+	Booster strips ( 'B' cells ) are ordinary deck with a lit strip laid on
+	top; the game looks them up by cell in World.boosterLookup.
+
 	Decks are not colliders. What holds the craft up is surfaceAt(), which
 	reports the height of the highest deck the craft could be resting on; drive
 	past the edge of one and there is nothing under you but the storey below.
@@ -38,6 +41,11 @@ var GROUND_LAYER = 2;
 
 var RAMP_CHARS = '^v><';
 
+// A booster is a strip of light set into a deck. It is drawn a little
+// narrower than the cell so it reads as a strip rather than a painted floor.
+var BOOST_LENGTH = CELL * 0.72;		// along the corridor
+var BOOST_WIDTH = CELL * 0.46;		// across it
+
 var World = {
 
 	ground: 0,			// index of the storey sitting at y = 0
@@ -52,6 +60,8 @@ var World = {
 	ramps: [],			// ramp runs
 	rampLookup: null,	// cell -> ramp run index, per storey
 	flags: [],			// { x, z, y, floor }
+	boosters: [],		// { x, z, y, floor, alongX, mesh }
+	boosterLookup: {},	// 'floor:row:col' -> index into boosters
 	start: null,		// { x, z, y, floor, heading }
 	bounds: null,
 
@@ -864,6 +874,174 @@ function buildMovingWalls( def, material, quality ) {
 
 }
 
+/* Booster strips. A strip lies along the corridor it is in - whichever axis
+	has the more open neighbours - and is lit rather than shaded so it glows
+	on the map as well as in the world. The texture is drawn here: a run of
+	bright bars with a soft glow between them, which the game scrolls along
+	the strip so it reads as moving even from a standstill. */
+function boosterAxis( plan, f, r, c ) {
+
+	// How far the deck runs clear from the strip in one direction.
+	function run( dr, dc ) {
+
+		var rr = r, cc = c, n = 0;
+
+		while ( n < 8 ) {
+
+			if ( plan.cellAt( f, rr + dr, cc + dc ) === ' ' ) break;
+			if ( dr > 0 && plan.hasH( f, rr, cc ) ) break;
+			if ( dr < 0 && plan.hasH( f, rr - 1, cc ) ) break;
+			if ( dc > 0 && plan.hasV( f, rr, cc ) ) break;
+			if ( dc < 0 && plan.hasV( f, rr, cc - 1 ) ) break;
+			rr += dr; cc += dc; n ++;
+
+		}
+
+		return n;
+
+	}
+
+	return run( 1, 0 ) + run( - 1, 0 ) >= run( 0, 1 ) + run( 0, - 1 );
+
+}
+
+function boosterTexture() {
+
+	var size = 256;
+	var canvas = document.createElement( 'canvas' );
+	canvas.width = size;
+	canvas.height = size;
+	var ctx = canvas.getContext( '2d' );
+
+	ctx.clearRect( 0, 0, size, size );
+
+	// Four bars per tile, each with a halo, so the scroll loops seamlessly.
+	for ( var i = 0; i < 4; i ++ ) {
+
+		var y = i * size / 4;
+		var glow = ctx.createLinearGradient( 0, y, 0, y + size / 4 );
+		glow.addColorStop( 0, 'rgba(90, 220, 255, 0.55)' );
+		glow.addColorStop( 0.18, 'rgba(255, 255, 255, 0.95)' );
+		glow.addColorStop( 0.3, 'rgba(90, 220, 255, 0.55)' );
+		glow.addColorStop( 0.7, 'rgba(40, 120, 200, 0.12)' );
+		glow.addColorStop( 1, 'rgba(90, 220, 255, 0.55)' );
+		ctx.fillStyle = glow;
+		ctx.fillRect( 0, y, size, size / 4 );
+
+	}
+
+	// Fade the edges so the strip has no hard outline.
+	var edge = ctx.createLinearGradient( 0, 0, size, 0 );
+	edge.addColorStop( 0, 'rgba(0, 0, 0, 1)' );
+	edge.addColorStop( 0.12, 'rgba(0, 0, 0, 0)' );
+	edge.addColorStop( 0.88, 'rgba(0, 0, 0, 0)' );
+	edge.addColorStop( 1, 'rgba(0, 0, 0, 1)' );
+	ctx.globalCompositeOperation = 'destination-out';
+	ctx.fillStyle = edge;
+	ctx.fillRect( 0, 0, size, size );
+
+	var texture = new THREE.CanvasTexture( canvas );
+	texture.wrapS = THREE.ClampToEdgeWrapping;
+	texture.wrapT = THREE.RepeatWrapping;
+	texture.repeat.set( 1, 2 );
+	return texture;
+
+}
+
+/* A curtain of light for the sides of a strip: solid at the deck, gone by
+	the top, so it reads from the craft's low eye line as a gate to drive
+	through rather than a mark on the paving. */
+function boosterFinTexture() {
+
+	var canvas = document.createElement( 'canvas' );
+	canvas.width = 4;
+	canvas.height = 128;
+	var ctx = canvas.getContext( '2d' );
+
+	var fade = ctx.createLinearGradient( 0, 0, 0, 128 );
+	fade.addColorStop( 0, 'rgba(120, 230, 255, 0)' );
+	fade.addColorStop( 0.55, 'rgba(90, 200, 255, 0.35)' );
+	fade.addColorStop( 1, 'rgba(200, 245, 255, 1)' );
+	ctx.fillStyle = fade;
+	ctx.fillRect( 0, 0, 4, 128 );
+
+	return new THREE.CanvasTexture( canvas );
+
+}
+
+var BOOST_FIN_HEIGHT = 90;
+
+function buildBoosters( plan ) {
+
+	var texture = null;
+	var material = null;
+	var geometry = null;
+	var finMaterial = null;
+	var finGeometry = null;
+
+	for ( var f = 0; f < plan.floors; f ++ ) {
+
+		for ( var r = 0; r < plan.rows; r ++ ) {
+
+			for ( var c = 0; c < plan.cols; c ++ ) {
+
+				if ( plan.cellAt( f, r, c ) !== 'B' ) continue;
+
+				if ( ! material ) {
+
+					texture = boosterTexture();
+					material = new THREE.MeshBasicMaterial( {
+						map: texture, color: 0xffffff, transparent: true,
+						blending: THREE.AdditiveBlending, depthWrite: false } );
+					// The plane's long axis is its local Y, which the rotation
+					// lays along local Z; the group is then turned to face the
+					// corridor.
+					geometry = new THREE.PlaneBufferGeometry( BOOST_WIDTH, BOOST_LENGTH );
+					geometry.rotateX( - Math.PI / 2 );
+
+					var finTexture = boosterFinTexture();
+					finMaterial = new THREE.MeshBasicMaterial( {
+						map: finTexture, color: 0xffffff, transparent: true, side: THREE.DoubleSide,
+						blending: THREE.AdditiveBlending, depthWrite: false } );
+					finGeometry = new THREE.PlaneBufferGeometry( BOOST_LENGTH, BOOST_FIN_HEIGHT );
+					finGeometry.rotateY( Math.PI / 2 );
+
+					World._disposables.push( texture, material, geometry, finTexture, finMaterial, finGeometry );
+
+				}
+
+				var alongX = boosterAxis( plan, f, r, c );
+				var group = new THREE.Group();
+				// Sit just above the deck, and clear of the flag fountains.
+				group.position.set( r * CELL, storeyY( f ) + 1.5, c * CELL );
+				group.rotation.y = alongX ? Math.PI / 2 : 0;
+
+				group.add( new THREE.Mesh( geometry, material ) );
+
+				for ( var side = - 1; side <= 1; side += 2 ) {
+
+					var fin = new THREE.Mesh( finGeometry, finMaterial );
+					fin.position.set( side * BOOST_WIDTH / 2, BOOST_FIN_HEIGHT / 2, 0 );
+					group.add( fin );
+
+				}
+
+				World.group.add( group );
+
+				World.boosterLookup[ f + ':' + r + ':' + c ] = World.boosters.length;
+				World.boosters.push( {
+					x: r * CELL, z: c * CELL, y: storeyY( f ), floor: f,
+					alongX: alongX, mesh: group, material: material, texture: texture
+				} );
+
+			}
+
+		}
+
+	}
+
+}
+
 /* Faces the craft down the longest clear line of sight from its start cell. */
 function startHeading( plan, r, c ) {
 
@@ -1025,6 +1203,7 @@ function buildLevel( def, quality ) {
 
 	buildMovingWalls( def, materialWall, quality );
 	buildDecals( def, plan, quality );
+	buildBoosters( plan );
 
 	// --- flags and start --------------------------------------------------
 
@@ -1094,6 +1273,8 @@ function disposeLevel() {
 	World.ramps = [];
 	World.rampLookup = null;
 	World.flags = [];
+	World.boosters = [];
+	World.boosterLookup = {};
 	World.start = null;
 	World._buckets = null;
 	World._disposables = [];
