@@ -160,13 +160,13 @@
 
 			body.touch.playing #touchZone { display: block; }
 
-			/* The stick rests in the bottom-left corner and only leaves it when the
-			   player touches somewhere else; touchcontrols.js sets the inline
-			   position while a drag is live and clears it again on release. */
+			/* The stick sits halfway up the screen on the left or right edge and never
+			   moves while a drag is live, so a thumb can slide up and down freely
+			   to trim speed. Touching the other half of the screen swaps sides. */
 			#stick {
 				position: fixed;
 				left: calc(var(--safe-left) + 104px);
-				bottom: calc(var(--safe-bottom) + 30px);
+				top: 50%;
 				width: 148px;
 				height: 148px;
 				margin: -74px 0 0 -74px;
@@ -180,11 +180,10 @@
 				z-index: 21;
 			}
 
+			body.stick-right #stick { left: auto; right: calc(var(--safe-right) + 104px); margin: -74px -74px 0 0; }
+
 			body.touch.playing #stick { opacity: 0.72; }
 			body.touch.playing #stick.is-active { opacity: 1; }
-
-			/* On the cockpit layout the corner is the flag panel, so sit above the dash. */
-			body.cockpit #stick { bottom: calc(var(--safe-bottom) + 33% + 6px); }
 
 			/* Direction arrows around the rim, lit when that axis is driven. */
 			#stick .arrow {
@@ -233,7 +232,7 @@
 			#stickHint {
 				position: fixed;
 				left: calc(var(--safe-left) + 104px);
-				bottom: calc(var(--safe-bottom) + 190px);
+				top: calc(50% - 116px);
 				transform: translateX(-50%);
 				padding: 7px 12px;
 				border-radius: 8px;
@@ -252,21 +251,11 @@
 			}
 
 			body.touch.playing #stickHint.show { opacity: 1; animation: nudge 1.2s ease-in-out infinite; }
-			body.cockpit #stickHint { bottom: calc(var(--safe-bottom) + 33% + 166px); }
+			body.stick-right #stickHint { left: auto; right: calc(var(--safe-right) + 104px); --hint-x: 50%; transform: translateX(50%); }
 
 			@keyframes nudge {
-				0%, 100% { transform: translateX(-50%) translateY(0); }
-				50% { transform: translateX(-50%) translateY(-5px); }
-			}
-
-			/* A phone in portrait has no room for the stick and the flag count side by side. */
-			@media (orientation: portrait) {
-				body.touch #flags, body.touch #levelName {
-					left: auto;
-					right: calc(var(--safe-right) + 82px);
-					transform: none;
-					text-align: right;
-				}
+				0%, 100% { transform: translateX(var(--hint-x, -50%)) translateY(0); }
+				50% { transform: translateX(var(--hint-x, -50%)) translateY(-5px); }
 			}
 
 			#pause {

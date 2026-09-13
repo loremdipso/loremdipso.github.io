@@ -1,11 +1,11 @@
 /*
-	Touch controls: a thumbstick that sits in the corner of the screen so it is
-	obvious how to drive, with direction arrows drawn on its base.
+	Touch controls: a thumbstick fixed halfway up one edge of the screen so it
+	is obvious how to drive, with direction arrows drawn on its base.
 
-	Touching the stick itself drives from its centre - a thumb on the ▲ is
-	instant thrust. Touching anywhere else in the zone floats the stick to that
-	spot, so a player whose thumb has wandered is never stuck. On release the
-	stick snaps back home.
+	The stick never moves while a finger is down. Its centre is the origin of
+	every drag, so sliding the thumb up and down trims the speed without the
+	base creeping along underneath. Touching the far half of the screen swaps
+	the stick to that side, and it stays there until the other side is tapped.
 
 	Horizontal travel steers, vertical travel drives forward and back, both as
 	analogue values so a light touch is a gentle turn. Written against pointer
@@ -49,37 +49,22 @@ TouchControls.prototype._onDown = function ( event ) {
 	this.pointerId = event.pointerId;
 	this.zone.setPointerCapture( event.pointerId );
 
-	// A touch on the resting stick drives from its centre rather than moving
-	// it, so the arrows drawn on the base behave like the buttons they look like.
+	// A touch on the far side of the screen moves the stick over to that edge;
+	// the stylesheet does the placing, we only flip the class.
+	var onRight = event.clientX > window.innerWidth / 2;
+	document.body.classList.toggle( 'stick-right', onRight );
+
+	// Every drag is measured from the stick's centre, so a thumb landing on
+	// the ▲ is instant thrust and one landing off the base is a rest position.
 	var home = this.stick.getBoundingClientRect();
-	var homeX = home.left + home.width / 2;
-	var homeY = home.top + home.height / 2;
-	var dx = event.clientX - homeX;
-	var dy = event.clientY - homeY;
-	var onStick = Math.sqrt( dx * dx + dy * dy ) <= home.width / 2;
-
-	if ( onStick ) {
-
-		this.originX = homeX;
-		this.originY = homeY;
-
-	} else {
-
-		this.originX = event.clientX;
-		this.originY = event.clientY;
-		dx = dy = 0;
-
-	}
+	this.originX = home.left + home.width / 2;
+	this.originY = home.top + home.height / 2;
 
 	this.active = true;
-
-	this.stick.style.left = this.originX + 'px';
-	this.stick.style.top = this.originY + 'px';
-	this.stick.style.bottom = 'auto';
 	this.stick.classList.add( 'is-active' );
 
 	this.hideHint();
-	this._place( dx, dy );
+	this._place( event.clientX - this.originX, event.clientY - this.originY );
 	event.preventDefault();
 
 };
@@ -88,26 +73,7 @@ TouchControls.prototype._onMove = function ( event ) {
 
 	if ( event.pointerId !== this.pointerId ) return;
 
-	var dx = event.clientX - this.originX;
-	var dy = event.clientY - this.originY;
-
-	var distance = Math.sqrt( dx * dx + dy * dy );
-
-	if ( distance > this.radius ) {
-
-		// Drag the origin along so the stick never feels stuck at full lock.
-		var pull = ( distance - this.radius ) / distance;
-		this.originX += dx * pull;
-		this.originY += dy * pull;
-		this.stick.style.left = this.originX + 'px';
-		this.stick.style.top = this.originY + 'px';
-
-		dx *= this.radius / distance;
-		dy *= this.radius / distance;
-
-	}
-
-	this._place( dx, dy );
+	this._place( event.clientX - this.originX, event.clientY - this.originY );
 	event.preventDefault();
 
 };
@@ -121,16 +87,22 @@ TouchControls.prototype._onUp = function ( event ) {
 	this.steer = 0;
 	this.throttle = 0;
 
-	// Clearing the inline position lets the stylesheet put the stick back home.
 	this.stick.classList.remove( 'is-active', 'up', 'down', 'left', 'right' );
-	this.stick.style.left = '';
-	this.stick.style.top = '';
-	this.stick.style.bottom = '';
 	this.knob.style.transform = 'translate(-50%, -50%)';
 
 };
 
+/* Pins the knob within its travel and reads the axes off it. */
 TouchControls.prototype._place = function ( dx, dy ) {
+
+	var distance = Math.sqrt( dx * dx + dy * dy );
+
+	if ( distance > this.radius ) {
+
+		dx *= this.radius / distance;
+		dy *= this.radius / distance;
+
+	}
 
 	this.knob.style.transform = 'translate(-50%, -50%) translate(' + dx + 'px, ' + dy + 'px)';
 
